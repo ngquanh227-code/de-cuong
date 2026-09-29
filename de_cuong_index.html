@@ -75,8 +75,12 @@
           </div>
         </div>
 
-        <!-- Single 3-bar Hamburger Button in Corner -->
-        <div class="navbar-right-controls">
+        <!-- Single 3-bar Hamburger Button & Cloud Sync in Corner -->
+        <div class="navbar-right-controls" style="display: flex; align-items: center; gap: 8px;">
+          <button id="btn-cloud-sync" class="btn-cloud-sync-pill" onclick="openCloudSyncModal()" title="Đồng bộ đề thi Cloud GitHub (Tất cả thiết bị)">
+            <span class="sync-dot-live"></span>
+            <span class="sync-text-label">☁️ Đồng Bộ Cloud</span>
+          </button>
           <button id="btn-hamburger" class="btn-hamburger" onclick="toggleMainDrawer(event)" title="Menu cài đặt & chức năng (3 gạch)">
             <span class="hamburger-bar"></span>
             <span class="hamburger-bar"></span>
@@ -276,7 +280,14 @@
 
     <!-- Data Management Actions -->
     <div class="drawer-nav-group">
-      <div class="drawer-group-title">💾 DỮ LIỆU & TIỆN ÍCH</div>
+      <div class="drawer-group-title">💾 DỮ LIỆU & ĐỒNG BỘ CLOUD</div>
+
+      <button class="drawer-menu-item" onclick="closeMainDrawer(); openCloudSyncModal();" style="border: 1px solid rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.08);">
+        <div class="drawer-item-content">
+          <div class="drawer-item-title" style="color: #38bdf8; font-weight: 800;">☁️ Đồng Bộ Cloud (Tất Cả Thiết Bị)</div>
+          <div class="drawer-item-desc">Tự động đồng bộ đề thi giữa máy tính & điện thoại</div>
+        </div>
+      </button>
 
       <button class="drawer-menu-item" onclick="closeMainDrawer(); exportDatabaseJson();">
         <div class="drawer-item-content">
@@ -586,6 +597,70 @@
           <button type="submit" class="btn btn-primary btn-confirm-teacher">Xác Nhận</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- MODAL: GITHUB CLOUD SYNC -->
+  <div class="modal-backdrop" id="modal-cloud-sync">
+    <div class="modal-card" style="max-width: 580px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.3rem;">☁️</span>
+          <h3 style="margin: 0;">Đồng Bộ Đề Thi Qua Cloud GitHub</h3>
+        </div>
+        <button class="btn-icon" onclick="closeModal('modal-cloud-sync')">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Status Banner -->
+        <div id="cloud-sync-status-box" style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 14px 16px; margin-bottom: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <strong style="color: #38bdf8; font-size: 0.95rem;">Kho Lưu Trữ Cloud:</strong>
+            <span class="badge" id="cloud-sync-badge-status" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.75rem; padding: 2px 8px; border-radius: 12px;">Đang kết nối</span>
+          </div>
+          <div style="font-size: 0.85rem; color: #bae6fd; font-family: monospace;">ngquanh227-code/de-cuong (data/db.json)</div>
+          <div id="cloud-sync-last-time" style="font-size: 0.8rem; color: var(--wg-text-subtle); margin-top: 6px;">
+            Trạng thái: Chưa kiểm tra
+          </div>
+        </div>
+
+        <p style="font-size: 0.88rem; color: var(--wg-text-subtle); line-height: 1.5; margin-bottom: 18px;">
+          Hệ thống lưu toàn bộ ngân hàng câu hỏi lên Cloud GitHub. <strong>Khi bạn tải đề trên máy này và bấm Đẩy Lên Cloud, mọi điện thoại và máy tính khác chỉ cần mở web là tự động nhận đề ngay lập tức!</strong>
+        </p>
+
+        <!-- 2 Big Action Buttons -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px;">
+          <button class="btn btn-primary" onclick="syncToCloud(true)" id="btn-action-push-cloud" style="padding: 14px 10px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;">
+            <span style="font-size: 1.3rem;">📤</span>
+            <span style="font-weight: 800;">Đẩy Đề Lên Cloud</span>
+            <span style="font-size: 0.72rem; opacity: 0.85; font-weight: normal;">Cho máy tải đề / máy chủ</span>
+          </button>
+
+          <button class="btn btn-secondary" onclick="syncFromCloud(false)" id="btn-action-pull-cloud" style="padding: 14px 10px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.1);">
+            <span style="font-size: 1.3rem;">📥</span>
+            <span style="font-weight: 800; color: #38bdf8;">Tải Đề Về Máy Này</span>
+            <span style="font-size: 0.72rem; opacity: 0.85; font-weight: normal; color: #bae6fd;">Dành cho điện thoại / máy khác</span>
+          </button>
+        </div>
+
+        <!-- Token Settings (Collapsible) -->
+        <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 10px 14px;">
+          <summary style="cursor: pointer; font-size: 0.84rem; font-weight: 700; color: var(--wg-text-subtle);">
+            ⚙️ Cấu hình Token GitHub (Chỉ cần khi đẩy đề lên)
+          </summary>
+          <div style="margin-top: 10px;">
+            <label class="form-label" style="font-size: 0.8rem;">Personal Access Token (ghp_...):</label>
+            <input type="password" id="input-github-token" class="form-input form-input-sm" placeholder="Nhập token GitHub..." style="font-family: monospace;">
+            <div style="margin-top: 8px; display: flex; justify-content: flex-end; gap: 8px;">
+              <button class="btn btn-secondary btn-sm" onclick="saveCustomGitHubToken()">Lưu Token</button>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('modal-cloud-sync')">Đóng</button>
+      </div>
     </div>
   </div>
 

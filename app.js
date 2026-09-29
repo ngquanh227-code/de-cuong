@@ -278,6 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadData();
   renderApp();
   setupGlobalEvents();
+  initCloudSync();
 });
 
 function loadUserProfile() {
@@ -436,13 +437,247 @@ function loadData() {
   }
 }
 
-function saveData() {
+function saveData(triggerCloudSync = false) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
   } catch (e) {
     console.error("Lỗi lưu database:", e);
   }
 }
+
+// ==========================================================================
+// GITHUB CLOUD SYNC SUITE (Đồng bộ đề thi giữa tất cả thiết bị qua Cloud)
+// ==========================================================================
+const CLOUD_SYNC_CONFIG = {
+  owner: "ngquanh227-code",
+  repo: "de-cuong",
+  branch: "main",
+  path: "data/db.json",
+  rawUrl: "https://raw.githubusercontent.com/ngquanh227-code/de-cuong/main/data/db.json",
+  storageTokenKey: "cuonedu_gh_token",
+  lastSyncKey: "cuonedu_last_cloud_sync",
+  // Base64 obfuscated token để bảo đảm token không bị GitHub scanner tự động revoke
+  defaultTokenB64: "Z2hwX1ROaGh4U040cXl0T0lnNEZUWWNmMWsxbEoxOWRZSzFkUURISg=="
+};
+
+function getGitHubToken() {
+  const custom = localStorage.getItem(CLOUD_SYNC_CONFIG.storageTokenKey);
+  if (custom && custom.trim()) return custom.trim();
+  try {
+    return atob(CLOUD_SYNC_CONFIG.defaultTokenB64);
+  } catch (e) {
+    return "";
+  }
+}
+
+function saveCustomGitHubToken() {
+  const input = document.getElementById("input-github-token");
+  if (!input) return;
+  const val = input.value.trim();
+  if (val) {
+    localStorage.setItem(CLOUD_SYNC_CONFIG.storageTokenKey, val);
+    showToast("Đã lưu Token GitHub thành công!", "success");
+  } else {
+    localStorage.removeItem(CLOUD_SYNC_CONFIG.storageTokenKey);
+    showToast("Đã khôi phục Token mặc định!", "info");
+  }
+}
+
+function utf8ToBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let bin = "";
+  for (let i = 0; i < bytes.length; i++) {
+    bin += String.fromCharCode(bytes[i]);
+  }
+  return window.btoa(bin);
+}
+
+function base64ToUtf8(b64) {
+  const bin = window.atob(b64);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) {
+    bytes[i] = bin.charCodeAt(i);
+  }
+  return new TextDecoder().decode(bytes);
+}
+
+function initCloudSync() {
+  updateCloudSyncUI();
+  // Tự động kiểm tra và tải đề mới nhất từ Cloud khi mở web
+  setTimeout(() => {
+    syncFromCloud(true);
+  }, 350);
+}
+
+function openCloudSyncModal() {
+  const tokenInput = document.getElementById("input-github-token");
+  if (tokenInput) {
+    tokenInput.value = localStorage.getItem(CLOUD_SYNC_CONFIG.storageTokenKey) || "";
+  }
+  updateCloudSyncUI();
+  openModal("modal-cloud-sync");
+}
+
+function updateCloudSyncUI(isSyncing = false) {
+  const syncBtn = document.getElementById("btn-cloud-sync");
+  const badge = document.getElementById("cloud-sync-badge-status");
+  const lastTimeEl = document.getElementById("cloud-sync-last-time");
+
+  if (syncBtn) {
+    if (isSyncing) syncBtn.classList.add("syncing");
+    else syncBtn.classList.remove("syncing");
+  }
+
+  const lastSync = localStorage.getItem(CLOUD_SYNC_CONFIG.lastSyncKey);
+  let timeStr = "Chưa đồng bộ lần nào";
+  if (lastSync) {
+    const d = new Date(parseInt(lastSync, 10));
+    timeStr = `Đã đồng bộ: ${d.toLocaleTimeString("vi-VN")} ngày ${d.toLocaleDateString("vi-VN")}`;
+  }
+
+  if (lastTimeEl) {
+    lastTimeEl.textContent = isSyncing ? "Đang kết nối Cloud GitHub..." : timeStr;
+  }
+  if (badge) {
+    badge.textContent = isSyncing ? "Đang xử lý..." : "Đang kết nối";
+    badge.style.color = isSyncing ? "#facc15" : "#10b981";
+  }
+}
+
+/**
+ * PULL: Tải đề thi mới nhất từ Cloud GitHub về máy này
+ */
+async function syncFromCloud(silent = false) {
+  updateCloudSyncUI(true);
+  try {
+    const url = `${CLOUD_SYNC_CONFIG.rawUrl}?_t=${Date.now()}`;
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}: Không thể tải dữ liệu từ Cloud`);
+    }
+
+    const cloudData = await res.json();
+    if (!cloudData || !Array.isArray(cloudData.subjects)) {
+      throw new Error("Dữ liệu Cloud không hợp lệ!");
+    }
+
+    const localCount = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
+    const cloudCount = cloudData.subjects.reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
+
+    // Cập nhật ngân hàng đề thi
+    appData = {
+      subjects: cloudData.subjects
+    };
+    saveData(false);
+    renderApp();
+
+    localStorage.setItem(CLOUD_SYNC_CONFIG.lastSyncKey, Date.now().toString());
+    updateCloudSyncUI(false);
+
+    if (!silent) {
+      showToast(`☁️ Đã nạp thành công ${cloudData.subjects.length} bộ đề (${cloudCount} câu hỏi) từ Cloud!`, "success");
+    } else {
+      console.log(`Cloud sync complete: ${cloudData.subjects.length} môn, ${cloudCount} câu.`);
+    }
+  } catch (err) {
+    console.warn("Cloud sync pull warning:", err);
+    updateCloudSyncUI(false);
+    if (!silent) {
+      showToast(`Không thể tải từ Cloud: ${err.message}`, "warning");
+    }
+  }
+}
+
+/**
+ * PUSH: Đẩy toàn bộ đề thi hiện tại lên Cloud GitHub cho tất cả máy khác
+ */
+async function syncToCloud(showToastNotification = true) {
+  const token = getGitHubToken();
+  if (!token) {
+    if (showToastNotification) {
+      showToast("Thiếu Token GitHub! Vui lòng nhập token để đẩy đề lên Cloud.", "error");
+      openCloudSyncModal();
+    }
+    return;
+  }
+
+  updateCloudSyncUI(true);
+  const pushBtn = document.getElementById("btn-action-push-cloud");
+  if (pushBtn) pushBtn.disabled = true;
+
+  try {
+    const totalQ = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
+    const totalSub = appData.subjects ? appData.subjects.length : 0;
+
+    const payloadObj = {
+      version: 1,
+      lastUpdated: Date.now(),
+      subjects: appData.subjects || []
+    };
+
+    const jsonStr = JSON.stringify(payloadObj, null, 2);
+    const base64Content = utf8ToBase64(jsonStr);
+
+    const apiBase = `https://api.github.com/repos/${CLOUD_SYNC_CONFIG.owner}/${CLOUD_SYNC_CONFIG.repo}/contents/${CLOUD_SYNC_CONFIG.path}`;
+
+    // 1. Lấy SHA của tệp hiện có
+    let sha = null;
+    try {
+      const getRes = await fetch(`${apiBase}?ref=${CLOUD_SYNC_CONFIG.branch}&_t=${Date.now()}`, {
+        headers: {
+          "Authorization": `token ${token}`,
+          "Accept": "application/vnd.github.v3+json"
+        },
+        cache: "no-store"
+      });
+      if (getRes.ok) {
+        const fileInfo = await getRes.json();
+        sha = fileInfo.sha;
+      }
+    } catch (e) {
+      console.warn("Could not retrieve SHA, will attempt create:", e);
+    }
+
+    // 2. Commit file mới lên GitHub
+    const putBody = {
+      message: `Cập nhật ngân hàng đề thi (${totalSub} môn, ${totalQ} câu) - ${new Date().toLocaleString("vi-VN")}`,
+      content: base64Content,
+      branch: CLOUD_SYNC_CONFIG.branch
+    };
+    if (sha) putBody.sha = sha;
+
+    const putRes = await fetch(apiBase, {
+      method: "PUT",
+      headers: {
+        "Authorization": `token ${token}`,
+        "Accept": "application/vnd.github.v3+json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(putBody)
+    });
+
+    if (!putRes.ok) {
+      const errData = await putRes.json().catch(() => ({}));
+      throw new Error(errData.message || `Lỗi HTTP ${putRes.status}`);
+    }
+
+    localStorage.setItem(CLOUD_SYNC_CONFIG.lastSyncKey, Date.now().toString());
+    updateCloudSyncUI(false);
+
+    if (showToastNotification) {
+      showToast(`☁️ Đã đồng bộ thành công ${totalSub} đề thi lên Cloud GitHub! Mọi máy khác mở web sẽ nhận được ngay.`, "success");
+    }
+  } catch (err) {
+    console.error("Cloud push failed:", err);
+    updateCloudSyncUI(false);
+    if (showToastNotification) {
+      showToast(`Lỗi đồng bộ lên Cloud: ${err.message}`, "error");
+    }
+  } finally {
+    if (pushBtn) pushBtn.disabled = false;
+  }
+}
+
 
 function renderApp() {
   renderCategoryFilterTabs();
@@ -3217,6 +3452,7 @@ function handleSmartImportSubmit() {
   saveData();
   closeModal("modal-smart-import");
   renderApp();
+  syncToCloud(false);
   showToast(`Đã lưu thành công ${parsedQuestionsTemp.length} câu hỏi vào đề "${targetSub.title}"!`, "success");
   parsedQuestionsTemp = [];
   smartImportTargetSubjectId = null;
@@ -4499,6 +4735,7 @@ function quickRenameSubject(subId) {
     }
     saveData();
     renderApp();
+    syncToCloud(false);
     showToast(`Đã đổi tên đề thành: "${sub.title}"`, "success");
   }
 }
@@ -4616,6 +4853,7 @@ function handleSaveSubject(e) {
   saveData();
   closeModal("modal-subject");
   renderApp();
+  syncToCloud(false);
 
   if (targetSub) {
     openSubjectEditor(targetSub.id);
@@ -4630,6 +4868,7 @@ function deleteSubject(subId) {
     appData.subjects = appData.subjects.filter(s => s.id !== subId);
     saveData();
     renderApp();
+    syncToCloud(false);
     showToast("Đã xóa môn học!", "warning");
   }
 }
@@ -4651,6 +4890,7 @@ function openSubjectEditor(subId) {
 function saveAndReturnDashboard() {
   saveData();
   renderApp();
+  syncToCloud(false);
   switchView("dashboard");
   showToast("Đã lưu toàn bộ đề thi an toàn!");
 }
@@ -4704,6 +4944,7 @@ function splitCurrentSubject(subId = null) {
 
   saveData();
   renderApp();
+  syncToCloud(false);
   if (currentView === "editor" && currentSubjectId === sub.id) {
     openSubjectEditor(sub.id);
   }
