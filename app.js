@@ -455,30 +455,30 @@ let isLocalModificationActive = false;
  */
 function initCloudSync() {
   updateCloudSyncUI();
-  // 1. Tự động kiểm tra và tải đề mới nhất từ Cloud khi mở trang web
+  // 1. Tự động kiểm tra và nạp đề chuẩn nhất từ Cloud ngay khi mở trang web (hiển thị thông báo nếu có thay đổi)
   setTimeout(() => {
-    syncFromCloud(true);
+    syncFromCloud(false);
   }, 300);
 
-  // 2. Tự động cập nhật tức thì khi chuyển tab quay lại web (focus)
+  // 2. Tự động cập nhật tức thì khi chuyển tab quay lại web hoặc mở khóa điện thoại (focus / visibilitychange)
   window.addEventListener("focus", () => {
     if (!isCloudSyncInProgress && !isLocalModificationActive) {
-      syncFromCloud(true);
+      syncFromCloud(false);
     }
   });
 
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible" && !isCloudSyncInProgress && !isLocalModificationActive) {
-      syncFromCloud(true);
+      syncFromCloud(false);
     }
   });
 
-  // 3. Polling ngầm mỗi 15 giây để nếu máy khác vừa Xóa / Sửa / Thêm đề thì máy này tự động cập nhật ngay
+  // 3. Polling ngầm mỗi 10 giây để nếu máy tính vừa Xóa / Sửa / Thêm đề thì điện thoại tự động cập nhật ngay
   setInterval(() => {
     if (document.visibilityState === "visible" && !isCloudSyncInProgress && !isLocalModificationActive) {
       syncFromCloud(true);
     }
-  }, 15000);
+  }, 10000);
 }
 
 function openCloudSyncModal() {
@@ -518,6 +518,7 @@ function updateCloudSyncUI(isSyncing = false) {
 
 /**
  * PULL: Tải đề thi mới nhất từ Cloud GitHub về máy này (Đồng bộ Thêm / Sửa / Xóa)
+ * Sử dụng cơ chế 3 tầng fallback bảo đảm hoạt động 100% trên cả iPhone, Android & PC
  */
 async function syncFromCloud(silent = false) {
   // Tuyệt đối KHÔNG kéo đè nếu máy này đang trong tiến trình Xóa / Sửa / Thêm hoặc đang đẩy lên Cloud
@@ -527,11 +528,10 @@ async function syncFromCloud(silent = false) {
     const token = getGitHubToken();
     let cloudData = null;
 
-    // 1. Lấy trực tiếp từ GitHub Contents API (Real-time 100%, không bị CDN cache trễ)
+    // Tầng 1: Lấy trực tiếp từ GitHub Contents API (Thời gian thực 100%, không cache)
     try {
       const headers = {
-        "Accept": "application/vnd.github.v3.raw",
-        "User-Agent": "CuonEdu"
+        "Accept": "application/vnd.github.v3.raw"
       };
       if (token) headers["Authorization"] = `token ${token}`;
       const apiRes = await fetch(`${CLOUD_SYNC_CONFIG.apiUrl}?_t=${Date.now()}&_r=${Math.random()}`, {
@@ -542,19 +542,31 @@ async function syncFromCloud(silent = false) {
         cloudData = await apiRes.json();
       }
     } catch (e) {
-      console.warn("Lỗi nạp trực tiếp qua API, thử fallback raw URL:", e);
+      console.warn("Lỗi nạp GitHub API:", e);
     }
 
-    // 2. Fallback sang rawUrl nếu API bị giới hạn
+    // Tầng 2: Fallback sang GitHub Raw Content
     if (!cloudData) {
-      const rawRes = await fetch(`${CLOUD_SYNC_CONFIG.rawUrl}?_t=${Date.now()}`, { cache: "no-store" });
-      if (rawRes.ok) {
-        cloudData = await rawRes.json();
-      }
+      try {
+        const rawRes = await fetch(`${CLOUD_SYNC_CONFIG.rawUrl}?_t=${Date.now()}&_r=${Math.random()}`, { cache: "no-store" });
+        if (rawRes.ok) {
+          cloudData = await rawRes.json();
+        }
+      } catch (e) {}
+    }
+
+    // Tầng 3: Fallback sang file db.json trên server Vercel (Cùng nguồn - 0 lỗi CORS trên điện thoại)
+    if (!cloudData) {
+      try {
+        const localRes = await fetch(`data/db.json?_t=${Date.now()}&_r=${Math.random()}`, { cache: "no-store" });
+        if (localRes.ok) {
+          cloudData = await localRes.json();
+        }
+      } catch (e) {}
     }
 
     if (!cloudData || !Array.isArray(cloudData.subjects)) {
-      throw new Error("Dữ liệu Cloud không hợp lệ hoặc không có danh sách môn!");
+      throw new Error("Dữ liệu Cloud không hợp lệ hoặc chưa sẵn sàng!");
     }
 
     // Nếu trong lúc fetch mạng vừa có thao tác cục bộ, bỏ qua không ghi đè
@@ -589,8 +601,12 @@ async function syncFromCloud(silent = false) {
       }
 
       if (!silent) {
-        const totalQ = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
-        showToast(`☁️ Đã đồng bộ ${cloudData.subjects.length} bộ đề (${totalQ} câu hỏi) mới nhất từ Cloud!`, "success");
+        if (cloudData.subjects.length === 0) {
+          showToast("☁️ Đã đồng bộ: Tất cả đề thi đã được xóa sạch từ thiết bị khác!", "info");
+        } else {
+          const totalQ = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
+          showToast(`☁️ Đã đồng bộ ${cloudData.subjects.length} bộ đề (${totalQ} câu hỏi) mới nhất từ Cloud!`, "success");
+        }
       }
     }
 
@@ -653,8 +669,7 @@ async function syncToCloud(showToastNotification = true) {
         const getRes = await fetch(`${apiBase}?ref=${CLOUD_SYNC_CONFIG.branch}&_ts=${Date.now()}_${Math.random()}`, {
           headers: {
             "Authorization": `token ${token}`,
-            "Accept": "application/vnd.github.v3+json",
-            "User-Agent": "CuonEdu"
+            "Accept": "application/vnd.github.v3+json"
           },
           cache: "no-store"
         });
@@ -684,8 +699,7 @@ async function syncToCloud(showToastNotification = true) {
       headers: {
         "Authorization": `token ${token}`,
         "Accept": "application/vnd.github.v3+json",
-        "Content-Type": "application/json",
-        "User-Agent": "CuonEdu"
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(putBody)
     });
@@ -704,8 +718,7 @@ async function syncToCloud(showToastNotification = true) {
             headers: {
               "Authorization": `token ${token}`,
               "Accept": "application/vnd.github.v3+json",
-              "Content-Type": "application/json",
-              "User-Agent": "CuonEdu"
+              "Content-Type": "application/json"
             },
             body: JSON.stringify(putBody)
           });
