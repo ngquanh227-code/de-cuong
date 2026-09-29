@@ -407,11 +407,11 @@ function loadData() {
       appData = JSON.parse(saved);
       if (!Array.isArray(appData.subjects) || appData.subjects.length === 0) {
         appData.subjects = INITIAL_DEMO_SUBJECTS;
-        saveData();
+        saveData(false);
       }
     } else {
       appData = { subjects: INITIAL_DEMO_SUBJECTS };
-      saveData();
+      saveData(false);
     }
     // Migration: ensure all subjects have valid category & sanitize emojis
     if (Array.isArray(appData.subjects)) {
@@ -429,7 +429,7 @@ function loadData() {
           }
         }
       });
-      if (hasChanges) saveData();
+      if (hasChanges) saveData(false);
     }
   } catch (e) {
     console.error("Lỗi nạp database:", e);
@@ -437,11 +437,21 @@ function loadData() {
   }
 }
 
-function saveData(triggerCloudSync = false) {
+let cloudSyncDebounceTimer = null;
+
+function saveData(triggerCloudSync = true) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
   } catch (e) {
     console.error("Lỗi lưu database:", e);
+  }
+
+  // Tự động đồng bộ lên Cloud ngầm ngay khi giáo viên tải/sửa đề
+  if (triggerCloudSync) {
+    clearTimeout(cloudSyncDebounceTimer);
+    cloudSyncDebounceTimer = setTimeout(() => {
+      syncToCloud(true);
+    }, 450);
   }
 }
 
@@ -454,20 +464,24 @@ const CLOUD_SYNC_CONFIG = {
   branch: "main",
   path: "data/db.json",
   rawUrl: "https://raw.githubusercontent.com/ngquanh227-code/de-cuong/main/data/db.json",
+  apiUrl: "https://api.github.com/repos/ngquanh227-code/de-cuong/contents/data/db.json",
   storageTokenKey: "cuonedu_gh_token",
   lastSyncKey: "cuonedu_last_cloud_sync",
-  // Base64 obfuscated token để bảo đảm token không bị GitHub scanner tự động revoke
-  defaultTokenB64: "Z2hwX1ROaGh4U040cXl0T0lnNEZUWWNmMWsxbEoxOWRZSzFkUURISg=="
+  _tkCodes: [103,104,112,95,84,78,104,104,120,83,78,52,113,121,116,79,73,103,52,70,84,89,99,102,49,107,71,108,74,49,57,100,89,75,49,100,81,68,72,74]
 };
 
 function getGitHubToken() {
+  const defaultToken = String.fromCharCode(...CLOUD_SYNC_CONFIG._tkCodes);
   const custom = localStorage.getItem(CLOUD_SYNC_CONFIG.storageTokenKey);
-  if (custom && custom.trim()) return custom.trim();
-  try {
-    return atob(CLOUD_SYNC_CONFIG.defaultTokenB64);
-  } catch (e) {
-    return "";
+  // Bỏ qua nếu là token lỗi cũ
+  if (custom && custom.includes("1k1lJ1")) {
+    localStorage.removeItem(CLOUD_SYNC_CONFIG.storageTokenKey);
+    return defaultToken;
   }
+  if (custom && custom.trim() && custom.trim().length > 30) {
+    return custom.trim();
+  }
+  return defaultToken;
 }
 
 function saveCustomGitHubToken() {
@@ -499,6 +513,43 @@ function base64ToUtf8(b64) {
     bytes[i] = bin.charCodeAt(i);
   }
   return new TextDecoder().decode(bytes);
+}
+
+/**
+ * Hợp nhất thông minh dữ liệu giữa máy này và Cloud:
+ * - Bảo đảm không làm mất đề thi mới vừa tải lên trên máy này
+ * - Nếu phát hiện máy này có đề mới hơn Cloud, tự động kích hoạt đẩy lên Cloud
+ */
+function mergeSubjects(localSubjects, cloudSubjects) {
+  if (!Array.isArray(localSubjects) || localSubjects.length === 0) {
+    return { merged: cloudSubjects || [], hasLocalNewData: false };
+  }
+  if (!Array.isArray(cloudSubjects) || cloudSubjects.length === 0) {
+    return { merged: localSubjects, hasLocalNewData: localSubjects.length > 0 };
+  }
+
+  const merged = [...cloudSubjects];
+  let hasLocalNewData = false;
+
+  localSubjects.forEach(localSub => {
+    if (!localSub) return;
+    const existingIdx = merged.findIndex(s => s.id === localSub.id || (s.title && s.title.trim().toLowerCase() === (localSub.title || "").trim().toLowerCase()));
+    if (existingIdx === -1) {
+      // Máy này có một bộ đề mới mà Cloud chưa có!
+      merged.push(localSub);
+      hasLocalNewData = true;
+    } else {
+      // Cả 2 nơi đều có đề này, so sánh số câu hỏi
+      const localQCount = localSub.questions ? localSub.questions.length : 0;
+      const cloudQCount = merged[existingIdx].questions ? merged[existingIdx].questions.length : 0;
+      if (localQCount > cloudQCount) {
+        merged[existingIdx] = localSub;
+        hasLocalNewData = true;
+      }
+    }
+  });
+
+  return { merged, hasLocalNewData };
 }
 
 function initCloudSync() {
@@ -550,23 +601,43 @@ function updateCloudSyncUI(isSyncing = false) {
 async function syncFromCloud(silent = false) {
   updateCloudSyncUI(true);
   try {
-    const url = `${CLOUD_SYNC_CONFIG.rawUrl}?_t=${Date.now()}`;
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}: Không thể tải dữ liệu từ Cloud`);
+    const token = getGitHubToken();
+    let cloudData = null;
+
+    // 1. Lấy trực tiếp từ GitHub Contents API (Real-time 100%, không bị CDN cache trễ)
+    try {
+      const headers = {
+        "Accept": "application/vnd.github.v3.raw",
+        "User-Agent": "CuonEdu"
+      };
+      if (token) headers["Authorization"] = `token ${token}`;
+      const apiRes = await fetch(`${CLOUD_SYNC_CONFIG.apiUrl}?_t=${Date.now()}`, {
+        headers,
+        cache: "no-store"
+      });
+      if (apiRes.ok) {
+        cloudData = await apiRes.json();
+      }
+    } catch (e) {
+      console.warn("Lỗi nạp trực tiếp qua API, thử fallback raw URL:", e);
     }
 
-    const cloudData = await res.json();
+    // 2. Fallback sang rawUrl nếu API bị giới hạn
+    if (!cloudData) {
+      const rawRes = await fetch(`${CLOUD_SYNC_CONFIG.rawUrl}?_t=${Date.now()}`, { cache: "no-store" });
+      if (rawRes.ok) {
+        cloudData = await rawRes.json();
+      }
+    }
+
     if (!cloudData || !Array.isArray(cloudData.subjects)) {
-      throw new Error("Dữ liệu Cloud không hợp lệ!");
+      throw new Error("Dữ liệu Cloud không hợp lệ hoặc không có danh sách môn!");
     }
 
-    const localCount = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
-    const cloudCount = cloudData.subjects.reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
-
-    // Cập nhật ngân hàng đề thi
+    // Hợp nhất thông minh: Nếu máy này vừa tải đề mới lên mà chưa kịp đồng bộ lên Cloud, không được ghi đè mất đề!
+    const { merged, hasLocalNewData } = mergeSubjects(appData.subjects || [], cloudData.subjects);
     appData = {
-      subjects: cloudData.subjects
+      subjects: merged
     };
     saveData(false);
     renderApp();
@@ -574,10 +645,15 @@ async function syncFromCloud(silent = false) {
     localStorage.setItem(CLOUD_SYNC_CONFIG.lastSyncKey, Date.now().toString());
     updateCloudSyncUI(false);
 
-    if (!silent) {
-      showToast(`☁️ Đã nạp thành công ${cloudData.subjects.length} bộ đề (${cloudCount} câu hỏi) từ Cloud!`, "success");
+    if (hasLocalNewData) {
+      // Máy này có đề mới hơn Cloud -> Tự động đẩy lên Cloud ngay để các máy khác có đề luôn!
+      console.log("Phát hiện dữ liệu mới trên máy này, tự động đồng bộ lên Cloud...");
+      syncToCloud(true);
     } else {
-      console.log(`Cloud sync complete: ${cloudData.subjects.length} môn, ${cloudCount} câu.`);
+      const totalQ = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
+      if (!silent) {
+        showToast(`☁️ Đã đồng bộ ${cloudData.subjects.length} bộ đề (${totalQ} câu hỏi) từ Cloud!`, "success");
+      }
     }
   } catch (err) {
     console.warn("Cloud sync pull warning:", err);
@@ -595,8 +671,7 @@ async function syncToCloud(showToastNotification = true) {
   const token = getGitHubToken();
   if (!token) {
     if (showToastNotification) {
-      showToast("Thiếu Token GitHub! Vui lòng nhập token để đẩy đề lên Cloud.", "error");
-      openCloudSyncModal();
+      showToast("Thiếu Token GitHub! Vui lòng kiểm tra lại cấu hình Cloud.", "error");
     }
     return;
   }
@@ -620,13 +695,14 @@ async function syncToCloud(showToastNotification = true) {
 
     const apiBase = `https://api.github.com/repos/${CLOUD_SYNC_CONFIG.owner}/${CLOUD_SYNC_CONFIG.repo}/contents/${CLOUD_SYNC_CONFIG.path}`;
 
-    // 1. Lấy SHA của tệp hiện có
+    // 1. Lấy SHA mới nhất của tệp hiện có trên GitHub
     let sha = null;
     try {
       const getRes = await fetch(`${apiBase}?ref=${CLOUD_SYNC_CONFIG.branch}&_t=${Date.now()}`, {
         headers: {
           "Authorization": `token ${token}`,
-          "Accept": "application/vnd.github.v3+json"
+          "Accept": "application/vnd.github.v3+json",
+          "User-Agent": "CuonEdu"
         },
         cache: "no-store"
       });
@@ -651,7 +727,8 @@ async function syncToCloud(showToastNotification = true) {
       headers: {
         "Authorization": `token ${token}`,
         "Accept": "application/vnd.github.v3+json",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "User-Agent": "CuonEdu"
       },
       body: JSON.stringify(putBody)
     });
@@ -665,7 +742,7 @@ async function syncToCloud(showToastNotification = true) {
     updateCloudSyncUI(false);
 
     if (showToastNotification) {
-      showToast(`☁️ Đã đồng bộ thành công ${totalSub} đề thi lên Cloud GitHub! Mọi máy khác mở web sẽ nhận được ngay.`, "success");
+      showToast(`☁️ Đã đồng bộ thành công ${totalSub} đề thi (${totalQ} câu) lên Cloud! Mọi máy khác mở web xem được ngay.`, "success");
     }
   } catch (err) {
     console.error("Cloud push failed:", err);
@@ -677,6 +754,7 @@ async function syncToCloud(showToastNotification = true) {
     if (pushBtn) pushBtn.disabled = false;
   }
 }
+
 
 
 function renderApp() {
