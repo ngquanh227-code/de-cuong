@@ -445,6 +445,9 @@ function base64ToUtf8(b64) {
 }
 
 /**
+// Cờ khóa trạng thái: Khi đang thực hiện Thao tác Cục bộ (Xóa/Sửa/Thêm), không cho phép syncFromCloud ghi đè
+let isLocalModificationActive = false;
+
 /**
  * ĐỒNG BỘ CLOUD GITHUB - SINGLE SOURCE OF TRUTH
  * Dữ liệu trên Cloud GitHub (data/db.json) là nguồn chuẩn duy nhất.
@@ -459,20 +462,20 @@ function initCloudSync() {
 
   // 2. Tự động cập nhật tức thì khi chuyển tab quay lại web (focus)
   window.addEventListener("focus", () => {
-    if (!isCloudSyncInProgress) {
+    if (!isCloudSyncInProgress && !isLocalModificationActive) {
       syncFromCloud(true);
     }
   });
 
   document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible" && !isCloudSyncInProgress) {
+    if (document.visibilityState === "visible" && !isCloudSyncInProgress && !isLocalModificationActive) {
       syncFromCloud(true);
     }
   });
 
   // 3. Polling ngầm mỗi 15 giây để nếu máy khác vừa Xóa / Sửa / Thêm đề thì máy này tự động cập nhật ngay
   setInterval(() => {
-    if (document.visibilityState === "visible" && !isCloudSyncInProgress) {
+    if (document.visibilityState === "visible" && !isCloudSyncInProgress && !isLocalModificationActive) {
       syncFromCloud(true);
     }
   }, 15000);
@@ -517,7 +520,8 @@ function updateCloudSyncUI(isSyncing = false) {
  * PULL: Tải đề thi mới nhất từ Cloud GitHub về máy này (Đồng bộ Thêm / Sửa / Xóa)
  */
 async function syncFromCloud(silent = false) {
-  if (isCloudSyncInProgress) return;
+  // Tuyệt đối KHÔNG kéo đè nếu máy này đang trong tiến trình Xóa / Sửa / Thêm hoặc đang đẩy lên Cloud
+  if (isCloudSyncInProgress || isLocalModificationActive) return;
   updateCloudSyncUI(true);
   try {
     const token = getGitHubToken();
@@ -553,6 +557,9 @@ async function syncFromCloud(silent = false) {
       throw new Error("Dữ liệu Cloud không hợp lệ hoặc không có danh sách môn!");
     }
 
+    // Nếu trong lúc fetch mạng vừa có thao tác cục bộ, bỏ qua không ghi đè
+    if (isLocalModificationActive || isCloudSyncInProgress) return;
+
     // CLOUD LÀ NGUỒN CHUẨN DUY NHẤT:
     // So sánh dữ liệu Cloud với dữ liệu hiện tại trong máy
     const localSubjectsJson = JSON.stringify(appData.subjects || []);
@@ -569,7 +576,7 @@ async function syncFromCloud(silent = false) {
 
       // Cập nhật giao diện theo ngữ cảnh hiện tại
       if (currentView === "editor" && typeof currentSubjectId !== "undefined") {
-        const stillExists = appData.subjects.find(s => s.id === currentSubjectId);
+        const stillExists = appData.subjects.find(s => String(s.id) === String(currentSubjectId));
         if (!stillExists) {
           saveAndReturnDashboard();
           showToast("Môn học này đã được xóa từ thiết bị khác!", "warning");
@@ -3440,12 +3447,18 @@ function handleSmartImportSubmit() {
   appData.subjects.unshift(targetSub);
   selectedSubjectId = targetSub.id;
 
-  saveData(true);
+  isLocalModificationActive = true;
+  appData.lastUpdated = Date.now();
+  saveData(false);
   closeModal("modal-smart-import");
   renderApp();
-  showToast(`Đã tạo thành công bộ đề mới "${targetSub.title}" (${parsedQuestionsTemp.length} câu) và tự động đồng bộ lên Cloud!`, "success");
+  showToast(`Đã tạo thành công bộ đề mới "${targetSub.title}" (${parsedQuestionsTemp.length} câu) và đang đồng bộ lên Cloud!`, "success");
   parsedQuestionsTemp = [];
   smartImportTargetSubjectId = null;
+
+  syncToCloud(true).finally(() => {
+    isLocalModificationActive = false;
+  });
 
   openSubjectEditor(targetSub.id);
 }
@@ -4840,32 +4853,53 @@ function handleSaveSubject(e) {
   }
 
   parsedQuestionsTemp = [];
-  saveData(true);
+  isLocalModificationActive = true;
+  appData.lastUpdated = Date.now();
+  saveData(false);
   closeModal("modal-subject");
   renderApp();
 
   if (targetSub) {
     openSubjectEditor(targetSub.id);
   }
+
+  syncToCloud(false).finally(() => {
+    isLocalModificationActive = false;
+  });
 }
 
-function deleteSubject(subId) {
+async function deleteSubject(subId) {
   if (!requireTeacherAuth(() => deleteSubject(subId))) return;
-  const sub = appData.subjects.find(s => s.id === subId);
+  const sub = appData.subjects.find(s => String(s.id) === String(subId));
   if (!sub) return;
-  if (confirm(`Bạn có chắc chắn muốn xóa môn "${sub.title}" cùng toàn bộ câu hỏi?`)) {
-    appData.subjects = appData.subjects.filter(s => s.id !== subId);
-    saveData(true);
-    renderApp();
-    showToast("Đã xóa môn học và cập nhật lên Cloud!", "warning");
+
+  if (!confirm(`Bạn có chắc chắn muốn xóa môn "${sub.title}" cùng toàn bộ câu hỏi?\nĐề này sẽ được xóa vĩnh viễn trên Cloud và tất cả thiết bị.`)) {
+    return;
+  }
+
+  isLocalModificationActive = true;
+  appData.subjects = appData.subjects.filter(s => String(s.id) !== String(subId));
+  appData.lastUpdated = Date.now();
+  saveData(false); // Lưu ngay lập tức vào localStorage máy này mà không debounce
+  renderApp();
+
+  showToast(`⏳ Đang xóa "${sub.title}" và đồng bộ lên Cloud...`, "info");
+
+  try {
+    await syncToCloud(false);
+    showToast(`✅ Đã xóa vĩnh viễn môn "${sub.title}" trên Cloud và tất cả thiết bị!`, "success");
+  } catch (err) {
+    showToast(`Lỗi khi đồng bộ xóa lên Cloud: ${err.message}`, "error");
+  } finally {
+    isLocalModificationActive = false;
   }
 }
 
 function openSubjectEditor(subId) {
   if (!requireTeacherAuth(() => openSubjectEditor(subId))) return;
-  const sub = appData.subjects.find(s => s.id === subId);
+  const sub = appData.subjects.find(s => String(s.id) === String(subId));
   if (!sub) return;
-  currentSubjectId = subId;
+  currentSubjectId = sub.id;
 
   const cat = sub.category || detectCategory(sub.title, sub.code);
   document.getElementById("editor-subject-title").textContent = sub.title;
@@ -4876,10 +4910,15 @@ function openSubjectEditor(subId) {
 }
 
 function saveAndReturnDashboard() {
-  saveData(true);
+  isLocalModificationActive = true;
+  appData.lastUpdated = Date.now();
+  saveData(false);
   renderApp();
   switchView("dashboard");
   showToast("Đã lưu toàn bộ đề thi an toàn!");
+  syncToCloud(false).finally(() => {
+    isLocalModificationActive = false;
+  });
 }
 
 
@@ -5034,22 +5073,38 @@ function handleSaveQuestion(e) {
     showToast("Đã thêm câu hỏi mới!");
   }
 
-  saveData();
+  isLocalModificationActive = true;
+  appData.lastUpdated = Date.now();
+  saveData(false);
   closeModal("modal-question");
   renderEditorQuestionList();
   renderStats();
+  syncToCloud(false).finally(() => {
+    isLocalModificationActive = false;
+  });
 }
 
-function deleteQuestion(idx) {
+async function deleteQuestion(idx) {
   if (!requireTeacherAuth(() => deleteQuestion(idx))) return;
-  const sub = appData.subjects.find(s => s.id === currentSubjectId);
+  const sub = appData.subjects.find(s => String(s.id) === String(currentSubjectId));
   if (!sub || !sub.questions[idx]) return;
-  if (confirm(`Bạn có chắc chắn muốn xóa câu hỏi #${idx + 1}?`)) {
-    sub.questions.splice(idx, 1);
-    saveData();
-    renderEditorQuestionList();
-    renderStats();
-    showToast("Đã xóa câu hỏi!", "warning");
+  if (!confirm(`Bạn có chắc chắn muốn xóa câu hỏi #${idx + 1}?`)) return;
+
+  isLocalModificationActive = true;
+  sub.questions.splice(idx, 1);
+  appData.lastUpdated = Date.now();
+  saveData(false);
+  renderEditorQuestionList();
+  renderStats();
+  showToast("⏳ Đang xóa câu hỏi và cập nhật lên Cloud...", "info");
+
+  try {
+    await syncToCloud(false);
+    showToast("✅ Đã xóa câu hỏi trên Cloud và tất cả thiết bị!", "success");
+  } catch (err) {
+    showToast(`Lỗi đồng bộ xóa câu hỏi: ${err.message}`, "error");
+  } finally {
+    isLocalModificationActive = false;
   }
 }
 
