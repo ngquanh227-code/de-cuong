@@ -493,15 +493,18 @@
               <span>✏️ Đổi tên đề</span>
             </button>
           </div>
-          <p id="editor-subject-meta" style="color: var(--wg-text-subtle); font-size: 0.85rem; margin-top: 4px;">Mã đề: --- • 15 phút • 0 câu hỏi</p>
+          <p id="editor-subject-meta" style="color: var(--wg-text-subtle); font-size: 0.85rem; margin-top: 4px;">Mã đề: --- • 0 câu hỏi</p>
         </div>
 
         <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-          <button class="btn btn-secondary btn-sm" onclick="openCreateSubjectModal(currentSubjectId)" title="Đổi tên đề, mã đề, phân môn, thời gian">
+          <button class="btn btn-secondary btn-sm" onclick="openCreateSubjectModal(currentSubjectId)" title="Đổi tên đề, mã đề, phân môn">
             <span>⚙️ Đổi Thông Tin Đề</span>
           </button>
           <button class="btn btn-secondary btn-sm" onclick="openSmartImportModal(currentSubjectId)">
             <span>Tải File / Nhập Đề</span>
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="splitCurrentSubject(currentSubjectId)" title="Tách đề này thành 2 đề riêng biệt nếu bị gộp nhầm" style="color: #facc15; border-color: rgba(250, 204, 21, 0.4);">
+            <span>✂️ Tách Đề</span>
           </button>
           <button class="btn btn-secondary btn-sm" onclick="openAddQuestionModal()">
             <span>+ Thêm Câu Hỏi</span>
@@ -670,6 +673,13 @@
         <div style="display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;">
           <button id="tab-btn-file" class="btn btn-primary btn-sm" onclick="switchImportTab('file')">Tải Lên File (Word .docx, PDF .pdf, .txt, .json)</button>
           <button id="tab-btn-text" class="btn btn-secondary btn-sm" onclick="switchImportTab('text')">Dán Văn Bản Trực Tiếp</button>
+        </div>
+
+        <div id="import-target-mode-container" style="display: none;"></div>
+
+        <div class="form-group" style="margin-bottom: 14px;">
+          <label class="form-label" style="font-weight: 700; color: #ffffff;">Tên Môn Học / Bộ Đề:</label>
+          <input type="text" id="import-input-title" class="form-input" placeholder="Tự động điền theo tên tệp hoặc tự nhập (Ví dụ: GDQP HP1, GDQP HP2...)" style="font-weight: 600; font-size: 0.95rem;">
         </div>
 
         <div class="form-group" style="margin-bottom: 12px;">

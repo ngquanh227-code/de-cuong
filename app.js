@@ -830,8 +830,6 @@ function renderMasterDetailSystem() {
         </div>
         <div class="sub-item-meta">
           <span>${qCount} câu hỏi</span>
-          <span>•</span>
-          <span>${duration} phút</span>
         </div>
       </div>
     `;
@@ -843,7 +841,6 @@ function renderMasterDetailSystem() {
   if (!activeSub) return;
 
   const activeQCount = activeSub.questions ? activeSub.questions.length : 0;
-  const activeDuration = activeSub.durationMinutes || 15;
   let activeCategory = activeSub.category || detectCategory(activeSub.title, activeSub.code);
   activeCategory = activeCategory.replace(/^[^\w\s\u00C0-\u1EF9-]+/gu, '').trim();
 
@@ -884,10 +881,11 @@ function renderMasterDetailSystem() {
           <div class="detail-chip-val" style="color: var(--brand-accent, #10b981);">Trắc nghiệm</div>
           <div class="detail-chip-lbl">Hình thức thi</div>
         </div>
-        <div class="detail-chip">
-          <div class="detail-chip-val" style="color: var(--brand-gold, #facc15);">30s / câu</div>
-          <div class="detail-chip-lbl">Giới hạn thời gian</div>
-        </div>
+        ${activeQCount > 50 ? `
+        <div class="detail-chip" onclick="splitCurrentSubject(${activeSub.id})" style="cursor: pointer; border-color: rgba(250, 204, 21, 0.4);" title="Bấm để tách đề làm đôi">
+          <div class="detail-chip-val" style="color: #facc15;">✂️ Tách Đề</div>
+          <div class="detail-chip-lbl">${activeQCount} câu gộp</div>
+        </div>` : ''}
       </div>
     </div>
 
@@ -904,6 +902,10 @@ function renderMasterDetailSystem() {
         <button class="btn btn-secondary" onclick="openSubjectEditor(${activeSub.id})" title="Chỉnh sửa ngân hàng câu hỏi">
           <span>Chỉnh Sửa Đề</span>
         </button>
+        ${activeSub.questions && activeSub.questions.length > 50 ? `
+        <button class="btn btn-secondary" onclick="splitCurrentSubject(${activeSub.id})" title="Tách đề này thành 2 đề riêng nếu bị gộp nhầm" style="color: #facc15; border-color: rgba(250, 204, 21, 0.4);">
+          <span>✂️ Tách Đề</span>
+        </button>` : ''}
         <button class="btn btn-secondary btn-del-subject" onclick="deleteSubject(${activeSub.id})" title="Xóa môn học này">
           <span>Xóa Môn</span>
         </button>
@@ -969,10 +971,10 @@ function renderGridCardsLayout(filtered, container) {
               <span>📝</span>
               <span>${qCount} câu</span>
             </div>
-            <div class="grid-card-meta-item">
-              <span>⏱</span>
-              <span>${duration} phút</span>
-            </div>
+            ${qCount > 50 ? `
+            <div class="grid-card-meta-item" onclick="splitCurrentSubject(${sub.id})" style="cursor: pointer; color: #facc15; border-color: rgba(250, 204, 21, 0.4);" title="Tách đề này">
+              <span>✂️ Tách đề</span>
+            </div>` : ''}
           </div>
 
           <div class="grid-card-q-preview" title="Xem trước câu hỏi">
@@ -988,6 +990,7 @@ function renderGridCardsLayout(filtered, container) {
           <div class="grid-card-btn-row">
             <button class="grid-card-btn-sub" onclick="startStudyMode(${sub.id})" title="Ôn tập không tính giờ">Ôn Tập</button>
             <button class="grid-card-btn-sub" onclick="openSubjectEditor(${sub.id})" title="Chỉnh sửa ngân hàng câu hỏi">Sửa</button>
+            ${qCount > 50 ? `<button class="grid-card-btn-sub" onclick="splitCurrentSubject(${sub.id})" title="Tách đề" style="color: #facc15;">✂️ Tách</button>` : ''}
             <button class="grid-card-btn-sub btn-del" onclick="deleteSubject(${sub.id})" title="Xóa đề này">✕</button>
           </div>
         </div>
@@ -1025,7 +1028,6 @@ function renderCompactTableLayout(filtered, container) {
 
   let rowsHtml = filtered.map(sub => {
     const qCount = sub.questions ? sub.questions.length : 0;
-    const duration = sub.durationMinutes || 15;
     let category = sub.category || detectCategory(sub.title, sub.code);
     category = category.replace(/^[^\w\s\u00C0-\u1EF9-]+/gu, '').trim();
 
@@ -1051,14 +1053,12 @@ function renderCompactTableLayout(filtered, container) {
         <td style="font-weight: 700; color: var(--theme-text-main);">
           ${qCount} câu
         </td>
-        <td style="color: var(--wg-text-subtle); font-size: 0.82rem;">
-          ${duration} phút
-        </td>
         <td>
           <div class="table-action-group">
             <button class="table-btn-play" onclick="openPreExamModal(${sub.id})" title="Bắt đầu thi">Vào Thi</button>
             <button class="table-btn-icon" onclick="startStudyMode(${sub.id})" title="Ôn tập tự do">Ôn Tập</button>
             <button class="table-btn-icon" onclick="openSubjectEditor(${sub.id})" title="Chỉnh sửa đề">Sửa</button>
+            ${qCount > 50 ? `<button class="table-btn-icon" onclick="splitCurrentSubject(${sub.id})" title="Tách đề này thành 2 đề riêng nếu bị gộp nhầm" style="color: #facc15;">✂️ Tách</button>` : ''}
             <button class="table-btn-icon table-btn-del" onclick="deleteSubject(${sub.id})" title="Xóa môn">✕</button>
           </div>
         </td>
@@ -1077,7 +1077,6 @@ function renderCompactTableLayout(filtered, container) {
               <th>Môn Học & Đề Thi</th>
               <th>Phân Môn</th>
               <th>Số Câu</th>
-              <th>Thời Lượng</th>
               <th style="text-align: right;">Thao Tác</th>
             </tr>
           </thead>
@@ -1151,7 +1150,7 @@ function renderFocusStageLayout(filtered, container) {
         <div class="focus-thumb-code">${escapeHtml(sub.code || "SUB-" + sub.id.toString().slice(-4))}</div>
         <div class="focus-thumb-title">${escapeHtml(sub.title)}</div>
         <div style="font-size: 0.72rem; color: var(--theme-text-muted); margin-top: 3px;">
-          ${sub.questions ? sub.questions.length : 0} câu • ${sub.durationMinutes || 15} ph
+          ${sub.questions ? sub.questions.length : 0} câu hỏi
         </div>
       </div>
     `;
@@ -1187,10 +1186,11 @@ function renderFocusStageLayout(filtered, container) {
               <div class="detail-chip-val" style="color: var(--brand-accent, #10b981);">Trắc nghiệm</div>
               <div class="detail-chip-lbl">Hình thức thi</div>
             </div>
-            <div class="detail-chip">
-              <div class="detail-chip-val" style="color: var(--brand-gold, #facc15);">30s / câu</div>
-              <div class="detail-chip-lbl">Giới hạn thời gian</div>
-            </div>
+            ${activeQCount > 50 ? `
+            <div class="detail-chip" onclick="splitCurrentSubject(${activeSub.id})" style="cursor: pointer; border-color: rgba(250, 204, 21, 0.4);" title="Bấm để tách đề">
+              <div class="detail-chip-val" style="color: #facc15;">✂️ Tách Đề</div>
+              <div class="detail-chip-lbl">${activeQCount} câu</div>
+            </div>` : ''}
           </div>
         </div>
 
@@ -1283,17 +1283,58 @@ function scrollToCatalog() {
 // ==========================================================================
 // 4. SUPER-ENHANCED VIETNAMESE WORD & TEXT PARSER WITH INTERACTIVE REVIEW
 // ==========================================================================
+let smartImportTargetSubjectId = null;
+
+function setSmartImportAsNewSubject() {
+  smartImportTargetSubjectId = null;
+  const targetModeContainer = document.getElementById("import-target-mode-container");
+  if (targetModeContainer) {
+    targetModeContainer.style.display = "none";
+    targetModeContainer.innerHTML = "";
+  }
+  const btnLabel = document.getElementById("btn-import-label");
+  if (btnLabel) {
+    btnLabel.textContent = `Tạo Bộ Đề Mới (${parsedQuestionsTemp.length} câu)`;
+  }
+  const titleInput = document.getElementById("import-input-title");
+  if (titleInput) titleInput.value = "";
+  showToast("Đã chuyển sang chế độ tạo Đề Mới riêng biệt", "info");
+}
+
 function openSmartImportModal(targetSubId = null) {
   if (!requireTeacherAuth(() => openSmartImportModal(targetSubId))) return;
   parsedQuestionsTemp = [];
-  if (targetSubId) currentSubjectId = targetSubId;
+  smartImportTargetSubjectId = targetSubId;
+
+  const titleInput = document.getElementById("import-input-title");
+  if (titleInput) titleInput.value = "";
+
+  const targetModeContainer = document.getElementById("import-target-mode-container");
+  if (smartImportTargetSubjectId) {
+    const existingSub = appData.subjects.find(s => s.id === smartImportTargetSubjectId);
+    if (targetModeContainer && existingSub) {
+      targetModeContainer.style.display = "block";
+      targetModeContainer.innerHTML = `
+        <div style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); padding: 10px 14px; border-radius: 8px; font-size: 0.88rem; color: #bae6fd; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+          <span>Đang chọn thêm vào môn: <strong style="color: #ffffff;">${escapeHtml(existingSub.title)}</strong></span>
+          <button type="button" class="btn btn-ghost btn-sm" onclick="setSmartImportAsNewSubject()" style="font-size: 0.78rem; text-decoration: underline; color: #facc15;">Chuyển thành Tạo Môn / Đề Mới</button>
+        </div>
+      `;
+      if (titleInput) titleInput.value = existingSub.title;
+    }
+  } else {
+    if (targetModeContainer) {
+      targetModeContainer.style.display = "none";
+      targetModeContainer.innerHTML = "";
+    }
+  }
 
   document.getElementById("import-raw-text").value = "";
   document.getElementById("file-upload-input").value = "";
   document.getElementById("file-upload-status").style.display = "none";
   document.getElementById("import-preview-section").style.display = "none";
   document.getElementById("btn-submit-smart-import").disabled = true;
-  document.getElementById("btn-import-label").textContent = "Lưu Vào Môn Học (0 câu)";
+  document.getElementById("btn-import-label").textContent = smartImportTargetSubjectId ? "Lưu Vào Môn Hiện Tại (0 câu)" : "Tạo Đề Mới (0 câu)";
   
   switchImportTab("file");
   openModal("modal-smart-import");
@@ -1994,11 +2035,15 @@ function processUploadedFile(file) {
 
   const fileName = file.name.toLowerCase();
 
-  // If creating a subject, suggest subject name from filename
-  const cleanTitle = file.name.replace(/\.[^/.]+$/, "").replace(/[_-]/g, " ");
+  // If creating a subject or importing, suggest subject name from filename
+  const cleanTitle = file.name.replace(/\.[^/.]+$/, "").replace(/[_-]/g, " ").replace(/\s+/g, " ").trim();
   const subNameInput = document.getElementById("subject-input-name");
   if (subNameInput && !subNameInput.value.trim()) {
     subNameInput.value = cleanTitle;
+  }
+  const importTitleInput = document.getElementById("import-input-title");
+  if (importTitleInput && (!smartImportTargetSubjectId || !importTitleInput.value.trim())) {
+    importTitleInput.value = cleanTitle;
   }
 
   if (fileName.endsWith(".pdf")) {
@@ -2847,12 +2892,13 @@ function handleParsedResults(questions, sourceDesc, isAIParsed = false) {
       ${missingAnswersCount > 0 ? `<br><span style="color: #f59e0b; font-size: 0.85rem; font-weight: 700;">Có ${missingAnswersCount} câu chưa có đáp án. Bạn có thể bấm nút [ AI Giải ] ở từng câu hoặc [ AI Điền Hết Câu Thiếu ] ở trên.</span>` : ''}
     `;
   }
-  if (btnLabel) btnLabel.textContent = `Lưu Vào Môn Học (${questions.length} câu)`;
+  const targetActionText = smartImportTargetSubjectId ? "Lưu Vào Môn Hiện Tại" : "Tạo Bộ Đề Mới";
+  if (btnLabel) btnLabel.textContent = `${targetActionText} (${questions.length} câu)`;
   if (submitBtn) submitBtn.disabled = false;
 
   // Render in Smart Import Modal
   renderInteractiveQuestionReviewList(questions, "import-parsed-list", "parsed-count-badge", () => {
-    if (btnLabel) btnLabel.textContent = `Lưu Vào Môn Học (${parsedQuestionsTemp.length} câu)`;
+    if (btnLabel) btnLabel.textContent = `${targetActionText} (${parsedQuestionsTemp.length} câu)`;
   }, isAIBased);
   if (previewSec) previewSec.style.display = "block";
 
@@ -3134,23 +3180,32 @@ function handleSmartImportSubmit() {
     });
   }
 
+  const inputTitle = document.getElementById("import-input-title")?.value?.trim() || "";
   const selectedCat = document.getElementById("import-input-category")?.value || "auto";
 
-  let targetSub = appData.subjects.find(s => s.id === currentSubjectId);
+  let targetSub = null;
+  if (smartImportTargetSubjectId) {
+    targetSub = appData.subjects.find(s => s.id === smartImportTargetSubjectId);
+  }
 
   if (!targetSub) {
-    const defaultTitle = "Bộ Đề Mới Tải Lên";
-    const detected = detectCategory(defaultTitle);
+    // Luôn tạo Đề Mới riêng biệt khi không chỉ định môn hiện tại
+    const finalTitle = inputTitle || "Bộ Đề Mới Tải Lên";
+    const detected = detectCategory(finalTitle);
     targetSub = {
       id: Date.now(),
-      title: defaultTitle,
+      title: finalTitle,
       code: `SUB-${Math.floor(100 + Math.random() * 900)}`,
       category: selectedCat === "auto" ? detected : selectedCat,
       durationMinutes: 15,
       questions: []
     };
     appData.subjects.unshift(targetSub);
+    selectedSubjectId = targetSub.id;
   } else {
+    if (inputTitle && targetSub.title !== inputTitle) {
+      targetSub.title = inputTitle;
+    }
     if (selectedCat !== "auto") {
       targetSub.category = selectedCat;
     } else if (!targetSub.category) {
@@ -3162,8 +3217,9 @@ function handleSmartImportSubmit() {
   saveData();
   closeModal("modal-smart-import");
   renderApp();
-  showToast(`Đã lưu thành công ${parsedQuestionsTemp.length} câu hỏi vào môn "${targetSub.title}"!`, "success");
+  showToast(`Đã lưu thành công ${parsedQuestionsTemp.length} câu hỏi vào đề "${targetSub.title}"!`, "success");
   parsedQuestionsTemp = [];
+  smartImportTargetSubjectId = null;
 
   openSubjectEditor(targetSub.id);
 }
@@ -4597,6 +4653,61 @@ function saveAndReturnDashboard() {
   renderApp();
   switchView("dashboard");
   showToast("Đã lưu toàn bộ đề thi an toàn!");
+}
+
+function splitCurrentSubject(subId = null) {
+  const targetId = subId || currentSubjectId;
+  const sub = appData.subjects.find(s => s.id === targetId);
+  if (!sub || !sub.questions || sub.questions.length < 2) {
+    showToast("Đề này có quá ít câu hỏi để tách!", "warning");
+    return;
+  }
+
+  const defaultSplit = Math.floor(sub.questions.length / 2);
+  const promptSplit = prompt(
+    `Bộ đề "${sub.title}" hiện có ${sub.questions.length} câu hỏi.\n\nNhập số lượng câu hỏi muốn giữ lại cho Đề 1 (phần còn lại sẽ tách thành Đề thứ 2 riêng biệt):`,
+    defaultSplit
+  );
+  if (promptSplit === null) return;
+
+  const splitCount = parseInt(promptSplit.trim(), 10);
+  if (isNaN(splitCount) || splitCount <= 0 || splitCount >= sub.questions.length) {
+    alert(`Số lượng câu hỏi không hợp lệ! Phải là số từ 1 đến ${sub.questions.length - 1}.`);
+    return;
+  }
+
+  const defaultTitle1 = sub.title.includes(" - Đề") ? sub.title : `${sub.title} (Đề 1)`;
+  const defaultTitle2 = sub.title.includes(" - Đề") ? `${sub.title.replace(/Đề \d+/, '')} Đề 2` : `${sub.title} (Đề 2)`;
+
+  const newTitlePart1 = prompt("Nhập tên cho Đề thứ nhất:", defaultTitle1);
+  if (newTitlePart1 === null) return;
+
+  const newTitlePart2 = prompt("Nhập tên cho Đề thứ hai:", defaultTitle2);
+  if (newTitlePart2 === null) return;
+
+  const q1 = sub.questions.slice(0, splitCount);
+  const q2 = sub.questions.slice(splitCount);
+
+  // Cập nhật đề thứ nhất
+  sub.title = newTitlePart1.trim() || defaultTitle1;
+  sub.questions = q1;
+
+  // Tạo đề thứ 2 riêng biệt
+  const newSub = {
+    id: Date.now(),
+    title: newTitlePart2.trim() || defaultTitle2,
+    code: `SUB-${Math.floor(100 + Math.random() * 900)}`,
+    category: sub.category || detectCategory(newTitlePart2),
+    questions: q2
+  };
+  appData.subjects.unshift(newSub);
+
+  saveData();
+  renderApp();
+  if (currentView === "editor" && currentSubjectId === sub.id) {
+    openSubjectEditor(sub.id);
+  }
+  showToast(`Đã tách thành 2 đề: "${sub.title}" (${q1.length} câu) và "${newSub.title}" (${q2.length} câu)!`, "success");
 }
 
 function renderEditorQuestionList() {
