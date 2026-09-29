@@ -532,11 +532,8 @@
           <button class="btn btn-secondary btn-sm" onclick="openCreateSubjectModal(currentSubjectId)" title="Đổi tên đề, mã đề, phân môn">
             <span>⚙️ Đổi Thông Tin Đề</span>
           </button>
-          <button class="btn btn-secondary btn-sm" onclick="openSmartImportModal(currentSubjectId)">
-            <span>Tải File / Nhập Đề</span>
-          </button>
-          <button class="btn btn-secondary btn-sm" onclick="splitCurrentSubject(currentSubjectId)" title="Tách đề này thành 2 đề riêng biệt nếu bị gộp nhầm" style="color: #facc15; border-color: rgba(250, 204, 21, 0.4);">
-            <span>✂️ Tách Đề</span>
+          <button class="btn btn-secondary btn-sm" onclick="openSmartImportModal()" title="Tải thêm đề thi mới">
+            <span>Tải Đề Word Mới</span>
           </button>
           <button class="btn btn-secondary btn-sm" onclick="openAddQuestionModal()">
             <span>+ Thêm Câu Hỏi</span>
@@ -553,7 +550,7 @@
         <h3>Môn này chưa có câu hỏi nào</h3>
         <p>Bạn có thể thêm từng câu hỏi thủ công hoặc sử dụng tính năng <strong>Nhập nhanh từ file Word/Văn bản</strong> để thêm cả bộ đề chỉ trong 1 giây.</p>
         <div style="margin-top: 14px; display: flex; justify-content: center; gap: 10px;">
-          <button class="btn btn-primary" onclick="openSmartImportModal(currentSubjectId)">Tải File Word / Nhập Đề</button>
+          <button class="btn btn-primary" onclick="openSmartImportModal()">Tải File Word / Nhập Đề</button>
           <button class="btn btn-secondary" onclick="openAddQuestionModal()">+ Thêm Thủ Công</button>
         </div>
       </div>

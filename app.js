@@ -61,86 +61,8 @@ function shuffleArray(array) {
   return arr;
 }
 
-// Initial Sample Subject
-const INITIAL_DEMO_SUBJECTS = [
-  {
-    id: 1710000000001,
-    title: "Khám Phá Địa Lý & Kỳ Quan Thế Giới",
-    code: "GEO-204",
-    category: "Khoa Học Xã Hội",
-    durationMinutes: 15,
-    questions: [
-      {
-        id: 101,
-        question: "Một đất nước không có sông theo đúng nghĩa. Đất nước này nổi tiếng với những tòa nhà cao nhất thế giới, những hòn đảo nhân tạo độc đáo và những chiếc siêu xe cảnh sát ấn tượng.",
-        image: "assets/purple_desert_showcase.jpg",
-        options: [
-          { key: "A", text: "Ả Rập Saudi" },
-          { key: "B", text: "Ai Cập" },
-          { key: "C", text: "Qatar" },
-          { key: "D", text: "các Tiểu Vương Quốc Ả Rập Thống Nhất (UAE)" },
-          { key: "E", text: "Bahrain" }
-        ],
-        correctAnswer: "D",
-        level: "Thông hiểu",
-        explanation: "UAE (Các Tiểu Vương Quốc Ả Rập Thống Nhất) với thành phố Dubai nổi tiếng sở hữu tòa tháp cao nhất thế giới Burj Khalifa, đảo cọ Palm Jumeirah và không có con sông tự nhiên nào chảy qua."
-      },
-      {
-        id: 102,
-        question: "Kim tự tháp vĩ đại Giza và tượng Nhân sư nổi tiếng thuộc về quốc gia cổ đại nào?",
-        image: "assets/purple-desert.jpg",
-        options: [
-          { key: "A", text: "Hy Lạp" },
-          { key: "B", text: "Ai Cập" },
-          { key: "C", text: "La Mã" },
-          { key: "D", text: "Ấn Độ" }
-        ],
-        correctAnswer: "B",
-        level: "Nhận biết",
-        explanation: "Kim tự tháp Giza và tượng Nhân sư là những kỳ quan thế giới cổ đại tọa lạc tại Ai Cập."
-      },
-      {
-        id: 103,
-        question: "Đại dương nào có diện tích lớn nhất và sâu nhất trên Trái Đất?",
-        options: [
-          { key: "A", text: "Đại Tây Dương" },
-          { key: "B", text: "Ấn Độ Dương" },
-          { key: "C", text: "Thái Bình Dương" },
-          { key: "D", text: "Bắc Băng Dương" }
-        ],
-        correctAnswer: "C",
-        level: "Nhận biết",
-        explanation: "Thái Bình Dương là đại dương lớn nhất và sâu nhất trên Trái Đất, chiếm hơn một phần ba diện tích bề mặt hành tinh."
-      },
-      {
-        id: 104,
-        question: "Ngọn núi Everest - đỉnh núi cao nhất thế giới nằm trên dãy núi nào?",
-        options: [
-          { key: "A", text: "Dãy Alps" },
-          { key: "B", text: "Dãy Andes" },
-          { key: "C", text: "Dãy Himalaya" },
-          { key: "D", text: "Dãy Rocky" }
-        ],
-        correctAnswer: "C",
-        level: "Nhận biết",
-        explanation: "Everest (8.848m) nằm trên dãy Himalaya, ở biên giới giữa Nepal và Tây Tạng (Trung Quốc)."
-      },
-      {
-        id: 105,
-        question: "Dòng sông nào dài nhất thế giới chảy qua khu vực châu Phi?",
-        options: [
-          { key: "A", text: "Sông Amazon" },
-          { key: "B", text: "Sông Nile (Nin)" },
-          { key: "C", text: "Sông Dương Tử" },
-          { key: "D", text: "Sông Mississippi" }
-        ],
-        correctAnswer: "B",
-        level: "Thông hiểu",
-        explanation: "Sông Nile (châu Phi) dài khoảng 6.650 km, là dòng sông dài nhất thế giới."
-      }
-    ]
-  }
-];
+// Initial Sample Subject (Cleared by user request)
+const INITIAL_DEMO_SUBJECTS = [];
 
 let appData = {
   subjects: []
@@ -405,13 +327,19 @@ function loadData() {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       appData = JSON.parse(saved);
-      if (!Array.isArray(appData.subjects) || appData.subjects.length === 0) {
-        appData.subjects = INITIAL_DEMO_SUBJECTS;
-        saveData(false);
+      if (!Array.isArray(appData.subjects)) {
+        appData.subjects = [];
       }
     } else {
-      appData = { subjects: INITIAL_DEMO_SUBJECTS };
-      saveData(false);
+      appData = { subjects: [] };
+    }
+    // Xóa triệt để môn mẫu mặc định cũ nếu còn tồn đọng trong máy
+    if (Array.isArray(appData.subjects)) {
+      const beforeLen = appData.subjects.length;
+      appData.subjects = appData.subjects.filter(s => s.id !== 1710000000001 && s.code !== "GEO-204" && !s.title?.includes("Khám Phá Địa Lý"));
+      if (appData.subjects.length !== beforeLen) {
+        saveData(false);
+      }
     }
     // Migration: ensure all subjects have valid category & sanitize emojis
     if (Array.isArray(appData.subjects)) {
@@ -433,7 +361,7 @@ function loadData() {
     }
   } catch (e) {
     console.error("Lỗi nạp database:", e);
-    appData = { subjects: INITIAL_DEMO_SUBJECTS };
+    appData = { subjects: [] };
   }
 }
 
@@ -441,12 +369,13 @@ let cloudSyncDebounceTimer = null;
 
 function saveData(triggerCloudSync = true) {
   try {
+    appData.lastUpdated = Date.now();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
   } catch (e) {
     console.error("Lỗi lưu database:", e);
   }
 
-  // Tự động đồng bộ lên Cloud ngầm ngay khi giáo viên tải/sửa đề
+  // Tự động đồng bộ lên Cloud ngầm ngay khi giáo viên tải/sửa/xóa đề
   if (triggerCloudSync) {
     clearTimeout(cloudSyncDebounceTimer);
     cloudSyncDebounceTimer = setTimeout(() => {
@@ -516,62 +445,37 @@ function base64ToUtf8(b64) {
 }
 
 /**
- * Hợp nhất thông minh dữ liệu giữa máy này và Cloud:
- * - Bảo đảm không làm mất đề thi mới vừa tải lên trên máy này
- * - Nếu phát hiện máy này có đề mới hơn Cloud, tự động kích hoạt đẩy lên Cloud
- * - Khử trùng lặp các đề có cùng tên và số câu hỏi
+/**
+ * ĐỒNG BỘ CLOUD GITHUB - SINGLE SOURCE OF TRUTH
+ * Dữ liệu trên Cloud GitHub (data/db.json) là nguồn chuẩn duy nhất.
+ * Mọi thao tác Thêm, Sửa, Xóa trên bất kỳ máy nào đều được đồng bộ tức thì sang tất cả các máy khác.
  */
-function mergeSubjects(localSubjects, cloudSubjects) {
-  if (!Array.isArray(localSubjects) || localSubjects.length === 0) {
-    return { merged: cloudSubjects || [], hasLocalNewData: false };
-  }
-  if (!Array.isArray(cloudSubjects) || cloudSubjects.length === 0) {
-    return { merged: localSubjects, hasLocalNewData: localSubjects.length > 0 };
-  }
-
-  const merged = [...cloudSubjects];
-  let hasLocalNewData = false;
-
-  localSubjects.forEach(localSub => {
-    if (!localSub) return;
-    const existingIdx = merged.findIndex(s => s.id === localSub.id || (s.title && s.title.trim().toLowerCase() === (localSub.title || "").trim().toLowerCase()));
-    if (existingIdx === -1) {
-      // Máy này có một bộ đề mới mà Cloud chưa có!
-      merged.push(localSub);
-      hasLocalNewData = true;
-    } else {
-      // Cả 2 nơi đều có đề này, so sánh số câu hỏi
-      const localQCount = localSub.questions ? localSub.questions.length : 0;
-      const cloudQCount = merged[existingIdx].questions ? merged[existingIdx].questions.length : 0;
-      if (localQCount > cloudQCount) {
-        merged[existingIdx] = localSub;
-        hasLocalNewData = true;
-      }
-    }
-  });
-
-  // Lọc trùng lặp sạch sẽ theo tiêu đề và số câu hỏi
-  const uniqueList = [];
-  merged.forEach(sub => {
-    if (!sub) return;
-    const isDup = uniqueList.some(u => 
-      u.id === sub.id || 
-      (u.title && sub.title && u.title.trim().toLowerCase() === sub.title.trim().toLowerCase() && (u.questions?.length || 0) === (sub.questions?.length || 0))
-    );
-    if (!isDup) {
-      uniqueList.push(sub);
-    }
-  });
-
-  return { merged: uniqueList, hasLocalNewData };
-}
-
 function initCloudSync() {
   updateCloudSyncUI();
-  // Tự động kiểm tra và tải đề mới nhất từ Cloud khi mở web
+  // 1. Tự động kiểm tra và tải đề mới nhất từ Cloud khi mở trang web
   setTimeout(() => {
     syncFromCloud(true);
-  }, 350);
+  }, 300);
+
+  // 2. Tự động cập nhật tức thì khi chuyển tab quay lại web (focus)
+  window.addEventListener("focus", () => {
+    if (!isCloudSyncInProgress) {
+      syncFromCloud(true);
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && !isCloudSyncInProgress) {
+      syncFromCloud(true);
+    }
+  });
+
+  // 3. Polling ngầm mỗi 15 giây để nếu máy khác vừa Xóa / Sửa / Thêm đề thì máy này tự động cập nhật ngay
+  setInterval(() => {
+    if (document.visibilityState === "visible" && !isCloudSyncInProgress) {
+      syncFromCloud(true);
+    }
+  }, 15000);
 }
 
 function openCloudSyncModal() {
@@ -610,9 +514,10 @@ function updateCloudSyncUI(isSyncing = false) {
 }
 
 /**
- * PULL: Tải đề thi mới nhất từ Cloud GitHub về máy này
+ * PULL: Tải đề thi mới nhất từ Cloud GitHub về máy này (Đồng bộ Thêm / Sửa / Xóa)
  */
 async function syncFromCloud(silent = false) {
+  if (isCloudSyncInProgress) return;
   updateCloudSyncUI(true);
   try {
     const token = getGitHubToken();
@@ -648,27 +553,42 @@ async function syncFromCloud(silent = false) {
       throw new Error("Dữ liệu Cloud không hợp lệ hoặc không có danh sách môn!");
     }
 
-    // Hợp nhất thông minh: Nếu máy này vừa tải đề mới lên mà chưa kịp đồng bộ lên Cloud, không được ghi đè mất đề!
-    const { merged, hasLocalNewData } = mergeSubjects(appData.subjects || [], cloudData.subjects);
-    appData = {
-      subjects: merged
-    };
-    saveData(false);
-    renderApp();
+    // CLOUD LÀ NGUỒN CHUẨN DUY NHẤT:
+    // So sánh dữ liệu Cloud với dữ liệu hiện tại trong máy
+    const localSubjectsJson = JSON.stringify(appData.subjects || []);
+    const cloudSubjectsJson = JSON.stringify(cloudData.subjects || []);
+
+    if (localSubjectsJson !== cloudSubjectsJson) {
+      console.log("Phát hiện thay đổi trên Cloud (Thêm / Sửa / Xóa đề), đang đồng bộ vào máy...");
+      appData = {
+        subjects: cloudData.subjects || [],
+        lastUpdated: cloudData.lastUpdated || Date.now()
+      };
+      // Lưu vào localStorage của máy mà KHÔNG đẩy ngược lên Cloud
+      saveData(false);
+
+      // Cập nhật giao diện theo ngữ cảnh hiện tại
+      if (currentView === "editor" && typeof currentSubjectId !== "undefined") {
+        const stillExists = appData.subjects.find(s => s.id === currentSubjectId);
+        if (!stillExists) {
+          saveAndReturnDashboard();
+          showToast("Môn học này đã được xóa từ thiết bị khác!", "warning");
+        } else {
+          renderEditorQuestionList();
+          renderApp();
+        }
+      } else {
+        renderApp();
+      }
+
+      if (!silent) {
+        const totalQ = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
+        showToast(`☁️ Đã đồng bộ ${cloudData.subjects.length} bộ đề (${totalQ} câu hỏi) mới nhất từ Cloud!`, "success");
+      }
+    }
 
     localStorage.setItem(CLOUD_SYNC_CONFIG.lastSyncKey, Date.now().toString());
     updateCloudSyncUI(false);
-
-    if (hasLocalNewData) {
-      // Máy này có đề mới hơn Cloud -> Tự động đẩy lên Cloud ngay để các máy khác có đề luôn!
-      console.log("Phát hiện dữ liệu mới trên máy này, tự động đồng bộ lên Cloud...");
-      syncToCloud(true);
-    } else {
-      const totalQ = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
-      if (!silent) {
-        showToast(`☁️ Đã đồng bộ ${cloudData.subjects.length} bộ đề (${totalQ} câu hỏi) từ Cloud!`, "success");
-      }
-    }
   } catch (err) {
     console.warn("Cloud sync pull warning:", err);
     updateCloudSyncUI(false);
@@ -1254,11 +1174,6 @@ function renderMasterDetailSystem() {
           <div class="detail-chip-val" style="color: var(--brand-accent, #10b981);">Trắc nghiệm</div>
           <div class="detail-chip-lbl">Hình thức thi</div>
         </div>
-        ${activeQCount > 50 ? `
-        <div class="detail-chip" onclick="splitCurrentSubject(${activeSub.id})" style="cursor: pointer; border-color: rgba(250, 204, 21, 0.4);" title="Bấm để tách đề làm đôi">
-          <div class="detail-chip-val" style="color: #facc15;">✂️ Tách Đề</div>
-          <div class="detail-chip-lbl">${activeQCount} câu gộp</div>
-        </div>` : ''}
       </div>
     </div>
 
@@ -1275,10 +1190,6 @@ function renderMasterDetailSystem() {
         <button class="btn btn-secondary" onclick="openSubjectEditor(${activeSub.id})" title="Chỉnh sửa ngân hàng câu hỏi">
           <span>Chỉnh Sửa Đề</span>
         </button>
-        ${activeSub.questions && activeSub.questions.length > 50 ? `
-        <button class="btn btn-secondary" onclick="splitCurrentSubject(${activeSub.id})" title="Tách đề này thành 2 đề riêng nếu bị gộp nhầm" style="color: #facc15; border-color: rgba(250, 204, 21, 0.4);">
-          <span>✂️ Tách Đề</span>
-        </button>` : ''}
         <button class="btn btn-secondary btn-del-subject" onclick="deleteSubject(${activeSub.id})" title="Xóa môn học này">
           <span>Xóa Môn</span>
         </button>
@@ -1344,10 +1255,6 @@ function renderGridCardsLayout(filtered, container) {
               <span>📝</span>
               <span>${qCount} câu</span>
             </div>
-            ${qCount > 50 ? `
-            <div class="grid-card-meta-item" onclick="splitCurrentSubject(${sub.id})" style="cursor: pointer; color: #facc15; border-color: rgba(250, 204, 21, 0.4);" title="Tách đề này">
-              <span>✂️ Tách đề</span>
-            </div>` : ''}
           </div>
 
           <div class="grid-card-q-preview" title="Xem trước câu hỏi">
@@ -1363,7 +1270,6 @@ function renderGridCardsLayout(filtered, container) {
           <div class="grid-card-btn-row">
             <button class="grid-card-btn-sub" onclick="startStudyMode(${sub.id})" title="Ôn tập không tính giờ">Ôn Tập</button>
             <button class="grid-card-btn-sub" onclick="openSubjectEditor(${sub.id})" title="Chỉnh sửa ngân hàng câu hỏi">Sửa</button>
-            ${qCount > 50 ? `<button class="grid-card-btn-sub" onclick="splitCurrentSubject(${sub.id})" title="Tách đề" style="color: #facc15;">✂️ Tách</button>` : ''}
             <button class="grid-card-btn-sub btn-del" onclick="deleteSubject(${sub.id})" title="Xóa đề này">✕</button>
           </div>
         </div>
@@ -1431,7 +1337,6 @@ function renderCompactTableLayout(filtered, container) {
             <button class="table-btn-play" onclick="openPreExamModal(${sub.id})" title="Bắt đầu thi">Vào Thi</button>
             <button class="table-btn-icon" onclick="startStudyMode(${sub.id})" title="Ôn tập tự do">Ôn Tập</button>
             <button class="table-btn-icon" onclick="openSubjectEditor(${sub.id})" title="Chỉnh sửa đề">Sửa</button>
-            ${qCount > 50 ? `<button class="table-btn-icon" onclick="splitCurrentSubject(${sub.id})" title="Tách đề này thành 2 đề riêng nếu bị gộp nhầm" style="color: #facc15;">✂️ Tách</button>` : ''}
             <button class="table-btn-icon table-btn-del" onclick="deleteSubject(${sub.id})" title="Xóa môn">✕</button>
           </div>
         </td>
@@ -1559,11 +1464,6 @@ function renderFocusStageLayout(filtered, container) {
               <div class="detail-chip-val" style="color: var(--brand-accent, #10b981);">Trắc nghiệm</div>
               <div class="detail-chip-lbl">Hình thức thi</div>
             </div>
-            ${activeQCount > 50 ? `
-            <div class="detail-chip" onclick="splitCurrentSubject(${activeSub.id})" style="cursor: pointer; border-color: rgba(250, 204, 21, 0.4);" title="Bấm để tách đề">
-              <div class="detail-chip-val" style="color: #facc15;">✂️ Tách Đề</div>
-              <div class="detail-chip-lbl">${activeQCount} câu</div>
-            </div>` : ''}
           </div>
         </div>
 
@@ -1658,48 +1558,18 @@ function scrollToCatalog() {
 // ==========================================================================
 let smartImportTargetSubjectId = null;
 
-function setSmartImportAsNewSubject() {
+function openSmartImportModal() {
+  if (!requireTeacherAuth(() => openSmartImportModal())) return;
+  parsedQuestionsTemp = [];
   smartImportTargetSubjectId = null;
+
+  const titleInput = document.getElementById("import-input-title");
+  if (titleInput) titleInput.value = "";
+
   const targetModeContainer = document.getElementById("import-target-mode-container");
   if (targetModeContainer) {
     targetModeContainer.style.display = "none";
     targetModeContainer.innerHTML = "";
-  }
-  const btnLabel = document.getElementById("btn-import-label");
-  if (btnLabel) {
-    btnLabel.textContent = `Tạo Bộ Đề Mới (${parsedQuestionsTemp.length} câu)`;
-  }
-  const titleInput = document.getElementById("import-input-title");
-  if (titleInput) titleInput.value = "";
-  showToast("Đã chuyển sang chế độ tạo Đề Mới riêng biệt", "info");
-}
-
-function openSmartImportModal(targetSubId = null) {
-  if (!requireTeacherAuth(() => openSmartImportModal(targetSubId))) return;
-  parsedQuestionsTemp = [];
-  smartImportTargetSubjectId = targetSubId;
-
-  const titleInput = document.getElementById("import-input-title");
-  if (titleInput) titleInput.value = "";
-
-  const targetModeContainer = document.getElementById("import-target-mode-container");
-  if (smartImportTargetSubjectId) {
-    const existingSub = appData.subjects.find(s => s.id === smartImportTargetSubjectId);
-    if (targetModeContainer && existingSub) {
-      targetModeContainer.style.display = "block";
-      targetModeContainer.innerHTML = `
-        <div style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); padding: 10px 14px; border-radius: 8px; font-size: 0.88rem; color: #bae6fd; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-          <span>Đang chọn thêm vào môn: <strong style="color: #ffffff;">${escapeHtml(existingSub.title)}</strong></span>
-          <button type="button" class="btn btn-ghost btn-sm" onclick="setSmartImportAsNewSubject()" style="font-size: 0.78rem; text-decoration: underline; color: #facc15;">Chuyển thành Tạo Môn / Đề Mới</button>
-        </div>
-      `;
-      if (titleInput) titleInput.value = existingSub.title;
-    }
-  } else {
-    if (targetModeContainer) {
-      targetModeContainer.style.display = "none";
-      targetModeContainer.innerHTML = "";
-    }
   }
 
   document.getElementById("import-raw-text").value = "";
@@ -1707,7 +1577,7 @@ function openSmartImportModal(targetSubId = null) {
   document.getElementById("file-upload-status").style.display = "none";
   document.getElementById("import-preview-section").style.display = "none";
   document.getElementById("btn-submit-smart-import").disabled = true;
-  document.getElementById("btn-import-label").textContent = smartImportTargetSubjectId ? "Lưu Vào Môn Hiện Tại (0 câu)" : "Tạo Đề Mới (0 câu)";
+  document.getElementById("btn-import-label").textContent = "Tạo Đề Mới (0 câu)";
   
   switchImportTab("file");
   openModal("modal-smart-import");
@@ -3556,42 +3426,24 @@ function handleSmartImportSubmit() {
   const inputTitle = document.getElementById("import-input-title")?.value?.trim() || "";
   const selectedCat = document.getElementById("import-input-category")?.value || "auto";
 
-  let targetSub = null;
-  if (smartImportTargetSubjectId) {
-    targetSub = appData.subjects.find(s => s.id === smartImportTargetSubjectId);
-  }
+  // Luôn luôn tạo một Bộ Đề Mới riêng biệt độc lập 100%
+  const finalTitle = inputTitle || "Bộ Đề Mới Tải Lên";
+  const detected = detectCategory(finalTitle);
+  const targetSub = {
+    id: Date.now(),
+    title: finalTitle,
+    code: `SUB-${Math.floor(100 + Math.random() * 900)}`,
+    category: selectedCat === "auto" ? detected : selectedCat,
+    durationMinutes: 15,
+    questions: [...parsedQuestionsTemp]
+  };
+  appData.subjects.unshift(targetSub);
+  selectedSubjectId = targetSub.id;
 
-  if (!targetSub) {
-    // Luôn tạo Đề Mới riêng biệt khi không chỉ định môn hiện tại
-    const finalTitle = inputTitle || "Bộ Đề Mới Tải Lên";
-    const detected = detectCategory(finalTitle);
-    targetSub = {
-      id: Date.now(),
-      title: finalTitle,
-      code: `SUB-${Math.floor(100 + Math.random() * 900)}`,
-      category: selectedCat === "auto" ? detected : selectedCat,
-      durationMinutes: 15,
-      questions: []
-    };
-    appData.subjects.unshift(targetSub);
-    selectedSubjectId = targetSub.id;
-  } else {
-    if (inputTitle && targetSub.title !== inputTitle) {
-      targetSub.title = inputTitle;
-    }
-    if (selectedCat !== "auto") {
-      targetSub.category = selectedCat;
-    } else if (!targetSub.category) {
-      targetSub.category = detectCategory(targetSub.title, targetSub.code);
-    }
-  }
-
-  targetSub.questions.push(...parsedQuestionsTemp);
-  saveData();
+  saveData(true);
   closeModal("modal-smart-import");
   renderApp();
-  syncToCloud(false);
-  showToast(`Đã lưu thành công ${parsedQuestionsTemp.length} câu hỏi vào đề "${targetSub.title}"!`, "success");
+  showToast(`Đã tạo thành công bộ đề mới "${targetSub.title}" (${parsedQuestionsTemp.length} câu) và tự động đồng bộ lên Cloud!`, "success");
   parsedQuestionsTemp = [];
   smartImportTargetSubjectId = null;
 
@@ -4988,10 +4840,9 @@ function handleSaveSubject(e) {
   }
 
   parsedQuestionsTemp = [];
-  saveData();
+  saveData(true);
   closeModal("modal-subject");
   renderApp();
-  syncToCloud(false);
 
   if (targetSub) {
     openSubjectEditor(targetSub.id);
@@ -5004,10 +4855,9 @@ function deleteSubject(subId) {
   if (!sub) return;
   if (confirm(`Bạn có chắc chắn muốn xóa môn "${sub.title}" cùng toàn bộ câu hỏi?`)) {
     appData.subjects = appData.subjects.filter(s => s.id !== subId);
-    saveData();
+    saveData(true);
     renderApp();
-    syncToCloud(false);
-    showToast("Đã xóa môn học!", "warning");
+    showToast("Đã xóa môn học và cập nhật lên Cloud!", "warning");
   }
 }
 
@@ -5026,68 +4876,12 @@ function openSubjectEditor(subId) {
 }
 
 function saveAndReturnDashboard() {
-  saveData();
+  saveData(true);
   renderApp();
-  syncToCloud(false);
   switchView("dashboard");
   showToast("Đã lưu toàn bộ đề thi an toàn!");
 }
 
-function splitCurrentSubject(subId = null) {
-  const targetId = subId || currentSubjectId;
-  const sub = appData.subjects.find(s => s.id === targetId);
-  if (!sub || !sub.questions || sub.questions.length < 2) {
-    showToast("Đề này có quá ít câu hỏi để tách!", "warning");
-    return;
-  }
-
-  const defaultSplit = Math.floor(sub.questions.length / 2);
-  const promptSplit = prompt(
-    `Bộ đề "${sub.title}" hiện có ${sub.questions.length} câu hỏi.\n\nNhập số lượng câu hỏi muốn giữ lại cho Đề 1 (phần còn lại sẽ tách thành Đề thứ 2 riêng biệt):`,
-    defaultSplit
-  );
-  if (promptSplit === null) return;
-
-  const splitCount = parseInt(promptSplit.trim(), 10);
-  if (isNaN(splitCount) || splitCount <= 0 || splitCount >= sub.questions.length) {
-    alert(`Số lượng câu hỏi không hợp lệ! Phải là số từ 1 đến ${sub.questions.length - 1}.`);
-    return;
-  }
-
-  const defaultTitle1 = sub.title.includes(" - Đề") ? sub.title : `${sub.title} (Đề 1)`;
-  const defaultTitle2 = sub.title.includes(" - Đề") ? `${sub.title.replace(/Đề \d+/, '')} Đề 2` : `${sub.title} (Đề 2)`;
-
-  const newTitlePart1 = prompt("Nhập tên cho Đề thứ nhất:", defaultTitle1);
-  if (newTitlePart1 === null) return;
-
-  const newTitlePart2 = prompt("Nhập tên cho Đề thứ hai:", defaultTitle2);
-  if (newTitlePart2 === null) return;
-
-  const q1 = sub.questions.slice(0, splitCount);
-  const q2 = sub.questions.slice(splitCount);
-
-  // Cập nhật đề thứ nhất
-  sub.title = newTitlePart1.trim() || defaultTitle1;
-  sub.questions = q1;
-
-  // Tạo đề thứ 2 riêng biệt
-  const newSub = {
-    id: Date.now(),
-    title: newTitlePart2.trim() || defaultTitle2,
-    code: `SUB-${Math.floor(100 + Math.random() * 900)}`,
-    category: sub.category || detectCategory(newTitlePart2),
-    questions: q2
-  };
-  appData.subjects.unshift(newSub);
-
-  saveData();
-  renderApp();
-  syncToCloud(false);
-  if (currentView === "editor" && currentSubjectId === sub.id) {
-    openSubjectEditor(sub.id);
-  }
-  showToast(`Đã tách thành 2 đề: "${sub.title}" (${q1.length} câu) và "${newSub.title}" (${q2.length} câu)!`, "success");
-}
 
 function renderEditorQuestionList() {
   const sub = appData.subjects.find(s => s.id === currentSubjectId);
