@@ -577,11 +577,23 @@ const LAYOUT_MODES = [
   { id: "focus-stage", name: "Tiêu Điểm (Focus Stage)", icon: "🎯", badge: "Tiêu Điểm (Focus Stage)" }
 ];
 
-let currentLayoutMode = "master-detail";
+function getAdaptiveDefaultLayout() {
+  // Máy tính (desktop/laptop > 768px): Mặc định là Bảng Ngang (compact-table)
+  // Điện thoại (mobile <= 768px): Mặc định là 2 Cột (master-detail) như cũ
+  return window.innerWidth > 768 ? "compact-table" : "master-detail";
+}
+
+let currentLayoutMode = getAdaptiveDefaultLayout();
 let selectedSubjectId = null;
 
 function initLayout() {
-  const saved = localStorage.getItem("cuonedu_layout_mode") || "master-detail";
+  let saved = localStorage.getItem("cuonedu_layout_mode_v2");
+  if (!saved) {
+    saved = getAdaptiveDefaultLayout();
+    try {
+      localStorage.setItem("cuonedu_layout_mode_v2", saved);
+    } catch (e) {}
+  }
   setLayoutMode(saved, false);
 }
 
@@ -589,7 +601,7 @@ function setLayoutMode(mode, showNotification = false) {
   const matched = LAYOUT_MODES.find(m => m.id === mode) || LAYOUT_MODES[0];
   currentLayoutMode = matched.id;
   try {
-    localStorage.setItem("cuonedu_layout_mode", matched.id);
+    localStorage.setItem("cuonedu_layout_mode_v2", matched.id);
   } catch (e) {
     console.error("Lỗi lưu layout mode:", e);
   }
@@ -858,7 +870,10 @@ function renderMasterDetailSystem() {
         <span class="detail-category-badge">${escapeHtml(activeCategory)}</span>
         <span class="detail-code-badge">${escapeHtml(activeSub.code || "SUB-" + activeSub.id.toString().slice(-4))}</span>
       </div>
-      <h2 class="detail-title">${escapeHtml(activeSub.title)}</h2>
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <h2 class="detail-title" style="margin: 0; cursor: pointer;" onclick="quickRenameSubject(${activeSub.id})" title="Bấm để đổi tên đề">${escapeHtml(activeSub.title)}</h2>
+        <button class="btn btn-ghost btn-sm" onclick="quickRenameSubject(${activeSub.id})" style="padding: 2px 6px; font-size: 0.85rem;" title="Đổi tên bộ đề">✏️</button>
+      </div>
       
       <div class="detail-stats-chips">
         <div class="detail-chip">
@@ -1026,7 +1041,7 @@ function renderCompactTableLayout(filtered, container) {
         </td>
         <td>
           <div class="table-sub-title-cell">
-            <span class="table-sub-title">${escapeHtml(sub.title)}</span>
+            <span class="table-sub-title" onclick="quickRenameSubject(${sub.id})" title="Bấm để đổi tên nhanh" style="cursor: pointer;">${escapeHtml(sub.title)} <span style="font-size: 0.72rem; opacity: 0.65;" title="Đổi tên">✏️</span></span>
             ${sampleQuestion ? `<span class="table-sub-preview">${escapeHtml(sampleQuestion)}</span>` : ''}
           </div>
         </td>
@@ -4409,11 +4424,37 @@ function renderLeaderboard() {
 // ==========================================================================
 // 11. SUBJECT & QUESTION BUILDER / EDITOR
 // ==========================================================================
+function quickRenameSubject(subId) {
+  if (!subId) return;
+  const sub = appData.subjects.find(s => s.id === subId);
+  if (!sub) return;
+  const currentTitle = sub.title || "";
+  const newTitle = prompt("Nhập tên mới cho bộ đề thi / môn học:", currentTitle);
+  if (newTitle !== null && newTitle.trim() !== "" && newTitle.trim() !== currentTitle) {
+    sub.title = newTitle.trim();
+    if (typeof currentSubjectId !== "undefined" && currentSubjectId === subId) {
+      const titleEl = document.getElementById("editor-subject-title");
+      if (titleEl) titleEl.textContent = sub.title;
+      const metaEl = document.getElementById("editor-subject-meta");
+      if (metaEl) {
+        const cat = sub.category || detectCategory(sub.title, sub.code);
+        metaEl.textContent = `Phân môn: ${cat} • Mã đề: ${sub.code} • ${sub.questions ? sub.questions.length : 0} câu hỏi`;
+      }
+    }
+    saveData();
+    renderApp();
+    showToast(`Đã đổi tên đề thành: "${sub.title}"`, "success");
+  }
+}
+
 function openCreateSubjectModal(editSubId = null) {
   if (!requireTeacherAuth(() => openCreateSubjectModal(editSubId))) return;
   parsedQuestionsTemp = [];
   const badge = document.getElementById("create-sub-parsed-badge");
   const preview = document.getElementById("create-sub-preview-section");
+  const fileGroup = document.getElementById("create-sub-file-group");
+  const submitBtn = document.getElementById("btn-save-subject-main");
+
   if (badge) {
     badge.style.display = "none";
     badge.textContent = "";
@@ -4423,7 +4464,7 @@ function openCreateSubjectModal(editSubId = null) {
   if (editSubId) {
     const sub = appData.subjects.find(s => s.id === editSubId);
     if (sub) {
-      document.getElementById("modal-subject-title").textContent = "Chỉnh Sửa Thông Tin Môn Học";
+      document.getElementById("modal-subject-title").textContent = "Chỉnh Sửa Thông Tin Bộ Đề";
       document.getElementById("subject-form-id").value = sub.id;
       document.getElementById("subject-input-name").value = sub.title || "";
       document.getElementById("subject-input-code").value = sub.code || "";
@@ -4431,7 +4472,10 @@ function openCreateSubjectModal(editSubId = null) {
       if (document.getElementById("subject-input-duration")) {
         document.getElementById("subject-input-duration").value = sub.durationMinutes || 15;
       }
+      if (fileGroup) fileGroup.style.display = "none";
+      if (submitBtn) submitBtn.textContent = "Cập Nhật Thông Tin";
       openModal("modal-subject");
+      setTimeout(() => document.getElementById("subject-input-name")?.focus(), 150);
       return;
     }
   }
@@ -4444,8 +4488,11 @@ function openCreateSubjectModal(editSubId = null) {
   if (document.getElementById("subject-input-duration")) {
     document.getElementById("subject-input-duration").value = "15";
   }
+  if (fileGroup) fileGroup.style.display = "block";
+  if (submitBtn) submitBtn.textContent = "Lưu Môn Học";
 
   openModal("modal-subject");
+  setTimeout(() => document.getElementById("subject-input-name")?.focus(), 150);
 }
 
 function handleSaveSubject(e) {
@@ -4486,7 +4533,15 @@ function handleSaveSubject(e) {
       if (parsedQuestionsTemp.length > 0) {
         targetSub.questions.push(...parsedQuestionsTemp);
       }
-      showToast("Đã cập nhật môn học!");
+      if (typeof currentSubjectId !== "undefined" && currentSubjectId === targetSub.id) {
+        const titleEl = document.getElementById("editor-subject-title");
+        if (titleEl) titleEl.textContent = targetSub.title;
+        const metaEl = document.getElementById("editor-subject-meta");
+        if (metaEl) {
+          metaEl.textContent = `Phân môn: ${category} • Mã đề: ${code} • ${targetSub.questions ? targetSub.questions.length : 0} câu hỏi`;
+        }
+      }
+      showToast("Đã cập nhật thông tin bộ đề thành công!", "success");
     }
   } else {
     targetSub = {

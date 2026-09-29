@@ -487,11 +487,19 @@
           <button class="btn btn-ghost btn-sm" onclick="saveAndReturnDashboard()" style="padding-left: 0;">
             ← Trở về Trang Chủ
           </button>
-          <h2 id="editor-subject-title" style="font-size: 1.6rem; font-weight: 800; margin-top: 4px;">Tên Môn Học</h2>
-          <p id="editor-subject-meta" style="color: var(--wg-text-subtle); font-size: 0.85rem;">Mã đề: --- • 15 phút • 0 câu hỏi</p>
+          <div style="display: flex; align-items: center; gap: 10px; margin-top: 4px; flex-wrap: wrap;">
+            <h2 id="editor-subject-title" style="font-size: 1.6rem; font-weight: 800; margin: 0; cursor: pointer;" onclick="quickRenameSubject(currentSubjectId)" title="Bấm để đổi tên đề">Tên Môn Học</h2>
+            <button class="btn btn-secondary btn-sm" onclick="quickRenameSubject(currentSubjectId)" style="padding: 4px 10px; font-size: 0.8rem; border-radius: 20px; display: inline-flex; align-items: center; gap: 4px;" title="Đổi tên bộ đề">
+              <span>✏️ Đổi tên đề</span>
+            </button>
+          </div>
+          <p id="editor-subject-meta" style="color: var(--wg-text-subtle); font-size: 0.85rem; margin-top: 4px;">Mã đề: --- • 15 phút • 0 câu hỏi</p>
         </div>
 
-        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+          <button class="btn btn-secondary btn-sm" onclick="openCreateSubjectModal(currentSubjectId)" title="Đổi tên đề, mã đề, phân môn, thời gian">
+            <span>⚙️ Đổi Thông Tin Đề</span>
+          </button>
           <button class="btn btn-secondary btn-sm" onclick="openSmartImportModal(currentSubjectId)">
             <span>Tải File / Nhập Đề</span>
           </button>
