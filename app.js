@@ -5282,6 +5282,35 @@ function showToast(message, type = "info") {
   }, 2800);
 }
 
+function copyToClipboardText(text, successMsg = "Đã sao chép vào bộ nhớ tạm!") {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => {
+      showToast(successMsg, "success");
+    }).catch(() => {
+      fallbackCopyText(text, successMsg);
+    });
+  } else {
+    fallbackCopyText(text, successMsg);
+  }
+}
+
+function fallbackCopyText(text, successMsg) {
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.position = "fixed";
+  ta.style.opacity = "0";
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try {
+    document.execCommand("copy");
+    showToast(successMsg, "success");
+  } catch (e) {
+    prompt("Sao chép thủ công:", text);
+  }
+  document.body.removeChild(ta);
+}
+
 function renderAvatarPicker(containerId, selectedAvatar, onSelect) {
   const container = document.getElementById(containerId);
   if (!container) return;

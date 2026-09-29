@@ -75,12 +75,8 @@
           </div>
         </div>
 
-        <!-- Single 3-bar Hamburger Button & Cloud Sync in Corner -->
-        <div class="navbar-right-controls" style="display: flex; align-items: center; gap: 8px;">
-          <button id="btn-cloud-sync" class="btn-cloud-sync-pill" onclick="openCloudSyncModal()" title="Đồng bộ đề thi Cloud GitHub (Tất cả thiết bị)">
-            <span class="sync-dot-live"></span>
-            <span class="sync-text-label">☁️ Đồng Bộ Cloud</span>
-          </button>
+        <!-- Single 3-bar Hamburger Button in Corner -->
+        <div class="navbar-right-controls">
           <button id="btn-hamburger" class="btn-hamburger" onclick="toggleMainDrawer(event)" title="Menu cài đặt & chức năng (3 gạch)">
             <span class="hamburger-bar"></span>
             <span class="hamburger-bar"></span>
@@ -106,6 +102,31 @@
       <button class="drawer-close-btn" onclick="closeMainDrawer()" title="Đóng menu">✕</button>
     </div>
 
+    <!-- 1. CỘNG ĐỒNG: ỦNG HỘ & GÓP Ý (ĐẦU TIÊN) -->
+    <div class="drawer-nav-group" style="margin-top: 10px; margin-bottom: 14px;">
+      <button class="drawer-menu-item" onclick="closeMainDrawer(); openModal('modal-donate');" style="background: linear-gradient(135deg, rgba(244, 63, 94, 0.16), rgba(236, 72, 153, 0.16)); border: 1px solid rgba(244, 63, 94, 0.45); margin-bottom: 8px;">
+        <div class="drawer-item-icon-wrap" style="font-size: 1.35rem; margin-right: 12px; display: flex; align-items: center;">💖</div>
+        <div class="drawer-item-content">
+          <div class="drawer-item-title" style="color: #fda4af; font-weight: 800; display: flex; align-items: center; justify-content: space-between;">
+            <span>Tiếp Sức / Ủng Hộ Web</span>
+            <span class="badge" style="background: rgba(244, 63, 94, 0.35); color: #fff; font-size: 0.72rem; padding: 2px 7px; border-radius: 10px;">Ủng Hộ ☕</span>
+          </div>
+          <div class="drawer-item-desc" style="color: rgba(255, 255, 255, 0.8);">Mời tác giả ly cà phê duy trì server & phát triển web</div>
+        </div>
+      </button>
+
+      <button class="drawer-menu-item" onclick="closeMainDrawer(); openModal('modal-feedback');" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.14), rgba(14, 165, 233, 0.14)); border: 1px solid rgba(56, 189, 248, 0.4);">
+        <div class="drawer-item-icon-wrap" style="font-size: 1.35rem; margin-right: 12px; display: flex; align-items: center;">💬</div>
+        <div class="drawer-item-content">
+          <div class="drawer-item-title" style="color: #7dd3fc; font-weight: 800; display: flex; align-items: center; justify-content: space-between;">
+            <span>Góp Ý, Báo Lỗi & Gửi Tài Liệu</span>
+            <span class="badge" style="background: rgba(56, 189, 248, 0.3); color: #fff; font-size: 0.72rem; padding: 2px 7px; border-radius: 10px;">Zalo 24/7</span>
+          </div>
+          <div class="drawer-item-desc" style="color: rgba(255, 255, 255, 0.8);">Zalo / SĐT: 0962.714.685 (Quang Cuốn) • Nhận đề & góp ý</div>
+        </div>
+      </button>
+    </div>
+
     <!-- User Profile / Login Area in Drawer -->
     <div class="drawer-user-section">
       <div id="drawer-user-logged-out" class="drawer-user-card" onclick="closeMainDrawer(); openGoogleAuthModal();">
@@ -127,7 +148,7 @@
 
     <!-- SINGLE UNIFIED ACCORDION SECTION: GIAO DIỆN & TÙY BIẾN -->
     <div class="drawer-nav-group">
-      <div id="drawer-accordion-ui" class="drawer-accordion open">
+      <div id="drawer-accordion-ui" class="drawer-accordion">
         <button type="button" class="drawer-accordion-header" onclick="toggleDrawerAccordion('drawer-accordion-ui')">
           <div style="display: flex; align-items: center; gap: 10px;">
             <span>🎨</span>
@@ -586,9 +607,14 @@
           <div id="teacher-auth-error" class="teacher-auth-error" style="display: none;"></div>
 
           <div class="teacher-auth-notice">
-            <div class="notice-tag">🔒 Chức năng giáo viên</div>
-            <div class="notice-content">
-              Liên hệ admin <strong>Quang Cuốn</strong> <a href="tel:0962714685" class="admin-phone-link">0962.714.685</a> để có pass truy cập.
+            <div class="notice-tag">🔒 Quyền Giáo Viên & Đóng Góp Đề</div>
+            <div class="notice-content" style="line-height: 1.55;">
+              <div style="margin-bottom: 8px; font-size: 0.88rem; color: #bae6fd;">
+                💡 <strong>Nếu bạn có tài liệu, đề cương hay muốn chia sẻ lên hệ thống để mọi người cùng ôn luyện</strong>, hãy gửi cho mình qua Zalo/SĐT: <a href="https://zalo.me/0962714685" target="_blank" rel="noopener noreferrer" style="color: #facc15; font-weight: 800; text-decoration: underline;">0962.714.685 (Quang Cuốn)</a> nhé! Cảm ơn bạn rất nhiều! ✨
+              </div>
+              <div style="font-size: 0.78rem; opacity: 0.85;">
+                Liên hệ admin <strong>Quang Cuốn</strong> <a href="tel:0962714685" class="admin-phone-link">0962.714.685</a> để nhận pass giáo viên.
+              </div>
             </div>
           </div>
         </div>
@@ -597,6 +623,108 @@
           <button type="submit" class="btn btn-primary btn-confirm-teacher">Xác Nhận</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- MODAL: DONATE / TIẾP SỨC CHO WEB -->
+  <div class="modal-backdrop" id="modal-donate">
+    <div class="modal-card" style="max-width: 480px; text-align: center;">
+      <div class="modal-header" style="justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.3rem;">💖</span>
+          <h3 style="margin: 0;">Tiếp Sức & Ủng Hộ CuonEdu</h3>
+        </div>
+        <button class="btn-icon" onclick="closeModal('modal-donate')">✕</button>
+      </div>
+
+      <div class="modal-body" style="padding: 20px 16px;">
+        <p style="font-size: 0.88rem; color: var(--wg-text-subtle); line-height: 1.5; margin-bottom: 16px;">
+          Mỗi sự ủng hộ dù là nhỏ nhất hay một ly cà phê từ các bạn đều là nguồn động lực to lớn giúp CuonEdu duy trì máy chủ, phát triển thêm nhiều tính năng mới và chia sẻ tài liệu miễn phí cho cộng đồng! ✨
+        </p>
+
+        <!-- QR Code Image -->
+        <div style="background: #ffffff; padding: 12px; border-radius: 16px; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.4); margin-bottom: 16px;">
+          <img src="assets/donate-qr.png" alt="Mã QR Techcombank Nguyen Quang Anh" style="width: 260px; max-width: 100%; height: auto; border-radius: 8px; display: block;">
+        </div>
+
+        <!-- Bank Details Card -->
+        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 12px 16px; text-align: left; margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-size: 0.8rem; color: var(--wg-text-subtle);">Ngân hàng:</span>
+            <strong style="color: #ef4444; font-size: 0.95rem;">TECHCOMBANK</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-size: 0.8rem; color: var(--wg-text-subtle);">Chủ tài khoản:</span>
+            <strong style="color: #ffffff; font-size: 0.95rem;">NGUYEN QUANG ANH</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.8rem; color: var(--wg-text-subtle);">Số tài khoản:</span>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <strong style="color: #38bdf8; font-family: monospace; font-size: 1.1rem; letter-spacing: 0.5px;">2207 6666 8888</strong>
+              <button type="button" class="btn btn-ghost btn-sm" onclick="copyToClipboardText('220766668888', 'Đã sao chép số tài khoản 220766668888!')" style="padding: 2px 8px; font-size: 0.75rem; border: 1px solid rgba(56, 189, 248, 0.3); color: #38bdf8;" title="Sao chép">📋 Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size: 0.82rem; color: #f472b6; font-weight: 700;">
+          Xin chân thành cảm ơn tình cảm và sự đồng hành của bạn! ❤️
+        </div>
+      </div>
+
+      <div class="modal-footer" style="justify-content: center;">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('modal-donate')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: GÓP Ý, BÁO LỖI & GỬI TÀI LIỆU -->
+  <div class="modal-backdrop" id="modal-feedback">
+    <div class="modal-card" style="max-width: 480px; text-align: center;">
+      <div class="modal-header" style="justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.3rem;">💬</span>
+          <h3 style="margin: 0;">Góp Ý, Báo Lỗi & Gửi Tài Liệu</h3>
+        </div>
+        <button class="btn-icon" onclick="closeModal('modal-feedback')">✕</button>
+      </div>
+
+      <div class="modal-body" style="padding: 20px 16px;">
+        <p style="font-size: 0.88rem; color: var(--wg-text-subtle); line-height: 1.5; margin-bottom: 16px;">
+          Bạn phát hiện câu hỏi nào bị sai đáp án, có ý tưởng cải tiến web hoặc có tài liệu/đề thi mới muốn đóng góp cho cộng đồng? Đừng ngần ngại nhắn ngay cho mình nhé! ✨
+        </p>
+
+        <!-- Zalo QR Image -->
+        <div style="background: #ffffff; padding: 12px; border-radius: 16px; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.4); margin-bottom: 16px;">
+          <img src="assets/zalo-contact-qr.png" alt="Danh thiếp Zalo Nguyễn Quang Anh" style="width: 250px; max-width: 100%; height: auto; border-radius: 8px; display: block;">
+        </div>
+
+        <!-- Contact Actions -->
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px;">
+          <a href="https://zalo.me/0962714685" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #0068ff, #0084ff); border: none; font-weight: 800; padding: 12px; font-size: 0.95rem; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <span>💬</span>
+            <span>Mở Nhắn Tin Qua Zalo Ngay</span>
+          </a>
+
+          <div style="display: flex; gap: 8px;">
+            <a href="tel:0962714685" class="btn btn-secondary" style="flex: 1; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 0.85rem; padding: 10px;">
+              <span>📞</span>
+              <span>Gọi Điện Trực Tiếp</span>
+            </a>
+            <button type="button" class="btn btn-secondary" onclick="copyToClipboardText('0962714685', 'Đã sao chép SĐT Zalo: 0962.714.685!')" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 0.85rem; padding: 10px;">
+              <span>📋</span>
+              <span>Sao Chép SĐT</span>
+            </button>
+          </div>
+        </div>
+
+        <div style="font-size: 0.78rem; color: var(--wg-text-subtle);">
+          Admin: <strong>Nguyễn Quang Anh (Quang Cuốn)</strong> • SĐT: <strong>0962.714.685</strong>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="justify-content: center;">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('modal-feedback')">Đóng</button>
+      </div>
     </div>
   </div>
 

@@ -2817,7 +2817,7 @@ button:active {
   background: rgba(8, 11, 18, 0.78);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  z-index: 500;
+  z-index: 9999 !important;
   display: none;
   align-items: center;
   justify-content: center;
