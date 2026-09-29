@@ -78,8 +78,12 @@
           </div>
         </div>
 
-        <!-- Single 3-bar Hamburger Button in Corner -->
-        <div class="navbar-right-controls">
+        <!-- Header Controls: Đồng Bộ Ngay + Hamburger Menu -->
+        <div class="navbar-right-controls" style="display: flex; align-items: center; gap: 8px;">
+          <button id="btn-quick-sync-cloud" class="btn btn-ghost btn-sm" onclick="forceRefreshAndSyncCloud()" title="Bấm để đồng bộ dữ liệu tức thì từ Cloud (Xóa/Cập nhật đề mới)" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; background: rgba(56, 189, 248, 0.14); border: 1px solid rgba(56, 189, 248, 0.45); color: #38bdf8; font-size: 0.82rem; font-weight: 800; cursor: pointer; transition: all 0.2s ease;">
+            <span id="nav-sync-icon" style="display: inline-block; font-size: 0.95rem;">🔄</span>
+            <span class="hide-mobile">Đồng Bộ Cloud</span>
+          </button>
           <button id="btn-hamburger" class="btn-hamburger" onclick="toggleMainDrawer(event)" title="Menu cài đặt & chức năng (3 gạch)">
             <span class="hamburger-bar"></span>
             <span class="hamburger-bar"></span>
@@ -760,19 +764,12 @@
           </button>
         </div>
 
-        <!-- Token Settings (Collapsible) -->
-        <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 10px 14px;">
-          <summary style="cursor: pointer; font-size: 0.84rem; font-weight: 700; color: var(--wg-text-subtle);">
-            ⚙️ Cấu hình Token GitHub (Chỉ cần khi đẩy đề lên)
-          </summary>
-          <div style="margin-top: 10px;">
-            <label class="form-label" style="font-size: 0.8rem;">Personal Access Token (ghp_...):</label>
-            <input type="password" id="input-github-token" class="form-input form-input-sm" placeholder="Nhập token GitHub..." style="font-family: monospace;">
-            <div style="margin-top: 8px; display: flex; justify-content: flex-end; gap: 8px;">
-              <button class="btn btn-secondary btn-sm" onclick="saveCustomGitHubToken()">Lưu Token</button>
-            </div>
-          </div>
-        </details>
+        <!-- Reset Cache Button -->
+        <div style="margin-top: 14px; text-align: center;">
+          <button type="button" class="btn btn-ghost btn-sm" onclick="forceResetAndSyncFromCloud()" style="color: #f87171; border: 1px dashed rgba(248, 113, 113, 0.4); padding: 8px 14px; font-size: 0.8rem; border-radius: 8px; width: 100%;">
+            🔄 Xóa Cache Trên Máy Này & Nạp Lại Chuẩn Từ Cloud
+          </button>
+        </div>
       </div>
 
       <div class="modal-footer">
@@ -1444,6 +1441,6 @@
   </div>
 
   <script src="questions.js"></script>
-  <script src="app.js?v=7.0.0"></script>
+  <script src="app.js?v=7.1.0"></script>
 </body>
 </html>

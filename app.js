@@ -621,6 +621,38 @@ async function syncFromCloud(silent = false) {
   }
 }
 
+/**
+ * Nút bấm Đồng bộ Thủ công Siêu Tốc (Dành cho điện thoại hoặc máy khác cần cập nhật ngay)
+ */
+async function forceRefreshAndSyncCloud() {
+  const icon = document.getElementById("nav-sync-icon");
+  if (icon) icon.style.animation = "spin 0.8s linear infinite";
+  showToast("⏳ Đang kết nối Cloud và làm mới dữ liệu...", "info");
+
+  try {
+    isLocalModificationActive = false;
+    isCloudSyncInProgress = false;
+    await syncFromCloud(false);
+  } catch (e) {
+    showToast("Lỗi đồng bộ: " + e.message, "error");
+  } finally {
+    if (icon) icon.style.animation = "";
+  }
+}
+
+/**
+ * Xóa sạch dữ liệu cache cục bộ trên máy và nạp lại chuẩn từ Cloud
+ */
+async function forceResetAndSyncFromCloud() {
+  if (!confirm("Thao tác này sẽ xóa sạch dữ liệu cache trên máy này và tải trực tiếp bản chuẩn nhất từ Cloud về. Bạn có muốn tiếp tục?")) {
+    return;
+  }
+  localStorage.removeItem(STORAGE_KEY);
+  appData = { subjects: [] };
+  renderApp();
+  await forceRefreshAndSyncCloud();
+}
+
 // Khóa chống xung đột ghi đè đồng thời (Concurrency Mutex)
 let isCloudSyncInProgress = false;
 let hasQueuedSync = false;
