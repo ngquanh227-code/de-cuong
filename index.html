@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="cyber-sunset">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CuonEdu — Nền Tảng Luyện Thi & Quản Lý Đề Cương Trực Tuyến</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Quicksand:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css?v=5.4">
+  <!-- Mammoth.js & JSZip & PDF.js để đọc trực tiếp file Word (.docx), PDF (.pdf), bảng biểu và hình ảnh minh họa -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    if (typeof pdfjsLib !== "undefined") {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    }
+  </script>
+  <!-- KaTeX for rendering math formulas, equations, LaTeX ($...$, $$...$$) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+  <!-- CANVAS FOR CONFETTI & TOAST CONTAINER -->
+  <canvas id="confetti-canvas"></canvas>
+  <div id="toast-container" class="toast-container"></div>
+  <input type="file" id="json-file-input" accept=".json" style="display: none;">
+
+  <!-- SVG FILTER DEFINITION FOR APPLE LIQUID GLASS (2025) -->
+  <svg style="display: none;" aria-hidden="true">
+    <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="2" seed="92" result="noise" />
+      <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+      <feDisplacementMap in="SourceGraphic" in2="blurred" scale="50" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+
+  <!-- MAIN NAVIGATION BAR (Streamlined with Logo & 3-bar Menu) -->
+  <header class="main-navbar">
+    <div class="navbar-container">
+      <div class="navbar-inner">
+        <!-- Custom Dedicated Logo Brand CuonEdu PRO -->
+        <div class="brand-wrapper" onclick="switchView('dashboard')">
+          <div class="custom-brand-logo">
+            <svg class="brand-vector" width="38" height="38" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="logoGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3b0764"/>
+                  <stop offset="50%" stop-color="#1e0b38"/>
+                  <stop offset="100%" stop-color="#0c0517"/>
+                </linearGradient>
+                <linearGradient id="logoGradAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f8fafc"/>
+                  <stop offset="100%" stop-color="#c084fc"/>
+                </linearGradient>
+              </defs>
+              <rect x="2" y="2" width="40" height="40" rx="12" fill="url(#logoGradPrimary)" />
+              <rect x="2" y="2" width="40" height="40" rx="12" stroke="rgba(192,132,252,0.5)" stroke-width="1.5" />
+              <path d="M28 14H18C15.2386 14 13 16.2386 13 19V25C13 27.7614 15.2386 30 18 30H28" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" />
+              <path d="M21 22L31 22M27 18L31 22L27 26" stroke="url(#logoGradAccent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="brand-text-block">
+            <div class="brand-title">
+              <span class="brand-name">CUONEDU</span>
+              <span class="brand-badge-pro">PRO</span>
+            </div>
+            <span class="brand-subtext hide-mobile">Hệ Thống Khảo Thí & Quản Trị Đề Cương</span>
+          </div>
+        </div>
+
+        <!-- Single 3-bar Hamburger Button in Corner -->
+        <div class="navbar-right-controls">
+          <button id="btn-hamburger" class="btn-hamburger" onclick="toggleMainDrawer(event)" title="Menu cài đặt & chức năng (3 gạch)">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SLIDE-OUT DRAWER MENU (Gom toàn bộ chức năng vào dấu 3 gạch) -->
+  <div id="drawer-backdrop" class="drawer-backdrop" onclick="closeMainDrawer()"></div>
+  <aside id="main-drawer" class="main-drawer" aria-label="Menu quản trị & chức năng">
+    <div class="glass-filter"></div>
+    <div class="glass-overlay"></div>
+    <div class="glass-specular"></div>
+
+    <div class="drawer-header">
+      <div class="drawer-header-brand">
+        <span class="drawer-title">Trung Tâm Cài Đặt & Quản Trị</span>
+        <span class="drawer-subtitle">CUONEDU PRO</span>
+      </div>
+      <button class="drawer-close-btn" onclick="closeMainDrawer()" title="Đóng menu">✕</button>
+    </div>
+
+    <!-- User Profile / Login Area in Drawer -->
+    <div class="drawer-user-section">
+      <div id="drawer-user-logged-out" class="drawer-user-card" onclick="closeMainDrawer(); openGoogleAuthModal();">
+        <div class="drawer-user-avatar">ID</div>
+        <div class="drawer-user-info">
+          <div class="drawer-user-name">Đăng Nhập Tài Khoản</div>
+          <div class="drawer-user-sub">Lưu điểm & đồng bộ xếp hạng</div>
+        </div>
+      </div>
+
+      <div id="drawer-user-logged-in" class="drawer-user-card" style="display: none;" onclick="closeMainDrawer(); openProfileModal();">
+        <div class="drawer-user-avatar" id="drawer-avatar-badge">🚀</div>
+        <div class="drawer-user-info">
+          <div class="drawer-user-name" id="drawer-user-name">Học sinh</div>
+          <div class="drawer-user-sub">Hồ sơ cá nhân & Cài đặt</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SINGLE UNIFIED ACCORDION SECTION: GIAO DIỆN & TÙY BIẾN -->
+    <div class="drawer-nav-group">
+      <div id="drawer-accordion-ui" class="drawer-accordion open">
+        <button type="button" class="drawer-accordion-header" onclick="toggleDrawerAccordion('drawer-accordion-ui')">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span>🎨</span>
+            <span>TÙY CHỈNH GIAO DIỆN</span>
+          </div>
+          <span class="drawer-accordion-chevron">▼</span>
+        </button>
+
+        <div class="drawer-accordion-content">
+          <!-- 1. Bảng màu chủ đề -->
+          <div style="font-size: 0.78rem; font-weight: 800; color: var(--theme-primary, #c084fc); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">
+            1. Bảng Màu & Nền:
+          </div>
+          <div class="theme-selector-grid" style="margin-bottom: 16px;">
+            <button class="theme-choice-btn active" data-theme-id="cyber-sunset" onclick="switchTheme('cyber-sunset')">
+              <span class="theme-swatch swatch-cyber-sunset"></span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Cyber Sunset (Mặc định)</span>
+                <span class="theme-choice-sub">Tím neon hoàng hôn rực rỡ</span>
+              </div>
+            </button>
+
+            <button class="theme-choice-btn" data-theme-id="apple-dark" onclick="switchTheme('apple-dark')">
+              <span class="theme-swatch swatch-apple-dark"></span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Apple Dark Titanium</span>
+                <span class="theme-choice-sub">OLED Pitch Black tối giản</span>
+              </div>
+            </button>
+
+            <button class="theme-choice-btn" data-theme-id="apple-light" onclick="switchTheme('apple-light')">
+              <span class="theme-swatch swatch-apple-light"></span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Apple Silver Light</span>
+                <span class="theme-choice-sub">Trắng xám Liquid Glass thanh lịch</span>
+              </div>
+            </button>
+
+            <button class="theme-choice-btn" data-theme-id="midnight-navy" onclick="switchTheme('midnight-navy')">
+              <span class="theme-swatch swatch-midnight-navy"></span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Midnight Navy</span>
+                <span class="theme-choice-sub">Xanh biển sâu công nghệ cao</span>
+              </div>
+            </button>
+
+            <button class="theme-choice-btn" data-theme-id="matte-carbon" onclick="switchTheme('matte-carbon')">
+              <span class="theme-swatch swatch-matte-carbon"></span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Matte Carbon</span>
+                <span class="theme-choice-sub">Than chì nguyên khối</span>
+              </div>
+            </button>
+
+            <button class="theme-choice-btn" data-theme-id="nordic-sage" onclick="switchTheme('nordic-sage')">
+              <span class="theme-swatch swatch-nordic-sage"></span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Nordic Sage</span>
+                <span class="theme-choice-sub">Xanh rừng Bắc Âu dịu êm</span>
+              </div>
+            </button>
+
+            <button class="theme-choice-btn" data-theme-id="royal-amber" onclick="switchTheme('royal-amber')">
+              <span class="theme-swatch swatch-royal-amber"></span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Royal Amber</span>
+                <span class="theme-choice-sub">Hổ phách & titan vàng quý phái</span>
+              </div>
+            </button>
+
+            <button class="theme-choice-btn" data-theme-id="cupertino-frost" onclick="switchTheme('cupertino-frost')">
+              <span class="theme-swatch swatch-cupertino-frost"></span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Cupertino Frost</span>
+                <span class="theme-choice-sub">Băng lam macOS Acrylic</span>
+              </div>
+            </button>
+          </div>
+
+          <!-- 2. Kiểu bố cục danh mục -->
+          <div style="font-size: 0.78rem; font-weight: 800; color: var(--theme-primary, #c084fc); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">
+            2. Kiểu Bố Cục Danh Mục:
+          </div>
+          <div class="theme-selector-grid">
+            <button class="theme-choice-btn layout-choice-btn active" data-layout-id="master-detail" onclick="setLayoutMode('master-detail')">
+              <span class="layout-icon">📱</span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Bố Cục 2 Cột (Mặc định)</span>
+                <span class="theme-choice-sub">Danh mục bên trái, Chi tiết bên phải</span>
+              </div>
+            </button>
+
+            <button class="theme-choice-btn layout-choice-btn" data-layout-id="grid-cards" onclick="setLayoutMode('grid-cards')">
+              <span class="layout-icon">🔲</span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Lưới Thẻ Lớn (Grid Cards)</span>
+                <span class="theme-choice-sub">Dàn trải toàn màn hình kiểu App Store</span>
+              </div>
+            </button>
+
+            <button class="theme-choice-btn layout-choice-btn" data-layout-id="compact-table" onclick="setLayoutMode('compact-table')">
+              <span class="layout-icon">📋</span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Bảng Ngang (Table List)</span>
+                <span class="theme-choice-sub">Danh sách tinh gọn kiểu macOS Finder</span>
+              </div>
+            </button>
+
+            <button class="theme-choice-btn layout-choice-btn" data-layout-id="focus-stage" onclick="setLayoutMode('focus-stage')">
+              <span class="layout-icon">🎯</span>
+              <div class="theme-choice-info">
+                <span class="theme-choice-name">Tiêu Điểm (Focus Stage)</span>
+                <span class="theme-choice-sub">Tập trung một môn ở giữa với nút chuyển</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Exam Actions -->
+    <div class="drawer-nav-group">
+      <div class="drawer-group-title">📚 QUẢN TRỊ ĐỀ THI & HỌC TẬP</div>
+      
+      <button class="drawer-menu-item" onclick="closeMainDrawer(); openSmartImportModal();">
+        <div class="drawer-item-content">
+          <div class="drawer-item-title">Tải Đề Từ File Word (.docx)</div>
+          <div class="drawer-item-desc">Tự động nhận diện câu hỏi và đáp án</div>
+        </div>
+      </button>
+
+      <button class="drawer-menu-item" onclick="closeMainDrawer(); openCreateSubjectModal();">
+        <div class="drawer-item-content">
+          <div class="drawer-item-title">Tạo Môn Học Mới</div>
+          <div class="drawer-item-desc">Soạn đề thi trắc nghiệm thủ công</div>
+        </div>
+      </button>
+
+      <button class="drawer-menu-item drawer-item-leaderboard" onclick="closeMainDrawer(); openLeaderboardModal();">
+        <div class="drawer-item-icon-wrap" style="font-size: 1.35rem; margin-right: 12px; display: flex; align-items: center;">🏆</div>
+        <div class="drawer-item-content">
+          <div class="drawer-item-title" style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <span>Bảng Xếp Hạng Tuần</span>
+            <span class="badge-hot-tag">7 Ngày</span>
+          </div>
+          <div class="drawer-item-desc">Vinh danh điểm số cao nhất • Tự động reset</div>
+        </div>
+      </button>
+    </div>
+
+    <!-- Data Management Actions -->
+    <div class="drawer-nav-group">
+      <div class="drawer-group-title">💾 DỮ LIỆU & TIỆN ÍCH</div>
+
+      <button class="drawer-menu-item" onclick="closeMainDrawer(); exportDatabaseJson();">
+        <div class="drawer-item-content">
+          <div class="drawer-item-title">Sao Lưu Dữ Liệu JSON</div>
+          <div class="drawer-item-desc">Lưu toàn bộ ngân hàng đề về máy tính</div>
+        </div>
+      </button>
+
+      <button class="drawer-menu-item" onclick="closeMainDrawer(); document.getElementById('json-file-input').click();">
+        <div class="drawer-item-content">
+          <div class="drawer-item-title">Khôi Phục Từ Tệp JSON</div>
+          <div class="drawer-item-desc">Nạp lại ngân hàng đề thi đã sao lưu</div>
+        </div>
+      </button>
+    </div>
+
+    <div class="drawer-footer">
+      <span>CuonEdu Pro — Cyber Sunset Experience</span>
+    </div>
+  </aside>
+
+  <!-- VIEW 1: DASHBOARD & KHO ĐỀ CƯƠNG -->
+  <main id="view-dashboard" class="view-section active">
+
+    <!-- HERO SECTION -->
+    <section class="landing-hero" id="landing-hero">
+      <div class="hero-ambient-glow glow-1"></div>
+      <div class="hero-ambient-glow glow-2"></div>
+      
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-pill-badge">
+            <span class="hero-pill-dot"></span>
+            <span>HỆ THỐNG KHẢO THÍ & LUYỆN ĐỀ CHUẨN HÓA</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Khảo Thí & Luyện Đề <br>
+            <span class="hero-gradient-text">Chuẩn Hóa Thông Minh</span>
+          </h1>
+
+          <p class="hero-description">
+            Chọn môn học ở danh mục bên dưới để bắt đầu luyện thi trực tuyến hoặc bấm tải đề file Word để nhập đề tức thì.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN APP CONTENT (PROMINENT ACTIONS & MASTER-DETAIL SYSTEM) -->
+    <div class="app-container" id="catalog-section">
+
+      <!-- PROMINENT HERO ACTION BANNER (Thêm Đề Thi / Tải File Word Nổi Bật) -->
+      <section class="hero-quick-actions-bar">
+        <button class="btn-hero-action btn-hero-import" onclick="openSmartImportModal()" title="Tải đề thi tự động từ file Word hoặc dán văn bản">
+          <div class="hero-action-icon">📄</div>
+          <div class="hero-action-info">
+            <div class="hero-action-title-row">
+              <span class="hero-action-title">Tải Đề Từ File Word (.docx)</span>
+              <span class="hero-action-badge">Khuyên Dùng</span>
+            </div>
+            <span class="hero-action-sub">Tự động nhận diện câu hỏi, 4 đáp án & lời giải tức thì</span>
+          </div>
+        </button>
+
+        <button class="btn-hero-action btn-hero-create" onclick="openCreateSubjectModal()" title="Tạo môn học và nhập câu hỏi thủ công">
+          <div class="hero-action-icon">➕</div>
+          <div class="hero-action-info">
+            <span class="hero-action-title">Tạo Môn Học Mới</span>
+            <span class="hero-action-sub">Soạn đề thi & ngân hàng câu hỏi thủ công</span>
+          </div>
+        </button>
+      </section>
+
+      <!-- MASTER-DETAIL EXAM CATALOG SYSTEM (Bố cục 2 Cột chuẩn) -->
+      <div class="exam-system-layout layout-master-detail" id="exam-system-layout">
+        <!-- LEFT PANEL: Master Subject List -->
+        <aside class="sub-master-sidebar" id="sub-master-sidebar">
+          <div class="sub-master-header">
+            <div class="sub-master-title-row">
+              <span class="sub-master-title">Danh Mục Môn Học</span>
+              <span class="sub-master-badge" id="sub-count-badge">0 môn</span>
+            </div>
+            
+            <!-- Live Search -->
+            <div class="sub-search-wrap">
+              <input type="text" id="subject-search-input" class="sub-search-input" placeholder="Tìm kiếm môn học, mã đề..." oninput="handleSubjectSearch(this.value)">
+              <button id="btn-clear-search" onclick="clearSubjectSearch()" class="btn-clear-search" style="display: none;">✕</button>
+            </div>
+
+            <!-- Subject Category Filter Pills Bar (Clean, no visible scrollbar) -->
+            <div class="cat-filter-wrapper">
+              <div id="subject-category-filter-bar" class="cat-filter-tabs">
+                <!-- Rendered dynamically by app.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Subject Items Scrollable List -->
+          <div class="sub-items-list" id="sub-master-items-list">
+            <!-- Rendered by app.js -->
+          </div>
+        </aside>
+
+        <!-- RIGHT PANEL: Active Subject Detail & Exam Actions -->
+        <section class="sub-detail-panel" id="sub-detail-panel">
+          <!-- Rendered dynamically by app.js: show active subject tests & details -->
+        </section>
+
+        <!-- ALTERNATIVE LAYOUTS CONTAINER (Grid Cards, Compact Table, Focus Stage) -->
+        <div class="custom-layout-container" id="custom-layout-container" style="display: none;"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- VIEW 2: ARENA EXAM SIMULATOR (FIXED MOBILE-OPTIMIZED SINGLE FRAME) -->
+  <main id="view-exam" class="view-section wayground-arena">
+    <div class="exam-arena-card">
+      <!-- Top Progress Bar -->
+      <div class="quizizz-progress-wrap">
+        <div class="quizizz-progress-bar" id="exam-progress-bar" style="width: 0%;"></div>
+      </div>
+
+      <!-- Header Row (Clean, 1-row on mobile) -->
+      <div class="wg-topbar-inner">
+        <!-- Left: Exit & Streak -->
+        <div class="wg-header-left">
+          <button class="btn-arena-exit" onclick="confirmExitExam()" title="Rời phòng thi">
+            ← Thoát
+          </button>
+          <div id="wg-streak-pill" class="wg-streak-box">
+            <span>🔥</span>
+            <span id="quizizz-streak-val">0</span>
+          </div>
+        </div>
+
+        <!-- Center: 30s Countdown Badge -->
+        <div class="wg-header-center">
+          <div class="quizizz-q-timer-badge" id="wg-q-timer-badge">
+            <span>⏱</span>
+            <span id="q-timer-seconds">30s</span>
+          </div>
+        </div>
+
+        <!-- Right: Question Palette, Ask AI & Submit Button -->
+        <div class="wg-header-right">
+          <button class="btn-arena-ai" onclick="openAIChatForCurrentQuestion()" title="Hỏi Trợ lý AI về câu hỏi này">
+            Hỏi AI
+          </button>
+          <button class="btn-arena-palette" onclick="openMatrixPaletteModal()" title="Mở danh sách câu hỏi">
+            Phiếu
+          </button>
+          <button class="btn-arena-submit" onclick="submitExam()" title="Nộp bài thi">
+            <span>Nộp Bài</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Per Question Timer Animated Bar -->
+      <div class="quizizz-q-timer-track">
+        <div id="q-timer-fill" class="quizizz-q-timer-fill" style="width: 100%;"></div>
+      </div>
+
+      <!-- Instant Feedback Pop-up Banner -->
+      <div id="quizizz-feedback-banner" class="quizizz-feedback-banner" style="display: none;"></div>
+
+      <!-- Single Question Slide Card -->
+      <div id="quizizz-slide-card" class="wg-slide-card-wrap">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <!-- Bottom Bar: Candidate Info + Power-up Icons + Total Elapsed Time -->
+      <div class="wg-bottom-bar" id="wg-bottom-bar">
+        <!-- Candidate Pill -->
+        <div class="wg-candidate-pill">
+          <span class="wg-candidate-avatar" id="wg-candidate-avatar">🚀</span>
+          <span class="wg-candidate-name" id="wg-candidate-name">Thí Sinh</span>
+        </div>
+
+        <!-- 4 Power-up Items (Standalone clean logos) -->
+        <div class="wg-powerups-rack" id="wg-powerups-rack">
+          <button class="wg-powerup-item pu-shield" id="pup-shield" onclick="usePowerup('immunity')" title="Khiên Bảo Vệ">
+            <span class="pu-item-icon">🛡️</span>
+            <span class="pup-badge" id="pup-count-shield">2</span>
+          </button>
+          <button class="wg-powerup-item pu-5050" id="pup-5050" onclick="usePowerup('fiftyFifty')" title="50/50 - Loại 2 đáp án sai">
+            <span class="pu-item-label">50%</span>
+            <span class="pup-badge" id="pup-count-5050">2</span>
+          </button>
+          <button class="wg-powerup-item pu-2x" id="pup-2x" onclick="usePowerup('doublePoints')" title="2x Điểm Thưởng">
+            <span class="pu-item-label">2X</span>
+            <span class="pup-badge" id="pup-count-2x">2</span>
+          </button>
+          <button class="wg-powerup-item pu-freeze" id="pup-freeze" onclick="usePowerup('timeFreeze')" title="Đóng Băng Thời Gian">
+            <span class="pu-item-icon">❄️</span>
+            <span class="pup-badge" id="pup-count-freeze">2</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- VIEW 3: QUESTION BUILDER / EDITOR SUITE -->
+  <main id="view-editor" class="view-section">
+    <div class="app-container">
+      <div class="editor-header">
+        <div>
+          <button class="btn btn-ghost btn-sm" onclick="saveAndReturnDashboard()" style="padding-left: 0;">
+            ← Trở về Trang Chủ
+          </button>
+          <h2 id="editor-subject-title" style="font-size: 1.6rem; font-weight: 800; margin-top: 4px;">Tên Môn Học</h2>
+          <p id="editor-subject-meta" style="color: var(--wg-text-subtle); font-size: 0.85rem;">Mã đề: --- • 15 phút • 0 câu hỏi</p>
+        </div>
+
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="openSmartImportModal(currentSubjectId)">
+            <span>Tải File / Nhập Đề</span>
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="openAddQuestionModal()">
+            <span>+ Thêm Câu Hỏi</span>
+          </button>
+          <button class="btn btn-primary btn-sm" onclick="saveAndReturnDashboard()">
+            <span>Lưu & Hoàn Tất</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="editor-questions-list" class="question-list-container"></div>
+
+      <div id="editor-empty-state" class="empty-state-card" style="display: none;">
+        <h3>Môn này chưa có câu hỏi nào</h3>
+        <p>Bạn có thể thêm từng câu hỏi thủ công hoặc sử dụng tính năng <strong>Nhập nhanh từ file Word/Văn bản</strong> để thêm cả bộ đề chỉ trong 1 giây.</p>
+        <div style="margin-top: 14px; display: flex; justify-content: center; gap: 10px;">
+          <button class="btn btn-primary" onclick="openSmartImportModal(currentSubjectId)">Tải File Word / Nhập Đề</button>
+          <button class="btn btn-secondary" onclick="openAddQuestionModal()">+ Thêm Thủ Công</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- VIEW 4: STUDY / REVIEW FEED MODE -->
+  <main id="view-study" class="view-section">
+    <div class="app-container">
+      <div class="editor-header">
+        <div>
+          <button class="btn btn-ghost btn-sm" onclick="switchView('dashboard')" style="padding-left: 0;">
+            ← Trở về Trang Chủ
+          </button>
+          <h2 id="study-subject-title" style="font-size: 1.6rem; font-weight: 800; margin-top: 4px;">Ôn Tập & Lời Giải Chi Tiết</h2>
+          <p style="color: var(--wg-text-subtle); font-size: 0.85rem;">Xem toàn bộ đáp án chuẩn và lời giải thích chi tiết cho từng câu hỏi.</p>
+        </div>
+
+        <div>
+          <button class="btn btn-primary btn-sm" onclick="startExam(currentSubjectId)">
+            <span>Luyện Thi Ngay</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="study-questions-feed" class="question-list-container"></div>
+    </div>
+  </main>
+
+  <!-- MODAL: TEACHER AUTHENTICATION (PASSCODE 6666) -->
+  <div class="modal-backdrop" id="modal-teacher-auth">
+    <div class="modal-card teacher-auth-card">
+      <div class="modal-header teacher-auth-header">
+        <div class="teacher-auth-title-row">
+          <div class="teacher-auth-badge-icon">🔐</div>
+          <div>
+            <h3>Xác Thực Quyền Giáo Viên</h3>
+            <span class="teacher-auth-subtitle">Quản trị môn học & ngân hàng đề thi</span>
+          </div>
+        </div>
+        <button type="button" class="btn-icon" onclick="closeModal('modal-teacher-auth')">✕</button>
+      </div>
+      <form id="form-teacher-auth" onsubmit="handleTeacherAuthSubmit(event)">
+        <div class="modal-body teacher-auth-body">
+          <p class="teacher-auth-desc">Vui lòng nhập mật khẩu bảo mật (4 số) để tiếp tục thao tác:</p>
+          
+          <div class="teacher-pass-wrapper">
+            <input type="password" id="teacher-pass-input" class="teacher-pass-input" maxlength="6" placeholder="••••" autocomplete="off" inputmode="numeric" required>
+          </div>
+
+          <div id="teacher-auth-error" class="teacher-auth-error" style="display: none;"></div>
+
+          <div class="teacher-auth-notice">
+            <div class="notice-tag">🔒 Chức năng giáo viên</div>
+            <div class="notice-content">
+              Liên hệ admin <strong>Quang Cuốn</strong> <a href="tel:0962714685" class="admin-phone-link">0962.714.685</a> để có pass truy cập.
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer teacher-auth-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-teacher-auth')">Hủy</button>
+          <button type="submit" class="btn btn-primary btn-confirm-teacher">Xác Nhận</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 1: CREATE / EDIT SUBJECT -->
+  <div class="modal-backdrop" id="modal-subject">
+    <div class="modal-card" style="max-width: 720px;">
+      <div class="modal-header">
+        <h3 id="modal-subject-title">Tạo Môn Học / Bộ Đề Mới</h3>
+        <button class="btn-icon" onclick="closeModal('modal-subject')">✕</button>
+      </div>
+      <form id="form-subject">
+        <input type="hidden" id="subject-form-id">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Tên Môn Học / Bộ Đề *</label>
+            <input type="text" id="subject-input-name" class="form-input" placeholder="Ví dụ: GDQP HP1, Tin Học 12, Địa Lý Thế Giới..." required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label class="form-label">Phân Môn / Khối</label>
+              <select id="subject-input-category" class="form-select" style="background: #1c1c1e; border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; border-radius: var(--radius-md); padding: 8px 10px; width: 100%; font-size: 0.85rem;">
+                <option value="GDQP - An Ninh">GDQP - An Ninh</option>
+                <option value="Công Nghệ & Tin Học">Công Nghệ & Tin Học</option>
+                <option value="Khoa Học Xã Hội">Khoa Học Xã Hội</option>
+                <option value="Lý Luận & Triết Học">Lý Luận & Triết Học</option>
+                <option value="Khoa Học Tự Nhiên">Khoa Học Tự Nhiên</option>
+                <option value="Đại Cương & Khác">Đại Cương & Khác</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mã Đề / Ký Hiệu</label>
+              <input type="text" id="subject-input-code" class="form-input" placeholder="SUB-101">
+            </div>
+          </div>
+
+          <!-- Direct File Upload Inside Create Subject Modal -->
+          <div class="form-group" style="margin-top: 8px;">
+            <label class="form-label">Tải File Đề Thi Lên Để Đọc Tự Động (Tùy Chọn):</label>
+            <div class="file-drop-zone" id="create-sub-drop-zone" onclick="document.getElementById('create-sub-file-input').click()" style="padding: 18px 14px;">
+              <div style="font-weight: 800; font-size: 0.95rem; color: #ffffff;">Bấm để chọn hoặc kéo thả tệp Word (.docx), PDF (.pdf), .txt, .json</div>
+              <div style="font-size: 0.78rem; color: var(--wg-text-subtle); margin-top: 4px;">Tự động giữ trọn vẹn hình ảnh, hình học minh họa và đáp án</div>
+            </div>
+            <input type="file" id="create-sub-file-input" accept=".docx,.pdf,.txt,.json" style="display: none;">
+            <div id="create-sub-parsed-badge" style="margin-top: 8px; font-size: 0.85rem; color: #10b981; font-weight: 700; display: none;"></div>
+          </div>
+
+          <!-- Parsed Question Preview & Answer Check in Create Subject Modal -->
+          <div id="create-sub-preview-section" style="margin-top: 14px; display: none;">
+            <div class="quick-answer-bar">
+              <div class="quick-ans-title">
+                <span><strong>Điền nhanh chuỗi đáp án</strong> (Ví dụ: <code>1A 2B 3C...</code> hoặc <code>ABCD...</code>)</span>
+                <span id="create-sub-missing-badge" class="badge-missing-warning">Còn 0 câu chưa có đáp án</span>
+              </div>
+              <div class="quick-ans-row">
+                <input type="text" id="quick-key-input-sub" class="form-input form-input-sm" placeholder="Dán chuỗi đáp án: 1A 2B 3C 4D... hoặc ABCD...">
+                <button type="button" class="btn btn-primary btn-sm" onclick="applyQuickAnswerKey('create-sub-parsed-list', 'create-sub-count')">Điền Nhanh</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="solveAllMissingAnswersWithAI('create-sub-parsed-list', 'create-sub-count')" style="background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.25)); border-color: #c084fc; color: #ffffff; font-weight: 800;">AI Điền Hết Câu Thiếu</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="clearAllParsedAnswers('create-sub-parsed-list', 'create-sub-count')">Xóa Đáp Án</button>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; margin-top: 10px;">
+              <strong style="color: #10b981; font-size: 0.92rem;">Kiểm Tra & Sửa Đáp Án (<span id="create-sub-count">0</span> câu):</strong>
+              <span style="font-size: 0.75rem; color: var(--wg-text-subtle);">(Bấm nút A/B/C/D để chọn đáp án đúng)</span>
+            </div>
+            <div id="create-sub-parsed-list" style="max-height: 260px; overflow-y: auto; padding-right: 4px;"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-subject')">Hủy</button>
+          <button type="submit" class="btn btn-primary" id="btn-save-subject-main">Lưu Môn Học</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: SMART FAST-IMPORT SUITE (WORD .DOCX, TXT, JSON, IMAGES) -->
+  <div class="modal-backdrop" id="modal-smart-import">
+    <div class="modal-card" style="max-width: 740px;">
+      <div class="modal-header">
+        <h3>Tải File & Nhập Đề Tự Động</h3>
+        <button class="btn-icon" onclick="closeModal('modal-smart-import')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;">
+          <button id="tab-btn-file" class="btn btn-primary btn-sm" onclick="switchImportTab('file')">Tải Lên File (Word .docx, PDF .pdf, .txt, .json)</button>
+          <button id="tab-btn-text" class="btn btn-secondary btn-sm" onclick="switchImportTab('text')">Dán Văn Bản Trực Tiếp</button>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label">Chọn Phân Môn Lưu Trữ:</label>
+          <select id="import-input-category" class="form-select" style="background: #1c1c1e; border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; border-radius: var(--radius-md); padding: 8px 12px; width: 100%; font-size: 0.88rem;">
+            <option value="auto">Tự động nhận diện phân môn (GDQP, Tin học, Địa lý...)</option>
+            <option value="GDQP - An Ninh">GDQP - An Ninh</option>
+            <option value="Công Nghệ & Tin Học">Công Nghệ & Tin Học</option>
+            <option value="Khoa Học Xã Hội">Khoa Học Xã Hội</option>
+            <option value="Lý Luận & Triết Học">Lý Luận & Triết Học</option>
+            <option value="Khoa Học Tự Nhiên">Khoa Học Tự Nhiên</option>
+            <option value="Đại Cương & Khác">Đại Cương & Khác</option>
+          </select>
+        </div>
+
+        <!-- File Upload Pane -->
+        <div id="import-pane-file">
+          <div class="file-drop-zone" id="file-drop-zone" onclick="document.getElementById('file-upload-input').click()">
+            <div style="font-weight: 800; font-size: 1.05rem; color: #ffffff;">Kéo thả tệp đề thi vào đây hoặc bấm để chọn tệp</div>
+            <div style="font-size: 0.8rem; color: var(--wg-text-subtle); margin-top: 4px;">Hỗ trợ: Word (.docx), PDF (.pdf), Văn bản (.txt), Dữ liệu (.json) — Giữ trọn hình ảnh/sơ đồ hình học minh họa</div>
+          </div>
+          <input type="file" id="file-upload-input" accept=".docx,.pdf,.txt,.json" style="display: none;">
+          <div id="file-upload-status" style="margin-top: 12px; font-size: 0.88rem; display: none;"></div>
+        </div>
+
+        <!-- Text Pane -->
+        <div id="import-pane-text" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
+            <label class="form-label" style="margin-bottom: 0;">Dán nội dung bộ đề thi vào ô bên dưới:</label>
+            <div style="display: flex; gap: 8px;">
+              <button type="button" class="btn btn-primary btn-sm" onclick="triggerAIExtractFromTextarea()" style="background: linear-gradient(135deg, #c084fc, #38bdf8); border: none; font-weight: 800; font-size: 0.8rem; box-shadow: 0 0 10px rgba(192, 132, 252, 0.4);">Quét Tự Động Bằng AI</button>
+              <button type="button" class="btn btn-ghost btn-sm" onclick="loadSampleImportText()" style="font-size: 0.8rem; color: #fde047;">Dán văn bản mẫu</button>
+            </div>
+          </div>
+          <textarea id="import-raw-text" class="form-textarea" rows="7" placeholder="Câu 1: ...&#10;A. ...&#10;B. ...&#10;C. ...&#10;D. ...&#10;Đáp án: A&#10;Giải thích: ..."></textarea>
+        </div>
+
+        <!-- Parsed Results Preview & Interactive Editor -->
+        <div id="import-preview-section" style="margin-top: 18px; display: none;">
+          <div class="quick-answer-bar">
+            <div class="quick-ans-title">
+              <span><strong>Điền nhanh chuỗi đáp án</strong> (Ví dụ: <code>1A 2B 3C...</code> hoặc <code>ABCD...</code>)</span>
+              <span id="import-missing-badge" class="badge-missing-warning">Còn 0 câu chưa có đáp án</span>
+            </div>
+            <div class="quick-ans-row">
+              <input type="text" id="quick-key-input-smart" class="form-input form-input-sm" placeholder="Dán chuỗi đáp án: 1A 2B 3C 4D... hoặc ABCD...">
+              <button type="button" class="btn btn-primary btn-sm" onclick="applyQuickAnswerKey('import-parsed-list', 'parsed-count-badge')">Điền Nhanh</button>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="solveAllMissingAnswersWithAI('import-parsed-list', 'parsed-count-badge')" style="background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.25)); border-color: #c084fc; color: #ffffff; font-weight: 800;">AI Điền Hết Câu Thiếu</button>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="clearAllParsedAnswers('import-parsed-list', 'parsed-count-badge')">Xóa Đáp Án</button>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; margin-top: 12px;">
+            <strong style="color: #10b981; font-size: 0.95rem;">Đã nhận diện: <span id="parsed-count-badge">0</span> câu hỏi</strong>
+            <span style="font-size: 0.75rem; color: var(--wg-text-subtle);">(Bấm nút A/B/C/D để chọn đáp án đúng)</span>
+          </div>
+          <div id="import-parsed-list" style="max-height: 280px; overflow-y: auto; padding-right: 4px;"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('modal-smart-import')">Đóng</button>
+        <button id="btn-submit-smart-import" class="btn btn-primary" disabled>
+          <span id="btn-import-label">Lưu Vào Môn Học (0 câu)</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: MID-GAME REWARD CHOICES (Explicit Cards) -->
+  <div class="modal-backdrop" id="modal-mystery-box">
+    <div class="modal-card mystery-box-modal-card" style="max-width: 480px; text-align: center;">
+      <div class="modal-header" style="justify-content: space-between; border-bottom: none; padding-bottom: 0;">
+        <div style="width: 24px;"></div>
+        <h3 style="color: #fde047; font-size: 1.35rem; font-weight: 900; letter-spacing: 0.5px; text-shadow: 0 0 16px rgba(253, 224, 71, 0.6); margin: 0;">
+          🎁 CHỌN PHẦN THƯỞNG GIỮA HIỆP
+        </h3>
+        <button class="btn-icon" onclick="closeMysteryBoxModal()" style="color: #ffffff; font-size: 1.1rem;" title="Đóng & Tiếp tục làm bài">✕</button>
+      </div>
+      <div class="modal-body" style="padding-top: 6px;">
+        <p style="color: var(--wg-text-subtle); font-size: 0.9rem; line-height: 1.4; margin-bottom: 14px;">
+          Bạn vừa lập chuỗi đúng xuất sắc! Hãy chọn <strong>1 phần thưởng bổ trợ</strong> để tăng lợi thế:
+        </p>
+
+        <div class="reward-choice-grid">
+          <div class="reward-choice-card" onclick="pickReward('shield')">
+            <div class="reward-card-icon">🛡️</div>
+            <span class="reward-card-title">Khiên Bất Tử</span>
+            <span class="reward-card-desc">Bảo vệ chuỗi đúng khi chọn sai 1 lần</span>
+            <span class="reward-card-badge">+1 Lượt</span>
+          </div>
+
+          <div class="reward-choice-card" onclick="pickReward('fiftyFifty')">
+            <div class="reward-card-icon">🌓</div>
+            <span class="reward-card-title">Quyền 50/50</span>
+            <span class="reward-card-desc">Loại bỏ lập tức 2 đáp án sai</span>
+            <span class="reward-card-badge">+1 Lượt</span>
+          </div>
+
+          <div class="reward-choice-card" onclick="pickReward('doubleScore')">
+            <div class="reward-card-icon">⚡</div>
+            <span class="reward-card-title">Nhân Đôi 2X</span>
+            <span class="reward-card-desc">Nhân đôi điểm số ở câu hỏi tiếp theo</span>
+            <span class="reward-card-badge">+1 Lượt</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 14px; text-align: center;">
+          <button type="button" class="btn btn-ghost btn-sm" onclick="closeMysteryBoxModal()" style="color: var(--wg-text-subtle); font-size: 0.82rem;">Bỏ qua phần thưởng & Tiếp tục thi ➜</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: BONUS POWER-UPS VAULT / SHOP -->
+  <div class="modal-backdrop" id="modal-bonus-shop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Kho Bổ Trợ & Phần Thưởng</h3>
+        <button class="btn-icon" onclick="closeModal('modal-bonus-shop')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--wg-text-subtle); font-size: 0.85rem; margin-bottom: 16px;">
+          Sử dụng các bổ trợ thông minh để cứu chuỗi đúng, loại bỏ đáp án sai hoặc nhân đôi điểm số:
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="qb-option-item" style="justify-content: space-between;">
+            <div>
+              <strong>Khiên Bất Tử (Shield)</strong>
+              <div style="font-size: 0.78rem; color: var(--wg-text-subtle);">Bảo vệ chuỗi liên tiếp không bị đứt nếu lỡ chọn sai 1 lần.</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="usePowerup('immunity'); closeModal('modal-bonus-shop');">Bật ngay</button>
+          </div>
+
+          <div class="qb-option-item" style="justify-content: space-between;">
+            <div>
+              <strong>50:50 (Eraser)</strong>
+              <div style="font-size: 0.78rem; color: var(--wg-text-subtle);">Gạch bỏ và làm mờ 2 đáp án sai ngay lập tức.</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="usePowerup('fiftyFifty'); closeModal('modal-bonus-shop');">Bật ngay</button>
+          </div>
+
+          <div class="qb-option-item" style="justify-content: space-between;">
+            <div>
+              <strong>2x Điểm Số (Double Score)</strong>
+              <div style="font-size: 0.78rem; color: var(--wg-text-subtle);">Nhân đôi toàn bộ điểm số nhận được cho câu tiếp theo.</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="usePowerup('doublePoints'); closeModal('modal-bonus-shop');">Bật ngay</button>
+          </div>
+
+          <div class="qb-option-item" style="justify-content: space-between;">
+            <div>
+              <strong>Đóng Băng Thời Gian (Time Freeze)</strong>
+              <div style="font-size: 0.78rem; color: var(--wg-text-subtle);">Dừng đồng hồ đếm ngược 15 giây để suy nghĩ thảnh thơi.</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="usePowerup('timeFreeze'); closeModal('modal-bonus-shop');">Bật ngay</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('modal-bonus-shop')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5: PRE-EXAM CANDIDATE SETUP -->
+  <div class="modal-backdrop" id="modal-pre-exam">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Chuẩn Bị Vào Phòng Thi</h3>
+        <button class="btn-icon" onclick="closeModal('modal-pre-exam')">✕</button>
+      </div>
+      <form onsubmit="handlePreExamSubmit(event)">
+        <div class="modal-body">
+          <div class="score-hero-card pre-exam-hero-card">
+            <h4 id="pre-exam-sub-title" class="pre-exam-title">Tên Môn Học</h4>
+            <div class="pre-exam-meta-row">
+              <span>Mã đề: <strong id="pre-exam-code">GEO-204</strong></span>
+              <span>•</span>
+              <span>Số câu: <strong id="pre-exam-qcount">5</strong></span>
+            </div>
+          </div>
+
+          <div class="form-group pre-exam-input-group">
+            <label class="form-label">Họ và Tên Thí Sinh</label>
+            <input type="text" id="pre-exam-name" class="form-input" placeholder="Nhập họ và tên thí sinh...">
+          </div>
+
+          <div class="form-group pre-exam-input-group">
+            <label class="form-label">Mã Số Sinh Viên (MSV)</label>
+            <input type="text" id="pre-exam-msv" class="form-input" placeholder="Nhập mã số sinh viên (MSV)...">
+          </div>
+
+          <div class="form-group pre-exam-avatar-group">
+            <label class="form-label">Chọn Huy Hiệu Người Chơi</label>
+            <input type="hidden" id="pre-exam-selected-avatar" value="🚀">
+            <div id="pre-exam-avatar-grid" class="avatar-grid pre-exam-avatar-grid"></div>
+          </div>
+
+          <!-- Công tắc Toggle Switch Chế Độ Chấm Điểm -->
+          <div class="form-group pre-exam-mode-group">
+            <label class="toggle-switch-wrapper pre-exam-toggle-wrapper">
+              <div class="pre-exam-toggle-text">
+                <strong id="pre-exam-mode-title">Chế độ: Chấm điểm tức thì</strong>
+                <span id="pre-exam-mode-desc">Bật: Nhận đáp án ngay | Tắt: Nộp bài chấm sau</span>
+              </div>
+              <div class="custom-switch">
+                <input type="checkbox" id="pre-exam-instant-toggle" checked onchange="handleModeToggleChange(this)">
+                <span class="switch-slider"></span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-footer pre-exam-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-pre-exam')">Hủy</button>
+          <button type="submit" class="btn btn-primary btn-start-exam">Bắt Đầu Làm Bài</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 6: QUESTION MATRIX PALETTE SHEET -->
+  <div class="modal-backdrop" id="modal-matrix-palette">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Danh Sách & Phiếu Câu Hỏi</h3>
+        <button class="btn-icon" onclick="closeModal('modal-matrix-palette')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--wg-text-subtle); font-size: 0.85rem; margin-bottom: 12px;">
+          Bấm vào ô số câu để chuyển trực tiếp đến câu hỏi đó:
+        </p>
+        <div class="matrix-bubble-grid" id="matrix-palette-grid"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('modal-matrix-palette')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- MODAL 8: IMAGE ZOOM MODAL -->
+  <div class="modal-backdrop" id="modal-image-zoom" onclick="closeModal('modal-image-zoom')">
+    <div class="modal-card" style="max-width: 800px; background: transparent; border: none; box-shadow: none; text-align: center;" onclick="event.stopPropagation()">
+      <div style="position: relative; display: inline-block;">
+        <img id="zoom-modal-img" src="" alt="Zoom" style="max-width: 100%; max-height: 80vh; border-radius: var(--radius-lg); border: 3px solid #eab308; box-shadow: 0 20px 50px rgba(0,0,0,0.8);">
+        <button class="btn-icon" onclick="closeModal('modal-image-zoom')" style="position: absolute; top: -12px; right: -12px; background: #ef4444; border-radius: 50%;">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 9: RESULT & SUMMARY -->
+  <div class="modal-backdrop" id="modal-result">
+    <div class="modal-card" style="max-width: 520px; text-align: center;">
+      <div class="modal-header" style="justify-content: center;">
+        <h3 style="color: #fde047; font-size: 1.4rem;">KẾT QUẢ BÀI THI</h3>
+      </div>
+      <div class="modal-body">
+        <div class="score-hero-card">
+          <div class="score-big-num" id="res-score-number">10.0</div>
+          <div style="font-size: 0.85rem; color: var(--wg-text-subtle); margin-top: 4px;">THANG ĐIỂM 10.0</div>
+
+          <div class="score-stat-grid">
+            <div class="score-stat-item">
+              <div class="score-stat-val" id="res-accuracy-val">100%</div>
+              <div class="score-stat-lbl">Chính xác</div>
+            </div>
+            <div class="score-stat-item">
+              <div class="score-stat-val" id="res-correct-val">5/5</div>
+              <div class="score-stat-lbl">Số câu đúng</div>
+            </div>
+            <div class="score-stat-item">
+              <div class="score-stat-val" id="res-streak-val">5</div>
+              <div class="score-stat-lbl">Chuỗi cao nhất</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size: 0.85rem; color: var(--wg-text-subtle);">
+          Thời gian làm bài: <strong id="res-time-val" style="color: #ffffff;">2 phút 15s</strong>
+        </div>
+
+        <!-- Leaderboard Rank Banner for Candidate -->
+        <div id="res-rank-banner" class="res-rank-banner" style="display: none;">
+          <span class="res-rank-icon">🏆</span>
+          <span id="res-rank-text">Đang xếp hạng trên Bảng Xếp Hạng tuần...</span>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <button class="btn btn-warning btn-sm btn-rank-view" onclick="closeModal('modal-result', false); openLeaderboardModal();">
+          🏆 Xem Bảng Xếp Hạng
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="startReviewAfterExam()">
+          Xem Lời Giải Chi Tiết
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="closeModal('modal-result'); switchView('dashboard');">
+          Về Trang Chủ
+        </button>
+        <button class="btn btn-primary btn-sm" onclick="closeModal('modal-result'); startExam(currentSubjectId);">
+          Làm Lại Bài Thi
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 10: LEADERBOARD -->
+  <div class="modal-backdrop" id="modal-leaderboard">
+    <div class="modal-card leaderboard-modal-card">
+      <div class="modal-header leaderboard-modal-header">
+        <div class="leaderboard-title-group">
+          <span class="leaderboard-icon">🏆</span>
+          <div>
+            <h3>Bảng Xếp Hạng Tuần</h3>
+            <span class="leaderboard-sub-info">Vinh danh thí sinh điểm số & tốc độ cao nhất</span>
+          </div>
+        </div>
+        <button class="btn-icon" onclick="closeModal('modal-leaderboard')">✕</button>
+      </div>
+      <div class="modal-body leaderboard-modal-body">
+        <!-- 7-day auto reset bar -->
+        <div class="leaderboard-cycle-bar">
+          <div class="cycle-badge">
+            <span class="cycle-dot"></span>
+            <span>Chu kỳ 7 Ngày</span>
+          </div>
+          <div id="leaderboard-countdown-text" class="cycle-countdown">
+            ⏳ Tự động làm mới sau: <strong id="lb-timer-display">-- ngày -- giờ</strong>
+          </div>
+        </div>
+
+        <div id="leaderboard-list-container" class="leaderboard-list"></div>
+        <div id="leaderboard-empty" class="empty-state-card" style="display: none; padding: 28px 16px; text-align: center;">
+          <div style="font-size: 2.4rem; margin-bottom: 8px;">🏅</div>
+          <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 6px; color: #ffffff;">Chưa có dữ liệu tuần này</h4>
+          <p style="font-size: 0.85rem; color: var(--wg-text-subtle); max-width: 320px; margin: 0 auto;">Hãy hoàn thành một bài thi để trở thành người đầu tiên vinh danh trên Bảng Vàng!</p>
+        </div>
+      </div>
+      <div class="modal-footer" style="justify-content: flex-end;">
+        <button class="btn btn-secondary" onclick="closeModal('modal-leaderboard')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 11: ADD / EDIT QUESTION -->
+  <div class="modal-backdrop" id="modal-question">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-question-title">Thêm Câu Hỏi</h3>
+        <button class="btn-icon" onclick="closeModal('modal-question')">✕</button>
+      </div>
+      <form id="form-question">
+        <input type="hidden" id="question-edit-index">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Nội Dung Câu Hỏi *</label>
+            <textarea id="q-input-text" class="form-textarea" rows="3" placeholder="Nhập câu hỏi tại đây..." required></textarea>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="form-group">
+              <label class="form-label">Phương án A *</label>
+              <input type="text" id="q-input-opt-a" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phương án B *</label>
+              <input type="text" id="q-input-opt-b" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phương án C</label>
+              <input type="text" id="q-input-opt-c" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phương án D</label>
+              <input type="text" id="q-input-opt-d" class="form-input">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Phương án E (Tùy chọn - 5 lựa chọn như Quizizz)</label>
+            <input type="text" id="q-input-opt-e" class="form-input" placeholder="Để trống nếu chỉ có 4 đáp án">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label class="form-label">Đáp Án Đúng *</label>
+              <select id="q-input-correct" class="form-select">
+                <option value="A">Đáp án A</option>
+                <option value="B">Đáp án B</option>
+                <option value="C">Đáp án C</option>
+                <option value="D">Đáp án D</option>
+                <option value="E">Đáp án E</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mức Độ Nhận Thức</label>
+              <select id="q-input-level" class="form-select">
+                <option value="Nhận biết">Nhận biết</option>
+                <option value="Thông hiểu">Thông hiểu</option>
+                <option value="Vận dụng">Vận dụng</option>
+                <option value="Vận dụng cao">Vận dụng cao</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Lời Giải Thích Chi Tiết</label>
+            <textarea id="q-input-explanation" class="form-textarea" rows="2" placeholder="Giải thích vì sao đáp án này đúng..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-question')">Hủy</button>
+          <button type="submit" class="btn btn-primary">Lưu Câu Hỏi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 12: USER PROFILE & GOOGLE AUTH -->
+  <div class="modal-backdrop" id="modal-google-auth">
+    <div class="modal-card" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3>Đăng Nhập Tài Khoản</h3>
+        <button class="btn-icon" onclick="closeModal('modal-google-auth')">✕</button>
+      </div>
+      <form onsubmit="handleGoogleAuthSubmit(event)">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Họ và Tên</label>
+            <input type="text" id="google-auth-name" class="form-input" placeholder="Quang Nguyễn" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Google</label>
+            <input type="email" id="google-auth-email" class="form-input" placeholder="quangnguyen@gmail.com">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-google-auth')">Đóng</button>
+          <button type="submit" class="btn btn-primary">Xác Nhận</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modal-profile">
+    <div class="modal-card" style="max-width: 460px;">
+      <div class="modal-header">
+        <h3>Hồ Sơ Cá Nhân & Avatar</h3>
+        <button class="btn-icon" onclick="closeModal('modal-profile')">✕</button>
+      </div>
+      <form onsubmit="handleSaveProfile(event)">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Tên Hiển Thị</label>
+            <input type="text" id="profile-edit-name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Chọn Avatar</label>
+            <input type="hidden" id="profile-selected-avatar">
+            <div id="profile-avatar-grid" class="avatar-grid"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" onclick="handleLogout()" style="color: var(--danger); margin-right: auto;">Đăng xuất</button>
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-profile')">Hủy</button>
+          <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- CUONEDU AI TUTOR & EXAM COPILOT SYSTEM     -->
+  <!-- ========================================== -->
+  <!-- Floating AI Assistant Button -->
+  <!-- Floating AI Assistant Button (Compact & Draggable Message Icon) -->
+  <div id="cuonedu-ai-btn" class="cuonedu-ai-float-btn" title="Trợ lý AI CuonEdu (Nhấn để mở, giữ để kéo vị trí)">
+    <div class="ai-float-glow"></div>
+    <div class="ai-float-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0034 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="url(#aiChatGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="rgba(192, 132, 252, 0.2)"/>
+        <path d="M12 7L13.2 9.8L16 11L13.2 12.2L12 15L10.8 12.2L8 11L10.8 9.8L12 7Z" fill="url(#aiChatGrad)"/>
+        <circle cx="16" cy="8" r="1.2" fill="#38bdf8"/>
+        <defs>
+          <linearGradient id="aiChatGrad" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#c084fc"/>
+            <stop offset="1" stop-color="#38bdf8"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Sliding AI Chatbot Panel -->
+  <div id="cuonedu-ai-panel" class="cuonedu-ai-panel" style="display: none;">
+    <!-- Panel Header -->
+    <div class="ai-panel-header">
+      <div class="ai-header-left">
+        <div class="ai-avatar-badge">
+          <span>✨</span>
+        </div>
+        <div class="ai-header-info">
+          <div class="ai-header-title">
+            <span>CuonEdu AI Gia Sư</span>
+            <span class="ai-model-tag">Gemini 3.1 Flash-Lite ⚡</span>
+          </div>
+          <span class="ai-header-status">
+            <span class="ai-status-dot"></span> Sẵn sàng trợ giúp 24/7
+          </span>
+        </div>
+      </div>
+      <div class="ai-header-actions">
+        <button class="ai-action-btn" onclick="clearAIChatHistory()" title="Xóa lịch sử chat">🗑️</button>
+        <button class="ai-action-btn" onclick="toggleAIChatbot(false)" title="Đóng cửa sổ">✕</button>
+      </div>
+    </div>
+
+    <!-- Quick Action Chips -->
+    <div class="ai-quick-chips" id="ai-quick-chips">
+      <button class="ai-chip-btn" onclick="askAISuggestion('explain_current')">💡 Giải thích câu hiện tại</button>
+      <button class="ai-chip-btn" onclick="askAISuggestion('summarize_sub')">⚡ Tóm tắt kiến thức</button>
+      <button class="ai-chip-btn" onclick="askAISuggestion('generate_5q')">📝 Tạo 5 câu trắc nghiệm mới</button>
+      <button class="ai-chip-btn" onclick="askAISuggestion('study_tips')">🎯 Mẹo ghi nhớ & làm bài</button>
+    </div>
+
+    <!-- Chat Messages Scroll Area -->
+    <div class="ai-chat-messages" id="ai-chat-messages">
+      <!-- Default Greeting Bubble -->
+      <div class="ai-msg ai-msg-bot">
+        <div class="ai-msg-avatar">🤖</div>
+        <div class="ai-msg-body">
+          <div class="ai-msg-author">CuonEdu AI Gia Sư</div>
+          <div class="ai-msg-bubble">
+            Xin chào! Mình là <strong>CuonEdu AI</strong> — trợ lý học tập & luyện thi thông minh được tích hợp trực tiếp trên nền tảng. Mình có thể:
+            <ul style="margin: 6px 0 0 16px; padding: 0;">
+              <li>Giải thích chi tiết câu hỏi đang thi và gợi ý mẹo chọn nhanh.</li>
+              <li>Tóm tắt kiến thức trọng tâm các môn học.</li>
+              <li>Tự động tạo câu hỏi trắc nghiệm mới theo chủ đề và nhập thẳng vào môn học.</li>
+            </ul>
+            Bạn cần mình hỗ trợ gì nào?
+          </div>
+          <div class="ai-msg-time">Vừa xong</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="ai-typing-indicator" class="ai-typing-wrapper" style="display: none;">
+      <div class="ai-msg-avatar">🤖</div>
+      <div class="ai-typing-bubble">
+        <span class="ai-dot"></span>
+        <span class="ai-dot"></span>
+        <span class="ai-dot"></span>
+      </div>
+    </div>
+
+    <!-- Chat Input Bar -->
+    <div class="ai-input-wrapper">
+      <textarea id="ai-user-input" class="ai-input-textarea" rows="1" placeholder="Hỏi AI bất kỳ điều gì (Nhấn Enter để gửi)..." onkeydown="handleAIChatKeyDown(event)" oninput="autoResizeAITextarea(this)"></textarea>
+      <button id="ai-send-btn" class="ai-send-btn" onclick="sendUserAIMessage()" title="Gửi câu hỏi">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="app.js?v=5.3"></script>
+</body>
+</html>

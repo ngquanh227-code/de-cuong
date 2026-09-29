@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Đề Cương Ôn Tập Trắc Nghiệm Trực Tuyến</title>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Thanh tiêu đề chính thức (Official Topbar) -->
+  <header class="official-topbar">
+    <div class="topbar-content">
+      <div class="exam-brand">
+        <a href="index.html" class="btn-solid btn-solid-outline" style="text-decoration: none; padding: 6px 12px; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 4px;" title="Trở về Trang chủ">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          <span>Trang chủ</span>
+        </a>
+        <span class="exam-code-badge" id="exam-code-pill">MÃ ĐỀ: 204</span>
+        <div class="exam-heading">
+          <h1 id="exam-main-title">ĐỀ CƯƠNG ÔN TẬP TRỌNG TÂM - HỌC KỲ I</h1>
+          <p id="exam-institution">HỆ THỐNG LUYỆN THI TRẮC NGHIỆM TRỰC TUYẾN</p>
+        </div>
+      </div>
+
+      <div class="topbar-controls">
+        <!-- Bộ chỉnh cỡ chữ -->
+        <div class="font-size-adjuster" title="Tùy chỉnh cỡ chữ đề thi">
+          <button id="btn-font-decrease" title="Giảm cỡ chữ">A-</button>
+          <span class="font-size-display" id="font-size-label">100%</span>
+          <button id="btn-font-increase" title="Tăng cỡ chữ">A+</button>
+        </div>
+
+        <!-- Đồng hồ bấm giờ -->
+        <div class="timer-pill" title="Thời gian làm bài" style="display: inline-flex; align-items: center; gap: 6px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span id="timer-display">00:00</span>
+        </div>
+
+        <!-- Nút in đề / xuất PDF -->
+        <button class="btn-icon-square" onclick="window.print()" title="In đề thi / Xuất PDF">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        </button>
+
+        <!-- Chuyển chế độ Sáng / Tối -->
+        <button class="btn-icon-square" id="btn-theme-toggle" title="Chuyển chế độ sáng/tối">
+          <svg id="theme-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Nút nộp bài -->
+        <button class="btn-solid btn-solid-primary" id="btn-submit-exam">
+          <span>Nộp bài thi</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dải thông số đề cương (Meta Strip) -->
+  <div class="exam-meta-strip">
+    <div class="exam-meta-container">
+      <div class="meta-group">
+        <span class="meta-item">Môn thi: <strong id="meta-subject">Tin học ứng dụng & Công nghệ Web</strong></span>
+        <span>•</span>
+        <span class="meta-item">Thời gian: <strong id="meta-duration">45 phút</strong></span>
+        <span>•</span>
+        <span class="meta-item">Số lượng: <strong id="meta-question-count">5 câu trắc nghiệm</strong></span>
+      </div>
+      <div class="meta-group">
+        <span class="meta-item">Thang điểm: <strong>10.0 điểm</strong></span>
+        <span>•</span>
+        <span class="meta-item">Trạng thái: <strong id="meta-status" style="color: var(--primary);">Đang làm bài</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bố cục làm bài (2 Cột) -->
+  <main class="app-container">
+    <!-- Cột trái: Luồng câu hỏi -->
+    <section class="exam-content-flow">
+      <!-- Banner tóm tắt sau khi nộp bài -->
+      <div class="summary-banner" id="summary-banner">
+        <div class="banner-left">
+          <h2 id="banner-score-heading">KẾT QUẢ: 0.0/10 ĐIỂM</h2>
+          <p id="banner-score-sub">Bài thi đã được chấm điểm tự động. Hãy xem lại từng câu giải chi tiết bên dưới.</p>
+        </div>
+        <div class="banner-actions">
+          <button class="btn-solid btn-solid-outline" id="btn-toggle-wrong-only" style="display: inline-flex; align-items: center; gap: 4px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <span>Chỉ xem câu sai</span>
+          </button>
+          <button class="btn-solid btn-solid-primary" onclick="openResultModal()">Xem bảng điểm</button>
+        </div>
+      </div>
+
+      <!-- Danh sách câu hỏi chi tiết -->
+      <div id="questions-wrapper">
+        <!-- Render tự động bởi app.js -->
+      </div>
+    </section>
+
+    <!-- Cột phải: Phiếu tô trắc nghiệm (Sticky Sidebar giống Azota) -->
+    <aside class="exam-sidebar">
+      <div class="sidebar-heading">
+        <h3>PHIẾU TRẢ LỜI</h3>
+        <span class="progress-counter" id="progress-indicator">0/5 câu</span>
+      </div>
+
+      <!-- Thanh tiến độ Solid -->
+      <div class="progress-rail">
+        <div class="progress-fill-solid" id="progress-bar-solid"></div>
+      </div>
+
+      <!-- Bộ lọc câu hỏi trong phiếu tô -->
+      <div class="answer-filter-tabs">
+        <button class="tab-pill active" onclick="setSidebarFilter('all')">Tất cả</button>
+        <button class="tab-pill" onclick="setSidebarFilter('done')">Đã làm</button>
+        <button class="tab-pill" onclick="setSidebarFilter('pending')">Chưa</button>
+        <button class="tab-pill" onclick="setSidebarFilter('flagged')">Gắn cờ</button>
+      </div>
+
+      <!-- Lưới phiếu tô -->
+      <div class="bubble-matrix" id="bubble-matrix">
+        <!-- Các ô tròn câu 1, 2, 3... -->
+      </div>
+
+      <!-- Chú thích ký hiệu Solid -->
+      <div class="sidebar-legend">
+        <div class="legend-row">
+          <span class="legend-solid-box box-empty"></span>
+          <span>Chưa trả lời</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-solid-box box-done"></span>
+          <span>Đã chọn đáp án</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-solid-box box-flag"></span>
+          <span>Đã gắn cờ xem lại</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-solid-box box-right"></span>
+          <span>Đáp án đúng (sau nộp bài)</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-solid-box box-wrong"></span>
+          <span>Đáp án sai (sau nộp bài)</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal Chi Tiết Bảng Điểm -->
+  <div class="modal-overlay" id="result-modal-overlay">
+    <div class="modal-box">
+      <div class="modal-title-area">
+        <h2>KẾT QUẢ KHẢO SÁT BÀI THI</h2>
+        <p id="modal-exam-title">Đề cương Ôn tập Trọng tâm - Học kỳ I</p>
+      </div>
+
+      <div class="score-card-solid">
+        <div class="score-number" id="modal-score-val">0.0</div>
+        <div class="score-max">TRÊN THANG ĐIỂM 10.0</div>
+      </div>
+
+      <div class="score-breakdown-grid">
+        <div class="breakdown-item">
+          <div class="breakdown-val" id="modal-correct-count" style="color: var(--success);">0</div>
+          <div class="breakdown-lbl">Số câu đúng</div>
+        </div>
+        <div class="breakdown-item">
+          <div class="breakdown-val" id="modal-wrong-count" style="color: var(--danger);">0</div>
+          <div class="breakdown-lbl">Số câu sai</div>
+        </div>
+        <div class="breakdown-item">
+          <div class="breakdown-val" id="modal-time-count" style="color: var(--primary);">00:00</div>
+          <div class="breakdown-lbl">Thời gian làm</div>
+        </div>
+      </div>
+
+      <div class="modal-btn-row">
+        <button class="btn-solid btn-solid-outline" onclick="closeResultModal()">Xem lại bài thi</button>
+        <button class="btn-solid btn-solid-primary" onclick="retakeExam()">Làm lại từ đầu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
