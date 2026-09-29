@@ -3,6 +3,13 @@
 scratch/
 .system_generated/
 
+# Credentials and sensitive tokens
+*token*
+*secret*
+*backup*
+GITHUB_TOKEN_BACKUP.txt
+GITHUB_SSH_KEY_BACKUP.txt
+
 # OS files
 Thumbs.db
 Desktop.ini
