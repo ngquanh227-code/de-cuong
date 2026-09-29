@@ -1,7 +1,5274 @@
 {
   "version": 1,
-  "lastUpdated": 1790701892437,
+  "lastUpdated": 1790701921153,
   "subjects": [
+    {
+      "id": 1790701921137,
+      "title": "CÂU HỎI TRẮC NGHIỆM HP1",
+      "code": "SUB-463",
+      "category": "GDQP - An Ninh",
+      "durationMinutes": 15,
+      "questions": [
+        {
+          "id": 1790701912088,
+          "question": "Quan điểm cơ bản của Chủ nghĩa Mác-Lênin, tư tưởng Hồ Chí Minh về chiến tranh, quân đội và bảo vệ Tổ quốc *Lê-Nin xác định nguyên tắc đoàn kết quân, dân trong xây dựng Hồng quân như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sự đoàn kết gắn bó, nhất trí Hồng quân với nhân dân lao động."
+            },
+            {
+              "key": "B",
+              "text": "Sự nhất trí quân - dân và các lực lượng tiến bộ trên toàn thế giới."
+            },
+            {
+              "key": "C",
+              "text": "Sự thống nhất giữa quân đội và nhân dân."
+            },
+            {
+              "key": "D",
+              "text": "Sự nhất trí quân - dân và các lực lượng vũ trang."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701913693,
+          "question": "Quan điểm chủ nghĩa Mác-Lê nin về bản chất chiến tranh như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là kế tục mục tiêu chính trị bằng vật chất."
+            },
+            {
+              "key": "B",
+              "text": "Là thủ đoạn để đạt được mục tiêu chính trị của một giai cấp."
+            },
+            {
+              "key": "C",
+              "text": "Là kế tục chính trị bằng thủ đoạn bạo lực."
+            },
+            {
+              "key": "D",
+              "text": "Là thủ đoạn chính trị của một giai cấp."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701914494,
+          "question": "Theo tư tưởng Hồ Chí Minh, sử dụng bạo lực cách mạng để làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để lật đổ chế độ cũ, xây dựng chế độ mới."
+            },
+            {
+              "key": "B",
+              "text": "Để xây dựng chế độ mới."
+            },
+            {
+              "key": "C",
+              "text": "Để giành chính quyền và giữ chính quyền."
+            },
+            {
+              "key": "D",
+              "text": "Để lật đổ chế độ cũ."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701915122,
+          "question": "Theo tư tưởng Hồ Chí Minh, bản chất giai cấp công nhân, tính nhân dân, tính dân tộc của quân đội nhân dân Việt Nam quan hệ với nhau như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là hệ thống thống nhất, quan hệ mật thiết với nhau."
+            },
+            {
+              "key": "B",
+              "text": "Quan hệ đan xen, tạo điều kiện cho nhau, bản chất giai cấp là quyết định."
+            },
+            {
+              "key": "C",
+              "text": "Là một thể thống nhất, quan hệ chặt chẽ trong quá trình xây dựng quân đội nhân dân."
+            },
+            {
+              "key": "D",
+              "text": "Quan hệ mật thiết với nhau, tạo lên sức mạnh và sự trưởng thành."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701915893,
+          "question": "Chủ tịch Hồ Chí Minh xác định nội dung cơ bản của đánh giặc toàn diện là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là biết sử dụng mọi vũ khí trang bị để tiến công địch."
+            },
+            {
+              "key": "B",
+              "text": "Là tiến công kẻ thù trên mọi lĩnh vực"
+            },
+            {
+              "key": "C",
+              "text": "Là tiến công địch liên tục, cả ngày lẫn đêm."
+            },
+            {
+              "key": "D",
+              "text": "Là biết sử dụng mọi điều kiện thuân lợi để tiến công địch"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701917118,
+          "question": "Một trong những nội dung tư tưởng Hồ Chí Minh về bảo vệ Tổ quốc XHCN là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ Tổ quốc XHCN là tất yếu khách quan, thể hiện ý chí của dân tộc."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ Tổ quốc là tất yếu, là truyền thống của dân tộc Việt Nam."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ Tổ quốc XHCN là tất yếu khách quan, thể hiện ý chí quyết tâm của nhân dân ta."
+            },
+            {
+              "key": "D",
+              "text": "Bảo vệ Tổ quốc XHCN là tất yếu khách quan trong công cuộc xây dựng CNXH."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701918243,
+          "question": "Trong các yếu tố tạo nên sức mạnh của Quân đội nhân dân, Hồ Chí Minh coi yếu tố con người có vị vai trò như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Con người có giác ngộ giữ vai trò quan trọng nhất, chi phối các yếu tố khác."
+            },
+            {
+              "key": "B",
+              "text": "Con người là quan trọng cùng với yếu tố quân sự là quyết định."
+            },
+            {
+              "key": "C",
+              "text": "Con người với trình độ chính trị cao giữ vững vai trò quyết định."
+            },
+            {
+              "key": "D",
+              "text": "Con người có giác ngộ chính trị giữ vai trò quan trọng tạo lên sức mạnh quân đội."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701919670,
+          "question": "Hồ Chí Minh khẳng định phải dùng bạo lực cách mạng để giành chính quyền và giữ chính quyền. Vì một trong những lý do gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ nghĩa thực dân bóc lột, cai trị nhân dân bằng bạo lực."
+            },
+            {
+              "key": "B",
+              "text": "Chế độ thực dân, tự bản thân nó đã là một hành động bạo lực."
+            },
+            {
+              "key": "C",
+              "text": "Làm cách mạng là phải dùng bạo lực cách mạng."
+            },
+            {
+              "key": "D",
+              "text": "Kẻ thù luôn dùng bạo lực để duy trì quyền thống trị."
+            },
+            {
+              "key": "C",
+              "text": "Tư tưởng Hồ Chí Minh về sức mạnh chiến đấu của quân đội nhân dân Việt Nam như thế nào?"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701920429,
+          "question": "ANSWER:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là sức mạnh của nhiều yếu tố kết hợp lại, quân sự là chủ chốt."
+            },
+            {
+              "key": "B",
+              "text": "Là sức mạnh của yếu tố con người và vũ khí."
+            },
+            {
+              "key": "C",
+              "text": "Là sức mạnh tổng hợp trong đó yếu tố con người, yếu tố chính trị tinh thần giữ vai trò quyết định"
+            },
+            {
+              "key": "D",
+              "text": "Là sức mạnh của yếu tố con người và vũ khí trang bị kỹ thuật hiện đại"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701921648,
+          "question": "Theo tư tưởng Hồ Chí Minh, một trong những chức năng của Quân đội nhân dân Việt Nam là   gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là đội quân tuyên truyền giác ngộ nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Là đội quân công tác."
+            },
+            {
+              "key": "C",
+              "text": "Là đội quân chiến đấu bảo vệ đất nước"
+            },
+            {
+              "key": "D",
+              "text": "Là đội quân bảo vệ chính quyền vô sản của giai cấp công nông"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701922584,
+          "question": "Theo tư tưởng Hồ Chí Minh, quân đội nhân dân Việt Nam có những chức năng",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chiến đấu, sẵn sàng chiến đấu."
+            },
+            {
+              "key": "B",
+              "text": "Chiến đấu, lao động sản xuất, tuyên truyền."
+            },
+            {
+              "key": "C",
+              "text": "Chiến đấu, công tác, lao động sản xuất."
+            },
+            {
+              "key": "D",
+              "text": "Chiến đấu và tham gia gìn giữ hòa bình khu vực"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701923127,
+          "question": "Tư tưởng Hồ Chí Minh về sức mạnh bảo vệ Tổ quốc XHCN là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là sức mạnh của cả dân tộc và thời đại, sức mạnh quốc phòng toàn dân."
+            },
+            {
+              "key": "B",
+              "text": "Là sức mạnh tổng hợp của cả dân tộc, cả nước kết hợp với sức mạnh thời đại."
+            },
+            {
+              "key": "C",
+              "text": "Là sức mạnh của toàn dân, lấy lực lượng vũ trang làm nòng cốt."
+            },
+            {
+              "key": "D",
+              "text": "Là sức mạnh của lực lượng vũ trang nhân dân, sức mạnh quốc phòng toàn dân."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701924110,
+          "question": "Ba chức năng cơ bản của quân đội nhân dân Việt Nam được Hồ Chí Minh xác định, thể hiện vấn đề gì trong quá trình xây dựng quân đội.",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thể hiện bản chất, truyền thống và kinh nghiệm của quân đội ta."
+            },
+            {
+              "key": "B",
+              "text": "Thể hiện sức mạnh của quân đội."
+            },
+            {
+              "key": "C",
+              "text": "Thể hiện bản chất, truyền thống tốt đẹp của QĐND Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "Thể hiện quân đội ta là quân đội cách mạng."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701925628,
+          "question": "Một trong những nội dung tư tưởng Hồ Chí Minh về bảo vệ Tổ quốc XHCN là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ Tổ quốc XHCN là tất yếu, khách quan, thể hiện ý chí quyết tâm của nhân dân ta."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ Tổ quốc là tất yếu, gắnliền với bảo vệ chế độ XHCN."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ Tổ quốc XHCN là nhiêm vụ trong sự nghiệp xây dựng CNXH."
+            },
+            {
+              "key": "D",
+              "text": "Bảo vệ Tổ quốc XHCN là truyền thống của quốc gia, dân tộc, là ý chí của toàn dân"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701926576,
+          "question": "Chủ tịch Hồ Chí Minh xác định yếu tố con người có vai trò như thế nào trong xây dựng Quân đội nhân dân?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Con người cố giác ngộ giữ vai rò quan trọng nhất, chi phối các yếu tố khác."
+            },
+            {
+              "key": "B",
+              "text": "Con người là quan trọng cùng với yếu tố quân sự là quyết định."
+            },
+            {
+              "key": "C",
+              "text": "Con người với trình độ chính trị cao giữ vai trò quyết định."
+            },
+            {
+              "key": "D",
+              "text": "Con người cố giác ngộ giữ vai rò quan trọng nhất."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701927545,
+          "question": "Một trong những nguyên tắc cơ bản xây dựng Hồng quân của Lê nin là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng quân đội có kỷ luật, có tính chiến đấu cao."
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng quân đội chính qui."
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng quân đội hiện đại."
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng quân đội hùng mạnh cả về số lượng và chất lượng."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701928435,
+          "question": "Nguyên tắc cơ bản về xây dựng lực lượng Hồng quân của Lê nin là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sự lãnh đạo của Đảng cộng sản đối với quân đội."
+            },
+            {
+              "key": "B",
+              "text": "Giữ vững quan điểm giai cấp trong xây dựng quân đội."
+            },
+            {
+              "key": "C",
+              "text": "Tính kỷ luật cao là yếu tố quyết định sức mạnh quân đội"
+            },
+            {
+              "key": "D",
+              "text": "Quân đội chính quy, hiện đại, trung thành với giaicấp công nhân và nhân dân lao động"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701929585,
+          "question": "Để phát huy nhân tố con người trong xây dựng quân đội, Hồ Chí Minh rất coi trọng vấn đề gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Rất coi trọng công tác tư tưởng, tổ chức và rèn luyện tính kỷ luật."
+            },
+            {
+              "key": "B",
+              "text": "Rất coi trọng rèn luyện đạo đức  trình độ kỹ chiến thuật"
+            },
+            {
+              "key": "C",
+              "text": "Rất coi trọng công tác giáo dục chính trị trong quân đội."
+            },
+            {
+              "key": "D",
+              "text": "Rất chú trọng công tác tổ chức và rèn luyện bản lĩnh chiến đấu."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701930655,
+          "question": "Hồ Chí Minh xác định vai trò của Đảng trong sự nghiệp bảo vệ Tổ quốc XHCN như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảng cộng sản Việt Nam chỉ đạo trực tiếp sự nghiệp bảo vệ Tổ quốc."
+            },
+            {
+              "key": "B",
+              "text": "Đảng cộng sản Việt Nam là người đi tiên phong trong sự nghiệp bảo vệ Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Đảng cộng sản Việt Nam lãnh đạo sự nghiệp bảo vệ Tổ quốc Việt Nam XHCN."
+            },
+            {
+              "key": "D",
+              "text": "Đảng cộng sản Việt Nam là người kêu gọi mọi tầng lớp nhân dân đứng lên bảo vệ"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701931426,
+          "question": "đất nước. *Theo tư tưởng Hồ Chí Minh, trong sức mạnh của toàn dân đánh giặc, vị trí của lực lượng vũ trang nhân dân được xác định như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là lực lượng nòng cốt cho nhân dân đánh giặc."
+            },
+            {
+              "key": "B",
+              "text": "Là lực lượng xung kích, trụ cột cho toàn dân."
+            },
+            {
+              "key": "C",
+              "text": "Là lực lượng cùng toàn dân đánh giặc."
+            },
+            {
+              "key": "D",
+              "text": "Là lực lượng chiến đấu chủ yếu bảo vệ nhân dân."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701932109,
+          "question": "Xây dựng nền QPTD, ANND bảo vệ Tổ quốc Việt Nam XHCN * Xây dựng nền quốc phòng toàn dân, an ninh nhân dân gồm những nội dung nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiềm lực chính trị, kinh tế, khoa học công nghệ, quân sự an ninh"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng hậu phương chiến lược"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng tiềm lực quốc phòng, an ninh và thế trận quốc phòng, an ninh"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng khu vực phòng thủ"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701932951,
+          "question": "Nền quốc phòng toàn dân phát triển theo hướng như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nền quốc phòng toàn dân phát triển theo hướng hiện đại"
+            },
+            {
+              "key": "B",
+              "text": "Toàn dân, toàn diện, độc lập, tự chủ, tự lực, tự cường và ngày càng hiện đại"
+            },
+            {
+              "key": "C",
+              "text": "Nền QPTD phát triển theo hướng vững mạnh và ngày càng hiện đại"
+            },
+            {
+              "key": "D",
+              "text": "Nền QPTD phát triển theo hướng toàn dân, toàn diện và hiện đại."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701933984,
+          "question": "Xây dựng tiềm lực quân sự, an ninh cần tập trung vào nội dung nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo đảm tốt vũ khí cho quân đội, công an"
+            },
+            {
+              "key": "B",
+              "text": "Nâng cao chất lượng huấn luyện của của quân đội, công an"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng lực lượng vũ trang vững mạnh toàn diện"
+            },
+            {
+              "key": "D",
+              "text": "Tăng cường công tác giáo dục chính trị trong lực lượng vũ trang"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701934824,
+          "question": "Tiềm lực quốc phòng, an ninh được thể hiện tập trung ở?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiềm lực chính trị tinh thần, tiềm lực khoa học công nghệ"
+            },
+            {
+              "key": "B",
+              "text": "Tiềm lực kinh tế, tiềm lực quân sự an ninh"
+            },
+            {
+              "key": "C",
+              "text": "Tiềm lực chính trị tinh thần, kinh tế, khoa học công nghệ và tiềm lực quân sự an ninh"
+            },
+            {
+              "key": "D",
+              "text": "Tiềm lực chính trị tinh thần, kinh tế và tiềm lực quân sự an ninh"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701936083,
+          "question": "Kết hợp chặt chẽ xây dựng tiềm lực QP, AN với thế trận QP, AN để nhằm mục đích gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát huy tối đa sự mạnh của lực"
+            },
+            {
+              "key": "B",
+              "text": "Lấy thế thắng lực"
+            },
+            {
+              "key": "C",
+              "text": "Lấy lực thắng thế"
+            },
+            {
+              "key": "D",
+              "text": "Lấy thế thắng thế"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701936905,
+          "question": "Một trong những đặc trưng cơ bản của nền quốc phòng toàn dân, an ninh nhân dân là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nền QPTD, ANND có sức mạnh tổng hợp chiến thắng kẻ thù xâm lược"
+            },
+            {
+              "key": "B",
+              "text": "Là nền QPTD, ANND có sức mạnh đối phó với mọi tình huống"
+            },
+            {
+              "key": "C",
+              "text": "Là nền QPTD, ANND có sức mạnh đối phó với mọi loại hình chiến tranh"
+            },
+            {
+              "key": "D",
+              "text": "Là nền QPTD, ANND có sức mạnh tổng hợp do nhiều yếu tố tạo nên."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701938331,
+          "question": "Một trong những nội dung cơ bản của xây dựng tiềm lực quốc phòng, an ninh ngày nay là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng lực lượng vũ trang nhân dân vững mạnh"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng tiềm lực tác chiến trên không, trên bộ và trên biển"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng tiềm lực khoa học, công nghệ"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng tiềm lực tài chính và vũ khí quốc gia"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701939642,
+          "question": "Xây dựng thế trận quốc phòng toàn dân, an ninh nhân dân được hiểu như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổ chức và bố trí các lực lượng vũ trang trên toàn bộ lãnh thổ theo ý đồ chiến lược phòng thủ đất nước"
+            },
+            {
+              "key": "B",
+              "text": "Là sự tổ chức bố trí lực lượng, tiềm lực mọi mặt của đất nước và của toàn dân trên cả nước"
+            },
+            {
+              "key": "C",
+              "text": "Tổ chức và bố trí các khu vực phòng thủ của tỉnh (thành phố) mạnh, có trọng tâm, trọng điểm"
+            },
+            {
+              "key": "D",
+              "text": "Phân vùng chiến lược các công trình quốc phòng các tuyến phòng thủ quốc gia trên cả nước"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701939961,
+          "question": "Tính toàn diện trong xây dựng nền quốc phòng toàn dân, an ninh nhân dân được thể hiện ở nội dung nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cả tiềm lực và thế trận quốc phòng"
+            },
+            {
+              "key": "B",
+              "text": "Có sức mạnh tổng hợp do nhiều yếu tố tạo thành"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng nền quốc phòng bằng sức mạnh quân sự to lớn, kinh tế phát triển"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng nền quốc phòng bằng sức mạnh của nền kinh tế quốc dân"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701941101,
+          "question": "Một trong những nội dung cơ bản của nền quốc phòng toàn dân, an nin nhân dân hiện nay là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nền QPTD, ANND do nhân dân lao động làm chủ"
+            },
+            {
+              "key": "B",
+              "text": "Nền QPTD, ANND chỉ có mục đích duy nhất là tự vệ chính đáng"
+            },
+            {
+              "key": "C",
+              "text": "Nền QPTD, ANND do toàn thể nhân dân tham gia"
+            },
+            {
+              "key": "D",
+              "text": "Nền QPTD, ANND chỉ có mục tiêu duy nhất là bảo vệ độc lập dân tộc"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701942662,
+          "question": "Xây dựng lực lượng quốc phòng, an ninh bao gồm những lực lượng nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quân đội, công an và dân quân tự vệ"
+            },
+            {
+              "key": "B",
+              "text": "Bộ đội chủ lực, bộ đội địa phượng và dân quân tự vệ"
+            },
+            {
+              "key": "C",
+              "text": "Bộ đội chủ lực, bộ đội địa phượng và công an nhân dân"
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng chính trị và lực lượng vũ trang"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701943622,
+          "question": "Một trong những nội dung cơ bản xây dựng tiềm lực kinh tế trong xây dựng nền quốc phòng toàn dân, an ninh nhân dân là gì ?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kết hợp xây dựng kinh tế và xã hội"
+            },
+            {
+              "key": "B",
+              "text": "Kết hợp xây dựng hạ tầng kinh tế với hạ tầng quốc phòng"
+            },
+            {
+              "key": "C",
+              "text": "Kết hợp xây dựng hạ tầng quốc phòng gắn với hạ tầng an ninh"
+            },
+            {
+              "key": "D",
+              "text": "Kết hợp xây dựng hạ tầng khoa học công nghệ với hạ tầng quốc phòng, an ninh"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701944630,
+          "question": "Từ cơ sở nào, chúng ta xác định tính chất toàn dân của nền quốc phòng toàn dân?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Từ truyền thống dân tộc trong chiến đấu chống giặc ngoại xâm"
+            },
+            {
+              "key": "B",
+              "text": "Từ bài học quí báu xây dựng lực lượng vũ trang nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Từ truyền thống, kinh nghiệm của dân tộc trong lịch sử dựng nước và giữ nước"
+            },
+            {
+              "key": "D",
+              "text": "Từ truyền thống dân tộc trong chiến đấu chống giặc ngoại xâm"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701944797,
+          "question": "Một trong những biện pháp chủ yếu xây dựng nền quốc phòng toàn dân, an ninh nhân dân là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Luôn tăng cường giáo dục ý thức trách nhiệm của công dân về 2 nhiệm vụ chiến lược"
+            },
+            {
+              "key": "B",
+              "text": "Luôn tăng cường giáo dục nghĩa vụ công dân"
+            },
+            {
+              "key": "C",
+              "text": "Luôn thực hiện tốt giáo dục quốc phòng- an ninh"
+            },
+            {
+              "key": "D",
+              "text": "Luôn tăng cường giáo dục nhiệm vụ quốc phòng và an ninh nhân dân"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701946600,
+          "question": "Tính chất toàn dân của nền quốc phòng toàn dân, an ninh nhân dân được biểu hiện tập trung như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nền quốc phòng mang tính giai cấp, nhân dân sâu sắc"
+            },
+            {
+              "key": "B",
+              "text": "Là nền quốc phòng vì dân, của dân, do dân"
+            },
+            {
+              "key": "C",
+              "text": "Là nền quốc phòng  bảo vệ quyền lợi của dân"
+            },
+            {
+              "key": "D",
+              "text": "Là nên quốc phòng do nhân dân xây dựng, mang tính nhân dân sâu sắc"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701946887,
+          "question": "Nội dung xây dựng thế trận quốc phòng toàn dân hiện nay là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phân vùng chiến lược về quốc phòng, an ninh kết hợp với vùng kinh tế, trên cơ sở quy hoạch các vùng dân cư"
+            },
+            {
+              "key": "B",
+              "text": "Phân vùng chiến lược gắn với xây dựng hậu phương chiến lược"
+            },
+            {
+              "key": "C",
+              "text": "Phân vùng chiến lược gắn với bố trí lực lượng quân sự mạnh"
+            },
+            {
+              "key": "D",
+              "text": "Phân vùng chiến lược gắn với khu vực phòng thủ tỉnh (thành phố)"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701948328,
+          "question": "Một trong những nội dung cơ bản cần tập trung  xây dựng tiềm lực quốc phòng an ninh ngày nay là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng tiềm lực kinh tế"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng tiềm lực vũ khí, trang bị hiện đại"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng tiềm lực tác chiến trên không, trên bộ và trên biển"
+            },
+            {
+              "key": "D",
+              "text": "Cả 3 yếu tố trên"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701949340,
+          "question": "Nội dung quan trọng hàng đầu trong xây dựng thế trận quốc phòng toàn dân, an ninh nhân dân là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổ chức phòng thủ dân sự và phòng tránh khắc phục hậu quả chiến tranh"
+            },
+            {
+              "key": "B",
+              "text": "Tổ chức phòng thủ dân sự bảo đảm  an toàn"
+            },
+            {
+              "key": "C",
+              "text": "Phân vùng chiến lược về quốc phòng , an ninh kết hợp với vùng kinh tế"
+            },
+            {
+              "key": "D",
+              "text": "Tổ chức xây dựng khu vực phòng thủ dân sự"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701950547,
+          "question": "Một trong những mục đích xây dựng nền quốc phòng toàn dân, an ninh nhân dân là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tạo thế chủ động cho sự nghiệp xây dựng và bảo vệ tổ quốc"
+            },
+            {
+              "key": "B",
+              "text": "Phát huy vai trò nòng cốt của lực lượng vũ trang"
+            },
+            {
+              "key": "C",
+              "text": "Phát huy sức mạnh tổng hợp trong xây dựng và củng cố nền quốc phòng toàn dân"
+            },
+            {
+              "key": "D",
+              "text": "Phát huy vai trò của nhân dân"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701951169,
+          "question": "Tiềm lực chính trị tinh thần có vai trò như thế nào trong xây dựng tiềm lực quốc phòng, an ninh?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhân tố quyết định tạo nên sức mạnh quốc phòng, an ninh"
+            },
+            {
+              "key": "B",
+              "text": "Nhân tố rất quan trọng tạo nên sức mạnh quốc phòng, an ninh"
+            },
+            {
+              "key": "C",
+              "text": "Nhân tố cơ bản tạo nên sức mạnh quốc phòng, an ninh"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701951946,
+          "question": "Chiến tranh nhân dân BVTQ Việt Nam XHCN *Theo tư tưởng Hồ Chí Minh, trong sức mạnh của toàn dân đánh giặc, vị trí của lực lượng vũ trang nhân dân được xác định như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là lực lượng nòng cốt cho nhân dân đánh giặc."
+            },
+            {
+              "key": "B",
+              "text": "Là lực lượng xung kích, trụ cột cho toàn dân."
+            },
+            {
+              "key": "C",
+              "text": "Là lực lượng cùng toàn dân đánh giặc."
+            },
+            {
+              "key": "D",
+              "text": "Là lực lượng xung kích, cho toàn dân."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701952795,
+          "question": "Đối tượng trong chiến tranh nhân dân bảo vệ Tổ quốc XHCN là",
+          "options": [
+            {
+              "key": "A",
+              "text": "Những lực lượng xâm lược Tổ quốc ta."
+            },
+            {
+              "key": "B",
+              "text": "Những thế lực cản trở, xâm hại đến sự nghiệp xây dựng đất nước và bảo vệ Tổ quốc XHCN của chúng ta."
+            },
+            {
+              "key": "C",
+              "text": "Những lực lượng xâm lược và thế lực phản động có hành động phá hoại."
+            },
+            {
+              "key": "D",
+              "text": "Chủ nghĩa đế quốc và chủ nghĩa khủng bố quốc tế."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701954301,
+          "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc phải kết hợp kháng chiến với xây dựng, vừa chiến đấu, vừa sản xuất. Lý do vì sao?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Việc bảo đảm đời sống nhân dân là rất khó khăn."
+            },
+            {
+              "key": "B",
+              "text": "Việc bảo đảm cuộc sống chiến đấu của lực lượng vũ trang, của hoạt động quân sự rất khó khăn."
+            },
+            {
+              "key": "C",
+              "text": "Việc bảo đảm ổn định đời sống nhân dân trong chiến tranh vô cùng khó khăn, phức tạp."
+            },
+            {
+              "key": "D",
+              "text": "Không có sự hỗ trợ từ phía bên ngoài."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701955181,
+          "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc, thế trận chiến tranh nhân dân được tổ chức rộng khắp thể hiện như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cả nước đánh giặc, sử dụng mọi phương tiện để đánh."
+            },
+            {
+              "key": "B",
+              "text": "Cả nước đánh giặc phối hợp chặt chẽ với các binh đoàn chủ lực"
+            },
+            {
+              "key": "C",
+              "text": "Cả nước là một chiến trường, ở đâu cũng có người đánh giặc, đánh giặc bằng mọi thứ vũ khí."
+            },
+            {
+              "key": "D",
+              "text": "Cả nước là một chiến trường của chiến tranh du kích rộng khắp."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701955727,
+          "question": "Một trong những tính chất chiến tranh nhân dân bảo vệ Tổ quốc là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chiến tranh chính nghĩa, tự vệ."
+            },
+            {
+              "key": "B",
+              "text": "Chiến tranh cách mạng."
+            },
+            {
+              "key": "C",
+              "text": "Chiến tranh chính nghĩa, tự vệ, cách mạng."
+            },
+            {
+              "key": "D",
+              "text": "Cuộc chiến tranh bảo vệ xã hội xã hội chủ nghĩa."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701957551,
+          "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc, phải kết hợp đấu tranh quân sự với bảo đảm an ninh chính trị, giữ gìn trật tự an toàn xã hội. Vì một trong những lý do gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lực lượng phản động sẽ tiến hành phá hoại, có mưu đồ lật đổ chính quyền ta."
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng phản động lợi dụng chiến tranh kết hợp với phản động nước ngoài tập hợp lực lượng."
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng phản động trong nước sẽ tiến hành các hành động phá hoại làm rối loạn hậu phương ta."
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng phản động trong nước lợi dụng cơ hội phá hoại trật tự an ninh."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701957881,
+          "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc, thế trận chiến tranh nhân dân Việt Nam được tổ chức như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổ chức rộng toàn quốc, tập trung ở hướng, khu vực chủ yếu."
+            },
+            {
+              "key": "B",
+              "text": "Tổ chức rộng trên phạm vi cả nước, những có trọng tâm, trọng điểm."
+            },
+            {
+              "key": "C",
+              "text": "Tổ chức theo qui hoạch các vùng kinh tế và bố trí dân cư."
+            },
+            {
+              "key": "D",
+              "text": "Tổ chức rộng toàn quốc, tập trung ở hướng, khu vực chủ yếu, quan trọng."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701958859,
+          "question": "Thực hiện \"kết hợp đấu tranh quân sự với bảo đảm an ninh chính trị, giữ gìn trật tự, an toàn \", trong chiến tranh nhân dân bảo vệ Tổ quốc thể hiện như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kết hợp cùng với việc xây dựng kế hoạch, xác định các phương án đánh địch cần chuẩn bị kế hoạch chống bạo loan, lật đổ."
+            },
+            {
+              "key": "B",
+              "text": "Kết hợp cùng với việc xây dựng kế hoạch, xác định các phương án đánh đich và kế hoạch bảo vệ hậu phương."
+            },
+            {
+              "key": "C",
+              "text": "Kết hợp đánh địch và xây dựng lực lượng quân sự địa phương bảo vệ an ninh chính trị, trật tự an toàn xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng kế hoạch, các phương án kết hợp đánh thù trong giặc ngoài."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701960336,
+          "question": "Nếu chiến tranh xảy ra, chúng ta đánh giá quân địch có điểm yếu cơ bản nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vấp phải ý chí chiến đấu kiên cường vì độc lập tự do của dân tộc ta."
+            },
+            {
+              "key": "B",
+              "text": "Phải đương đầu với dân tộc Việt Nam có truyền thống chống kẻ thù xâm lược kiên cường bất khuất."
+            },
+            {
+              "key": "C",
+              "text": "Phải đối phó với cách đánh năng động sáng tạo của QĐNDVN."
+            },
+            {
+              "key": "D",
+              "text": "Phải đương đầu với dân tộc Việt Nam có truyền thống chống giắc ngoại xâm."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701961071,
+          "question": "Thế trận chiến tranh là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là sự tổ chức, bố trí lực lượng để tiến hành chiến tranh và hoạt động tác chiến."
+            },
+            {
+              "key": "B",
+              "text": "Là tổ chức, bố trí lực lượng vũ trang."
+            },
+            {
+              "key": "C",
+              "text": "Là sự tổ chức, bố trí lực lượng để phòng thủ đất nước."
+            },
+            {
+              "key": "D",
+              "text": "Là tổ chức, bố trí lực lượng vũ trang trong ý đồ chiến lược."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701962273,
+          "question": "Nhu cầu bảo đảm hậu cần kỹ thuật trong chiến tranh nhân dân bảo vệ Tổ quốc như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhu cầu bảo đảm hậu cần kỹ thuật cho chiến tranh luôn tăng lên."
+            },
+            {
+              "key": "B",
+              "text": "Nhu cầu bảo đảm hậu cần kỹ thuật luôn đáp ứng cho chiến tranh."
+            },
+            {
+              "key": "C",
+              "text": "Nhu cầu bảo đảm hậu cần kỹ thuật cho chiến tranh rất cao, liên tục, kịp thời."
+            },
+            {
+              "key": "D",
+              "text": "Nhu cầu bảo đảm hậu cần kỹ thuật cho chiến tranh rất khẩn trương, phức tạp."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701963496,
+          "question": "Một trong những mục đích của chiến tranh nhân dân bảo vệ Tổ quốc Việt Nam XHCN là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ vững chắc độc lập, chủ quyền, thống nhất của Tổ quốc."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ sự toàn vẹn của Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ."
+            },
+            {
+              "key": "D",
+              "text": "Bảo vệ vững chắc độc lập, chủ quyền, của Tổ quốc."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701964162,
+          "question": "Tiến hành chiến tranh nhân dân, lực lượng toàn dân đánh giặc được tổ chức như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Được tổ chức thành lực lượng chính trị của quần chúng và lực lượng vũ trang."
+            },
+            {
+              "key": "B",
+              "text": "Được tổ chức chặt chẽ thành hai lực lượng lực lượng quần chúng rộng rãi và lực lượng quân sự."
+            },
+            {
+              "key": "C",
+              "text": "Được tổ chức thành lực lượng rộng rãi và lực lượng tác chiến chiến lược."
+            },
+            {
+              "key": "D",
+              "text": "Được tổ chức chặt chẽ thành hai lực lượng lực lượng quần chúng rộng rãi và lực lượng phòng thủ dân sự."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701964913,
+          "question": "Một trong những tính chất chiến tranh nhân dân bảo vệ Tổ quốc là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là cuộc chiến tranh toàn dân, lực lượng vũ trang làm nòng cốt."
+            },
+            {
+              "key": "B",
+              "text": "Là cuộc chiến tranh toàn dân, toàn diện."
+            },
+            {
+              "key": "C",
+              "text": "Là cuộc đấu tranh của nhân dân mà quân sự đóng vai trò quyết định."
+            },
+            {
+              "key": "D",
+              "text": "Là cuộc chiến tranh cách mạng chống lại các thế lực phản cách mạng."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701965861,
+          "question": "Quan điểm \"thực hiện toàn dân đánh giặc\" trong chiến tranh nhân dân bảo vệ Tổ quốc, có ý nghĩa gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là cơ sở, điều kiện để mỗi người dân được tham gia đánh giặc bảo vệ quê hương."
+            },
+            {
+              "key": "B",
+              "text": "Là cơ sở, điều kiện để phát huy sức mạnh tổng hợp bảo vệ Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Là cơ sở, điều kiện để phát huy cao nhất yếu tố con người (giữ vai trò quyết định) trong chiến tranh."
+            },
+            {
+              "key": "D",
+              "text": "Là cơ sở, điều kiện để phát huy sức mạnh tổng hợp bảo vệ Tổ quốc Việt Nam XHCN."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701966919,
+          "question": "Quan điểm, thực hiện toàn dân đánh giặc trong chiến tranh nhân dân bảo vệ Tổ quốc thể hiện vấn đề gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thể hiện tính nhân dân, tính dân tộc sâu sắc trong cuộc chiến tranh."
+            },
+            {
+              "key": "B",
+              "text": "Thể hiện sức mạnh to lớn của cuộc chiến tranh của ta."
+            },
+            {
+              "key": "C",
+              "text": "Thể hiện tính nhân dân sâu sắc, cuộc chiến tranh của dân, do dân, vì dân."
+            },
+            {
+              "key": "D",
+              "text": "Thể hiện tính nhân dân, tính dân tộc."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701968326,
+          "question": "Quan điểm \"tiến hành chiến tranh toàn diện\" trong chiến tranh nhân dân bảo vệ Tổ quốc thể hiện như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiến công địch toàn diện, mặt trận chính trị là quan trọng nhất, mặt trận quân sự có tính quyết định."
+            },
+            {
+              "key": "B",
+              "text": "Tổ chức tiến công địch trên tất cả các mặt trận, mặt trận nào cũng quan trọng, trong đó luôn coi trọng mặt trận quân sự, thắng lợi trên chiến trường là yếu tố quyết định."
+            },
+            {
+              "key": "C",
+              "text": "Tiến công địch trên mặt trận quân sự là chủ yếu, các mặt trận khác là hỗ trợ."
+            },
+            {
+              "key": "D",
+              "text": "Tiến công địch trên mặt trận quân sự là chủ yếu."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701969449,
+          "question": "Đặc điểm nào tác động nhiều nhất đến chiến tranh nhân dân bảo vệ Tổ quốc?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ nghĩa đế quốc đang thực hiện chính trị cường quyền thô bạo và cứng rắn."
+            },
+            {
+              "key": "B",
+              "text": "Tình hình thế giới, khu vực diễn biến phức tạp, tiềm ẩn nhiều yếu tố bất ngờ khó lường."
+            },
+            {
+              "key": "C",
+              "text": "Thế giới có những biến động lớn ảnh hưởng đến các nước, đặc biệt là các nước XHCN."
+            },
+            {
+              "key": "D",
+              "text": "Tất cả phương án trên đều sai."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701969856,
+          "question": "Nếu chiến tranh xảy ra cùng với bọn đế quốc lực lượng nào là đối tượng tác chiến của quân dân ta?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lực lượng khủng bố và xâm lược."
+            },
+            {
+              "key": "B",
+              "text": "Những lực lượng phản động gây bạo loạn lật đổ, gây xung đột vũ trang, gây chiến tranh xâm lược."
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng phản động tiến hành bạo loan, lật đổ phá hoại thành quả Cách mạng của nhân dân ta."
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng bạo loạn lật đổ và và các thế lực sử dụng sức mạnh quân sự xâm lược"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701971077,
+          "question": "Tư tưởng chỉ đạo tác chiến xuyên suốt trong chuẩn bị và tiến hành chiến tranh giữ nước của cha ông ta là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiến công"
+            },
+            {
+              "key": "B",
+              "text": "Phòng ngự"
+            },
+            {
+              "key": "C",
+              "text": "Hoà hoãn"
+            },
+            {
+              "key": "D",
+              "text": "Phản công"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701971899,
+          "question": "Xây dựng lực lượng vũ trang nhân dân *Ba chức năng cơ bản của quân đội nhân dân Việt Nam được Hồ Chí Minh xác định, thể hiện vấn đề gì trong quá trình xây dựng quân đội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thể hiện bản chất, truyền thống và kinh nghiệm của quân đội ta."
+            },
+            {
+              "key": "B",
+              "text": "Thể hiện sức mạnh, của quân đội."
+            },
+            {
+              "key": "C",
+              "text": "Thể hiện bản chất , truyền thống tốt đẹp của quân đội ta."
+            },
+            {
+              "key": "D",
+              "text": "Thể hiện bản chất , truyền thống của quân đội ta."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701973545,
+          "question": "Lý luận của chủ nghĩa Mác-Lê-nin về bản chất giai cấp của Lực lượng Vũ trang là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mang bản chất từ thành phần xuất thân LLVT."
+            },
+            {
+              "key": "B",
+              "text": "Mang bản chất quần chúng nhân dân lao động."
+            },
+            {
+              "key": "C",
+              "text": "Mang bản chất giai cấp nhà nước đã tổ chức, nuôi dưỡng và sử dụng LLVT."
+            },
+            {
+              "key": "D",
+              "text": "Là lực lượng bảo vệ đất nước không mang bản chất chính trị."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701974426,
+          "question": "Tư tưởng của Chủ tịch Hồ Chí Minh về giành chính quyền và giữ chính quyền như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để giành chính quyền và giữ chính quyền là phải đấu tranh chính trị, đấu tranh nghị trường."
+            },
+            {
+              "key": "B",
+              "text": "Để giành và giữ chính quyền là phải có sự hậu thuẫn của các lực lượng nước ngoài, có tiềm lực kinh tế quân sự hùng mạnh."
+            },
+            {
+              "key": "C",
+              "text": "Để giành và giữ chính quyền là phải dùng bạo lực Cách mạng chống lại bạo lực phản cách mạng."
+            },
+            {
+              "key": "D",
+              "text": "Để dành và giữ chính quyền phải dựa vào giai cấp nắm quyền lực kinh tế chủ yếu trong nước. ( tầng lớp tư sản dân tộc )"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701974929,
+          "question": "Một trong những quan điểm xây dựng Lực lượng vũ trang nhân dân trong giai đoạn mới đó là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng LLVT cả về số lượng và chất lượng, lấy chất lượng là chính"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng LLVT toàn diện, coi trọng cả số lượng, chất lượng, lấy chính trị là chính"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng LLVT lấy chất lượng là chính, lấy xây dựng chính trị làm cơ sơ"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng LLVT lấy quân sự là chính, lấy xây dựng chính trị làm cơ sở"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701976183,
+          "question": "Một trong những quan điểm xây dựng Lực lượng vũ trang nhân dân trong giai đoạn mới đó là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giữ vững và tăng cường sự lãnh đạo của Đảng đối với LLVT"
+            },
+            {
+              "key": "B",
+              "text": "Giữ vững và luôn phát huy tốt vai trò lãnh đạo của Đảng đối với LLVT"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng LLVT lấy quân sự là chính, lấy chất lượng chính trị làm cơ sở"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng LLVT lấy chất lượng là chính, lấy xây dựng quân sự làm cơ sở"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701977395,
+          "question": "Trong xây dựng nền QPTD, ANND lực lượng nào là nòng cốt?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quân đội và công an"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng vũ trang nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Bộ đội chủ lực và công an nhân dân"
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng dân quân tự vệ và lực lượng dự bị động viên"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701977950,
+          "question": "Một trong những đặc trưng cơ bản của nền QPTD, ANND là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Được xây dựng toàn diện và hiện đại"
+            },
+            {
+              "key": "B",
+              "text": "Được xây dựng trong toàn dân và từng bước hiện đại"
+            },
+            {
+              "key": "C",
+              "text": "Được xây dựng toàn diện và từng bước hiện đại"
+            },
+            {
+              "key": "D",
+              "text": "Hiện đại để đáp ứng chiến tranh bằng vũ khí công nghệ cao"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701979392,
+          "question": "Lực lượng vũ trang nhân dân Việt Nam bao gồm các lực lượng nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ đội chủ lực, bộ đội địa phương và dân quân tự vệ"
+            },
+            {
+              "key": "B",
+              "text": "Bộ đội chủ lực, bộ đội biên phòng và dân quân tự vệ"
+            },
+            {
+              "key": "C",
+              "text": "Bộ đội chủ lực, bộ đội địa phương, lực lượng dự bị động viên"
+            },
+            {
+              "key": "D",
+              "text": "Quân đội, Công an, dân quân tự vệ"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701980251,
+          "question": "Đảng lãnh đạo Lực lượng vũ trang nhân dân theo nguyên tắc?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tuyệt đối, toàn diện về mọi mặt."
+            },
+            {
+              "key": "B",
+              "text": "Tuyệt đối, trực tiếp về nhiều mặt"
+            },
+            {
+              "key": "C",
+              "text": "Tuyệt đối, trực tiếp về mọi mặt"
+            },
+            {
+              "key": "D",
+              "text": "Tuyệt đối, trực tiếp không qua khâu trung gian nào."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701981023,
+          "question": "Đảng Cộng sản Việt Nam lãnh đạo Lực lượng vũ trang nhân dân Việt Nam?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Theo hệ thống tổ chức của Đảng từ Trung ương đến cơ sở."
+            },
+            {
+              "key": "B",
+              "text": "Theo hệ thống tổ chức của Đảng trong LLVT."
+            },
+            {
+              "key": "C",
+              "text": "Theo hệ thống tổ chức  của Đảng từ Trung ương đến địa phương"
+            },
+            {
+              "key": "D",
+              "text": "Theo hệ thống tổ chức của Đảng từ trên xuống dưới."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701982511,
+          "question": "Mối quan hệ giữa Đảng Cộng sản Việt Nam với Lực lượng vũ trang nhân dân VN như thế nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảng độc tôn duy nhất nắm quyền quản lý LLVTND Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Đảng độc tôn duy nhất nắm quyền lãnh đạo LLVTND Việt Nam"
+            },
+            {
+              "key": "C",
+              "text": "Đảng độc tôn duy nhất nắm quyền tổ chức  LLVTND Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "Đảng độc tôn duy nhất nắm quyền tổ chức, quản lý LLVTND Việt Nam"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701983052,
+          "question": "Quan điểm nào là quan điểm sai trong xây dựng Lực lượng vũ trang nhân dân Việt Nam hiện nay?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giữ vững và tăng cường sự lãnh đạo của Đảng đối với LLVT"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng LLVT lấy chất lượng là chính, lấy  xây dựng về tổ chức  làm cơ sở"
+            },
+            {
+              "key": "C",
+              "text": "Bảo đảm  LLVT luôn trong tư thế SSCĐ và chiến đấu thắng lợi"
+            },
+            {
+              "key": "D",
+              "text": "Tự lực tự cường xây dựng LLVT"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701983799,
+          "question": "Để đáp ứng yêu cầu bảo vệ Tổ quốc trong tình hình mới, cần xây dựng Lực lượng vũ trang nhân dân như thế nào ?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngày càng  phát triển về tổ chức"
+            },
+            {
+              "key": "B",
+              "text": "Mạnh, có khả năng tác chiến độc lập"
+            },
+            {
+              "key": "C",
+              "text": "Gọn, có trình độ tác chiến cao"
+            },
+            {
+              "key": "D",
+              "text": "Gọn, mạnh, cơ động, có sức chiến đấu cao"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701985023,
+          "question": "Quan điểm nào là quan điểm sai trong xây dựng Lực lượng vũ trang nhân dân?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng LLVT lấy chính trị là chính, lấy  xây dựng về quân sự làm cơ sở"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng LLVT lấy quân sự là chính, lấy  xây dựng về chính trị làm cơ sở"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng LLVT lấy chất lượng là chính, lấy  xây dựng về quân sự làm cơ sở"
+            },
+            {
+              "key": "D",
+              "text": "Cả ba đều sai"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701986579,
+          "question": "Quân đội nhân dân Việt Nam bao gồm?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ đội chủ lực và bộ độ địa phương"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng thường trực và lực lượng dự bị động viên"
+            },
+            {
+              "key": "C",
+              "text": "Bộ đội chủ lực, bộ độ địa phương, bộ đội biên phòng"
+            },
+            {
+              "key": "D",
+              "text": "Bộ đội chủ lực, bộ độ địa phương, bộ đội biên phòng và cảnh sát biển"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701986780,
+          "question": "Xây dựng quân đội, công an nhân dân Việt Nam theo hướng nào trong tình hình hiện nay?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cách mạng, chính qui, tinh nhuệ và từng bước hiện đại."
+            },
+            {
+              "key": "B",
+              "text": "Vững mạnh, rộng khắp, lấy chất lượng làm chính."
+            },
+            {
+              "key": "C",
+              "text": "Cách mạng, chính qui, tinh nhuệ và ngày càng hùng hậu"
+            },
+            {
+              "key": "D",
+              "text": "Cách mạng, chính qui, tinh nhuệ, hùng hậu và từng bước hiện đại"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701988166,
+          "question": "Hiện nay chng ta cần xây dựng lực lượng dự bị động viên theo hướng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cách mạng, chính qui, tinh nhuệ và từng bước hiện đại"
+            },
+            {
+              "key": "B",
+              "text": "Vững mạnh, rộng khắp, lấy chất lượng làm chính"
+            },
+            {
+              "key": "C",
+              "text": "Cách mạng, chính qui, tinh nhuệ và ngày càng hùng hậu"
+            },
+            {
+              "key": "D",
+              "text": "Hùng hậu, được huấn luyện và quản lý tốt, bảo đảm khi cần thiết có thể động viên nhanh chóng theo kế hoạch"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701989584,
+          "question": "Phương hướng xây dựng lực lượng dân quân tự vệ hiện nay?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cách mạng, chính qui, tinh nhuệ và từng bước hiện đại"
+            },
+            {
+              "key": "B",
+              "text": "Vững mạnh, rộng khắp, lấy chất lượng làm chính"
+            },
+            {
+              "key": "C",
+              "text": "Cách mạng, chính qui, tinh nhuệ và ngày càng hùng hậu"
+            },
+            {
+              "key": "D",
+              "text": "Cách mạng, chính qui, tinh nhuệ, hùng hậu và từng bước hiện đại"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701989874,
+          "question": "Lực lượng dân quân tự vệ gồm có?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dân quân, tự vệ thường trực và  dân quân, tự vệ dự bị"
+            },
+            {
+              "key": "B",
+              "text": "Dân quân, tự vệ thường trực và dân quân, tự vệ rộng rãi"
+            },
+            {
+              "key": "C",
+              "text": "Dân quân, tự vệ bộ binh và dân quân, tự vệ binh chủng"
+            },
+            {
+              "key": "D",
+              "text": "Dân quân, tự vệ nòng cốt  và dân quân, tự vệ rộng rãi"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701990780,
+          "question": "Để đáp ứng yêu cầu, nhiệm vụ của lực lượng dân quân tự vệ, cần xây dựng như thế nào hiện nay?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vững mạnh, rộng khắp, rải đều trên phạm vi cả nước"
+            },
+            {
+              "key": "B",
+              "text": "Vững mạnh, rộng khắp nhưng có trọng tâm, trọng điểm."
+            },
+            {
+              "key": "C",
+              "text": "Cách mạng, chính qui, tinh nhuệ và ngày càng hùng hậu"
+            },
+            {
+              "key": "D",
+              "text": "Cách mạng, chính qui, tinh nhuệ, hùng hậu và từng bước hiện đại"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701992297,
+          "question": "Kết hợp phát triển kinh tế, xã hội với tăng cường quốc phòng, an ninh và đối ngoại * Kinh tế có vai trò như thế nào đối với quốc phòng, an ninh?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quyết định nguồn gốc ra đời và sức mạnh của QP, AN"
+            },
+            {
+              "key": "B",
+              "text": "Tác động đến sự phát triển của QP, AN"
+            },
+            {
+              "key": "C",
+              "text": "Chi phối đến nguồn gốc ra đời và sức mạnh của QP, AN"
+            },
+            {
+              "key": "D",
+              "text": "Tạo cơ sở cho sự ra đời và sức mạnh của QP, AN"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701992952,
+          "question": "Tại sao phải gắn kết chặt chẽ hoạt động KT-XH với QP và AN trong một chỉnh thể thống nhất ở từng địa phương?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các lĩnh vực này có đặc điểm, yêu cầu ở mỗi địa phương là khác nhau"
+            },
+            {
+              "key": "B",
+              "text": "Mỗi địa phương điều kiện địa lý là khác nhau"
+            },
+            {
+              "key": "C",
+              "text": "Mỗi địa phương điều kiện kinh tế là khác nhau"
+            },
+            {
+              "key": "D",
+              "text": "Mỗi địa phương điều kiện phát triển là khác nhau"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701994468,
+          "question": "Việc kết hợp phát triển KT-XH với tăng cường củng cố QP, AN trong một chỉnh thể thống nhất nhằm",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát huy tác động tích cực của QP,AN đối với KT-XH"
+            },
+            {
+              "key": "B",
+              "text": "Hạn chế tác động tiêu cực của QP,AN đối với KT-XH"
+            },
+            {
+              "key": "C",
+              "text": "Thúc đẩy nhau cùng phát triển"
+            },
+            {
+              "key": "D",
+              "text": "Các phương án trên đều sai"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701994850,
+          "question": "Yêu cầu của việc kết phát triển KT-XH với tăng cường củng cố QP, AN là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khoa học, hợp lý, cân đối và đồng thời"
+            },
+            {
+              "key": "B",
+              "text": "Khoa học, cân đối, đồng thời và phù hợp"
+            },
+            {
+              "key": "C",
+              "text": "Khoa học, hợp lý, cân đối và hài hòa"
+            },
+            {
+              "key": "D",
+              "text": "Khoa học, cân đối, đồng thời và hài hòa"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701996301,
+          "question": "Kết hợp kinh tế với quốc phòng, an ninh là yêu cầu như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Yêu cầu nội sinh của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            },
+            {
+              "key": "B",
+              "text": "Yêu cầu phát sinh của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            },
+            {
+              "key": "C",
+              "text": "Yêu cầu sự nghiệp CNH, HĐH"
+            },
+            {
+              "key": "D",
+              "text": "Yêu cầu mới của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701996957,
+          "question": "Kết hợp kinh tế với quốc phòng, an ninh là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quy luật lịch sử nhân loại"
+            },
+            {
+              "key": "B",
+              "text": "Quy luật tự nhiên của xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Quy luật riêng của các theo CNXH."
+            },
+            {
+              "key": "D",
+              "text": "Quy luật phát triển của mọi chế độ xã hội."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701998434,
+          "question": "Nội dung nào không thể hiện chính sách kết hợp kinh tế với quốc phòng ở nước ta?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quốc phú, binh cường."
+            },
+            {
+              "key": "B",
+              "text": "Động vi binh, tĩnh vi dân."
+            },
+            {
+              "key": "C",
+              "text": "Ngụ binh, ư nông."
+            },
+            {
+              "key": "D",
+              "text": "Các phương án đều sai."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790701999146,
+          "question": "Theo quan điểm của Chủ nghĩa Mác Lê nin, nguồn gốc xã hội có tác động gì đến sự xuất hiện, tồn tại của chiến tranh?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nguồn gốc sâu xa"
+            },
+            {
+              "key": "B",
+              "text": "Là nguồn gốc trực tiếp"
+            },
+            {
+              "key": "C",
+              "text": "Là nguồn gốc gián tiếp"
+            },
+            {
+              "key": "D",
+              "text": "Cả ba phương án trên"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702000130,
+          "question": "Hoạt động  phát triển kinh tế - xã hội và tăng cường củng cố quốc phòng  - an ninh ở nước ta thống nhất với nhau bởi?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ vững chắc Tổ quốc"
+            },
+            {
+              "key": "B",
+              "text": "Thực hiện thắng lợi hai nhiệm vụ chiến lược của Đảng"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng nền kinh tế vững mạnh"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng nền quốc phòng, an ninh vững chắc"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702001656,
+          "question": "Mối quan hệ giữa kinh tế - xã hội (KT-XH) với quốc phòng, an ninh(QP,AN) được biểu hiện?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bản chất chế độ KH-XH quyết định bản chất QP,AN"
+            },
+            {
+              "key": "B",
+              "text": "Bản chất QP,AN quyết định bản chất chế độ KH-XH"
+            },
+            {
+              "key": "C",
+              "text": "QP,AN vững mạnh quyết định sự tồn tại và phát triển của chế độ KT-XH"
+            },
+            {
+              "key": "D",
+              "text": "Các phương án đều đúng"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702002071,
+          "question": "Mối quan hệ giữa kinh tế - xã hội  với quốc phòng, an ninh được biểu hiện?",
+          "options": [
+            {
+              "key": "A",
+              "text": "QP,AN vững mạnh quyết định sự tăng trưởng KH-XH bền vững"
+            },
+            {
+              "key": "B",
+              "text": "Bản chất QPAN quyết định bản chất chế độ KT-XH"
+            },
+            {
+              "key": "C",
+              "text": "QP,AN vững mạnh quyết định sự tồn tại và phát triển của chế độ KT-XH."
+            },
+            {
+              "key": "D",
+              "text": "KT-XH cung cấp nguồn nhân lực, vật lực cho QPAN"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702002946,
+          "question": "Mối quan hệ giữa kinh tế - xã hội  với quốc phòng, an ninh được biểu hiện?",
+          "options": [
+            {
+              "key": "A",
+              "text": "QP,AN vững mạnh quyết định sự tăng trưởng KH-XH bền vững"
+            },
+            {
+              "key": "B",
+              "text": "Bản chất QP,AN quyết định bản chất chế độ KT-XH"
+            },
+            {
+              "key": "C",
+              "text": "QP,AN vững mạnh quyết định sự tồn tại và phát triển của chế độ KT-XH"
+            },
+            {
+              "key": "D",
+              "text": "QP,AN vững mạnh tạo môi trường thuận lợi cho KT-XH phát triển"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702004271,
+          "question": "Mối quan hệ giữa kinh tế - xã hội  với quốc phòng, an ninh được biểu hiện?",
+          "options": [
+            {
+              "key": "A",
+              "text": "QP,AN vững mạnh quyết định sự tăng trưởng KH-XH bền vững"
+            },
+            {
+              "key": "B",
+              "text": "Đầu tư cho KT-XH làm giảm khả năng đầu tư cho QP,AN"
+            },
+            {
+              "key": "C",
+              "text": "QP,AN vững mạnh quyết định sự tồn tại và phát triển của chế độ KT-XH"
+            },
+            {
+              "key": "D",
+              "text": "Hoạt động QP,AN ảnh hưởng đến khả năng tích lũy, tái sản xuất kinh tế"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702005508,
+          "question": "Kết hợp phát triển KT - XH với tăng cường củng cố QPAN trong chiến lược phát triển KT - XH được thể hiện trong?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phân vùng chiến lược kinh tế xã hội cà quốc phòng, an ninh"
+            },
+            {
+              "key": "B",
+              "text": "Lựa chọn và thực hiện các giải pháp chiến lược"
+            },
+            {
+              "key": "C",
+              "text": "Quy hoạch tổng thể phát triển KT-XH với QP, AN trên từng vùng"
+            },
+            {
+              "key": "D",
+              "text": "Quá trình phân công lao động và phân bố dân cư"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702005986,
+          "question": "Kết hợp phát triển KT-XH với tăng cường củng cố QP, AN trong vùng kinh tế trọng điểm cần?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tập trung xây dựng các khu công nghiệp quy mô lớn, bố trí tập trung"
+            },
+            {
+              "key": "B",
+              "text": "Tập trung xây dựng các khu công nghiệp quy mô trung binh, bố trí phân tán"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng các thành phố thành các siêu đô thị"
+            },
+            {
+              "key": "D",
+              "text": "Tập trung xây dựng các khu công nghiệp quy mô lớn, bố trí cài răng lược"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702007427,
+          "question": "Thực hiện đưa dân ra đảo sinh sống nhằm?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm mật độ dân cư trong đất liền và phát triển kinh tế biển, đảo"
+            },
+            {
+              "key": "B",
+              "text": "Thực hiện tốt việc phát triển kinh tế  với củng cố QP, AN ở vùng biển, đảo"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng vọng gác tiền tiêu, sử dụng lực lượng tại chỗ ngăn chặn địch từ xa"
+            },
+            {
+              "key": "D",
+              "text": "Phát triển kinh tế và dịch vụ biển, đảo"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702007774,
+          "question": "Yêu cầu của việc kết phát triển KT-XH với tăng cường củng cố QP, AN là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khoa học, hợp lý, cân đối và đồng thời"
+            },
+            {
+              "key": "B",
+              "text": "Khoa học, cân đối, đồng thời và phù hợp"
+            },
+            {
+              "key": "C",
+              "text": "Khoa học, hợp lý, cân đối và hài hòa"
+            },
+            {
+              "key": "D",
+              "text": "Khoa học, cân đối, đồng thời và hài hòa"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702009017,
+          "question": "Kết hợp kinh tế với quốc phòng, an ninh là yêu cầu như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Yêu cầu nội sinh của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            },
+            {
+              "key": "B",
+              "text": "Yêu cầu phát sinh của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            },
+            {
+              "key": "C",
+              "text": "Yêu cầu sự nghiệp CNH, HĐH"
+            },
+            {
+              "key": "D",
+              "text": "Yêu cầu mới của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702009882,
+          "question": "Kết hợp kinh tế với quốc phòng, an ninh là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quy luật lịch sử nhân loại"
+            },
+            {
+              "key": "B",
+              "text": "Quy luật tự nhiên của xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Quy luật riêng của các theo CNXH."
+            },
+            {
+              "key": "D",
+              "text": "Quy luật phát triển của mọi chế độ xã hội."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702010852,
+          "question": "Nội dung nào không thể hiện chính sách kết hợp kinh tế với quốc phòng ở nước ta?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quốc phú, binh cường."
+            },
+            {
+              "key": "B",
+              "text": "Động vi binh, tĩnh vi dân."
+            },
+            {
+              "key": "C",
+              "text": "Ngụ binh, ư nông."
+            },
+            {
+              "key": "D",
+              "text": "Các phương án đều sai."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702012170,
+          "question": "Những vấn đề cơ bản về lịch sử nghệ thuật quân sự Việt Nam * Yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Yếu tố địa lý"
+            },
+            {
+              "key": "B",
+              "text": "Địa hình núi rừng hiểm trở"
+            },
+            {
+              "key": "C",
+              "text": "Yếu tố thời tiết"
+            },
+            {
+              "key": "D",
+              "text": "Yếu tố địa hình, thời tiết"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702013113,
+          "question": "Một trong những yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các dân tộc ở Việt Nam chung sống hoà thuận, yêu quê hương đất nước"
+            },
+            {
+              "key": "B",
+              "text": "Yếu tố chính trị, văn hoá - xã hội"
+            },
+            {
+              "key": "C",
+              "text": "Dân tộc ta có tính thần đoàn kết, thông minh, sang tạo"
+            },
+            {
+              "key": "D",
+              "text": "Dân tộc ta có tinh thần chống ngoại xâm kiên cường, bất khuất."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702014353,
+          "question": "Trong nghệ thuật đánh giặc của tổ tiên ta, thể hiện cách tiến công như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tích cực chuẩn bị, tiến công liên tục từ nhỏ đến lớn, từ cục bộ đến toàn bộ."
+            },
+            {
+              "key": "B",
+              "text": "Tích cực tiến công liên tục và phòng ngự toàn diện."
+            },
+            {
+              "key": "C",
+              "text": "Tích cực chuẩn bị tiến công phá thế tiến công của địch"
+            },
+            {
+              "key": "D",
+              "text": "Tích cực chuẩn bị tiến công kiên quyết, liên tục."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702015375,
+          "question": "Yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Yếu tố địa lý"
+            },
+            {
+              "key": "B",
+              "text": "Địa hình núi rừng hiểm trở"
+            },
+            {
+              "key": "C",
+              "text": "Yếu tố thời tiết"
+            },
+            {
+              "key": "D",
+              "text": "Yếu tố địa hình, thời tiết"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702016377,
+          "question": "Một trong những yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các dân tộc ở Việt Nam chung sống hoà thuận, yêu quê hương đất nước"
+            },
+            {
+              "key": "B",
+              "text": "Yếu tố chính trị, văn hoá - xã hội"
+            },
+            {
+              "key": "C",
+              "text": "Dân tộc ta có tinh thần đoàn kết, thông minh, sáng tạo"
+            },
+            {
+              "key": "D",
+              "text": "Dân tộc ta có tinh thần chống ngoại xâm kiên cường, bất khuất."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702017107,
+          "question": "Trong nghệ thuật đánh giặc của tổ tiên ta, thể hiện cách tiến công như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tích cực chuẩn bị, tiến công liên tục từ nhỏ đến lớn, từ cục bộ đến toàn bộ."
+            },
+            {
+              "key": "B",
+              "text": "Tích cực tiến công liên tục và phòng ngự toàn diện."
+            },
+            {
+              "key": "C",
+              "text": "Tích cực chuẩn bị tiến công phá thế tiến công của địch"
+            },
+            {
+              "key": "D",
+              "text": "Tích cực chuẩn bị tiến công kiên quyết, liên tục."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702018648,
+          "question": "Xây dựng cả nước thành một chiến trường, mỗi người dân là một người lính đánh giặc là thể hiện nghệ thuật chiến tranh gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chiến tranh toàn diện"
+            },
+            {
+              "key": "B",
+              "text": "Chiến tranh tổng lực"
+            },
+            {
+              "key": "C",
+              "text": "Chiến tranh toàn dân"
+            },
+            {
+              "key": "D",
+              "text": "Chiến tranh du kích"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702018968,
+          "question": "Một trong những nội dung nghệ thuật đánh giặc của tổ tiên ta là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nghệ thuật toàn dân đánh giặc trên mọi vùng miền"
+            },
+            {
+              "key": "B",
+              "text": "Nghệ thuật đánh giặc toàn diện trên mọi mặt trận"
+            },
+            {
+              "key": "C",
+              "text": "Nghệ thuật chiến tranh nhân dân, toàn dân đánh giặc"
+            },
+            {
+              "key": "D",
+              "text": "Nghệ thuật tác chiến của chiến tranh nhân dân."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702020037,
+          "question": "Một trong những nội dung nghệ thuật đánh giặc của của tổ tiên ta là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nghệ thuật đấu tranh quân sự quyết định thắng lợi trong chiến tranh"
+            },
+            {
+              "key": "B",
+              "text": "Nghệ thuật lấy nhỏ đánh lớn, lấy ít thắng nhiều, lấy yếu thắng mạnh"
+            },
+            {
+              "key": "C",
+              "text": "Nghệ thuật đánh vào lòng  người"
+            },
+            {
+              "key": "D",
+              "text": "Nghệ thuật kết hợp đấu tranh giữa các mặt trận quân sự, chính trị, ngoại giao, binh vận"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702021361,
+          "question": "Binh thư yếu lược là tác phẩm của ai?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nguyễn Trãi"
+            },
+            {
+              "key": "B",
+              "text": "Quang Trung"
+            },
+            {
+              "key": "C",
+              "text": "Trần Quốc Tuấn"
+            },
+            {
+              "key": "D",
+              "text": "Lý thường Kiệt"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702021941,
+          "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Nhà Lý là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiêu thổ, thanh giã"
+            },
+            {
+              "key": "B",
+              "text": "Tiên phát chế nhân"
+            },
+            {
+              "key": "C",
+              "text": "Mưu phạt công tâm"
+            },
+            {
+              "key": "D",
+              "text": "Thần tốc, bất ngờ và quyết liệt"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702022816,
+          "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Nhà Trần là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiêu thổ, thanh giã"
+            },
+            {
+              "key": "B",
+              "text": "Tiên phát chế nhân"
+            },
+            {
+              "key": "C",
+              "text": "Mưu phạt công tâm"
+            },
+            {
+              "key": "D",
+              "text": "Thần tốc, bất ngờ và quyết liệt"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702024585,
+          "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Lê Lợi, Nguyến Trãi  là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiêu thổ, thanh giã"
+            },
+            {
+              "key": "B",
+              "text": "Tiên phát chế nhân"
+            },
+            {
+              "key": "C",
+              "text": "Mưu phạt công tâm"
+            },
+            {
+              "key": "D",
+              "text": "Thần tốc, bất ngờ và quyết liệt"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702024969,
+          "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Nguyễn Huệ - Quang Trung  là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiêu thổ, thanh giã"
+            },
+            {
+              "key": "B",
+              "text": "Tiên phát chế nhân"
+            },
+            {
+              "key": "C",
+              "text": "Mưu phạt công tâm"
+            },
+            {
+              "key": "D",
+              "text": "Thần tốc, bất ngờ và quyết liệt"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702025861,
+          "question": "Nhà Trần đã sử dụng kế sách đánh giặc như thế nào trong cuộc kháng chiến chống quân Nguyên Mông?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công thành, diệt viện"
+            },
+            {
+              "key": "B",
+              "text": "Tránh thế ban mai, đánh lúc chiều tà"
+            },
+            {
+              "key": "C",
+              "text": "Tránh chỗ mạnh, đánh chỗ yếu, nơi điểm yếu của địch"
+            },
+            {
+              "key": "D",
+              "text": "Tiến công vào bộ phận hậu cần phía sau của địch"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702027128,
+          "question": "Một trong những nội dung nghệ thuật đánh giặc của của tổ tiên ta là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nghệ thuật lấy nhỏ đánh lớn, lấy ít địch nhiều, lấy yếu chống mạnh"
+            },
+            {
+              "key": "B",
+              "text": "Nghệ thuật lấy nhỏ đánh lớn, lấy ít thắng nhiều, lấy yếu thắng mạnh"
+            },
+            {
+              "key": "C",
+              "text": "Nghệ thuật lấy nhỏ đánh lớn, lấy ít thắng nhiều, lấy yếu chống mạnh"
+            },
+            {
+              "key": "D",
+              "text": "Nghệ thuật lấy nhỏ đánh lớn, lấy ít địch nhiều, lấy yếu thắng mạnh"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702028647,
+          "question": "Tư tưởng chỉ đạo tác chiến xuyên suốt trong chuẩn bị và tiến hành chiến tranh giữ nước của cha ông ta là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiến công"
+            },
+            {
+              "key": "B",
+              "text": "Phòng ngự"
+            },
+            {
+              "key": "C",
+              "text": "Hoà hoãn"
+            },
+            {
+              "key": "D",
+              "text": "Phản công"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702029592,
+          "question": "Tư tưởng xuyên suốc trong nghệ thuật  đánh giặc của tổ tiên là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ động tiến công, phòng ngự"
+            },
+            {
+              "key": "B",
+              "text": "Tiến công kiên quyết, liên tục C Tích cực chủ động tiên công"
+            },
+            {
+              "key": "D",
+              "text": "Chủ động tiến công, phản công"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702030338,
+          "question": "Phương châm tác chiến “ Đánh nhanh, thắng nhanh” là của chiến dịch nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chiến dịch Việt Bắc-Thu Đông năm 1947"
+            },
+            {
+              "key": "B",
+              "text": "Chiến dịch Điện Biên Phủ 1954"
+            },
+            {
+              "key": "C",
+              "text": "Chiến dịch Hồ Chí Minh 1975"
+            },
+            {
+              "key": "D",
+              "text": "Chiến dịch Thành Cổ, Quảng trị 1972"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702030815,
+          "question": "Một trong những cơ sở hình thành nghệ thuật quân sự Việt Nam từ khi có Đảng lãnh đạo là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tư tưởng vũ trang toàn dân của Hồ Chí Minh"
+            },
+            {
+              "key": "B",
+              "text": "Tư tưởng lãnh đạo cách mạng của Hồ Chí Minh"
+            },
+            {
+              "key": "C",
+              "text": "Tư tưởng quân sự của Hồ Chí Minh"
+            },
+            {
+              "key": "D",
+              "text": "Tư tưởng chiến tranh Hồ chí Minh"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702032082,
+          "question": "Xây dựng và bảo vệ chủ quyền biển, đảo, biên giới quốc gia trong tình hình mới * Trong chiển lược phòng thủ bảo vệ Tổ quốc, vùng núi biên giới có vai trò như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Rất quan trong"
+            },
+            {
+              "key": "B",
+              "text": "Quan trọng"
+            },
+            {
+              "key": "C",
+              "text": "Quan trọng đặc biệt"
+            },
+            {
+              "key": "D",
+              "text": "Ít quan trọng"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702033692,
+          "question": "Trong chiển lược phòng thủ bảo vệ Tổ quốc, vùng núi biên giới có vai trò như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vùng chiến lược trọng yếu"
+            },
+            {
+              "key": "B",
+              "text": "Vùng chiến lược quan trọng"
+            },
+            {
+              "key": "C",
+              "text": "Vùng chiến lược đặc biệt"
+            },
+            {
+              "key": "D",
+              "text": "Vùng chiến lược ít trọng"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702034531,
+          "question": "Trong chiến lược bảo vệ Tổ quốc, vùng nào là vùng chiến lược trọng yếu?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vùng kinh tế trọng điểm"
+            },
+            {
+              "key": "B",
+              "text": "Vùng biển, đảo"
+            },
+            {
+              "key": "C",
+              "text": "Vùng núi, biên giới"
+            },
+            {
+              "key": "D",
+              "text": "Cả ba vùng"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702034961,
+          "question": "Vùng nào là vùng dễ mất ổn định về QP, AN trong bối cảnh hiện nay?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vùng kinh tế trọng điểm"
+            },
+            {
+              "key": "B",
+              "text": "Vùng biển, đảo"
+            },
+            {
+              "key": "C",
+              "text": "Vùng núi, biên giới"
+            },
+            {
+              "key": "D",
+              "text": "Cả ba vùng"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702035902,
+          "question": "Phần lớn nguồn lực để xây dựng và bảo vệ Tổ quốc, được huy động từ ngành, lĩnh vực kinh tế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công nghiệp và khoa học, công nghệ, giáo dục"
+            },
+            {
+              "key": "B",
+              "text": "Nông, Lâm, Ngư nghiệp"
+            },
+            {
+              "key": "C",
+              "text": "Công nghiệp, giao thông vận tải và xây dựng cơ bản"
+            },
+            {
+              "key": "D",
+              "text": "Công nghiệp quốc phòng, khoa học và công nghệ, giáo dục"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702037196,
+          "question": "Nội dung nào sau đây phản ánh đúng mục tiêu của Đảng về Chiến lược bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa trong tình hình mới?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát huy cao nhất sức mạnh của dân tộc kết hợp với sức mạnh của thời đại."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ của Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Quán triệt đường lối độc lập, tự chủ; đồng thời chủ động tích cực hội nhập quốc tế."
+            },
+            {
+              "key": "D",
+              "text": "Luôn nhất quán và kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702037809,
+          "question": "Nội dung nào sau đây không phản ánh đúng quan điểm chỉ đạo của Đảng về Chiến lược bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa trong tình hình mới?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giữ vững sự lãnh đạo trực tiếp, tuyệt đối về mọi mặt của Đảng."
+            },
+            {
+              "key": "B",
+              "text": "Giữ vững môi trường hòa bình, ổn định để phát triển kinh tế - xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Chỉ chú trọng xây dựng sức mạnh của đất nước về văn hóa - xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Kết hợp chặt chẽ hai nhiệm vụ chiến lược xây dựng và bảo vệ Tổ quốc."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702038989,
+          "question": "Bất kì thế lực nào có âm mưu và hành động chống phá mục tiêu của Việt Nam trong sự nghiệp xây dựng và bảo vệ Tổ quốc đều là",
+          "options": [
+            {
+              "key": "A",
+              "text": "đối tác."
+            },
+            {
+              "key": "B",
+              "text": "đối tượng."
+            },
+            {
+              "key": "C",
+              "text": "đồng đội."
+            },
+            {
+              "key": "D",
+              "text": "đồng minh."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702040680,
+          "question": "Luật Biển Việt Nam năm 2012 bao gồm",
+          "options": [
+            {
+              "key": "A",
+              "text": "320 điều và 9 phụ lục."
+            },
+            {
+              "key": "B",
+              "text": "7 chương với 55 điều."
+            },
+            {
+              "key": "C",
+              "text": "9 chương với 62 điều."
+            },
+            {
+              "key": "D",
+              "text": "36 điều và 8 phụ lục."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702040967,
+          "question": "Theo quy định trong Luật Biển Việt Nam năm 2012: vùng biển quốc tế là tất cả các vùng biển nằm ngoài vùng đặc quyền kinh tế của Việt Nam và các quốc gia khác, nhưng không bao gồm",
+          "options": [
+            {
+              "key": "A",
+              "text": "vùng nội thủy và tiếp giáp lãnh hải."
+            },
+            {
+              "key": "B",
+              "text": "lãnh hải và vùng tiếp giáp lãnh hải."
+            },
+            {
+              "key": "C",
+              "text": "thềm lục địa và lòng đất dưới đáy biển."
+            },
+            {
+              "key": "D",
+              "text": "đáy biển và lòng đất dưới đáy biển."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702041891,
+          "question": "Lãnh hải là vùng biển có chiều rộng 12 hải lí tính từ",
+          "options": [
+            {
+              "key": "A",
+              "text": "vùng nội thủy ra phía biển."
+            },
+            {
+              "key": "B",
+              "text": "đường cơ sở ra phía biển."
+            },
+            {
+              "key": "C",
+              "text": "ranh giới ngoài của lãnh hải."
+            },
+            {
+              "key": "D",
+              "text": "ranh giới ngoài thềm lục địa."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702043584,
+          "question": "Vùng biển tiếp liền và nằm ngoài lãnh hải Việt Nam, hợp với lãnh hải thành một vùng biển có chiều rộng 200 hải lí tính từ đường cơ sở, được gọi là",
+          "options": [
+            {
+              "key": "A",
+              "text": "nội thủy."
+            },
+            {
+              "key": "B",
+              "text": "vùng tiếp giáp lãnh hải."
+            },
+            {
+              "key": "C",
+              "text": "vùng đặc quyền kinh tế."
+            },
+            {
+              "key": "D",
+              "text": "thềm lục địa."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702043950,
+          "question": "Ranh giới ngoài thềm lục địa cách đường cơ sở không quá",
+          "options": [
+            {
+              "key": "A",
+              "text": "350 hải lí."
+            },
+            {
+              "key": "B",
+              "text": "200 hải lí."
+            },
+            {
+              "key": "C",
+              "text": "12 hải lí."
+            },
+            {
+              "key": "D",
+              "text": "10 hải lí."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702044736,
+          "question": "Việt Nam có hai quần đảo xa bờ là",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hoàng Sa và Thổ Chu."
+            },
+            {
+              "key": "B",
+              "text": "Hoàng Sa và Trường Sa."
+            },
+            {
+              "key": "C",
+              "text": "Trường Sa và Phú Quý."
+            },
+            {
+              "key": "D",
+              "text": "Thổ Chu và Phú Quý."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702045964,
+          "question": "Biên giới quốc gia trên đất liền được hoạch định và đánh dấu trên thực địa bằng",
+          "options": [
+            {
+              "key": "A",
+              "text": "một mốc quốc giới duy nhất."
+            },
+            {
+              "key": "B",
+              "text": "các tọa độ trên hải đồ."
+            },
+            {
+              "key": "C",
+              "text": "hệ thống mốc quốc giới."
+            },
+            {
+              "key": "D",
+              "text": "hệ tọa độ trên đất liền."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702047177,
+          "question": "“Mặt thẳng đứng từ biên giới quốc gia trên đất liền và biên giới quốc gia trên biển xuống lòng đất” - đó là nội dung của khái niệm nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Biên giới quốc gia trên biển."
+            },
+            {
+              "key": "B",
+              "text": "Biên giới quốc gia trên không."
+            },
+            {
+              "key": "C",
+              "text": "Biên giới quốc gia trên đất liền."
+            },
+            {
+              "key": "D",
+              "text": "Biên giới quốc gia trong lòng đất."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702048513,
+          "question": "Hành vi nào dưới đây bị nghiêm cấm trong bảo vệ biên giới quốc gia của Việt Nam?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phá hoại an ninh, trật tự, an toàn xã hội ở khu vực biên giới."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ môi trường, tài nguyên thiên nhiên và lợi ích quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Vận chuyển qua biên giới hàng hóa mà nhà nước không cấm."
+            },
+            {
+              "key": "D",
+              "text": "Tố giác những hành vi gây hư hại, làm xê dịch mốc quốc giới."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702049404,
+          "question": "Đọc tình huống dưới đây và trả lời câu hỏi: * * Tình huống: Nhà bạn A Páo ở khu vực biên giới. Hằng ngày A Páo đi chăn trâu sau giờ học. Khu vực gần nhà hết cỏ, A Páo phải lùa trâu ra sát bìa rừng, nơi có cột mốc biên giới. Bên kia cột mốc có bãi cỏ xanh tốt, A Páo định lùa trâu sang đó, hễ trâu ăn no là quay về Việt Nam ngay. * * Câu hỏi: Trong trường hợp này, nếu là bạn thân của A Páo, em nên lựa chọn cách ứng xử nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mặc kệ, vì đó không phải là việc của mình."
+            },
+            {
+              "key": "B",
+              "text": "Khuyến khích A Páo nên thực hiện hành vi đó."
+            },
+            {
+              "key": "C",
+              "text": "Khuyên A Páo không nên thực hiện hành vi đó."
+            },
+            {
+              "key": "D",
+              "text": "Cùng với A Páo lùa trâu sang bên kia biên giới."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702049828,
+          "question": "Ở Việt Nam, Ngày biên phòng toàn dân được tổ chức vào",
+          "options": [
+            {
+              "key": "A",
+              "text": "ngày 3/3 hằng năm."
+            },
+            {
+              "key": "B",
+              "text": "ngày 18/3 hằng năm."
+            },
+            {
+              "key": "C",
+              "text": "ngày 22/12 hằng năm."
+            },
+            {
+              "key": "D",
+              "text": "ngày 7/5 hằng năm."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702051107,
+          "question": "Nội dung nào sau đây không phản ánh đúng trách nhiệm của công dân trong việc quản lí, xây dựng và bảo vệ biên giới quốc gia?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chấp hành các quy định của pháp luật về biên giới quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng, giữ gìn trật tự an toàn xã hội ở khu vực biên giới."
+            },
+            {
+              "key": "C",
+              "text": "Vận chuyển qua biên giới những văn hóa phẩm độc hại."
+            },
+            {
+              "key": "D",
+              "text": "Tham gia phong trào tự quản đường biên, mốc quốc giới."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702052441,
+          "question": "Xây dựng lực lượng DQTV, lực lượng DBĐV và động viên quốc phòng * Dân quân tự vệ là lực lượng quần chúng, một thành phần của lực lượng nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lực lượng vũ trang nhân dân Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng quân đội nhân dân Việt Nam"
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng công an nhân dân Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng thường trực địa phương"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702053107,
+          "question": "Dân quân tự vệ là",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lực lượng vũ trang quần chúng không thoát ly khỏi lao động sản xuất, công tác"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng vũ trang quần chúng, thoát ly khỏi lao động sản xuất, công tác"
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng vũ trang quần chúng, chỉ tham gia chiến đấu và phục vụ chiến đấu"
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng vũ trang quần chúng, chỉ giữ gìn an ninh trật tự, an toàn xã hội tại địa phương"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702053915,
+          "question": "Ngày truyền thống của lực lượng Dân quân tự vệ Việt Nam",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngày 28/3"
+            },
+            {
+              "key": "B",
+              "text": "Ngày 26/3"
+            },
+            {
+              "key": "C",
+              "text": "Ngày 19/8"
+            },
+            {
+              "key": "D",
+              "text": "Ngày 22/12"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702055278,
+          "question": "Ba thứ quân của lực lượng quân đội nhân dân Việt Nam là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ đội chủ lực, bộ đội địa phương và dân quân du kích"
+            },
+            {
+              "key": "B",
+              "text": "Quân đội nhân dân, công an nhân dân và dân quân tự vệ"
+            },
+            {
+              "key": "C",
+              "text": "Quân đội nhân dân, bộ đội biên phòng và dân quân du kích"
+            },
+            {
+              "key": "D",
+              "text": "Hải quân Việt Nam, công an nhân dân và dân quân tự vệ"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702056050,
+          "question": "“Dân quân tự vệ và du kích là lực lượng của toàn dân tộc, là một lực lượng vô địch, là bức tường sắt của Tổ quốc. Vô luận kẻ thù hung bạo thế nào, hễ động vào lực lượng đó, bức tường đó thì kẻ địch nào cũng phải tan rã” là câu nói của ai?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ tịch Hồ Chí Minh"
+            },
+            {
+              "key": "B",
+              "text": "Đại tướng Võ Nguyên Giáp"
+            },
+            {
+              "key": "C",
+              "text": "Đại tướng Nguyễn Chí Thanh"
+            },
+            {
+              "key": "D",
+              "text": "Bộ trưởng Bộ quốc phòng"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702057548,
+          "question": "Xây dựng lực lượng Dân quân tự vệ là trách nhiệm của:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Toàn Đảng, toàn dân, của cả hệ thống chính trị."
+            },
+            {
+              "key": "B",
+              "text": "Đảng, Nhà nước và các địa phương"
+            },
+            {
+              "key": "C",
+              "text": "Toàn Đảng, toàn dân và toàn quân"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các ban nghành đoàn thể tại địa phương"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702057755,
+          "question": "Phương châm xây dựng lực lượng Dân quân tự vệ hiện nay là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vững mạnh, rộng khắp, có số lượng phù hợp, coi trọng chất lượng là chính"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng Dân quân tự vệ bảo đảm số lượng đủ, chất lượng cao, xây dựng toàn diện nhưng có trọng tâm, trọng điểm"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng Dân quân tự vệ phải phát huy sức mạnh tổng hợp của cả hệ thống chính trị"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng Dân quân tự vệ đặt dưới sự lãnh đạo của Đảng các cấp ở địa phương,"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702059550,
+          "question": "bộ, ngành * So với Luật Dân quân tự vệ năm 2009, Điều 5 Luật Dân quân tự vệ năm 2019 đã kế thừa và bổ sung nhiệm vụ nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tham gia thực hiện các biện pháp về chiến tranh thông tin, chiến tranh không gian mạng theo quy định của pháp luật, quyết định của cấp có thẩm quyền"
+            },
+            {
+              "key": "B",
+              "text": "Phòng, chống, khắc phục hậu quả thảm họa, sự cố, thiên tai, dịch bệnh, cháy, nổ; tìm kiếm, cứu nạn, cứu hộ; bảo vệ rừng, bảo vệ môi trường và nhiệm vụ phòng thủ dân sự khác theo quy định của pháp luật."
+            },
+            {
+              "key": "C",
+              "text": "Tuyên truyền, vận động Nhân dân thực hiện đường lối, quan điểm của Đảng, chính sách, pháp luật của Nhà nước về quốc phòng, an ninh; tham gia xây dựng địa phương, cơ sở vững mạnh toàn diện, thực hiện chính sách xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Thực hiện nhiệm vụ huấn luyện quân sự, giáo dục chính trị, pháp luật, hội thi, hội thao, diễn tập."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702060644,
+          "question": "Đối tượng và thời hạn tham gia Dân quân tự vệ hiện nay là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công dân trong độ tuổi quy định (nam từ 18 - 45 tuổi, nữ từ 18 - 40; nếu tình nguyện tham gia thêm 5 năm)."
+            },
+            {
+              "key": "B",
+              "text": "Công dân trong độ tuổi quy định (nam từ 18 - 50 tuổi, nữ từ 18 - 40; nếu tình nguyện tham gia thêm 5 năm)."
+            },
+            {
+              "key": "C",
+              "text": "Công dân trong độ tuổi quy định (nam từ 18 - 45 tuổi, nữ từ 18 - 40; nếu tình nguyện tham gia thêm 4 năm)."
+            },
+            {
+              "key": "D",
+              "text": "Công dân trong độ tuổi quy định (nam từ 18 - 50 tuổi, nữ từ 18 - 45; nếu tình"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702061178,
+          "question": "nguyện tham gia thêm 4 năm). * “Phát huy sức mạnh tổng hợp trên địa bàn địa phương trong xây dựng lực lượng Dân quân tự vệ; xây dựng lực lượng Dân quân tự vệ gắn với xây dựng cơ sở vững mạnh toàn diện” là",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một trong những biện pháp xây dựng lực lượng Dân quân tự vệ hiện nay"
+            },
+            {
+              "key": "B",
+              "text": "Một trong những vai trò của lực lượng Dân quân tự vệ hiện nay"
+            },
+            {
+              "key": "C",
+              "text": "Một trong những quan điểm của Đảng về xây dựng lực lượng Dân quân tự vệ hiện nay"
+            },
+            {
+              "key": "D",
+              "text": "Một trong những nội dung xây dựng lực lượng Dân quân tự vệ hiện nay"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702062669,
+          "question": "Quân nhân dự bị gồm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sỹ quan dự bị, quân nhân chuyên nghiệp dự bị."
+            },
+            {
+              "key": "B",
+              "text": "Hạ sỹ quan và binh sỹ dự bị."
+            },
+            {
+              "key": "C",
+              "text": "Sỹ quan dự bị, quân nhân chuyên nghiệp dự bị, hạ sỹ quan và binh sỹ dự bị."
+            },
+            {
+              "key": "D",
+              "text": "Tất cả quân nhân."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702062920,
+          "question": "Lực lượng dự bị động viên là",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là lực lượng có khả năng phối hợp chặt chẽ với dân quân tự vệ, công an... làm tăng thêm sức mạnh chiến đấu trên các địa bàn trong khu vực phòng thủ, bảo đảm sự vững chắc của thế trận quốc phòng ở địa phương, cơ sở"
+            },
+            {
+              "key": "B",
+              "text": "Là lực lượng có khả năng tác chiến độc lập, làm tăng thêm sức mạnh chiến đấu trên các địa bàn trong khu vực phòng thủ, bảo đảm sự vững chắc của thế trận quốc phòng ở địa phương, cơ sở"
+            },
+            {
+              "key": "C",
+              "text": "Là lực lượng có khả năng phối hợp chặt chẽ với các lực lượng khác làm tăng thêm sức mạnh chiến đấu trên các địa bàn trong khu vực phòng thủ, bảo đảm sự vững chắc của thế trận quốc phòng toàn dân"
+            },
+            {
+              "key": "D",
+              "text": "Là lực lượng có có khả năng tác chiến độc lập trên các địa bàn trọng điểm, bảo đảm sự vững chắc của thế trận quốc phòng toàn dân."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702064649,
+          "question": "“Bảo đảm số lượng đủ, chất lượng cao, xây dựng toàn diện nhưng có trọng tâm, trọng điểm” là",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một trong những quan điểm về xây dựng lực lượng dự bị động viên"
+            },
+            {
+              "key": "B",
+              "text": "Một trong những nhiệm vụ xây dựng lực lượng dự bị động viên"
+            },
+            {
+              "key": "C",
+              "text": "Một trong những biện pháp chủ yếu xây dựng lực lượng dự bị động viên"
+            },
+            {
+              "key": "D",
+              "text": "Một trong những giải pháp cơ bản xây dựng lực lượng dự bị động viên"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702065331,
+          "question": "Một trong những quan điểm của Đảng Cộng Sản Việt Nam về xây dựng lực lượng dự bị động viên trong tình hình mới là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát huy sức mạnh của toàn dân trên tất cả các lĩnh vực hoạt động xã hội."
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng lực lượng dự bị động viên hùng mạnh, sẵn sàng chiến đấu cao."
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng lực lượng dự bị động viên đặt dưới sự lãnh đạo của Đảng các cấp ở địa phương, bộ, ngành."
+            },
+            {
+              "key": "D",
+              "text": "Phát huy sức mạnh tổng hợp của chính quyền ở địa phương."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702066398,
+          "question": "Một trong những nội dung xây dựng lực lượng dự bị động viên là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tạo nguồn, đăng ký, quản lý lực lượng dự bị động viên."
+            },
+            {
+              "key": "B",
+              "text": "Tạo nguồn, biên chế và đăng ký lực lượng dự bị động viên"
+            },
+            {
+              "key": "C",
+              "text": "Tạo nguồn, tổ chức và quản lý lực lượng dự bị động viên"
+            },
+            {
+              "key": "D",
+              "text": "Tạo nguồn, quản lý và kiểm tra lực lượng dự bị động viên"
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702067158,
+          "question": "Đối tượng tạo nguồn của lực lượng dự bị động viên là",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sỹ quan tại ngũ."
+            },
+            {
+              "key": "B",
+              "text": "Hạ sỹ quan tại ngũ."
+            },
+            {
+              "key": "C",
+              "text": "Chiến sỹ tại ngũ."
+            },
+            {
+              "key": "D",
+              "text": "Nam sinh viên tốt nghiệp Đại học."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702068039,
+          "question": "Quân nhân dự bị động viên được đăng ký, quản lý tại:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nơi công tác"
+            },
+            {
+              "key": "B",
+              "text": "Nơi cư trú"
+            },
+            {
+              "key": "C",
+              "text": "Đơn vị dự bị động viên"
+            },
+            {
+              "key": "D",
+              "text": "Nơi tập trung động viên"
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702068833,
+          "question": "Cơ quan thực hiện việc đăng ký, quản lý quân nhân dự bị động viên là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ban lãnh đạo cơ quan, đơn vị công tác"
+            },
+            {
+              "key": "B",
+              "text": "Ban chỉ huy quân sự xã (phường, thị trấn), Ban chỉ huy đơn vị dự bị động viên"
+            },
+            {
+              "key": "C",
+              "text": "Ban chỉ huy quân sự xã (phường, thị trấn), Ban chỉ huy quân sự huyện (quận, thị xã, thành phố thuộc tỉnh)"
+            },
+            {
+              "key": "D",
+              "text": "Ban chỉ huy quân sự huyện (quận, thị xã, thành phố thuộc tỉnh) và đơn vị dự bị"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702070315,
+          "question": "động viên * Tổ chức biên chế lực lượng dự bị động viên theo các loại hình đơn vị bao gồm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đơn vị biên chế thiếu, đơn vị biên chế khung thường trực, đơn vị không có khung thường trực, đơn vị biên chế đủ và đơn vị chuyên môn thời chiến."
+            },
+            {
+              "key": "B",
+              "text": "Đơn vị biên chế khung thường trực, đơn vị không có khung thường trực, đơn vị biên chế đủ và đơn vị chuyên môn thời chiến."
+            },
+            {
+              "key": "C",
+              "text": "Đơn vị biên chế thiếu, đơn vị không có khung thường trực, đơn vị biên chế đủ và đơn vị chuyên môn thời chiến."
+            },
+            {
+              "key": "D",
+              "text": "Đơn vị biên chế thiếu, đơn vị biên chế khung thường trực, đơn vị không có khung thường trực và đơn vị chuyên môn thời chiến."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702071285,
+          "question": "Một trong những nguyên tắc sắp xếp quân nhân dự bị vào các đơn vị dự bị động viên là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Theo khả năng về sức khỏe, tuổi đời và nơi cư trú."
+            },
+            {
+              "key": "B",
+              "text": "Theo trình độ chuyên môn nghiệp vụ, theo nghề nghiệp"
+            },
+            {
+              "key": "C",
+              "text": "Theo trình độ kỹ thuật, chiến thuật, chức vụ và sức khỏe."
+            },
+            {
+              "key": "D",
+              "text": "Theo trình độ chuyên nghiệp quân sự, chuyên môn kỹ thuật với chức danh"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702071975,
+          "question": "Xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc *Một trong những nội dung xây dựng thế trận quốc phòng toàn dân",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phân vùng chiến lược gắn với xây dựng các vùng kinh tế, dân cư."
+            },
+            {
+              "key": "B",
+              "text": "Phân vùng chiến lược gắn với xây dựng hậu phương chiến lược."
+            },
+            {
+              "key": "C",
+              "text": "Phân vùng chiến lược gắn với bố trí lực lượng quân sự mạnh."
+            },
+            {
+              "key": "D",
+              "text": "Phân vùng chiến lược gắn với xây dựng các tuyến phòng thủ."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702073625,
+          "question": "Tính toàn diện trong xây dựng nền quốc phòng toàn dân được thể hiện ở nội dung.",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nền quốc phòng được tạo lập bằng sức mạnh mọi mặt, cả tiềm lực và thế trận quốc phòng."
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng nền quốc phòng bằng sức mạnh tổng hợp của cả nước."
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng nền quốc phòng bằng sức mạnh quân sự to lớn, kinh tế phát triển."
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng nền quốc phòng bằng sức mạnh của nền kinh tế quốc dân."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702074470,
+          "question": "Một trong những nội dung xây dựng tiềm lực quân sự, trong xây dựng tiềm lực quốc phòng toàn dân là",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kết hợp chặt chẽ xây dựng thế trận quốc phòng và chiến tranh nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Kết hợp chặt chẽ thế bố trí lực lượng và thế trận."
+            },
+            {
+              "key": "C",
+              "text": "Kết hợp chặt chẽ xây dựng thế trận quốc phòng toàn dân và an ninh nhân dân."
+            },
+            {
+              "key": "D",
+              "text": "Kết hợp chặt chẽ xây dựng thế trận quốc phòng và chiến tranh hiện đại của các quân binh chủng."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702075288,
+          "question": "Kết hợp kinh tế với quốc phòng - an ninh ở nước ta hiện nay, nhằm mục đích gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhằm thực hiện tốt nhiệm vụ chiến lượcbảo vệ Tổ quốc đểphát triển kinh tế."
+            },
+            {
+              "key": "B",
+              "text": "Nhằm thực hiện tốt nhiệm vụ củng cố quốc phòng - quân sự."
+            },
+            {
+              "key": "C",
+              "text": "Nhằm thực hiện tốt hai nhiệm vụ chiến lược xây dựng CNXH và bảo vệ Tổ quốc."
+            },
+            {
+              "key": "D",
+              "text": "Nhằm thực hiện tốt nhiệm vụ chiến lược của đất nước, bảo vệ Tổ quốc và chế độ Xã hội Chủ Nghĩa."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702075977,
+          "question": "Thực hiện biện pháp \"tăng cường giáo dục quốc phòng\"trong xây dựng nền quốc phòng toàn dân một trong những nội dung giáo dục đó là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giáo dục tình hình nhiệm vụ của cách mạng và nhiệm vụ quân sự."
+            },
+            {
+              "key": "B",
+              "text": "Giáo dục tình hình nhiệm vụ cách mạng, nhiệm vụ quốc phòng - an ninh"
+            },
+            {
+              "key": "C",
+              "text": "Giáo dục ý thức quốc phòng, kỹ thuật quân sự."
+            },
+            {
+              "key": "D",
+              "text": "Giáo dục tình hình nhiệm vụ quốc phòng - an ninh nhân dân."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702077104,
+          "question": "Từ cơ sở nào, chúng ta xác định tính chất toàn dân của nền quốc phòng toàn dân?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Từ truyền thống dân tộc ta trong chiến đấu chống giặc ngoại xâm."
+            },
+            {
+              "key": "B",
+              "text": "Từ bài học quí báu xây dựng lực lượng vũ trang nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "Từ truyền thống dân tộc ta trong sự nghiệp dựng nước và giữ nước."
+            },
+            {
+              "key": "D",
+              "text": "Từ truyền thống dân tộc ta trong chiến đấu chống giặc ngoại xâm, gữi nước."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702078169,
+          "question": "Một trong những biện pháp chủ yếu xây dựng nền quốc phòng toàn dân là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng cường giáo dục ý thức trách nhiệm của công dân về  nhiêm vụ chiến lược"
+            },
+            {
+              "key": "B",
+              "text": "Tăng cường giáo dục nghĩa vụ công dân."
+            },
+            {
+              "key": "C",
+              "text": "Tăng cường giáo dục quốc phòng."
+            },
+            {
+              "key": "D",
+              "text": "Tăng cường giáo dục nhiệm vụ quốc phòng và an ninh nhân dân."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702078870,
+          "question": "Trong xây dựng nền quốc phòng toàn dân, phải kết hợp thế trận quốc phòng toàn* *dân với thế trận an ninh nhân dân, vì lý do gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để đánh bại ý đồ xâm lược và lật đổ của kẻ thù."
+            },
+            {
+              "key": "B",
+              "text": "Để đánh bại mưu đồ của địch muốn kết hợp \"thù trong giặc ngoài\" để chống phá cách mạng nước ta."
+            },
+            {
+              "key": "C",
+              "text": "Để đánh bại thủ đoạn tạo dựng, tập hợp lực lượng của kẻ thù."
+            },
+            {
+              "key": "D",
+              "text": "Để đánh bại thủ đoạn liên kết tập hợp lực lượng trong và ngoài nước của kẻ thù phản động."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702080048,
+          "question": "Vị trí mối quan hệ của hai nhiệm vụ chiến lược xây dựng và bảo vệ Tổ quốc như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quan hệ khăng khít tạo điều kiện cho nhau, nhiệm vụ xây dựng là hàng đầu."
+            },
+            {
+              "key": "B",
+              "text": "Trong khi đặt trọng tâm vào nhiệm vụ xây dựng CNXH chúng ta không một chút lơi lỏng nhiệm vụ bảo vệ Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Quan hệ đan chen nhau, nhiệm vụ xây dựng CNXH là quyết định."
+            },
+            {
+              "key": "D",
+              "text": "Trong khi đặt trọng tâm vào nhiệm vụ xây dựng CNXH cần củng cố và xây dựng LLVTND hùng mạnh để bảo vệ Tổ quốc, bảo vệ chế độ ."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702080889,
+          "question": "Một trong những biện pháp xây dựng nền quốc phòng toàn dân là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thường xuyên chăm lo xây dựng các lực lượng vũ trang vững mạnh, nhất là quân đội nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Thường xuyên củng cố quốc phòng và lực lượng bộ đội thường trực."
+            },
+            {
+              "key": "C",
+              "text": "Thường xuyên chăm lo xây dựng các lực lượng vũ trang nhân dân vững mạnh toàn diện."
+            },
+            {
+              "key": "D",
+              "text": "Thường xuyên chăm lo xây dựng các lực lượng vững mạnh, nhất là LLVT và Công an nhân dân."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702082676,
+          "question": "Thực hiện biện pháp \"tăng cường giáo dục quốc phòng\" trong xây dựng nền quốc phòng toàn dân như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giáo dục âm mưu, thủ đoạn, hành động của kẻ thù chống phá cách mạng."
+            },
+            {
+              "key": "B",
+              "text": "Giáo dục âm mưu, bản chất hiếu chiến của kẻ thù."
+            },
+            {
+              "key": "C",
+              "text": "Giáo dục để mọi người nhận rõ âm mưu, thủ đoạn của các thế lực thù địch đối với cách mạng nước ta."
+            },
+            {
+              "key": "D",
+              "text": "Giáo dục âm mưu, thủ đoạn, của kẻ thù khi tiến hành chiến tranh xâm lược."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702082784,
+          "question": "Cơ sở nào chúng ta xác định tính chất toàn dân của nền quốc phòng toàn dân?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Từ qui luật lịch sử về vai trò quần chúng trong hoạt động xã hội."
+            },
+            {
+              "key": "B",
+              "text": "Từ vai trò của nhân dân trong lịch sử dựng nước giữ nước của dân tộc."
+            },
+            {
+              "key": "C",
+              "text": "Từ qui luật lịch sử về vai trò quần chúng nhân dân đối với sự phát triển của xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Từ vai trò lịch sử của quần chúng nhân dân trong dành và giữ chính quyền."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702084458,
+          "question": "Tính chất nền quốc phòng của ta là toàn dân xuất phát từ đâu?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Từ truyền thống dân tộc ta trong chiến đấu chống giặc ngoại xâm."
+            },
+            {
+              "key": "B",
+              "text": "Từ bài học quí báu xây dựng lực lượng vũ trang nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "Từ truyền thống dân tộc ta trong sự nghiệp xây dựng và bảo vệ Tổ quốc."
+            },
+            {
+              "key": "D",
+              "text": "Từ truyền thống chống giặc ngoại xâm của dân tộc ta trong chiến đấu."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702085353,
+          "question": "Trong củng cố xây dựng nền quốc phòng toàn dân, lực lượng nào là nòng cốt?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quần chúng nhân dân lao động"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng quân đội và công an."
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng vũ trang nhân dân gồm  thứ quân Bộ đội chủ lực, bộ đội địa phương và dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng quân đội và công an nhân dân."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702085977,
+          "question": "Tính chất toàn dân của nền quốc phòng toàn dân. được biểu hiện tập trung như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nên quốc phòng mang tính giai cấp, nhân dân sâu sắc."
+            },
+            {
+              "key": "B",
+              "text": "Là nền quốc phòng của dân, do dân, vì dân."
+            },
+            {
+              "key": "C",
+              "text": "Là nền quốc phòng bảo vệ bảo vệ quyền lợi của dân."
+            },
+            {
+              "key": "D",
+              "text": "Là nên quốc phòng do nhân dân xây dựng, mang tính nhân dân sâu sắc."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702087585,
+          "question": "Một trong những quan điểm cơ bản xây dựng nền quốc phòng toàn dân là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kết hợp chặt chẽ phát triển kinh tế xã hội với xây dựng quốc phòng an ninh bảo vệ Tổ quốc."
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng CNXH phải kết hợp chặt chẽ với bảo vệ Tổ quốc XHCN."
+            },
+            {
+              "key": "C",
+              "text": "Kết hợp xây dựng kinh tế với quốc phòng."
+            },
+            {
+              "key": "D",
+              "text": "Kết hợp chặt chẽ phát triển kinh tế xã hội với xây dựng quốc phòng an ninh quốc phòng."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702088713,
+          "question": "Quan điểm quốc phòng toàn dân được thể hiện trong tổ chức dân quân tự vệ như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng dân quân tự vệ là nhiệm vụ của mọi người dân, của các cấp, ngành ."
+            },
+            {
+              "key": "B",
+              "text": "Thể hiện bằng sự tham gia đông đảo của toàn dân vào lực lượng dân quân tự vệ, trực tiếp làm nhiệm vụ bảo vệ Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Thể hiện băng việc xây dựng lực lượng dân quân tự vệ vững mạnh, rộng khắp."
+            },
+            {
+              "key": "D",
+              "text": "Thể hiện sự đóng góp của nội dung cho lực lượng dân quân tự vệ ngày càng vững mạnh."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702089050,
+          "question": "Tiềm lực kinh tế trong nội dung xây dựng tiềm lực quốc phòng toàn dân có vị trí gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là điều kiện vật chất bảo đảm cho sức mạnh quốc phòng."
+            },
+            {
+              "key": "B",
+              "text": "Là điều kiện vật chất bảo đảm cho xây dựng lực lượng vũ trang và thế trận quốc phòng."
+            },
+            {
+              "key": "C",
+              "text": "Là cơ sở vật chất đủ trang bị nền quốc phòng hiện đại."
+            },
+            {
+              "key": "D",
+              "text": "Là điều kiện vật chất bảo đảm cho xây dựng thế trận quốc phòng toàn dân và an ninh nhân dân."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702089743,
+          "question": "Quán triệt tính chất toàn diện trong xây dựng nền quốc phòng toàn dân, các cấp, ngành và toàn dân cần phải làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Có ý thức trách nhiệm trong bảo vệ Tổ quốc, tích cực xây dựng nền quốc phòng, thế trận quốc phòng toàn dân."
+            },
+            {
+              "key": "B",
+              "text": "Có tinh thần trách nhiệm cao xây dựng lực lượng quốc phòng, thế trận quốc phòng toàn dân."
+            },
+            {
+              "key": "C",
+              "text": "Ý thức đầy đủ nhiệm vụ bảo vệ Tổ quốc, chủ động tích cực vận dụng vào lĩnh vực hoạt động cụ thể của mình, góp phần xây dựng nền quốc phòng toàn dân vững mạnh."
+            },
+            {
+              "key": "D",
+              "text": "Cả  ý trên đều sai"
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702091567,
+          "question": "Trong củng cố xây dựng nền quốc phòng toàn dân, lực lượng nào là nòng cốt?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quần chúng nhân dân lao động"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng quân đội và công an."
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng vũ trang nhân dân gồm  thứ quân Bộ đội chủ lực, bộ đội địa phương và dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng quân đội và công an nhân dân."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702092466,
+          "question": "Những vấn đề cơ bản về bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội *  “Sự ổn định, phát triển bền vững của chế độ xã hội chủ nghĩa và Nhà nước Cộng hoà xã hội chủ nghĩa Việt Nam, sự bất khả xâm phạm độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ của Tổ quốc” là nội dung của khái niệm nào dưới đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Trật tự an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702093358,
+          "question": "“Trạng thái xã hội có trật tự, kỷ cương trong đó mọi người được sống yên ổn trên cơ sở các quy phạm pháp luật và chuẩn mực đạo đức, pháp lý xác định” là nội dung của khái niệm nào dưới đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Trật tự an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702093812,
+          "question": "“Phòng ngừa, phát hiện, đấu tranh, ngăn chặn làm thất bại các hoạt động xâm phạm an ninh quốc gia” là nội dung của khái niệm nào dưới đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Trật tự an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702094850,
+          "question": "“Phòng ngừa, phát hiện, ngăn chặn, đấu tranh chống tội phạm và các hành vi vi phạm pháp luật về trật tự, an toàn xã hội” là nội dung của khái niệm nào dưới đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Trật tự an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702095841,
+          "question": "Trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự, an toàn xã hội, chủ thể nào dưới đây có trách nhiệm “đề ra đường lối chính sách và phương pháp đấu tranh đúng đắn và lãnh đạo chặt chẽ bộ máy Nhà nước các đoàn thể quần chúng thực hiện thắng lợi đường lối chính sách đó”?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảng Cộng sản Việt Nam."
+            },
+            {
+              "key": "B",
+              "text": "Nhà nước CHXHCN Việt Nam."
+            },
+            {
+              "key": "C",
+              "text": "Các tổ chức xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Các cá nhân."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702097138,
+          "question": "Chủ thể nào dưới đây có trách nhiệm “quản lý xã hội bằng pháp luật, phát huy vai trò tác dụng của chính quyền các cấp; phối kết hợp chức năng của các cơ quan Nhà nước vào việc bảo vệ an ninh quốc gia và bảo đảm trật tự, an toàn xã hội”?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảng Cộng sản Việt Nam."
+            },
+            {
+              "key": "B",
+              "text": "Nhà nước CHXHCN Việt Nam."
+            },
+            {
+              "key": "C",
+              "text": "Các tổ chức xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Các cá nhân."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702098054,
+          "question": "Lực lượng nào giữ vai trò nòng cốt trong việc bảo vệ an ninh quốc gia, bảo đảm trật tự, an toàn xã hội, bảo vệ Đảng, Nhà nước, chế độ và nhân dân; đấu tranh phòng, chống tội phạm và vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công an nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Quân đội nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "Dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "Các tổ chức xã hội."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702099655,
+          "question": "Lực lượng nào giữ vai trò nòng cốt trong việc: bảo vệ sự bất khả xâm phạm độc lập, chủ quyền, thống nhất toàn vẹn lãnh thổ của Tổ quốc; phối hợp với các lực lượng tham gia bảo vệ an ninh quốc gia và bảo đảm trật tự, an toàn xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công an nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Quân đội nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "Dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "Các tổ chức xã hội."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702099787,
+          "question": "Lực lượng nào giữ vai trò nòng cốt trong việc cùng toàn dân đánh giặc ở địa phương khi có chiến tranh?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công an nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Quân đội nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "Dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "Các tổ chức xã hội."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702101647,
+          "question": "Bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội là nhiệm vụ của",
+          "options": [
+            {
+              "key": "A",
+              "text": "lực lượng công an nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "lực lượng Quân đội nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "lực lượng Dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "toàn Đảng, toàn dân và toàn quân."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702102238,
+          "question": "Nội dung nào dưới đây không phản ánh đúng trách nhiệm của học sinh trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không tụ tập bạn bè để thực hiện hành vi vi phạm pháp luật."
+            },
+            {
+              "key": "B",
+              "text": "Tố giác những người có hành vi vi phạm pháp luật."
+            },
+            {
+              "key": "C",
+              "text": "Kịp thời ngăn chặn hành vi vi phạm pháp luật của bạn bè."
+            },
+            {
+              "key": "D",
+              "text": "Đề ra đường lối chính sách và phương pháp đấu tranh đúng đắn."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702103704,
+          "question": "Lợi dụng tình hình dịch Covid-19 đang diễn biến phức tạp, ông T và ông Q đã: tuyên truyền sai lệch chủ trương, đường lối chống dịch của Nhà nước; lôi kéo, xúi giục, kích động người dân trong thôn X chống đối lại chính quyền. Phát hiện hành vi vi phạm của ông T và Q, anh M đã nhanh chóng tố giác tới cơ quan công an. * * Theo em, trong trường hợp trên, nhân vật nào đã thể hiện đúng trách nhiệm của mình trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ông T."
+            },
+            {
+              "key": "B",
+              "text": "Ông Q."
+            },
+            {
+              "key": "C",
+              "text": "Anh M."
+            },
+            {
+              "key": "D",
+              "text": "Ông T và ông Q."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702104186,
+          "question": "K là học sinh lớp 10 của trường THPT X. Thông qua T (bạn học cùng lớp), K biết được một Group kín trên facebook chuyên nói xấu các giáo viên và kích động các vụ đánh nhau trong trường. Ngày 28/4/2021, admin của group đó có đăng bài, kêu gọi các thành viên trong nhóm cùng tổ chức đua xe vào vào tối ngày 30/4 trên phố, giải thưởng cho người chiến thắng sẽ là một tập “tem giấy” được tẩm chất LSD (một loại chấy gây ảo giác cực mạnh). Bài đăng của admin nhanh chóng nhận được sự hưởng ứng của nhiều thành viên trong nhóm. * * Nếu là K, trong trường hợp này, em nên lựa chọn cách ứng xử như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không quan tâm, vì việc đó không ảnh hưởng gì tới mình."
+            },
+            {
+              "key": "B",
+              "text": "Bí mật báo cáo tới lãnh đạo nhà trường và cơ quan công an."
+            },
+            {
+              "key": "C",
+              "text": "Hào hứng tham gia cuộc đua xe để thể hiện bản thân."
+            },
+            {
+              "key": "D",
+              "text": "Rủ thêm các bạn khác cùng tham gia vào cuộc đua xe."
+            },
+            {
+              "key": "B",
+              "text": "biết được sự việc, anh T đã khuyên bạn nên: gỡ toàn bộ các video clip xấu ấy và tới cơ quan công an đầu thú để hưởng sự khoan hồng của pháp luật. Anh B cho rằng hành động của mình không sai vì mọi công dân đều có quyền tự do ngôn luận, nên không làm theo lời khuyên của anh T. Trước tình thế đó, dù rất đau lòng, nhưng anh T vẫn gửi đơn tố giác hành vi của anh B tới cơ quan công an."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702105003,
+          "question": "Đọc thông tin dưới đây và trả lời câu hỏi: * * Anh B là chủ nhân của kênh YouTube có tên là “Ôi quê tôi”. Thời gian đầu, anh B thường đăng tải các video clip quảng bá hình ảnh đẹp của đất nước và con người Việt Nam. Tuy nhiên, để tăng số lượng người đăng kí kênh và số lượt view, anh B đã chuyển hướng sang dàn dựng, cắt ghép và đăng tải những video clip không đúng sự thật, xuyên tạc chủ trương, đường lối của Đảng và nhà nước, bôi nhọ chính quyền. * * Anh T vốn là bạn thân của * Theo em, trong trường hợp trên, nhân vật nào đã thể hiện đúng trách nhiệm của mình trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Anh"
+            },
+            {
+              "key": "B",
+              "text": ""
+            },
+            {
+              "key": "B",
+              "text": "Anh T."
+            },
+            {
+              "key": "C",
+              "text": "Cả anh B và T."
+            },
+            {
+              "key": "D",
+              "text": "Không có nhân vật nào."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702105752,
+          "question": "“Sự ổn định, phát triển bền vững của chế độ xã hội chủ nghĩa và nhà nước Cộng hoà xã hội chủ nghĩa Việt Nam, sự bất khả xâm phạm độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ của Tổ quốc”- đó là nội dung của khái niệm nào dưới đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Trật tự, an toàn xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702107616,
+          "question": "Điền cụm từ thích hợp vào chỗ trống (….) trong khái niệm sau đây: “……là phòng ngừa, phát hiện, ngăn chặn, đấu tranh làm thất bại các hoạt động xâm phạm an ninh quốc gia và loại trừ nguy cơ đe doạ an ninh quốc gia”.",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Trật tự, an toàn xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702108410,
+          "question": "“Trạng thái xã hội bình yên, trong đó mọi người được sống yên trên cơ sở các quy tắc và chuẩn mực đạo đức, pháp lí xác định” - đó là nội dung của khái niệm nào dưới đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Trật tự, an toàn xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702109358,
+          "question": "Điền cụm từ thích hợp vào chỗ trống (….) trong khái niệm sau đây: “…. là phòng ngừa, phát hiện, ngăn chặn, đấu tranh chống tội phạm và các hành vi vi phạm pháp luật về trật tự, an toàn xã hội”",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Trật tự, an toàn xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702110525,
+          "question": "Đảm bảo trật tự, an toàn xã hội không bao gồm hoạt động nào dưới đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giữ gìn trật tự công cộng, bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "B",
+              "text": "Đấu tranh phòng, chống tội phạm về trật tự, an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh tư tưởng - văn hoá, an ninh dân tộc, tôn giáo."
+            },
+            {
+              "key": "D",
+              "text": "Phòng, chống thiên tai, dịch bệnh; bài trừ các tệ nạn xã hội."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702111039,
+          "question": "Bảo vệ an ninh quốc gia không bao gồm hoạt động nào dưới đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ an ninh chính trị."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh con người."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh kinh tế."
+            },
+            {
+              "key": "D",
+              "text": "Bảo vệ môi trường."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702111741,
+          "question": "Nội dung nào dưới đây phản ánh đúng trách nhiệm của Đảng Cộng sản Việt Nam trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là lực lượng giữ vai trò nòng cốt."
+            },
+            {
+              "key": "B",
+              "text": "Tố cáo hành vi vi phạm pháp luật."
+            },
+            {
+              "key": "C",
+              "text": "Lãnh đạo trực tiếp, tuyệt đối về mọi mặt."
+            },
+            {
+              "key": "D",
+              "text": "Cung cấp thông tin cho cơ quan có thẩm quyền."
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702113506,
+          "question": "Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, cơ quan nào dưới đây có trách nhiệm: quyết định các vấn đề chiến tranh và hoà bình, quy định về tình trạng khẩn cấp, ban hành Hiến pháp luật, nghị quyết…?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quốc hội."
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ."
+            },
+            {
+              "key": "C",
+              "text": "Mặt trận Tổ quốc."
+            },
+            {
+              "key": "D",
+              "text": "Tòa án nhân dân tối cao."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702114273,
+          "question": "Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, cơ quan nào dưới đây có trách nhiệm: tổ chức thi hành Hiến pháp luật, nghị quyết và thống nhất quản lí?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quốc hội."
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ."
+            },
+            {
+              "key": "C",
+              "text": "Mặt trận Tổ quốc."
+            },
+            {
+              "key": "D",
+              "text": "Tòa án nhân dân tối cao."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702115398,
+          "question": "Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, lực lượng vũ trang nhân dân giữ vai trò",
+          "options": [
+            {
+              "key": "A",
+              "text": "là lực lượng nòng cốt."
+            },
+            {
+              "key": "B",
+              "text": "là lực lượng xung kích."
+            },
+            {
+              "key": "C",
+              "text": "lãnh đạo trực tiếp về mọi mặt."
+            },
+            {
+              "key": "D",
+              "text": "lãnh đạo tuyệt đối về mọi mặt."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702116564,
+          "question": "Nội dung nào dưới đây phản ánh đúng trách nhiệm của công dân trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chấp hành chủ trương của Đảng, chính sách của Nhà nước."
+            },
+            {
+              "key": "B",
+              "text": "Thực hiện các biện pháp bảo vệ an ninh chính trị nội bộ"
+            },
+            {
+              "key": "C",
+              "text": "Tổ chức thi hành Hiến pháp luật, nghị quyết của Quốc hội."
+            },
+            {
+              "key": "D",
+              "text": "Quyết định các vấn đề liên quan đến chiến tranh và hoà bình."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702116874,
+          "question": "Nội dung nào dưới đây không phản ánh đúngtrách nhiệm của công dân trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chấp hành nghiêm chỉnh chủ trương của Đảng, chính sách của Nhà nước."
+            },
+            {
+              "key": "B",
+              "text": "Tố cáo hành vi vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Cộng tác với công an trong phòng, chống các hành vi vi phạm pháp luật."
+            },
+            {
+              "key": "D",
+              "text": "Tổ chức thi hành Hiến pháp luật, nghị quyết của Quốc hội và thống nhất quản lí."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702117855,
+          "question": "Nội dung nào dưới đây phản ánh đúng trách nhiệm của học sinh trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Gương mẫu thực hiện các nội quy của nhà trường."
+            },
+            {
+              "key": "B",
+              "text": "Thực hiện các biện pháp bảo vệ an ninh chính trị nội bộ"
+            },
+            {
+              "key": "C",
+              "text": "Tổ chức thi hành Hiến pháp luật, nghị quyết của Quốc hội."
+            },
+            {
+              "key": "D",
+              "text": "Quyết định các vấn đề liên quan đến chiến tranh và hoà bình."
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702119382,
+          "question": "Hoạt động nào dưới đây thuộc phạm vi bảo vệ an ninh biên giới?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ sự an toàn của các lãnh đạo cấp cao."
+            },
+            {
+              "key": "B",
+              "text": "Kiểm tra cột mốc biên giới quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Tuyên truyền về tác hại của chất thải nhựa."
+            },
+            {
+              "key": "D",
+              "text": "Dọn dẹp rác thải tại bờ biển."
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702120437,
+          "question": "“Tố cáo hành vi vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội; phát hiện, cung cấp kịp thời thông tin cho cơ quan có thẩm quyền” là trách nhiệm của",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quốc hội."
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ."
+            },
+            {
+              "key": "C",
+              "text": "lực lượng vũ trang."
+            },
+            {
+              "key": "D",
+              "text": "công dân."
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        },
+        {
+          "id": 1790702121041,
+          "question": "An ninh quốc gia:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là sự bình yên của đất nước, cuộc sống ấm no hạnh phúc của nhân dân Việt Nam."
+            },
+            {
+              "key": "B",
+              "text": "Là sự ổn định, phát triển bền vững của chế độ XHCN và Nhà nước CHXHCN Việt Nam."
+            },
+            {
+              "key": "C",
+              "text": "Là sự bất khả xâm phạm độc lập chủ quyền, thống nhất, toàn vẹn lãnh thổ Tổ quốc."
+            },
+            {
+              "key": "D",
+              "text": "Cả B và C đều đúng"
+            }
+          ],
+          "correctAnswer": "D",
+          "level": "Thông hiểu",
+          "explanation": ""
+        }
+      ]
+    },
     {
       "id": 1790701888248,
       "title": "CÂU HỎI TRẮC NGHIỆM HP1",
