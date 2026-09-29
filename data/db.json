@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "lastUpdated": 1790703016066,
+  "lastUpdated": 1790703145795,
   "subjects": [
     {
-      "id": 1790703006628,
+      "id": 1790701921137,
       "title": "CÂU HỎI TRẮC NGHIỆM HP1",
-      "code": "SUB-812",
+      "code": "SUB-463",
       "category": "GDQP - An Ninh",
       "durationMinutes": 15,
       "questions": [
         {
-          "id": 1790702998506,
+          "id": 1790701912088,
           "question": "Quan điểm cơ bản của Chủ nghĩa Mác-Lênin, tư tưởng Hồ Chí Minh về chiến tranh, quân đội và bảo vệ Tổ quốc *Lê-Nin xác định nguyên tắc đoàn kết quân, dân trong xây dựng Hồng quân như thế nào?",
           "options": [
             {
@@ -35,7 +35,7 @@
           "explanation": ""
         },
         {
-          "id": 1790702999974,
+          "id": 1790701913693,
           "question": "Quan điểm chủ nghĩa Mác-Lê nin về bản chất chiến tranh như thế nào?",
           "options": [
             {
@@ -60,7 +60,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703000592,
+          "id": 1790701914494,
           "question": "Theo tư tưởng Hồ Chí Minh, sử dụng bạo lực cách mạng để làm gì?",
           "options": [
             {
@@ -85,7 +85,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703001318,
+          "id": 1790701915122,
           "question": "Theo tư tưởng Hồ Chí Minh, bản chất giai cấp công nhân, tính nhân dân, tính dân tộc của quân đội nhân dân Việt Nam quan hệ với nhau như thế nào?",
           "options": [
             {
@@ -110,7 +110,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703002975,
+          "id": 1790701915893,
           "question": "Chủ tịch Hồ Chí Minh xác định nội dung cơ bản của đánh giặc toàn diện là gì?",
           "options": [
             {
@@ -135,7 +135,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703004042,
+          "id": 1790701917118,
           "question": "Một trong những nội dung tư tưởng Hồ Chí Minh về bảo vệ Tổ quốc XHCN là gì?",
           "options": [
             {
@@ -160,7 +160,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703004977,
+          "id": 1790701918243,
           "question": "Trong các yếu tố tạo nên sức mạnh của Quân đội nhân dân, Hồ Chí Minh coi yếu tố con người có vị vai trò như thế nào?",
           "options": [
             {
@@ -185,7 +185,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703005415,
+          "id": 1790701919670,
           "question": "Hồ Chí Minh khẳng định phải dùng bạo lực cách mạng để giành chính quyền và giữ chính quyền. Vì một trong những lý do gì?",
           "options": [
             {
@@ -214,7 +214,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703006980,
+          "id": 1790701920429,
           "question": "ANSWER:",
           "options": [
             {
@@ -239,7 +239,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703007460,
+          "id": 1790701921648,
           "question": "Theo tư tưởng Hồ Chí Minh, một trong những chức năng của Quân đội nhân dân Việt Nam là   gì?",
           "options": [
             {
@@ -264,7 +264,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703009103,
+          "id": 1790701922584,
           "question": "Theo tư tưởng Hồ Chí Minh, quân đội nhân dân Việt Nam có những chức năng",
           "options": [
             {
@@ -289,7 +289,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703009963,
+          "id": 1790701923127,
           "question": "Tư tưởng Hồ Chí Minh về sức mạnh bảo vệ Tổ quốc XHCN là gì?",
           "options": [
             {
@@ -314,7 +314,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703011200,
+          "id": 1790701924110,
           "question": "Ba chức năng cơ bản của quân đội nhân dân Việt Nam được Hồ Chí Minh xác định, thể hiện vấn đề gì trong quá trình xây dựng quân đội.",
           "options": [
             {
@@ -339,7 +339,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703011369,
+          "id": 1790701925628,
           "question": "Một trong những nội dung tư tưởng Hồ Chí Minh về bảo vệ Tổ quốc XHCN là gì?",
           "options": [
             {
@@ -364,7 +364,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703012383,
+          "id": 1790701926576,
           "question": "Chủ tịch Hồ Chí Minh xác định yếu tố con người có vai trò như thế nào trong xây dựng Quân đội nhân dân?",
           "options": [
             {
@@ -389,7 +389,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703013878,
+          "id": 1790701927545,
           "question": "Một trong những nguyên tắc cơ bản xây dựng Hồng quân của Lê nin là gì?",
           "options": [
             {
@@ -414,7 +414,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703015109,
+          "id": 1790701928435,
           "question": "Nguyên tắc cơ bản về xây dựng lực lượng Hồng quân của Lê nin là gì?",
           "options": [
             {
@@ -439,7 +439,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703015947,
+          "id": 1790701929585,
           "question": "Để phát huy nhân tố con người trong xây dựng quân đội, Hồ Chí Minh rất coi trọng vấn đề gì?",
           "options": [
             {
@@ -464,7 +464,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703017092,
+          "id": 1790701930655,
           "question": "Hồ Chí Minh xác định vai trò của Đảng trong sự nghiệp bảo vệ Tổ quốc XHCN như thế nào?",
           "options": [
             {
@@ -489,7 +489,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703018177,
+          "id": 1790701931426,
           "question": "đất nước. *Theo tư tưởng Hồ Chí Minh, trong sức mạnh của toàn dân đánh giặc, vị trí của lực lượng vũ trang nhân dân được xác định như thế nào?",
           "options": [
             {
@@ -514,7 +514,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703018907,
+          "id": 1790701932109,
           "question": "Xây dựng nền QPTD, ANND bảo vệ Tổ quốc Việt Nam XHCN * Xây dựng nền quốc phòng toàn dân, an ninh nhân dân gồm những nội dung nào sau đây?",
           "options": [
             {
@@ -539,7 +539,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703019412,
+          "id": 1790701932951,
           "question": "Nền quốc phòng toàn dân phát triển theo hướng như thế nào?",
           "options": [
             {
@@ -564,7 +564,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703020343,
+          "id": 1790701933984,
           "question": "Xây dựng tiềm lực quân sự, an ninh cần tập trung vào nội dung nào?",
           "options": [
             {
@@ -589,7 +589,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703021514,
+          "id": 1790701934824,
           "question": "Tiềm lực quốc phòng, an ninh được thể hiện tập trung ở?",
           "options": [
             {
@@ -614,7 +614,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703022442,
+          "id": 1790701936083,
           "question": "Kết hợp chặt chẽ xây dựng tiềm lực QP, AN với thế trận QP, AN để nhằm mục đích gì?",
           "options": [
             {
@@ -639,7 +639,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703023812,
+          "id": 1790701936905,
           "question": "Một trong những đặc trưng cơ bản của nền quốc phòng toàn dân, an ninh nhân dân là gì?",
           "options": [
             {
@@ -664,7 +664,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703024637,
+          "id": 1790701938331,
           "question": "Một trong những nội dung cơ bản của xây dựng tiềm lực quốc phòng, an ninh ngày nay là?",
           "options": [
             {
@@ -689,7 +689,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703025838,
+          "id": 1790701939642,
           "question": "Xây dựng thế trận quốc phòng toàn dân, an ninh nhân dân được hiểu như thế nào?",
           "options": [
             {
@@ -714,7 +714,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703026587,
+          "id": 1790701939961,
           "question": "Tính toàn diện trong xây dựng nền quốc phòng toàn dân, an ninh nhân dân được thể hiện ở nội dung nào sau đây?",
           "options": [
             {
@@ -739,7 +739,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703027415,
+          "id": 1790701941101,
           "question": "Một trong những nội dung cơ bản của nền quốc phòng toàn dân, an nin nhân dân hiện nay là gì?",
           "options": [
             {
@@ -764,7 +764,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703029222,
+          "id": 1790701942662,
           "question": "Xây dựng lực lượng quốc phòng, an ninh bao gồm những lực lượng nào?",
           "options": [
             {
@@ -789,7 +789,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703029344,
+          "id": 1790701943622,
           "question": "Một trong những nội dung cơ bản xây dựng tiềm lực kinh tế trong xây dựng nền quốc phòng toàn dân, an ninh nhân dân là gì ?",
           "options": [
             {
@@ -814,7 +814,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703031147,
+          "id": 1790701944630,
           "question": "Từ cơ sở nào, chúng ta xác định tính chất toàn dân của nền quốc phòng toàn dân?",
           "options": [
             {
@@ -839,7 +839,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703031461,
+          "id": 1790701944797,
           "question": "Một trong những biện pháp chủ yếu xây dựng nền quốc phòng toàn dân, an ninh nhân dân là gì?",
           "options": [
             {
@@ -864,7 +864,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703032619,
+          "id": 1790701946600,
           "question": "Tính chất toàn dân của nền quốc phòng toàn dân, an ninh nhân dân được biểu hiện tập trung như thế nào?",
           "options": [
             {
@@ -889,7 +889,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703034202,
+          "id": 1790701946887,
           "question": "Nội dung xây dựng thế trận quốc phòng toàn dân hiện nay là gì?",
           "options": [
             {
@@ -914,7 +914,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703035197,
+          "id": 1790701948328,
           "question": "Một trong những nội dung cơ bản cần tập trung  xây dựng tiềm lực quốc phòng an ninh ngày nay là?",
           "options": [
             {
@@ -939,7 +939,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703036061,
+          "id": 1790701949340,
           "question": "Nội dung quan trọng hàng đầu trong xây dựng thế trận quốc phòng toàn dân, an ninh nhân dân là gì?",
           "options": [
             {
@@ -964,7 +964,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703036693,
+          "id": 1790701950547,
           "question": "Một trong những mục đích xây dựng nền quốc phòng toàn dân, an ninh nhân dân là gì?",
           "options": [
             {
@@ -989,7 +989,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703037665,
+          "id": 1790701951169,
           "question": "Tiềm lực chính trị tinh thần có vai trò như thế nào trong xây dựng tiềm lực quốc phòng, an ninh?",
           "options": [
             {
@@ -1014,7 +1014,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703039034,
+          "id": 1790701951946,
           "question": "Chiến tranh nhân dân BVTQ Việt Nam XHCN *Theo tư tưởng Hồ Chí Minh, trong sức mạnh của toàn dân đánh giặc, vị trí của lực lượng vũ trang nhân dân được xác định như thế nào?",
           "options": [
             {
@@ -1039,7 +1039,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703039786,
+          "id": 1790701952795,
           "question": "Đối tượng trong chiến tranh nhân dân bảo vệ Tổ quốc XHCN là",
           "options": [
             {
@@ -1064,7 +1064,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703040910,
+          "id": 1790701954301,
           "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc phải kết hợp kháng chiến với xây dựng, vừa chiến đấu, vừa sản xuất. Lý do vì sao?",
           "options": [
             {
@@ -1089,7 +1089,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703042182,
+          "id": 1790701955181,
           "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc, thế trận chiến tranh nhân dân được tổ chức rộng khắp thể hiện như thế nào?",
           "options": [
             {
@@ -1114,7 +1114,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703042521,
+          "id": 1790701955727,
           "question": "Một trong những tính chất chiến tranh nhân dân bảo vệ Tổ quốc là gì?",
           "options": [
             {
@@ -1139,7 +1139,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703043442,
+          "id": 1790701957551,
           "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc, phải kết hợp đấu tranh quân sự với bảo đảm an ninh chính trị, giữ gìn trật tự an toàn xã hội. Vì một trong những lý do gì?",
           "options": [
             {
@@ -1164,7 +1164,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703045188,
+          "id": 1790701957881,
           "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc, thế trận chiến tranh nhân dân Việt Nam được tổ chức như thế nào?",
           "options": [
             {
@@ -1189,7 +1189,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703045644,
+          "id": 1790701958859,
           "question": "Thực hiện \"kết hợp đấu tranh quân sự với bảo đảm an ninh chính trị, giữ gìn trật tự, an toàn \", trong chiến tranh nhân dân bảo vệ Tổ quốc thể hiện như thế nào?",
           "options": [
             {
@@ -1214,7 +1214,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703046738,
+          "id": 1790701960336,
           "question": "Nếu chiến tranh xảy ra, chúng ta đánh giá quân địch có điểm yếu cơ bản nào?",
           "options": [
             {
@@ -1239,7 +1239,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703048076,
+          "id": 1790701961071,
           "question": "Thế trận chiến tranh là gì?",
           "options": [
             {
@@ -1264,7 +1264,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703049252,
+          "id": 1790701962273,
           "question": "Nhu cầu bảo đảm hậu cần kỹ thuật trong chiến tranh nhân dân bảo vệ Tổ quốc như thế nào?",
           "options": [
             {
@@ -1289,7 +1289,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703049394,
+          "id": 1790701963496,
           "question": "Một trong những mục đích của chiến tranh nhân dân bảo vệ Tổ quốc Việt Nam XHCN là gì?",
           "options": [
             {
@@ -1314,7 +1314,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703051192,
+          "id": 1790701964162,
           "question": "Tiến hành chiến tranh nhân dân, lực lượng toàn dân đánh giặc được tổ chức như thế nào?",
           "options": [
             {
@@ -1339,7 +1339,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703051847,
+          "id": 1790701964913,
           "question": "Một trong những tính chất chiến tranh nhân dân bảo vệ Tổ quốc là gì?",
           "options": [
             {
@@ -1364,7 +1364,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703052972,
+          "id": 1790701965861,
           "question": "Quan điểm \"thực hiện toàn dân đánh giặc\" trong chiến tranh nhân dân bảo vệ Tổ quốc, có ý nghĩa gì?",
           "options": [
             {
@@ -1389,7 +1389,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703054015,
+          "id": 1790701966919,
           "question": "Quan điểm, thực hiện toàn dân đánh giặc trong chiến tranh nhân dân bảo vệ Tổ quốc thể hiện vấn đề gì?",
           "options": [
             {
@@ -1414,7 +1414,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703054531,
+          "id": 1790701968326,
           "question": "Quan điểm \"tiến hành chiến tranh toàn diện\" trong chiến tranh nhân dân bảo vệ Tổ quốc thể hiện như thế nào?",
           "options": [
             {
@@ -1439,7 +1439,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703055716,
+          "id": 1790701969449,
           "question": "Đặc điểm nào tác động nhiều nhất đến chiến tranh nhân dân bảo vệ Tổ quốc?",
           "options": [
             {
@@ -1464,7 +1464,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703056745,
+          "id": 1790701969856,
           "question": "Nếu chiến tranh xảy ra cùng với bọn đế quốc lực lượng nào là đối tượng tác chiến của quân dân ta?",
           "options": [
             {
@@ -1489,7 +1489,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703057876,
+          "id": 1790701971077,
           "question": "Tư tưởng chỉ đạo tác chiến xuyên suốt trong chuẩn bị và tiến hành chiến tranh giữ nước của cha ông ta là gì?",
           "options": [
             {
@@ -1514,7 +1514,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703059126,
+          "id": 1790701971899,
           "question": "Xây dựng lực lượng vũ trang nhân dân *Ba chức năng cơ bản của quân đội nhân dân Việt Nam được Hồ Chí Minh xác định, thể hiện vấn đề gì trong quá trình xây dựng quân đội?",
           "options": [
             {
@@ -1539,7 +1539,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703060049,
+          "id": 1790701973545,
           "question": "Lý luận của chủ nghĩa Mác-Lê-nin về bản chất giai cấp của Lực lượng Vũ trang là gì?",
           "options": [
             {
@@ -1564,7 +1564,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703061244,
+          "id": 1790701974426,
           "question": "Tư tưởng của Chủ tịch Hồ Chí Minh về giành chính quyền và giữ chính quyền như thế nào?",
           "options": [
             {
@@ -1589,7 +1589,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703062234,
+          "id": 1790701974929,
           "question": "Một trong những quan điểm xây dựng Lực lượng vũ trang nhân dân trong giai đoạn mới đó là:",
           "options": [
             {
@@ -1614,7 +1614,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703062584,
+          "id": 1790701976183,
           "question": "Một trong những quan điểm xây dựng Lực lượng vũ trang nhân dân trong giai đoạn mới đó là?",
           "options": [
             {
@@ -1639,7 +1639,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703064082,
+          "id": 1790701977395,
           "question": "Trong xây dựng nền QPTD, ANND lực lượng nào là nòng cốt?",
           "options": [
             {
@@ -1664,7 +1664,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703065084,
+          "id": 1790701977950,
           "question": "Một trong những đặc trưng cơ bản của nền QPTD, ANND là gì?",
           "options": [
             {
@@ -1689,7 +1689,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703065334,
+          "id": 1790701979392,
           "question": "Lực lượng vũ trang nhân dân Việt Nam bao gồm các lực lượng nào?",
           "options": [
             {
@@ -1714,7 +1714,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703066992,
+          "id": 1790701980251,
           "question": "Đảng lãnh đạo Lực lượng vũ trang nhân dân theo nguyên tắc?",
           "options": [
             {
@@ -1739,7 +1739,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703067468,
+          "id": 1790701981023,
           "question": "Đảng Cộng sản Việt Nam lãnh đạo Lực lượng vũ trang nhân dân Việt Nam?",
           "options": [
             {
@@ -1764,7 +1764,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703069071,
+          "id": 1790701982511,
           "question": "Mối quan hệ giữa Đảng Cộng sản Việt Nam với Lực lượng vũ trang nhân dân VN như thế nào sau đây?",
           "options": [
             {
@@ -1789,7 +1789,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703070293,
+          "id": 1790701983052,
           "question": "Quan điểm nào là quan điểm sai trong xây dựng Lực lượng vũ trang nhân dân Việt Nam hiện nay?",
           "options": [
             {
@@ -1814,7 +1814,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703070947,
+          "id": 1790701983799,
           "question": "Để đáp ứng yêu cầu bảo vệ Tổ quốc trong tình hình mới, cần xây dựng Lực lượng vũ trang nhân dân như thế nào ?",
           "options": [
             {
@@ -1839,7 +1839,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703072104,
+          "id": 1790701985023,
           "question": "Quan điểm nào là quan điểm sai trong xây dựng Lực lượng vũ trang nhân dân?",
           "options": [
             {
@@ -1864,7 +1864,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703072932,
+          "id": 1790701986579,
           "question": "Quân đội nhân dân Việt Nam bao gồm?",
           "options": [
             {
@@ -1889,7 +1889,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703073943,
+          "id": 1790701986780,
           "question": "Xây dựng quân đội, công an nhân dân Việt Nam theo hướng nào trong tình hình hiện nay?",
           "options": [
             {
@@ -1914,7 +1914,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703074385,
+          "id": 1790701988166,
           "question": "Hiện nay chng ta cần xây dựng lực lượng dự bị động viên theo hướng?",
           "options": [
             {
@@ -1939,7 +1939,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703076077,
+          "id": 1790701989584,
           "question": "Phương hướng xây dựng lực lượng dân quân tự vệ hiện nay?",
           "options": [
             {
@@ -1964,7 +1964,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703076817,
+          "id": 1790701989874,
           "question": "Lực lượng dân quân tự vệ gồm có?",
           "options": [
             {
@@ -1989,7 +1989,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703077788,
+          "id": 1790701990780,
           "question": "Để đáp ứng yêu cầu, nhiệm vụ của lực lượng dân quân tự vệ, cần xây dựng như thế nào hiện nay?",
           "options": [
             {
@@ -2014,7 +2014,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703078404,
+          "id": 1790701992297,
           "question": "Kết hợp phát triển kinh tế, xã hội với tăng cường quốc phòng, an ninh và đối ngoại * Kinh tế có vai trò như thế nào đối với quốc phòng, an ninh?",
           "options": [
             {
@@ -2039,7 +2039,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703079861,
+          "id": 1790701992952,
           "question": "Tại sao phải gắn kết chặt chẽ hoạt động KT-XH với QP và AN trong một chỉnh thể thống nhất ở từng địa phương?",
           "options": [
             {
@@ -2064,7 +2064,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703081077,
+          "id": 1790701994468,
           "question": "Việc kết hợp phát triển KT-XH với tăng cường củng cố QP, AN trong một chỉnh thể thống nhất nhằm",
           "options": [
             {
@@ -2089,7 +2089,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703081857,
+          "id": 1790701994850,
           "question": "Yêu cầu của việc kết phát triển KT-XH với tăng cường củng cố QP, AN là gì?",
           "options": [
             {
@@ -2114,7 +2114,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703082341,
+          "id": 1790701996301,
           "question": "Kết hợp kinh tế với quốc phòng, an ninh là yêu cầu như thế nào?",
           "options": [
             {
@@ -2139,7 +2139,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703083737,
+          "id": 1790701996957,
           "question": "Kết hợp kinh tế với quốc phòng, an ninh là?",
           "options": [
             {
@@ -2164,7 +2164,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703085089,
+          "id": 1790701998434,
           "question": "Nội dung nào không thể hiện chính sách kết hợp kinh tế với quốc phòng ở nước ta?",
           "options": [
             {
@@ -2189,7 +2189,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703085538,
+          "id": 1790701999146,
           "question": "Theo quan điểm của Chủ nghĩa Mác Lê nin, nguồn gốc xã hội có tác động gì đến sự xuất hiện, tồn tại của chiến tranh?",
           "options": [
             {
@@ -2214,7 +2214,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703086654,
+          "id": 1790702000130,
           "question": "Hoạt động  phát triển kinh tế - xã hội và tăng cường củng cố quốc phòng  - an ninh ở nước ta thống nhất với nhau bởi?",
           "options": [
             {
@@ -2239,7 +2239,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703087781,
+          "id": 1790702001656,
           "question": "Mối quan hệ giữa kinh tế - xã hội (KT-XH) với quốc phòng, an ninh(QP,AN) được biểu hiện?",
           "options": [
             {
@@ -2264,7 +2264,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703088389,
+          "id": 1790702002071,
           "question": "Mối quan hệ giữa kinh tế - xã hội  với quốc phòng, an ninh được biểu hiện?",
           "options": [
             {
@@ -2289,7 +2289,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703089959,
+          "id": 1790702002946,
           "question": "Mối quan hệ giữa kinh tế - xã hội  với quốc phòng, an ninh được biểu hiện?",
           "options": [
             {
@@ -2314,7 +2314,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703090364,
+          "id": 1790702004271,
           "question": "Mối quan hệ giữa kinh tế - xã hội  với quốc phòng, an ninh được biểu hiện?",
           "options": [
             {
@@ -2339,7 +2339,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703091518,
+          "id": 1790702005508,
           "question": "Kết hợp phát triển KT - XH với tăng cường củng cố QPAN trong chiến lược phát triển KT - XH được thể hiện trong?",
           "options": [
             {
@@ -2364,7 +2364,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703092313,
+          "id": 1790702005986,
           "question": "Kết hợp phát triển KT-XH với tăng cường củng cố QP, AN trong vùng kinh tế trọng điểm cần?",
           "options": [
             {
@@ -2389,7 +2389,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703093588,
+          "id": 1790702007427,
           "question": "Thực hiện đưa dân ra đảo sinh sống nhằm?",
           "options": [
             {
@@ -2414,7 +2414,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703095006,
+          "id": 1790702007774,
           "question": "Yêu cầu của việc kết phát triển KT-XH với tăng cường củng cố QP, AN là gì?",
           "options": [
             {
@@ -2439,7 +2439,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703095349,
+          "id": 1790702009017,
           "question": "Kết hợp kinh tế với quốc phòng, an ninh là yêu cầu như thế nào?",
           "options": [
             {
@@ -2464,7 +2464,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703096367,
+          "id": 1790702009882,
           "question": "Kết hợp kinh tế với quốc phòng, an ninh là?",
           "options": [
             {
@@ -2489,7 +2489,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703097645,
+          "id": 1790702010852,
           "question": "Nội dung nào không thể hiện chính sách kết hợp kinh tế với quốc phòng ở nước ta?",
           "options": [
             {
@@ -2514,7 +2514,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703098607,
+          "id": 1790702012170,
           "question": "Những vấn đề cơ bản về lịch sử nghệ thuật quân sự Việt Nam * Yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?",
           "options": [
             {
@@ -2539,7 +2539,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703100133,
+          "id": 1790702013113,
           "question": "Một trong những yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?",
           "options": [
             {
@@ -2564,7 +2564,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703100540,
+          "id": 1790702014353,
           "question": "Trong nghệ thuật đánh giặc của tổ tiên ta, thể hiện cách tiến công như thế nào?",
           "options": [
             {
@@ -2589,7 +2589,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703101570,
+          "id": 1790702015375,
           "question": "Yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?",
           "options": [
             {
@@ -2614,7 +2614,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703103141,
+          "id": 1790702016377,
           "question": "Một trong những yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?",
           "options": [
             {
@@ -2639,7 +2639,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703103787,
+          "id": 1790702017107,
           "question": "Trong nghệ thuật đánh giặc của tổ tiên ta, thể hiện cách tiến công như thế nào?",
           "options": [
             {
@@ -2664,7 +2664,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703104452,
+          "id": 1790702018648,
           "question": "Xây dựng cả nước thành một chiến trường, mỗi người dân là một người lính đánh giặc là thể hiện nghệ thuật chiến tranh gì?",
           "options": [
             {
@@ -2689,7 +2689,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703106046,
+          "id": 1790702018968,
           "question": "Một trong những nội dung nghệ thuật đánh giặc của tổ tiên ta là gì?",
           "options": [
             {
@@ -2714,7 +2714,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703106929,
+          "id": 1790702020037,
           "question": "Một trong những nội dung nghệ thuật đánh giặc của của tổ tiên ta là gì?",
           "options": [
             {
@@ -2739,7 +2739,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703107917,
+          "id": 1790702021361,
           "question": "Binh thư yếu lược là tác phẩm của ai?",
           "options": [
             {
@@ -2764,7 +2764,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703109165,
+          "id": 1790702021941,
           "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Nhà Lý là gì?",
           "options": [
             {
@@ -2789,7 +2789,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703110261,
+          "id": 1790702022816,
           "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Nhà Trần là gì?",
           "options": [
             {
@@ -2814,7 +2814,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703110938,
+          "id": 1790702024585,
           "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Lê Lợi, Nguyến Trãi  là gì?",
           "options": [
             {
@@ -2839,7 +2839,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703111551,
+          "id": 1790702024969,
           "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Nguyễn Huệ - Quang Trung  là gì?",
           "options": [
             {
@@ -2864,7 +2864,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703112777,
+          "id": 1790702025861,
           "question": "Nhà Trần đã sử dụng kế sách đánh giặc như thế nào trong cuộc kháng chiến chống quân Nguyên Mông?",
           "options": [
             {
@@ -2889,7 +2889,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703113641,
+          "id": 1790702027128,
           "question": "Một trong những nội dung nghệ thuật đánh giặc của của tổ tiên ta là gì?",
           "options": [
             {
@@ -2914,7 +2914,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703115179,
+          "id": 1790702028647,
           "question": "Tư tưởng chỉ đạo tác chiến xuyên suốt trong chuẩn bị và tiến hành chiến tranh giữ nước của cha ông ta là gì?",
           "options": [
             {
@@ -2939,7 +2939,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703115807,
+          "id": 1790702029592,
           "question": "Tư tưởng xuyên suốc trong nghệ thuật  đánh giặc của tổ tiên là gì?",
           "options": [
             {
@@ -2960,7 +2960,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703117005,
+          "id": 1790702030338,
           "question": "Phương châm tác chiến “ Đánh nhanh, thắng nhanh” là của chiến dịch nào?",
           "options": [
             {
@@ -2985,7 +2985,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703118021,
+          "id": 1790702030815,
           "question": "Một trong những cơ sở hình thành nghệ thuật quân sự Việt Nam từ khi có Đảng lãnh đạo là gì?",
           "options": [
             {
@@ -3010,7 +3010,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703118761,
+          "id": 1790702032082,
           "question": "Xây dựng và bảo vệ chủ quyền biển, đảo, biên giới quốc gia trong tình hình mới * Trong chiển lược phòng thủ bảo vệ Tổ quốc, vùng núi biên giới có vai trò như thế nào?",
           "options": [
             {
@@ -3035,7 +3035,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703120117,
+          "id": 1790702033692,
           "question": "Trong chiển lược phòng thủ bảo vệ Tổ quốc, vùng núi biên giới có vai trò như thế nào?",
           "options": [
             {
@@ -3060,7 +3060,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703121172,
+          "id": 1790702034531,
           "question": "Trong chiến lược bảo vệ Tổ quốc, vùng nào là vùng chiến lược trọng yếu?",
           "options": [
             {
@@ -3085,7 +3085,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703121708,
+          "id": 1790702034961,
           "question": "Vùng nào là vùng dễ mất ổn định về QP, AN trong bối cảnh hiện nay?",
           "options": [
             {
@@ -3110,7 +3110,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703123072,
+          "id": 1790702035902,
           "question": "Phần lớn nguồn lực để xây dựng và bảo vệ Tổ quốc, được huy động từ ngành, lĩnh vực kinh tế nào?",
           "options": [
             {
@@ -3135,7 +3135,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703123756,
+          "id": 1790702037196,
           "question": "Nội dung nào sau đây phản ánh đúng mục tiêu của Đảng về Chiến lược bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa trong tình hình mới?",
           "options": [
             {
@@ -3160,7 +3160,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703124978,
+          "id": 1790702037809,
           "question": "Nội dung nào sau đây không phản ánh đúng quan điểm chỉ đạo của Đảng về Chiến lược bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa trong tình hình mới?",
           "options": [
             {
@@ -3185,7 +3185,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703125860,
+          "id": 1790702038989,
           "question": "Bất kì thế lực nào có âm mưu và hành động chống phá mục tiêu của Việt Nam trong sự nghiệp xây dựng và bảo vệ Tổ quốc đều là",
           "options": [
             {
@@ -3210,7 +3210,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703127270,
+          "id": 1790702040680,
           "question": "Luật Biển Việt Nam năm 2012 bao gồm",
           "options": [
             {
@@ -3235,7 +3235,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703127401,
+          "id": 1790702040967,
           "question": "Theo quy định trong Luật Biển Việt Nam năm 2012: vùng biển quốc tế là tất cả các vùng biển nằm ngoài vùng đặc quyền kinh tế của Việt Nam và các quốc gia khác, nhưng không bao gồm",
           "options": [
             {
@@ -3260,7 +3260,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703129089,
+          "id": 1790702041891,
           "question": "Lãnh hải là vùng biển có chiều rộng 12 hải lí tính từ",
           "options": [
             {
@@ -3285,7 +3285,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703129599,
+          "id": 1790702043584,
           "question": "Vùng biển tiếp liền và nằm ngoài lãnh hải Việt Nam, hợp với lãnh hải thành một vùng biển có chiều rộng 200 hải lí tính từ đường cơ sở, được gọi là",
           "options": [
             {
@@ -3310,7 +3310,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703130337,
+          "id": 1790702043950,
           "question": "Ranh giới ngoài thềm lục địa cách đường cơ sở không quá",
           "options": [
             {
@@ -3335,7 +3335,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703132238,
+          "id": 1790702044736,
           "question": "Việt Nam có hai quần đảo xa bờ là",
           "options": [
             {
@@ -3360,7 +3360,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703133132,
+          "id": 1790702045964,
           "question": "Biên giới quốc gia trên đất liền được hoạch định và đánh dấu trên thực địa bằng",
           "options": [
             {
@@ -3385,7 +3385,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703133360,
+          "id": 1790702047177,
           "question": "“Mặt thẳng đứng từ biên giới quốc gia trên đất liền và biên giới quốc gia trên biển xuống lòng đất” - đó là nội dung của khái niệm nào sau đây?",
           "options": [
             {
@@ -3410,7 +3410,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703134370,
+          "id": 1790702048513,
           "question": "Hành vi nào dưới đây bị nghiêm cấm trong bảo vệ biên giới quốc gia của Việt Nam?",
           "options": [
             {
@@ -3435,7 +3435,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703136252,
+          "id": 1790702049404,
           "question": "Đọc tình huống dưới đây và trả lời câu hỏi: * * Tình huống: Nhà bạn A Páo ở khu vực biên giới. Hằng ngày A Páo đi chăn trâu sau giờ học. Khu vực gần nhà hết cỏ, A Páo phải lùa trâu ra sát bìa rừng, nơi có cột mốc biên giới. Bên kia cột mốc có bãi cỏ xanh tốt, A Páo định lùa trâu sang đó, hễ trâu ăn no là quay về Việt Nam ngay. * * Câu hỏi: Trong trường hợp này, nếu là bạn thân của A Páo, em nên lựa chọn cách ứng xử nào sau đây?",
           "options": [
             {
@@ -3460,7 +3460,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703136712,
+          "id": 1790702049828,
           "question": "Ở Việt Nam, Ngày biên phòng toàn dân được tổ chức vào",
           "options": [
             {
@@ -3485,7 +3485,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703137879,
+          "id": 1790702051107,
           "question": "Nội dung nào sau đây không phản ánh đúng trách nhiệm của công dân trong việc quản lí, xây dựng và bảo vệ biên giới quốc gia?",
           "options": [
             {
@@ -3510,7 +3510,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703138544,
+          "id": 1790702052441,
           "question": "Xây dựng lực lượng DQTV, lực lượng DBĐV và động viên quốc phòng * Dân quân tự vệ là lực lượng quần chúng, một thành phần của lực lượng nào sau đây?",
           "options": [
             {
@@ -3535,7 +3535,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703139375,
+          "id": 1790702053107,
           "question": "Dân quân tự vệ là",
           "options": [
             {
@@ -3560,7 +3560,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703140942,
+          "id": 1790702053915,
           "question": "Ngày truyền thống của lực lượng Dân quân tự vệ Việt Nam",
           "options": [
             {
@@ -3585,7 +3585,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703142107,
+          "id": 1790702055278,
           "question": "Ba thứ quân của lực lượng quân đội nhân dân Việt Nam là:",
           "options": [
             {
@@ -3610,7 +3610,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703142922,
+          "id": 1790702056050,
           "question": "“Dân quân tự vệ và du kích là lực lượng của toàn dân tộc, là một lực lượng vô địch, là bức tường sắt của Tổ quốc. Vô luận kẻ thù hung bạo thế nào, hễ động vào lực lượng đó, bức tường đó thì kẻ địch nào cũng phải tan rã” là câu nói của ai?",
           "options": [
             {
@@ -3635,7 +3635,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703144300,
+          "id": 1790702057548,
           "question": "Xây dựng lực lượng Dân quân tự vệ là trách nhiệm của:",
           "options": [
             {
@@ -3660,7 +3660,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703145161,
+          "id": 1790702057755,
           "question": "Phương châm xây dựng lực lượng Dân quân tự vệ hiện nay là:",
           "options": [
             {
@@ -3685,7 +3685,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703145751,
+          "id": 1790702059550,
           "question": "bộ, ngành * So với Luật Dân quân tự vệ năm 2009, Điều 5 Luật Dân quân tự vệ năm 2019 đã kế thừa và bổ sung nhiệm vụ nào sau đây?",
           "options": [
             {
@@ -3710,7 +3710,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703146669,
+          "id": 1790702060644,
           "question": "Đối tượng và thời hạn tham gia Dân quân tự vệ hiện nay là:",
           "options": [
             {
@@ -3735,7 +3735,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703148030,
+          "id": 1790702061178,
           "question": "nguyện tham gia thêm 4 năm). * “Phát huy sức mạnh tổng hợp trên địa bàn địa phương trong xây dựng lực lượng Dân quân tự vệ; xây dựng lực lượng Dân quân tự vệ gắn với xây dựng cơ sở vững mạnh toàn diện” là",
           "options": [
             {
@@ -3760,7 +3760,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703149151,
+          "id": 1790702062669,
           "question": "Quân nhân dự bị gồm:",
           "options": [
             {
@@ -3785,7 +3785,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703149981,
+          "id": 1790702062920,
           "question": "Lực lượng dự bị động viên là",
           "options": [
             {
@@ -3810,7 +3810,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703150760,
+          "id": 1790702064649,
           "question": "“Bảo đảm số lượng đủ, chất lượng cao, xây dựng toàn diện nhưng có trọng tâm, trọng điểm” là",
           "options": [
             {
@@ -3835,7 +3835,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703152037,
+          "id": 1790702065331,
           "question": "Một trong những quan điểm của Đảng Cộng Sản Việt Nam về xây dựng lực lượng dự bị động viên trong tình hình mới là:",
           "options": [
             {
@@ -3860,7 +3860,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703153254,
+          "id": 1790702066398,
           "question": "Một trong những nội dung xây dựng lực lượng dự bị động viên là:",
           "options": [
             {
@@ -3885,7 +3885,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703154032,
+          "id": 1790702067158,
           "question": "Đối tượng tạo nguồn của lực lượng dự bị động viên là",
           "options": [
             {
@@ -3910,7 +3910,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703154342,
+          "id": 1790702068039,
           "question": "Quân nhân dự bị động viên được đăng ký, quản lý tại:",
           "options": [
             {
@@ -3935,7 +3935,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703155746,
+          "id": 1790702068833,
           "question": "Cơ quan thực hiện việc đăng ký, quản lý quân nhân dự bị động viên là:",
           "options": [
             {
@@ -3960,7 +3960,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703157107,
+          "id": 1790702070315,
           "question": "động viên * Tổ chức biên chế lực lượng dự bị động viên theo các loại hình đơn vị bao gồm:",
           "options": [
             {
@@ -3985,7 +3985,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703157878,
+          "id": 1790702071285,
           "question": "Một trong những nguyên tắc sắp xếp quân nhân dự bị vào các đơn vị dự bị động viên là:",
           "options": [
             {
@@ -4010,7 +4010,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703158955,
+          "id": 1790702071975,
           "question": "Xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc *Một trong những nội dung xây dựng thế trận quốc phòng toàn dân",
           "options": [
             {
@@ -4035,7 +4035,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703159684,
+          "id": 1790702073625,
           "question": "Tính toàn diện trong xây dựng nền quốc phòng toàn dân được thể hiện ở nội dung.",
           "options": [
             {
@@ -4060,7 +4060,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703160641,
+          "id": 1790702074470,
           "question": "Một trong những nội dung xây dựng tiềm lực quân sự, trong xây dựng tiềm lực quốc phòng toàn dân là",
           "options": [
             {
@@ -4085,7 +4085,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703162069,
+          "id": 1790702075288,
           "question": "Kết hợp kinh tế với quốc phòng - an ninh ở nước ta hiện nay, nhằm mục đích gì?",
           "options": [
             {
@@ -4110,7 +4110,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703162474,
+          "id": 1790702075977,
           "question": "Thực hiện biện pháp \"tăng cường giáo dục quốc phòng\"trong xây dựng nền quốc phòng toàn dân một trong những nội dung giáo dục đó là gì?",
           "options": [
             {
@@ -4135,7 +4135,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703164059,
+          "id": 1790702077104,
           "question": "Từ cơ sở nào, chúng ta xác định tính chất toàn dân của nền quốc phòng toàn dân?",
           "options": [
             {
@@ -4160,7 +4160,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703164561,
+          "id": 1790702078169,
           "question": "Một trong những biện pháp chủ yếu xây dựng nền quốc phòng toàn dân là gì?",
           "options": [
             {
@@ -4185,7 +4185,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703165699,
+          "id": 1790702078870,
           "question": "Trong xây dựng nền quốc phòng toàn dân, phải kết hợp thế trận quốc phòng toàn* *dân với thế trận an ninh nhân dân, vì lý do gì?",
           "options": [
             {
@@ -4210,7 +4210,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703166789,
+          "id": 1790702080048,
           "question": "Vị trí mối quan hệ của hai nhiệm vụ chiến lược xây dựng và bảo vệ Tổ quốc như thế nào?",
           "options": [
             {
@@ -4235,7 +4235,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703168036,
+          "id": 1790702080889,
           "question": "Một trong những biện pháp xây dựng nền quốc phòng toàn dân là gì?",
           "options": [
             {
@@ -4260,7 +4260,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703168858,
+          "id": 1790702082676,
           "question": "Thực hiện biện pháp \"tăng cường giáo dục quốc phòng\" trong xây dựng nền quốc phòng toàn dân như thế nào?",
           "options": [
             {
@@ -4285,7 +4285,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703169810,
+          "id": 1790702082784,
           "question": "Cơ sở nào chúng ta xác định tính chất toàn dân của nền quốc phòng toàn dân?",
           "options": [
             {
@@ -4310,7 +4310,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703170753,
+          "id": 1790702084458,
           "question": "Tính chất nền quốc phòng của ta là toàn dân xuất phát từ đâu?",
           "options": [
             {
@@ -4335,7 +4335,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703171623,
+          "id": 1790702085353,
           "question": "Trong củng cố xây dựng nền quốc phòng toàn dân, lực lượng nào là nòng cốt?",
           "options": [
             {
@@ -4360,7 +4360,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703173090,
+          "id": 1790702085977,
           "question": "Tính chất toàn dân của nền quốc phòng toàn dân. được biểu hiện tập trung như thế nào?",
           "options": [
             {
@@ -4385,7 +4385,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703173801,
+          "id": 1790702087585,
           "question": "Một trong những quan điểm cơ bản xây dựng nền quốc phòng toàn dân là gì?",
           "options": [
             {
@@ -4410,7 +4410,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703175250,
+          "id": 1790702088713,
           "question": "Quan điểm quốc phòng toàn dân được thể hiện trong tổ chức dân quân tự vệ như thế nào?",
           "options": [
             {
@@ -4435,7 +4435,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703175523,
+          "id": 1790702089050,
           "question": "Tiềm lực kinh tế trong nội dung xây dựng tiềm lực quốc phòng toàn dân có vị trí gì?",
           "options": [
             {
@@ -4460,7 +4460,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703176642,
+          "id": 1790702089743,
           "question": "Quán triệt tính chất toàn diện trong xây dựng nền quốc phòng toàn dân, các cấp, ngành và toàn dân cần phải làm gì?",
           "options": [
             {
@@ -4485,7 +4485,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703177372,
+          "id": 1790702091567,
           "question": "Trong củng cố xây dựng nền quốc phòng toàn dân, lực lượng nào là nòng cốt?",
           "options": [
             {
@@ -4510,7 +4510,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703178521,
+          "id": 1790702092466,
           "question": "Những vấn đề cơ bản về bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội *  “Sự ổn định, phát triển bền vững của chế độ xã hội chủ nghĩa và Nhà nước Cộng hoà xã hội chủ nghĩa Việt Nam, sự bất khả xâm phạm độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ của Tổ quốc” là nội dung của khái niệm nào dưới đây?",
           "options": [
             {
@@ -4535,7 +4535,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703179393,
+          "id": 1790702093358,
           "question": "“Trạng thái xã hội có trật tự, kỷ cương trong đó mọi người được sống yên ổn trên cơ sở các quy phạm pháp luật và chuẩn mực đạo đức, pháp lý xác định” là nội dung của khái niệm nào dưới đây?",
           "options": [
             {
@@ -4560,7 +4560,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703180593,
+          "id": 1790702093812,
           "question": "“Phòng ngừa, phát hiện, đấu tranh, ngăn chặn làm thất bại các hoạt động xâm phạm an ninh quốc gia” là nội dung của khái niệm nào dưới đây?",
           "options": [
             {
@@ -4585,7 +4585,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703181730,
+          "id": 1790702094850,
           "question": "“Phòng ngừa, phát hiện, ngăn chặn, đấu tranh chống tội phạm và các hành vi vi phạm pháp luật về trật tự, an toàn xã hội” là nội dung của khái niệm nào dưới đây?",
           "options": [
             {
@@ -4610,7 +4610,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703183099,
+          "id": 1790702095841,
           "question": "Trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự, an toàn xã hội, chủ thể nào dưới đây có trách nhiệm “đề ra đường lối chính sách và phương pháp đấu tranh đúng đắn và lãnh đạo chặt chẽ bộ máy Nhà nước các đoàn thể quần chúng thực hiện thắng lợi đường lối chính sách đó”?",
           "options": [
             {
@@ -4635,7 +4635,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703184293,
+          "id": 1790702097138,
           "question": "Chủ thể nào dưới đây có trách nhiệm “quản lý xã hội bằng pháp luật, phát huy vai trò tác dụng của chính quyền các cấp; phối kết hợp chức năng của các cơ quan Nhà nước vào việc bảo vệ an ninh quốc gia và bảo đảm trật tự, an toàn xã hội”?",
           "options": [
             {
@@ -4660,7 +4660,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703185170,
+          "id": 1790702098054,
           "question": "Lực lượng nào giữ vai trò nòng cốt trong việc bảo vệ an ninh quốc gia, bảo đảm trật tự, an toàn xã hội, bảo vệ Đảng, Nhà nước, chế độ và nhân dân; đấu tranh phòng, chống tội phạm và vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội?",
           "options": [
             {
@@ -4685,7 +4685,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703185493,
+          "id": 1790702099655,
           "question": "Lực lượng nào giữ vai trò nòng cốt trong việc: bảo vệ sự bất khả xâm phạm độc lập, chủ quyền, thống nhất toàn vẹn lãnh thổ của Tổ quốc; phối hợp với các lực lượng tham gia bảo vệ an ninh quốc gia và bảo đảm trật tự, an toàn xã hội?",
           "options": [
             {
@@ -4710,7 +4710,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703186609,
+          "id": 1790702099787,
           "question": "Lực lượng nào giữ vai trò nòng cốt trong việc cùng toàn dân đánh giặc ở địa phương khi có chiến tranh?",
           "options": [
             {
@@ -4735,7 +4735,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703187347,
+          "id": 1790702101647,
           "question": "Bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội là nhiệm vụ của",
           "options": [
             {
@@ -4760,7 +4760,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703188909,
+          "id": 1790702102238,
           "question": "Nội dung nào dưới đây không phản ánh đúng trách nhiệm của học sinh trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội?",
           "options": [
             {
@@ -4785,7 +4785,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703189588,
+          "id": 1790702103704,
           "question": "Lợi dụng tình hình dịch Covid-19 đang diễn biến phức tạp, ông T và ông Q đã: tuyên truyền sai lệch chủ trương, đường lối chống dịch của Nhà nước; lôi kéo, xúi giục, kích động người dân trong thôn X chống đối lại chính quyền. Phát hiện hành vi vi phạm của ông T và Q, anh M đã nhanh chóng tố giác tới cơ quan công an. * * Theo em, trong trường hợp trên, nhân vật nào đã thể hiện đúng trách nhiệm của mình trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội?",
           "options": [
             {
@@ -4810,7 +4810,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703190525,
+          "id": 1790702104186,
           "question": "K là học sinh lớp 10 của trường THPT X. Thông qua T (bạn học cùng lớp), K biết được một Group kín trên facebook chuyên nói xấu các giáo viên và kích động các vụ đánh nhau trong trường. Ngày 28/4/2021, admin của group đó có đăng bài, kêu gọi các thành viên trong nhóm cùng tổ chức đua xe vào vào tối ngày 30/4 trên phố, giải thưởng cho người chiến thắng sẽ là một tập “tem giấy” được tẩm chất LSD (một loại chấy gây ảo giác cực mạnh). Bài đăng của admin nhanh chóng nhận được sự hưởng ứng của nhiều thành viên trong nhóm. * * Nếu là K, trong trường hợp này, em nên lựa chọn cách ứng xử như thế nào?",
           "options": [
             {
@@ -4839,7 +4839,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703191551,
+          "id": 1790702105003,
           "question": "Đọc thông tin dưới đây và trả lời câu hỏi: * * Anh B là chủ nhân của kênh YouTube có tên là “Ôi quê tôi”. Thời gian đầu, anh B thường đăng tải các video clip quảng bá hình ảnh đẹp của đất nước và con người Việt Nam. Tuy nhiên, để tăng số lượng người đăng kí kênh và số lượt view, anh B đã chuyển hướng sang dàn dựng, cắt ghép và đăng tải những video clip không đúng sự thật, xuyên tạc chủ trương, đường lối của Đảng và nhà nước, bôi nhọ chính quyền. * * Anh T vốn là bạn thân của * Theo em, trong trường hợp trên, nhân vật nào đã thể hiện đúng trách nhiệm của mình trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội?",
           "options": [
             {
@@ -4868,7 +4868,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703192659,
+          "id": 1790702105752,
           "question": "“Sự ổn định, phát triển bền vững của chế độ xã hội chủ nghĩa và nhà nước Cộng hoà xã hội chủ nghĩa Việt Nam, sự bất khả xâm phạm độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ của Tổ quốc”- đó là nội dung của khái niệm nào dưới đây?",
           "options": [
             {
@@ -4893,7 +4893,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703193602,
+          "id": 1790702107616,
           "question": "Điền cụm từ thích hợp vào chỗ trống (….) trong khái niệm sau đây: “……là phòng ngừa, phát hiện, ngăn chặn, đấu tranh làm thất bại các hoạt động xâm phạm an ninh quốc gia và loại trừ nguy cơ đe doạ an ninh quốc gia”.",
           "options": [
             {
@@ -4918,7 +4918,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703195074,
+          "id": 1790702108410,
           "question": "“Trạng thái xã hội bình yên, trong đó mọi người được sống yên trên cơ sở các quy tắc và chuẩn mực đạo đức, pháp lí xác định” - đó là nội dung của khái niệm nào dưới đây?",
           "options": [
             {
@@ -4943,7 +4943,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703195562,
+          "id": 1790702109358,
           "question": "Điền cụm từ thích hợp vào chỗ trống (….) trong khái niệm sau đây: “…. là phòng ngừa, phát hiện, ngăn chặn, đấu tranh chống tội phạm và các hành vi vi phạm pháp luật về trật tự, an toàn xã hội”",
           "options": [
             {
@@ -4968,7 +4968,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703196919,
+          "id": 1790702110525,
           "question": "Đảm bảo trật tự, an toàn xã hội không bao gồm hoạt động nào dưới đây?",
           "options": [
             {
@@ -4993,7 +4993,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703197917,
+          "id": 1790702111039,
           "question": "Bảo vệ an ninh quốc gia không bao gồm hoạt động nào dưới đây?",
           "options": [
             {
@@ -5018,7 +5018,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703198712,
+          "id": 1790702111741,
           "question": "Nội dung nào dưới đây phản ánh đúng trách nhiệm của Đảng Cộng sản Việt Nam trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?",
           "options": [
             {
@@ -5043,7 +5043,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703199515,
+          "id": 1790702113506,
           "question": "Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, cơ quan nào dưới đây có trách nhiệm: quyết định các vấn đề chiến tranh và hoà bình, quy định về tình trạng khẩn cấp, ban hành Hiến pháp luật, nghị quyết…?",
           "options": [
             {
@@ -5068,7 +5068,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703201057,
+          "id": 1790702114273,
           "question": "Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, cơ quan nào dưới đây có trách nhiệm: tổ chức thi hành Hiến pháp luật, nghị quyết và thống nhất quản lí?",
           "options": [
             {
@@ -5093,7 +5093,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703201851,
+          "id": 1790702115398,
           "question": "Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, lực lượng vũ trang nhân dân giữ vai trò",
           "options": [
             {
@@ -5118,7 +5118,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703203070,
+          "id": 1790702116564,
           "question": "Nội dung nào dưới đây phản ánh đúng trách nhiệm của công dân trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?",
           "options": [
             {
@@ -5143,7 +5143,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703203678,
+          "id": 1790702116874,
           "question": "Nội dung nào dưới đây không phản ánh đúngtrách nhiệm của công dân trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?",
           "options": [
             {
@@ -5168,7 +5168,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703205023,
+          "id": 1790702117855,
           "question": "Nội dung nào dưới đây phản ánh đúng trách nhiệm của học sinh trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?",
           "options": [
             {
@@ -5193,7 +5193,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703205974,
+          "id": 1790702119382,
           "question": "Hoạt động nào dưới đây thuộc phạm vi bảo vệ an ninh biên giới?",
           "options": [
             {
@@ -5218,7 +5218,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703206571,
+          "id": 1790702120437,
           "question": "“Tố cáo hành vi vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội; phát hiện, cung cấp kịp thời thông tin cho cơ quan có thẩm quyền” là trách nhiệm của",
           "options": [
             {
@@ -5243,7 +5243,7 @@
           "explanation": ""
         },
         {
-          "id": 1790703207626,
+          "id": 1790702121041,
           "question": "An ninh quốc gia:",
           "options": [
             {
@@ -5266,146 +5266,6 @@
           "correctAnswer": "D",
           "level": "Thông hiểu",
           "explanation": ""
-        }
-      ]
-    },
-    {
-      "id": 1710000000001,
-      "title": "Khám Phá Địa Lý & Kỳ Quan Thế Giới",
-      "code": "GEO-204",
-      "category": "Khoa Học Xã Hội",
-      "durationMinutes": 15,
-      "questions": [
-        {
-          "id": 101,
-          "question": "Một đất nước không có sông theo đúng nghĩa. Đất nước này nổi tiếng với những tòa nhà cao nhất thế giới, những hòn đảo nhân tạo độc đáo và những chiếc siêu xe cảnh sát ấn tượng.",
-          "image": "assets/purple_desert_showcase.jpg",
-          "options": [
-            {
-              "key": "A",
-              "text": "Ả Rập Saudi"
-            },
-            {
-              "key": "B",
-              "text": "Ai Cập"
-            },
-            {
-              "key": "C",
-              "text": "Qatar"
-            },
-            {
-              "key": "D",
-              "text": "các Tiểu Vương Quốc Ả Rập Thống Nhất (UAE)"
-            },
-            {
-              "key": "E",
-              "text": "Bahrain"
-            }
-          ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "UAE (Các Tiểu Vương Quốc Ả Rập Thống Nhất) với thành phố Dubai nổi tiếng sở hữu tòa tháp cao nhất thế giới Burj Khalifa, đảo cọ Palm Jumeirah và không có con sông tự nhiên nào chảy qua."
-        },
-        {
-          "id": 102,
-          "question": "Kim tự tháp vĩ đại Giza và tượng Nhân sư nổi tiếng thuộc về quốc gia cổ đại nào?",
-          "image": "assets/purple-desert.jpg",
-          "options": [
-            {
-              "key": "A",
-              "text": "Hy Lạp"
-            },
-            {
-              "key": "B",
-              "text": "Ai Cập"
-            },
-            {
-              "key": "C",
-              "text": "La Mã"
-            },
-            {
-              "key": "D",
-              "text": "Ấn Độ"
-            }
-          ],
-          "correctAnswer": "B",
-          "level": "Nhận biết",
-          "explanation": "Kim tự tháp Giza và tượng Nhân sư là những kỳ quan thế giới cổ đại tọa lạc tại Ai Cập."
-        },
-        {
-          "id": 103,
-          "question": "Đại dương nào có diện tích lớn nhất và sâu nhất trên Trái Đất?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Đại Tây Dương"
-            },
-            {
-              "key": "B",
-              "text": "Ấn Độ Dương"
-            },
-            {
-              "key": "C",
-              "text": "Thái Bình Dương"
-            },
-            {
-              "key": "D",
-              "text": "Bắc Băng Dương"
-            }
-          ],
-          "correctAnswer": "C",
-          "level": "Nhận biết",
-          "explanation": "Thái Bình Dương là đại dương lớn nhất và sâu nhất trên Trái Đất, chiếm hơn một phần ba diện tích bề mặt hành tinh."
-        },
-        {
-          "id": 104,
-          "question": "Ngọn núi Everest - đỉnh núi cao nhất thế giới nằm trên dãy núi nào?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Dãy Alps"
-            },
-            {
-              "key": "B",
-              "text": "Dãy Andes"
-            },
-            {
-              "key": "C",
-              "text": "Dãy Himalaya"
-            },
-            {
-              "key": "D",
-              "text": "Dãy Rocky"
-            }
-          ],
-          "correctAnswer": "C",
-          "level": "Nhận biết",
-          "explanation": "Everest (8.848m) nằm trên dãy Himalaya, ở biên giới giữa Nepal và Tây Tạng (Trung Quốc)."
-        },
-        {
-          "id": 105,
-          "question": "Dòng sông nào dài nhất thế giới chảy qua khu vực châu Phi?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Sông Amazon"
-            },
-            {
-              "key": "B",
-              "text": "Sông Nile (Nin)"
-            },
-            {
-              "key": "C",
-              "text": "Sông Dương Tử"
-            },
-            {
-              "key": "D",
-              "text": "Sông Mississippi"
-            }
-          ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Sông Nile (châu Phi) dài khoảng 6.650 km, là dòng sông dài nhất thế giới."
         }
       ]
     }
