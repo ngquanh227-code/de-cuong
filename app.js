@@ -5497,10 +5497,20 @@ function setupGlobalEvents() {
     }
   }, { passive: true });
 
+  // Close modals on outside backdrop click
+  document.querySelectorAll(".modal-backdrop").forEach(backdrop => {
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop) {
+        backdrop.classList.remove("active");
+      }
+    });
+  });
+
   // Keyboard navigation (Escape for drawer/modals, ArrowLeft/Right for Focus Stage carousel)
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeMainDrawer();
+      document.querySelectorAll(".modal-backdrop.active").forEach(m => m.classList.remove("active"));
       return;
     }
     // Only handle arrow keys if not currently typing in an input/textarea

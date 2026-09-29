@@ -626,107 +626,96 @@
     </div>
   </div>
 
-  <!-- MODAL: DONATE / TIẾP SỨC CHO WEB -->
+  <!-- MODAL: DONATE / TIẾP SỨC CHO WEB (BẢNG CỐ ĐỊNH COMPACT 1 MÀN HÌNH KHÔNG CUỘN) -->
   <div class="modal-backdrop" id="modal-donate">
-    <div class="modal-card" style="max-width: 480px; text-align: center;">
+    <div class="modal-card modal-compact-fixed" style="text-align: center;">
       <div class="modal-header" style="justify-content: space-between;">
         <div style="display: flex; align-items: center; gap: 8px;">
-          <span style="font-size: 1.3rem;">💖</span>
-          <h3 style="margin: 0;">Tiếp Sức & Ủng Hộ CuonEdu</h3>
+          <span style="font-size: 1.15rem;">💖</span>
+          <h3 style="margin: 0; font-size: 1.05rem;">Tiếp Sức & Ủng Hộ CuonEdu</h3>
         </div>
-        <button class="btn-icon" onclick="closeModal('modal-donate')">✕</button>
+        <button class="btn-icon" onclick="closeModal('modal-donate')" style="font-size: 1rem; width: 30px; height: 30px;" title="Đóng">✕</button>
       </div>
 
-      <div class="modal-body" style="padding: 20px 16px;">
-        <p style="font-size: 0.88rem; color: var(--wg-text-subtle); line-height: 1.5; margin-bottom: 16px;">
-          Mỗi sự ủng hộ dù là nhỏ nhất hay một ly cà phê từ các bạn đều là nguồn động lực to lớn giúp CuonEdu duy trì máy chủ, phát triển thêm nhiều tính năng mới và chia sẻ tài liệu miễn phí cho cộng đồng! ✨
+      <div class="modal-body">
+        <p style="font-size: 0.8rem; color: var(--wg-text-subtle); line-height: 1.4; margin: 0 0 10px 0;">
+          Mọi sự ủng hộ hay một ly cà phê đều giúp CuonEdu duy trì máy chủ và chia sẻ đề thi miễn phí! ✨
         </p>
 
-        <!-- QR Code Image -->
-        <div style="background: #ffffff; padding: 12px; border-radius: 16px; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.4); margin-bottom: 16px;">
-          <img src="assets/donate-qr.png" alt="Mã QR Techcombank Nguyen Quang Anh" style="width: 260px; max-width: 100%; height: auto; border-radius: 8px; display: block;">
+        <!-- QR Code Image Compact -->
+        <div class="modal-qr-frame">
+          <img src="assets/donate-qr.png" alt="Mã QR Techcombank Nguyen Quang Anh" class="modal-qr-img">
         </div>
 
-        <!-- Bank Details Card -->
-        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 12px 16px; text-align: left; margin-bottom: 16px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-            <span style="font-size: 0.8rem; color: var(--wg-text-subtle);">Ngân hàng:</span>
-            <strong style="color: #ef4444; font-size: 0.95rem;">TECHCOMBANK</strong>
-          </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-            <span style="font-size: 0.8rem; color: var(--wg-text-subtle);">Chủ tài khoản:</span>
-            <strong style="color: #ffffff; font-size: 0.95rem;">NGUYEN QUANG ANH</strong>
+        <!-- Bank Details Card Compact -->
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 10px; padding: 8px 12px; margin-bottom: 10px; font-size: 0.82rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <span style="color: var(--wg-text-subtle); font-size: 0.75rem;">Ngân hàng / Chủ TK:</span>
+            <span style="font-weight: 700; color: #f87171;">TECHCOMBANK <span style="color: var(--wg-text-subtle); font-weight: normal;">•</span> <strong style="color: #ffffff;">NGUYEN QUANG ANH</strong></span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 0.8rem; color: var(--wg-text-subtle);">Số tài khoản:</span>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <strong style="color: #38bdf8; font-family: monospace; font-size: 1.1rem; letter-spacing: 0.5px;">2207 6666 8888</strong>
-              <button type="button" class="btn btn-ghost btn-sm" onclick="copyToClipboardText('220766668888', 'Đã sao chép số tài khoản 220766668888!')" style="padding: 2px 8px; font-size: 0.75rem; border: 1px solid rgba(56, 189, 248, 0.3); color: #38bdf8;" title="Sao chép">📋 Copy</button>
+            <span style="color: var(--wg-text-subtle); font-size: 0.75rem;">Số tài khoản:</span>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <strong style="color: #38bdf8; font-family: monospace; font-size: 1.02rem; letter-spacing: 0.5px;">2207 6666 8888</strong>
+              <button type="button" class="btn btn-ghost btn-sm" onclick="copyToClipboardText('220766668888', 'Đã sao chép số tài khoản 220766668888!')" style="padding: 2px 7px; font-size: 0.72rem; border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; border-radius: 6px;" title="Sao chép STK">📋 Copy</button>
             </div>
           </div>
         </div>
 
-        <div style="font-size: 0.82rem; color: #f472b6; font-weight: 700;">
+        <div style="font-size: 0.76rem; color: #f472b6; font-weight: 700;">
           Xin chân thành cảm ơn tình cảm và sự đồng hành của bạn! ❤️
         </div>
-      </div>
-
-      <div class="modal-footer" style="justify-content: center;">
-        <button type="button" class="btn btn-secondary" onclick="closeModal('modal-donate')">Đóng</button>
       </div>
     </div>
   </div>
 
-  <!-- MODAL: GÓP Ý, BÁO LỖI & GỬI TÀI LIỆU -->
+  <!-- MODAL: GÓP Ý, BÁO LỖI & GỬI TÀI LIỆU (BẢNG CỐ ĐỊNH COMPACT 1 MÀN HÌNH KHÔNG CUỘN) -->
   <div class="modal-backdrop" id="modal-feedback">
-    <div class="modal-card" style="max-width: 480px; text-align: center;">
+    <div class="modal-card modal-compact-fixed" style="text-align: center;">
       <div class="modal-header" style="justify-content: space-between;">
         <div style="display: flex; align-items: center; gap: 8px;">
-          <span style="font-size: 1.3rem;">💬</span>
-          <h3 style="margin: 0;">Góp Ý, Báo Lỗi & Gửi Tài Liệu</h3>
+          <span style="font-size: 1.15rem;">💬</span>
+          <h3 style="margin: 0; font-size: 1.05rem;">Góp Ý, Báo Lỗi & Gửi Tài Liệu</h3>
         </div>
-        <button class="btn-icon" onclick="closeModal('modal-feedback')">✕</button>
+        <button class="btn-icon" onclick="closeModal('modal-feedback')" style="font-size: 1rem; width: 30px; height: 30px;" title="Đóng">✕</button>
       </div>
 
-      <div class="modal-body" style="padding: 20px 16px;">
-        <p style="font-size: 0.88rem; color: var(--wg-text-subtle); line-height: 1.5; margin-bottom: 16px;">
-          Bạn phát hiện câu hỏi nào bị sai đáp án, có ý tưởng cải tiến web hoặc có tài liệu/đề thi mới muốn đóng góp cho cộng đồng? Đừng ngần ngại nhắn ngay cho mình nhé! ✨
+      <div class="modal-body">
+        <p style="font-size: 0.8rem; color: var(--wg-text-subtle); line-height: 1.4; margin: 0 0 10px 0;">
+          Có tài liệu/đề thi hay, thắc mắc đáp án hoặc muốn góp ý tính năng, nhắn ngay cho mình nhé! ✨
         </p>
 
-        <!-- Zalo QR Image -->
-        <div style="background: #ffffff; padding: 12px; border-radius: 16px; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.4); margin-bottom: 16px;">
-          <img src="assets/zalo-contact-qr.png" alt="Danh thiếp Zalo Nguyễn Quang Anh" style="width: 250px; max-width: 100%; height: auto; border-radius: 8px; display: block;">
+        <!-- Zalo QR Image Compact -->
+        <div class="modal-qr-frame">
+          <img src="assets/zalo-contact-qr.png" alt="Danh thiếp Zalo Nguyễn Quang Anh" class="modal-qr-img">
         </div>
 
-        <!-- Contact Actions -->
-        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px;">
-          <a href="https://zalo.me/0962714685" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #0068ff, #0084ff); border: none; font-weight: 800; padding: 12px; font-size: 0.95rem; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <!-- Contact Actions Compact -->
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px;">
+          <a href="https://zalo.me/0962714685" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #0068ff, #0084ff); border: none; font-weight: 700; padding: 9px 12px; font-size: 0.88rem; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 8px;">
             <span>💬</span>
             <span>Mở Nhắn Tin Qua Zalo Ngay</span>
           </a>
 
           <div style="display: flex; gap: 8px;">
-            <a href="tel:0962714685" class="btn btn-secondary" style="flex: 1; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 0.85rem; padding: 10px;">
+            <a href="tel:0962714685" class="btn btn-secondary" style="flex: 1; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 5px; font-size: 0.78rem; padding: 7px 8px; border-radius: 8px;">
               <span>📞</span>
-              <span>Gọi Điện Trực Tiếp</span>
+              <span>0962.714.685</span>
             </a>
-            <button type="button" class="btn btn-secondary" onclick="copyToClipboardText('0962714685', 'Đã sao chép SĐT Zalo: 0962.714.685!')" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 0.85rem; padding: 10px;">
+            <button type="button" class="btn btn-secondary" onclick="copyToClipboardText('0962714685', 'Đã sao chép SĐT Zalo: 0962.714.685!')" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 5px; font-size: 0.78rem; padding: 7px 8px; border-radius: 8px;">
               <span>📋</span>
               <span>Sao Chép SĐT</span>
             </button>
           </div>
         </div>
 
-        <div style="font-size: 0.78rem; color: var(--wg-text-subtle);">
+        <div style="font-size: 0.74rem; color: var(--wg-text-subtle);">
           Admin: <strong>Nguyễn Quang Anh (Quang Cuốn)</strong> • SĐT: <strong>0962.714.685</strong>
         </div>
       </div>
-
-      <div class="modal-footer" style="justify-content: center;">
-        <button type="button" class="btn btn-secondary" onclick="closeModal('modal-feedback')">Đóng</button>
-      </div>
     </div>
   </div>
+
 
   <!-- MODAL: GITHUB CLOUD SYNC -->
   <div class="modal-backdrop" id="modal-cloud-sync">
