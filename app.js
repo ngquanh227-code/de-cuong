@@ -519,6 +519,7 @@ function base64ToUtf8(b64) {
  * Hợp nhất thông minh dữ liệu giữa máy này và Cloud:
  * - Bảo đảm không làm mất đề thi mới vừa tải lên trên máy này
  * - Nếu phát hiện máy này có đề mới hơn Cloud, tự động kích hoạt đẩy lên Cloud
+ * - Khử trùng lặp các đề có cùng tên và số câu hỏi
  */
 function mergeSubjects(localSubjects, cloudSubjects) {
   if (!Array.isArray(localSubjects) || localSubjects.length === 0) {
@@ -549,7 +550,20 @@ function mergeSubjects(localSubjects, cloudSubjects) {
     }
   });
 
-  return { merged, hasLocalNewData };
+  // Lọc trùng lặp sạch sẽ theo tiêu đề và số câu hỏi
+  const uniqueList = [];
+  merged.forEach(sub => {
+    if (!sub) return;
+    const isDup = uniqueList.some(u => 
+      u.id === sub.id || 
+      (u.title && sub.title && u.title.trim().toLowerCase() === sub.title.trim().toLowerCase() && (u.questions?.length || 0) === (sub.questions?.length || 0))
+    );
+    if (!isDup) {
+      uniqueList.push(sub);
+    }
+  });
+
+  return { merged: uniqueList, hasLocalNewData };
 }
 
 function initCloudSync() {
@@ -611,7 +625,7 @@ async function syncFromCloud(silent = false) {
         "User-Agent": "CuonEdu"
       };
       if (token) headers["Authorization"] = `token ${token}`;
-      const apiRes = await fetch(`${CLOUD_SYNC_CONFIG.apiUrl}?_t=${Date.now()}`, {
+      const apiRes = await fetch(`${CLOUD_SYNC_CONFIG.apiUrl}?_t=${Date.now()}&_r=${Math.random()}`, {
         headers,
         cache: "no-store"
       });
@@ -664,6 +678,10 @@ async function syncFromCloud(silent = false) {
   }
 }
 
+// Khóa chống xung đột ghi đè đồng thời (Concurrency Mutex)
+let isCloudSyncInProgress = false;
+let hasQueuedSync = false;
+
 /**
  * PUSH: Đẩy toàn bộ đề thi hiện tại lên Cloud GitHub cho tất cả máy khác
  */
@@ -676,6 +694,13 @@ async function syncToCloud(showToastNotification = true) {
     return;
   }
 
+  // Nếu đang có tiến trình đồng bộ chạy, đánh dấu để chạy nối tiếp khi xong, tránh xung đột SHA
+  if (isCloudSyncInProgress) {
+    hasQueuedSync = true;
+    return;
+  }
+
+  isCloudSyncInProgress = true;
   updateCloudSyncUI(true);
   const pushBtn = document.getElementById("btn-action-push-cloud");
   if (pushBtn) pushBtn.disabled = true;
@@ -695,24 +720,29 @@ async function syncToCloud(showToastNotification = true) {
 
     const apiBase = `https://api.github.com/repos/${CLOUD_SYNC_CONFIG.owner}/${CLOUD_SYNC_CONFIG.repo}/contents/${CLOUD_SYNC_CONFIG.path}`;
 
-    // 1. Lấy SHA mới nhất của tệp hiện có trên GitHub
-    let sha = null;
-    try {
-      const getRes = await fetch(`${apiBase}?ref=${CLOUD_SYNC_CONFIG.branch}&_t=${Date.now()}`, {
-        headers: {
-          "Authorization": `token ${token}`,
-          "Accept": "application/vnd.github.v3+json",
-          "User-Agent": "CuonEdu"
-        },
-        cache: "no-store"
-      });
-      if (getRes.ok) {
-        const fileInfo = await getRes.json();
-        sha = fileInfo.sha;
+    // Hàm lấy SHA mới nhất thời gian thực từ GitHub, chống triệt để lỗi cache SHA cũ
+    async function fetchLatestRemoteSha() {
+      try {
+        const getRes = await fetch(`${apiBase}?ref=${CLOUD_SYNC_CONFIG.branch}&_ts=${Date.now()}_${Math.random()}`, {
+          headers: {
+            "Authorization": `token ${token}`,
+            "Accept": "application/vnd.github.v3+json",
+            "User-Agent": "CuonEdu"
+          },
+          cache: "no-store"
+        });
+        if (getRes.ok) {
+          const fileInfo = await getRes.json();
+          return fileInfo.sha || null;
+        }
+      } catch (e) {
+        console.warn("Không thể lấy SHA từ GitHub:", e);
       }
-    } catch (e) {
-      console.warn("Could not retrieve SHA, will attempt create:", e);
+      return null;
     }
+
+    // 1. Lấy SHA mới nhất của file trên GitHub
+    let sha = await fetchLatestRemoteSha();
 
     // 2. Commit file mới lên GitHub
     const putBody = {
@@ -722,7 +752,7 @@ async function syncToCloud(showToastNotification = true) {
     };
     if (sha) putBody.sha = sha;
 
-    const putRes = await fetch(apiBase, {
+    let putRes = await fetch(apiBase, {
       method: "PUT",
       headers: {
         "Authorization": `token ${token}`,
@@ -732,6 +762,29 @@ async function syncToCloud(showToastNotification = true) {
       },
       body: JSON.stringify(putBody)
     });
+
+    // 3. Nếu xảy ra xung đột SHA (409 Conflict / "does not match"), tự động lấy lại SHA mới nhất và thử lại ngay lập tức
+    if (putRes.status === 409 || !putRes.ok) {
+      const errCheck = await putRes.clone().json().catch(() => ({}));
+      if (putRes.status === 409 || (errCheck.message && errCheck.message.includes("does not match"))) {
+        console.warn("Phát hiện xung đột SHA, đang tự động nạp SHA mới nhất để đồng bộ lại...");
+        await new Promise(r => setTimeout(r, 600));
+        const freshSha = await fetchLatestRemoteSha();
+        if (freshSha) {
+          putBody.sha = freshSha;
+          putRes = await fetch(apiBase, {
+            method: "PUT",
+            headers: {
+              "Authorization": `token ${token}`,
+              "Accept": "application/vnd.github.v3+json",
+              "Content-Type": "application/json",
+              "User-Agent": "CuonEdu"
+            },
+            body: JSON.stringify(putBody)
+          });
+        }
+      }
+    }
 
     if (!putRes.ok) {
       const errData = await putRes.json().catch(() => ({}));
@@ -751,9 +804,16 @@ async function syncToCloud(showToastNotification = true) {
       showToast(`Lỗi đồng bộ lên Cloud: ${err.message}`, "error");
     }
   } finally {
+    isCloudSyncInProgress = false;
     if (pushBtn) pushBtn.disabled = false;
+    // Nếu có yêu cầu đồng bộ bị hoãn trong lúc tiến trình đang chạy, kích hoạt nốt
+    if (hasQueuedSync) {
+      hasQueuedSync = false;
+      setTimeout(() => syncToCloud(false), 500);
+    }
   }
 }
+
 
 
 
