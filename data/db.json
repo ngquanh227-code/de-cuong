@@ -1,17 +1,18 @@
 {
   "version": 1,
-  "lastUpdated": 1790955827180,
+  "lastUpdated": 1790955868685,
   "subjects": [
     {
-      "id": 1790955819815,
-      "title": "Đề cương ôn tập Kinh tế học (1)",
-      "code": "SUB-543",
       "category": "Đại Cương & Khác",
+      "code": "SUB-543",
       "durationMinutes": 15,
+      "id": 1790955819815,
       "questions": [
         {
+          "correctAnswer": "D",
+          "explanation": "Lượng cầu nhạy cảm hơn với giá khi có nhiều hàng hóa thay thế vì người tiêu dùng dễ dàng chuyển sang sản phẩm khác khi giá tăng.",
           "id": 1790955780950,
-          "question": "Lượng cầu nhạy cảm hơn đối với những thay đổi trong giá khi:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -34,13 +35,13 @@
               "text": "Tất cả đều đúng."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Lượng cầu nhạy cảm hơn với giá khi có nhiều hàng hóa thay thế vì người tiêu dùng dễ dàng chuyển sang sản phẩm khác khi giá tăng."
+          "question": "Lượng cầu nhạy cảm hơn đối với những thay đổi trong giá khi:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Quy tắc tối ưu hóa tiêu dùng là MUx/Px = MUy/Py = ... = MUn/Pn.",
           "id": 1790955782007,
-          "question": "Quy tắc phân bổ ngân sách tối ưu cho người tiêu dùng là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -63,13 +64,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Quy tắc tối ưu hóa tiêu dùng là MUx/Px = MUy/Py = ... = MUn/Pn."
+          "question": "Quy tắc phân bổ ngân sách tối ưu cho người tiêu dùng là:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Thặng dư sản xuất là phần chênh lệch giữa tổng doanh thu và tổng chi phí biến đổi (TR - TVC).",
           "id": 1790955782334,
-          "question": "Thặng dư sản xuất có thể biểu thị là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -92,13 +93,13 @@
               "text": "c và d."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Thặng dư sản xuất là phần chênh lệch giữa tổng doanh thu và tổng chi phí biến đổi (TR - TVC)."
+          "question": "Thặng dư sản xuất có thể biểu thị là:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Nắng hạn làm giảm sản lượng, khiến đường cung dịch chuyển sang trái và lên trên.",
           "id": 1790955783287,
-          "question": "Nắng hạn có thể sẽ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -121,13 +122,13 @@
               "text": "Làm giảm giá các hàng hóa thay thế cho gạo."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Nắng hạn làm giảm sản lượng, khiến đường cung dịch chuyển sang trái và lên trên."
+          "question": "Nắng hạn có thể sẽ:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Giá trị sản phẩm cận biên (VMPL) = MPL * P.",
           "id": 1790955784389,
-          "question": "Giá trị của sản phẩm cận biên của lao động bằng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -150,13 +151,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Giá trị sản phẩm cận biên (VMPL) = MPL * P."
+          "question": "Giá trị của sản phẩm cận biên của lao động bằng:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Đối với hãng cạnh tranh hoàn hảo, MR = P, và MR là doanh thu từ đơn vị bán thêm.",
           "id": 1790955785652,
-          "question": "Doanh thu cận biên:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -179,13 +180,13 @@
               "text": "b và c."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Đối với hãng cạnh tranh hoàn hảo, MR = P, và MR là doanh thu từ đơn vị bán thêm."
+          "question": "Doanh thu cận biên:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Ràng buộc ngân sách xác định tập hợp các lựa chọn khả thi và tổng chi tiêu không vượt quá thu nhập.",
           "id": 1790955786573,
-          "question": "Giả định rằng không có tiết kiệm hay đi vay, và thu nhập của người tiêu dùng là cố định, ràng buộc ngân sách của người đó:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -208,13 +209,13 @@
               "text": "a và b."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Ràng buộc ngân sách xác định tập hợp các lựa chọn khả thi và tổng chi tiêu không vượt quá thu nhập."
+          "question": "Giả định rằng không có tiết kiệm hay đi vay, và thu nhập của người tiêu dùng là cố định, ràng buộc ngân sách của người đó:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Trong dài hạn, tất cả các yếu tố đầu vào đều là biến số.",
           "id": 1790955787835,
-          "question": "Sự khác nhau giữa ngắn hạn và dài hạn là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -237,13 +238,13 @@
               "text": "a và b."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Trong dài hạn, tất cả các yếu tố đầu vào đều là biến số."
+          "question": "Sự khác nhau giữa ngắn hạn và dài hạn là:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Sự di chuyển dọc đường cầu do hiệu ứng thay thế và sự thay đổi số lượng người tham gia thị trường.",
           "id": 1790955788773,
-          "question": "Khi giá tăng lượng cầu giảm dọc trên một đường cầu cá nhân vì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -266,13 +267,13 @@
               "text": "a và b."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Sự di chuyển dọc đường cầu do hiệu ứng thay thế và sự thay đổi số lượng người tham gia thị trường."
+          "question": "Khi giá tăng lượng cầu giảm dọc trên một đường cầu cá nhân vì:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Kinh tế học nghiên cứu cách phân bổ nguồn lực khan hiếm.",
           "id": 1790955789632,
-          "question": "Kinh tế học có thể định nghĩa là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -295,13 +296,13 @@
               "text": "Tất cả đều đúng."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Kinh tế học nghiên cứu cách phân bổ nguồn lực khan hiếm."
+          "question": "Kinh tế học có thể định nghĩa là:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Khi cầu không co dãn, sự giảm cung làm giá tăng mạnh hơn mức giảm lượng, dẫn đến tổng doanh thu tăng.",
           "id": 1790955790210,
-          "question": "Tại sao doanh thu của nông dân lại cao hơn trong những năm sản lượng thấp do thời tiết xấu?",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -324,13 +325,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Khi cầu không co dãn, sự giảm cung làm giá tăng mạnh hơn mức giảm lượng, dẫn đến tổng doanh thu tăng."
+          "question": "Tại sao doanh thu của nông dân lại cao hơn trong những năm sản lượng thấp do thời tiết xấu?"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Khi thu nhập tăng, đường ngân sách dịch chuyển song song ra ngoài.",
           "id": 1790955791189,
-          "question": "Khi thu nhập của người tiêu dùng tăng, ràng buộc ngân sách của người tiêu dùng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -353,13 +354,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Khi thu nhập tăng, đường ngân sách dịch chuyển song song ra ngoài."
+          "question": "Khi thu nhập của người tiêu dùng tăng, ràng buộc ngân sách của người tiêu dùng:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Hàng hóa cấp thấp là hàng hóa có cầu giảm khi thu nhập tăng.",
           "id": 1790955792329,
-          "question": "Nếu một hàng hóa được coi là “cấp thấp” thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -382,13 +383,13 @@
               "text": "Nếu giá hoặc thu nhập thay đổi sẽ không gây ra sự thay đổi trong tiêu dùng hàng hóa đó."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Hàng hóa cấp thấp là hàng hóa có cầu giảm khi thu nhập tăng."
+          "question": "Nếu một hàng hóa được coi là “cấp thấp” thì:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Sự khan hiếm buộc các cá nhân và hãng phải thực hiện lựa chọn.",
           "id": 1790955793247,
-          "question": "Các cá nhân và các hãng thực hiện sự lựa chọn vì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -411,13 +412,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Sự khan hiếm buộc các cá nhân và hãng phải thực hiện lựa chọn."
+          "question": "Các cá nhân và các hãng thực hiện sự lựa chọn vì:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "MC = ATC chỉ tại điểm cực tiểu của ATC, không phải mọi điểm.",
           "id": 1790955794866,
-          "question": "Câu nào không đúng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -440,13 +441,13 @@
               "text": "MC = ATC ở mọi điểm hàm ý ATC là đường thẳng."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "MC = ATC chỉ tại điểm cực tiểu của ATC, không phải mọi điểm."
+          "question": "Câu nào không đúng:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Kinh tế học chuẩn tắc mang tính chủ quan, đưa ra các nhận định về việc 'nên' làm gì.",
           "id": 1790955795722,
-          "question": "Ví dụ nào sau đây thuộc phạm vi nghiên cứu của kinh tế học chuẩn tắc:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -469,13 +470,13 @@
               "text": "Chính sách tiền tệ mở rộng sẽ làm giảm lãi suất."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Kinh tế học chuẩn tắc mang tính chủ quan, đưa ra các nhận định về việc 'nên' làm gì."
+          "question": "Ví dụ nào sau đây thuộc phạm vi nghiên cứu của kinh tế học chuẩn tắc:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Tiêu dùng tăng không làm tăng khả năng sản xuất của nền kinh tế.",
           "id": 1790955796469,
-          "question": "Đường giới hạn khả năng sản xuất của một nền kinh tế dịch chuyển ra ngoài do các yếu tố sau. Sự giải thích nào sai nếu có:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -498,13 +499,13 @@
               "text": "Tiêu dùng tăng."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Tiêu dùng tăng không làm tăng khả năng sản xuất của nền kinh tế."
+          "question": "Đường giới hạn khả năng sản xuất của một nền kinh tế dịch chuyển ra ngoài do các yếu tố sau. Sự giải thích nào sai nếu có:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Đường cầu cá nhân thể hiện số lượng hàng hóa người đó sẵn sàng mua tại các mức giá.",
           "id": 1790955797126,
-          "question": "Đường cầu cá nhân về một hàng hóa dịch vụ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -527,13 +528,13 @@
               "text": "a và c."
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Đường cầu cá nhân thể hiện số lượng hàng hóa người đó sẵn sàng mua tại các mức giá."
+          "question": "Đường cầu cá nhân về một hàng hóa dịch vụ:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Hàng hóa cấp thấp có thu nhập tăng thì cầu giảm.",
           "id": 1790955798880,
-          "question": "Nếu một hàng hóa được coi là “cấp thấp” thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -556,13 +557,13 @@
               "text": "Nếu giá hoặc thu nhập thay đổi sẽ không gây ra sự thay đổi trong tiêu dùng hàng hóa đó."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Hàng hóa cấp thấp có thu nhập tăng thì cầu giảm."
+          "question": "Nếu một hàng hóa được coi là “cấp thấp” thì:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Định nghĩa của co dãn của cầu theo thu nhập.",
           "id": 1790955799882,
-          "question": "Thay đổi phần trăm trong lượng cầu do thay đổi 1% tăng trong thu nhập gây ra là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -585,13 +586,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Định nghĩa của co dãn của cầu theo thu nhập."
+          "question": "Thay đổi phần trăm trong lượng cầu do thay đổi 1% tăng trong thu nhập gây ra là:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "MR = P đối với hãng cạnh tranh và là doanh thu từ đơn vị bán thêm.",
           "id": 1790955801018,
-          "question": "Doanh thu cận biên:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -614,13 +615,13 @@
               "text": "b và c."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "MR = P đối với hãng cạnh tranh và là doanh thu từ đơn vị bán thêm."
+          "question": "Doanh thu cận biên:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Hàng bổ sung hoàn hảo: giá B tăng làm cầu B giảm, kéo theo cầu A giảm, giá A giảm (theo lý thuyết cung cầu).",
           "id": 1790955801516,
-          "question": "Giả sử rằng hai hàng hóa A và B là bổ sung hoàn hảo cho nhau trong tiêu dùng và giá của hàng hóa B tăng cao do cung giảm. Hiện tượng nào sau đây sẽ xảy ra:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -643,13 +644,13 @@
               "text": "Giá của hàng hóa A sẽ có xu hướng giảm và lượng cầu sẽ có xu hướng tăng."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Hàng bổ sung hoàn hảo: giá B tăng làm cầu B giảm, kéo theo cầu A giảm, giá A giảm (theo lý thuyết cung cầu)."
+          "question": "Giả sử rằng hai hàng hóa A và B là bổ sung hoàn hảo cho nhau trong tiêu dùng và giá của hàng hóa B tăng cao do cung giảm. Hiện tượng nào sau đây sẽ xảy ra:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Co dãn > 1 (cầu co dãn), giá giảm làm tổng doanh thu tăng.",
           "id": 1790955802346,
-          "question": "Giả sử rằng co dãn của cầu theo giá là 1,5. Nếu giá giảm, tổng doanh thu sẽ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -672,13 +673,13 @@
               "text": "c và d"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Co dãn > 1 (cầu co dãn), giá giảm làm tổng doanh thu tăng."
+          "question": "Giả sử rằng co dãn của cầu theo giá là 1,5. Nếu giá giảm, tổng doanh thu sẽ:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Thay đổi công nghệ làm tăng năng suất, dịch chuyển đường giới hạn khả năng sản xuất.",
           "id": 1790955803845,
-          "question": "Sự dịch chuyển của đường giới hạn khả năng sản xuất là do:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -701,13 +702,13 @@
               "text": "Những thay đổi trong thị hiếu của người tiêu dùng."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Thay đổi công nghệ làm tăng năng suất, dịch chuyển đường giới hạn khả năng sản xuất."
+          "question": "Sự dịch chuyển của đường giới hạn khả năng sản xuất là do:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Đường cầu thẳng có độ dốc không đổi nhưng độ co dãn thay đổi dọc theo đường đó.",
           "id": 1790955804735,
-          "question": "Đường cầu là đường thẳng có tính chất nào trong các tính chất sau:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -730,13 +731,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Đường cầu thẳng có độ dốc không đổi nhưng độ co dãn thay đổi dọc theo đường đó."
+          "question": "Đường cầu là đường thẳng có tính chất nào trong các tính chất sau:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Cầu giảm khi thu nhập giảm là đặc điểm của hàng hóa bình thường, nhưng nếu đề bài hỏi về hàng cấp thấp thì cần xem xét kỹ; ở đây đáp án B là đúng về định nghĩa hàng cấp thấp.",
           "id": 1790955805144,
-          "question": "Nếu cầu về một hàng hóa giảm khi thu nhập giảm thì;",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -759,13 +760,13 @@
               "text": "b và c."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Cầu giảm khi thu nhập giảm là đặc điểm của hàng hóa bình thường, nhưng nếu đề bài hỏi về hàng cấp thấp thì cần xem xét kỹ; ở đây đáp án B là đúng về định nghĩa hàng cấp thấp."
+          "question": "Nếu cầu về một hàng hóa giảm khi thu nhập giảm thì;"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Độ dốc đường ngân sách = -Px/Py.",
           "id": 1790955806596,
-          "question": "Độ dốc của đường ngân sách phụ thuộc vào:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -788,13 +789,13 @@
               "text": "a và b"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Độ dốc đường ngân sách = -Px/Py."
+          "question": "Độ dốc của đường ngân sách phụ thuộc vào:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Lượng cầu phụ thuộc vào giá, thu nhập, thị hiếu, giá hàng thay thế/bổ sung, không phụ thuộc vào độ co dãn của cung.",
           "id": 1790955807788,
-          "question": "Số lượng hàng hóa mà một người muốn mua không phụ thuộc vào:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -817,13 +818,13 @@
               "text": "Độ co dãn của cung."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Lượng cầu phụ thuộc vào giá, thu nhập, thị hiếu, giá hàng thay thế/bổ sung, không phụ thuộc vào độ co dãn của cung."
+          "question": "Số lượng hàng hóa mà một người muốn mua không phụ thuộc vào:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Chi phí cơ hội là giá trị của phương án thay thế tốt nhất bị bỏ qua.",
           "id": 1790955809103,
-          "question": "Bạn bỏ ra một giờ để đi mua sắm và đã mua một cái áo 100 nghìn đồng. Chi phí cơ hội của cái áo là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -846,13 +847,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Chi phí cơ hội là giá trị của phương án thay thế tốt nhất bị bỏ qua."
+          "question": "Bạn bỏ ra một giờ để đi mua sắm và đã mua một cái áo 100 nghìn đồng. Chi phí cơ hội của cái áo là:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Hiệu suất tăng theo quy mô: sản lượng tăng nhiều hơn tỷ lệ tăng đầu vào.",
           "id": 1790955809769,
-          "question": "Hiệu suất tăng theo quy mô có nghĩa là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -875,13 +876,13 @@
               "text": "Quy luật hiệu suất giảm dần không đúng nữa."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Hiệu suất tăng theo quy mô: sản lượng tăng nhiều hơn tỷ lệ tăng đầu vào."
+          "question": "Hiệu suất tăng theo quy mô có nghĩa là:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Cầu thị trường là tổng theo chiều ngang các đường cầu cá nhân.",
           "id": 1790955810313,
-          "question": "Nếu biết đường cầu của các cá nhân, ta có thể tìm ra cầu thị trường bằng cách:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -904,13 +905,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Cầu thị trường là tổng theo chiều ngang các đường cầu cá nhân."
+          "question": "Nếu biết đường cầu của các cá nhân, ta có thể tìm ra cầu thị trường bằng cách:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Khan hiếm dẫn đến sự cần thiết phải lựa chọn.",
           "id": 1790955811310,
-          "question": "Tài nguyên khan hiếm nên:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -933,13 +934,13 @@
               "text": "Một số cá nhân phải nghèo."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Khan hiếm dẫn đến sự cần thiết phải lựa chọn."
+          "question": "Tài nguyên khan hiếm nên:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Đường chi phí trung bình dài hạn là đường bao phía dưới của các đường chi phí trung bình ngắn hạn.",
           "id": 1790955812985,
-          "question": "Đường chi phí trung bình dài hạn là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -962,13 +963,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Đường chi phí trung bình dài hạn là đường bao phía dưới của các đường chi phí trung bình ngắn hạn."
+          "question": "Đường chi phí trung bình dài hạn là:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Giá hàng này tăng làm cầu hàng kia tăng, đó là hàng thay thế.",
           "id": 1790955813488,
-          "question": "Nếu giá của hàng hóa tăng và cầu về một hàng hóa khác tăng thì các hàng hóa đó là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -991,13 +992,13 @@
               "text": "b và c."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Giá hàng này tăng làm cầu hàng kia tăng, đó là hàng thay thế."
+          "question": "Nếu giá của hàng hóa tăng và cầu về một hàng hóa khác tăng thì các hàng hóa đó là:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Nắng hạn làm giảm cung, đường cung dịch chuyển sang trái và lên trên.",
           "id": 1790955814677,
-          "question": "Nắng hạn có thể sẽ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1020,13 +1021,13 @@
               "text": "Làm giảm giá các hàng hóa thay thế cho gạo."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Nắng hạn làm giảm cung, đường cung dịch chuyển sang trái và lên trên."
+          "question": "Nắng hạn có thể sẽ:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Nếu cầu không co dãn, tăng cung làm giá giảm mạnh.",
           "id": 1790955815986,
-          "question": "Tăng cung sẽ làm giảm giá trừ khi:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1049,13 +1050,13 @@
               "text": "Cả cầu và cung đều không co dãn."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Nếu cầu không co dãn, tăng cung làm giá giảm mạnh."
+          "question": "Tăng cung sẽ làm giảm giá trừ khi:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Thay đổi giá của chính hàng hóa đó chỉ gây di chuyển dọc đường cầu, không làm dịch chuyển đường cầu.",
           "id": 1790955817004,
-          "question": "Bốn trong số năm sự kiện được mô tả dưới đây có thể làm dịch chuyển đường cầu về thịt bò đến một vị trí mới. Một sự kiện sẽ không làm dịch chuyển đường cầu về thịt bò, đó là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1078,13 +1079,13 @@
               "text": "Thay đổi trong thị hiếu của mọi người về thịt bò."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Thay đổi giá của chính hàng hóa đó chỉ gây di chuyển dọc đường cầu, không làm dịch chuyển đường cầu."
+          "question": "Bốn trong số năm sự kiện được mô tả dưới đây có thể làm dịch chuyển đường cầu về thịt bò đến một vị trí mới. Một sự kiện sẽ không làm dịch chuyển đường cầu về thịt bò, đó là:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Dài hạn là khoảng thời gian đủ để thay đổi tất cả các yếu tố đầu vào.",
           "id": 1790955817975,
-          "question": "Sự khác nhau giữa ngắn hạn và dài hạn là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1107,13 +1108,13 @@
               "text": "a và b."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Dài hạn là khoảng thời gian đủ để thay đổi tất cả các yếu tố đầu vào."
+          "question": "Sự khác nhau giữa ngắn hạn và dài hạn là:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Nếu tỷ trọng chi tiêu giảm khi thu nhập tăng, đó là hàng hóa cấp thấp (co dãn < 0).",
           "id": 1790955818456,
-          "question": "Nếu phần trăm thu nhập mà một cá nhân chi vào một hàng hóa giảm khi thu nhập của người đó tăng thì co dãn của cầu theo thu nhập:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1136,13 +1137,13 @@
               "text": "Không thể nói gì từ thông tin trên."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Nếu tỷ trọng chi tiêu giảm khi thu nhập tăng, đó là hàng hóa cấp thấp (co dãn < 0)."
+          "question": "Nếu phần trăm thu nhập mà một cá nhân chi vào một hàng hóa giảm khi thu nhập của người đó tăng thì co dãn của cầu theo thu nhập:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Thay đổi giá cà phê gây di chuyển dọc đường cầu, không dịch chuyển đường cầu.",
           "id": 1790955820075,
-          "question": "Yếu tố nào trong các yếu tố sau không làm dịch chuyển đường cầu về cà phê:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1165,13 +1166,13 @@
               "text": "Tất cả các yếu tố trên."
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Thay đổi giá cà phê gây di chuyển dọc đường cầu, không dịch chuyển đường cầu."
+          "question": "Yếu tố nào trong các yếu tố sau không làm dịch chuyển đường cầu về cà phê:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Cá và thịt là hàng thay thế, giá cá giảm làm cầu thịt giảm, dẫn đến giá thịt giảm.",
           "id": 1790955820311,
-          "question": "Cho cung về thịt là cố định, giảm giá cá sẽ dẫn đến:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1194,13 +1195,13 @@
               "text": "Giảm giá thịt."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Cá và thịt là hàng thay thế, giá cá giảm làm cầu thịt giảm, dẫn đến giá thịt giảm."
+          "question": "Cho cung về thịt là cố định, giảm giá cá sẽ dẫn đến:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Nhiều hàng thay thế làm cầu nhạy cảm hơn với giá.",
           "id": 1790955821996,
-          "question": "Lượng cầu nhạy cảm hơn đối với những thay đổi trong giá khi:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1223,13 +1224,13 @@
               "text": "Tất cả đều đúng."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Nhiều hàng thay thế làm cầu nhạy cảm hơn với giá."
+          "question": "Lượng cầu nhạy cảm hơn đối với những thay đổi trong giá khi:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Thu nhập tăng làm đường ngân sách dịch chuyển song song ra ngoài.",
           "id": 1790955822285,
-          "question": "Khi thu nhập của người tiêu dùng tăng, ràng buộc ngân sách của người tiêu dùng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1252,13 +1253,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Thu nhập tăng làm đường ngân sách dịch chuyển song song ra ngoài."
+          "question": "Khi thu nhập của người tiêu dùng tăng, ràng buộc ngân sách của người tiêu dùng:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Sự khan hiếm là vấn đề cốt lõi của kinh tế học.",
           "id": 1790955823380,
-          "question": "Chủ đề cơ bản nhất mà kinh tế học vi mô phải giải quyết là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1281,13 +1282,13 @@
               "text": "Sự khan hiếm."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Sự khan hiếm là vấn đề cốt lõi của kinh tế học."
+          "question": "Chủ đề cơ bản nhất mà kinh tế học vi mô phải giải quyết là:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Giá hàng này giảm làm cầu hàng kia tăng, đó là hàng bổ sung.",
           "id": 1790955824185,
-          "question": "Nếu giá của hàng hóa giảm và cầu về một hàng hóa khác tăng thì các hàng hóa đó là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1310,13 +1311,13 @@
               "text": "b và c."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Giá hàng này giảm làm cầu hàng kia tăng, đó là hàng bổ sung."
+          "question": "Nếu giá của hàng hóa giảm và cầu về một hàng hóa khác tăng thì các hàng hóa đó là:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Tối đa hóa lợi nhuận tại MR = MC.",
           "id": 1790955825196,
-          "question": "Để tối đa hóa lợi nhuận (hoặc tối thiểu hóa thua lỗ) hãng phải đảm bảo sản xuất ở mức sản lượng mà tại đó:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1339,13 +1340,13 @@
               "text": "Doanh thu cận biên đang giảm."
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Tối đa hóa lợi nhuận tại MR = MC."
+          "question": "Để tối đa hóa lợi nhuận (hoặc tối thiểu hóa thua lỗ) hãng phải đảm bảo sản xuất ở mức sản lượng mà tại đó:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Đường cung thị trường thể hiện hành vi của các người bán trong cạnh tranh hoàn hảo.",
           "id": 1790955827054,
-          "question": "Đường cung thị trường:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1368,13 +1369,13 @@
               "text": "Là đường có thể tìm ra chỉ nếu thị trường là thị trường quốc gia."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Đường cung thị trường thể hiện hành vi của các người bán trong cạnh tranh hoàn hảo."
+          "question": "Đường cung thị trường:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Đường giới hạn khả năng sản xuất minh họa sự đánh đổi giữa các hàng hóa.",
           "id": 1790955827209,
-          "question": "Đường giới hạn khả năng sản xuất:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1397,13 +1398,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Đường giới hạn khả năng sản xuất minh họa sự đánh đổi giữa các hàng hóa."
+          "question": "Đường giới hạn khả năng sản xuất:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Sản phẩm cận biên là sản lượng tăng thêm khi sử dụng thêm một đơn vị yếu tố sản xuất.",
           "id": 1790955828467,
-          "question": "Sản phẩm cận biên của một yếu tố sản xuất là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1426,13 +1427,13 @@
               "text": "a và c."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Sản phẩm cận biên là sản lượng tăng thêm khi sử dụng thêm một đơn vị yếu tố sản xuất."
+          "question": "Sản phẩm cận biên của một yếu tố sản xuất là:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Điều kiện tối ưu hóa tiêu dùng: MUx/Px = MUy/Py.",
           "id": 1790955829931,
-          "question": "Để tối đa hóa mức thỏa mãn, người tiêu dùng phải:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1455,13 +1456,13 @@
               "text": "Đảm bảo rằng giá của hàng hóa bằng lợi ích cận biên của tiền."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Điều kiện tối ưu hóa tiêu dùng: MUx/Px = MUy/Py."
+          "question": "Để tối đa hóa mức thỏa mãn, người tiêu dùng phải:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Trong nền kinh tế kế hoạch hóa tập trung, chính phủ quyết định mọi vấn đề.",
           "id": 1790955830953,
-          "question": "Trong nền kinh tế nào sau đây, Chính phủ giải quyết vấn đề cái gì được sản xuất ra, sản xuất như thế nào và sản xuất cho ai?",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1484,13 +1485,13 @@
               "text": "Tất cả các nền kinh tế trên."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Trong nền kinh tế kế hoạch hóa tập trung, chính phủ quyết định mọi vấn đề."
+          "question": "Trong nền kinh tế nào sau đây, Chính phủ giải quyết vấn đề cái gì được sản xuất ra, sản xuất như thế nào và sản xuất cho ai?"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Sự di chuyển dọc đường cầu do hiệu ứng thay thế và sự thay đổi số lượng người tham gia.",
           "id": 1790955831280,
-          "question": "Khi giá tăng lượng cầu giảm dọc trên một đường cầu cá nhân vì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1513,13 +1514,13 @@
               "text": "a và b."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Sự di chuyển dọc đường cầu do hiệu ứng thay thế và sự thay đổi số lượng người tham gia."
+          "question": "Khi giá tăng lượng cầu giảm dọc trên một đường cầu cá nhân vì:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Giảm giá yếu tố sản xuất làm tăng cung.",
           "id": 1790955833019,
-          "question": "Tăng cung hàng hóa X ở một mức giá xác định nào đó có thể do:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1542,13 +1543,13 @@
               "text": "Không yếu tố nào trong các yếu tố trên."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Giảm giá yếu tố sản xuất làm tăng cung."
+          "question": "Tăng cung hàng hóa X ở một mức giá xác định nào đó có thể do:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Giá hàng trên trục hoành giảm làm đường ngân sách quay ra ngoài, trở nên thoải hơn.",
           "id": 1790955833422,
-          "question": "Khi giá của một hàng hóa (biểu thị trên trục hoành) giảm thì ràng buộc ngân sách:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1571,13 +1572,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Giá hàng trên trục hoành giảm làm đường ngân sách quay ra ngoài, trở nên thoải hơn."
+          "question": "Khi giá của một hàng hóa (biểu thị trên trục hoành) giảm thì ràng buộc ngân sách:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Điểm cân bằng tiêu dùng là nơi đường ngân sách tiếp xúc với đường bàng quan cao nhất.",
           "id": 1790955834631,
-          "question": "Điều kiện cân bằng đối với người tiêu dùng là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1600,13 +1601,13 @@
               "text": "a và c."
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Điểm cân bằng tiêu dùng là nơi đường ngân sách tiếp xúc với đường bàng quan cao nhất."
+          "question": "Điều kiện cân bằng đối với người tiêu dùng là:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Hàng cấp thấp có cầu giảm khi thu nhập tăng.",
           "id": 1790955835817,
-          "question": "Nếu một hàng hóa được coi là “cấp thấp” thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1629,13 +1630,13 @@
               "text": "Nếu giá hoặc thu nhập thay đổi sẽ không gây ra sự thay đổi trong tiêu dùng hàng hóa đó."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Hàng cấp thấp có cầu giảm khi thu nhập tăng."
+          "question": "Nếu một hàng hóa được coi là “cấp thấp” thì:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Cầu giảm (dịch trái) và cung tăng (dịch phải) đều gây áp lực giảm giá.",
           "id": 1790955836647,
-          "question": "Đường cầu của ngành dịch chuyển nhanh sang trái khi đường cung dịch chuyển sang phải, có thể hy vọng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1658,13 +1659,13 @@
               "text": "Giá và lượng cầu tăng."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Cầu giảm (dịch trái) và cung tăng (dịch phải) đều gây áp lực giảm giá."
+          "question": "Đường cầu của ngành dịch chuyển nhanh sang trái khi đường cung dịch chuyển sang phải, có thể hy vọng:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Định nghĩa co dãn của cầu theo giá.",
           "id": 1790955837983,
-          "question": "Co dãn của cầu theo giá là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1687,13 +1688,13 @@
               "text": "Thay đổi phần trăm trong lượng cầu chia cho thay đổi phần trăm trong giá."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Định nghĩa co dãn của cầu theo giá."
+          "question": "Co dãn của cầu theo giá là:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Trong ngắn hạn, hãng tiếp tục sản xuất nếu P > AVC.",
           "id": 1790955838302,
-          "question": "Trong ngắn hạn hãng muốn tối đa hóa lợi nhuận (hoặc tối thiểu hóa thua lỗ) phải đảm bảo:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1716,13 +1717,13 @@
               "text": "Doanh thu trung bình lớn hơn chi phí trung bình."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Trong ngắn hạn, hãng tiếp tục sản xuất nếu P > AVC."
+          "question": "Trong ngắn hạn hãng muốn tối đa hóa lợi nhuận (hoặc tối thiểu hóa thua lỗ) phải đảm bảo:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Phân phối đề cập đến câu hỏi 'cho ai' trong kinh tế học.",
           "id": 1790955840122,
-          "question": "Trong kinh tế học, “phân phối” đề cập đến:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1745,13 +1746,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Phân phối đề cập đến câu hỏi 'cho ai' trong kinh tế học."
+          "question": "Trong kinh tế học, “phân phối” đề cập đến:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Cầu thị trường là tổng lượng cầu của các cá nhân tại mỗi mức giá.",
           "id": 1790955840410,
-          "question": "Nếu biết các đường cầu cá nhân của mỗi người tiêu dùng thì có thể tìm ra đường cầu thị trường bằng cách:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1774,13 +1775,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Cầu thị trường là tổng lượng cầu của các cá nhân tại mỗi mức giá."
+          "question": "Nếu biết các đường cầu cá nhân của mỗi người tiêu dùng thì có thể tìm ra đường cầu thị trường bằng cách:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Kinh tế học thực chứng mô tả các mối quan hệ nhân quả khách quan.",
           "id": 1790955841902,
-          "question": "Ví dụ nào sau đây thuộc kinh tế học thực chứng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1803,13 +1804,13 @@
               "text": "Ở các nước tư bản có quá nhiều sự bất bình đẳng kinh tế."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Kinh tế học thực chứng mô tả các mối quan hệ nhân quả khách quan."
+          "question": "Ví dụ nào sau đây thuộc kinh tế học thực chứng:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Tính kinh tế theo quy mô là chi phí trung bình giảm khi quy mô sản xuất tăng.",
           "id": 1790955842458,
-          "question": "Khái niệm tính kinh tế theo quy mô có nghĩa là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1832,13 +1833,13 @@
               "text": "c và d."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Tính kinh tế theo quy mô là chi phí trung bình giảm khi quy mô sản xuất tăng."
+          "question": "Khái niệm tính kinh tế theo quy mô có nghĩa là:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Cầu thị trường là tổng lượng cầu của các cá nhân tại mỗi mức giá.",
           "id": 1790955844000,
-          "question": "Nếu biết các đường cầu cá nhân của mỗi người tiêu dùng thì có thể tìm ra đường cầu thị trường bằng cách:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1861,13 +1862,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Cầu thị trường là tổng lượng cầu của các cá nhân tại mỗi mức giá."
+          "question": "Nếu biết các đường cầu cá nhân của mỗi người tiêu dùng thì có thể tìm ra đường cầu thị trường bằng cách:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Giá hàng trên trục hoành giảm làm đường ngân sách quay ra ngoài, trở nên thoải hơn.",
           "id": 1790955844889,
-          "question": "Khi giá của một hàng hóa (biểu thị trên trục hoành) giảm thì ràng buộc ngân sách:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1890,13 +1891,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Giá hàng trên trục hoành giảm làm đường ngân sách quay ra ngoài, trở nên thoải hơn."
+          "question": "Khi giá của một hàng hóa (biểu thị trên trục hoành) giảm thì ràng buộc ngân sách:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Co dãn = 1/3. Giá tăng 30% thì lượng cầu giảm 10% (30% * 1/3).",
           "id": 1790955845526,
-          "question": "Giả sử rằng co dãn của cầu theo giá là 1/3. Nếu giá tăng 30% thì lượng cầu sẽ thay đổi như thế nào?",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1919,13 +1920,13 @@
               "text": "Lượng cầu không thay đổi."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Co dãn = 1/3. Giá tăng 30% thì lượng cầu giảm 10% (30% * 1/3)."
+          "question": "Giả sử rằng co dãn của cầu theo giá là 1/3. Nếu giá tăng 30% thì lượng cầu sẽ thay đổi như thế nào?"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Tất cả các đặc điểm trên đều đúng với hàng hóa bình thường.",
           "id": 1790955846413,
-          "question": "Đối với hàng hóa bình thường, khi thu nhập tăng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1948,13 +1949,13 @@
               "text": "Tất cả đều đúng."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Tất cả các đặc điểm trên đều đúng với hàng hóa bình thường."
+          "question": "Đối với hàng hóa bình thường, khi thu nhập tăng:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Ràng buộc ngân sách xác định tập hợp cơ hội và giới hạn chi tiêu.",
           "id": 1790955847712,
-          "question": "Giả định rằng không có tiết kiệm hay đi vay, và thu nhập của người tiêu dùng là cố định, ràng buộc ngân sách của người đó:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -1977,13 +1978,13 @@
               "text": "a và b."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Ràng buộc ngân sách xác định tập hợp cơ hội và giới hạn chi tiêu."
+          "question": "Giả định rằng không có tiết kiệm hay đi vay, và thu nhập của người tiêu dùng là cố định, ràng buộc ngân sách của người đó:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Cầu giảm (trái) và cung tăng (phải) làm giá giảm, không phải tăng.",
           "id": 1790955848833,
-          "question": "Câu nào trong các câu sau sai? Giả định rằng đường cung dốc lên:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2006,13 +2007,13 @@
               "text": "Nếu đường cung dịch chuyển sang phải và cầu giữ nguyên, giá cân bằng sẽ giảm."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Cầu giảm (trái) và cung tăng (phải) làm giá giảm, không phải tăng."
+          "question": "Câu nào trong các câu sau sai? Giả định rằng đường cung dốc lên:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Trợ cấp là khoản thu, không phải chi phí sản xuất.",
           "id": 1790955849146,
-          "question": "Yếu tố nào dưới đây không phải là một yếu tố chi phí:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2035,13 +2036,13 @@
               "text": "Tất cả các yếu tố kể trên"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Trợ cấp là khoản thu, không phải chi phí sản xuất."
+          "question": "Yếu tố nào dưới đây không phải là một yếu tố chi phí:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Đổi mới công nghệ làm tăng năng suất, tăng tổng cung dài hạn.",
           "id": 1790955850331,
-          "question": "Những yếu tố nào sau đây có ảnh hưởng đến tổng cung dài hạn:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2064,13 +2065,13 @@
               "text": "Không có yếu tố nào kể trên"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Đổi mới công nghệ làm tăng năng suất, tăng tổng cung dài hạn."
+          "question": "Những yếu tố nào sau đây có ảnh hưởng đến tổng cung dài hạn:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "GDP = GNP + Thu nhập ròng từ nước ngoài. Nếu GDP > GNP thì thu nhập ròng từ nước ngoài âm.",
           "id": 1790955851569,
-          "question": "Nếu ở Việt Nam, GDP lớn hơn GNP thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2093,13 +2094,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "GDP = GNP + Thu nhập ròng từ nước ngoài. Nếu GDP > GNP thì thu nhập ròng từ nước ngoài âm."
+          "question": "Nếu ở Việt Nam, GDP lớn hơn GNP thì:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Hiệu ứng của cải: mức giá giảm làm tăng giá trị thực của tiền, tăng tiêu dùng.",
           "id": 1790955852424,
-          "question": "Một lý do làm cho đường tổng cầu có độ dốc âm là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2122,13 +2123,13 @@
               "text": "Không có yếu tố nào kể trên"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Hiệu ứng của cải: mức giá giảm làm tăng giá trị thực của tiền, tăng tiêu dùng."
+          "question": "Một lý do làm cho đường tổng cầu có độ dốc âm là:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "MPC = ΔC / ΔYd.",
           "id": 1790955854096,
-          "question": "Xu hướng tiêu dùng cận biên được tính bằng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2151,13 +2152,13 @@
               "text": "Sự thay đổi của tiêu dùng chia cho đầu tư"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "MPC = ΔC / ΔYd."
+          "question": "Xu hướng tiêu dùng cận biên được tính bằng:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Cầu tiền phụ thuộc vào thu nhập (giao dịch) và lãi suất (chi phí cơ hội).",
           "id": 1790955854896,
-          "question": "Hàm cầu tiền là hàm của:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2180,13 +2181,13 @@
               "text": "Không phải các yếu tố trên"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Cầu tiền phụ thuộc vào thu nhập (giao dịch) và lãi suất (chi phí cơ hội)."
+          "question": "Hàm cầu tiền là hàm của:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "CSTK mở làm tăng thu nhập, tăng cầu tiền, dẫn đến lãi suất tăng.",
           "id": 1790955855736,
-          "question": "Tác động của CSTK mở sẽ dẫn đến cầu tiền tệ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2209,13 +2210,13 @@
               "text": "Không đổi"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "CSTK mở làm tăng thu nhập, tăng cầu tiền, dẫn đến lãi suất tăng."
+          "question": "Tác động của CSTK mở sẽ dẫn đến cầu tiền tệ:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Tăng chi tiêu chính phủ làm tăng tổng cầu.",
           "id": 1790955856755,
-          "question": "Trên đồ thị, trục hoành ghi sản lượng quốc gia, trục tung ghi mức giá chung, đường tổng cầu AD dịch sang phải khi:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2238,13 +2239,13 @@
               "text": "Các lựa chọn đều sai"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Tăng chi tiêu chính phủ làm tăng tổng cầu."
+          "question": "Trên đồ thị, trục hoành ghi sản lượng quốc gia, trục tung ghi mức giá chung, đường tổng cầu AD dịch sang phải khi:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "GDP thực tế bình quân đầu người là chỉ tiêu phản ánh mức sống.",
           "id": 1790955857791,
-          "question": "Mức sống của dân cư một nước có thể được phản ánh bằng chỉ tiêu:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2267,13 +2268,13 @@
               "text": "Tất cả đều đúng"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "GDP thực tế bình quân đầu người là chỉ tiêu phản ánh mức sống."
+          "question": "Mức sống của dân cư một nước có thể được phản ánh bằng chỉ tiêu:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Mức giá tăng gấp đôi làm giá trị của tiền giảm một nửa.",
           "id": 1790955858877,
-          "question": "Nếu mức giá tăng gấp đôi",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2296,13 +2297,13 @@
               "text": "Các lựa chọn đều sai"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Mức giá tăng gấp đôi làm giá trị của tiền giảm một nửa."
+          "question": "Nếu mức giá tăng gấp đôi"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Thuế nhập khẩu tăng làm giảm nhập khẩu, nhưng cũng làm giảm tổng cầu do giá hàng hóa tăng.",
           "id": 1790955859692,
-          "question": "Khi chính phủ tăng thuế đánh vào hàng tiêu dùng nhập khẩu",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2325,13 +2326,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Thuế nhập khẩu tăng làm giảm nhập khẩu, nhưng cũng làm giảm tổng cầu do giá hàng hóa tăng."
+          "question": "Khi chính phủ tăng thuế đánh vào hàng tiêu dùng nhập khẩu"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Thu nhập khả dụng là phần thu nhập còn lại sau thuế, nhỏ nhất trong các chỉ tiêu.",
           "id": 1790955860674,
-          "question": "tiêu nào nhỏ nhất trong những chỉ tiêu đo lường sản lượng Quốc gia:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2354,13 +2355,13 @@
               "text": "Thu nhập cá nhân"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Thu nhập khả dụng là phần thu nhập còn lại sau thuế, nhỏ nhất trong các chỉ tiêu."
+          "question": "tiêu nào nhỏ nhất trong những chỉ tiêu đo lường sản lượng Quốc gia:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Trong nền kinh tế đóng, không có thu nhập từ nước ngoài, GDP = GNP.",
           "id": 1790955861637,
-          "question": "Trong nền kinh tế giản đơn và nền kinh tế đóng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2383,13 +2384,13 @@
               "text": "Không có câu nào đúng"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Trong nền kinh tế đóng, không có thu nhập từ nước ngoài, GDP = GNP."
+          "question": "Trong nền kinh tế giản đơn và nền kinh tế đóng:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Tất cả các công cụ trên đều làm giảm cung tiền.",
           "id": 1790955863068,
-          "question": "Để giảm cung ứng tiền tệ, NHTW sử dụng các công cụ nào sau đây:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2412,13 +2413,13 @@
               "text": "Không có câu nào đúng"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Tất cả các công cụ trên đều làm giảm cung tiền."
+          "question": "Để giảm cung ứng tiền tệ, NHTW sử dụng các công cụ nào sau đây:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Nhập khẩu tăng làm giảm tổng cầu, ít kích thích đầu tư hơn các yếu tố khác.",
           "id": 1790955863760,
-          "question": "Yếu tố nào trong các yếu tố sau đây ít có khả năng nhất trong việc kích thích sự gia tăng đầu tư:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2441,13 +2442,13 @@
               "text": "Tiến bộ công nghệ"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Nhập khẩu tăng làm giảm tổng cầu, ít kích thích đầu tư hơn các yếu tố khác."
+          "question": "Yếu tố nào trong các yếu tố sau đây ít có khả năng nhất trong việc kích thích sự gia tăng đầu tư:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Cân bằng dài hạn là nơi AD, AS ngắn hạn và AS dài hạn cắt nhau.",
           "id": 1790955864914,
-          "question": "Cân bằng dài hạn trong kinh tế học vĩ mô là điểm mà tại đó:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2470,13 +2471,13 @@
               "text": "Tất cả"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Cân bằng dài hạn là nơi AD, AS ngắn hạn và AS dài hạn cắt nhau."
+          "question": "Cân bằng dài hạn trong kinh tế học vĩ mô là điểm mà tại đó:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Nới lỏng tiền tệ là tăng cung tiền thông qua các công cụ của NHTW.",
           "id": 1790955866147,
-          "question": "Mở rộng tiền tệ (hoặc nới lỏng tiền tệ):",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2499,13 +2500,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Nới lỏng tiền tệ là tăng cung tiền thông qua các công cụ của NHTW."
+          "question": "Mở rộng tiền tệ (hoặc nới lỏng tiền tệ):"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Tăng cung tiền làm tăng tổng cầu (AD dịch phải).",
           "id": 1790955867091,
-          "question": "Sự gia tăng cung ứng tiền tệ khi mọi yếu tố khác không đổi, thì đường AD sẽ :",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2528,13 +2529,13 @@
               "text": "Không đổi"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Tăng cung tiền làm tăng tổng cầu (AD dịch phải)."
+          "question": "Sự gia tăng cung ứng tiền tệ khi mọi yếu tố khác không đổi, thì đường AD sẽ :"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "(18635 - 18073) / 18073 ≈ 3.1% (gần nhất là 3.0%).",
           "id": 1790955867702,
-          "question": "Nếu GDP bình quân thực tế của năm 2000 là 18,073$ và GDP bình quân thực tế của năm 2001 là 18,635$ thì tỷ lệ tăng trưởng của sản lượng thực tế trong thời kỳ này là bao nhiêu?",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2557,13 +2558,13 @@
               "text": "18.6%"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "(18635 - 18073) / 18073 ≈ 3.1% (gần nhất là 3.0%)."
+          "question": "Nếu GDP bình quân thực tế của năm 2000 là 18,073$ và GDP bình quân thực tế của năm 2001 là 18,635$ thì tỷ lệ tăng trưởng của sản lượng thực tế trong thời kỳ này là bao nhiêu?"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "CSTK mở làm tăng lãi suất, CSTT chặt làm tăng lãi suất, nên lãi suất chắc chắn tăng.",
           "id": 1790955868344,
-          "question": "Trong mô hình IS - LM, nếu Chính phủ đồng thời áp dụng chính sách tài khóa mở và chính sách tiền tệ chặt, thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2586,13 +2587,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "CSTK mở làm tăng lãi suất, CSTT chặt làm tăng lãi suất, nên lãi suất chắc chắn tăng."
+          "question": "Trong mô hình IS - LM, nếu Chính phủ đồng thời áp dụng chính sách tài khóa mở và chính sách tiền tệ chặt, thì:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Để giảm lạm phát, cần giảm tổng cầu bằng cách giảm cung tiền và giảm chi tiêu chính phủ.",
           "id": 1790955869218,
-          "question": "Khi nền kinh tế đang có lạm phát cao, nên:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2615,13 +2616,13 @@
               "text": "a và c"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Để giảm lạm phát, cần giảm tổng cầu bằng cách giảm cung tiền và giảm chi tiêu chính phủ."
+          "question": "Khi nền kinh tế đang có lạm phát cao, nên:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Thu nhập giảm làm giảm cầu tiền giao dịch, dẫn đến cầu tiền giảm.",
           "id": 1790955870286,
-          "question": "Khi thu nhập giảm xuống trong điều kiện lượng cung tiền không thay đổi, thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2644,13 +2645,13 @@
               "text": "Lãi suất cân bằng không thay đổi"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Thu nhập giảm làm giảm cầu tiền giao dịch, dẫn đến cầu tiền giảm."
+          "question": "Khi thu nhập giảm xuống trong điều kiện lượng cung tiền không thay đổi, thì:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Bộ đội xuất ngũ là người có khả năng lao động và đang tìm việc.",
           "id": 1790955871923,
-          "question": "Thành phần nào sau đây thuộc lực lượng lao động:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2673,13 +2674,13 @@
               "text": "Không có câu nào đúng"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Bộ đội xuất ngũ là người có khả năng lao động và đang tìm việc."
+          "question": "Thành phần nào sau đây thuộc lực lượng lao động:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "M1 bao gồm tiền mặt và tiền gửi không kỳ hạn.",
           "id": 1790955872610,
-          "question": "Khối lượng tiền M1 bao gồm:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2702,13 +2703,13 @@
               "text": "Tiền mặt, vàng, ngoại tệ và trái phiếu Chính phủ"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "M1 bao gồm tiền mặt và tiền gửi không kỳ hạn."
+          "question": "Khối lượng tiền M1 bao gồm:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Tiết kiệm = Thu nhập khả dụng - Tiêu dùng. Nếu tiêu dùng > thu nhập thì tiết kiệm âm.",
           "id": 1790955874141,
-          "question": "Tiết kiệm âm khi hộ gia đình:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2731,13 +2732,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Tiết kiệm = Thu nhập khả dụng - Tiêu dùng. Nếu tiêu dùng > thu nhập thì tiết kiệm âm."
+          "question": "Tiết kiệm âm khi hộ gia đình:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Tốc độ tăng trưởng kinh tế tính bằng GDP thực tế.",
           "id": 1790955875068,
-          "question": "Để tính tốc độ tăng trưởng kinh tế giữa các thời kỳ, người ta sử dụng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2760,13 +2761,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Tốc độ tăng trưởng kinh tế tính bằng GDP thực tế."
+          "question": "Để tính tốc độ tăng trưởng kinh tế giữa các thời kỳ, người ta sử dụng:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Tất cả các yếu tố tăng chi tiêu đều làm AD dịch phải.",
           "id": 1790955875492,
-          "question": "Trên đồ thị, trục hoành ghi sản lượng quốc gia, trục tung ghi mức giá chung, đường tổng cầu AD dịch sang phải khi:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2789,13 +2790,13 @@
               "text": "Các lựa chọn đều sai"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Tất cả các yếu tố tăng chi tiêu đều làm AD dịch phải."
+          "question": "Trên đồ thị, trục hoành ghi sản lượng quốc gia, trục tung ghi mức giá chung, đường tổng cầu AD dịch sang phải khi:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "GDP thực tế theo giá năm cơ sở, GDP danh nghĩa theo giá năm hiện hành.",
           "id": 1790955876563,
-          "question": "GDP thực tế đo lường theo mức giá......, còn GDP danh nghĩa đo lường theo mức giá......",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2818,13 +2819,13 @@
               "text": "Không có câu nào đúng"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "GDP thực tế theo giá năm cơ sở, GDP danh nghĩa theo giá năm hiện hành."
+          "question": "GDP thực tế đo lường theo mức giá......, còn GDP danh nghĩa đo lường theo mức giá......"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "GDP chỉ tính giá trị hàng hóa cuối cùng (500$).",
           "id": 1790955877941,
-          "question": "Nếu một người thợ giày mua một miếng da trị giá 100$, một cuộn chỉ trị giá 50$, và sử dụng chúng để sản xuất và bán những đôi giày trị giá 500$ cho người tiêu dùng, giá trị đóng góp vào GDP là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2847,13 +2848,13 @@
               "text": "650$"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "GDP chỉ tính giá trị hàng hóa cuối cùng (500$)."
+          "question": "Nếu một người thợ giày mua một miếng da trị giá 100$, một cuộn chỉ trị giá 50$, và sử dụng chúng để sản xuất và bán những đôi giày trị giá 500$ cho người tiêu dùng, giá trị đóng góp vào GDP là:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Sản lượng tiềm năng là mức sản lượng tại tỷ lệ thất nghiệp tự nhiên.",
           "id": 1790955878253,
-          "question": "Sản lượng tiềm năng là mức sản lượng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2876,13 +2877,13 @@
               "text": "Tất cả các điều kể trên"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Sản lượng tiềm năng là mức sản lượng tại tỷ lệ thất nghiệp tự nhiên."
+          "question": "Sản lượng tiềm năng là mức sản lượng:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "GNP thực tính theo giá cố định, không phải giá hiện hành.",
           "id": 1790955880042,
-          "question": "Yếu tố nào sau đây không phải là tính chất của GNP thực:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2905,13 +2906,13 @@
               "text": "Tính theo giá hiện hành"
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "GNP thực tính theo giá cố định, không phải giá hiện hành."
+          "question": "Yếu tố nào sau đây không phải là tính chất của GNP thực:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Số nhân phản ánh sự thay đổi của sản lượng khi tổng cầu tự định thay đổi.",
           "id": 1790955880982,
-          "question": "Số nhân của tổng cầu phản ánh:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2934,13 +2935,13 @@
               "text": "Không câu nào đúng."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Số nhân phản ánh sự thay đổi của sản lượng khi tổng cầu tự định thay đổi."
+          "question": "Số nhân của tổng cầu phản ánh:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "GDP chỉ tính hàng hóa mới sản xuất trong kỳ.",
           "id": 1790955881894,
-          "question": "Khoản nào sau đây không được tính vào GDP của Việt Nam:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2963,13 +2964,13 @@
               "text": "Tất cả"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "GDP chỉ tính hàng hóa mới sản xuất trong kỳ."
+          "question": "Khoản nào sau đây không được tính vào GDP của Việt Nam:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Nhập khẩu tăng làm giảm tổng cầu, dịch chuyển IS sang trái.",
           "id": 1790955883090,
-          "question": "Một sự gia tăng trong nhập khẩu tự định sẽ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -2992,13 +2993,13 @@
               "text": "Không ảnh hưởng đến đường IS"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Nhập khẩu tăng làm giảm tổng cầu, dịch chuyển IS sang trái."
+          "question": "Một sự gia tăng trong nhập khẩu tự định sẽ:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "CSTK mở làm tăng thu nhập, tăng cầu tiền, tăng lãi suất.",
           "id": 1790955884031,
-          "question": "Tác động của CSTK mở sẽ dẫn đến cầu tiền tệ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3021,13 +3022,13 @@
               "text": "Không đổi"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "CSTK mở làm tăng thu nhập, tăng cầu tiền, tăng lãi suất."
+          "question": "Tác động của CSTK mở sẽ dẫn đến cầu tiền tệ:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "AD phản ánh quan hệ giữa mức giá chung và GDP thực tế.",
           "id": 1790955885093,
-          "question": "Trong mô hình AD - AS, đường tổng cầu phản ánh quan hệ giữa :",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3050,13 +3051,13 @@
               "text": "Tất cả."
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "AD phản ánh quan hệ giữa mức giá chung và GDP thực tế."
+          "question": "Trong mô hình AD - AS, đường tổng cầu phản ánh quan hệ giữa :"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Tăng trưởng kép làm khoảng cách giữa hai nước tăng dần theo thời gian.",
           "id": 1790955886156,
-          "question": "Nếu hai nước cùng khởi đầu với mức GDP bình quân đầu người như nhau, và một nước tăng trưởng với tốc độ 2%/năm còn một nước tăng trưởng 4%/năm",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3079,13 +3080,13 @@
               "text": "Tất cả đều đúng"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Tăng trưởng kép làm khoảng cách giữa hai nước tăng dần theo thời gian."
+          "question": "Nếu hai nước cùng khởi đầu với mức GDP bình quân đầu người như nhau, và một nước tăng trưởng với tốc độ 2%/năm còn một nước tăng trưởng 4%/năm"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Cả hai chính sách đều làm giảm tổng cầu, dịch chuyển AD sang trái.",
           "id": 1790955886431,
-          "question": "Thực hiện chính sách tài khóa chặt và tiền tệ chặt sẽ làm cho :",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3108,13 +3109,13 @@
               "text": "Đường AD dịch chuyển sang phải và đường AS dịch chuyển sang phải"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Cả hai chính sách đều làm giảm tổng cầu, dịch chuyển AD sang trái."
+          "question": "Thực hiện chính sách tài khóa chặt và tiền tệ chặt sẽ làm cho :"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "GNP đo lường thu nhập của công dân một nước bất kể ở đâu.",
           "id": 1790955887986,
-          "question": "GNP đo lường giá trị sản xuất và thu nhập được tạo ra bởi:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3137,13 +3138,13 @@
               "text": "Riêng khu vực chế tạo trong nước"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "GNP đo lường thu nhập của công dân một nước bất kể ở đâu."
+          "question": "GNP đo lường giá trị sản xuất và thu nhập được tạo ra bởi:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Thu nhập tăng làm tiêu dùng tăng.",
           "id": 1790955888283,
-          "question": "Khi thu nhập tăng, tổng chi tiêu:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3166,13 +3167,13 @@
               "text": "Tăng hay giảm phụ thuộc vào sự thay đổi của các yếu tố khác ngoài giá cả hàng hóa."
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Thu nhập tăng làm tiêu dùng tăng."
+          "question": "Khi thu nhập tăng, tổng chi tiêu:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "",
           "id": 1790955889533,
-          "question": "Các nhà kinh tế học cổ điển cho rằng đường tổng cung AS:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3195,13 +3196,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": ""
+          "question": "Các nhà kinh tế học cổ điển cho rằng đường tổng cung AS:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Tiền bao gồm tất cả các phương tiện thanh toán được chấp nhận.",
           "id": 1790955890511,
-          "question": "Tiền là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3224,13 +3225,13 @@
               "text": "Tất cả"
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Tiền bao gồm tất cả các phương tiện thanh toán được chấp nhận."
+          "question": "Tiền là:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Tỷ lệ tiết kiệm và đầu tư cao là động lực tăng trưởng chính.",
           "id": 1790955891243,
-          "question": "Nhiều nước Đông Á đang tăng trưởng rất nhanh vì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3253,13 +3254,13 @@
               "text": "Không có câu trả lời nào đúng"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Tỷ lệ tiết kiệm và đầu tư cao là động lực tăng trưởng chính."
+          "question": "Nhiều nước Đông Á đang tăng trưởng rất nhanh vì:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Trong nền kinh tế đóng, đầu tư bằng tiết kiệm (I = S).",
           "id": 1790955892499,
-          "question": "Trong một nền kinh tế đóng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3282,13 +3283,13 @@
               "text": "Chi tiêu cho đầu tư bằng tiết kiệm của nền kinh tế"
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Trong nền kinh tế đóng, đầu tư bằng tiết kiệm (I = S)."
+          "question": "Trong một nền kinh tế đóng:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Khoảng cách dịch chuyển IS = Δ(I+G+X) * số nhân.",
           "id": 1790955893756,
-          "question": "Khoảng cách dịch chuyển của đường IS được xác định bằng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3311,13 +3312,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Khoảng cách dịch chuyển IS = Δ(I+G+X) * số nhân."
+          "question": "Khoảng cách dịch chuyển của đường IS được xác định bằng:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Toàn dụng lao động vẫn tồn tại thất nghiệp tự nhiên và lạm phát.",
           "id": 1790955894784,
-          "question": "Khi nền kinh tế đạt được mức toàn dụng, điều đó có nghĩa là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3340,13 +3341,13 @@
               "text": "Các lựa chọn đều sai"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Toàn dụng lao động vẫn tồn tại thất nghiệp tự nhiên và lạm phát."
+          "question": "Khi nền kinh tế đạt được mức toàn dụng, điều đó có nghĩa là:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "GDP danh nghĩa tính theo giá hiện hành, không phải giá cố định.",
           "id": 1790955895741,
-          "question": "Yếu tố nào sau đâu không phải là tính chất của GDP danh nghĩa:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3373,13 +3374,13 @@
               "text": "Không tính giá trị của các sản phẩm trung gian"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "GDP danh nghĩa tính theo giá hiện hành, không phải giá cố định."
+          "question": "Yếu tố nào sau đâu không phải là tính chất của GDP danh nghĩa:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Thu nhập khả dụng là chỉ tiêu nhỏ nhất.",
           "id": 1790955896699,
-          "question": "Chỉ tiêu nào nhỏ nhất trong những chỉ tiêu đo lường sản lượng Quốc gia:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3402,13 +3403,13 @@
               "text": "Thu nhập cá nhân"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Thu nhập khả dụng là chỉ tiêu nhỏ nhất."
+          "question": "Chỉ tiêu nào nhỏ nhất trong những chỉ tiêu đo lường sản lượng Quốc gia:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "GDP và GNP khác nhau ở thu nhập tài sản ròng từ nước ngoài.",
           "id": 1790955897807,
-          "question": "Trong nền kinh tế mở:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3431,13 +3432,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "GDP và GNP khác nhau ở thu nhập tài sản ròng từ nước ngoài."
+          "question": "Trong nền kinh tế mở:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "MS = MD => 400 = 200 - 100i + 20Y => 100i = 20Y - 200 => i = 0.2Y - 2.",
           "id": 1790955899123,
-          "question": "Giả sử cho hàm cầu tiền là MD = 200-100i +20Y, hàm MS = 400. Vậy phương trình đường LM:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3460,13 +3461,13 @@
               "text": "i = 2 - 0,2Y"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "MS = MD => 400 = 200 - 100i + 20Y => 100i = 20Y - 200 => i = 0.2Y - 2."
+          "question": "Giả sử cho hàm cầu tiền là MD = 200-100i +20Y, hàm MS = 400. Vậy phương trình đường LM:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Tất cả các công cụ trên đều làm giảm cung tiền.",
           "id": 1790955899183,
-          "question": "Để giảm cung ứng tiền tệ, NHTW sử dụng các công cụ nào sau đây:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3489,13 +3490,13 @@
               "text": "Tất cả đều đúng"
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Tất cả các công cụ trên đều làm giảm cung tiền."
+          "question": "Để giảm cung ứng tiền tệ, NHTW sử dụng các công cụ nào sau đây:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Thay đổi cung tiền làm đường LM dịch chuyển, không phải IS.",
           "id": 1790955900995,
-          "question": "Nếu NHTW gia tăng cung ứng tiền tệ thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3518,13 +3519,13 @@
               "text": "Đường IS và LM không đổi."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Thay đổi cung tiền làm đường LM dịch chuyển, không phải IS."
+          "question": "Nếu NHTW gia tăng cung ứng tiền tệ thì:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Giảm thuế làm tăng thu nhập khả dụng, tăng tiêu dùng, tăng tổng cầu.",
           "id": 1790955901627,
-          "question": "Chính sách giảm thuế của chính phủ sẽ làm:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3547,13 +3548,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Giảm thuế làm tăng thu nhập khả dụng, tăng tiêu dùng, tăng tổng cầu."
+          "question": "Chính sách giảm thuế của chính phủ sẽ làm:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Tăng cung tiền làm đường LM dịch chuyển sang phải.",
           "id": 1790955902733,
-          "question": "Nếu ngân hàng trung ương lµm cho lượng cung tiền gia tăng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3576,13 +3577,13 @@
               "text": "Đường LM dịch chuyển sang phải."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Tăng cung tiền làm đường LM dịch chuyển sang phải."
+          "question": "Nếu ngân hàng trung ương lµm cho lượng cung tiền gia tăng:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Tăng thuế làm giảm thu nhập khả dụng, giảm tiêu dùng, dịch chuyển IS sang trái.",
           "id": 1790955904077,
-          "question": "Chính sách gia tăng thuế của chính phủ sẽ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3605,13 +3606,13 @@
               "text": "Có sự di chuyển dọc đường IS."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Tăng thuế làm giảm thu nhập khả dụng, giảm tiêu dùng, dịch chuyển IS sang trái."
+          "question": "Chính sách gia tăng thuế của chính phủ sẽ:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "GNP thực tính theo giá cố định, không phải giá hiện hành.",
           "id": 1790955904397,
-          "question": "Yếu tố nào sau đây không phải là tính chất của GNP thực:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3634,13 +3635,13 @@
               "text": "Không cho phép tính giá trị hàng hóa trung gian"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "GNP thực tính theo giá cố định, không phải giá hiện hành."
+          "question": "Yếu tố nào sau đây không phải là tính chất của GNP thực:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Trong nền kinh tế giản đơn và đóng, GDP = GNP.",
           "id": 1790955905796,
-          "question": "Trong nền kinh tế giản đơn và nền kinh tế đóng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3663,13 +3664,13 @@
               "text": "Sự thay đổi của tiêu dùng chia cho tiết kiệm"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Trong nền kinh tế giản đơn và đóng, GDP = GNP."
+          "question": "Trong nền kinh tế giản đơn và nền kinh tế đóng:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Điểm vừa đủ là nơi tiêu dùng bằng thu nhập khả dụng (tiết kiệm bằng 0).",
           "id": 1790955906970,
-          "question": "“Điểm vừa đủ” trên đường tiêu dùng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3692,13 +3693,13 @@
               "text": "Tiêu dùng của các hộ gia đình lớn hơn tiết kiệm"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Điểm vừa đủ là nơi tiêu dùng bằng thu nhập khả dụng (tiết kiệm bằng 0)."
+          "question": "“Điểm vừa đủ” trên đường tiêu dùng:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "M1 bao gồm tiền mặt và tiền gửi không kỳ hạn.",
           "id": 1790955907572,
-          "question": "Khối lượng tiền M1 bao gồm:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3721,13 +3722,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "M1 bao gồm tiền mặt và tiền gửi không kỳ hạn."
+          "question": "Khối lượng tiền M1 bao gồm:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Cầu tiền giao dịch và dự phòng phụ thuộc chủ yếu vào thu nhập.",
           "id": 1790955908459,
-          "question": "Yếu tố nào có thể ảnh hưởng đến cầu tiền giao dịch và dự phòng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3750,13 +3751,13 @@
               "text": "Không phải những điều kể trên"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Cầu tiền giao dịch và dự phòng phụ thuộc chủ yếu vào thu nhập."
+          "question": "Yếu tố nào có thể ảnh hưởng đến cầu tiền giao dịch và dự phòng:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Số nhân tiền tỷ lệ nghịch với tỷ lệ dự trữ và tỷ lệ tiền mặt.",
           "id": 1790955909436,
-          "question": "Số nhân tiền có mối quan hệ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3779,13 +3780,13 @@
               "text": "Tất cả đều đúng"
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Số nhân tiền tỷ lệ nghịch với tỷ lệ dự trữ và tỷ lệ tiền mặt."
+          "question": "Số nhân tiền có mối quan hệ:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "CSTK mở làm IS dịch phải, tăng lãi suất, giảm đầu tư (lấn át).",
           "id": 1790955910445,
-          "question": "Trong mô hình IS-LM, chính sách  tài chính mở rộng dẫn đến",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3808,13 +3809,13 @@
               "text": "Đường IS dịch chuyển sang phải và lãi suất tăng, đầu tư giảm."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "CSTK mở làm IS dịch phải, tăng lãi suất, giảm đầu tư (lấn át)."
+          "question": "Trong mô hình IS-LM, chính sách  tài chính mở rộng dẫn đến"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Độ dốc IS lớn làm chính sách tài khóa ít tác động đến sản lượng hơn.",
           "id": 1790955911643,
-          "question": "Câu nào dưới đây không đúng ?",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3837,13 +3838,13 @@
               "text": "Đường IS có độ dốc càng nhỏ thì chính sách tiền tệ càng tác động mạnh đến sản lượng."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Độ dốc IS lớn làm chính sách tài khóa ít tác động đến sản lượng hơn."
+          "question": "Câu nào dưới đây không đúng ?"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "MS thực = 1200/2 = 600. 600 = 1000 - 100i => 100i = 400 => i = 4%.",
           "id": 1790955912552,
-          "question": "Giả sử hàm cầu tiền thực tế có dạng: MD= 1000 - 100i. Trong đó i là lãi suất tính bằng phần trăm. Cung tiền danh nghĩa là 1200, mức giá là 2. Cung tiền thực tế và lãi suất cân bằng là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3866,13 +3867,13 @@
               "text": "MS= 60 và i = 10%"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "MS thực = 1200/2 = 600. 600 = 1000 - 100i => 100i = 400 => i = 4%."
+          "question": "Giả sử hàm cầu tiền thực tế có dạng: MD= 1000 - 100i. Trong đó i là lãi suất tính bằng phần trăm. Cung tiền danh nghĩa là 1200, mức giá là 2. Cung tiền thực tế và lãi suất cân bằng là:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Chi tiêu chính phủ cho hàng hóa và dịch vụ cuối cùng được tính vào GDP.",
           "id": 1790955913617,
-          "question": "Khoản nào trong các khoản chi tiêu sau của chính phủ được coi là một phần của GDP?",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3895,13 +3896,13 @@
               "text": "Trợ cấp thất nghiệp"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Chi tiêu chính phủ cho hàng hóa và dịch vụ cuối cùng được tính vào GDP."
+          "question": "Khoản nào trong các khoản chi tiêu sau của chính phủ được coi là một phần của GDP?"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Tăng cung tiền làm tăng tổng cầu (AD dịch phải).",
           "id": 1790955914360,
-          "question": "Sự gia tăng cung ứng tiền tệ khi mọi yếu tố khác không đổi, thì đường AD sẽ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3924,13 +3925,13 @@
               "text": "Không đổi"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Tăng cung tiền làm tăng tổng cầu (AD dịch phải)."
+          "question": "Sự gia tăng cung ứng tiền tệ khi mọi yếu tố khác không đổi, thì đường AD sẽ:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "CSTK mở làm tăng Y, CSTT chặt làm giảm Y, kết quả Y không chắc chắn.",
           "id": 1790955915793,
-          "question": "Trong mô hình IS - LM, nếu Chính phủ đồng thời áp dụng CSTK mở và CSTT chặt, thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3953,13 +3954,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "CSTK mở làm tăng Y, CSTT chặt làm giảm Y, kết quả Y không chắc chắn."
+          "question": "Trong mô hình IS - LM, nếu Chính phủ đồng thời áp dụng CSTK mở và CSTT chặt, thì:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Thu nhập giảm làm cầu tiền giảm, lãi suất cân bằng giảm.",
           "id": 1790955917044,
-          "question": "Khi thu nhập giảm xuống trong điều kiện lượng cung tiền không thay đổi, thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -3982,13 +3983,13 @@
               "text": "Lãi suất cân bằng không thay đổi"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Thu nhập giảm làm cầu tiền giảm, lãi suất cân bằng giảm."
+          "question": "Khi thu nhập giảm xuống trong điều kiện lượng cung tiền không thay đổi, thì:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "GDP > GNP nghĩa là thu nhập của người nước ngoài tại VN > thu nhập của người VN ở nước ngoài.",
           "id": 1790955917916,
-          "question": "Nếu ở Việt Nam, GDP lớn hơn GNP thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4011,13 +4012,13 @@
               "text": "Không thể kết luận về mối quan hệ giữa GDP và GNP"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "GDP > GNP nghĩa là thu nhập của người nước ngoài tại VN > thu nhập của người VN ở nước ngoài."
+          "question": "Nếu ở Việt Nam, GDP lớn hơn GNP thì:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "IS thẳng đứng nghĩa là đầu tư không phụ thuộc lãi suất, CSTT không tác động đến Y.",
           "id": 1790955918827,
-          "question": "Nếu đường IS có dạng thẳng đứng thì",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4040,13 +4041,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "IS thẳng đứng nghĩa là đầu tư không phụ thuộc lãi suất, CSTT không tác động đến Y."
+          "question": "Nếu đường IS có dạng thẳng đứng thì"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Giảm tỷ lệ dự trữ bắt buộc làm tăng số nhân tiền.",
           "id": 1790955919425,
-          "question": "Biện pháp cắt giảm tỷ lệ dự trữ bắt buộc sẽ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4069,13 +4070,13 @@
               "text": "Không phải những điều kể trên"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Giảm tỷ lệ dự trữ bắt buộc làm tăng số nhân tiền."
+          "question": "Biện pháp cắt giảm tỷ lệ dự trữ bắt buộc sẽ:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "IS: Y = C+I+G = 200+0.75(Y-100) + 225-25i + 75 => Y = 1700-100i. LM: Y-100i = 600 => Y = 600+100i.",
           "id": 1790955920315,
-          "question": "Thị trường hàng hóa và tiền tệ của một nền kinh tế đóng được mô tả như sau: Tiêu dùng C = 200 + 0,75(Y – T) Đầu tư: I = 225 – 25i Chi tiêu của chính phủ: G = 75 Thuế ròng: T = 100 Cung tiền thực tế MS = 600 Cầu tiền thực tế MD = Y – 100i Phương trình biểu diễn đường IS và LM lần lượt là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4098,13 +4099,13 @@
               "text": "Không có câu nào đúng"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "IS: Y = C+I+G = 200+0.75(Y-100) + 225-25i + 75 => Y = 1700-100i. LM: Y-100i = 600 => Y = 600+100i."
+          "question": "Thị trường hàng hóa và tiền tệ của một nền kinh tế đóng được mô tả như sau: Tiêu dùng C = 200 + 0,75(Y – T) Đầu tư: I = 225 – 25i Chi tiêu của chính phủ: G = 75 Thuế ròng: T = 100 Cung tiền thực tế MS = 600 Cầu tiền thực tế MD = Y – 100i Phương trình biểu diễn đường IS và LM lần lượt là:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Khi Y < Yp, cần kích cầu bằng CSTK hoặc CSTT mở rộng.",
           "id": 1790955921977,
-          "question": "Trong mô hình IS -LM, khi sản lượng thấp hơn mức tiềm năng, chính phủ nên áp dụng",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4127,13 +4128,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Khi Y < Yp, cần kích cầu bằng CSTK hoặc CSTT mở rộng."
+          "question": "Trong mô hình IS -LM, khi sản lượng thấp hơn mức tiềm năng, chính phủ nên áp dụng"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Tăng thuế làm giảm thu nhập khả dụng, giảm tiêu dùng, giảm đầu tư, giảm lãi suất.",
           "id": 1790955922434,
-          "question": "Khi chính phủ tăng thuế, điều gì sẽ xảy ra?",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4156,13 +4157,13 @@
               "text": "Cả tiêu dùng, đầu tư và lãi suất thực tế đều tăng."
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Tăng thuế làm giảm thu nhập khả dụng, giảm tiêu dùng, giảm đầu tư, giảm lãi suất."
+          "question": "Khi chính phủ tăng thuế, điều gì sẽ xảy ra?"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "IS: Y = 1700-100i. LM: Y-100i = 1000/2 = 500 => Y = 500+100i. 1700-100i = 500+100i => 200i = 1200 => i=6%, Y=1100.",
           "id": 1790955924085,
-          "question": "Thị trường hàng hóa và tiền tệ của một nền kinh tế đóng được mô tả như sau: Tiêu dùng C = 200 + 0,75(Y – T) Đầu tư: I = 225 – 25i Chi tiêu của chính phủ: G = 75 Thuế ròng: T = 100 Cung tiền danh nghĩa MS = 1000 Cầu tiền thực tế MD = Y – 100i Mức giá P = 2 Mức thu nhập và lãi suất cân bằng là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4185,13 +4186,13 @@
               "text": "Y = 100 và i = 10 %"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "IS: Y = 1700-100i. LM: Y-100i = 1000/2 = 500 => Y = 500+100i. 1700-100i = 500+100i => 200i = 1200 => i=6%, Y=1100."
+          "question": "Thị trường hàng hóa và tiền tệ của một nền kinh tế đóng được mô tả như sau: Tiêu dùng C = 200 + 0,75(Y – T) Đầu tư: I = 225 – 25i Chi tiêu của chính phủ: G = 75 Thuế ròng: T = 100 Cung tiền danh nghĩa MS = 1000 Cầu tiền thực tế MD = Y – 100i Mức giá P = 2 Mức thu nhập và lãi suất cân bằng là:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "M1 bao gồm tiền mặt và tiền gửi không kỳ hạn.",
           "id": 1790955924877,
-          "question": "Khối lượng tiền M1 bao gồm:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4214,13 +4215,13 @@
               "text": "Không có câu nào đúng"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "M1 bao gồm tiền mặt và tiền gửi không kỳ hạn."
+          "question": "Khối lượng tiền M1 bao gồm:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Số nhân tiền tỷ lệ nghịch với tỷ lệ dự trữ và tỷ lệ tiền mặt.",
           "id": 1790955926185,
-          "question": "Số nhân tiền có mối quan hệ:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4243,13 +4244,13 @@
               "text": "Tất cả đều đúng"
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Số nhân tiền tỷ lệ nghịch với tỷ lệ dự trữ và tỷ lệ tiền mặt."
+          "question": "Số nhân tiền có mối quan hệ:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "GNP thực tính theo giá cố định, không phải giá hiện hành.",
           "id": 1790955926764,
-          "question": "Yếu tố nào sau đây không phải là tính chất của GNP thực:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4272,13 +4273,13 @@
               "text": "Tính theo giá hiện hành"
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "GNP thực tính theo giá cố định, không phải giá hiện hành."
+          "question": "Yếu tố nào sau đây không phải là tính chất của GNP thực:"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Trong nền kinh tế đóng, đầu tư bằng tiết kiệm (I = S).",
           "id": 1790955928176,
-          "question": "Trong một nền kinh tế đóng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4301,13 +4302,13 @@
               "text": "Cán cân ngân sách nhà nước lớn hơn lượng thuế mà Chính phủ thu được"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Trong nền kinh tế đóng, đầu tư bằng tiết kiệm (I = S)."
+          "question": "Trong một nền kinh tế đóng:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "AD phản ánh quan hệ giữa mức giá và sản lượng tại một mức giá cho trước.",
           "id": 1790955928543,
-          "question": "Đường tổng cầu phản ánh mối quan hệ giữa tổng chi tiêu của nền kinh tế và thu nhập quốc dân:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4330,13 +4331,13 @@
               "text": "Tại một mức tiêu dùng nhất định"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "AD phản ánh quan hệ giữa mức giá và sản lượng tại một mức giá cho trước."
+          "question": "Đường tổng cầu phản ánh mối quan hệ giữa tổng chi tiêu của nền kinh tế và thu nhập quốc dân:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Tất cả các yếu tố trên đều gây áp lực lạm phát.",
           "id": 1790955930080,
-          "question": "Những trường hợp nào sau đây có thể tạo ra những áp lực lạm phát",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4359,13 +4360,13 @@
               "text": "Các lựa chọn đều đúng."
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Tất cả các yếu tố trên đều gây áp lực lạm phát."
+          "question": "Những trường hợp nào sau đây có thể tạo ra những áp lực lạm phát"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Lãi suất thấp làm giảm chi phí cơ hội giữ tiền, tăng cầu tiền.",
           "id": 1790955931157,
-          "question": "Khi mọi yếu tố khác không đổi, lượng cầu tiền tệ lớn hơn khi:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4388,13 +4389,13 @@
               "text": "Mức giá cao hơn"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Lãi suất thấp làm giảm chi phí cơ hội giữ tiền, tăng cầu tiền."
+          "question": "Khi mọi yếu tố khác không đổi, lượng cầu tiền tệ lớn hơn khi:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Tăng thuế làm giảm thu nhập, giảm lãi suất, giảm tiêu dùng, tăng đầu tư (do lãi suất giảm).",
           "id": 1790955931361,
-          "question": "Theo mô hình IS – LM, điều gì sẽ xảy ra đối với thu nhập, lãi suất, tiêu dùng và đầu tư khi chính phủ tăng thuế",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4417,13 +4418,13 @@
               "text": "Không có câu nào đúng"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Tăng thuế làm giảm thu nhập, giảm lãi suất, giảm tiêu dùng, tăng đầu tư (do lãi suất giảm)."
+          "question": "Theo mô hình IS – LM, điều gì sẽ xảy ra đối với thu nhập, lãi suất, tiêu dùng và đầu tư khi chính phủ tăng thuế"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Trợ cấp là khoản thu, không phải chi phí.",
           "id": 1790955932888,
-          "question": "Yếu tố nào dưới đây không phải là một yếu tố chi phí:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4446,13 +4447,13 @@
               "text": "Tiền lãi"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Trợ cấp là khoản thu, không phải chi phí."
+          "question": "Yếu tố nào dưới đây không phải là một yếu tố chi phí:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Tăng lương tối thiểu có thể làm tăng thất nghiệp.",
           "id": 1790955933636,
-          "question": "Chính sách nào sau đây của chính phủ thất bại đối với việc giảm tỷ lệ thất nghiệp?",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4475,13 +4476,13 @@
               "text": "Tăng tiền lương tối thiểu"
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Tăng lương tối thiểu có thể làm tăng thất nghiệp."
+          "question": "Chính sách nào sau đây của chính phủ thất bại đối với việc giảm tỷ lệ thất nghiệp?"
         },
         {
+          "correctAnswer": "B",
+          "explanation": "Giải hệ phương trình IS-LM với các hàm số đã cho.",
           "id": 1790955934403,
-          "question": "Mức thu nhập và lãi suất cân bằng là:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4504,13 +4505,13 @@
               "text": "Y = 975 và i = 7,25%"
             }
           ],
-          "correctAnswer": "B",
-          "level": "Thông hiểu",
-          "explanation": "Giải hệ phương trình IS-LM với các hàm số đã cho."
+          "question": "Mức thu nhập và lãi suất cân bằng là:"
         },
         {
+          "correctAnswer": "A",
+          "explanation": "Lạm phát bất ngờ làm giảm giá trị thực của các khoản nợ, có lợi cho người đi vay.",
           "id": 1790955935734,
-          "question": "Nếu lạm phát trong thực tế lớn hơn so với mức mà mọi người kỳ vọng, thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4533,13 +4534,13 @@
               "text": "Không câu nào đúng"
             }
           ],
-          "correctAnswer": "A",
-          "level": "Thông hiểu",
-          "explanation": "Lạm phát bất ngờ làm giảm giá trị thực của các khoản nợ, có lợi cho người đi vay."
+          "question": "Nếu lạm phát trong thực tế lớn hơn so với mức mà mọi người kỳ vọng, thì:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "Thu nhập giảm làm cầu tiền giảm, lãi suất giảm.",
           "id": 1790955936336,
-          "question": "Khi thu nhập giảm xuống trong điều kiện lượng cung tiền không thay đổi, thì:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4562,13 +4563,13 @@
               "text": "Lãi suất cân bằng không thay đổi"
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "Thu nhập giảm làm cầu tiền giảm, lãi suất giảm."
+          "question": "Khi thu nhập giảm xuống trong điều kiện lượng cung tiền không thay đổi, thì:"
         },
         {
+          "correctAnswer": "E",
+          "explanation": "Các yếu tố trên làm dịch chuyển AD, không phải di chuyển dọc AD.",
           "id": 1790955937282,
-          "question": "Di chuyển của đường tổng cầu do:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4591,13 +4592,13 @@
               "text": "Không phải các điều kể trên"
             }
           ],
-          "correctAnswer": "E",
-          "level": "Thông hiểu",
-          "explanation": "Các yếu tố trên làm dịch chuyển AD, không phải di chuyển dọc AD."
+          "question": "Di chuyển của đường tổng cầu do:"
         },
         {
+          "correctAnswer": "D",
+          "explanation": "Khoảng cách dịch chuyển IS = Δ(I+G+X) * số nhân.",
           "id": 1790955938898,
-          "question": "Khoảng cách dịch chuyển của đường IS được xác định bằng:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4620,13 +4621,13 @@
               "text": "Tất cả đều sai"
             }
           ],
-          "correctAnswer": "D",
-          "level": "Thông hiểu",
-          "explanation": "Khoảng cách dịch chuyển IS = Δ(I+G+X) * số nhân."
+          "question": "Khoảng cách dịch chuyển của đường IS được xác định bằng:"
         },
         {
+          "correctAnswer": "C",
+          "explanation": "GDP và GNP khác nhau ở thu nhập tài sản ròng từ nước ngoài.",
           "id": 1790955939595,
-          "question": "Trong nền kinh tế mở:",
+          "level": "Thông hiểu",
           "options": [
             {
               "key": "A",
@@ -4649,11 +4650,10 @@
               "text": "Không có câu nào đúng."
             }
           ],
-          "correctAnswer": "C",
-          "level": "Thông hiểu",
-          "explanation": "GDP và GNP khác nhau ở thu nhập tài sản ròng từ nước ngoài."
+          "question": "Trong nền kinh tế mở:"
         }
-      ]
+      ],
+      "title": "Đề cương ôn tập Kinh tế học (1)"
     },
     {
       "category": "GDQP - An Ninh",
@@ -9920,7 +9920,7 @@
           "question": "An ninh quốc gia:"
         }
       ],
-      "title": "CÂU HỎI TRẮC NGHIỆM HP1"
+      "title": "Quân Sự HP1"
     }
   ]
 }
