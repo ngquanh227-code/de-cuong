@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": 1790960652703,
+  "lastUpdated": 1790960707295,
   "subjects": [
     {
       "category": "Đại Cương & Khác",
@@ -9923,9 +9923,9 @@
       "title": "Quân Sự HP1"
     },
     {
-      "category": "Triết học Mác - Lênin",
+      "category": "Lý Luận & Triết Học",
       "code": "MLN-300",
-      "durationMinutes": 90,
+      "durationMinutes": 15,
       "id": 1790959521088,
       "questions": [
         {
