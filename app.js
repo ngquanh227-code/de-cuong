@@ -3043,8 +3043,9 @@ function parseSmartText(rawText) {
 
   // Step 2.5: Pre-process trailing answer tags like '(b)', '(d)', '[c]' in Vietnamese tests
   // 1. Single-line option: 'b. Thần thoại - tôn giáo - triết học (b)' -> '*b. Thần thoại - tôn giáo - triết học'
-  text = text.replace(/^(\s*[*]?\s*[a-gA-G][\.:\)-][^\n\r]*?)\s*[\(\[]\s*([a-gA-G])\s*[\)\]]\s*$/gm, (m, optBody, ansL) => {
-    return '*' + optBody.replace(/^[\s*]+/, '').trim();
+  // Or with trailing note: 'e. Gồm b, c và d. (e) Chú ý...' -> '*e. Gồm b, c và d. Chú ý...'
+  text = text.replace(/^([^\S\r\n]*[*]?\s*[a-gA-G][\.:\)-][^\n\r]*?)[^\S\r\n]*[\(\[]\s*([a-gA-G])\s*[\)\]]([^\n\r]*)$/gm, (m, optBody, ansL, trailing) => {
+    return '*' + optBody.replace(/^[\s*]+/, '').trim() + (trailing ? ' ' + trailing.trim() : '');
   });
 
   // 2. Multiline wrapped line ending with (a)-(g):
@@ -3060,6 +3061,9 @@ function parseSmartText(rawText) {
     return ' *' + optBody.replace(/^[\s*]+/, '').trim() + ' ';
   });
 
+  // Protect "C. Mác" / "C.Mác" (Karl Marx) from being split as Option C in Step 3!
+  text = text.replace(/\bC\.\s*Mác\b/gi, "@@C_MAC@@");
+
   // Protect list references like 'a, b, c', 'a & b', 'a và b', 'a, và b', 'a hoặc b', 'cả a, b và c', 'khi thì là (a)' from splitting
   text = text.replace(/(?:\b(?:cả|gồm|điểm|hai\s*điểm|hoặc|khi\s*thì\s*là)\s+)?[\(\[]?\b([a-gA-G])\b[\)\]]?(?:(?:\s*,\s*|\s+(?:và|v\u00e0|&|hoặc|ho\u1eb7c|\/)\s*|,\s*(?:và|v\u00e0|&|hoặc|ho\u1eb7c|\/)\s*)[\(\[]?\b([a-gA-G])\b[\)\]]?)+(?:\s*(?:,|và|v\u00e0|&|hoặc|ho\u1eb7c|\/)\s*[\(\[]?\b([a-gA-G])\b[\)\]]?)?(?:\.|\b)/gi, (m) => {
     return m.replace(/,/g, '@@COMMA@@').replace(/\./g, '@@DOT@@').replace(/\(/g, '@@OP@@').replace(/\)/g, '@@CP@@');
@@ -3074,7 +3078,7 @@ function parseSmartText(rawText) {
     const isStar = !!(s1 || s2 || s3 || s4);
     return `\n${isStar ? "*" : ""}${letter}. `;
   });
-  text = text.replace(/@@COMMA@@/g, ",").replace(/@@DOT@@/g, ".").replace(/@@OP@@/g, "(").replace(/@@CP@@/g, ")");
+  text = text.replace(/@@COMMA@@/g, ",").replace(/@@DOT@@/g, ".").replace(/@@OP@@/g, "(").replace(/@@CP@@/g, ")").replace(/@@C_MAC@@/g, "C. Mác");
 
   const rawLines = text.split("\n").map(l => l.trim()).filter(l => l.length > 0);
   const questions = [];
@@ -3252,15 +3256,11 @@ function parseSmartText(rawText) {
     if (curOptions.length === 0) {
       curPromptLines.push(line);
     } else {
-      if (curOptions.length >= 4 || curOptions.some(o => o.key === "D")) {
-        trailingPromptBuffer.push(line);
+      const lastOpt = curOptions[curOptions.length - 1];
+      if (lastOpt) {
+        lastOpt.text += " " + line;
       } else {
-        const lastOpt = curOptions[curOptions.length - 1];
-        if (lastOpt) {
-          lastOpt.text += " " + line;
-        } else {
-          curPromptLines.push(line);
-        }
+        curPromptLines.push(line);
       }
     }
   }
