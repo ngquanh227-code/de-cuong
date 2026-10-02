@@ -3036,13 +3036,45 @@ function parseSmartText(rawText) {
     text = text.replace(ansKeyBlockRegex, "").trim();
   }
 
-  // Step 3: Put inline options on separate lines (Handles "A. ... B. ...", "A) ... B) ...", "[A] ... [B] ...", "(A) ... (B) ...", "*A. ...", "A* ...")
-  // Using lookbehind to ensure preceding punctuation (?, :, etc.) is NOT consumed/deleted
-  text = text.replace(/(?<=[\s\n\?\.:;!]|^)\s*(?:(\*+)?\s*\[([A-Fa-f])\]|(\*+)?\s*\(([A-Fa-f])\)|(\*+)?\s*([A-Fa-f])(\*+)?(?:[\.,\)\/:\-]|(?<=\*)))\s+/g, (m, s1, g1, s2, g2, s3, g3, s4) => {
+  // Strip page headers and title banners
+  text = text.replace(/---\s*Trang\s*\d+\s*---/gi, "");
+  text = text.replace(/^\d+\s+CÂU\s+HỎI\s+TRẮC\s+NGHIỆM.*$/gim, "");
+  text = text.replace(/^KÈM\s+ĐÁP\s+ÁN.*$/gim, "");
+
+  // Step 2.5: Pre-process trailing answer tags like '(b)', '(d)', '[c]' in Vietnamese tests
+  // 1. Single-line option: 'b. Thần thoại - tôn giáo - triết học (b)' -> '*b. Thần thoại - tôn giáo - triết học'
+  text = text.replace(/^(\s*[*]?\s*[a-gA-G][\.:\)-][^\n\r]*?)\s*[\(\[]\s*([a-gA-G])\s*[\)\]]\s*$/gm, (m, optBody, ansL) => {
+    return '*' + optBody.replace(/^[\s*]+/, '').trim();
+  });
+
+  // 2. Multiline wrapped line ending with (a)-(g):
+  text = text.replace(/^([^\n\r]+?)\s*[\(\[]\s*([a-gA-G])\s*[\)\]]\s*$/gm, (m, lineBody, ansL) => {
+    if (!/^\s*(?:câu|bài|question|q|c|\d+[\.:\-])/i.test(lineBody)) {
+      return lineBody.trim() + ' [CORRECT_ANSWER]';
+    }
+    return m;
+  });
+
+  // 3. Inline option ending with (a)-(g) before next option: 'a. Nước Anh (a) c. Nước Đức'
+  text = text.replace(/(\s*[*]?\s*[a-gA-G][\.:\)-][^\n\r]*?)\s*[\(\[]\s*([a-gA-G])\s*[\)\]]\s*(?=[a-gA-G][\.:\)-])/gm, (m, optBody, ansL) => {
+    return ' *' + optBody.replace(/^[\s*]+/, '').trim() + ' ';
+  });
+
+  // Protect list references like 'a, b, c', 'a & b', 'a và b', 'a, và b', 'a hoặc b', 'cả a, b và c', 'khi thì là (a)' from splitting
+  text = text.replace(/(?:\b(?:cả|gồm|điểm|hai\s*điểm|hoặc|khi\s*thì\s*là)\s+)?[\(\[]?\b([a-gA-G])\b[\)\]]?(?:(?:\s*,\s*|\s+(?:và|v\u00e0|&|hoặc|ho\u1eb7c|\/)\s*|,\s*(?:và|v\u00e0|&|hoặc|ho\u1eb7c|\/)\s*)[\(\[]?\b([a-gA-G])\b[\)\]]?)+(?:\s*(?:,|và|v\u00e0|&|hoặc|ho\u1eb7c|\/)\s*[\(\[]?\b([a-gA-G])\b[\)\]]?)?(?:\.|\b)/gi, (m) => {
+    return m.replace(/,/g, '@@COMMA@@').replace(/\./g, '@@DOT@@').replace(/\(/g, '@@OP@@').replace(/\)/g, '@@CP@@');
+  });
+
+  // Also protect standalone parenthesized letters inside quotes or text: 'khi thì là (a)'
+  text = text.replace(/(khi\s+thì\s+là\s+)\(([a-gA-G])\)/gi, (m, p1, l) => `${p1}@@OP@@${l}@@CP@@`);
+
+  // Step 3: Put inline options on separate lines (only when followed by text on SAME line, NO comma delimiter)
+  text = text.replace(/(?<=[\s\n\?\.:;!]|^)\s*(?:(\*+)?\s*\[([A-Ga-g])\](?=[^\S\r\n]+\S)|(\*+)?\s*\(([A-Ga-g])\)(?=[^\S\r\n]+\S)|(\*+)?\s*([A-Ga-g])(\*+)?(?:[\.:\)\-]|(?<=\*)))\s+/g, (m, s1, g1, s2, g2, s3, g3, s4) => {
     const letter = (g1 || g2 || g3).toUpperCase();
     const isStar = !!(s1 || s2 || s3 || s4);
     return `\n${isStar ? "*" : ""}${letter}. `;
   });
+  text = text.replace(/@@COMMA@@/g, ",").replace(/@@DOT@@/g, ".").replace(/@@OP@@/g, "(").replace(/@@CP@@/g, ")");
 
   const rawLines = text.split("\n").map(l => l.trim()).filter(l => l.length > 0);
   const questions = [];
@@ -3084,8 +3116,24 @@ function parseSmartText(rawText) {
         prompt = `Câu hỏi số ${questions.length + 1}`;
       }
 
+      // Check options for trailing answer tags that might still be in last line of option
+      curOptions.forEach(opt => {
+        if (opt.text.includes("[CORRECT_ANSWER]") || opt.text.endsWith("*")) {
+          opt.isCorrect = true;
+          opt.text = opt.text.replace(/\[CORRECT_ANSWER\]|\*+$/g, "").trim();
+        }
+        const m = opt.text.match(/\s*[\(\[]\s*([a-gA-G])\s*[\)\]]\s*$/);
+        if (m) {
+          if (m[1].toUpperCase() === opt.key.toUpperCase()) {
+            opt.isCorrect = true;
+          }
+          opt.text = opt.text.replace(/\s*[\(\[]\s*([a-gA-G])\s*[\)\]]\s*$/, "").trim();
+        }
+      });
+
       const qIndex = questions.length + 1;
-      const finalAns = (curAnswer || answerMap[curQNum || qIndex] || "").toUpperCase();
+      const correctOpt = curOptions.find(o => o.isCorrect);
+      const finalAns = (correctOpt ? correctOpt.key : (curAnswer || answerMap[curQNum || qIndex] || "")).toUpperCase();
       const finalExp = (curExplanation || explanationMap[curQNum || qIndex] || "").trim();
 
       const finalOptions = [...curOptions];
@@ -3114,7 +3162,8 @@ function parseSmartText(rawText) {
     const line = rawLines[i];
 
     // Check Question Header: "Câu 1:", "Câu 1.", "Câu 1-", "*Câu 1:*", "1.", "1:", "1)", "1/", "1 -", "C1:", "C1."
-    const qHeaderMatch = line.match(/^[*_]?(?:(?:câu|bài|question|q|c)\s*(\d+)[\s.:\-_)\/]*|(\d+)[\s.:\-_)\/]+)[*_]?(.*)/i);
+    // Avoid matching bare 4-digit years like '1500 - 1570'
+    const qHeaderMatch = line.match(/^[*_]?(?:(?:câu|bài|question|q|c)\s*(\d+)[\s.:\-_)\/]*|(\b\d{1,3})[.:]\s+)[*_]?(.*)/i);
     if (qHeaderMatch) {
       const num = parseInt(qHeaderMatch[1] || qHeaderMatch[2]);
       const rest = (qHeaderMatch[3] || "").replace(/^[*_]+|[*_]+$/g, "").trim();
@@ -3122,7 +3171,7 @@ function parseSmartText(rawText) {
       if (curOptions.length >= 2) {
         trailingPromptBuffer = rest ? [rest] : [];
         flushQuestion();
-        curQNum = num; // Preserve the new question number after flush
+        curQNum = num;
       } else {
         curQNum = num;
         curPromptLines = rest ? [rest] : [];
@@ -3130,8 +3179,8 @@ function parseSmartText(rawText) {
       continue;
     }
 
-    // Check Option Header: "A.", "A,", "A)", "A:", "A/", "[A]", "(A)", "*A.*", "*A.", "A.*", "A*"
-    const optMatch = line.match(/^([*]?)\s*(?:([A-Fa-f])[\.,\)\/:\-]|\[([A-Fa-f])\]|\(([A-Fa-f])\)|([A-Fa-f])[*])\s*([*]?)\s*(.*)/i);
+    // Check Option Header: supports [A-Ga-g]
+    const optMatch = line.match(/^([*]?)\s*(?:([A-Ga-g])[\.:\)-]|\[([A-Ga-g])\]|\(([A-Ga-g])\)|([A-Ga-g])[*])\s*([*]?)\s*(.*)/i);
     if (optMatch) {
       const isStar1 = optMatch[1] === "*";
       const key = (optMatch[2] || optMatch[3] || optMatch[4] || optMatch[5]).toUpperCase();
@@ -3142,7 +3191,7 @@ function parseSmartText(rawText) {
       if (key === "A" && (curOptions.some(o => o.key === "A") || curOptions.length >= 2)) {
         const savedQNum = curQNum;
         flushQuestion();
-        if (!curQNum) curQNum = savedQNum ? savedQNum + 1 : null; // Increment question number if no new header was set
+        if (!curQNum) curQNum = savedQNum ? savedQNum + 1 : null;
       }
 
       // Check all correct answer indicator patterns on the option:
@@ -3169,7 +3218,7 @@ function parseSmartText(rawText) {
         curAnswer = key;
       }
 
-      curOptions.push({ key, text: optText });
+      curOptions.push({ key, text: optText, isCorrect });
       continue;
     }
 
