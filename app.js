@@ -6332,7 +6332,7 @@ function importAIQuestionsFromEncoded(encodedData) {
 }
 
 // ==========================================================================
-// 22. INTERACTIVE ONBOARDING TOUR ENGINE (SPOTLIGHT WALKTHROUGH)
+// 22. BANKING-STYLE INTERACTIVE ONBOARDING TOUR (SVG CUTOUT & FLOWING GUIDE)
 // ==========================================================================
 let currentTourStep = 0;
 const TOUR_STORAGE_KEY = "cuonedu_tour_completed_v1";
@@ -6340,8 +6340,8 @@ const TOUR_STORAGE_KEY = "cuonedu_tour_completed_v1";
 const ONBOARDING_STEPS = [
   {
     target: ".btn-hero-import",
-    title: "Tải Đề & Nhập Đề Tự Động",
-    desc: "Tải trực tiếp file Word (.docx), PDF hoặc dán văn bản trắc nghiệm. Hệ thống tự động nhận diện câu hỏi, 4 đáp án A-B-C-D và đáp án đúng chỉ trong 1 giây.",
+    title: "1. Tải đề thi tự động",
+    desc: "Bấm vào đây để tải đề trực tiếp từ file Word (.docx) hoặc PDF. Toàn bộ câu hỏi, đáp án A-B-C-D và lời giải sẽ được tự động nhận diện chỉ trong 1 giây.",
     tag: "Bước 1 / 5",
     preferredPos: "bottom",
     onEnter: () => {
@@ -6349,21 +6349,21 @@ const ONBOARDING_STEPS = [
     }
   },
   {
-    target: "#sub-master-sidebar",
-    title: "Vào Thi & Ôn Luyện Đề",
-    desc: "Chọn môn học bất kỳ trong danh sách để mở phòng thi thử Quizizz Arena hấp dẫn.<div style='margin-top: 10px; padding: 10px 14px; background: rgba(249, 115, 22, 0.16); border-left: 3px solid #f97316; border-radius: 8px; font-size: 0.88rem; color: #fed7aa; text-align: left; line-height: 1.5; text-shadow: 0 1px 3px rgba(0,0,0,0.8);'>🧡 <em>Một chút gửi gắm:</em> Khi bấm làm bài, hệ thống sẽ mở một liên kết Shopee nhỏ trước khi vào thi nhằm tiếp sức kinh phí duy trì máy chủ hoàn toàn miễn phí cho các bạn.</div>",
+    target: ".btn-exam-hero, .grid-card-btn-primary, #sub-detail-panel .btn-primary, #sub-master-sidebar",
+    title: "2. Bắt đầu làm bài thi",
+    desc: "Bấm vào nút này để mở phòng thi trắc nghiệm Quizizz Arena hấp dẫn.<br><div style='margin-top: 8px; color: #fed7aa; font-size: 0.86rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8); line-height: 1.45;'>🧡 <em>Một chút gửi gắm:</em> Trước khi vào thi sẽ có liên kết Shopee nhỏ nhằm tiếp sức kinh phí duy trì máy chủ hoàn toàn miễn phí cho tất cả mọi người.</div>",
     tag: "Bước 2 / 5",
-    preferredPos: "right",
+    preferredPos: "bottom",
     onEnter: () => {
       closeMainDrawer();
     }
   },
   {
     target: "#cuonedu-ai-btn",
-    title: "Trợ Lý Gia Sư AI CuonEdu",
-    desc: "Bong bóng AI thông minh luôn túc trực ở góc màn hình. Bấm vào bất cứ lúc nào để hỏi bài, nhờ AI giải thích cặn kẽ câu hỏi khó, tóm tắt bài học hoặc tạo đề thi mới.",
+    title: "3. Trợ lý Gia sư AI CuonEdu",
+    desc: "Bấm vào biểu tượng này bất cứ lúc nào để hỏi bài, nhờ AI giải thích từng câu hỏi khó trong đề thi, tóm tắt bài học hoặc tự động tạo đề thi mới.",
     tag: "Bước 3 / 5",
-    preferredPos: "top",
+    preferredPos: "left",
     onEnter: () => {
       closeMainDrawer();
     }
@@ -6371,8 +6371,8 @@ const ONBOARDING_STEPS = [
   {
     target: "#drawer-item-donate",
     fallbackTarget: "#btn-hamburger",
-    title: "Menu & Tiếp Sức (Donate)",
-    desc: "Mở menu 3 gạch để tùy chỉnh nâng cao. Đặc biệt, bạn có thể mời tác giả ly cà phê để chung tay tiếp sức duy trì server và phát triển nền tảng học tập này.",
+    title: "4. Tiếp sức & Ủng hộ (Donate)",
+    desc: "Mời tác giả ly cà phê để chung tay tiếp sức duy trì server và phát triển nền tảng học tập CuonEdu ngày một tốt hơn.",
     tag: "Bước 4 / 5",
     preferredPos: "left",
     onEnter: () => {
@@ -6382,8 +6382,8 @@ const ONBOARDING_STEPS = [
   {
     target: "#drawer-item-zalo",
     fallbackTarget: "#btn-hamburger",
-    title: "Kết Nối Zalo Hỗ Trợ 24/7",
-    desc: "Bạn có tài liệu trắc nghiệm mới muốn đưa lên web hoặc phát hiện câu hỏi cần sửa? Hãy nhắn trực tiếp Zalo / SĐT <strong>0962.714.685</strong> (Quang Cuốn) để được hỗ trợ tức thì!",
+    title: "5. Kết nối Zalo hỗ trợ 24/7",
+    desc: "Bạn có bộ đề thi mới muốn đưa lên web hoặc phát hiện câu hỏi cần sửa? Hãy nhắn trực tiếp Zalo / SĐT <strong>0962.714.685</strong> (Quang Cuốn) để được hỗ trợ tức thì!",
     tag: "Bước 5 / 5",
     preferredPos: "left",
     onEnter: () => {
@@ -6393,36 +6393,38 @@ const ONBOARDING_STEPS = [
 ];
 
 function initTourElements() {
-  if (document.getElementById("cuonedu-tour-backdrop")) return;
+  if (document.getElementById("cuonedu-tour-root")) return;
 
-  const backdrop = document.createElement("div");
-  backdrop.id = "cuonedu-tour-backdrop";
-  backdrop.className = "tour-backdrop";
-  backdrop.onclick = (e) => {
-    if (e.target === backdrop) endOnboardingTour();
-  };
+  const root = document.createElement("div");
+  root.id = "cuonedu-tour-root";
+  root.className = "tour-root-banking";
+  root.style.display = "none";
+  root.innerHTML = `
+    <svg id="cuonedu-tour-svg" class="tour-svg-layer">
+      <defs>
+        <mask id="tour-cutout-mask">
+          <rect width="100%" height="100%" fill="white" />
+          <rect id="tour-mask-hole" x="0" y="0" width="0" height="0" rx="14" ry="14" fill="black" />
+        </mask>
+      </defs>
+      <rect width="100%" height="100%" fill="rgba(6, 4, 15, 0.76)" mask="url(#tour-cutout-mask)" />
+      <rect id="tour-glow-frame" x="0" y="0" width="0" height="0" rx="14" ry="14" fill="none" stroke="#c084fc" stroke-width="2.5" />
+    </svg>
+    <div id="cuonedu-tour-guide" class="tour-flowing-guide"></div>
+  `;
 
-  const spotlight = document.createElement("div");
-  spotlight.id = "cuonedu-tour-spotlight";
-  spotlight.className = "tour-spotlight";
-
-  const popover = document.createElement("div");
-  popover.id = "cuonedu-tour-popover";
-  popover.className = "tour-popover";
-
-  document.body.appendChild(backdrop);
-  document.body.appendChild(spotlight);
-  document.body.appendChild(popover);
+  document.body.appendChild(root);
 
   window.addEventListener("resize", () => {
     if (document.body.classList.contains("tour-active")) {
-      positionTourPopover(ONBOARDING_STEPS[currentTourStep]);
+      renderTourCurrentStep();
     }
   });
 
   window.addEventListener("scroll", () => {
     if (document.body.classList.contains("tour-active")) {
-      positionTourPopover(ONBOARDING_STEPS[currentTourStep]);
+      const step = ONBOARDING_STEPS[currentTourStep];
+      if (step) updateTourCutout(step);
     }
   }, true);
 }
@@ -6431,12 +6433,8 @@ function startOnboardingTour() {
   initTourElements();
   currentTourStep = 0;
   document.body.classList.add("tour-active");
-  const bd = document.getElementById("cuonedu-tour-backdrop");
-  const sp = document.getElementById("cuonedu-tour-spotlight");
-  const pop = document.getElementById("cuonedu-tour-popover");
-  if (bd) bd.style.display = "block";
-  if (sp) sp.style.display = "block";
-  if (pop) pop.style.display = "block";
+  const root = document.getElementById("cuonedu-tour-root");
+  if (root) root.style.display = "block";
 
   renderTourCurrentStep();
 }
@@ -6452,106 +6450,174 @@ function renderTourCurrentStep() {
     step.onEnter();
   }
 
-  // Chờ hiệu ứng drawer hoàn tất nếu bước có mở drawer
-  const delay = (step.target && step.target.includes("drawer")) ? 280 : 80;
+  const delay = (step.target && step.target.includes("drawer")) ? 320 : 80;
   setTimeout(() => {
-    positionTourPopover(step);
+    let targetEl = document.querySelector(step.target);
+    if (!targetEl && step.fallbackTarget) {
+      targetEl = document.querySelector(step.fallbackTarget);
+    }
+
+    if (targetEl && targetEl.offsetParent !== null) {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+    }
+
+    setTimeout(() => {
+      updateTourCutout(step);
+      positionTourGuide(targetEl, step);
+    }, 120);
   }, delay);
 }
 
-function positionTourPopover(step) {
+function updateTourCutout(step) {
   let targetEl = document.querySelector(step.target);
   if (!targetEl && step.fallbackTarget) {
     targetEl = document.querySelector(step.fallbackTarget);
   }
 
-  const spotlight = document.getElementById("cuonedu-tour-spotlight");
-  const popover = document.getElementById("cuonedu-tour-popover");
-  if (!popover || !spotlight) return;
+  const hole = document.getElementById("tour-mask-hole");
+  const glow = document.getElementById("tour-glow-frame");
+  if (!hole || !glow) return;
+
+  if (targetEl && targetEl.offsetParent !== null) {
+    const rect = targetEl.getBoundingClientRect();
+    const pad = 6;
+    const x = Math.max(0, rect.left - pad);
+    const y = Math.max(0, rect.top - pad);
+    const w = rect.width + pad * 2;
+    const h = rect.height + pad * 2;
+    const rx = 14;
+
+    hole.setAttribute("x", x);
+    hole.setAttribute("y", y);
+    hole.setAttribute("width", w);
+    hole.setAttribute("height", h);
+    hole.setAttribute("rx", rx);
+    hole.setAttribute("ry", rx);
+
+    glow.setAttribute("x", x);
+    glow.setAttribute("y", y);
+    glow.setAttribute("width", w);
+    glow.setAttribute("height", h);
+    glow.setAttribute("rx", rx);
+    glow.setAttribute("ry", rx);
+    glow.style.display = "block";
+  } else {
+    hole.setAttribute("width", 0);
+    hole.setAttribute("height", 0);
+    glow.style.display = "none";
+  }
+}
+
+function positionTourGuide(targetEl, step) {
+  const guide = document.getElementById("cuonedu-tour-guide");
+  if (!guide) return;
 
   const isLast = currentTourStep === ONBOARDING_STEPS.length - 1;
   const isFirst = currentTourStep === 0;
 
-  popover.innerHTML = `
-    <div class="tour-text-wrap">
-      <div class="tour-tag-line">
-        <span class="tour-badge-pill">${step.tag}</span>
-        <button type="button" class="tour-skip-link" onclick="endOnboardingTour()" title="Bỏ qua hướng dẫn">Bỏ qua ✕</button>
-      </div>
-      <h3 class="tour-title-lux">${step.title}</h3>
-      <div class="tour-desc-lux">${step.desc}</div>
-      <div class="tour-nav-row">
-        <div class="tour-stepper-dots">
-          ${ONBOARDING_STEPS.map((_, i) => `<span class="tour-step-dot ${i === currentTourStep ? 'active' : ''}"></span>`).join('')}
-        </div>
-        <div class="tour-btns-group">
-          ${!isFirst ? `<button type="button" class="tour-btn-lux tour-btn-lux-prev" onclick="prevTourStep()">Quay Lại</button>` : ''}
-          <button type="button" class="tour-btn-lux tour-btn-lux-next" onclick="nextTourStep()">
-            ${isLast ? 'Hoàn Tất & Khám Phá' : 'Tiếp Theo'}
-          </button>
-        </div>
-      </div>
-    </div>
-  `;
+  let arrowDir = "up";
+  let top = 0;
+  let left = 0;
+  const guideW = Math.min(360, window.innerWidth - 36);
+  guide.style.width = `${guideW}px`;
 
   if (targetEl && targetEl.offsetParent !== null) {
-    targetEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
     const rect = targetEl.getBoundingClientRect();
-    const pad = 10;
-
-    spotlight.style.top = `${Math.max(0, rect.top - pad)}px`;
-    spotlight.style.left = `${Math.max(0, rect.left - pad)}px`;
-    spotlight.style.width = `${rect.width + pad * 2}px`;
-    spotlight.style.height = `${rect.height + pad * 2}px`;
-    spotlight.style.borderRadius = "14px";
-    spotlight.style.opacity = "1";
-
-    const popW = Math.min(380, window.innerWidth - 36);
-    popover.style.width = `${popW}px`;
-    const popH = popover.offsetHeight || 220;
-
-    let popTop = 0;
-    let popLeft = 0;
 
     if (window.innerWidth < 768) {
-      popLeft = (window.innerWidth - popW) / 2;
-      if (rect.bottom + popH + 20 < window.innerHeight) {
-        popTop = rect.bottom + 18;
-      } else if (rect.top - popH - 18 > 0) {
-        popTop = rect.top - popH - 18;
+      left = (window.innerWidth - guideW) / 2;
+      if (rect.bottom + 240 < window.innerHeight) {
+        top = rect.bottom + 16;
+        arrowDir = "up";
+      } else if (rect.top - 240 > 0) {
+        top = rect.top - 230;
+        arrowDir = "down";
       } else {
-        popTop = Math.max(20, (window.innerHeight - popH) / 2);
+        top = Math.max(20, (window.innerHeight - 220) / 2);
+        arrowDir = "none";
       }
     } else {
-      if (step.preferredPos === "bottom") {
-        popTop = rect.bottom + 18;
-        popLeft = Math.max(20, Math.min(window.innerWidth - popW - 20, rect.left + (rect.width - popW) / 2));
-      } else if (step.preferredPos === "top") {
-        popTop = Math.max(20, rect.top - popH - 18);
-        popLeft = Math.max(20, Math.min(window.innerWidth - popW - 20, rect.left + (rect.width - popW) / 2));
-      } else if (step.preferredPos === "right") {
-        popTop = Math.max(20, Math.min(window.innerHeight - popH - 20, rect.top));
-        popLeft = Math.min(window.innerWidth - popW - 20, rect.right + 20);
-      } else { // left
-        popTop = Math.max(20, Math.min(window.innerHeight - popH - 20, rect.top));
-        popLeft = Math.max(20, rect.left - popW - 20);
+      if (step.preferredPos === "left" && rect.left - guideW - 40 > 0) {
+        left = rect.left - guideW - 30;
+        top = Math.max(30, Math.min(window.innerHeight - 240, rect.top));
+        arrowDir = "right";
+      } else if (step.preferredPos === "right" && rect.right + guideW + 40 < window.innerWidth) {
+        left = rect.right + 30;
+        top = Math.max(30, Math.min(window.innerHeight - 240, rect.top));
+        arrowDir = "left";
+      } else if (step.preferredPos === "top" && rect.top - 240 > 0) {
+        top = rect.top - 230;
+        left = Math.max(24, Math.min(window.innerWidth - guideW - 24, rect.left));
+        arrowDir = "down";
+      } else {
+        top = rect.bottom + 16;
+        left = Math.max(24, Math.min(window.innerWidth - guideW - 24, rect.left));
+        arrowDir = "up";
       }
     }
-
-    popTop = Math.max(16, Math.min(window.innerHeight - popH - 16, popTop));
-    popLeft = Math.max(16, Math.min(window.innerWidth - popW - 16, popLeft));
-
-    popover.style.top = `${popTop}px`;
-    popover.style.left = `${popLeft}px`;
-    popover.style.transform = "none";
   } else {
-    spotlight.style.opacity = "0";
-    const popW = Math.min(380, window.innerWidth - 36);
-    popover.style.width = `${popW}px`;
-    popover.style.top = "50%";
-    popover.style.left = "50%";
-    popover.style.transform = "translate(-50%, -50%)";
+    top = (window.innerHeight - 200) / 2;
+    left = (window.innerWidth - guideW) / 2;
+    arrowDir = "none";
   }
+
+  top = Math.max(16, Math.min(window.innerHeight - 230, top));
+  left = Math.max(16, Math.min(window.innerWidth - guideW - 16, left));
+
+  guide.style.top = `${top}px`;
+  guide.style.left = `${left}px`;
+
+  let arrowHtml = "";
+  if (arrowDir === "up") {
+    arrowHtml = `
+      <div class="tour-flow-arrow bounce-up" style="margin-bottom: 8px;">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </div>
+    `;
+  } else if (arrowDir === "down") {
+    arrowHtml = `
+      <div class="tour-flow-arrow bounce-down" style="margin-top: 10px;">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M19 12l-7 7-7-7"/>
+        </svg>
+      </div>
+    `;
+  } else if (arrowDir === "right") {
+    arrowHtml = `
+      <div class="tour-flow-arrow bounce-right" style="position: absolute; right: -42px; top: 20px;">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </div>
+    `;
+  } else if (arrowDir === "left") {
+    arrowHtml = `
+      <div class="tour-flow-arrow bounce-left" style="position: absolute; left: -42px; top: 20px;">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </div>
+    `;
+  }
+
+  guide.innerHTML = `
+    ${arrowDir === "up" ? arrowHtml : ""}
+    <div class="tour-flowing-body">
+      <div class="tour-flow-tag">${step.tag}</div>
+      <h3 class="tour-flow-title">${step.title}</h3>
+      <div class="tour-flow-desc">${step.desc}</div>
+      <div class="tour-flow-actions">
+        <button type="button" class="tour-flow-btn-next" onclick="nextTourStep()">
+          ${isLast ? 'Hoàn Tất & Khám Phá' : 'Tiếp Tục →'}
+        </button>
+        ${!isFirst ? `<button type="button" class="tour-flow-btn-prev" onclick="prevTourStep()">Quay lại</button>` : ''}
+        <button type="button" class="tour-flow-btn-skip" onclick="endOnboardingTour()">Bỏ qua</button>
+      </div>
+    </div>
+    ${arrowDir === "down" || arrowDir === "right" || arrowDir === "left" ? arrowHtml : ""}
+  `;
 }
 
 function nextTourStep() {
@@ -6576,12 +6642,8 @@ function endOnboardingTour() {
   } catch (e) {}
 
   document.body.classList.remove("tour-active");
-  const bd = document.getElementById("cuonedu-tour-backdrop");
-  const sp = document.getElementById("cuonedu-tour-spotlight");
-  const pop = document.getElementById("cuonedu-tour-popover");
-  if (bd) bd.style.display = "none";
-  if (sp) sp.style.display = "none";
-  if (pop) pop.style.display = "none";
+  const root = document.getElementById("cuonedu-tour-root");
+  if (root) root.style.display = "none";
 
   closeMainDrawer();
 }
