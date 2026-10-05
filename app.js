@@ -6341,44 +6341,54 @@ const ONBOARDING_STEPS = [
   {
     target: ".btn-hero-import",
     title: "Tải Đề & Nhập Đề Tự Động",
-    desc: "Bạn có thể tải thẳng file Word (.docx), PDF hoặc dán văn bản trắc nghiệm. Hệ thống tự động nhận diện câu hỏi, 4 đáp án A-B-C-D và đáp án đúng chỉ trong chớp mắt.",
+    desc: "Tải trực tiếp file Word (.docx), PDF hoặc dán văn bản trắc nghiệm. Hệ thống tự động nhận diện câu hỏi, 4 đáp án A-B-C-D và đáp án đúng chỉ trong 1 giây.",
     tag: "Bước 1 / 5",
-    preferredPos: "bottom"
+    preferredPos: "bottom",
+    onEnter: () => {
+      closeMainDrawer();
+    }
   },
   {
     target: "#sub-master-sidebar",
     title: "Vào Thi & Ôn Luyện Đề",
-    desc: "Chọn bất kỳ môn học nào trong danh sách để vào giao diện thi Quizizz Arena hấp dẫn.<br><div style='margin-top: 10px; padding: 10px 12px; background: rgba(249, 115, 22, 0.15); border-left: 3px solid #f97316; border-radius: 6px; font-size: 0.84rem; color: #fed7aa; text-align: left; line-height: 1.5;'>🧡 <strong>Một chút gửi gắm:</strong> Khi bấm làm bài, hệ thống sẽ mở một liên kết Shopee nhỏ trước khi vào thi nhằm tiếp sức kinh phí duy trì máy chủ hoàn toàn miễn phí cho các bạn.</div>",
+    desc: "Chọn môn học bất kỳ trong danh sách để mở phòng thi thử Quizizz Arena hấp dẫn.<div style='margin-top: 10px; padding: 10px 14px; background: rgba(249, 115, 22, 0.16); border-left: 3px solid #f97316; border-radius: 8px; font-size: 0.88rem; color: #fed7aa; text-align: left; line-height: 1.5; text-shadow: 0 1px 3px rgba(0,0,0,0.8);'>🧡 <em>Một chút gửi gắm:</em> Khi bấm làm bài, hệ thống sẽ mở một liên kết Shopee nhỏ trước khi vào thi nhằm tiếp sức kinh phí duy trì máy chủ hoàn toàn miễn phí cho các bạn.</div>",
     tag: "Bước 2 / 5",
-    preferredPos: "right"
+    preferredPos: "right",
+    onEnter: () => {
+      closeMainDrawer();
+    }
   },
   {
-    target: "#btn-hamburger",
-    title: "Menu Chức Năng & Tiếp Sức",
-    desc: "Nút 3 gạch này chứa mọi chức năng quản trị: Mời tác giả ly cà phê (Donate), xem bảng xếp hạng, cài đặt âm thanh, đổi chủ đề giao diện và sao lưu dữ liệu.",
+    target: "#cuonedu-ai-btn",
+    title: "Trợ Lý Gia Sư AI CuonEdu",
+    desc: "Bong bóng AI thông minh luôn túc trực ở góc màn hình. Bấm vào bất cứ lúc nào để hỏi bài, nhờ AI giải thích cặn kẽ câu hỏi khó, tóm tắt bài học hoặc tạo đề thi mới.",
     tag: "Bước 3 / 5",
-    preferredPos: "bottom"
+    preferredPos: "top",
+    onEnter: () => {
+      closeMainDrawer();
+    }
+  },
+  {
+    target: "#drawer-item-donate",
+    fallbackTarget: "#btn-hamburger",
+    title: "Menu & Tiếp Sức (Donate)",
+    desc: "Mở menu 3 gạch để tùy chỉnh nâng cao. Đặc biệt, bạn có thể mời tác giả ly cà phê để chung tay tiếp sức duy trì server và phát triển nền tảng học tập này.",
+    tag: "Bước 4 / 5",
+    preferredPos: "left",
+    onEnter: () => {
+      openMainDrawer();
+    }
   },
   {
     target: "#drawer-item-zalo",
     fallbackTarget: "#btn-hamburger",
+    title: "Kết Nối Zalo Hỗ Trợ 24/7",
+    desc: "Bạn có tài liệu trắc nghiệm mới muốn đưa lên web hoặc phát hiện câu hỏi cần sửa? Hãy nhắn trực tiếp Zalo / SĐT <strong>0962.714.685</strong> (Quang Cuốn) để được hỗ trợ tức thì!",
+    tag: "Bước 5 / 5",
+    preferredPos: "left",
     onEnter: () => {
       openMainDrawer();
-    },
-    title: "Hỗ Trợ Zalo 24/7 & Góp Ý Đề",
-    desc: "Bạn có bộ đề thi mới muốn đưa lên web hoặc phát hiện câu hỏi cần sửa? Hãy nhắn trực tiếp qua Zalo / SĐT <strong>0962.714.685</strong> (Quang Cuốn) để được hỗ trợ 24/7!",
-    tag: "Bước 4 / 5",
-    preferredPos: "left"
-  },
-  {
-    target: "#cuonedu-ai-btn",
-    onEnter: () => {
-      closeMainDrawer();
-    },
-    title: "Trợ Lý Gia Sư AI CuonEdu",
-    desc: "Bong bóng AI thông minh luôn sẵn sàng ở góc màn hình. Bấm vào bất cứ lúc nào để nhờ AI giải thích câu hỏi khó, tóm tắt bài học hoặc tự động tạo đề thi mới.",
-    tag: "Bước 5 / 5",
-    preferredPos: "top"
+    }
   }
 ];
 
@@ -6442,9 +6452,11 @@ function renderTourCurrentStep() {
     step.onEnter();
   }
 
+  // Chờ hiệu ứng drawer hoàn tất nếu bước có mở drawer
+  const delay = (step.target && step.target.includes("drawer")) ? 280 : 80;
   setTimeout(() => {
     positionTourPopover(step);
-  }, 120);
+  }, delay);
 }
 
 function positionTourPopover(step) {
@@ -6461,21 +6473,23 @@ function positionTourPopover(step) {
   const isFirst = currentTourStep === 0;
 
   popover.innerHTML = `
-    <div class="tour-popover-header">
-      <span class="tour-badge">${step.tag}</span>
-      <button class="tour-btn-close" onclick="endOnboardingTour()" title="Bỏ qua hướng dẫn">✕</button>
-    </div>
-    <h3 class="tour-title">${step.title}</h3>
-    <div class="tour-desc">${step.desc}</div>
-    <div class="tour-footer">
-      <div class="tour-dots">
-        ${ONBOARDING_STEPS.map((_, i) => `<span class="tour-dot ${i === currentTourStep ? 'active' : ''}"></span>`).join('')}
+    <div class="tour-text-wrap">
+      <div class="tour-tag-line">
+        <span class="tour-badge-pill">${step.tag}</span>
+        <button type="button" class="tour-skip-link" onclick="endOnboardingTour()" title="Bỏ qua hướng dẫn">Bỏ qua ✕</button>
       </div>
-      <div class="tour-actions">
-        ${!isFirst ? `<button type="button" class="btn btn-secondary btn-sm tour-btn-prev" onclick="prevTourStep()">Quay Lại</button>` : ''}
-        <button type="button" class="btn btn-primary btn-sm tour-btn-next" onclick="nextTourStep()">
-          ${isLast ? 'Hoàn Tất & Bắt Đầu' : 'Tiếp Theo'}
-        </button>
+      <h3 class="tour-title-lux">${step.title}</h3>
+      <div class="tour-desc-lux">${step.desc}</div>
+      <div class="tour-nav-row">
+        <div class="tour-stepper-dots">
+          ${ONBOARDING_STEPS.map((_, i) => `<span class="tour-step-dot ${i === currentTourStep ? 'active' : ''}"></span>`).join('')}
+        </div>
+        <div class="tour-btns-group">
+          ${!isFirst ? `<button type="button" class="tour-btn-lux tour-btn-lux-prev" onclick="prevTourStep()">Quay Lại</button>` : ''}
+          <button type="button" class="tour-btn-lux tour-btn-lux-next" onclick="nextTourStep()">
+            ${isLast ? 'Hoàn Tất & Khám Phá' : 'Tiếp Theo'}
+          </button>
+        </div>
       </div>
     </div>
   `;
@@ -6483,56 +6497,56 @@ function positionTourPopover(step) {
   if (targetEl && targetEl.offsetParent !== null) {
     targetEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
     const rect = targetEl.getBoundingClientRect();
-    const pad = 8;
+    const pad = 10;
 
     spotlight.style.top = `${Math.max(0, rect.top - pad)}px`;
     spotlight.style.left = `${Math.max(0, rect.left - pad)}px`;
     spotlight.style.width = `${rect.width + pad * 2}px`;
     spotlight.style.height = `${rect.height + pad * 2}px`;
-    spotlight.style.borderRadius = "12px";
+    spotlight.style.borderRadius = "14px";
     spotlight.style.opacity = "1";
 
-    const popW = Math.min(360, window.innerWidth - 32);
+    const popW = Math.min(380, window.innerWidth - 36);
     popover.style.width = `${popW}px`;
     const popH = popover.offsetHeight || 220;
 
     let popTop = 0;
     let popLeft = 0;
 
-    if (window.innerWidth < 640) {
+    if (window.innerWidth < 768) {
       popLeft = (window.innerWidth - popW) / 2;
       if (rect.bottom + popH + 20 < window.innerHeight) {
-        popTop = rect.bottom + 16;
-      } else if (rect.top - popH - 16 > 0) {
-        popTop = rect.top - popH - 16;
+        popTop = rect.bottom + 18;
+      } else if (rect.top - popH - 18 > 0) {
+        popTop = rect.top - popH - 18;
       } else {
-        popTop = Math.max(16, (window.innerHeight - popH) / 2);
+        popTop = Math.max(20, (window.innerHeight - popH) / 2);
       }
     } else {
       if (step.preferredPos === "bottom") {
-        popTop = rect.bottom + 14;
-        popLeft = Math.max(16, Math.min(window.innerWidth - popW - 16, rect.left + (rect.width - popW) / 2));
+        popTop = rect.bottom + 18;
+        popLeft = Math.max(20, Math.min(window.innerWidth - popW - 20, rect.left + (rect.width - popW) / 2));
       } else if (step.preferredPos === "top") {
-        popTop = Math.max(16, rect.top - popH - 14);
-        popLeft = Math.max(16, Math.min(window.innerWidth - popW - 16, rect.left + (rect.width - popW) / 2));
+        popTop = Math.max(20, rect.top - popH - 18);
+        popLeft = Math.max(20, Math.min(window.innerWidth - popW - 20, rect.left + (rect.width - popW) / 2));
       } else if (step.preferredPos === "right") {
-        popTop = Math.max(16, Math.min(window.innerHeight - popH - 16, rect.top));
-        popLeft = Math.min(window.innerWidth - popW - 16, rect.right + 14);
-      } else {
-        popTop = Math.max(16, Math.min(window.innerHeight - popH - 16, rect.top));
-        popLeft = Math.max(16, rect.left - popW - 14);
+        popTop = Math.max(20, Math.min(window.innerHeight - popH - 20, rect.top));
+        popLeft = Math.min(window.innerWidth - popW - 20, rect.right + 20);
+      } else { // left
+        popTop = Math.max(20, Math.min(window.innerHeight - popH - 20, rect.top));
+        popLeft = Math.max(20, rect.left - popW - 20);
       }
     }
 
-    popTop = Math.max(12, Math.min(window.innerHeight - popH - 12, popTop));
-    popLeft = Math.max(12, Math.min(window.innerWidth - popW - 12, popLeft));
+    popTop = Math.max(16, Math.min(window.innerHeight - popH - 16, popTop));
+    popLeft = Math.max(16, Math.min(window.innerWidth - popW - 16, popLeft));
 
     popover.style.top = `${popTop}px`;
     popover.style.left = `${popLeft}px`;
     popover.style.transform = "none";
   } else {
     spotlight.style.opacity = "0";
-    const popW = Math.min(360, window.innerWidth - 32);
+    const popW = Math.min(380, window.innerWidth - 36);
     popover.style.width = `${popW}px`;
     popover.style.top = "50%";
     popover.style.left = "50%";

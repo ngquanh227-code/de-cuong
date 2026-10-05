@@ -9915,153 +9915,174 @@ html.in-exam-mode #cuonedu-ai-panel,
 }
 
 /* ==========================================================================
-   INTERACTIVE ONBOARDING TOUR (SPOTLIGHT & POPOVER)
+   INTERACTIVE ONBOARDING TOUR (BORDERLESS MINIMALIST LUXURY TYPOGRAPHY)
    ========================================================================== */
 .tour-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(10, 6, 20, 0.45);
-  backdrop-filter: blur(2px);
+  background: rgba(10, 6, 22, 0.62);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 99990;
   display: none;
+  transition: opacity 0.3s ease;
 }
 
 .tour-spotlight {
   position: fixed;
   z-index: 99995;
   display: none;
-  box-shadow: 0 0 0 9999px rgba(8, 4, 18, 0.82), 0 0 24px rgba(192, 132, 252, 0.4);
-  border: 2px solid rgba(192, 132, 252, 0.85);
+  box-shadow: 0 0 0 9999px rgba(8, 4, 18, 0.74), 0 0 28px rgba(192, 132, 252, 0.7), inset 0 0 12px rgba(192, 132, 252, 0.35);
+  border: 2px solid #c084fc;
+  border-radius: 14px;
   pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .tour-popover {
   position: fixed;
   z-index: 100000;
   display: none;
-  background: #181126;
-  border: 1.5px solid rgba(192, 132, 252, 0.4);
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.75), 0 0 20px rgba(192, 132, 252, 0.25);
-  color: #ffffff;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
   animation: tourFadeScale 0.25s ease-out;
 }
 
 @keyframes tourFadeScale {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: translateY(6px) scale(0.98);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 
-.tour-popover-header {
+.tour-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-tag-line {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
-.tour-badge {
-  background: rgba(192, 132, 252, 0.18);
-  border: 1px solid rgba(192, 132, 252, 0.45);
-  color: #e9d5ff;
-  font-size: 0.75rem;
+.tour-badge-pill {
+  color: #d8b4fe;
+  font-size: 0.76rem;
   font-weight: 800;
-  padding: 3px 10px;
-  border-radius: 20px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  text-shadow: 0 0 10px rgba(192, 132, 252, 0.6);
 }
 
-.tour-btn-close {
-  background: rgba(255, 255, 255, 0.08);
+.tour-skip-link {
+  background: none;
   border: none;
-  color: var(--wg-text-subtle);
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  transition: all 0.15s ease;
+  transition: color 0.15s ease;
+  padding: 2px 6px;
 }
 
-.tour-btn-close:hover {
-  background: rgba(255, 255, 255, 0.2);
+.tour-skip-link:hover {
   color: #ffffff;
 }
 
-.tour-title {
-  font-size: 1.15rem;
-  font-weight: 800;
+.tour-title-lux {
+  font-size: 1.5rem;
+  font-weight: 900;
   color: #ffffff;
   margin: 0 0 8px 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 24px rgba(192, 132, 252, 0.35);
 }
 
-.tour-desc {
-  font-size: 0.88rem;
-  color: #cbd5e1;
-  line-height: 1.55;
+.tour-desc-lux {
+  font-size: 0.95rem;
+  color: #f1f5f9;
+  line-height: 1.6;
   margin-bottom: 18px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+  font-weight: 450;
 }
 
-.tour-footer {
+.tour-nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 14px;
 }
 
-.tour-dots {
+.tour-stepper-dots {
   display: flex;
   gap: 6px;
   align-items: center;
 }
 
-.tour-dot {
+.tour-step-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.25);
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
-.tour-dot.active {
-  width: 18px;
+.tour-step-dot.active {
+  width: 20px;
   border-radius: 10px;
   background: #c084fc;
-  box-shadow: 0 0 8px rgba(192, 132, 252, 0.6);
+  box-shadow: 0 0 10px rgba(192, 132, 252, 0.7);
 }
 
-.tour-actions {
+.tour-btns-group {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.tour-btn-prev {
-  padding: 6px 12px;
-  font-size: 0.82rem;
-  border-radius: 8px;
+.tour-btn-lux {
+  border-radius: 20px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.18s ease;
 }
 
-.tour-btn-next {
-  padding: 6px 14px;
+.tour-btn-lux-prev {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #f1f5f9;
+  padding: 7px 16px;
   font-size: 0.84rem;
-  font-weight: 800;
-  border-radius: 8px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.tour-btn-lux-prev:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.tour-btn-lux-next {
   background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
   border: none;
-  box-shadow: 0 2px 10px rgba(124, 58, 237, 0.4);
+  color: #ffffff;
+  padding: 8px 20px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.45);
+  letter-spacing: -0.01em;
+}
+
+.tour-btn-lux-next:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(168, 85, 247, 0.6);
 }
