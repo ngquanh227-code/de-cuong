@@ -514,17 +514,11 @@ function handleIncomingCloudData(cloudData, isRealtimeEvent = false, silent = fa
       renderApp();
     }
 
-    if (!silent) {
-      if (cloudData.subjects.length === 0) {
-        showToast("☁️ Đã đồng bộ: Tất cả đề thi đã được xóa sạch từ thiết bị khác!", "info");
-      } else {
-        const totalQ = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
-        showToast(`⚡ Đã đồng bộ ${cloudData.subjects.length} bộ đề (${totalQ} câu) tức thì từ Firebase!`, "success");
-      }
+    // Đồng bộ hoàn toàn âm thầm trong nền (Silent Background Sync), không bật toast làm phiền người dùng
+    if (!silent && !isRealtimeEvent && false) {
+      const totalQ = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
+      showToast(`⚡ Đã đồng bộ: Bạn đang có dữ liệu mới nhất (${appData.subjects.length} môn, ${totalQ} câu)!`, "success");
     }
-  } else if (!silent && !isRealtimeEvent) {
-    const totalQ = (appData.subjects || []).reduce((acc, s) => acc + (s.questions ? s.questions.length : 0), 0);
-    showToast(`⚡ Đã đồng bộ: Bạn đang có dữ liệu mới nhất (${appData.subjects.length} môn, ${totalQ} câu)!`, "success");
   }
 }
 
@@ -542,22 +536,22 @@ function initCloudSync() {
     firebaseDbRef.on("value", (snapshot) => {
       const cloudData = snapshot.val();
       if (cloudData && Array.isArray(cloudData.subjects)) {
-        handleIncomingCloudData(cloudData, true, false);
+        handleIncomingCloudData(cloudData, true, true);
       }
     }, (error) => {
       console.warn("Firebase realtime error:", error);
     });
   }
 
-  // 2. Tự động kiểm tra và nạp đề chuẩn nhất từ Cloud ngay khi mở trang web
+  // 2. Tự động kiểm tra và nạp đề chuẩn nhất từ Cloud ngay khi mở trang web (Chạy ngầm hoàn toàn)
   setTimeout(() => {
-    syncFromCloud(false);
+    syncFromCloud(true);
   }, 200);
 
-  // 3. Tự động cập nhật tức thì khi chuyển tab quay lại web hoặc mở khóa điện thoại (focus / visibilitychange)
+  // 3. Tự động cập nhật tức thì khi chuyển tab quay lại web hoặc mở khóa điện thoại (Chạy ngầm)
   window.addEventListener("focus", () => {
     if (!isCloudSyncInProgress && !isLocalModificationActive) {
-      syncFromCloud(false);
+      syncFromCloud(true);
     }
   });
 
@@ -4846,18 +4840,42 @@ function renderLeaderboard() {
     let badgeClass = "rank-other";
     let badgeIcon = `${idx + 1}`;
 
+    let rankBadgeHtml = "";
+    let avatarClass = "lb-avatar";
+
     if (isTop1) {
       rankClass = "rank-1-row";
-      badgeClass = "rank-1";
-      badgeIcon = "👑 1";
+      avatarClass = "lb-avatar avatar-top-1";
+      rankBadgeHtml = `
+        <div class="lb-rank-emblem rank-gold-emblem" title="Quán Quân Tuần (Hạng 1)">
+          <div class="emblem-crown">👑</div>
+          <div class="emblem-number">1</div>
+        </div>
+      `;
     } else if (isTop2) {
       rankClass = "rank-2-row";
-      badgeClass = "rank-2";
-      badgeIcon = "🥈 2";
+      avatarClass = "lb-avatar avatar-top-2";
+      rankBadgeHtml = `
+        <div class="lb-rank-emblem rank-silver-emblem" title="Á Quân 1 (Hạng 2)">
+          <div class="emblem-crown">🥈</div>
+          <div class="emblem-number">2</div>
+        </div>
+      `;
     } else if (isTop3) {
       rankClass = "rank-3-row";
-      badgeClass = "rank-3";
-      badgeIcon = "🥉 3";
+      avatarClass = "lb-avatar avatar-top-3";
+      rankBadgeHtml = `
+        <div class="lb-rank-emblem rank-bronze-emblem" title="Á Quân 2 (Hạng 3)">
+          <div class="emblem-crown">🥉</div>
+          <div class="emblem-number">3</div>
+        </div>
+      `;
+    } else {
+      rankBadgeHtml = `
+        <div class="lb-rank-emblem rank-normal-emblem" title="Hạng ${idx + 1}">
+          <div class="emblem-number-normal">${idx + 1}</div>
+        </div>
+      `;
     }
 
     const mins = Math.floor(item.timeUsedSecs / 60);
@@ -4867,8 +4885,8 @@ function renderLeaderboard() {
     row.className = `leaderboard-row ${rankClass}`;
     row.innerHTML = `
       <div class="lb-col-left">
-        <span class="rank-badge ${badgeClass}">${badgeIcon}</span>
-        <span class="lb-avatar">${item.avatar || "🚀"}</span>
+        ${rankBadgeHtml}
+        <span class="${avatarClass}">${item.avatar || "🚀"}</span>
         <div class="lb-info">
           <div class="lb-name">${escapeHtml(item.name)}</div>
           <div class="lb-meta">${escapeHtml(item.subjectTitle || "Đề thi")} • ⏱️ ${timeStr}</div>
@@ -5112,9 +5130,9 @@ function renderEditorQuestionList() {
     (q.options || []).forEach(opt => {
       const isCorrect = opt.key === q.correctAnswer;
       optionsHtml += `
-        <div class="qb-option-item ${isCorrect ? "correct" : ""}" onclick="setCorrectAnswerQuick(${idx}, '${opt.key}')" style="cursor: pointer;" title="Bấm để đặt đáp án đúng">
-          <strong>${opt.key}.</strong>
-          <span>${escapeHtml(opt.text)}</span>
+        <div class="qb-option-item ${isCorrect ? "correct" : ""}" onclick="setCorrectAnswerQuick(${idx}, '${opt.key}')" style="cursor: pointer;" title="Bấm để chọn làm đáp án đúng">
+          <strong class="qb-opt-key">${opt.key}.</strong>
+          <span class="qb-opt-text">${escapeHtml(opt.text)}</span>
           ${isCorrect ? `<span class="qb-correct-tag">ĐÚNG</span>` : ""}
         </div>
       `;
@@ -5122,12 +5140,11 @@ function renderEditorQuestionList() {
 
     card.innerHTML = `
       <div class="qb-card-top">
-        <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="qb-card-top-left">
           <span class="qb-index-badge">Câu ${idx + 1}</span>
           <span class="qb-level-badge level-thong-hieu">${q.level || "Thông hiểu"}</span>
-          <span style="font-size: 0.75rem; color: var(--wg-text-subtle);">(Bấm vào ô A/B/C/D để đổi đáp án đúng)</span>
         </div>
-        <div style="display: flex; gap: 6px;">
+        <div class="qb-card-top-right">
           <button class="btn btn-ghost btn-sm" onclick="editQuestion(${idx})">Sửa</button>
           <button class="btn btn-ghost btn-sm" onclick="deleteQuestion(${idx})" style="color: var(--danger);">Xóa</button>
         </div>

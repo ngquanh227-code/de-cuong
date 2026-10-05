@@ -78,12 +78,8 @@
           </div>
         </div>
 
-        <!-- Header Controls: Đồng Bộ Ngay + Hamburger Menu -->
+        <!-- Header Controls: Hamburger Menu Only (Sync runs silently in background) -->
         <div class="navbar-right-controls" style="display: flex; align-items: center; gap: 8px;">
-          <button id="btn-quick-sync-cloud" class="btn btn-ghost btn-sm" onclick="forceRefreshAndSyncCloud()" title="Bấm để đồng bộ dữ liệu tức thì từ Cloud (Xóa/Cập nhật đề mới)" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; background: rgba(56, 189, 248, 0.14); border: 1px solid rgba(56, 189, 248, 0.45); color: #38bdf8; font-size: 0.82rem; font-weight: 800; cursor: pointer; transition: all 0.2s ease;">
-            <span id="nav-sync-icon" style="display: inline-block; font-size: 0.95rem;">🔄</span>
-            <span class="hide-mobile">Đồng Bộ Cloud</span>
-          </button>
           <button id="btn-hamburger" class="btn-hamburger" onclick="toggleMainDrawer(event)" title="Menu cài đặt & chức năng (3 gạch)">
             <span class="hamburger-bar"></span>
             <span class="hamburger-bar"></span>
@@ -373,7 +369,7 @@
           <div class="hero-action-icon">📄</div>
           <div class="hero-action-info">
             <div class="hero-action-title-row">
-              <span class="hero-action-title">Tải Đề Từ File Word (.docx)</span>
+              <span class="hero-action-title">Tải Đề Từ File Word</span>
               <span class="hero-action-badge">Khuyên Dùng</span>
             </div>
             <span class="hero-action-sub">Tự động nhận diện câu hỏi, 4 đáp án & lời giải tức thì</span>
@@ -535,18 +531,18 @@
           <p id="editor-subject-meta" style="color: var(--wg-text-subtle); font-size: 0.85rem; margin-top: 4px;">Mã đề: --- • 0 câu hỏi</p>
         </div>
 
-        <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+        <div class="editor-header-actions">
           <button class="btn btn-secondary btn-sm" onclick="openCreateSubjectModal(currentSubjectId)" title="Đổi tên đề, mã đề, phân môn">
-            <span>⚙️ Đổi Thông Tin Đề</span>
+            <span>⚙️ Đổi Thông Tin</span>
           </button>
           <button class="btn btn-secondary btn-sm" onclick="openSmartImportModal()" title="Tải thêm đề thi mới">
-            <span>Tải Đề Word Mới</span>
+            <span>📥 Tải Đề Word Mới</span>
           </button>
           <button class="btn btn-secondary btn-sm" onclick="openAddQuestionModal()">
-            <span>+ Thêm Câu Hỏi</span>
+            <span>➕ Thêm Câu Hỏi</span>
           </button>
-          <button class="btn btn-primary btn-sm" onclick="saveAndReturnDashboard()">
-            <span>Lưu & Hoàn Tất</span>
+          <button class="btn btn-primary btn-sm btn-save-editor-complete" onclick="saveAndReturnDashboard()">
+            <span>💾 Lưu & Hoàn Tất</span>
           </button>
         </div>
       </div>
@@ -828,11 +824,13 @@
                 <span><strong>Điền nhanh chuỗi đáp án</strong> (Ví dụ: <code>1A 2B 3C...</code> hoặc <code>ABCD...</code>)</span>
                 <span id="create-sub-missing-badge" class="badge-missing-warning">Còn 0 câu chưa có đáp án</span>
               </div>
-              <div class="quick-ans-row">
-                <input type="text" id="quick-key-input-sub" class="form-input form-input-sm" placeholder="Dán chuỗi đáp án: 1A 2B 3C 4D... hoặc ABCD...">
-                <button type="button" class="btn btn-primary btn-sm" onclick="applyQuickAnswerKey('create-sub-parsed-list', 'create-sub-count')">Điền Nhanh</button>
-                <button type="button" class="btn btn-secondary btn-sm" onclick="solveAllMissingAnswersWithAI('create-sub-parsed-list', 'create-sub-count')" style="background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.25)); border-color: #c084fc; color: #ffffff; font-weight: 800;">AI Điền Hết Câu Thiếu</button>
-                <button type="button" class="btn btn-secondary btn-sm" onclick="clearAllParsedAnswers('create-sub-parsed-list', 'create-sub-count')">Xóa Đáp Án</button>
+              <div class="quick-ans-input-wrapper">
+                <input type="text" id="quick-key-input-sub" class="form-input form-input-sm quick-key-input" placeholder="Dán chuỗi đáp án: 1A 2B 3C 4D... hoặc ABCD...">
+              </div>
+              <div class="quick-ans-row-scroll">
+                <button type="button" class="btn btn-primary btn-sm btn-quick-action" onclick="applyQuickAnswerKey('create-sub-parsed-list', 'create-sub-count')">Điền Nhanh</button>
+                <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="solveAllMissingAnswersWithAI('create-sub-parsed-list', 'create-sub-count')" style="background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.25)); border-color: #c084fc; color: #ffffff; font-weight: 800;">✨ AI Điền Hết Câu Thiếu</button>
+                <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="clearAllParsedAnswers('create-sub-parsed-list', 'create-sub-count')">🗑️ Xóa Đáp Án</button>
               </div>
             </div>
 
@@ -913,11 +911,13 @@
               <span><strong>Điền nhanh chuỗi đáp án</strong> (Ví dụ: <code>1A 2B 3C...</code> hoặc <code>ABCD...</code>)</span>
               <span id="import-missing-badge" class="badge-missing-warning">Còn 0 câu chưa có đáp án</span>
             </div>
-            <div class="quick-ans-row">
-              <input type="text" id="quick-key-input-smart" class="form-input form-input-sm" placeholder="Dán chuỗi đáp án: 1A 2B 3C 4D... hoặc ABCD...">
-              <button type="button" class="btn btn-primary btn-sm" onclick="applyQuickAnswerKey('import-parsed-list', 'parsed-count-badge')">Điền Nhanh</button>
-              <button type="button" class="btn btn-secondary btn-sm" onclick="solveAllMissingAnswersWithAI('import-parsed-list', 'parsed-count-badge')" style="background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.25)); border-color: #c084fc; color: #ffffff; font-weight: 800;">AI Điền Hết Câu Thiếu</button>
-              <button type="button" class="btn btn-secondary btn-sm" onclick="clearAllParsedAnswers('import-parsed-list', 'parsed-count-badge')">Xóa Đáp Án</button>
+            <div class="quick-ans-input-wrapper">
+              <input type="text" id="quick-key-input-smart" class="form-input form-input-sm quick-key-input" placeholder="Dán chuỗi đáp án: 1A 2B 3C 4D... hoặc ABCD...">
+            </div>
+            <div class="quick-ans-row-scroll">
+              <button type="button" class="btn btn-primary btn-sm btn-quick-action" onclick="applyQuickAnswerKey('import-parsed-list', 'parsed-count-badge')">Điền Nhanh</button>
+              <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="solveAllMissingAnswersWithAI('import-parsed-list', 'parsed-count-badge')" style="background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.25)); border-color: #c084fc; color: #ffffff; font-weight: 800;">✨ AI Điền Hết Câu Thiếu</button>
+              <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="clearAllParsedAnswers('import-parsed-list', 'parsed-count-badge')">🗑️ Xóa Đáp Án</button>
             </div>
           </div>
 
