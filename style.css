@@ -9401,109 +9401,108 @@ body.in-exam-mode {
   border: 1px solid rgba(255, 255, 255, 0.09);
 }
 
-/* Luxury Podium Rank Emblems */
-.lb-rank-emblem {
-  min-width: 44px;
+/* ==========================================================================
+   AUTHENTIC 3D EMBOSSED METALLIC MEDALS (UNIFIED FOR ALL RANKS)
+   ========================================================================== */
+.lb-medal-disc {
+  width: 44px;
   height: 44px;
-  border-radius: 12px;
+  min-width: 44px;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   flex-shrink: 0;
-  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
 }
 
-.leaderboard-row:hover .lb-rank-emblem {
-  transform: scale(1.08);
+.leaderboard-row:hover .lb-medal-disc {
+  transform: scale(1.1) rotate(2deg);
 }
 
-.rank-gold-emblem {
-  background: linear-gradient(135deg, #FFFBEB 0%, #FBBF24 45%, #D97706 80%, #92400E 100%);
-  border: 1.5px solid #FDE047;
-  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.9);
-}
-
-.rank-gold-emblem .emblem-crown {
-  font-size: 0.95rem;
-  line-height: 1;
-  margin-top: -2px;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
-}
-
-.rank-gold-emblem .emblem-number {
-  font-size: 1.05rem;
-  font-weight: 900;
-  color: #451A03;
-  line-height: 1;
-  margin-top: 1px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  letter-spacing: -0.02em;
-}
-
-.rank-silver-emblem {
-  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 40%, #94A3B8 75%, #475569 100%);
-  border: 1.5px solid #F8FAFC;
-  box-shadow: 0 4px 14px rgba(148, 163, 184, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.9);
-}
-
-.rank-silver-emblem .emblem-crown {
-  font-size: 0.95rem;
-  line-height: 1;
-  margin-top: -2px;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
-}
-
-.rank-silver-emblem .emblem-number {
-  font-size: 1.05rem;
-  font-weight: 900;
-  color: #0F172A;
-  line-height: 1;
-  margin-top: 1px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  letter-spacing: -0.02em;
-}
-
-.rank-bronze-emblem {
-  background: linear-gradient(135deg, #FFEDD5 0%, #FB923C 40%, #C2410C 75%, #7C2D12 100%);
-  border: 1.5px solid #FDBA74;
-  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.8);
-}
-
-.rank-bronze-emblem .emblem-crown {
-  font-size: 0.95rem;
-  line-height: 1;
-  margin-top: -2px;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
-}
-
-.rank-bronze-emblem .emblem-number {
-  font-size: 1.05rem;
-  font-weight: 900;
-  color: #431407;
-  line-height: 1;
-  margin-top: 1px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  letter-spacing: -0.02em;
-}
-
-.rank-normal-emblem {
-  min-width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.medal-inner-ring {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.emblem-number-normal {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.85);
+.medal-rank-digit {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 900;
   line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* TOP 1: Huy Chương Vàng Đúc Nguyên Khối (Gold Champion) */
+.medal-gold {
+  background: radial-gradient(circle at 35% 30%, #FFFBEB 0%, #FBBF24 40%, #D97706 75%, #92400E 100%);
+  border: 2px solid #FDE047;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.5), inset 0 2px 3px rgba(255, 255, 255, 0.8), inset 0 -2px 3px rgba(146, 64, 14, 0.8);
+}
+.medal-gold .medal-inner-ring {
+  background: radial-gradient(circle at 35% 30%, #FEF08A 0%, #D97706 70%, #78350F 100%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+.medal-gold .medal-rank-digit {
+  color: #FFFDF0;
+  font-size: 1.15rem;
+  text-shadow: 0 1px 3px #78350F, 0 -1px 1px #FEF08A;
+}
+
+/* TOP 2: Huy Chương Bạc Đúc Nguyên Khối (Silver Master) */
+.medal-silver {
+  background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, #E2E8F0 40%, #94A3B8 75%, #475569 100%);
+  border: 2px solid #F8FAFC;
+  box-shadow: 0 4px 14px rgba(148, 163, 184, 0.45), inset 0 2px 3px rgba(255, 255, 255, 0.9), inset 0 -2px 3px rgba(71, 85, 105, 0.8);
+}
+.medal-silver .medal-inner-ring {
+  background: radial-gradient(circle at 35% 30%, #F1F5F9 0%, #94A3B8 70%, #334155 100%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+.medal-silver .medal-rank-digit {
+  color: #FFFFFF;
+  font-size: 1.15rem;
+  text-shadow: 0 1px 3px #1E293B, 0 -1px 1px #F8FAFC;
+}
+
+/* TOP 3: Huy Chương Đồng Đúc Nguyên Khối (Bronze Knight) */
+.medal-bronze {
+  background: radial-gradient(circle at 35% 30%, #FFEDD5 0%, #FB923C 40%, #C2410C 75%, #7C2D12 100%);
+  border: 2px solid #FDBA74;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.45), inset 0 2px 3px rgba(255, 255, 255, 0.8), inset 0 -2px 3px rgba(124, 45, 18, 0.8);
+}
+.medal-bronze .medal-inner-ring {
+  background: radial-gradient(circle at 35% 30%, #FED7AA 0%, #C2410C 70%, #431407 100%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+.medal-bronze .medal-rank-digit {
+  color: #FFF7ED;
+  font-size: 1.15rem;
+  text-shadow: 0 1px 3px #431407, 0 -1px 1px #FED7AA;
+}
+
+/* TẤT CẢ CÁC HẠNG TỪ 4 TRỞ ĐI: Huy Chương Thép Titan Đúc Nguyên Khối (Titanium/Steel Medal) */
+.medal-titanium {
+  background: radial-gradient(circle at 35% 30%, #F1F5F9 0%, #64748B 45%, #334155 80%, #0F172A 100%);
+  border: 1.5px solid rgba(203, 213, 225, 0.45);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4), inset 0 1.5px 2px rgba(255, 255, 255, 0.5), inset 0 -1.5px 2px rgba(15, 23, 42, 0.7);
+}
+.medal-titanium .medal-inner-ring {
+  background: radial-gradient(circle at 35% 30%, #94A3B8 0%, #475569 65%, #1E293B 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.medal-titanium .medal-rank-digit {
+  color: #F8FAFC;
+  font-size: 1.05rem;
+  text-shadow: 0 1px 2px #0F172A, 0 -1px 1px #CBD5E1;
 }
 
 /* Avatar glow borders */
@@ -9913,4 +9912,156 @@ html.in-exam-mode #cuonedu-ai-panel,
   line-height: 1.5 !important;
   word-break: break-word !important;
   overflow-wrap: anywhere !important;
+}
+
+/* ==========================================================================
+   INTERACTIVE ONBOARDING TOUR (SPOTLIGHT & POPOVER)
+   ========================================================================== */
+.tour-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 6, 20, 0.45);
+  backdrop-filter: blur(2px);
+  z-index: 99990;
+  display: none;
+}
+
+.tour-spotlight {
+  position: fixed;
+  z-index: 99995;
+  display: none;
+  box-shadow: 0 0 0 9999px rgba(8, 4, 18, 0.82), 0 0 24px rgba(192, 132, 252, 0.4);
+  border: 2px solid rgba(192, 132, 252, 0.85);
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tour-popover {
+  position: fixed;
+  z-index: 100000;
+  display: none;
+  background: #181126;
+  border: 1.5px solid rgba(192, 132, 252, 0.4);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.75), 0 0 20px rgba(192, 132, 252, 0.25);
+  color: #ffffff;
+  animation: tourFadeScale 0.25s ease-out;
+}
+
+@keyframes tourFadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tour-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tour-badge {
+  background: rgba(192, 132, 252, 0.18);
+  border: 1px solid rgba(192, 132, 252, 0.45);
+  color: #e9d5ff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tour-btn-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: var(--wg-text-subtle);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+}
+
+.tour-btn-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.tour-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.01em;
+}
+
+.tour-desc {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.tour-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 14px;
+}
+
+.tour-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.tour-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.tour-dot.active {
+  width: 18px;
+  border-radius: 10px;
+  background: #c084fc;
+  box-shadow: 0 0 8px rgba(192, 132, 252, 0.6);
+}
+
+.tour-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tour-btn-prev {
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  border-radius: 8px;
+}
+
+.tour-btn-next {
+  padding: 6px 14px;
+  font-size: 0.84rem;
+  font-weight: 800;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  border: none;
+  box-shadow: 0 2px 10px rgba(124, 58, 237, 0.4);
 }

@@ -107,7 +107,7 @@
 
     <!-- 1. CỘNG ĐỒNG: ỦNG HỘ & GÓP Ý (ĐẦU TIÊN) -->
     <div class="drawer-nav-group" style="margin-top: 10px; margin-bottom: 14px;">
-      <button class="drawer-menu-item" onclick="closeMainDrawer(); openModal('modal-donate');" style="background: linear-gradient(135deg, rgba(244, 63, 94, 0.16), rgba(236, 72, 153, 0.16)); border: 1px solid rgba(244, 63, 94, 0.45); margin-bottom: 8px;">
+      <button id="drawer-item-donate" class="drawer-menu-item" onclick="closeMainDrawer(); openModal('modal-donate');" style="background: linear-gradient(135deg, rgba(244, 63, 94, 0.16), rgba(236, 72, 153, 0.16)); border: 1px solid rgba(244, 63, 94, 0.45); margin-bottom: 8px;">
         <div class="drawer-item-icon-wrap" style="font-size: 1.35rem; margin-right: 12px; display: flex; align-items: center;">💖</div>
         <div class="drawer-item-content">
           <div class="drawer-item-title" style="color: #fda4af; font-weight: 800; display: flex; align-items: center; justify-content: space-between;">
@@ -118,7 +118,7 @@
         </div>
       </button>
 
-      <button class="drawer-menu-item" onclick="closeMainDrawer(); openModal('modal-feedback');" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.14), rgba(14, 165, 233, 0.14)); border: 1px solid rgba(56, 189, 248, 0.4);">
+      <button id="drawer-item-zalo" class="drawer-menu-item" onclick="closeMainDrawer(); openModal('modal-feedback');" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.14), rgba(14, 165, 233, 0.14)); border: 1px solid rgba(56, 189, 248, 0.4); margin-bottom: 8px;">
         <div class="drawer-item-icon-wrap" style="font-size: 1.35rem; margin-right: 12px; display: flex; align-items: center;">💬</div>
         <div class="drawer-item-content">
           <div class="drawer-item-title" style="color: #7dd3fc; font-weight: 800; display: flex; align-items: center; justify-content: space-between;">
@@ -126,6 +126,16 @@
             <span class="badge" style="background: rgba(56, 189, 248, 0.3); color: #fff; font-size: 0.72rem; padding: 2px 7px; border-radius: 10px;">Zalo 24/7</span>
           </div>
           <div class="drawer-item-desc" style="color: rgba(255, 255, 255, 0.8);">Zalo / SĐT: 0962.714.685 (Quang Cuốn) • Nhận đề & góp ý</div>
+        </div>
+      </button>
+
+      <button class="drawer-menu-item" onclick="closeMainDrawer(); startOnboardingTour();" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12);">
+        <div class="drawer-item-icon-wrap" style="font-size: 1.35rem; margin-right: 12px; display: flex; align-items: center;">💡</div>
+        <div class="drawer-item-content">
+          <div class="drawer-item-title" style="color: #ffffff; font-weight: 800;">
+            <span>Hướng Dẫn Sử Dụng Web</span>
+          </div>
+          <div class="drawer-item-desc" style="color: var(--wg-text-subtle);">Xem lại hướng dẫn nhanh các tính năng chính</div>
         </div>
       </button>
     </div>
@@ -366,7 +376,6 @@
       <!-- PROMINENT HERO ACTION BANNER (Thêm Đề Thi / Tải File Word Nổi Bật) -->
       <section class="hero-quick-actions-bar">
         <button class="btn-hero-action btn-hero-import" onclick="openSmartImportModal()" title="Tải đề thi tự động từ file Word hoặc dán văn bản">
-          <div class="hero-action-icon">📄</div>
           <div class="hero-action-info">
             <div class="hero-action-title-row">
               <span class="hero-action-title">Tải Đề Từ File Word</span>
@@ -377,7 +386,6 @@
         </button>
 
         <button class="btn-hero-action btn-hero-create" onclick="openCreateSubjectModal()" title="Tạo môn học và nhập câu hỏi thủ công">
-          <div class="hero-action-icon">➕</div>
           <div class="hero-action-info">
             <span class="hero-action-title">Tạo Môn Học Mới</span>
             <span class="hero-action-sub">Soạn đề thi & ngân hàng câu hỏi thủ công</span>
@@ -525,7 +533,7 @@
           <div style="display: flex; align-items: center; gap: 10px; margin-top: 4px; flex-wrap: wrap;">
             <h2 id="editor-subject-title" style="font-size: 1.6rem; font-weight: 800; margin: 0; cursor: pointer;" onclick="quickRenameSubject(currentSubjectId)" title="Bấm để đổi tên đề">Tên Môn Học</h2>
             <button class="btn btn-secondary btn-sm" onclick="quickRenameSubject(currentSubjectId)" style="padding: 4px 10px; font-size: 0.8rem; border-radius: 20px; display: inline-flex; align-items: center; gap: 4px;" title="Đổi tên bộ đề">
-              <span>✏️ Đổi tên đề</span>
+              <span>Đổi tên đề</span>
             </button>
           </div>
           <p id="editor-subject-meta" style="color: var(--wg-text-subtle); font-size: 0.85rem; margin-top: 4px;">Mã đề: --- • 0 câu hỏi</p>
@@ -533,16 +541,16 @@
 
         <div class="editor-header-actions">
           <button class="btn btn-secondary btn-sm" onclick="openCreateSubjectModal(currentSubjectId)" title="Đổi tên đề, mã đề, phân môn">
-            <span>⚙️ Đổi Thông Tin</span>
+            <span>Đổi Thông Tin Đề</span>
           </button>
           <button class="btn btn-secondary btn-sm" onclick="openSmartImportModal()" title="Tải thêm đề thi mới">
-            <span>📥 Tải Đề Word Mới</span>
+            <span>Tải Đề Word Mới</span>
           </button>
           <button class="btn btn-secondary btn-sm" onclick="openAddQuestionModal()">
-            <span>➕ Thêm Câu Hỏi</span>
+            <span>Thêm Câu Hỏi</span>
           </button>
           <button class="btn btn-primary btn-sm btn-save-editor-complete" onclick="saveAndReturnDashboard()">
-            <span>💾 Lưu & Hoàn Tất</span>
+            <span>Lưu & Hoàn Tất</span>
           </button>
         </div>
       </div>
@@ -829,8 +837,8 @@
               </div>
               <div class="quick-ans-row-scroll">
                 <button type="button" class="btn btn-primary btn-sm btn-quick-action" onclick="applyQuickAnswerKey('create-sub-parsed-list', 'create-sub-count')">Điền Nhanh</button>
-                <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="solveAllMissingAnswersWithAI('create-sub-parsed-list', 'create-sub-count')" style="background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.25)); border-color: #c084fc; color: #ffffff; font-weight: 800;">✨ AI Điền Hết Câu Thiếu</button>
-                <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="clearAllParsedAnswers('create-sub-parsed-list', 'create-sub-count')">🗑️ Xóa Đáp Án</button>
+                <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="solveAllMissingAnswersWithAI('create-sub-parsed-list', 'create-sub-count')" style="background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.25)); border-color: #c084fc; color: #ffffff; font-weight: 800;">AI Điền Hết Câu Thiếu</button>
+                <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="clearAllParsedAnswers('create-sub-parsed-list', 'create-sub-count')">Xóa Đáp Án</button>
               </div>
             </div>
 
@@ -916,8 +924,8 @@
             </div>
             <div class="quick-ans-row-scroll">
               <button type="button" class="btn btn-primary btn-sm btn-quick-action" onclick="applyQuickAnswerKey('import-parsed-list', 'parsed-count-badge')">Điền Nhanh</button>
-              <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="solveAllMissingAnswersWithAI('import-parsed-list', 'parsed-count-badge')" style="background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.25)); border-color: #c084fc; color: #ffffff; font-weight: 800;">✨ AI Điền Hết Câu Thiếu</button>
-              <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="clearAllParsedAnswers('import-parsed-list', 'parsed-count-badge')">🗑️ Xóa Đáp Án</button>
+              <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="solveAllMissingAnswersWithAI('import-parsed-list', 'parsed-count-badge')" style="background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.25)); border-color: #c084fc; color: #ffffff; font-weight: 800;">AI Điền Hết Câu Thiếu</button>
+              <button type="button" class="btn btn-secondary btn-sm btn-quick-action" onclick="clearAllParsedAnswers('import-parsed-list', 'parsed-count-badge')">Xóa Đáp Án</button>
             </div>
           </div>
 
@@ -1340,6 +1348,28 @@
           <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
         </div>
       </form>
+    </div>
+  <!-- MODAL: SHOPEE SPONSOR GATE (Lời nhắn nhẹ nhàng, tình cảm & bắt buộc đồng ý) -->
+  <div class="modal-backdrop" id="modal-shopee-gate" style="z-index: 10500;">
+    <div class="modal-card" style="max-width: 440px; text-align: center; border: 1.5px solid rgba(249, 115, 22, 0.45); box-shadow: 0 12px 48px rgba(249, 115, 22, 0.28); background: #181126;">
+      <div class="modal-body" style="padding: 26px 20px;">
+        <div style="font-size: 2.2rem; margin-bottom: 12px; filter: drop-shadow(0 2px 8px rgba(249, 115, 22, 0.45));">🧡</div>
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 12px; letter-spacing: -0.01em;">Một Chút Gửi Gắm Từ CuonEdu</h3>
+        <p style="font-size: 0.9rem; color: #f1f5f9; line-height: 1.6; margin-bottom: 14px; text-align: left;">
+          Chào bạn thân mến, để hệ thống <strong>CuonEdu</strong> có thể duy trì máy chủ hoạt động ổn định và hoàn toàn miễn phí cho tất cả mọi người cùng ôn thi, chúng mình xin phép được chuyển tiếp bạn ghé thăm một đường link Shopee nhỏ trước khi bắt đầu bài thi.
+        </p>
+        <div style="font-size: 0.86rem; color: #fed7aa; line-height: 1.5; margin-bottom: 22px; text-align: left; background: rgba(249, 115, 22, 0.12); border-left: 3px solid #f97316; padding: 10px 12px; border-radius: 0 8px 8px 0;">
+          Sự đồng hành và thông cảm của bạn là nguồn động viên rất lớn để chúng mình tiếp tục duy trì và phát triển nền tảng học tập này. Cảm ơn bạn thật nhiều!
+        </div>
+        <div style="display: flex; gap: 10px; flex-direction: column;">
+          <button type="button" class="btn btn-primary" onclick="confirmShopeeAndStartExam()" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); border: none; font-weight: 800; font-size: 0.95rem; padding: 12px 16px; border-radius: 10px; box-shadow: 0 4px 16px rgba(234, 88, 12, 0.4); color: #ffffff; cursor: pointer;">
+            Đồng Ý & Vào Thi
+          </button>
+          <button type="button" class="btn btn-ghost" onclick="cancelShopeeGate()" style="color: var(--wg-text-subtle); font-size: 0.85rem; padding: 8px;">
+            Quay Lại
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 

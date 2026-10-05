@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderApp();
   setupGlobalEvents();
   initCloudSync();
+  checkAndStartOnboardingTour();
 });
 
 function loadUserProfile() {
@@ -4118,14 +4119,25 @@ function handlePreExamSubmit(e) {
     saveUserProfile();
   }
 
+  // Bắt buộc hiện thông báo cảm ơn và xác nhận mở Shopee trước khi vào thi
+  openModal("modal-shopee-gate");
+}
+
+function confirmShopeeAndStartExam() {
   try {
     window.open("https://s.shopee.vn/1AkCwLocI", "_blank");
   } catch (err) {
-    console.error("Error opening link:", err);
+    console.error("Error opening sponsor link:", err);
   }
 
+  closeModal("modal-shopee-gate");
   closeModal("modal-pre-exam");
   startExam(currentSubjectId);
+}
+
+function cancelShopeeGate() {
+  closeModal("modal-shopee-gate");
+  // Bắt buộc: Không cho vào thi, thí sinh ở lại trang chủ
 }
 
 // ==========================================================================
@@ -4840,43 +4852,33 @@ function renderLeaderboard() {
     let badgeClass = "rank-other";
     let badgeIcon = `${idx + 1}`;
 
-    let rankBadgeHtml = "";
+    let medalTierClass = "medal-titanium";
     let avatarClass = "lb-avatar";
 
     if (isTop1) {
       rankClass = "rank-1-row";
       avatarClass = "lb-avatar avatar-top-1";
-      rankBadgeHtml = `
-        <div class="lb-rank-emblem rank-gold-emblem" title="Quán Quân Tuần (Hạng 1)">
-          <div class="emblem-crown">👑</div>
-          <div class="emblem-number">1</div>
-        </div>
-      `;
+      medalTierClass = "medal-gold";
     } else if (isTop2) {
       rankClass = "rank-2-row";
       avatarClass = "lb-avatar avatar-top-2";
-      rankBadgeHtml = `
-        <div class="lb-rank-emblem rank-silver-emblem" title="Á Quân 1 (Hạng 2)">
-          <div class="emblem-crown">🥈</div>
-          <div class="emblem-number">2</div>
-        </div>
-      `;
+      medalTierClass = "medal-silver";
     } else if (isTop3) {
       rankClass = "rank-3-row";
       avatarClass = "lb-avatar avatar-top-3";
-      rankBadgeHtml = `
-        <div class="lb-rank-emblem rank-bronze-emblem" title="Á Quân 2 (Hạng 3)">
-          <div class="emblem-crown">🥉</div>
-          <div class="emblem-number">3</div>
-        </div>
-      `;
+      medalTierClass = "medal-bronze";
     } else {
-      rankBadgeHtml = `
-        <div class="lb-rank-emblem rank-normal-emblem" title="Hạng ${idx + 1}">
-          <div class="emblem-number-normal">${idx + 1}</div>
-        </div>
-      `;
+      rankClass = "rank-other-row";
+      medalTierClass = "medal-titanium";
     }
+
+    const rankBadgeHtml = `
+      <div class="lb-medal-disc ${medalTierClass}" title="Hạng ${idx + 1}">
+        <div class="medal-inner-ring">
+          <span class="medal-rank-digit">${idx + 1}</span>
+        </div>
+      </div>
+    `;
 
     const mins = Math.floor(item.timeUsedSecs / 60);
     const secs = item.timeUsedSecs % 60;
@@ -6328,5 +6330,260 @@ function importAIQuestionsFromEncoded(encodedData) {
     showToast("Lỗi khi nhập câu hỏi từ AI: " + e.message, "danger");
   }
 }
+
+// ==========================================================================
+// 22. INTERACTIVE ONBOARDING TOUR ENGINE (SPOTLIGHT WALKTHROUGH)
+// ==========================================================================
+let currentTourStep = 0;
+const TOUR_STORAGE_KEY = "cuonedu_tour_completed_v1";
+
+const ONBOARDING_STEPS = [
+  {
+    target: ".btn-hero-import",
+    title: "Tải Đề & Nhập Đề Tự Động",
+    desc: "Bạn có thể tải thẳng file Word (.docx), PDF hoặc dán văn bản trắc nghiệm. Hệ thống tự động nhận diện câu hỏi, 4 đáp án A-B-C-D và đáp án đúng chỉ trong chớp mắt.",
+    tag: "Bước 1 / 5",
+    preferredPos: "bottom"
+  },
+  {
+    target: "#sub-master-sidebar",
+    title: "Vào Thi & Ôn Luyện Đề",
+    desc: "Chọn bất kỳ môn học nào trong danh sách để vào giao diện thi Quizizz Arena hấp dẫn.<br><div style='margin-top: 10px; padding: 10px 12px; background: rgba(249, 115, 22, 0.15); border-left: 3px solid #f97316; border-radius: 6px; font-size: 0.84rem; color: #fed7aa; text-align: left; line-height: 1.5;'>🧡 <strong>Một chút gửi gắm:</strong> Khi bấm làm bài, hệ thống sẽ mở một liên kết Shopee nhỏ trước khi vào thi nhằm tiếp sức kinh phí duy trì máy chủ hoàn toàn miễn phí cho các bạn.</div>",
+    tag: "Bước 2 / 5",
+    preferredPos: "right"
+  },
+  {
+    target: "#btn-hamburger",
+    title: "Menu Chức Năng & Tiếp Sức",
+    desc: "Nút 3 gạch này chứa mọi chức năng quản trị: Mời tác giả ly cà phê (Donate), xem bảng xếp hạng, cài đặt âm thanh, đổi chủ đề giao diện và sao lưu dữ liệu.",
+    tag: "Bước 3 / 5",
+    preferredPos: "bottom"
+  },
+  {
+    target: "#drawer-item-zalo",
+    fallbackTarget: "#btn-hamburger",
+    onEnter: () => {
+      openMainDrawer();
+    },
+    title: "Hỗ Trợ Zalo 24/7 & Góp Ý Đề",
+    desc: "Bạn có bộ đề thi mới muốn đưa lên web hoặc phát hiện câu hỏi cần sửa? Hãy nhắn trực tiếp qua Zalo / SĐT <strong>0962.714.685</strong> (Quang Cuốn) để được hỗ trợ 24/7!",
+    tag: "Bước 4 / 5",
+    preferredPos: "left"
+  },
+  {
+    target: "#cuonedu-ai-btn",
+    onEnter: () => {
+      closeMainDrawer();
+    },
+    title: "Trợ Lý Gia Sư AI CuonEdu",
+    desc: "Bong bóng AI thông minh luôn sẵn sàng ở góc màn hình. Bấm vào bất cứ lúc nào để nhờ AI giải thích câu hỏi khó, tóm tắt bài học hoặc tự động tạo đề thi mới.",
+    tag: "Bước 5 / 5",
+    preferredPos: "top"
+  }
+];
+
+function initTourElements() {
+  if (document.getElementById("cuonedu-tour-backdrop")) return;
+
+  const backdrop = document.createElement("div");
+  backdrop.id = "cuonedu-tour-backdrop";
+  backdrop.className = "tour-backdrop";
+  backdrop.onclick = (e) => {
+    if (e.target === backdrop) endOnboardingTour();
+  };
+
+  const spotlight = document.createElement("div");
+  spotlight.id = "cuonedu-tour-spotlight";
+  spotlight.className = "tour-spotlight";
+
+  const popover = document.createElement("div");
+  popover.id = "cuonedu-tour-popover";
+  popover.className = "tour-popover";
+
+  document.body.appendChild(backdrop);
+  document.body.appendChild(spotlight);
+  document.body.appendChild(popover);
+
+  window.addEventListener("resize", () => {
+    if (document.body.classList.contains("tour-active")) {
+      positionTourPopover(ONBOARDING_STEPS[currentTourStep]);
+    }
+  });
+
+  window.addEventListener("scroll", () => {
+    if (document.body.classList.contains("tour-active")) {
+      positionTourPopover(ONBOARDING_STEPS[currentTourStep]);
+    }
+  }, true);
+}
+
+function startOnboardingTour() {
+  initTourElements();
+  currentTourStep = 0;
+  document.body.classList.add("tour-active");
+  const bd = document.getElementById("cuonedu-tour-backdrop");
+  const sp = document.getElementById("cuonedu-tour-spotlight");
+  const pop = document.getElementById("cuonedu-tour-popover");
+  if (bd) bd.style.display = "block";
+  if (sp) sp.style.display = "block";
+  if (pop) pop.style.display = "block";
+
+  renderTourCurrentStep();
+}
+
+function renderTourCurrentStep() {
+  const step = ONBOARDING_STEPS[currentTourStep];
+  if (!step) {
+    endOnboardingTour();
+    return;
+  }
+
+  if (typeof step.onEnter === "function") {
+    step.onEnter();
+  }
+
+  setTimeout(() => {
+    positionTourPopover(step);
+  }, 120);
+}
+
+function positionTourPopover(step) {
+  let targetEl = document.querySelector(step.target);
+  if (!targetEl && step.fallbackTarget) {
+    targetEl = document.querySelector(step.fallbackTarget);
+  }
+
+  const spotlight = document.getElementById("cuonedu-tour-spotlight");
+  const popover = document.getElementById("cuonedu-tour-popover");
+  if (!popover || !spotlight) return;
+
+  const isLast = currentTourStep === ONBOARDING_STEPS.length - 1;
+  const isFirst = currentTourStep === 0;
+
+  popover.innerHTML = `
+    <div class="tour-popover-header">
+      <span class="tour-badge">${step.tag}</span>
+      <button class="tour-btn-close" onclick="endOnboardingTour()" title="Bỏ qua hướng dẫn">✕</button>
+    </div>
+    <h3 class="tour-title">${step.title}</h3>
+    <div class="tour-desc">${step.desc}</div>
+    <div class="tour-footer">
+      <div class="tour-dots">
+        ${ONBOARDING_STEPS.map((_, i) => `<span class="tour-dot ${i === currentTourStep ? 'active' : ''}"></span>`).join('')}
+      </div>
+      <div class="tour-actions">
+        ${!isFirst ? `<button type="button" class="btn btn-secondary btn-sm tour-btn-prev" onclick="prevTourStep()">Quay Lại</button>` : ''}
+        <button type="button" class="btn btn-primary btn-sm tour-btn-next" onclick="nextTourStep()">
+          ${isLast ? 'Hoàn Tất & Bắt Đầu' : 'Tiếp Theo'}
+        </button>
+      </div>
+    </div>
+  `;
+
+  if (targetEl && targetEl.offsetParent !== null) {
+    targetEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    const rect = targetEl.getBoundingClientRect();
+    const pad = 8;
+
+    spotlight.style.top = `${Math.max(0, rect.top - pad)}px`;
+    spotlight.style.left = `${Math.max(0, rect.left - pad)}px`;
+    spotlight.style.width = `${rect.width + pad * 2}px`;
+    spotlight.style.height = `${rect.height + pad * 2}px`;
+    spotlight.style.borderRadius = "12px";
+    spotlight.style.opacity = "1";
+
+    const popW = Math.min(360, window.innerWidth - 32);
+    popover.style.width = `${popW}px`;
+    const popH = popover.offsetHeight || 220;
+
+    let popTop = 0;
+    let popLeft = 0;
+
+    if (window.innerWidth < 640) {
+      popLeft = (window.innerWidth - popW) / 2;
+      if (rect.bottom + popH + 20 < window.innerHeight) {
+        popTop = rect.bottom + 16;
+      } else if (rect.top - popH - 16 > 0) {
+        popTop = rect.top - popH - 16;
+      } else {
+        popTop = Math.max(16, (window.innerHeight - popH) / 2);
+      }
+    } else {
+      if (step.preferredPos === "bottom") {
+        popTop = rect.bottom + 14;
+        popLeft = Math.max(16, Math.min(window.innerWidth - popW - 16, rect.left + (rect.width - popW) / 2));
+      } else if (step.preferredPos === "top") {
+        popTop = Math.max(16, rect.top - popH - 14);
+        popLeft = Math.max(16, Math.min(window.innerWidth - popW - 16, rect.left + (rect.width - popW) / 2));
+      } else if (step.preferredPos === "right") {
+        popTop = Math.max(16, Math.min(window.innerHeight - popH - 16, rect.top));
+        popLeft = Math.min(window.innerWidth - popW - 16, rect.right + 14);
+      } else {
+        popTop = Math.max(16, Math.min(window.innerHeight - popH - 16, rect.top));
+        popLeft = Math.max(16, rect.left - popW - 14);
+      }
+    }
+
+    popTop = Math.max(12, Math.min(window.innerHeight - popH - 12, popTop));
+    popLeft = Math.max(12, Math.min(window.innerWidth - popW - 12, popLeft));
+
+    popover.style.top = `${popTop}px`;
+    popover.style.left = `${popLeft}px`;
+    popover.style.transform = "none";
+  } else {
+    spotlight.style.opacity = "0";
+    const popW = Math.min(360, window.innerWidth - 32);
+    popover.style.width = `${popW}px`;
+    popover.style.top = "50%";
+    popover.style.left = "50%";
+    popover.style.transform = "translate(-50%, -50%)";
+  }
+}
+
+function nextTourStep() {
+  if (currentTourStep < ONBOARDING_STEPS.length - 1) {
+    currentTourStep++;
+    renderTourCurrentStep();
+  } else {
+    endOnboardingTour();
+  }
+}
+
+function prevTourStep() {
+  if (currentTourStep > 0) {
+    currentTourStep--;
+    renderTourCurrentStep();
+  }
+}
+
+function endOnboardingTour() {
+  try {
+    localStorage.setItem(TOUR_STORAGE_KEY, "true");
+  } catch (e) {}
+
+  document.body.classList.remove("tour-active");
+  const bd = document.getElementById("cuonedu-tour-backdrop");
+  const sp = document.getElementById("cuonedu-tour-spotlight");
+  const pop = document.getElementById("cuonedu-tour-popover");
+  if (bd) bd.style.display = "none";
+  if (sp) sp.style.display = "none";
+  if (pop) pop.style.display = "none";
+
+  closeMainDrawer();
+}
+
+function checkAndStartOnboardingTour() {
+  try {
+    const done = localStorage.getItem(TOUR_STORAGE_KEY);
+    if (!done) {
+      setTimeout(() => {
+        if (typeof currentView === "undefined" || currentView === "dashboard") {
+          startOnboardingTour();
+        }
+      }, 1000);
+    }
+  } catch (e) {}
+}
+
 
 
