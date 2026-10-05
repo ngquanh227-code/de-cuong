@@ -6347,79 +6347,88 @@ function importAIQuestionsFromEncoded(encodedData) {
 }
 
 // ==========================================================================
-// 22. BANKING-STYLE INTERACTIVE ONBOARDING TOUR (SVG CUTOUT & FLOWING GUIDE)
+// 22. BANKING-STYLE INTERACTIVE ONBOARDING TOUR (MB BANK GLASS POPOVER)
 // ==========================================================================
 let currentTourStep = 0;
 const TOUR_STORAGE_KEY = "cuonedu_tour_completed_v1";
+let tourRafId = null;
 
 const ONBOARDING_STEPS = [
   {
-    target: ".btn-hero-import",
-    title: "Tải Đề Thi Tự Động:",
-    desc: "Bấm vào đây để tải đề từ file Word (.docx) hoặc PDF. Câu hỏi & đáp án được nhận diện tức thì trong 1 giây.",
-    tag: "Bước 1/5",
+    getTarget: () => document.querySelector(".btn-hero-import"),
+    title: "Tải Đề Thi Tự Động",
+    desc: "Bấm vào đây để tải đề từ file Word (.docx) hoặc PDF. Câu hỏi & đáp án được trích xuất tự động chỉ trong 1 giây.",
+    tag: "BƯỚC 1/5 • TẢI ĐỀ THI",
     onEnter: () => {
       closeMainDrawer();
     }
   },
   {
-    target: ".btn-exam-hero, .grid-card-btn-primary, #sub-detail-panel .btn-primary",
-    title: "Bắt Đầu Làm Bài:",
-    desc: "Bấm vào đây để vào phòng thi Quizizz Arena. (Có liên kết Shopee nhỏ trước khi vào thi để tiếp sức duy trì server).",
-    tag: "Bước 2/5",
+    getTarget: () => {
+      // Tìm nút Vào Thi đầu tiên trong bảng môn học
+      const tablePlayBtn = document.querySelector(".table-btn-play");
+      if (tablePlayBtn && tablePlayBtn.offsetParent !== null) return tablePlayBtn;
+      // Fallback nút thi ở hero hoặc card
+      const heroBtn = document.querySelector(".btn-exam-hero, .grid-card-btn-primary, button[onclick*='openPreExamModal']");
+      if (heroBtn && heroBtn.offsetParent !== null) return heroBtn;
+      return document.querySelector("#catalog-section") || document.querySelector(".hero-quick-actions-bar");
+    },
+    title: "Vào Thi & Luyện Đề",
+    desc: "Bấm nút Vào Thi để mở phòng thi trắc nghiệm Quizizz Arena. (Có liên kết Shopee nhỏ trước khi vào thi để tiếp sức duy trì server).",
+    tag: "BƯỚC 2/5 • PHÒNG THI ARENA",
     onEnter: () => {
       closeMainDrawer();
     }
   },
   {
-    target: "#cuonedu-ai-btn",
-    title: "Trợ Lý AI CuonEdu:",
-    desc: "Bấm vào bong bóng AI này bất cứ lúc nào để hỏi bài, nhờ AI giải thích từng câu hỏi khó hoặc tóm tắt kiến thức.",
-    tag: "Bước 3/5",
-    preferredBarPos: "top",
+    getTarget: () => {
+      const aiBtn = document.getElementById("cuonedu-ai-btn");
+      if (aiBtn) {
+        aiBtn.style.display = "flex";
+      }
+      return aiBtn;
+    },
+    title: "Trợ Lý Gia Sư AI CuonEdu",
+    desc: "Bấm vào bong bóng AI này bất cứ lúc nào để hỏi bài, nhờ AI giải thích từng câu hỏi khó trong đề thi hoặc tóm tắt kiến thức.",
+    tag: "BƯỚC 3/5 • TRỢ LÝ AI GIA SƯ",
     onEnter: () => {
       closeMainDrawer();
+      const aiBtn = document.getElementById("cuonedu-ai-btn");
+      if (aiBtn) {
+        aiBtn.style.display = "flex";
+        aiBtn.classList.add("tour-ai-highlighted");
+      }
+    },
+    onLeave: () => {
+      const aiBtn = document.getElementById("cuonedu-ai-btn");
+      if (aiBtn) {
+        aiBtn.classList.remove("tour-ai-highlighted");
+      }
     }
   },
   {
-    target: "#drawer-item-donate",
-    fallbackTarget: "#btn-hamburger",
-    title: "Ủng Hộ Web (Donate):",
-    desc: "Mời tác giả ly cà phê để chung tay tiếp sức kinh phí duy trì server và phát triển thêm tính năng mới.",
-    tag: "Bước 4/5",
+    getTarget: () => {
+      return document.querySelector("#drawer-item-donate") || document.querySelector("#btn-hamburger");
+    },
+    title: "Tiếp Sức & Ủng Hộ (Donate)",
+    desc: "Mời tác giả ly cà phê để chung tay tiếp sức duy trì server và phát triển nền tảng học tập CuonEdu ngày một tốt hơn.",
+    tag: "BƯỚC 4/5 • TIẾP SỨC / DONATE",
     onEnter: () => {
       openMainDrawer();
     }
   },
   {
-    target: "#drawer-item-zalo",
-    fallbackTarget: "#btn-hamburger",
-    title: "Kết Nối Zalo 24/7:",
-    desc: "Gửi đề thi mới hoặc báo lỗi câu hỏi trực tiếp qua Zalo / SĐT 0962.714.685 (Quang Cuốn) để được hỗ trợ tức thì.",
-    tag: "Bước 5/5",
+    getTarget: () => {
+      return document.querySelector("#drawer-item-zalo") || document.querySelector("#btn-hamburger");
+    },
+    title: "Kết Nối Zalo Hỗ Trợ 24/7",
+    desc: "Gửi đề thi mới hoặc báo lỗi câu hỏi trực tiếp qua Zalo / SĐT 0962.714.685 (Quang Cuốn) để được hỗ trợ tức thì!",
+    tag: "BƯỚC 5/5 • HỖ TRỢ ZALO 24/7",
     onEnter: () => {
       openMainDrawer();
     }
   }
 ];
-
-function lockTourScroll() {
-  document.documentElement.classList.add("tour-locked");
-  document.body.classList.add("tour-locked");
-  window.addEventListener("wheel", preventTourScroll, { passive: false });
-  window.addEventListener("touchmove", preventTourScroll, { passive: false });
-}
-
-function unlockTourScroll() {
-  document.documentElement.classList.remove("tour-locked");
-  document.body.classList.remove("tour-locked");
-  window.removeEventListener("wheel", preventTourScroll);
-  window.removeEventListener("touchmove", preventTourScroll);
-}
-
-function preventTourScroll(e) {
-  e.preventDefault();
-}
 
 function initTourElements() {
   if (document.getElementById("cuonedu-tour-root")) return;
@@ -6433,32 +6442,40 @@ function initTourElements() {
       <defs>
         <mask id="tour-cutout-mask">
           <rect width="100%" height="100%" fill="white" />
-          <rect id="tour-mask-hole" x="0" y="0" width="0" height="0" rx="14" ry="14" fill="black" />
+          <rect id="tour-mask-hole" x="0" y="0" width="0" height="0" rx="12" ry="12" fill="black" />
         </mask>
       </defs>
       <rect width="100%" height="100%" fill="rgba(6, 4, 15, 0.78)" mask="url(#tour-cutout-mask)" />
-      <rect id="tour-glow-frame" x="0" y="0" width="0" height="0" rx="14" ry="14" fill="none" stroke="#c084fc" stroke-width="2.5" />
+      <rect id="tour-glow-frame" x="0" y="0" width="0" height="0" rx="12" ry="12" fill="none" stroke="#c084fc" stroke-width="2.5" />
+      <rect id="tour-glow-ripple" x="0" y="0" width="0" height="0" rx="12" ry="12" fill="none" stroke="#f472b6" stroke-width="1.8" class="tour-ripple-ring" />
     </svg>
-    <div id="tour-pointer-bubble" class="tour-pointer-bubble"></div>
-    <div id="tour-banking-bar-wrap" class="tour-banking-bar-wrap"></div>
+    <div id="tour-glass-bubble" class="tour-glass-bubble"></div>
   `;
 
   document.body.appendChild(root);
 
-  window.addEventListener("resize", () => {
+  // Sync cutout and bubble position on window resize and scroll
+  const onSync = () => {
     if (document.body.classList.contains("tour-active")) {
-      renderTourCurrentStep();
+      if (tourRafId) cancelAnimationFrame(tourRafId);
+      tourRafId = requestAnimationFrame(() => {
+        const step = ONBOARDING_STEPS[currentTourStep];
+        if (!step) return;
+        const targetEl = typeof step.getTarget === "function" ? step.getTarget() : document.querySelector(step.target);
+        updateTourCutout(targetEl);
+        positionGlassBubble(targetEl, step);
+      });
     }
-  });
-}
+  };
 
-let lastHighlightedEl = null;
+  window.addEventListener("resize", onSync, { passive: true });
+  window.addEventListener("scroll", onSync, { passive: true });
+}
 
 function startOnboardingTour() {
   initTourElements();
   currentTourStep = 0;
   document.body.classList.add("tour-active");
-  lockTourScroll();
   const root = document.getElementById("cuonedu-tour-root");
   if (root) root.style.display = "block";
 
@@ -6472,52 +6489,49 @@ function renderTourCurrentStep() {
     return;
   }
 
+  // Run onEnter hook
   if (typeof step.onEnter === "function") {
     step.onEnter();
   }
 
-  if (lastHighlightedEl) {
-    lastHighlightedEl.classList.remove("tour-target-highlight");
-    lastHighlightedEl = null;
-  }
+  const isDrawerStep = currentTourStep >= 3;
+  const initialDelay = isDrawerStep ? 280 : 60;
 
-  const delay = (step.target && step.target.includes("drawer")) ? 320 : 80;
   setTimeout(() => {
-    let targetEl = document.querySelector(step.target);
-    if (!targetEl && step.fallbackTarget) {
-      targetEl = document.querySelector(step.fallbackTarget);
+    const targetEl = typeof step.getTarget === "function" ? step.getTarget() : document.querySelector(step.target);
+
+    // Smooth scroll into center of viewport if not drawer step and element exists
+    if (targetEl && !isDrawerStep && targetEl.id !== "cuonedu-ai-btn") {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     }
 
-    if (targetEl) {
-      targetEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-    }
-
+    // Wait for scroll to settle
     setTimeout(() => {
       updateTourCutout(targetEl);
-      renderBankingBar(step);
-      positionPointerArrow(targetEl, step);
-    }, 120);
-  }, delay);
+      positionGlassBubble(targetEl, step);
+    }, isDrawerStep ? 80 : 200);
+  }, initialDelay);
 }
 
 function updateTourCutout(targetEl) {
   const hole = document.getElementById("tour-mask-hole");
   const glow = document.getElementById("tour-glow-frame");
-  if (!hole || !glow) return;
+  const ripple = document.getElementById("tour-glow-ripple");
+  if (!hole || !glow || !ripple) return;
 
   if (targetEl) {
     const rect = targetEl.getBoundingClientRect();
     if (rect.width > 0 && rect.height > 0) {
-      targetEl.classList.add("tour-target-highlight");
-      lastHighlightedEl = targetEl;
-
       const pad = 6;
       const x = Math.max(0, rect.left - pad);
       const y = Math.max(0, rect.top - pad);
       const w = rect.width + pad * 2;
       const h = rect.height + pad * 2;
-      const isRound = (rect.width === rect.height && rect.width < 70);
-      const rx = isRound ? Math.round(w / 2) : 14;
+
+      const isRound = (rect.width === rect.height && rect.width < 70) || 
+                      targetEl.id === "cuonedu-ai-btn" || 
+                      targetEl.classList.contains("cuonedu-ai-float-btn");
+      const rx = isRound ? Math.round(w / 2) : 12;
 
       hole.setAttribute("x", x);
       hole.setAttribute("y", y);
@@ -6533,6 +6547,14 @@ function updateTourCutout(targetEl) {
       glow.setAttribute("rx", rx);
       glow.setAttribute("ry", rx);
       glow.style.display = "block";
+
+      ripple.setAttribute("x", x - 3);
+      ripple.setAttribute("y", y - 3);
+      ripple.setAttribute("width", w + 6);
+      ripple.setAttribute("height", h + 6);
+      ripple.setAttribute("rx", rx + 3);
+      ripple.setAttribute("ry", rx + 3);
+      ripple.style.display = "block";
       return;
     }
   }
@@ -6540,79 +6562,123 @@ function updateTourCutout(targetEl) {
   hole.setAttribute("width", 0);
   hole.setAttribute("height", 0);
   glow.style.display = "none";
+  ripple.style.display = "none";
 }
 
-function positionPointerArrow(targetEl, step) {
-  const pointer = document.getElementById("tour-pointer-bubble");
-  if (!pointer) return;
-
-  if (targetEl) {
-    const rect = targetEl.getBoundingClientRect();
-    if (rect.width > 0 && rect.height > 0) {
-      pointer.style.display = "flex";
-      if (rect.top > window.innerHeight / 2) {
-        pointer.style.top = `${Math.max(10, rect.top - 46)}px`;
-        pointer.style.left = `${Math.max(10, rect.left + rect.width / 2 - 17)}px`;
-        pointer.innerHTML = `
-          <div class="pointer-arrow-graphic bounce-down">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 5v14M19 12l-7 7-7-7"/>
-            </svg>
-          </div>
-        `;
-      } else {
-        pointer.style.top = `${rect.bottom + 10}px`;
-        pointer.style.left = `${Math.max(10, rect.left + rect.width / 2 - 17)}px`;
-        pointer.innerHTML = `
-          <div class="pointer-arrow-graphic bounce-up">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 19V5M5 12l7-7 7 7"/>
-            </svg>
-          </div>
-        `;
-      }
-      return;
-    }
-  }
-  pointer.style.display = "none";
-}
-
-function renderBankingBar(step) {
-  const barWrap = document.getElementById("tour-banking-bar-wrap");
-  if (!barWrap) return;
+function positionGlassBubble(targetEl, step) {
+  const bubble = document.getElementById("tour-glass-bubble");
+  if (!bubble) return;
 
   const isLast = currentTourStep === ONBOARDING_STEPS.length - 1;
   const isFirst = currentTourStep === 0;
 
-  if (step.preferredBarPos === "top") {
-    barWrap.style.bottom = "auto";
-    barWrap.style.top = "24px";
-  } else {
-    barWrap.style.top = "auto";
-    barWrap.style.bottom = "24px";
-  }
+  const bubbleW = Math.min(320, window.innerWidth - 30);
+  bubble.style.width = `${bubbleW}px`;
 
-  barWrap.innerHTML = `
-    <div class="tour-banking-bar">
-      <div class="tour-bar-left">
-        <span class="tour-bar-step">${step.tag}</span>
-        <div class="tour-bar-text-row">
-          <span class="tour-bar-title">${step.title}</span>
-          <span class="tour-bar-desc">${step.desc}</span>
-        </div>
+  // Render content first so we can measure exact height
+  let caretDir = "top";
+  let caretOffset = 24;
+
+  bubble.innerHTML = `
+    <div class="tour-bubble-caret caret-top"></div>
+    <div class="tour-bubble-inner">
+      <div class="tour-bubble-header-row">
+        <span class="tour-bubble-tag">${step.tag}</span>
+        <button type="button" class="tour-btn-skip-glass" onclick="endOnboardingTour()" title="Bỏ qua hướng dẫn">✕ Bỏ qua</button>
       </div>
-      <div class="tour-bar-right">
-        <button type="button" class="tour-btn-next-bank" onclick="nextTourStep()">
-          ${isLast ? 'Hoàn Tất' : 'Tiếp Tục →'}
+      <div class="tour-bubble-title">${step.title}</div>
+      <div class="tour-bubble-desc">${step.desc}</div>
+      <div class="tour-bubble-footer">
+        <button type="button" class="tour-btn-next-glass" onclick="nextTourStep()">
+          ${isLast ? 'Khám Phá Ngay ✨' : 'Tiếp Tục →'}
         </button>
-        ${!isFirst ? `<button type="button" class="tour-btn-back-bank" onclick="prevTourStep()">Quay lại</button>` : ''}
-        <button type="button" class="tour-btn-skip-bank" onclick="endOnboardingTour()" title="Bỏ qua hướng dẫn">✕</button>
+        ${!isFirst ? `<button type="button" class="tour-btn-back-glass" onclick="prevTourStep()">Quay lại</button>` : ''}
       </div>
     </div>
   `;
+
+  const bubbleH = bubble.offsetHeight || 145;
+
+  let top = 0;
+  let left = 0;
+
+  if (targetEl) {
+    const rect = targetEl.getBoundingClientRect();
+    if (rect.width > 0 && rect.height > 0) {
+      const targetCenterX = rect.left + rect.width / 2;
+      const targetCenterY = rect.top + rect.height / 2;
+
+      // Special handling for right-aligned floating buttons (like AI button)
+      if (targetEl.id === "cuonedu-ai-btn") {
+        top = Math.max(16, rect.top - bubbleH - 14);
+        left = Math.max(16, Math.min(window.innerWidth - bubbleW - 16, rect.right - bubbleW));
+        caretDir = "bottom";
+        caretOffset = Math.max(20, Math.min(bubbleW - 24, targetCenterX - left - 6));
+      }
+      // Special handling for drawer items
+      else if (currentTourStep >= 3) {
+        if (rect.bottom + bubbleH + 16 < window.innerHeight) {
+          top = rect.bottom + 12;
+          left = Math.max(16, Math.min(window.innerWidth - bubbleW - 16, rect.left));
+          caretDir = "top";
+          caretOffset = Math.max(20, Math.min(bubbleW - 24, targetCenterX - left - 6));
+        } else {
+          top = Math.max(16, rect.top - bubbleH - 12);
+          left = Math.max(16, Math.min(window.innerWidth - bubbleW - 16, rect.left));
+          caretDir = "bottom";
+          caretOffset = Math.max(20, Math.min(bubbleW - 24, targetCenterX - left - 6));
+        }
+      }
+      // General elements (Import button, Vào Thi button)
+      else {
+        // If enough room on top, place ABOVE target (e.g. Vào Thi button)
+        if (rect.top > bubbleH + 24) {
+          top = rect.top - bubbleH - 14;
+          left = Math.max(16, Math.min(window.innerWidth - bubbleW - 16, targetCenterX - bubbleW / 2));
+          caretDir = "bottom";
+          caretOffset = Math.max(20, Math.min(bubbleW - 24, targetCenterX - left - 6));
+        }
+        // Otherwise place BELOW target (e.g. Hero import button)
+        else {
+          top = rect.bottom + 14;
+          left = Math.max(16, Math.min(window.innerWidth - bubbleW - 16, targetCenterX - bubbleW / 2));
+          caretDir = "top";
+          caretOffset = Math.max(20, Math.min(bubbleW - 24, targetCenterX - left - 6));
+        }
+      }
+    }
+  } else {
+    top = (window.innerHeight - bubbleH) / 2;
+    left = (window.innerWidth - bubbleW) / 2;
+    caretDir = "none";
+  }
+
+  top = Math.max(12, Math.min(window.innerHeight - bubbleH - 12, top));
+  left = Math.max(12, Math.min(window.innerWidth - bubbleW - 12, left));
+
+  bubble.style.top = `${top}px`;
+  bubble.style.left = `${left}px`;
+
+  // Update Caret position and direction
+  const caretEl = bubble.querySelector(".tour-bubble-caret");
+  if (caretEl) {
+    caretEl.className = `tour-bubble-caret caret-${caretDir}`;
+    if (caretDir === "top" || caretDir === "bottom") {
+      caretEl.style.left = `${caretOffset}px`;
+      caretEl.style.top = "";
+      caretEl.style.display = "block";
+    } else if (caretDir === "none") {
+      caretEl.style.display = "none";
+    }
+  }
 }
 
 function nextTourStep() {
+  const currentStepObj = ONBOARDING_STEPS[currentTourStep];
+  if (currentStepObj && typeof currentStepObj.onLeave === "function") {
+    currentStepObj.onLeave();
+  }
+
   if (currentTourStep < ONBOARDING_STEPS.length - 1) {
     currentTourStep++;
     renderTourCurrentStep();
@@ -6622,6 +6688,11 @@ function nextTourStep() {
 }
 
 function prevTourStep() {
+  const currentStepObj = ONBOARDING_STEPS[currentTourStep];
+  if (currentStepObj && typeof currentStepObj.onLeave === "function") {
+    currentStepObj.onLeave();
+  }
+
   if (currentTourStep > 0) {
     currentTourStep--;
     renderTourCurrentStep();
@@ -6633,16 +6704,25 @@ function endOnboardingTour() {
     localStorage.setItem(TOUR_STORAGE_KEY, "true");
   } catch (e) {}
 
-  document.body.classList.remove("tour-active");
-  unlockTourScroll();
-
-  if (lastHighlightedEl) {
-    lastHighlightedEl.classList.remove("tour-target-highlight");
-    lastHighlightedEl = null;
+  const currentStepObj = ONBOARDING_STEPS[currentTourStep];
+  if (currentStepObj && typeof currentStepObj.onLeave === "function") {
+    currentStepObj.onLeave();
   }
+
+  const aiBtn = document.getElementById("cuonedu-ai-btn");
+  if (aiBtn) {
+    aiBtn.classList.remove("tour-ai-highlighted");
+  }
+
+  document.body.classList.remove("tour-active");
 
   const root = document.getElementById("cuonedu-tour-root");
   if (root) root.style.display = "none";
+
+  if (tourRafId) {
+    cancelAnimationFrame(tourRafId);
+    tourRafId = null;
+  }
 
   closeMainDrawer();
 }
@@ -6659,6 +6739,7 @@ function checkAndStartOnboardingTour() {
     }
   } catch (e) {}
 }
+
 
 
 
