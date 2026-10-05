@@ -1,6 +1,27762 @@
-/**
- * DATABASE ĐỀ CƯƠNG & NGÂN HÀNG CÂU HỎI
- * Dữ liệu được lưu trữ tự động và đồng bộ trực tiếp vào LocalStorage của người dùng.
- * Không chứa môn học mẫu rác để người dùng hoàn toàn chủ động tạo môn học theo ý muốn.
- */
-const DEFAULT_INITIAL_DATA = [];
+const DEFAULT_INITIAL_DATA = {
+  "version": 1,
+  "lastUpdated": 1791206139410,
+  "subjects": [
+    {
+      "category": "Đại Cương & Khác",
+      "code": "SUB-543",
+      "durationMinutes": 15,
+      "id": 1790955819815,
+      "questions": [
+        {
+          "correctAnswer": "D",
+          "explanation": "Lượng cầu nhạy cảm hơn với giá khi có nhiều hàng hóa thay thế vì người tiêu dùng dễ dàng chuyển sang sản phẩm khác khi giá tăng.",
+          "id": 1790955780950,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung là không co dãn tương đối."
+            },
+            {
+              "key": "B",
+              "text": "Những người tiêu dùng là người hợp lý."
+            },
+            {
+              "key": "C",
+              "text": "Người tiêu dùng được thông tin tương đối tốt hơn về chất lượng của một hàng hóa nào đó."
+            },
+            {
+              "key": "D",
+              "text": "Có nhiều hàng hóa thay thế được nó ở mức độ cao."
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều đúng."
+            }
+          ],
+          "question": "Lượng cầu nhạy cảm hơn đối với những thay đổi trong giá khi:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Quy tắc tối ưu hóa tiêu dùng là MUx/Px = MUy/Py = ... = MUn/Pn.",
+          "id": 1790955782007,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lợi ích cận biên thu được từ đơn vị cuối cùng của mỗi hàng hóa nhân với giá của nó phải bằng nhau."
+            },
+            {
+              "key": "B",
+              "text": "Lợi ích cận biên thu được từ mỗi hàng hóa phải bằng 0."
+            },
+            {
+              "key": "C",
+              "text": "Lợi ích cận biên thu được từ mỗi hàng hóa phải bằng vô cùng."
+            },
+            {
+              "key": "D",
+              "text": "Lợi ích cận biên thu được từ đơn vị cuối cùng của mỗi hàng hóa chia cho giá của nó phải bằng nhau."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Quy tắc phân bổ ngân sách tối ưu cho người tiêu dùng là:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Thặng dư sản xuất là phần chênh lệch giữa tổng doanh thu và tổng chi phí biến đổi (TR - TVC).",
+          "id": 1790955782334,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chênh lệch giữa doanh thu và tổng chi phí của hãng."
+            },
+            {
+              "key": "B",
+              "text": "Tổng của chi phí cố định và chi phí biến đổi của hãng."
+            },
+            {
+              "key": "C",
+              "text": "Diện tích nằm giữa đường chi phí biến đổi trung bình của hãng và đường giá giới hạn bởi mức sản lượng tối đa hóa lợi nhuận và mức sản lượng bằng 0."
+            },
+            {
+              "key": "D",
+              "text": "Chênh lệch giữa doanh thu và tổng chi phí biến đổi của hãng."
+            },
+            {
+              "key": "E",
+              "text": "c và d."
+            }
+          ],
+          "question": "Thặng dư sản xuất có thể biểu thị là:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Nắng hạn làm giảm sản lượng, khiến đường cung dịch chuyển sang trái và lên trên.",
+          "id": 1790955783287,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Làm cho người cung gạo sẽ dịch chuyển đường cung của họ lên một mức giá cao hơn."
+            },
+            {
+              "key": "B",
+              "text": "Làm cho đường cung về gạo dịch chuyển sang trái và lên trên."
+            },
+            {
+              "key": "C",
+              "text": "Gây ra cầu cao hơn về gạo dẫn đến một mức giá cao hơn."
+            },
+            {
+              "key": "D",
+              "text": "Làm cho người tiêu dùng giảm cầu của mình về gạo."
+            },
+            {
+              "key": "E",
+              "text": "Làm giảm giá các hàng hóa thay thế cho gạo."
+            }
+          ],
+          "question": "Nắng hạn có thể sẽ:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Giá trị sản phẩm cận biên (VMPL) = MPL * P.",
+          "id": 1790955784389,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh thu mà hãng thu được đối với đơn vị sản phẩm cuối cùng."
+            },
+            {
+              "key": "B",
+              "text": "Doanh thu mà hãng thu được từ việc gia nhập thị trường."
+            },
+            {
+              "key": "C",
+              "text": "Sản phẩm cận biên nhân với mức lương."
+            },
+            {
+              "key": "D",
+              "text": "Sản phẩm cận biên nhân với giá sản phẩm."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Giá trị của sản phẩm cận biên của lao động bằng:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Đối với hãng cạnh tranh hoàn hảo, MR = P, và MR là doanh thu từ đơn vị bán thêm.",
+          "id": 1790955785652,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhỏ hơn giá đối với hãng cạnh tranh vì khi bán nhiều sản phẩm hãng phải hạ giá."
+            },
+            {
+              "key": "B",
+              "text": "Bằng giá đối với hãng cạnh tranh."
+            },
+            {
+              "key": "C",
+              "text": "Là doanh thu mà hãng nhận được từ một đơn vị bán thêm."
+            },
+            {
+              "key": "D",
+              "text": "Là lợi nhuận bổ sung mà hãng thu được khi bán thêm một đơn vị sản phẩm sau khi đã tính tất cả các chi phí cơ hội."
+            },
+            {
+              "key": "E",
+              "text": "b và c."
+            }
+          ],
+          "question": "Doanh thu cận biên:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Ràng buộc ngân sách xác định tập hợp các lựa chọn khả thi và tổng chi tiêu không vượt quá thu nhập.",
+          "id": 1790955786573,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xác định tập hợp các cơ hội của người đó."
+            },
+            {
+              "key": "B",
+              "text": "Chỉ ra rằng tổng chi tiêu không thể vượt quá tổng thu nhập."
+            },
+            {
+              "key": "C",
+              "text": "Biểu thị lợi ích cận biên giảm dần."
+            },
+            {
+              "key": "D",
+              "text": "Tất cả."
+            },
+            {
+              "key": "E",
+              "text": "a và b."
+            }
+          ],
+          "question": "Giả định rằng không có tiết kiệm hay đi vay, và thu nhập của người tiêu dùng là cố định, ràng buộc ngân sách của người đó:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Trong dài hạn, tất cả các yếu tố đầu vào đều là biến số.",
+          "id": 1790955787835,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Trong ngắn hạn có hiệu suất không đổi nhưng trong dài hạn không có."
+            },
+            {
+              "key": "B",
+              "text": "Trong dài hạn tất cả các yếu tố đầu vào có thể thay đổi được."
+            },
+            {
+              "key": "C",
+              "text": "Ba tháng."
+            },
+            {
+              "key": "D",
+              "text": "Trong ngắn hạn đường chi phí trung bình giảm dần, còn trong dài hạn thì nó tăng dần."
+            },
+            {
+              "key": "E",
+              "text": "a và b."
+            }
+          ],
+          "question": "Sự khác nhau giữa ngắn hạn và dài hạn là:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Sự di chuyển dọc đường cầu do hiệu ứng thay thế và sự thay đổi số lượng người tham gia thị trường.",
+          "id": 1790955788773,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các cá nhân thay thế bằng các hàng hóa và dịch vụ khác."
+            },
+            {
+              "key": "B",
+              "text": "Một số cá nhân rời bỏ thị trường."
+            },
+            {
+              "key": "C",
+              "text": "Một số cá nhân gia nhập thị trường."
+            },
+            {
+              "key": "D",
+              "text": "Lượng cung tăng."
+            },
+            {
+              "key": "E",
+              "text": "a và b."
+            }
+          ],
+          "question": "Khi giá tăng lượng cầu giảm dọc trên một đường cầu cá nhân vì:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Kinh tế học nghiên cứu cách phân bổ nguồn lực khan hiếm.",
+          "id": 1790955789632,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nghiên cứu những hoạt động gắn với tiền và những giao dịch trao đổi giữa mọi người."
+            },
+            {
+              "key": "B",
+              "text": "Nghiên cứu sự phân bổ các tài nguyên khan hiếm cho sản xuất và việc phân phối các hàng hóa dịch vụ."
+            },
+            {
+              "key": "C",
+              "text": "Nghiên cứu của cải."
+            },
+            {
+              "key": "D",
+              "text": "Nghiên cứu con người trong cuộc sống kinh doanh thường ngày, kiếm tiền và hưởng thụ cuộc sống."
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều đúng."
+            }
+          ],
+          "question": "Kinh tế học có thể định nghĩa là:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Khi cầu không co dãn, sự giảm cung làm giá tăng mạnh hơn mức giảm lượng, dẫn đến tổng doanh thu tăng.",
+          "id": 1790955790210,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cầu co dãn hơn cung."
+            },
+            {
+              "key": "B",
+              "text": "Cung co dãn hoàn toàn."
+            },
+            {
+              "key": "C",
+              "text": "Cầu không co dãn; sự dịch chuyển sang trái của cung sẽ làm cho doanh thu tăng."
+            },
+            {
+              "key": "D",
+              "text": "Cung không co dãn, sự dịch chuyển sang trái của cung sẽ làm cho tổng doanh thu tăng."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Tại sao doanh thu của nông dân lại cao hơn trong những năm sản lượng thấp do thời tiết xấu?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Khi thu nhập tăng, đường ngân sách dịch chuyển song song ra ngoài.",
+          "id": 1790955791189,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dịch chuyển ra ngoài song song với đường ngân sách ban đầu."
+            },
+            {
+              "key": "B",
+              "text": "Quay và trở nên dốc hơn."
+            },
+            {
+              "key": "C",
+              "text": "Quay và trở nên thoải hơn."
+            },
+            {
+              "key": "D",
+              "text": "Dịch chuyển vào trong và song song với đường ngân sách ban đầu."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Khi thu nhập của người tiêu dùng tăng, ràng buộc ngân sách của người tiêu dùng:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Hàng hóa cấp thấp là hàng hóa có cầu giảm khi thu nhập tăng.",
+          "id": 1790955792329,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giá của nó tăng, người ta sẽ mua nó it đí."
+            },
+            {
+              "key": "B",
+              "text": "Giá của nó giảm, người ta sẽ mua nó nhiều hơn."
+            },
+            {
+              "key": "C",
+              "text": "Khi thu nhập của người tiêu dùng tăng, người ta sẽ mua hàng hóa đó ít đi."
+            },
+            {
+              "key": "D",
+              "text": "Khi thu nhập của người tiêu dùng giảm, người ta sẽ mua hàng hóa đó ít đi."
+            },
+            {
+              "key": "E",
+              "text": "Nếu giá hoặc thu nhập thay đổi sẽ không gây ra sự thay đổi trong tiêu dùng hàng hóa đó."
+            }
+          ],
+          "question": "Nếu một hàng hóa được coi là “cấp thấp” thì:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Sự khan hiếm buộc các cá nhân và hãng phải thực hiện lựa chọn.",
+          "id": 1790955793247,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hiệu suất giảm dần."
+            },
+            {
+              "key": "B",
+              "text": "Sự hợp lý."
+            },
+            {
+              "key": "C",
+              "text": "Sự khan hiếm."
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các câu trên đều đúng."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Các cá nhân và các hãng thực hiện sự lựa chọn vì:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "MC = ATC chỉ tại điểm cực tiểu của ATC, không phải mọi điểm.",
+          "id": 1790955794866,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "ATC ở dưới MC hàm ý ATC đang tăng."
+            },
+            {
+              "key": "B",
+              "text": "ATC ở trên MC hàm ý MC đang tăng."
+            },
+            {
+              "key": "C",
+              "text": "MC tăng hàm ý AC tăng."
+            },
+            {
+              "key": "D",
+              "text": "ATC giảm hàm ý MC ở dưới ATC."
+            },
+            {
+              "key": "E",
+              "text": "MC = ATC ở mọi điểm hàm ý ATC là đường thẳng."
+            }
+          ],
+          "question": "Câu nào không đúng:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Kinh tế học chuẩn tắc mang tính chủ quan, đưa ra các nhận định về việc 'nên' làm gì.",
+          "id": 1790955795722,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thâm hụt ngân sách lớn trong những năm 1980 đã gây ra thâm hụt cán cân thương mại."
+            },
+            {
+              "key": "B",
+              "text": "Trong thời kỳ suy thoái, sản lượng giảm và thất nghiệp tăng."
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất thấp sẽ kích thích đầu tư."
+            },
+            {
+              "key": "D",
+              "text": "Phải giảm lãi suất để kích thích đầu tư."
+            },
+            {
+              "key": "E",
+              "text": "Chính sách tiền tệ mở rộng sẽ làm giảm lãi suất."
+            }
+          ],
+          "question": "Ví dụ nào sau đây thuộc phạm vi nghiên cứu của kinh tế học chuẩn tắc:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Tiêu dùng tăng không làm tăng khả năng sản xuất của nền kinh tế.",
+          "id": 1790955796469,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi tiêu vào các nhà máy và thiết bị mới thường xuyên được thực hiện."
+            },
+            {
+              "key": "B",
+              "text": "Dân số tăng."
+            },
+            {
+              "key": "C",
+              "text": "Tìm ra các phương pháp sản xuất tốt hơn."
+            },
+            {
+              "key": "D",
+              "text": "Tìm thấy các mỏ dầu mới."
+            },
+            {
+              "key": "E",
+              "text": "Tiêu dùng tăng."
+            }
+          ],
+          "question": "Đường giới hạn khả năng sản xuất của một nền kinh tế dịch chuyển ra ngoài do các yếu tố sau. Sự giải thích nào sai nếu có:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Đường cầu cá nhân thể hiện số lượng hàng hóa người đó sẵn sàng mua tại các mức giá.",
+          "id": 1790955797126,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cho biết số lượng hàng hóa hoặc dịch vụ mà một cá nhân sẽ mua ở mỗi mức giá."
+            },
+            {
+              "key": "B",
+              "text": "Cho biết giá cân bằng thị trường."
+            },
+            {
+              "key": "C",
+              "text": "Biểu thị hàng hóa hoặc dịch vụ nào sẽ được thay thế theo nguyên lý thay thế."
+            },
+            {
+              "key": "D",
+              "text": "Tất cả đều đúng."
+            },
+            {
+              "key": "E",
+              "text": "a và c."
+            }
+          ],
+          "question": "Đường cầu cá nhân về một hàng hóa dịch vụ:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Hàng hóa cấp thấp có thu nhập tăng thì cầu giảm.",
+          "id": 1790955798880,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giá của nó tăng, người ta sẽ mua nó it đí."
+            },
+            {
+              "key": "B",
+              "text": "Giá của nó giảm, người ta sẽ mua nó nhiều hơn."
+            },
+            {
+              "key": "C",
+              "text": "Khi thu nhập của người tiêu dùng tăng, người ta sẽ mua hàng hóa đó ít đi."
+            },
+            {
+              "key": "D",
+              "text": "Khi thu nhập của người tiêu dùng giảm, người ta sẽ mua hàng hóa đó ít đi."
+            },
+            {
+              "key": "E",
+              "text": "Nếu giá hoặc thu nhập thay đổi sẽ không gây ra sự thay đổi trong tiêu dùng hàng hóa đó."
+            }
+          ],
+          "question": "Nếu một hàng hóa được coi là “cấp thấp” thì:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Định nghĩa của co dãn của cầu theo thu nhập.",
+          "id": 1790955799882,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "1"
+            },
+            {
+              "key": "B",
+              "text": "Lớn hơn 0"
+            },
+            {
+              "key": "C",
+              "text": "Co dãn của cầu theo thu nhập."
+            },
+            {
+              "key": "D",
+              "text": "Co dãn của cầu theo giá."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Thay đổi phần trăm trong lượng cầu do thay đổi 1% tăng trong thu nhập gây ra là:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "MR = P đối với hãng cạnh tranh và là doanh thu từ đơn vị bán thêm.",
+          "id": 1790955801018,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhỏ hơn giá đối với hãng cạnh tranh vì khi bán nhiều sản phẩm hãng phải hạ giá."
+            },
+            {
+              "key": "B",
+              "text": "Bằng giá đối với hãng cạnh tranh."
+            },
+            {
+              "key": "C",
+              "text": "Là doanh thu mà hãng nhận được từ một đơn vị bán thêm."
+            },
+            {
+              "key": "D",
+              "text": "Là lợi nhuận bổ sung mà hãng thu được khi bán thêm một đơn vị sản phẩm sau khi đã tính tất cả các chi phí cơ hội."
+            },
+            {
+              "key": "E",
+              "text": "b và c."
+            }
+          ],
+          "question": "Doanh thu cận biên:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Hàng bổ sung hoàn hảo: giá B tăng làm cầu B giảm, kéo theo cầu A giảm, giá A giảm (theo lý thuyết cung cầu).",
+          "id": 1790955801516,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lượng cầu hàng hóa A sẽ có xu hướng tăng."
+            },
+            {
+              "key": "B",
+              "text": "Giá của hàng hóa A sẽ có xu hướng giảm."
+            },
+            {
+              "key": "C",
+              "text": "Cả giá và lượng cầu hàng hóa A sẽ có xu hướng tăng."
+            },
+            {
+              "key": "D",
+              "text": "Giá của hàng hóa A sẽ có xu hướng tăng, lượng cầu hàng hóa A sẽ có xu hướng giảm."
+            },
+            {
+              "key": "E",
+              "text": "Giá của hàng hóa A sẽ có xu hướng giảm và lượng cầu sẽ có xu hướng tăng."
+            }
+          ],
+          "question": "Giả sử rằng hai hàng hóa A và B là bổ sung hoàn hảo cho nhau trong tiêu dùng và giá của hàng hóa B tăng cao do cung giảm. Hiện tượng nào sau đây sẽ xảy ra:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Co dãn > 1 (cầu co dãn), giá giảm làm tổng doanh thu tăng.",
+          "id": 1790955802346,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giữ nguyên"
+            },
+            {
+              "key": "B",
+              "text": "Giảm"
+            },
+            {
+              "key": "C",
+              "text": "Tăng"
+            },
+            {
+              "key": "D",
+              "text": "Tăng gấp đôi."
+            },
+            {
+              "key": "E",
+              "text": "c và d"
+            }
+          ],
+          "question": "Giả sử rằng co dãn của cầu theo giá là 1,5. Nếu giá giảm, tổng doanh thu sẽ:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Thay đổi công nghệ làm tăng năng suất, dịch chuyển đường giới hạn khả năng sản xuất.",
+          "id": 1790955803845,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thất nghiệp."
+            },
+            {
+              "key": "B",
+              "text": "Lạm phát."
+            },
+            {
+              "key": "C",
+              "text": "Những thay đổi trong công nghệ sản xuất."
+            },
+            {
+              "key": "D",
+              "text": "Những thay đổi trong kết hợp hàng hóa sản xuất ra."
+            },
+            {
+              "key": "E",
+              "text": "Những thay đổi trong thị hiếu của người tiêu dùng."
+            }
+          ],
+          "question": "Sự dịch chuyển của đường giới hạn khả năng sản xuất là do:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Đường cầu thẳng có độ dốc không đổi nhưng độ co dãn thay đổi dọc theo đường đó.",
+          "id": 1790955804735,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Có độ dốc không đổi và độ co dãn thay đổi."
+            },
+            {
+              "key": "B",
+              "text": "Có độ co dãn không đổi và độ dốc thay đổi."
+            },
+            {
+              "key": "C",
+              "text": "Có độ dốc và độ có dãn thay đổi."
+            },
+            {
+              "key": "D",
+              "text": "Nói chung không thể khẳng định được như các câu trên."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Đường cầu là đường thẳng có tính chất nào trong các tính chất sau:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Cầu giảm khi thu nhập giảm là đặc điểm của hàng hóa bình thường, nhưng nếu đề bài hỏi về hàng cấp thấp thì cần xem xét kỹ; ở đây đáp án B là đúng về định nghĩa hàng cấp thấp.",
+          "id": 1790955805144,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hàng hóa đó là hàng hóa bình thường."
+            },
+            {
+              "key": "B",
+              "text": "Hàng hóa đó là hàng hóa cấp thấp."
+            },
+            {
+              "key": "C",
+              "text": "Co dãn của cầu theo thu nhập nhỏ hơn 1."
+            },
+            {
+              "key": "D",
+              "text": "Co dãn của cầu theo thu nhập ở giữa 0 và 1."
+            },
+            {
+              "key": "E",
+              "text": "b và c."
+            }
+          ],
+          "question": "Nếu cầu về một hàng hóa giảm khi thu nhập giảm thì;"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Độ dốc đường ngân sách = -Px/Py.",
+          "id": 1790955806596,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giá tương đối của các hàng hóa."
+            },
+            {
+              "key": "B",
+              "text": "Thu nhập của người tiêu dùng."
+            },
+            {
+              "key": "C",
+              "text": "Sự sẵn có của các hàng hóa thay thế."
+            },
+            {
+              "key": "D",
+              "text": "Hàng hóa đó là hàng hóa bình thường hay thứ cấp."
+            },
+            {
+              "key": "E",
+              "text": "a và b"
+            }
+          ],
+          "question": "Độ dốc của đường ngân sách phụ thuộc vào:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Lượng cầu phụ thuộc vào giá, thu nhập, thị hiếu, giá hàng thay thế/bổ sung, không phụ thuộc vào độ co dãn của cung.",
+          "id": 1790955807788,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giá của hàng hóa đó."
+            },
+            {
+              "key": "B",
+              "text": "Thị hiếu của người đó."
+            },
+            {
+              "key": "C",
+              "text": "Giá của các hàng hóa thay thế."
+            },
+            {
+              "key": "D",
+              "text": "Thu nhập của người đó."
+            },
+            {
+              "key": "E",
+              "text": "Độ co dãn của cung."
+            }
+          ],
+          "question": "Số lượng hàng hóa mà một người muốn mua không phụ thuộc vào:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Chi phí cơ hội là giá trị của phương án thay thế tốt nhất bị bỏ qua.",
+          "id": 1790955809103,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một giờ."
+            },
+            {
+              "key": "B",
+              "text": "100 nghìn đồng."
+            },
+            {
+              "key": "C",
+              "text": "Một giờ cộng 100 nghìn đồng."
+            },
+            {
+              "key": "D",
+              "text": "Phương án sử dụng thay thế tốt nhất một giờ và 100 nghìn đồng đó."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Bạn bỏ ra một giờ để đi mua sắm và đã mua một cái áo 100 nghìn đồng. Chi phí cơ hội của cái áo là:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Hiệu suất tăng theo quy mô: sản lượng tăng nhiều hơn tỷ lệ tăng đầu vào.",
+          "id": 1790955809769,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng gấp đôi tất cả các yếu tố sẽ làm cho sản lượng tăng ít hơn hai lần."
+            },
+            {
+              "key": "B",
+              "text": "Tăng gấp đôi tất cả các yếu tố trừ một yếu tố sẽ làm cho sản lượng tăng ít hơn hai lần."
+            },
+            {
+              "key": "C",
+              "text": "Tăng gấp đôi tất cả các yếu tố sẽ làm cho sản lượng tăng đúng gấp đôi."
+            },
+            {
+              "key": "D",
+              "text": "Tăng gấp đôi tất cả các yếu tố sẽ làm cho sản tăng nhiều hơn hai lần."
+            },
+            {
+              "key": "E",
+              "text": "Quy luật hiệu suất giảm dần không đúng nữa."
+            }
+          ],
+          "question": "Hiệu suất tăng theo quy mô có nghĩa là:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Cầu thị trường là tổng theo chiều ngang các đường cầu cá nhân.",
+          "id": 1790955810313,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cộng chiều dọc các đường cầu cá nhân lại."
+            },
+            {
+              "key": "B",
+              "text": "Cộng chiều ngang tất cả các đường cầu cá nhân lại."
+            },
+            {
+              "key": "C",
+              "text": "Lấy trung bình của các đường cầu cá nhân."
+            },
+            {
+              "key": "D",
+              "text": "Không thể làm được nếu không biết thu nhập của người tiêu dùng."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Nếu biết đường cầu của các cá nhân, ta có thể tìm ra cầu thị trường bằng cách:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Khan hiếm dẫn đến sự cần thiết phải lựa chọn.",
+          "id": 1790955811310,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phải trả lời các câu hỏi"
+            },
+            {
+              "key": "B",
+              "text": "Phải thực hiện sự lựa chọn."
+            },
+            {
+              "key": "C",
+              "text": "Tất cả mọi người, trừ người giàu, đều phải thực hiện sự lựa chọn."
+            },
+            {
+              "key": "D",
+              "text": "Chính phủ phải phân bổ tài nguyên."
+            },
+            {
+              "key": "E",
+              "text": "Một số cá nhân phải nghèo."
+            }
+          ],
+          "question": "Tài nguyên khan hiếm nên:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Đường chi phí trung bình dài hạn là đường bao phía dưới của các đường chi phí trung bình ngắn hạn.",
+          "id": 1790955812985,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng của tất cả các đường chi phí trung bình ngắn hạn."
+            },
+            {
+              "key": "B",
+              "text": "Đường biên phía dưới của các đường chi phí trung bình ngắn hạn."
+            },
+            {
+              "key": "C",
+              "text": "Đường biên phía trên của các đường chi phí trung bình ngắn hạn."
+            },
+            {
+              "key": "D",
+              "text": "Nằm ngang."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Đường chi phí trung bình dài hạn là:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Giá hàng này tăng làm cầu hàng kia tăng, đó là hàng thay thế.",
+          "id": 1790955813488,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thứ cấp."
+            },
+            {
+              "key": "B",
+              "text": "Bổ sung"
+            },
+            {
+              "key": "C",
+              "text": "Thay thế."
+            },
+            {
+              "key": "D",
+              "text": "Bình thường."
+            },
+            {
+              "key": "E",
+              "text": "b và c."
+            }
+          ],
+          "question": "Nếu giá của hàng hóa tăng và cầu về một hàng hóa khác tăng thì các hàng hóa đó là:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Nắng hạn làm giảm cung, đường cung dịch chuyển sang trái và lên trên.",
+          "id": 1790955814677,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Làm cho người cung gạo sẽ dịch chuyển đường cung của họ lên một mức giá cao hơn."
+            },
+            {
+              "key": "B",
+              "text": "Gây ra cầu cao hơn về gạo dẫn đến một mức giá cao hơn."
+            },
+            {
+              "key": "C",
+              "text": "Làm cho người tiêu dùng giảm cầu của mình về gạo."
+            },
+            {
+              "key": "D",
+              "text": "Làm cho đường cung về gạo dịch chuyển sang trái và lên trên."
+            },
+            {
+              "key": "E",
+              "text": "Làm giảm giá các hàng hóa thay thế cho gạo."
+            }
+          ],
+          "question": "Nắng hạn có thể sẽ:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Nếu cầu không co dãn, tăng cung làm giá giảm mạnh.",
+          "id": 1790955815986,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung là không co dãn hoàn toàn."
+            },
+            {
+              "key": "B",
+              "text": "Cầu là co dãn hoàn toàn."
+            },
+            {
+              "key": "C",
+              "text": "Sau đó lượng cầu tăng."
+            },
+            {
+              "key": "D",
+              "text": "Cầu không co dãn."
+            },
+            {
+              "key": "E",
+              "text": "Cả cầu và cung đều không co dãn."
+            }
+          ],
+          "question": "Tăng cung sẽ làm giảm giá trừ khi:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Thay đổi giá của chính hàng hóa đó chỉ gây di chuyển dọc đường cầu, không làm dịch chuyển đường cầu.",
+          "id": 1790955817004,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng giá một hàng hóa nào đó khác mà người tiêu dùng coi như hàng hóa thay thế cho thịt bò."
+            },
+            {
+              "key": "B",
+              "text": "Giảm giá thịt bò."
+            },
+            {
+              "key": "C",
+              "text": "Tăng thu nhập danh nghĩa của người tiêu dùng thịt bò."
+            },
+            {
+              "key": "D",
+              "text": "Chiến dịch quảng cáo rộng lớn của người sản xuất một hàng hóa cạnh tranh với thịt bò (ví dụ thịt lợn)."
+            },
+            {
+              "key": "E",
+              "text": "Thay đổi trong thị hiếu của mọi người về thịt bò."
+            }
+          ],
+          "question": "Bốn trong số năm sự kiện được mô tả dưới đây có thể làm dịch chuyển đường cầu về thịt bò đến một vị trí mới. Một sự kiện sẽ không làm dịch chuyển đường cầu về thịt bò, đó là:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Dài hạn là khoảng thời gian đủ để thay đổi tất cả các yếu tố đầu vào.",
+          "id": 1790955817975,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Trong ngắn hạn có hiệu suất không đổi nhưng trong dài hạn không có."
+            },
+            {
+              "key": "B",
+              "text": "Trong dài hạn tất cả các yếu tố đầu vào có thể thay đổi được."
+            },
+            {
+              "key": "C",
+              "text": "Ba tháng."
+            },
+            {
+              "key": "D",
+              "text": "Trong ngắn hạn đường chi phí trung bình giảm dần, còn trong dài hạn thì nó tăng dần."
+            },
+            {
+              "key": "E",
+              "text": "a và b."
+            }
+          ],
+          "question": "Sự khác nhau giữa ngắn hạn và dài hạn là:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Nếu tỷ trọng chi tiêu giảm khi thu nhập tăng, đó là hàng hóa cấp thấp (co dãn < 0).",
+          "id": 1790955818456,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lớn hơn 1"
+            },
+            {
+              "key": "B",
+              "text": "Giữa 0 và 1"
+            },
+            {
+              "key": "C",
+              "text": "0"
+            },
+            {
+              "key": "D",
+              "text": "Nhỏ hơn 0"
+            },
+            {
+              "key": "E",
+              "text": "Không thể nói gì từ thông tin trên."
+            }
+          ],
+          "question": "Nếu phần trăm thu nhập mà một cá nhân chi vào một hàng hóa giảm khi thu nhập của người đó tăng thì co dãn của cầu theo thu nhập:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Thay đổi giá cà phê gây di chuyển dọc đường cầu, không dịch chuyển đường cầu.",
+          "id": 1790955820075,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giá cà phê."
+            },
+            {
+              "key": "B",
+              "text": "Giá chè."
+            },
+            {
+              "key": "C",
+              "text": "Thu nhập của người tiêu dùng."
+            },
+            {
+              "key": "D",
+              "text": "Thời tiết."
+            },
+            {
+              "key": "E",
+              "text": "Tất cả các yếu tố trên."
+            }
+          ],
+          "question": "Yếu tố nào trong các yếu tố sau không làm dịch chuyển đường cầu về cà phê:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Cá và thịt là hàng thay thế, giá cá giảm làm cầu thịt giảm, dẫn đến giá thịt giảm.",
+          "id": 1790955820311,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đường cầu về thịt dịch chuyển sang phải."
+            },
+            {
+              "key": "B",
+              "text": "Đường cầu về cá dịch chuyển sang phải."
+            },
+            {
+              "key": "C",
+              "text": "Đường cầu về cá dịch chuyển sang trái."
+            },
+            {
+              "key": "D",
+              "text": "Tăng giá thịt."
+            },
+            {
+              "key": "E",
+              "text": "Giảm giá thịt."
+            }
+          ],
+          "question": "Cho cung về thịt là cố định, giảm giá cá sẽ dẫn đến:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Nhiều hàng thay thế làm cầu nhạy cảm hơn với giá.",
+          "id": 1790955821996,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung là không co dãn tương đối."
+            },
+            {
+              "key": "B",
+              "text": "Có nhiều hàng hóa thay thế được nó ở mức độ cao."
+            },
+            {
+              "key": "C",
+              "text": "Những người tiêu dùng là người hợp lý."
+            },
+            {
+              "key": "D",
+              "text": "Người tiêu dùng được thông tin tương đối tốt hơn về chất lượng của một hàng hóa nào đó."
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều đúng."
+            }
+          ],
+          "question": "Lượng cầu nhạy cảm hơn đối với những thay đổi trong giá khi:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Thu nhập tăng làm đường ngân sách dịch chuyển song song ra ngoài.",
+          "id": 1790955822285,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dịch chuyển ra ngoài song song với đường ngân sách ban đầu."
+            },
+            {
+              "key": "B",
+              "text": "Quay và trở nên dốc hơn."
+            },
+            {
+              "key": "C",
+              "text": "Quay và trở nên thoải hơn."
+            },
+            {
+              "key": "D",
+              "text": "Dịch chuyển vào trong và song song với đường ngân sách ban đầu."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Khi thu nhập của người tiêu dùng tăng, ràng buộc ngân sách của người tiêu dùng:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Sự khan hiếm là vấn đề cốt lõi của kinh tế học.",
+          "id": 1790955823380,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường"
+            },
+            {
+              "key": "B",
+              "text": "Tiền"
+            },
+            {
+              "key": "C",
+              "text": "Tìm kiếm lợi nhuận"
+            },
+            {
+              "key": "D",
+              "text": "Cơ chế giá."
+            },
+            {
+              "key": "E",
+              "text": "Sự khan hiếm."
+            }
+          ],
+          "question": "Chủ đề cơ bản nhất mà kinh tế học vi mô phải giải quyết là:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Giá hàng này giảm làm cầu hàng kia tăng, đó là hàng bổ sung.",
+          "id": 1790955824185,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thứ cấp."
+            },
+            {
+              "key": "B",
+              "text": "Bổ sung"
+            },
+            {
+              "key": "C",
+              "text": "Thay thế."
+            },
+            {
+              "key": "D",
+              "text": "Bình thường."
+            },
+            {
+              "key": "E",
+              "text": "b và c."
+            }
+          ],
+          "question": "Nếu giá của hàng hóa giảm và cầu về một hàng hóa khác tăng thì các hàng hóa đó là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Tối đa hóa lợi nhuận tại MR = MC.",
+          "id": 1790955825196,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh thu cận biên giảm nhanh hơn chi phí cận biên."
+            },
+            {
+              "key": "B",
+              "text": "Chi phí trung bình đang tăng."
+            },
+            {
+              "key": "C",
+              "text": "Chi phí cận biên đang giảm."
+            },
+            {
+              "key": "D",
+              "text": "Doanh thu cận biên đang tăng."
+            },
+            {
+              "key": "E",
+              "text": "Doanh thu cận biên đang giảm."
+            }
+          ],
+          "question": "Để tối đa hóa lợi nhuận (hoặc tối thiểu hóa thua lỗ) hãng phải đảm bảo sản xuất ở mức sản lượng mà tại đó:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Đường cung thị trường thể hiện hành vi của các người bán trong cạnh tranh hoàn hảo.",
+          "id": 1790955827054,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là tổng các đường cung của những người sản xuất lớn nhất trên thị trường."
+            },
+            {
+              "key": "B",
+              "text": "Luôn luôn dốc lên."
+            },
+            {
+              "key": "C",
+              "text": "Cho thấy cách thức mà nhóm các người bán sẽ ứng xử trong thị trường cạnh tranh hoàn hảo."
+            },
+            {
+              "key": "D",
+              "text": "Là đường có thể tìm ra chỉ khi tất cả những người bán hành động như người ấn định giá."
+            },
+            {
+              "key": "E",
+              "text": "Là đường có thể tìm ra chỉ nếu thị trường là thị trường quốc gia."
+            }
+          ],
+          "question": "Đường cung thị trường:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Đường giới hạn khả năng sản xuất minh họa sự đánh đổi giữa các hàng hóa.",
+          "id": 1790955827209,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Biểu thị lượng hàng hóa mà một hãng hay xã hội có thể sản xuất ra."
+            },
+            {
+              "key": "B",
+              "text": "Không phải là đường thẳng vì quy luật hiệu suất giảm dần."
+            },
+            {
+              "key": "C",
+              "text": "Minh họa sự đánh đổi giữa các hàng hóa."
+            },
+            {
+              "key": "D",
+              "text": "Tất cả đều đúng."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Đường giới hạn khả năng sản xuất:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Sản phẩm cận biên là sản lượng tăng thêm khi sử dụng thêm một đơn vị yếu tố sản xuất.",
+          "id": 1790955828467,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi phí của việc sản xuất thêm một đơn vị sản phẩm."
+            },
+            {
+              "key": "B",
+              "text": "Sản phẩm bổ sung được tạo ra từ việc thuê thêm một đơn vị yếu tố sản xuất."
+            },
+            {
+              "key": "C",
+              "text": "Chi phí cần thiết để thuê thêm một đơn vị yếu tố sản xuất."
+            },
+            {
+              "key": "D",
+              "text": "Sản lượng chia cho số yếu tổ sử dụng trong quá trình sản xuất."
+            },
+            {
+              "key": "E",
+              "text": "a và c."
+            }
+          ],
+          "question": "Sản phẩm cận biên của một yếu tố sản xuất là:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Điều kiện tối ưu hóa tiêu dùng: MUx/Px = MUy/Py.",
+          "id": 1790955829931,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không mua hàng hóa cấp thấp."
+            },
+            {
+              "key": "B",
+              "text": "Làm cho lợi ích cận biên của đơn vị mua cuối cùng của các hàng hóa bằng nhau."
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo rằng giá của các hàng hóa tỷ lệ với tổng lợi ích của chúng."
+            },
+            {
+              "key": "D",
+              "text": "Phân bổ thu nhập sao cho đồng chi tiêu cuối cùng vào hàng hóa này đem lại phần lợi ích tăng thêm bằng đồng chi tiêu cuối cùng vào hàng hóa kia."
+            },
+            {
+              "key": "E",
+              "text": "Đảm bảo rằng giá của hàng hóa bằng lợi ích cận biên của tiền."
+            }
+          ],
+          "question": "Để tối đa hóa mức thỏa mãn, người tiêu dùng phải:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Trong nền kinh tế kế hoạch hóa tập trung, chính phủ quyết định mọi vấn đề.",
+          "id": 1790955830953,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nền kinh tế thị trường."
+            },
+            {
+              "key": "B",
+              "text": "Nền kinh tế hỗn hợp."
+            },
+            {
+              "key": "C",
+              "text": "Nền kinh tế kế hoạch hóa tập trung."
+            },
+            {
+              "key": "D",
+              "text": "Nền kinh tế truyền thống."
+            },
+            {
+              "key": "E",
+              "text": "Tất cả các nền kinh tế trên."
+            }
+          ],
+          "question": "Trong nền kinh tế nào sau đây, Chính phủ giải quyết vấn đề cái gì được sản xuất ra, sản xuất như thế nào và sản xuất cho ai?"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Sự di chuyển dọc đường cầu do hiệu ứng thay thế và sự thay đổi số lượng người tham gia.",
+          "id": 1790955831280,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các cá nhân thay thế bằng các hàng hóa và dịch vụ khác."
+            },
+            {
+              "key": "B",
+              "text": "Một số cá nhân rời bỏ thị trường."
+            },
+            {
+              "key": "C",
+              "text": "Một số cá nhân gia nhập thị trường."
+            },
+            {
+              "key": "D",
+              "text": "Lượng cung tăng."
+            },
+            {
+              "key": "E",
+              "text": "a và b."
+            }
+          ],
+          "question": "Khi giá tăng lượng cầu giảm dọc trên một đường cầu cá nhân vì:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Giảm giá yếu tố sản xuất làm tăng cung.",
+          "id": 1790955833019,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng giá của các hàng hóa khác."
+            },
+            {
+              "key": "B",
+              "text": "Tăng giá của các yếu tố sản xuất."
+            },
+            {
+              "key": "C",
+              "text": "Giảm giá của các yếu tố sản xuất."
+            },
+            {
+              "key": "D",
+              "text": "Không nắm được công nghệ."
+            },
+            {
+              "key": "E",
+              "text": "Không yếu tố nào trong các yếu tố trên."
+            }
+          ],
+          "question": "Tăng cung hàng hóa X ở một mức giá xác định nào đó có thể do:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Giá hàng trên trục hoành giảm làm đường ngân sách quay ra ngoài, trở nên thoải hơn.",
+          "id": 1790955833422,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quay và trở nên thoải hơn."
+            },
+            {
+              "key": "B",
+              "text": "Quay và trở nên dốc hơn."
+            },
+            {
+              "key": "C",
+              "text": "Dịch chuyển ra ngoài song song với ràng buộc ngân sách ban đầu."
+            },
+            {
+              "key": "D",
+              "text": "Dịch chuyển vào trong song song với ràng buộc ngân sách ban đầu."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Khi giá của một hàng hóa (biểu thị trên trục hoành) giảm thì ràng buộc ngân sách:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Điểm cân bằng tiêu dùng là nơi đường ngân sách tiếp xúc với đường bàng quan cao nhất.",
+          "id": 1790955834631,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đường ngân sách là tiếp tuyến của đường bàng quan."
+            },
+            {
+              "key": "B",
+              "text": "Chi tiêu vào các hàng hóa bằng nhau."
+            },
+            {
+              "key": "C",
+              "text": "Lợi ích cận biên của mỗi hàng hóa bằng giá của nó."
+            },
+            {
+              "key": "D",
+              "text": "Lợi ích cận biên của các hàng hóa bằng nhau."
+            },
+            {
+              "key": "E",
+              "text": "a và c."
+            }
+          ],
+          "question": "Điều kiện cân bằng đối với người tiêu dùng là:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Hàng cấp thấp có cầu giảm khi thu nhập tăng.",
+          "id": 1790955835817,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giá của nó tăng, người ta sẽ mua nó it đí."
+            },
+            {
+              "key": "B",
+              "text": "Giá của nó giảm, người ta sẽ mua nó nhiều hơn."
+            },
+            {
+              "key": "C",
+              "text": "Khi thu nhập của người tiêu dùng tăng, người ta sẽ mua hàng hóa đó ít đi."
+            },
+            {
+              "key": "D",
+              "text": "Khi thu nhập của người tiêu dùng giảm, người ta sẽ mua hàng hóa đó ít đi."
+            },
+            {
+              "key": "E",
+              "text": "Nếu giá hoặc thu nhập thay đổi sẽ không gây ra sự thay đổi trong tiêu dùng hàng hóa đó."
+            }
+          ],
+          "question": "Nếu một hàng hóa được coi là “cấp thấp” thì:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Cầu giảm (dịch trái) và cung tăng (dịch phải) đều gây áp lực giảm giá.",
+          "id": 1790955836647,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giá cũ vẫn thịnh hành."
+            },
+            {
+              "key": "B",
+              "text": "Lượng cũ vẫn thịnh hành."
+            },
+            {
+              "key": "C",
+              "text": "Giá và lượng cung tăng."
+            },
+            {
+              "key": "D",
+              "text": "Giá và lượng cung giảm."
+            },
+            {
+              "key": "E",
+              "text": "Giá và lượng cầu tăng."
+            }
+          ],
+          "question": "Đường cầu của ngành dịch chuyển nhanh sang trái khi đường cung dịch chuyển sang phải, có thể hy vọng:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Định nghĩa co dãn của cầu theo giá.",
+          "id": 1790955837983,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thay đổi trong tổng doanh thu chia cho thay đổi trong giá."
+            },
+            {
+              "key": "B",
+              "text": "Không đổi đối với các đường cầu khác nhau bất kể hình dạng của chúng."
+            },
+            {
+              "key": "C",
+              "text": "Luôn luôn là co dãn, hoặc không co dãn, hoặc co dãn đơn vị trong suốt độ dài của đường cầu."
+            },
+            {
+              "key": "D",
+              "text": "Lượng cầu chia cho thay đổi trong giá."
+            },
+            {
+              "key": "E",
+              "text": "Thay đổi phần trăm trong lượng cầu chia cho thay đổi phần trăm trong giá."
+            }
+          ],
+          "question": "Co dãn của cầu theo giá là:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Trong ngắn hạn, hãng tiếp tục sản xuất nếu P > AVC.",
+          "id": 1790955838302,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng chi phí trung bình cao hơn chi phí cận biên."
+            },
+            {
+              "key": "B",
+              "text": "Doanh thu trung bình cao hơn tổng chi phí trung bình."
+            },
+            {
+              "key": "C",
+              "text": "Tổng doanh thu lớn hơn tổng chi phí."
+            },
+            {
+              "key": "D",
+              "text": "Giá cao hơn chi phí biến đổi trung bình."
+            },
+            {
+              "key": "E",
+              "text": "Doanh thu trung bình lớn hơn chi phí trung bình."
+            }
+          ],
+          "question": "Trong ngắn hạn hãng muốn tối đa hóa lợi nhuận (hoặc tối thiểu hóa thua lỗ) phải đảm bảo:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Phân phối đề cập đến câu hỏi 'cho ai' trong kinh tế học.",
+          "id": 1790955840122,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bán lẻ, bán buôn và vận chuyển."
+            },
+            {
+              "key": "B",
+              "text": "Câu hỏi cái gì."
+            },
+            {
+              "key": "C",
+              "text": "Câu hỏi như thế nào."
+            },
+            {
+              "key": "D",
+              "text": "Câu hỏi cho ai."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Trong kinh tế học, “phân phối” đề cập đến:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Cầu thị trường là tổng lượng cầu của các cá nhân tại mỗi mức giá.",
+          "id": 1790955840410,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tính lượng cầu trung bình ở mỗi mức giá."
+            },
+            {
+              "key": "B",
+              "text": "Cộng tất cả các mức giá lại."
+            },
+            {
+              "key": "C",
+              "text": "Cộng lượng mua ở mỗi mức giá của các cá nhân lại với nhau."
+            },
+            {
+              "key": "D",
+              "text": "Tính mức giá trung bình."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Nếu biết các đường cầu cá nhân của mỗi người tiêu dùng thì có thể tìm ra đường cầu thị trường bằng cách:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Kinh tế học thực chứng mô tả các mối quan hệ nhân quả khách quan.",
+          "id": 1790955841902,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thuế là quá cao."
+            },
+            {
+              "key": "B",
+              "text": "Tiết kiệm là quá thấp."
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất thấp sẽ kích thích đầu tư."
+            },
+            {
+              "key": "D",
+              "text": "Phải giảm lãi suất để kích thích đầu tư."
+            },
+            {
+              "key": "E",
+              "text": "Ở các nước tư bản có quá nhiều sự bất bình đẳng kinh tế."
+            }
+          ],
+          "question": "Ví dụ nào sau đây thuộc kinh tế học thực chứng:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Tính kinh tế theo quy mô là chi phí trung bình giảm khi quy mô sản xuất tăng.",
+          "id": 1790955842458,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sản xuất nhiều loại sản phẩm khác nhau cùng với nhau sẽ rẻ hơn là sản xuất chúng riêng rẽ."
+            },
+            {
+              "key": "B",
+              "text": "Sản xuất số lượng lớn sẽ đắt hơn sản xuất số lượng nhỏ."
+            },
+            {
+              "key": "C",
+              "text": "Chi phí sản xuất trung bình thấp hơn khi sản xuất số lượng lớn hơn."
+            },
+            {
+              "key": "D",
+              "text": "Đường chi phí cận biên dốc xuống."
+            },
+            {
+              "key": "E",
+              "text": "c và d."
+            }
+          ],
+          "question": "Khái niệm tính kinh tế theo quy mô có nghĩa là:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Cầu thị trường là tổng lượng cầu của các cá nhân tại mỗi mức giá.",
+          "id": 1790955844000,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tính lượng cầu trung bình ở mỗi mức giá."
+            },
+            {
+              "key": "B",
+              "text": "Cộng tất cả các mức giá lại."
+            },
+            {
+              "key": "C",
+              "text": "Cộng lượng mua ở mỗi mức giá của các cá nhân lại với nhau."
+            },
+            {
+              "key": "D",
+              "text": "Tính mức giá trung bình."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Nếu biết các đường cầu cá nhân của mỗi người tiêu dùng thì có thể tìm ra đường cầu thị trường bằng cách:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Giá hàng trên trục hoành giảm làm đường ngân sách quay ra ngoài, trở nên thoải hơn.",
+          "id": 1790955844889,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quay và trở nên thoải hơn."
+            },
+            {
+              "key": "B",
+              "text": "Quay và trở nên dốc hơn."
+            },
+            {
+              "key": "C",
+              "text": "Dịch chuyển ra ngoài song song với ràng buộc ngân sách ban đầu."
+            },
+            {
+              "key": "D",
+              "text": "Dịch chuyển vào trong song song với ràng buộc ngân sách ban đầu."
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Khi giá của một hàng hóa (biểu thị trên trục hoành) giảm thì ràng buộc ngân sách:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Co dãn = 1/3. Giá tăng 30% thì lượng cầu giảm 10% (30% * 1/3).",
+          "id": 1790955845526,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lượng cầu tăng 10%"
+            },
+            {
+              "key": "B",
+              "text": "Lượng cầu giảm 10%"
+            },
+            {
+              "key": "C",
+              "text": "Lượng cầu tăng 90%"
+            },
+            {
+              "key": "D",
+              "text": "Lượng cầu giảm 90%"
+            },
+            {
+              "key": "E",
+              "text": "Lượng cầu không thay đổi."
+            }
+          ],
+          "question": "Giả sử rằng co dãn của cầu theo giá là 1/3. Nếu giá tăng 30% thì lượng cầu sẽ thay đổi như thế nào?"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Tất cả các đặc điểm trên đều đúng với hàng hóa bình thường.",
+          "id": 1790955846413,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đường ngân sách dịch chuyển song song ra ngoài."
+            },
+            {
+              "key": "B",
+              "text": "Đường cầu dịch chuyển sang phải."
+            },
+            {
+              "key": "C",
+              "text": "Lượng cầu tăng."
+            },
+            {
+              "key": "D",
+              "text": "Chi nhiều tiền hơn vào hàng hóa đó."
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều đúng."
+            }
+          ],
+          "question": "Đối với hàng hóa bình thường, khi thu nhập tăng:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Ràng buộc ngân sách xác định tập hợp cơ hội và giới hạn chi tiêu.",
+          "id": 1790955847712,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xác định tập hợp các cơ hội của người đó."
+            },
+            {
+              "key": "B",
+              "text": "Chỉ ra rằng tổng chi tiêu không thể vượt quá tổng thu nhập."
+            },
+            {
+              "key": "C",
+              "text": "Biểu thị lợi ích cận biên giảm dần."
+            },
+            {
+              "key": "D",
+              "text": "Tất cả."
+            },
+            {
+              "key": "E",
+              "text": "a và b."
+            }
+          ],
+          "question": "Giả định rằng không có tiết kiệm hay đi vay, và thu nhập của người tiêu dùng là cố định, ràng buộc ngân sách của người đó:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Cầu giảm (trái) và cung tăng (phải) làm giá giảm, không phải tăng.",
+          "id": 1790955848833,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nếu đường cung dịch chuyển sang trái và đường cầu giữ nguyên, giá cân bằng sẽ tăng."
+            },
+            {
+              "key": "B",
+              "text": "Nếu đường cầu dịch chuyển sang trái và cung tăng, giá cân bằng sẽ tăng."
+            },
+            {
+              "key": "C",
+              "text": "Nếu đường cầu dịch chuyển sang trái và đường cung dịch chuyển sang phải, giá cân bằng sẽ giảm."
+            },
+            {
+              "key": "D",
+              "text": "Nếu đường cầu dịch chuyển sang phải và đường cung dịch chuyển sang trái, giá sẽ tăng."
+            },
+            {
+              "key": "E",
+              "text": "Nếu đường cung dịch chuyển sang phải và cầu giữ nguyên, giá cân bằng sẽ giảm."
+            }
+          ],
+          "question": "Câu nào trong các câu sau sai? Giả định rằng đường cung dốc lên:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Trợ cấp là khoản thu, không phải chi phí sản xuất.",
+          "id": 1790955849146,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền lương của người lao động"
+            },
+            {
+              "key": "B",
+              "text": "Thu nhập của chủ sở hữu doanh nghiệp"
+            },
+            {
+              "key": "C",
+              "text": "Trợ cấp trong kinh doanh"
+            },
+            {
+              "key": "D",
+              "text": "Tiền thuê đất"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả các yếu tố kể trên"
+            }
+          ],
+          "question": "Yếu tố nào dưới đây không phải là một yếu tố chi phí:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Đổi mới công nghệ làm tăng năng suất, tăng tổng cung dài hạn.",
+          "id": 1790955850331,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thu nhập quốc gia tăng"
+            },
+            {
+              "key": "B",
+              "text": "Xuất khẩu tăng"
+            },
+            {
+              "key": "C",
+              "text": "Đổi mới công nghệ"
+            },
+            {
+              "key": "D",
+              "text": "Tiền lương tăng"
+            },
+            {
+              "key": "E",
+              "text": "Không có yếu tố nào kể trên"
+            }
+          ],
+          "question": "Những yếu tố nào sau đây có ảnh hưởng đến tổng cung dài hạn:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "GDP = GNP + Thu nhập ròng từ nước ngoài. Nếu GDP > GNP thì thu nhập ròng từ nước ngoài âm.",
+          "id": 1790955851569,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "GDP thực tế lớn hơn GDP danh nghĩa"
+            },
+            {
+              "key": "B",
+              "text": "Giá trị sản xuất của người nước ngoài tạo ra ở Việt Nam nhiều hơn so với giá trị sản xuất mà người Việt Nam tạo ra ở nước ngoài"
+            },
+            {
+              "key": "C",
+              "text": "Giá trị sản xuất mà người Việt Nam tạo ra ở nước ngoài nhiều hơn so với giá trị sản xuất mà người nước ngoài tạo ra ở Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "GNP thực tế lớn hơn GNP danh nghĩa"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Nếu ở Việt Nam, GDP lớn hơn GNP thì:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Hiệu ứng của cải: mức giá giảm làm tăng giá trị thực của tiền, tăng tiêu dùng.",
+          "id": 1790955852424,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mọi người tìm thấy những hàng hóa thay thế khi giá cả của một mặt hàng mà họ đang tiêu dùng tăng"
+            },
+            {
+              "key": "B",
+              "text": "Khi mức giá tăng, mọi người sẽ chuyển từ tiêu dùng hàng ngoại sang tiêu dùng hàng sản xuất trong nước."
+            },
+            {
+              "key": "C",
+              "text": "Dân cư trở nên khá giả hơn khi mức giá giảm và do đó sẵn sàng mua nhiều hàng hơn"
+            },
+            {
+              "key": "D",
+              "text": "Mức giá thấp hơn làm tăng sức mua của lượng tiền mà mọi người đang nắm giữ, do đó họ sẽ tăng tiêu dùng"
+            },
+            {
+              "key": "E",
+              "text": "Không có yếu tố nào kể trên"
+            }
+          ],
+          "question": "Một lý do làm cho đường tổng cầu có độ dốc âm là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "MPC = ΔC / ΔYd.",
+          "id": 1790955854096,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sự thay đổi của tiêu dùng chia cho sự thay đổi của thu nhập khả dụng"
+            },
+            {
+              "key": "B",
+              "text": "Tổng tiêu dùng chia cho sự thay đổi của thu nhập khả dụng"
+            },
+            {
+              "key": "C",
+              "text": "Tổng tiêu dùng chia cho tổng thu nhập khả dụng"
+            },
+            {
+              "key": "D",
+              "text": "Sự thay đổi của tiêu dùng chia cho tiết kiệm"
+            },
+            {
+              "key": "E",
+              "text": "Sự thay đổi của tiêu dùng chia cho đầu tư"
+            }
+          ],
+          "question": "Xu hướng tiêu dùng cận biên được tính bằng:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Cầu tiền phụ thuộc vào thu nhập (giao dịch) và lãi suất (chi phí cơ hội).",
+          "id": 1790955854896,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhu cầu thanh toán"
+            },
+            {
+              "key": "B",
+              "text": "Thu nhập"
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất và thu nhập"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các yếu tố trên"
+            },
+            {
+              "key": "E",
+              "text": "Không phải các yếu tố trên"
+            }
+          ],
+          "question": "Hàm cầu tiền là hàm của:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "CSTK mở làm tăng thu nhập, tăng cầu tiền, dẫn đến lãi suất tăng.",
+          "id": 1790955855736,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng và lãi suất giảm"
+            },
+            {
+              "key": "B",
+              "text": "Giảm và lãi suất tăng"
+            },
+            {
+              "key": "C",
+              "text": "Tăng và lãi suất tăng"
+            },
+            {
+              "key": "D",
+              "text": "Giảm và lãi suất giảm"
+            },
+            {
+              "key": "E",
+              "text": "Không đổi"
+            }
+          ],
+          "question": "Tác động của CSTK mở sẽ dẫn đến cầu tiền tệ:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Tăng chi tiêu chính phủ làm tăng tổng cầu.",
+          "id": 1790955856755,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhập khẩu và xuất khẩu tăng"
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ cắt giảm các khoản trợ cấp và giảm thuế"
+            },
+            {
+              "key": "C",
+              "text": "Chính phủ tăng chi tiêu cho quốc phòng"
+            },
+            {
+              "key": "D",
+              "text": "Các lựa chọn đều đúng"
+            },
+            {
+              "key": "E",
+              "text": "Các lựa chọn đều sai"
+            }
+          ],
+          "question": "Trên đồ thị, trục hoành ghi sản lượng quốc gia, trục tung ghi mức giá chung, đường tổng cầu AD dịch sang phải khi:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "GDP thực tế bình quân đầu người là chỉ tiêu phản ánh mức sống.",
+          "id": 1790955857791,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "GDP thực tế"
+            },
+            {
+              "key": "B",
+              "text": "GDP danh nghĩa bình quân đầu người"
+            },
+            {
+              "key": "C",
+              "text": "GDP thực tế bình quân đầu người"
+            },
+            {
+              "key": "D",
+              "text": "GDP danh nghĩa"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều đúng"
+            }
+          ],
+          "question": "Mức sống của dân cư một nước có thể được phản ánh bằng chỉ tiêu:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Mức giá tăng gấp đôi làm giá trị của tiền giảm một nửa.",
+          "id": 1790955858877,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lượng cầu tiền giảm một nửa"
+            },
+            {
+              "key": "B",
+              "text": "Cung tiền bị cắt giảm một nửa"
+            },
+            {
+              "key": "C",
+              "text": "Giá trị của tiền bị cắt giảm một nửa"
+            },
+            {
+              "key": "D",
+              "text": "Thu nhập danh nghĩa không bị ảnh hưởng"
+            },
+            {
+              "key": "E",
+              "text": "Các lựa chọn đều sai"
+            }
+          ],
+          "question": "Nếu mức giá tăng gấp đôi"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Thuế nhập khẩu tăng làm giảm nhập khẩu, nhưng cũng làm giảm tổng cầu do giá hàng hóa tăng.",
+          "id": 1790955859692,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đường tổng cầu dịch chuyển sang trái"
+            },
+            {
+              "key": "B",
+              "text": "Đường tổng cầu dịch chuyển sang phải"
+            },
+            {
+              "key": "C",
+              "text": "Đường tổng cung dịch chuyển sang phải"
+            },
+            {
+              "key": "D",
+              "text": "Đường tổng cung dịch chuyển sang trái"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Khi chính phủ tăng thuế đánh vào hàng tiêu dùng nhập khẩu"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Thu nhập khả dụng là phần thu nhập còn lại sau thuế, nhỏ nhất trong các chỉ tiêu.",
+          "id": 1790955860674,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng sản phẩm quốc dân"
+            },
+            {
+              "key": "B",
+              "text": "Sản phẩm quốc dân ròng"
+            },
+            {
+              "key": "C",
+              "text": "Thu nhập quốc dân"
+            },
+            {
+              "key": "D",
+              "text": "Thu nhập khả dụng"
+            },
+            {
+              "key": "E",
+              "text": "Thu nhập cá nhân"
+            }
+          ],
+          "question": "tiêu nào nhỏ nhất trong những chỉ tiêu đo lường sản lượng Quốc gia:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Trong nền kinh tế đóng, không có thu nhập từ nước ngoài, GDP = GNP.",
+          "id": 1790955861637,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng sản phẩm quốc dân nhỏ hơn tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "B",
+              "text": "Tổng sản phẩm quốc dân bằng tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "C",
+              "text": "Tổng sản phẩm quốc dân lớn hơn tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "D",
+              "text": "Tổng sản phẩm quốc dân và tổng sản phẩm quốc nội không có quan hệ gì với nhau."
+            },
+            {
+              "key": "E",
+              "text": "Không có câu nào đúng"
+            }
+          ],
+          "question": "Trong nền kinh tế giản đơn và nền kinh tế đóng:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Tất cả các công cụ trên đều làm giảm cung tiền.",
+          "id": 1790955863068,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng dự trữ bắt buộc"
+            },
+            {
+              "key": "B",
+              "text": "Bán trái phiếu Chính phủ trên thị trường mở"
+            },
+            {
+              "key": "C",
+              "text": "Tăng lãi suất chiết khấu"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả"
+            },
+            {
+              "key": "E",
+              "text": "Không có câu nào đúng"
+            }
+          ],
+          "question": "Để giảm cung ứng tiền tệ, NHTW sử dụng các công cụ nào sau đây:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Nhập khẩu tăng làm giảm tổng cầu, ít kích thích đầu tư hơn các yếu tố khác.",
+          "id": 1790955863760,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lãi suất giảm"
+            },
+            {
+              "key": "B",
+              "text": "Chi tiêu cho tiêu dùng tăng"
+            },
+            {
+              "key": "C",
+              "text": "Nhập khẩu tăng"
+            },
+            {
+              "key": "D",
+              "text": "Cạn kiệt hàng tồn kho"
+            },
+            {
+              "key": "E",
+              "text": "Tiến bộ công nghệ"
+            }
+          ],
+          "question": "Yếu tố nào trong các yếu tố sau đây ít có khả năng nhất trong việc kích thích sự gia tăng đầu tư:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Cân bằng dài hạn là nơi AD, AS ngắn hạn và AS dài hạn cắt nhau.",
+          "id": 1790955864914,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đường AD cắt đường AS ngắn hạn và đường AS dài hạn"
+            },
+            {
+              "key": "B",
+              "text": "Đường AD cắt đường AS"
+            },
+            {
+              "key": "C",
+              "text": "Đường AS cắt đường AS dài hạn"
+            },
+            {
+              "key": "D",
+              "text": "Đường AD cắt đường AS dài hạn"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả"
+            }
+          ],
+          "question": "Cân bằng dài hạn trong kinh tế học vĩ mô là điểm mà tại đó:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Nới lỏng tiền tệ là tăng cung tiền thông qua các công cụ của NHTW.",
+          "id": 1790955866147,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là một chính sách do NHTƯ thực hiện để kích cầu bằng cách giảm thuế, tăng trợ cấp xã hội, hoặc tăng chi tiêu ngân sách"
+            },
+            {
+              "key": "B",
+              "text": "Là một chính sách do NHTƯ thực hiện để kích cầu bằng cách hạ lãi suất chiết khấu, giảm tỷ lệ dự trữ bắt buộc, hoặc mua các chứng khoán nhà nước"
+            },
+            {
+              "key": "C",
+              "text": "Là một chính sách do NHTƯ thực hiện để kích cầu bằng cách tăng lãi suất chiết khấu, tăng tỷ lệ dự trữ bắt buộc, hoặc bán ra chứng khoán nhà nước"
+            },
+            {
+              "key": "D",
+              "text": "Là một chính sách do NHTƯ thực hiện để kích cầu bằng cách phát hành trái phiếu chính phủ"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Mở rộng tiền tệ (hoặc nới lỏng tiền tệ):"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Tăng cung tiền làm tăng tổng cầu (AD dịch phải).",
+          "id": 1790955867091,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dịch chuyển sang trái"
+            },
+            {
+              "key": "B",
+              "text": "Dịch chuyển sang phải"
+            },
+            {
+              "key": "C",
+              "text": "Di chuyển lên trên"
+            },
+            {
+              "key": "D",
+              "text": "Di chuyển xuống dưới"
+            },
+            {
+              "key": "E",
+              "text": "Không đổi"
+            }
+          ],
+          "question": "Sự gia tăng cung ứng tiền tệ khi mọi yếu tố khác không đổi, thì đường AD sẽ :"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "(18635 - 18073) / 18073 ≈ 3.1% (gần nhất là 3.0%).",
+          "id": 1790955867702,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "3.0%"
+            },
+            {
+              "key": "B",
+              "text": "3.1%"
+            },
+            {
+              "key": "C",
+              "text": "5.62%"
+            },
+            {
+              "key": "D",
+              "text": "18.0%"
+            },
+            {
+              "key": "E",
+              "text": "18.6%"
+            }
+          ],
+          "question": "Nếu GDP bình quân thực tế của năm 2000 là 18,073$ và GDP bình quân thực tế của năm 2001 là 18,635$ thì tỷ lệ tăng trưởng của sản lượng thực tế trong thời kỳ này là bao nhiêu?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "CSTK mở làm tăng lãi suất, CSTT chặt làm tăng lãi suất, nên lãi suất chắc chắn tăng.",
+          "id": 1790955868344,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Y chắc chắn tăng"
+            },
+            {
+              "key": "B",
+              "text": "Lãi suất và thu nhập đều tăng"
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất chắc chắn tăng"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả đều đúng"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Trong mô hình IS - LM, nếu Chính phủ đồng thời áp dụng chính sách tài khóa mở và chính sách tiền tệ chặt, thì:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Để giảm lạm phát, cần giảm tổng cầu bằng cách giảm cung tiền và giảm chi tiêu chính phủ.",
+          "id": 1790955869218,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm lượng cung tiền, tăng lãi suất"
+            },
+            {
+              "key": "B",
+              "text": "Giảm chi ngân sách và tăng thuế"
+            },
+            {
+              "key": "C",
+              "text": "Giảm lượng cung tiền, giảm lãi suất"
+            },
+            {
+              "key": "D",
+              "text": "a và b"
+            },
+            {
+              "key": "E",
+              "text": "a và c"
+            }
+          ],
+          "question": "Khi nền kinh tế đang có lạm phát cao, nên:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Thu nhập giảm làm giảm cầu tiền giao dịch, dẫn đến cầu tiền giảm.",
+          "id": 1790955870286,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lãi suất cân bằng tăng lên"
+            },
+            {
+              "key": "B",
+              "text": "Lãi suất cân bằng giảm"
+            },
+            {
+              "key": "C",
+              "text": "Mức cầu tiền tệ tăng lên"
+            },
+            {
+              "key": "D",
+              "text": "Mức cầu tiền tệ giảm xuống"
+            },
+            {
+              "key": "E",
+              "text": "Lãi suất cân bằng không thay đổi"
+            }
+          ],
+          "question": "Khi thu nhập giảm xuống trong điều kiện lượng cung tiền không thay đổi, thì:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bộ đội xuất ngũ là người có khả năng lao động và đang tìm việc.",
+          "id": 1790955871923,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Học sinh trường trung học chuyên nghiệp"
+            },
+            {
+              "key": "B",
+              "text": "Người nội trợ"
+            },
+            {
+              "key": "C",
+              "text": "Sinh viên năm cuối"
+            },
+            {
+              "key": "D",
+              "text": "Bộ đội xuất ngũ"
+            },
+            {
+              "key": "E",
+              "text": "Không có câu nào đúng"
+            }
+          ],
+          "question": "Thành phần nào sau đây thuộc lực lượng lao động:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "M1 bao gồm tiền mặt và tiền gửi không kỳ hạn.",
+          "id": 1790955872610,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền mặt, tiền gửi không kỳ hạn, tiền gửi tiết kiệm, quỹ hỗ trợ của thị trường tiền tệ và các khoản tiền gửi có kỳ hạn lượng nhỏ"
+            },
+            {
+              "key": "B",
+              "text": "Tiền mặt, tiền gửi không kỳ hạn và các tài khoản viết séc khác"
+            },
+            {
+              "key": "C",
+              "text": "Tiền mặt, tài khoản tiết kiệm và trái phiếu Chính phủ"
+            },
+            {
+              "key": "D",
+              "text": "Tiền mặt, vàng, ngoại tệ"
+            },
+            {
+              "key": "E",
+              "text": "Tiền mặt, vàng, ngoại tệ và trái phiếu Chính phủ"
+            }
+          ],
+          "question": "Khối lượng tiền M1 bao gồm:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Tiết kiệm = Thu nhập khả dụng - Tiêu dùng. Nếu tiêu dùng > thu nhập thì tiết kiệm âm.",
+          "id": 1790955874141,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiêu dùng ít hơn thu nhập khả dụng"
+            },
+            {
+              "key": "B",
+              "text": "Tiêu dùng nhiều hơn tiết kiệm"
+            },
+            {
+              "key": "C",
+              "text": "Tiêu dùng nhiều hơn thu nhập khả dụng"
+            },
+            {
+              "key": "D",
+              "text": "Tiết kiệm nhiều hơn tiêu dùng"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Tiết kiệm âm khi hộ gia đình:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Tốc độ tăng trưởng kinh tế tính bằng GDP thực tế.",
+          "id": 1790955875068,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ tiêu theo giá thị trường"
+            },
+            {
+              "key": "B",
+              "text": "Chỉ tiêu danh nghĩa"
+            },
+            {
+              "key": "C",
+              "text": "Chỉ tiêu thực"
+            },
+            {
+              "key": "D",
+              "text": "Chỉ tiêu sản xuất"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Để tính tốc độ tăng trưởng kinh tế giữa các thời kỳ, người ta sử dụng:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Tất cả các yếu tố tăng chi tiêu đều làm AD dịch phải.",
+          "id": 1790955875492,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chính phủ tăng chi tiêu cho quốc phòng"
+            },
+            {
+              "key": "B",
+              "text": "Nhập khẩu và xuất khẩu tăng"
+            },
+            {
+              "key": "C",
+              "text": "Chính phủ cắt giảm các khoản trợ cấp và giảm thuế"
+            },
+            {
+              "key": "D",
+              "text": "Các lựa chọn đều đúng"
+            },
+            {
+              "key": "E",
+              "text": "Các lựa chọn đều sai"
+            }
+          ],
+          "question": "Trên đồ thị, trục hoành ghi sản lượng quốc gia, trục tung ghi mức giá chung, đường tổng cầu AD dịch sang phải khi:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "GDP thực tế theo giá năm cơ sở, GDP danh nghĩa theo giá năm hiện hành.",
+          "id": 1790955876563,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Năm cơ sở, năm hiện hành"
+            },
+            {
+              "key": "B",
+              "text": "Năm hiện hành, năm cơ sở"
+            },
+            {
+              "key": "C",
+              "text": "Của hàng hóa trung gian, của hàng hóa cuối cùng"
+            },
+            {
+              "key": "D",
+              "text": "Trong nước, quốc tế"
+            },
+            {
+              "key": "E",
+              "text": "Không có câu nào đúng"
+            }
+          ],
+          "question": "GDP thực tế đo lường theo mức giá......, còn GDP danh nghĩa đo lường theo mức giá......"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "GDP chỉ tính giá trị hàng hóa cuối cùng (500$).",
+          "id": 1790955877941,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "50$"
+            },
+            {
+              "key": "B",
+              "text": "100$"
+            },
+            {
+              "key": "C",
+              "text": "500$"
+            },
+            {
+              "key": "D",
+              "text": "600$"
+            },
+            {
+              "key": "E",
+              "text": "650$"
+            }
+          ],
+          "question": "Nếu một người thợ giày mua một miếng da trị giá 100$, một cuộn chỉ trị giá 50$, và sử dụng chúng để sản xuất và bán những đôi giày trị giá 500$ cho người tiêu dùng, giá trị đóng góp vào GDP là:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Sản lượng tiềm năng là mức sản lượng tại tỷ lệ thất nghiệp tự nhiên.",
+          "id": 1790955878253,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cao nhất của một Quốc gia đạt được"
+            },
+            {
+              "key": "B",
+              "text": "Tương ứng với tỷ lệ thất nghiệp tự nhiên"
+            },
+            {
+              "key": "C",
+              "text": "Không gây ra lạm phát"
+            },
+            {
+              "key": "D",
+              "text": "a và c"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả các điều kể trên"
+            }
+          ],
+          "question": "Sản lượng tiềm năng là mức sản lượng:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "GNP thực tính theo giá cố định, không phải giá hiện hành.",
+          "id": 1790955880042,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tính theo giá cố định"
+            },
+            {
+              "key": "B",
+              "text": "Chỉ đo lường sản phẩm cuối cùng"
+            },
+            {
+              "key": "C",
+              "text": "Tính cho một thời kỳ nhất định"
+            },
+            {
+              "key": "D",
+              "text": "Không cho phép tính giá trị hàng hóa trung gian"
+            },
+            {
+              "key": "E",
+              "text": "Tính theo giá hiện hành"
+            }
+          ],
+          "question": "Yếu tố nào sau đây không phải là tính chất của GNP thực:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Số nhân phản ánh sự thay đổi của sản lượng khi tổng cầu tự định thay đổi.",
+          "id": 1790955880982,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mức thay đổi trong đầu tư khi sản lượng thay đổi."
+            },
+            {
+              "key": "B",
+              "text": "Mức thay đổi trong tổng cầu khi sản lượng thay đổi 1 đơn vị."
+            },
+            {
+              "key": "C",
+              "text": "Mức thay đổi trong tổng chi tiêu khi sản lượng thay đổi 1 đơn vị."
+            },
+            {
+              "key": "D",
+              "text": "Mức thay đổi trong sản lượng khi tổng cầu tự định thay đổi 1 đơn vị"
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng."
+            }
+          ],
+          "question": "Số nhân của tổng cầu phản ánh:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "GDP chỉ tính hàng hóa mới sản xuất trong kỳ.",
+          "id": 1790955881894,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xe máy do hãng Honda sản xuất tại Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Bàn ghế do công ty Xuân Hòa sản xuất"
+            },
+            {
+              "key": "C",
+              "text": "Giá trị chiếc máy khâu cũ mà một hộ gia đình bán đi"
+            },
+            {
+              "key": "D",
+              "text": "Ngôi nhà mới xây dựng"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả"
+            }
+          ],
+          "question": "Khoản nào sau đây không được tính vào GDP của Việt Nam:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Nhập khẩu tăng làm giảm tổng cầu, dịch chuyển IS sang trái.",
+          "id": 1790955883090,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dịch chuyển đường LM sang phải"
+            },
+            {
+              "key": "B",
+              "text": "Dịch chuyển đường LM sang trái"
+            },
+            {
+              "key": "C",
+              "text": "Dịch chuyển đường IS sang trái"
+            },
+            {
+              "key": "D",
+              "text": "Dịch chuyển đường IS sang phải"
+            },
+            {
+              "key": "E",
+              "text": "Không ảnh hưởng đến đường IS"
+            }
+          ],
+          "question": "Một sự gia tăng trong nhập khẩu tự định sẽ:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "CSTK mở làm tăng thu nhập, tăng cầu tiền, tăng lãi suất.",
+          "id": 1790955884031,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm và lãi suất giảm"
+            },
+            {
+              "key": "B",
+              "text": "Tăng và lãi suất tăng"
+            },
+            {
+              "key": "C",
+              "text": "Tăng và lãi suất giảm"
+            },
+            {
+              "key": "D",
+              "text": "Giảm và lãi suất tăng"
+            },
+            {
+              "key": "E",
+              "text": "Không đổi"
+            }
+          ],
+          "question": "Tác động của CSTK mở sẽ dẫn đến cầu tiền tệ:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "AD phản ánh quan hệ giữa mức giá chung và GDP thực tế.",
+          "id": 1790955885093,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mức giá chung và GDP thực tế."
+            },
+            {
+              "key": "B",
+              "text": "Mức giá chung và GDP danh nghĩa."
+            },
+            {
+              "key": "C",
+              "text": "Tổng chi tiêu và GDP danh nghĩa"
+            },
+            {
+              "key": "D",
+              "text": "Tổng chi tiêu và GDP thực tế"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả."
+            }
+          ],
+          "question": "Trong mô hình AD - AS, đường tổng cầu phản ánh quan hệ giữa :"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Tăng trưởng kép làm khoảng cách giữa hai nước tăng dần theo thời gian.",
+          "id": 1790955886156,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mức sống của nước có tốc độ tăng trưởng 4% sẽ tăng dần khoảng cách với mức sống của nước tăng trưởng chậm hơn do tăng trưởng kép"
+            },
+            {
+              "key": "B",
+              "text": "GDP bình quân của một nước sẽ luôn lớn hơn GDP bình quân của nước còn lại 2%"
+            },
+            {
+              "key": "C",
+              "text": "Mức sống của hai nước sẽ gặp nhau do quy luật lợi suất giảm dần đối với tư bản"
+            },
+            {
+              "key": "D",
+              "text": "Năm sau, kinh tế của nước tăng trưởng 4% sẽ lớn gấp hai lần nước tăng trưởng 2%."
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều đúng"
+            }
+          ],
+          "question": "Nếu hai nước cùng khởi đầu với mức GDP bình quân đầu người như nhau, và một nước tăng trưởng với tốc độ 2%/năm còn một nước tăng trưởng 4%/năm"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Cả hai chính sách đều làm giảm tổng cầu, dịch chuyển AD sang trái.",
+          "id": 1790955886431,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đường AS dịch chuyển sang trái"
+            },
+            {
+              "key": "B",
+              "text": "Đường AS dịch chuyển sang phải"
+            },
+            {
+              "key": "C",
+              "text": "Đường AD dịch chuyển sang phải"
+            },
+            {
+              "key": "D",
+              "text": "Đường AD dịch chuyển sang trái"
+            },
+            {
+              "key": "E",
+              "text": "Đường AD dịch chuyển sang phải và đường AS dịch chuyển sang phải"
+            }
+          ],
+          "question": "Thực hiện chính sách tài khóa chặt và tiền tệ chặt sẽ làm cho :"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "GNP đo lường thu nhập của công dân một nước bất kể ở đâu.",
+          "id": 1790955887986,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Những người lao động và các nhà máy đặt trên lãnh thổ Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Những người lao động và các nhà máy đặt ở nước ngoài"
+            },
+            {
+              "key": "C",
+              "text": "Công dân Việt Nam và các nhà máy mà họ sở hữu bất kể chúng được đặt ở đâu trên thế giới"
+            },
+            {
+              "key": "D",
+              "text": "Riêng khu vực dịch vụ trong nước"
+            },
+            {
+              "key": "E",
+              "text": "Riêng khu vực chế tạo trong nước"
+            }
+          ],
+          "question": "GNP đo lường giá trị sản xuất và thu nhập được tạo ra bởi:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Thu nhập tăng làm tiêu dùng tăng.",
+          "id": 1790955888283,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm"
+            },
+            {
+              "key": "B",
+              "text": "Tăng"
+            },
+            {
+              "key": "C",
+              "text": "Không thay đổi"
+            },
+            {
+              "key": "D",
+              "text": "Tăng hay giảm phụ thuộc vào sự thay đổi của giá cả hàng hóa."
+            },
+            {
+              "key": "E",
+              "text": "Tăng hay giảm phụ thuộc vào sự thay đổi của các yếu tố khác ngoài giá cả hàng hóa."
+            }
+          ],
+          "question": "Khi thu nhập tăng, tổng chi tiêu:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790955889533,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "AS nằm ngang"
+            },
+            {
+              "key": "B",
+              "text": "AS dốc lên"
+            },
+            {
+              "key": "C",
+              "text": "AS nằm ngang khi Y < Y và thẳng đứng khi Y = Y"
+            },
+            {
+              "key": "D",
+              "text": "Thẳng đứng tại mức sản lượng tiềm năng"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Các nhà kinh tế học cổ điển cho rằng đường tổng cung AS:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Tiền bao gồm tất cả các phương tiện thanh toán được chấp nhận.",
+          "id": 1790955890511,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một loại tài sản có thể được sử dụng để thực hiện các giao dịch"
+            },
+            {
+              "key": "B",
+              "text": "Những đồng tiền xu và tiền giấy trong tay dân chúng"
+            },
+            {
+              "key": "C",
+              "text": "Tiền gửi có thể viết séc tại các Ngân hàng thương mại"
+            },
+            {
+              "key": "D",
+              "text": "Cái mà nhà nước gọi là tiền"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả"
+            }
+          ],
+          "question": "Tiền là:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Tỷ lệ tiết kiệm và đầu tư cao là động lực tăng trưởng chính.",
+          "id": 1790955891243,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Họ có nguồn tài nguyên dồi dào"
+            },
+            {
+              "key": "B",
+              "text": "Họ đã giành một tỷ lệ rất lớn của GDP cho tiết kiệm và đầu tư"
+            },
+            {
+              "key": "C",
+              "text": "Họ là các nước đế quốc và đã vơ vét được của cải từ chiến thắng trước đây trong chiến tranh"
+            },
+            {
+              "key": "D",
+              "text": "Họ đã luôn luôn giàu có và sẽ tiếp tục giàu có, điều này vẫn được biết đến như là “nước chảy chỗ trũng”"
+            },
+            {
+              "key": "E",
+              "text": "Không có câu trả lời nào đúng"
+            }
+          ],
+          "question": "Nhiều nước Đông Á đang tăng trưởng rất nhanh vì:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Trong nền kinh tế đóng, đầu tư bằng tiết kiệm (I = S).",
+          "id": 1790955892499,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi tiêu cho tiêu dùng bằng tiết kiệm"
+            },
+            {
+              "key": "B",
+              "text": "Chi tiêu cho tiêu dùng bằng chi tiêu cho đầu tư"
+            },
+            {
+              "key": "C",
+              "text": "Cán cân ngân sách nhà nước bằng với lượng thuế mà Chính phủ thu được"
+            },
+            {
+              "key": "D",
+              "text": "Cán cân ngân sách nhà nước nhỏ hơn lượng thuế mà Chính phủ thu được"
+            },
+            {
+              "key": "E",
+              "text": "Chi tiêu cho đầu tư bằng tiết kiệm của nền kinh tế"
+            }
+          ],
+          "question": "Trong một nền kinh tế đóng:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Khoảng cách dịch chuyển IS = Δ(I+G+X) * số nhân.",
+          "id": 1790955893756,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mức thay đổi của I, G hoặc X nhân với số nhân"
+            },
+            {
+              "key": "B",
+              "text": "Mức thay đổi của I, G, X và tổng cầu"
+            },
+            {
+              "key": "C",
+              "text": "Mức thay đổi của I, G, X"
+            },
+            {
+              "key": "D",
+              "text": "Mức thay đổi của I + G + X nhân với số nhân"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Khoảng cách dịch chuyển của đường IS được xác định bằng:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Toàn dụng lao động vẫn tồn tại thất nghiệp tự nhiên và lạm phát.",
+          "id": 1790955894784,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không còn lạm phát"
+            },
+            {
+              "key": "B",
+              "text": "Không còn thất nghiệp"
+            },
+            {
+              "key": "C",
+              "text": "Vẫn còn tồn tại một tỷ lệ lạm phát và thất nghiệp"
+            },
+            {
+              "key": "D",
+              "text": "Không còn lạm phát nhưng vẫn tồn tại một tỷ lệ thất nghiệp"
+            },
+            {
+              "key": "E",
+              "text": "Các lựa chọn đều sai"
+            }
+          ],
+          "question": "Khi nền kinh tế đạt được mức toàn dụng, điều đó có nghĩa là:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "GDP danh nghĩa tính theo giá hiện hành, không phải giá cố định.",
+          "id": 1790955895741,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tính theo giá thị trường"
+            },
+            {
+              "key": "B",
+              "text": "Tính theo giá cố định"
+            },
+            {
+              "key": "C",
+              "text": "Tính theo giá thị trường"
+            },
+            {
+              "key": "D",
+              "text": "Đo lường cho toàn bộ sản phẩm cuối cùng"
+            },
+            {
+              "key": "E",
+              "text": "Thường tính cho một năm"
+            },
+            {
+              "key": "F",
+              "text": "Không tính giá trị của các sản phẩm trung gian"
+            }
+          ],
+          "question": "Yếu tố nào sau đâu không phải là tính chất của GDP danh nghĩa:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Thu nhập khả dụng là chỉ tiêu nhỏ nhất.",
+          "id": 1790955896699,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng sản phẩm quốc dân"
+            },
+            {
+              "key": "B",
+              "text": "Sản phẩm quốc dân ròng"
+            },
+            {
+              "key": "C",
+              "text": "Thu nhập quốc dân"
+            },
+            {
+              "key": "D",
+              "text": "Thu nhập khả dụng"
+            },
+            {
+              "key": "E",
+              "text": "Thu nhập cá nhân"
+            }
+          ],
+          "question": "Chỉ tiêu nào nhỏ nhất trong những chỉ tiêu đo lường sản lượng Quốc gia:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "GDP và GNP khác nhau ở thu nhập tài sản ròng từ nước ngoài.",
+          "id": 1790955897807,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng sản phẩm quốc dân bằng tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "B",
+              "text": "Tổng sản phẩm quốc dân nhỏ hơn tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "C",
+              "text": "Tổng sản phẩm quốc dân và tổng sản phẩm quốc nội khác nhau ở phần thu nhập tài sản ròng ở nước ngoài"
+            },
+            {
+              "key": "D",
+              "text": "Tổng sản phẩm quốc dân lớn hơn tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Trong nền kinh tế mở:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "MS = MD => 400 = 200 - 100i + 20Y => 100i = 20Y - 200 => i = 0.2Y - 2.",
+          "id": 1790955899123,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "i = 6 + 0,2Y"
+            },
+            {
+              "key": "B",
+              "text": "i = -2 + 0,2Y"
+            },
+            {
+              "key": "C",
+              "text": "i = -2 - 0,2Y"
+            },
+            {
+              "key": "D",
+              "text": "i = 2 + 0,2Y"
+            },
+            {
+              "key": "E",
+              "text": "i = 2 - 0,2Y"
+            }
+          ],
+          "question": "Giả sử cho hàm cầu tiền là MD = 200-100i +20Y, hàm MS = 400. Vậy phương trình đường LM:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Tất cả các công cụ trên đều làm giảm cung tiền.",
+          "id": 1790955899183,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng dự trữ bắt buộc"
+            },
+            {
+              "key": "B",
+              "text": "Bán trái phiếu Chính phủ trên thị trường mở"
+            },
+            {
+              "key": "C",
+              "text": "Tăng lãi suất chiết khấu"
+            },
+            {
+              "key": "D",
+              "text": "a và c"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều đúng"
+            }
+          ],
+          "question": "Để giảm cung ứng tiền tệ, NHTW sử dụng các công cụ nào sau đây:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Thay đổi cung tiền làm đường LM dịch chuyển, không phải IS.",
+          "id": 1790955900995,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đường IS di chuyển, đường LM dịch chuyển"
+            },
+            {
+              "key": "B",
+              "text": "Đường IS dịch chuyển, đường LM di chuyển"
+            },
+            {
+              "key": "C",
+              "text": "Đường IS dịch chuyển và đường LM dịch chuyển"
+            },
+            {
+              "key": "D",
+              "text": "Đường IS di chuyển và đường LM di chuyển"
+            },
+            {
+              "key": "E",
+              "text": "Đường IS và LM không đổi."
+            }
+          ],
+          "question": "Nếu NHTW gia tăng cung ứng tiền tệ thì:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Giảm thuế làm tăng thu nhập khả dụng, tăng tiêu dùng, tăng tổng cầu.",
+          "id": 1790955901627,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng tổng cầu và lãi suất giảm"
+            },
+            {
+              "key": "B",
+              "text": "Giảm tổng cầu và lãi suất tăng"
+            },
+            {
+              "key": "C",
+              "text": "Giảm tổng cầu vì thu nhập khả dụng tăng"
+            },
+            {
+              "key": "D",
+              "text": "Tăng tổng cầu do thu nhập khả dụng tăng"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Chính sách giảm thuế của chính phủ sẽ làm:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Tăng cung tiền làm đường LM dịch chuyển sang phải.",
+          "id": 1790955902733,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đường IS dịch chuyển sang phải."
+            },
+            {
+              "key": "B",
+              "text": "Đường IS dịch chuyển sang trái."
+            },
+            {
+              "key": "C",
+              "text": "Đường LM dịch chuyển sang trái."
+            },
+            {
+              "key": "D",
+              "text": "Chỉ có sự di chuyển dọc trên đường LM."
+            },
+            {
+              "key": "E",
+              "text": "Đường LM dịch chuyển sang phải."
+            }
+          ],
+          "question": "Nếu ngân hàng trung ương lµm cho lượng cung tiền gia tăng:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Tăng thuế làm giảm thu nhập khả dụng, giảm tiêu dùng, dịch chuyển IS sang trái.",
+          "id": 1790955904077,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dẫn đến đường IS dịch chuyển sang trái và đường LM dịch chuyển sang trái"
+            },
+            {
+              "key": "B",
+              "text": "Dẫn đến đường IS dịch chuyển sang phải."
+            },
+            {
+              "key": "C",
+              "text": "Dẫn đến đường IS dịch chuyển sang trái."
+            },
+            {
+              "key": "D",
+              "text": "Không ảnh hưởng đến đường IS."
+            },
+            {
+              "key": "E",
+              "text": "Có sự di chuyển dọc đường IS."
+            }
+          ],
+          "question": "Chính sách gia tăng thuế của chính phủ sẽ:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "GNP thực tính theo giá cố định, không phải giá hiện hành.",
+          "id": 1790955904397,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tính theo giá cố định"
+            },
+            {
+              "key": "B",
+              "text": "Chỉ đo lường sản phẩm cuối cùng"
+            },
+            {
+              "key": "C",
+              "text": "Tính theo giá hiện hành"
+            },
+            {
+              "key": "D",
+              "text": "Tính cho một thời kỳ nhất định"
+            },
+            {
+              "key": "E",
+              "text": "Không cho phép tính giá trị hàng hóa trung gian"
+            }
+          ],
+          "question": "Yếu tố nào sau đây không phải là tính chất của GNP thực:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Trong nền kinh tế giản đơn và đóng, GDP = GNP.",
+          "id": 1790955905796,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng sản phẩm quốc dân nhỏ hơn tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "B",
+              "text": "Tổng sản phẩm quốc dân lớn hơn tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "C",
+              "text": "Tổng sản phẩm quốc dân và tổng sản phẩm quốc nội không có quan hệ gì với nhau."
+            },
+            {
+              "key": "D",
+              "text": "Tổng sản phẩm quốc dân bằng tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "E",
+              "text": "Sự thay đổi của tiêu dùng chia cho tiết kiệm"
+            }
+          ],
+          "question": "Trong nền kinh tế giản đơn và nền kinh tế đóng:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Điểm vừa đủ là nơi tiêu dùng bằng thu nhập khả dụng (tiết kiệm bằng 0).",
+          "id": 1790955906970,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiêu dùng của các hộ gia đình bằng đầu tư"
+            },
+            {
+              "key": "B",
+              "text": "Tiết kiệm của các hộ gia đình bằng đầu tư"
+            },
+            {
+              "key": "C",
+              "text": "Tiêu dùng của các hộ gia đình bằng tiết kiệm"
+            },
+            {
+              "key": "D",
+              "text": "Tiêu dùng bằng với thu nhập khả dụng"
+            },
+            {
+              "key": "E",
+              "text": "Tiêu dùng của các hộ gia đình lớn hơn tiết kiệm"
+            }
+          ],
+          "question": "“Điểm vừa đủ” trên đường tiêu dùng:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "M1 bao gồm tiền mặt và tiền gửi không kỳ hạn.",
+          "id": 1790955907572,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền mặt, tiền gửi không kỳ hạn, tiền gửi tiết kiệm, quỹ hỗ trợ của thị trường tiền tệ và các khoản tiền gửi có kỳ hạn lượng nhỏ"
+            },
+            {
+              "key": "B",
+              "text": "Tiền mặt, tài khoản tiết kiệm và trái phiếu Chính phủ"
+            },
+            {
+              "key": "C",
+              "text": "Tiền mặt, tiền gửi không kỳ hạn và các tài khoản viết séc khác"
+            },
+            {
+              "key": "D",
+              "text": "Tiền mặt, vàng, ngoại tệ"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Khối lượng tiền M1 bao gồm:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Cầu tiền giao dịch và dự phòng phụ thuộc chủ yếu vào thu nhập.",
+          "id": 1790955908459,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giá cả của hàng hóa"
+            },
+            {
+              "key": "B",
+              "text": "Tốc độ lưu thông tiền tệ nhanh"
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất"
+            },
+            {
+              "key": "D",
+              "text": "Thu nhập"
+            },
+            {
+              "key": "E",
+              "text": "Không phải những điều kể trên"
+            }
+          ],
+          "question": "Yếu tố nào có thể ảnh hưởng đến cầu tiền giao dịch và dự phòng:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Số nhân tiền tỷ lệ nghịch với tỷ lệ dự trữ và tỷ lệ tiền mặt.",
+          "id": 1790955909436,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tỷ lệ nghịch với tỷ lệ tiền mặt so với tiền gửi có thể viết séc"
+            },
+            {
+              "key": "B",
+              "text": "Tỷ lệ nghịch với tỷ lệ dự trữ quá mức"
+            },
+            {
+              "key": "C",
+              "text": "Tỷ lệ nghịch với tỷ lệ dự trữ bắt buộc"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả đều sai"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều đúng"
+            }
+          ],
+          "question": "Số nhân tiền có mối quan hệ:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "CSTK mở làm IS dịch phải, tăng lãi suất, giảm đầu tư (lấn át).",
+          "id": 1790955910445,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đường IS dịch chuyển sang phải."
+            },
+            {
+              "key": "B",
+              "text": "Lãi suất tăng, đầu tư giảm."
+            },
+            {
+              "key": "C",
+              "text": "Sản lượng tăng và lãi suất giảm."
+            },
+            {
+              "key": "D",
+              "text": "Đường IS dịch chuyển sang trái và lãi suất giamr, đầu tư tăng."
+            },
+            {
+              "key": "E",
+              "text": "Đường IS dịch chuyển sang phải và lãi suất tăng, đầu tư giảm."
+            }
+          ],
+          "question": "Trong mô hình IS-LM, chính sách  tài chính mở rộng dẫn đến"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Độ dốc IS lớn làm chính sách tài khóa ít tác động đến sản lượng hơn.",
+          "id": 1790955911643,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đường IS có độ dốc càng nhỏ thì chính sách tài khóa càng tác động mạnh đến sản lượng."
+            },
+            {
+              "key": "B",
+              "text": "Đường LM có độ dốc càng nhỏ thì chính sách tài khóa càng tác động mạnh đến sản lượng."
+            },
+            {
+              "key": "C",
+              "text": "Đường IS có độ dốc càng lớn thì chính sách tài khóa càng tác động mạnh đến sản lượng."
+            },
+            {
+              "key": "D",
+              "text": "Đường LM có độ dốc càng nhỏ thì chính sách tiền tệ càng tác động mạnh đến sản lượng."
+            },
+            {
+              "key": "E",
+              "text": "Đường IS có độ dốc càng nhỏ thì chính sách tiền tệ càng tác động mạnh đến sản lượng."
+            }
+          ],
+          "question": "Câu nào dưới đây không đúng ?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "MS thực = 1200/2 = 600. 600 = 1000 - 100i => 100i = 400 => i = 4%.",
+          "id": 1790955912552,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "MS = 600 và i = 5%"
+            },
+            {
+              "key": "B",
+              "text": "MS = 600 và i = 4%"
+            },
+            {
+              "key": "C",
+              "text": "MS = 600 và i = 10%"
+            },
+            {
+              "key": "D",
+              "text": "MS= 60 và i = 15%"
+            },
+            {
+              "key": "E",
+              "text": "MS= 60 và i = 10%"
+            }
+          ],
+          "question": "Giả sử hàm cầu tiền thực tế có dạng: MD= 1000 - 100i. Trong đó i là lãi suất tính bằng phần trăm. Cung tiền danh nghĩa là 1200, mức giá là 2. Cung tiền thực tế và lãi suất cân bằng là:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Chi tiêu chính phủ cho hàng hóa và dịch vụ cuối cùng được tính vào GDP.",
+          "id": 1790955913617,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mua vũ khí quân sự"
+            },
+            {
+              "key": "B",
+              "text": "Mua vũ khí quân sự, làm đường và cung cấp dịch vụ y tế, giáo dục"
+            },
+            {
+              "key": "C",
+              "text": "Làm đường và cung cấp dịch vụ y tế, giáo dục"
+            },
+            {
+              "key": "D",
+              "text": "Trợ cấp xã hội cho người cao tuổi"
+            },
+            {
+              "key": "E",
+              "text": "Trợ cấp thất nghiệp"
+            }
+          ],
+          "question": "Khoản nào trong các khoản chi tiêu sau của chính phủ được coi là một phần của GDP?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Tăng cung tiền làm tăng tổng cầu (AD dịch phải).",
+          "id": 1790955914360,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dịch chuyển sang trái"
+            },
+            {
+              "key": "B",
+              "text": "Dịch chuyển sang phải"
+            },
+            {
+              "key": "C",
+              "text": "Di chuyển lên trên"
+            },
+            {
+              "key": "D",
+              "text": "Di chuyển xuống dưới"
+            },
+            {
+              "key": "E",
+              "text": "Không đổi"
+            }
+          ],
+          "question": "Sự gia tăng cung ứng tiền tệ khi mọi yếu tố khác không đổi, thì đường AD sẽ:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "CSTK mở làm tăng Y, CSTT chặt làm giảm Y, kết quả Y không chắc chắn.",
+          "id": 1790955915793,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Y chắc chắn tăng"
+            },
+            {
+              "key": "B",
+              "text": "Lãi suất và thu nhập đều tăng"
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất chắc chắn tăng"
+            },
+            {
+              "key": "D",
+              "text": "Lãi suất và thu nhập đều giảm"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Trong mô hình IS - LM, nếu Chính phủ đồng thời áp dụng CSTK mở và CSTT chặt, thì:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Thu nhập giảm làm cầu tiền giảm, lãi suất cân bằng giảm.",
+          "id": 1790955917044,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mức cầu tiền tệ tăng lên"
+            },
+            {
+              "key": "B",
+              "text": "Mức cầu tiền tệ giảm xuống"
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất cân bằng giảm"
+            },
+            {
+              "key": "D",
+              "text": "Lãi suất cân bằng tăng lên"
+            },
+            {
+              "key": "E",
+              "text": "Lãi suất cân bằng không thay đổi"
+            }
+          ],
+          "question": "Khi thu nhập giảm xuống trong điều kiện lượng cung tiền không thay đổi, thì:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "GDP > GNP nghĩa là thu nhập của người nước ngoài tại VN > thu nhập của người VN ở nước ngoài.",
+          "id": 1790955917916,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giá trị sản xuất của người nước ngoài tạo ra ở Việt Nam nhiều hơn so với giá trị sản xuất mà người Việt Nam tạo ra ở nước ngoài"
+            },
+            {
+              "key": "B",
+              "text": "Giá trị sản xuất mà người Việt Nam tạo ra ở nước ngoài nhiều hơn so với giá trị sản xuất mà người nước ngoài tạo ra ở Việt Nam"
+            },
+            {
+              "key": "C",
+              "text": "GDP thực tế lớn hơn GDP danh nghĩa"
+            },
+            {
+              "key": "D",
+              "text": "GNP thực tế lớn hơn GNP danh nghĩa"
+            },
+            {
+              "key": "E",
+              "text": "Không thể kết luận về mối quan hệ giữa GDP và GNP"
+            }
+          ],
+          "question": "Nếu ở Việt Nam, GDP lớn hơn GNP thì:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "IS thẳng đứng nghĩa là đầu tư không phụ thuộc lãi suất, CSTT không tác động đến Y.",
+          "id": 1790955918827,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chính sách tiền tệ không tác động đến sản lượng."
+            },
+            {
+              "key": "B",
+              "text": "Chính sách tiền tệ tác động mạnh đến sản lượng."
+            },
+            {
+              "key": "C",
+              "text": "Chính sách tiền tệ không tác động đến sản lượng và chính sách tài chính tác động mạnh đến sản lượng."
+            },
+            {
+              "key": "D",
+              "text": "Chính sách tài chính tác động mạnh đến sản lượng."
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Nếu đường IS có dạng thẳng đứng thì"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Giảm tỷ lệ dự trữ bắt buộc làm tăng số nhân tiền.",
+          "id": 1790955919425,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng số nhân tiền tệ"
+            },
+            {
+              "key": "B",
+              "text": "Giảm số nhân tiền tệ"
+            },
+            {
+              "key": "C",
+              "text": "Tăng dự trữ bắt buộc"
+            },
+            {
+              "key": "D",
+              "text": "Giảm dự trữ bắt buộc"
+            },
+            {
+              "key": "E",
+              "text": "Không phải những điều kể trên"
+            }
+          ],
+          "question": "Biện pháp cắt giảm tỷ lệ dự trữ bắt buộc sẽ:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "IS: Y = C+I+G = 200+0.75(Y-100) + 225-25i + 75 => Y = 1700-100i. LM: Y-100i = 600 => Y = 600+100i.",
+          "id": 1790955920315,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Y = 600 + 100i  và Y = 1700 – 100i"
+            },
+            {
+              "key": "B",
+              "text": "Y = 1700 – 100i và Y = 600 + 100i"
+            },
+            {
+              "key": "C",
+              "text": "Y = 1700 + 100i và Y = 600 - 100i"
+            },
+            {
+              "key": "D",
+              "text": "Y = 1700 + 100i và Y = 600 + 100i"
+            },
+            {
+              "key": "E",
+              "text": "Không có câu nào đúng"
+            }
+          ],
+          "question": "Thị trường hàng hóa và tiền tệ của một nền kinh tế đóng được mô tả như sau: Tiêu dùng C = 200 + 0,75(Y – T) Đầu tư: I = 225 – 25i Chi tiêu của chính phủ: G = 75 Thuế ròng: T = 100 Cung tiền thực tế MS = 600 Cầu tiền thực tế MD = Y – 100i Phương trình biểu diễn đường IS và LM lần lượt là:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Khi Y < Yp, cần kích cầu bằng CSTK hoặc CSTT mở rộng.",
+          "id": 1790955921977,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chính sách tài chính mở rộng."
+            },
+            {
+              "key": "B",
+              "text": "Chính sách tiền tệ mở rộng."
+            },
+            {
+              "key": "C",
+              "text": "Chính sách tài chính mở rộng hoặc chính sách tiền tệ mở rộng hoặc kết hợp cả chính sách tài chính mở rộng và chính sách tiền tệ mở rộng."
+            },
+            {
+              "key": "D",
+              "text": "Kết hợp chính sách tài chính mở rộng và chính sách tiền tệ mở rộng."
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Trong mô hình IS -LM, khi sản lượng thấp hơn mức tiềm năng, chính phủ nên áp dụng"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Tăng thuế làm giảm thu nhập khả dụng, giảm tiêu dùng, giảm đầu tư, giảm lãi suất.",
+          "id": 1790955922434,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm tiêu dùng, tăng đầu tư và giảm lãi suất thực tế"
+            },
+            {
+              "key": "B",
+              "text": "Tăng tiêu dùng, giảm đầu tư và tăng lãi suất thực tế"
+            },
+            {
+              "key": "C",
+              "text": "Tăng tiêu dùng, tăng đầu tư và tăng lãi suất thực tế"
+            },
+            {
+              "key": "D",
+              "text": "Giảm tiêu dùng, giảm đầu tư và giảm lãi suất thực tế"
+            },
+            {
+              "key": "E",
+              "text": "Cả tiêu dùng, đầu tư và lãi suất thực tế đều tăng."
+            }
+          ],
+          "question": "Khi chính phủ tăng thuế, điều gì sẽ xảy ra?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "IS: Y = 1700-100i. LM: Y-100i = 1000/2 = 500 => Y = 500+100i. 1700-100i = 500+100i => 200i = 1200 => i=6%, Y=1100.",
+          "id": 1790955924085,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Y = 1100 và i = 6%"
+            },
+            {
+              "key": "B",
+              "text": "Y = 1000 và i = 6%"
+            },
+            {
+              "key": "C",
+              "text": "Y = 100 và i = 16%"
+            },
+            {
+              "key": "D",
+              "text": "Y = 100 và i = 5%"
+            },
+            {
+              "key": "E",
+              "text": "Y = 100 và i = 10 %"
+            }
+          ],
+          "question": "Thị trường hàng hóa và tiền tệ của một nền kinh tế đóng được mô tả như sau: Tiêu dùng C = 200 + 0,75(Y – T) Đầu tư: I = 225 – 25i Chi tiêu của chính phủ: G = 75 Thuế ròng: T = 100 Cung tiền danh nghĩa MS = 1000 Cầu tiền thực tế MD = Y – 100i Mức giá P = 2 Mức thu nhập và lãi suất cân bằng là:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "M1 bao gồm tiền mặt và tiền gửi không kỳ hạn.",
+          "id": 1790955924877,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền mặt, tiền gửi không kỳ hạn, tiền gửi tiết kiệm, quỹ hỗ trợ của thị trường tiền tệ và các khoản tiền gửi có kỳ hạn lượng nhỏ"
+            },
+            {
+              "key": "B",
+              "text": "Tiền mặt, tài khoản tiết kiệm và trái phiếu Chính phủ"
+            },
+            {
+              "key": "C",
+              "text": "Tiền mặt, tiền gửi không kỳ hạn và các tài khoản viết séc khác"
+            },
+            {
+              "key": "D",
+              "text": "Tiền mặt, vàng, ngoại tệ"
+            },
+            {
+              "key": "E",
+              "text": "Không có câu nào đúng"
+            }
+          ],
+          "question": "Khối lượng tiền M1 bao gồm:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Số nhân tiền tỷ lệ nghịch với tỷ lệ dự trữ và tỷ lệ tiền mặt.",
+          "id": 1790955926185,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tỷ lệ nghịch với tỷ lệ tiền mặt so với tiền gửi có thể viết séc"
+            },
+            {
+              "key": "B",
+              "text": "Tỷ lệ nghịch với tỷ lệ dự trữ quá mức"
+            },
+            {
+              "key": "C",
+              "text": "Tỷ lệ nghịch với tỷ lệ dự trữ bắt buộc"
+            },
+            {
+              "key": "D",
+              "text": "a và c"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều đúng"
+            }
+          ],
+          "question": "Số nhân tiền có mối quan hệ:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "GNP thực tính theo giá cố định, không phải giá hiện hành.",
+          "id": 1790955926764,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ đo lường sản phẩm cuối cùng"
+            },
+            {
+              "key": "B",
+              "text": "Tính cho một thời kỳ nhất định"
+            },
+            {
+              "key": "C",
+              "text": "Không cho phép tính giá trị hàng hóa trung gian"
+            },
+            {
+              "key": "D",
+              "text": "Tính theo giá cố định"
+            },
+            {
+              "key": "E",
+              "text": "Tính theo giá hiện hành"
+            }
+          ],
+          "question": "Yếu tố nào sau đây không phải là tính chất của GNP thực:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Trong nền kinh tế đóng, đầu tư bằng tiết kiệm (I = S).",
+          "id": 1790955928176,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi tiêu cho tiêu dùng bằng tiết kiệm"
+            },
+            {
+              "key": "B",
+              "text": "Chi tiêu cho đầu tư bằng tiết kiệm của nền kinh tế"
+            },
+            {
+              "key": "C",
+              "text": "Chi tiêu cho tiêu dùng bằng chi tiêu cho đầu tư"
+            },
+            {
+              "key": "D",
+              "text": "Cán cân ngân sách nhà nước bằng với lượng thuế mà Chính phủ thu được"
+            },
+            {
+              "key": "E",
+              "text": "Cán cân ngân sách nhà nước lớn hơn lượng thuế mà Chính phủ thu được"
+            }
+          ],
+          "question": "Trong một nền kinh tế đóng:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "AD phản ánh quan hệ giữa mức giá và sản lượng tại một mức giá cho trước.",
+          "id": 1790955928543,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tại một mức giá cho trước"
+            },
+            {
+              "key": "B",
+              "text": "Tại một mức sản lượng nhất định"
+            },
+            {
+              "key": "C",
+              "text": "Tại một tỷ lệ thất nghiệp nhất định"
+            },
+            {
+              "key": "D",
+              "text": "Khi giá cả thay đổi để cân bằng thị trường hàng hóa"
+            },
+            {
+              "key": "E",
+              "text": "Tại một mức tiêu dùng nhất định"
+            }
+          ],
+          "question": "Đường tổng cầu phản ánh mối quan hệ giữa tổng chi tiêu của nền kinh tế và thu nhập quốc dân:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Tất cả các yếu tố trên đều gây áp lực lạm phát.",
+          "id": 1790955930080,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cán cân thanh toán thặng dư trong một thời gian dài"
+            },
+            {
+              "key": "B",
+              "text": "Giá của các nguyên liệu nhập khẩu chủ yếu gia tăng nhiều"
+            },
+            {
+              "key": "C",
+              "text": "Một phần lớn các thâm hụt ngân sách được tài trợ bởi ngân hàng trung ương"
+            },
+            {
+              "key": "D",
+              "text": "a và b"
+            },
+            {
+              "key": "E",
+              "text": "Các lựa chọn đều đúng."
+            }
+          ],
+          "question": "Những trường hợp nào sau đây có thể tạo ra những áp lực lạm phát"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Lãi suất thấp làm giảm chi phí cơ hội giữ tiền, tăng cầu tiền.",
+          "id": 1790955931157,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lãi suất cao hơn"
+            },
+            {
+              "key": "B",
+              "text": "Lãi suất thấp hơn"
+            },
+            {
+              "key": "C",
+              "text": "Chi phí cơ hội của việc giữ tiền cao hơn"
+            },
+            {
+              "key": "D",
+              "text": "Mức giá thấp hơn"
+            },
+            {
+              "key": "E",
+              "text": "Mức giá cao hơn"
+            }
+          ],
+          "question": "Khi mọi yếu tố khác không đổi, lượng cầu tiền tệ lớn hơn khi:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Tăng thuế làm giảm thu nhập, giảm lãi suất, giảm tiêu dùng, tăng đầu tư (do lãi suất giảm).",
+          "id": 1790955931361,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thu nhập và lãi suất giảm, tiêu dùng và đầu tư tăng."
+            },
+            {
+              "key": "B",
+              "text": "Thu nhập và lãi suất tăng, tiêu dùng giảm và đầu tư tăng."
+            },
+            {
+              "key": "C",
+              "text": "Thu nhập tăng và lãi suất giảm, tiêu dùng giảm và đầu tư tăng."
+            },
+            {
+              "key": "D",
+              "text": "Thu nhập và lãi suất giảm, tiêu dùng giảm và đầu tư tăng."
+            },
+            {
+              "key": "E",
+              "text": "Không có câu nào đúng"
+            }
+          ],
+          "question": "Theo mô hình IS – LM, điều gì sẽ xảy ra đối với thu nhập, lãi suất, tiêu dùng và đầu tư khi chính phủ tăng thuế"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Trợ cấp là khoản thu, không phải chi phí.",
+          "id": 1790955932888,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thu nhập của chủ sở hữu doanh nghiệp"
+            },
+            {
+              "key": "B",
+              "text": "Trợ cấp trong kinh doanh"
+            },
+            {
+              "key": "C",
+              "text": "Tiền lương của người lao động"
+            },
+            {
+              "key": "D",
+              "text": "Tiền thuê đất"
+            },
+            {
+              "key": "E",
+              "text": "Tiền lãi"
+            }
+          ],
+          "question": "Yếu tố nào dưới đây không phải là một yếu tố chi phí:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Tăng lương tối thiểu có thể làm tăng thất nghiệp.",
+          "id": 1790955933636,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm trợ cấp thất nghiệp"
+            },
+            {
+              "key": "B",
+              "text": "Thiết lập các cơ quan việc làm"
+            },
+            {
+              "key": "C",
+              "text": "Thiết lập chương trình đào tạo công nhân"
+            },
+            {
+              "key": "D",
+              "text": "Phê chuẩn luật về quyền lao động"
+            },
+            {
+              "key": "E",
+              "text": "Tăng tiền lương tối thiểu"
+            }
+          ],
+          "question": "Chính sách nào sau đây của chính phủ thất bại đối với việc giảm tỷ lệ thất nghiệp?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Giải hệ phương trình IS-LM với các hàm số đã cho.",
+          "id": 1790955934403,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Y = 97,5 và i = 6%"
+            },
+            {
+              "key": "B",
+              "text": "Y = 97,5 và i = 7%"
+            },
+            {
+              "key": "C",
+              "text": "Y = 97,5 và i = 8%"
+            },
+            {
+              "key": "D",
+              "text": "Y = 9750 và i = 7,25%"
+            },
+            {
+              "key": "E",
+              "text": "Y = 975 và i = 7,25%"
+            }
+          ],
+          "question": "Mức thu nhập và lãi suất cân bằng là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Lạm phát bất ngờ làm giảm giá trị thực của các khoản nợ, có lợi cho người đi vay.",
+          "id": 1790955935734,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Của cải được tái phân phối từ người cho vay sang người đi vay"
+            },
+            {
+              "key": "B",
+              "text": "Của cải được tái phân phối từ người đi vay sang người cho vay"
+            },
+            {
+              "key": "C",
+              "text": "Không có sự tái phân phối nào xảy ra"
+            },
+            {
+              "key": "D",
+              "text": "Lãi suất thực tế không bị ảnh hưởng"
+            },
+            {
+              "key": "E",
+              "text": "Không câu nào đúng"
+            }
+          ],
+          "question": "Nếu lạm phát trong thực tế lớn hơn so với mức mà mọi người kỳ vọng, thì:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Thu nhập giảm làm cầu tiền giảm, lãi suất giảm.",
+          "id": 1790955936336,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mức cầu tiền tệ tăng lên"
+            },
+            {
+              "key": "B",
+              "text": "Mức cầu tiền tệ giảm xuống"
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất cân bằng giảm"
+            },
+            {
+              "key": "D",
+              "text": "Lãi suất cân bằng tăng lên"
+            },
+            {
+              "key": "E",
+              "text": "Lãi suất cân bằng không thay đổi"
+            }
+          ],
+          "question": "Khi thu nhập giảm xuống trong điều kiện lượng cung tiền không thay đổi, thì:"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "Các yếu tố trên làm dịch chuyển AD, không phải di chuyển dọc AD.",
+          "id": 1790955937282,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung tiền thay đổi"
+            },
+            {
+              "key": "B",
+              "text": "Thuế thay đổi"
+            },
+            {
+              "key": "C",
+              "text": "Chi tiêu Chính phủ thay đổi"
+            },
+            {
+              "key": "D",
+              "text": "Đầu tư ròng thay đổi"
+            },
+            {
+              "key": "E",
+              "text": "Không phải các điều kể trên"
+            }
+          ],
+          "question": "Di chuyển của đường tổng cầu do:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Khoảng cách dịch chuyển IS = Δ(I+G+X) * số nhân.",
+          "id": 1790955938898,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mức thay đổi của I, G hoặc X nhân với số nhân"
+            },
+            {
+              "key": "B",
+              "text": "Mức thay đổi của I, G, X"
+            },
+            {
+              "key": "C",
+              "text": "Mức thay đổi của I + G + X"
+            },
+            {
+              "key": "D",
+              "text": "Mức thay đổi của I + G + X nhân với số nhân"
+            },
+            {
+              "key": "E",
+              "text": "Tất cả đều sai"
+            }
+          ],
+          "question": "Khoảng cách dịch chuyển của đường IS được xác định bằng:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "GDP và GNP khác nhau ở thu nhập tài sản ròng từ nước ngoài.",
+          "id": 1790955939595,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng sản phẩm quốc dân bằng tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "B",
+              "text": "Tổng sản phẩm quốc dân nhỏ hơn tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "C",
+              "text": "Tổng sản phẩm quốc dân và tổng sản phẩm quốc nội khác nhau ở phần thu nhập tài sản ròng ở nước ngoài"
+            },
+            {
+              "key": "D",
+              "text": "Tổng sản phẩm quốc dân lớn hơn tổng sản phẩm quốc nội"
+            },
+            {
+              "key": "E",
+              "text": "Không có câu nào đúng."
+            }
+          ],
+          "question": "Trong nền kinh tế mở:"
+        }
+      ],
+      "title": "Đề cương ôn tập Kinh tế học"
+    },
+    {
+      "category": "GDQP - An Ninh",
+      "code": "SUB-309",
+      "durationMinutes": 15,
+      "id": 1790953238400,
+      "questions": [
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953235320,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sự đoàn kết gắn bó, nhất trí Hồng quân với nhân dân lao động."
+            },
+            {
+              "key": "B",
+              "text": "Sự nhất trí quân - dân và các lực lượng tiến bộ trên toàn thế giới."
+            },
+            {
+              "key": "C",
+              "text": "Sự thống nhất giữa quân đội và nhân dân."
+            },
+            {
+              "key": "D",
+              "text": "Sự nhất trí quân - dân và các lực lượng vũ trang."
+            }
+          ],
+          "question": "Quan điểm cơ bản của Chủ nghĩa Mác-Lênin, tư tưởng Hồ Chí Minh về chiến tranh, quân đội và bảo vệ Tổ quốc *Lê-Nin xác định nguyên tắc đoàn kết quân, dân trong xây dựng Hồng quân như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953235792,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là kế tục mục tiêu chính trị bằng vật chất."
+            },
+            {
+              "key": "B",
+              "text": "Là thủ đoạn để đạt được mục tiêu chính trị của một giai cấp."
+            },
+            {
+              "key": "C",
+              "text": "Là kế tục chính trị bằng thủ đoạn bạo lực."
+            },
+            {
+              "key": "D",
+              "text": "Là thủ đoạn chính trị của một giai cấp."
+            }
+          ],
+          "question": "Quan điểm chủ nghĩa Mác-Lê nin về bản chất chiến tranh như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953236425,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để lật đổ chế độ cũ, xây dựng chế độ mới."
+            },
+            {
+              "key": "B",
+              "text": "Để xây dựng chế độ mới."
+            },
+            {
+              "key": "C",
+              "text": "Để giành chính quyền và giữ chính quyền."
+            },
+            {
+              "key": "D",
+              "text": "Để lật đổ chế độ cũ."
+            }
+          ],
+          "question": "Theo tư tưởng Hồ Chí Minh, sử dụng bạo lực cách mạng để làm gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953237864,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là hệ thống thống nhất, quan hệ mật thiết với nhau."
+            },
+            {
+              "key": "B",
+              "text": "Quan hệ đan xen, tạo điều kiện cho nhau, bản chất giai cấp là quyết định."
+            },
+            {
+              "key": "C",
+              "text": "Là một thể thống nhất, quan hệ chặt chẽ trong quá trình xây dựng quân đội nhân dân."
+            },
+            {
+              "key": "D",
+              "text": "Quan hệ mật thiết với nhau, tạo lên sức mạnh và sự trưởng thành."
+            }
+          ],
+          "question": "Theo tư tưởng Hồ Chí Minh, bản chất giai cấp công nhân, tính nhân dân, tính dân tộc của quân đội nhân dân Việt Nam quan hệ với nhau như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953238824,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là biết sử dụng mọi vũ khí trang bị để tiến công địch."
+            },
+            {
+              "key": "B",
+              "text": "Là tiến công kẻ thù trên mọi lĩnh vực"
+            },
+            {
+              "key": "C",
+              "text": "Là tiến công địch liên tục, cả ngày lẫn đêm."
+            },
+            {
+              "key": "D",
+              "text": "Là biết sử dụng mọi điều kiện thuân lợi để tiến công địch"
+            }
+          ],
+          "question": "Chủ tịch Hồ Chí Minh xác định nội dung cơ bản của đánh giặc toàn diện là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953239735,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ Tổ quốc XHCN là tất yếu khách quan, thể hiện ý chí của dân tộc."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ Tổ quốc là tất yếu, là truyền thống của dân tộc Việt Nam."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ Tổ quốc XHCN là tất yếu khách quan, thể hiện ý chí quyết tâm của nhân dân ta."
+            },
+            {
+              "key": "D",
+              "text": "Bảo vệ Tổ quốc XHCN là tất yếu khách quan trong công cuộc xây dựng CNXH."
+            }
+          ],
+          "question": "Một trong những nội dung tư tưởng Hồ Chí Minh về bảo vệ Tổ quốc XHCN là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953240694,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Con người có giác ngộ giữ vai trò quan trọng nhất, chi phối các yếu tố khác."
+            },
+            {
+              "key": "B",
+              "text": "Con người là quan trọng cùng với yếu tố quân sự là quyết định."
+            },
+            {
+              "key": "C",
+              "text": "Con người với trình độ chính trị cao giữ vững vai trò quyết định."
+            },
+            {
+              "key": "D",
+              "text": "Con người có giác ngộ chính trị giữ vai trò quan trọng tạo lên sức mạnh quân đội."
+            }
+          ],
+          "question": "Trong các yếu tố tạo nên sức mạnh của Quân đội nhân dân, Hồ Chí Minh coi yếu tố con người có vị vai trò như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953241827,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ nghĩa thực dân bóc lột, cai trị nhân dân bằng bạo lực."
+            },
+            {
+              "key": "B",
+              "text": "Chế độ thực dân, tự bản thân nó đã là một hành động bạo lực."
+            },
+            {
+              "key": "C",
+              "text": "Làm cách mạng là phải dùng bạo lực cách mạng."
+            },
+            {
+              "key": "D",
+              "text": "Kẻ thù luôn dùng bạo lực để duy trì quyền thống trị."
+            },
+            {
+              "key": "C",
+              "text": "Tư tưởng Hồ Chí Minh về sức mạnh chiến đấu của quân đội nhân dân Việt Nam như thế nào?"
+            }
+          ],
+          "question": "Hồ Chí Minh khẳng định phải dùng bạo lực cách mạng để giành chính quyền và giữ chính quyền. Vì một trong những lý do gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953242553,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là sức mạnh của nhiều yếu tố kết hợp lại, quân sự là chủ chốt."
+            },
+            {
+              "key": "B",
+              "text": "Là sức mạnh của yếu tố con người và vũ khí."
+            },
+            {
+              "key": "C",
+              "text": "Là sức mạnh tổng hợp trong đó yếu tố con người, yếu tố chính trị tinh thần giữ vai trò quyết định"
+            },
+            {
+              "key": "D",
+              "text": "Là sức mạnh của yếu tố con người và vũ khí trang bị kỹ thuật hiện đại"
+            }
+          ],
+          "question": "ANSWER:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953243770,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là đội quân tuyên truyền giác ngộ nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Là đội quân công tác."
+            },
+            {
+              "key": "C",
+              "text": "Là đội quân chiến đấu bảo vệ đất nước"
+            },
+            {
+              "key": "D",
+              "text": "Là đội quân bảo vệ chính quyền vô sản của giai cấp công nông"
+            }
+          ],
+          "question": "Theo tư tưởng Hồ Chí Minh, một trong những chức năng của Quân đội nhân dân Việt Nam là   gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953244897,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chiến đấu, sẵn sàng chiến đấu."
+            },
+            {
+              "key": "B",
+              "text": "Chiến đấu, lao động sản xuất, tuyên truyền."
+            },
+            {
+              "key": "C",
+              "text": "Chiến đấu, công tác, lao động sản xuất."
+            },
+            {
+              "key": "D",
+              "text": "Chiến đấu và tham gia gìn giữ hòa bình khu vực"
+            }
+          ],
+          "question": "Theo tư tưởng Hồ Chí Minh, quân đội nhân dân Việt Nam có những chức năng"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953245912,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là sức mạnh của cả dân tộc và thời đại, sức mạnh quốc phòng toàn dân."
+            },
+            {
+              "key": "B",
+              "text": "Là sức mạnh tổng hợp của cả dân tộc, cả nước kết hợp với sức mạnh thời đại."
+            },
+            {
+              "key": "C",
+              "text": "Là sức mạnh của toàn dân, lấy lực lượng vũ trang làm nòng cốt."
+            },
+            {
+              "key": "D",
+              "text": "Là sức mạnh của lực lượng vũ trang nhân dân, sức mạnh quốc phòng toàn dân."
+            }
+          ],
+          "question": "Tư tưởng Hồ Chí Minh về sức mạnh bảo vệ Tổ quốc XHCN là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953246973,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thể hiện bản chất, truyền thống và kinh nghiệm của quân đội ta."
+            },
+            {
+              "key": "B",
+              "text": "Thể hiện sức mạnh của quân đội."
+            },
+            {
+              "key": "C",
+              "text": "Thể hiện bản chất, truyền thống tốt đẹp của QĐND Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "Thể hiện quân đội ta là quân đội cách mạng."
+            }
+          ],
+          "question": "Ba chức năng cơ bản của quân đội nhân dân Việt Nam được Hồ Chí Minh xác định, thể hiện vấn đề gì trong quá trình xây dựng quân đội."
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953247568,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ Tổ quốc XHCN là tất yếu, khách quan, thể hiện ý chí quyết tâm của nhân dân ta."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ Tổ quốc là tất yếu, gắnliền với bảo vệ chế độ XHCN."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ Tổ quốc XHCN là nhiêm vụ trong sự nghiệp xây dựng CNXH."
+            },
+            {
+              "key": "D",
+              "text": "Bảo vệ Tổ quốc XHCN là truyền thống của quốc gia, dân tộc, là ý chí của toàn dân"
+            }
+          ],
+          "question": "Một trong những nội dung tư tưởng Hồ Chí Minh về bảo vệ Tổ quốc XHCN là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953249253,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Con người cố giác ngộ giữ vai rò quan trọng nhất, chi phối các yếu tố khác."
+            },
+            {
+              "key": "B",
+              "text": "Con người là quan trọng cùng với yếu tố quân sự là quyết định."
+            },
+            {
+              "key": "C",
+              "text": "Con người với trình độ chính trị cao giữ vai trò quyết định."
+            },
+            {
+              "key": "D",
+              "text": "Con người cố giác ngộ giữ vai rò quan trọng nhất."
+            }
+          ],
+          "question": "Chủ tịch Hồ Chí Minh xác định yếu tố con người có vai trò như thế nào trong xây dựng Quân đội nhân dân?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953249407,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng quân đội có kỷ luật, có tính chiến đấu cao."
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng quân đội chính qui."
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng quân đội hiện đại."
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng quân đội hùng mạnh cả về số lượng và chất lượng."
+            }
+          ],
+          "question": "Một trong những nguyên tắc cơ bản xây dựng Hồng quân của Lê nin là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953250546,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sự lãnh đạo của Đảng cộng sản đối với quân đội."
+            },
+            {
+              "key": "B",
+              "text": "Giữ vững quan điểm giai cấp trong xây dựng quân đội."
+            },
+            {
+              "key": "C",
+              "text": "Tính kỷ luật cao là yếu tố quyết định sức mạnh quân đội"
+            },
+            {
+              "key": "D",
+              "text": "Quân đội chính quy, hiện đại, trung thành với giaicấp công nhân và nhân dân lao động"
+            }
+          ],
+          "question": "Nguyên tắc cơ bản về xây dựng lực lượng Hồng quân của Lê nin là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953251934,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Rất coi trọng công tác tư tưởng, tổ chức và rèn luyện tính kỷ luật."
+            },
+            {
+              "key": "B",
+              "text": "Rất coi trọng rèn luyện đạo đức  trình độ kỹ chiến thuật"
+            },
+            {
+              "key": "C",
+              "text": "Rất coi trọng công tác giáo dục chính trị trong quân đội."
+            },
+            {
+              "key": "D",
+              "text": "Rất chú trọng công tác tổ chức và rèn luyện bản lĩnh chiến đấu."
+            }
+          ],
+          "question": "Để phát huy nhân tố con người trong xây dựng quân đội, Hồ Chí Minh rất coi trọng vấn đề gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953252428,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảng cộng sản Việt Nam chỉ đạo trực tiếp sự nghiệp bảo vệ Tổ quốc."
+            },
+            {
+              "key": "B",
+              "text": "Đảng cộng sản Việt Nam là người đi tiên phong trong sự nghiệp bảo vệ Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Đảng cộng sản Việt Nam lãnh đạo sự nghiệp bảo vệ Tổ quốc Việt Nam XHCN."
+            },
+            {
+              "key": "D",
+              "text": "Đảng cộng sản Việt Nam là người kêu gọi mọi tầng lớp nhân dân đứng lên bảo vệ"
+            }
+          ],
+          "question": "Hồ Chí Minh xác định vai trò của Đảng trong sự nghiệp bảo vệ Tổ quốc XHCN như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953254173,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là lực lượng nòng cốt cho nhân dân đánh giặc."
+            },
+            {
+              "key": "B",
+              "text": "Là lực lượng xung kích, trụ cột cho toàn dân."
+            },
+            {
+              "key": "C",
+              "text": "Là lực lượng cùng toàn dân đánh giặc."
+            },
+            {
+              "key": "D",
+              "text": "Là lực lượng chiến đấu chủ yếu bảo vệ nhân dân."
+            }
+          ],
+          "question": "đất nước. *Theo tư tưởng Hồ Chí Minh, trong sức mạnh của toàn dân đánh giặc, vị trí của lực lượng vũ trang nhân dân được xác định như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953254527,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiềm lực chính trị, kinh tế, khoa học công nghệ, quân sự an ninh"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng hậu phương chiến lược"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng tiềm lực quốc phòng, an ninh và thế trận quốc phòng, an ninh"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng khu vực phòng thủ"
+            }
+          ],
+          "question": "Xây dựng nền QPTD, ANND bảo vệ Tổ quốc Việt Nam XHCN * Xây dựng nền quốc phòng toàn dân, an ninh nhân dân gồm những nội dung nào sau đây?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953255522,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nền quốc phòng toàn dân phát triển theo hướng hiện đại"
+            },
+            {
+              "key": "B",
+              "text": "Toàn dân, toàn diện, độc lập, tự chủ, tự lực, tự cường và ngày càng hiện đại"
+            },
+            {
+              "key": "C",
+              "text": "Nền QPTD phát triển theo hướng vững mạnh và ngày càng hiện đại"
+            },
+            {
+              "key": "D",
+              "text": "Nền QPTD phát triển theo hướng toàn dân, toàn diện và hiện đại."
+            }
+          ],
+          "question": "Nền quốc phòng toàn dân phát triển theo hướng như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953256502,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo đảm tốt vũ khí cho quân đội, công an"
+            },
+            {
+              "key": "B",
+              "text": "Nâng cao chất lượng huấn luyện của của quân đội, công an"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng lực lượng vũ trang vững mạnh toàn diện"
+            },
+            {
+              "key": "D",
+              "text": "Tăng cường công tác giáo dục chính trị trong lực lượng vũ trang"
+            }
+          ],
+          "question": "Xây dựng tiềm lực quân sự, an ninh cần tập trung vào nội dung nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953258053,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiềm lực chính trị tinh thần, tiềm lực khoa học công nghệ"
+            },
+            {
+              "key": "B",
+              "text": "Tiềm lực kinh tế, tiềm lực quân sự an ninh"
+            },
+            {
+              "key": "C",
+              "text": "Tiềm lực chính trị tinh thần, kinh tế, khoa học công nghệ và tiềm lực quân sự an ninh"
+            },
+            {
+              "key": "D",
+              "text": "Tiềm lực chính trị tinh thần, kinh tế và tiềm lực quân sự an ninh"
+            }
+          ],
+          "question": "Tiềm lực quốc phòng, an ninh được thể hiện tập trung ở?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953258805,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát huy tối đa sự mạnh của lực"
+            },
+            {
+              "key": "B",
+              "text": "Lấy thế thắng lực"
+            },
+            {
+              "key": "C",
+              "text": "Lấy lực thắng thế"
+            },
+            {
+              "key": "D",
+              "text": "Lấy thế thắng thế"
+            }
+          ],
+          "question": "Kết hợp chặt chẽ xây dựng tiềm lực QP, AN với thế trận QP, AN để nhằm mục đích gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953259916,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nền QPTD, ANND có sức mạnh tổng hợp chiến thắng kẻ thù xâm lược"
+            },
+            {
+              "key": "B",
+              "text": "Là nền QPTD, ANND có sức mạnh đối phó với mọi tình huống"
+            },
+            {
+              "key": "C",
+              "text": "Là nền QPTD, ANND có sức mạnh đối phó với mọi loại hình chiến tranh"
+            },
+            {
+              "key": "D",
+              "text": "Là nền QPTD, ANND có sức mạnh tổng hợp do nhiều yếu tố tạo nên."
+            }
+          ],
+          "question": "Một trong những đặc trưng cơ bản của nền quốc phòng toàn dân, an ninh nhân dân là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953260428,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng lực lượng vũ trang nhân dân vững mạnh"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng tiềm lực tác chiến trên không, trên bộ và trên biển"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng tiềm lực khoa học, công nghệ"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng tiềm lực tài chính và vũ khí quốc gia"
+            }
+          ],
+          "question": "Một trong những nội dung cơ bản của xây dựng tiềm lực quốc phòng, an ninh ngày nay là?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953262100,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổ chức và bố trí các lực lượng vũ trang trên toàn bộ lãnh thổ theo ý đồ chiến lược phòng thủ đất nước"
+            },
+            {
+              "key": "B",
+              "text": "Là sự tổ chức bố trí lực lượng, tiềm lực mọi mặt của đất nước và của toàn dân trên cả nước"
+            },
+            {
+              "key": "C",
+              "text": "Tổ chức và bố trí các khu vực phòng thủ của tỉnh (thành phố) mạnh, có trọng tâm, trọng điểm"
+            },
+            {
+              "key": "D",
+              "text": "Phân vùng chiến lược các công trình quốc phòng các tuyến phòng thủ quốc gia trên cả nước"
+            }
+          ],
+          "question": "Xây dựng thế trận quốc phòng toàn dân, an ninh nhân dân được hiểu như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953263283,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cả tiềm lực và thế trận quốc phòng"
+            },
+            {
+              "key": "B",
+              "text": "Có sức mạnh tổng hợp do nhiều yếu tố tạo thành"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng nền quốc phòng bằng sức mạnh quân sự to lớn, kinh tế phát triển"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng nền quốc phòng bằng sức mạnh của nền kinh tế quốc dân"
+            }
+          ],
+          "question": "Tính toàn diện trong xây dựng nền quốc phòng toàn dân, an ninh nhân dân được thể hiện ở nội dung nào sau đây?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953264065,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nền QPTD, ANND do nhân dân lao động làm chủ"
+            },
+            {
+              "key": "B",
+              "text": "Nền QPTD, ANND chỉ có mục đích duy nhất là tự vệ chính đáng"
+            },
+            {
+              "key": "C",
+              "text": "Nền QPTD, ANND do toàn thể nhân dân tham gia"
+            },
+            {
+              "key": "D",
+              "text": "Nền QPTD, ANND chỉ có mục tiêu duy nhất là bảo vệ độc lập dân tộc"
+            }
+          ],
+          "question": "Một trong những nội dung cơ bản của nền quốc phòng toàn dân, an nin nhân dân hiện nay là gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953264639,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quân đội, công an và dân quân tự vệ"
+            },
+            {
+              "key": "B",
+              "text": "Bộ đội chủ lực, bộ đội địa phượng và dân quân tự vệ"
+            },
+            {
+              "key": "C",
+              "text": "Bộ đội chủ lực, bộ đội địa phượng và công an nhân dân"
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng chính trị và lực lượng vũ trang"
+            }
+          ],
+          "question": "Xây dựng lực lượng quốc phòng, an ninh bao gồm những lực lượng nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953265628,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kết hợp xây dựng kinh tế và xã hội"
+            },
+            {
+              "key": "B",
+              "text": "Kết hợp xây dựng hạ tầng kinh tế với hạ tầng quốc phòng"
+            },
+            {
+              "key": "C",
+              "text": "Kết hợp xây dựng hạ tầng quốc phòng gắn với hạ tầng an ninh"
+            },
+            {
+              "key": "D",
+              "text": "Kết hợp xây dựng hạ tầng khoa học công nghệ với hạ tầng quốc phòng, an ninh"
+            }
+          ],
+          "question": "Một trong những nội dung cơ bản xây dựng tiềm lực kinh tế trong xây dựng nền quốc phòng toàn dân, an ninh nhân dân là gì ?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953267318,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Từ truyền thống dân tộc trong chiến đấu chống giặc ngoại xâm"
+            },
+            {
+              "key": "B",
+              "text": "Từ bài học quí báu xây dựng lực lượng vũ trang nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Từ truyền thống, kinh nghiệm của dân tộc trong lịch sử dựng nước và giữ nước"
+            },
+            {
+              "key": "D",
+              "text": "Từ truyền thống dân tộc trong chiến đấu chống giặc ngoại xâm"
+            }
+          ],
+          "question": "Từ cơ sở nào, chúng ta xác định tính chất toàn dân của nền quốc phòng toàn dân?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953267642,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Luôn tăng cường giáo dục ý thức trách nhiệm của công dân về 2 nhiệm vụ chiến lược"
+            },
+            {
+              "key": "B",
+              "text": "Luôn tăng cường giáo dục nghĩa vụ công dân"
+            },
+            {
+              "key": "C",
+              "text": "Luôn thực hiện tốt giáo dục quốc phòng- an ninh"
+            },
+            {
+              "key": "D",
+              "text": "Luôn tăng cường giáo dục nhiệm vụ quốc phòng và an ninh nhân dân"
+            }
+          ],
+          "question": "Một trong những biện pháp chủ yếu xây dựng nền quốc phòng toàn dân, an ninh nhân dân là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953268451,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nền quốc phòng mang tính giai cấp, nhân dân sâu sắc"
+            },
+            {
+              "key": "B",
+              "text": "Là nền quốc phòng vì dân, của dân, do dân"
+            },
+            {
+              "key": "C",
+              "text": "Là nền quốc phòng  bảo vệ quyền lợi của dân"
+            },
+            {
+              "key": "D",
+              "text": "Là nên quốc phòng do nhân dân xây dựng, mang tính nhân dân sâu sắc"
+            }
+          ],
+          "question": "Tính chất toàn dân của nền quốc phòng toàn dân, an ninh nhân dân được biểu hiện tập trung như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953270015,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phân vùng chiến lược về quốc phòng, an ninh kết hợp với vùng kinh tế, trên cơ sở quy hoạch các vùng dân cư"
+            },
+            {
+              "key": "B",
+              "text": "Phân vùng chiến lược gắn với xây dựng hậu phương chiến lược"
+            },
+            {
+              "key": "C",
+              "text": "Phân vùng chiến lược gắn với bố trí lực lượng quân sự mạnh"
+            },
+            {
+              "key": "D",
+              "text": "Phân vùng chiến lược gắn với khu vực phòng thủ tỉnh (thành phố)"
+            }
+          ],
+          "question": "Nội dung xây dựng thế trận quốc phòng toàn dân hiện nay là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953271222,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng tiềm lực kinh tế"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng tiềm lực vũ khí, trang bị hiện đại"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng tiềm lực tác chiến trên không, trên bộ và trên biển"
+            },
+            {
+              "key": "D",
+              "text": "Cả 3 yếu tố trên"
+            }
+          ],
+          "question": "Một trong những nội dung cơ bản cần tập trung  xây dựng tiềm lực quốc phòng an ninh ngày nay là?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953271485,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổ chức phòng thủ dân sự và phòng tránh khắc phục hậu quả chiến tranh"
+            },
+            {
+              "key": "B",
+              "text": "Tổ chức phòng thủ dân sự bảo đảm  an toàn"
+            },
+            {
+              "key": "C",
+              "text": "Phân vùng chiến lược về quốc phòng , an ninh kết hợp với vùng kinh tế"
+            },
+            {
+              "key": "D",
+              "text": "Tổ chức xây dựng khu vực phòng thủ dân sự"
+            }
+          ],
+          "question": "Nội dung quan trọng hàng đầu trong xây dựng thế trận quốc phòng toàn dân, an ninh nhân dân là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953272540,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tạo thế chủ động cho sự nghiệp xây dựng và bảo vệ tổ quốc"
+            },
+            {
+              "key": "B",
+              "text": "Phát huy vai trò nòng cốt của lực lượng vũ trang"
+            },
+            {
+              "key": "C",
+              "text": "Phát huy sức mạnh tổng hợp trong xây dựng và củng cố nền quốc phòng toàn dân"
+            },
+            {
+              "key": "D",
+              "text": "Phát huy vai trò của nhân dân"
+            }
+          ],
+          "question": "Một trong những mục đích xây dựng nền quốc phòng toàn dân, an ninh nhân dân là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953273911,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhân tố quyết định tạo nên sức mạnh quốc phòng, an ninh"
+            },
+            {
+              "key": "B",
+              "text": "Nhân tố rất quan trọng tạo nên sức mạnh quốc phòng, an ninh"
+            },
+            {
+              "key": "C",
+              "text": "Nhân tố cơ bản tạo nên sức mạnh quốc phòng, an ninh"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Tiềm lực chính trị tinh thần có vai trò như thế nào trong xây dựng tiềm lực quốc phòng, an ninh?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953274574,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là lực lượng nòng cốt cho nhân dân đánh giặc."
+            },
+            {
+              "key": "B",
+              "text": "Là lực lượng xung kích, trụ cột cho toàn dân."
+            },
+            {
+              "key": "C",
+              "text": "Là lực lượng cùng toàn dân đánh giặc."
+            },
+            {
+              "key": "D",
+              "text": "Là lực lượng xung kích, cho toàn dân."
+            }
+          ],
+          "question": "Chiến tranh nhân dân BVTQ Việt Nam XHCN *Theo tư tưởng Hồ Chí Minh, trong sức mạnh của toàn dân đánh giặc, vị trí của lực lượng vũ trang nhân dân được xác định như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953275551,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Những lực lượng xâm lược Tổ quốc ta."
+            },
+            {
+              "key": "B",
+              "text": "Những thế lực cản trở, xâm hại đến sự nghiệp xây dựng đất nước và bảo vệ Tổ quốc XHCN của chúng ta."
+            },
+            {
+              "key": "C",
+              "text": "Những lực lượng xâm lược và thế lực phản động có hành động phá hoại."
+            },
+            {
+              "key": "D",
+              "text": "Chủ nghĩa đế quốc và chủ nghĩa khủng bố quốc tế."
+            }
+          ],
+          "question": "Đối tượng trong chiến tranh nhân dân bảo vệ Tổ quốc XHCN là"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953276496,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Việc bảo đảm đời sống nhân dân là rất khó khăn."
+            },
+            {
+              "key": "B",
+              "text": "Việc bảo đảm cuộc sống chiến đấu của lực lượng vũ trang, của hoạt động quân sự rất khó khăn."
+            },
+            {
+              "key": "C",
+              "text": "Việc bảo đảm ổn định đời sống nhân dân trong chiến tranh vô cùng khó khăn, phức tạp."
+            },
+            {
+              "key": "D",
+              "text": "Không có sự hỗ trợ từ phía bên ngoài."
+            }
+          ],
+          "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc phải kết hợp kháng chiến với xây dựng, vừa chiến đấu, vừa sản xuất. Lý do vì sao?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953278064,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cả nước đánh giặc, sử dụng mọi phương tiện để đánh."
+            },
+            {
+              "key": "B",
+              "text": "Cả nước đánh giặc phối hợp chặt chẽ với các binh đoàn chủ lực"
+            },
+            {
+              "key": "C",
+              "text": "Cả nước là một chiến trường, ở đâu cũng có người đánh giặc, đánh giặc bằng mọi thứ vũ khí."
+            },
+            {
+              "key": "D",
+              "text": "Cả nước là một chiến trường của chiến tranh du kích rộng khắp."
+            }
+          ],
+          "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc, thế trận chiến tranh nhân dân được tổ chức rộng khắp thể hiện như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953279099,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chiến tranh chính nghĩa, tự vệ."
+            },
+            {
+              "key": "B",
+              "text": "Chiến tranh cách mạng."
+            },
+            {
+              "key": "C",
+              "text": "Chiến tranh chính nghĩa, tự vệ, cách mạng."
+            },
+            {
+              "key": "D",
+              "text": "Cuộc chiến tranh bảo vệ xã hội xã hội chủ nghĩa."
+            }
+          ],
+          "question": "Một trong những tính chất chiến tranh nhân dân bảo vệ Tổ quốc là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953279822,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lực lượng phản động sẽ tiến hành phá hoại, có mưu đồ lật đổ chính quyền ta."
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng phản động lợi dụng chiến tranh kết hợp với phản động nước ngoài tập hợp lực lượng."
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng phản động trong nước sẽ tiến hành các hành động phá hoại làm rối loạn hậu phương ta."
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng phản động trong nước lợi dụng cơ hội phá hoại trật tự an ninh."
+            }
+          ],
+          "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc, phải kết hợp đấu tranh quân sự với bảo đảm an ninh chính trị, giữ gìn trật tự an toàn xã hội. Vì một trong những lý do gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953280581,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổ chức rộng toàn quốc, tập trung ở hướng, khu vực chủ yếu."
+            },
+            {
+              "key": "B",
+              "text": "Tổ chức rộng trên phạm vi cả nước, những có trọng tâm, trọng điểm."
+            },
+            {
+              "key": "C",
+              "text": "Tổ chức theo qui hoạch các vùng kinh tế và bố trí dân cư."
+            },
+            {
+              "key": "D",
+              "text": "Tổ chức rộng toàn quốc, tập trung ở hướng, khu vực chủ yếu, quan trọng."
+            }
+          ],
+          "question": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc, thế trận chiến tranh nhân dân Việt Nam được tổ chức như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953282053,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kết hợp cùng với việc xây dựng kế hoạch, xác định các phương án đánh địch cần chuẩn bị kế hoạch chống bạo loan, lật đổ."
+            },
+            {
+              "key": "B",
+              "text": "Kết hợp cùng với việc xây dựng kế hoạch, xác định các phương án đánh đich và kế hoạch bảo vệ hậu phương."
+            },
+            {
+              "key": "C",
+              "text": "Kết hợp đánh địch và xây dựng lực lượng quân sự địa phương bảo vệ an ninh chính trị, trật tự an toàn xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng kế hoạch, các phương án kết hợp đánh thù trong giặc ngoài."
+            }
+          ],
+          "question": "Thực hiện \"kết hợp đấu tranh quân sự với bảo đảm an ninh chính trị, giữ gìn trật tự, an toàn \", trong chiến tranh nhân dân bảo vệ Tổ quốc thể hiện như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953283331,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vấp phải ý chí chiến đấu kiên cường vì độc lập tự do của dân tộc ta."
+            },
+            {
+              "key": "B",
+              "text": "Phải đương đầu với dân tộc Việt Nam có truyền thống chống kẻ thù xâm lược kiên cường bất khuất."
+            },
+            {
+              "key": "C",
+              "text": "Phải đối phó với cách đánh năng động sáng tạo của QĐNDVN."
+            },
+            {
+              "key": "D",
+              "text": "Phải đương đầu với dân tộc Việt Nam có truyền thống chống giắc ngoại xâm."
+            }
+          ],
+          "question": "Nếu chiến tranh xảy ra, chúng ta đánh giá quân địch có điểm yếu cơ bản nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953284351,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là sự tổ chức, bố trí lực lượng để tiến hành chiến tranh và hoạt động tác chiến."
+            },
+            {
+              "key": "B",
+              "text": "Là tổ chức, bố trí lực lượng vũ trang."
+            },
+            {
+              "key": "C",
+              "text": "Là sự tổ chức, bố trí lực lượng để phòng thủ đất nước."
+            },
+            {
+              "key": "D",
+              "text": "Là tổ chức, bố trí lực lượng vũ trang trong ý đồ chiến lược."
+            }
+          ],
+          "question": "Thế trận chiến tranh là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953285266,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhu cầu bảo đảm hậu cần kỹ thuật cho chiến tranh luôn tăng lên."
+            },
+            {
+              "key": "B",
+              "text": "Nhu cầu bảo đảm hậu cần kỹ thuật luôn đáp ứng cho chiến tranh."
+            },
+            {
+              "key": "C",
+              "text": "Nhu cầu bảo đảm hậu cần kỹ thuật cho chiến tranh rất cao, liên tục, kịp thời."
+            },
+            {
+              "key": "D",
+              "text": "Nhu cầu bảo đảm hậu cần kỹ thuật cho chiến tranh rất khẩn trương, phức tạp."
+            }
+          ],
+          "question": "Nhu cầu bảo đảm hậu cần kỹ thuật trong chiến tranh nhân dân bảo vệ Tổ quốc như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953286181,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ vững chắc độc lập, chủ quyền, thống nhất của Tổ quốc."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ sự toàn vẹn của Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ."
+            },
+            {
+              "key": "D",
+              "text": "Bảo vệ vững chắc độc lập, chủ quyền, của Tổ quốc."
+            }
+          ],
+          "question": "Một trong những mục đích của chiến tranh nhân dân bảo vệ Tổ quốc Việt Nam XHCN là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953287337,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Được tổ chức thành lực lượng chính trị của quần chúng và lực lượng vũ trang."
+            },
+            {
+              "key": "B",
+              "text": "Được tổ chức chặt chẽ thành hai lực lượng lực lượng quần chúng rộng rãi và lực lượng quân sự."
+            },
+            {
+              "key": "C",
+              "text": "Được tổ chức thành lực lượng rộng rãi và lực lượng tác chiến chiến lược."
+            },
+            {
+              "key": "D",
+              "text": "Được tổ chức chặt chẽ thành hai lực lượng lực lượng quần chúng rộng rãi và lực lượng phòng thủ dân sự."
+            }
+          ],
+          "question": "Tiến hành chiến tranh nhân dân, lực lượng toàn dân đánh giặc được tổ chức như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953288184,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là cuộc chiến tranh toàn dân, lực lượng vũ trang làm nòng cốt."
+            },
+            {
+              "key": "B",
+              "text": "Là cuộc chiến tranh toàn dân, toàn diện."
+            },
+            {
+              "key": "C",
+              "text": "Là cuộc đấu tranh của nhân dân mà quân sự đóng vai trò quyết định."
+            },
+            {
+              "key": "D",
+              "text": "Là cuộc chiến tranh cách mạng chống lại các thế lực phản cách mạng."
+            }
+          ],
+          "question": "Một trong những tính chất chiến tranh nhân dân bảo vệ Tổ quốc là gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953288828,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là cơ sở, điều kiện để mỗi người dân được tham gia đánh giặc bảo vệ quê hương."
+            },
+            {
+              "key": "B",
+              "text": "Là cơ sở, điều kiện để phát huy sức mạnh tổng hợp bảo vệ Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Là cơ sở, điều kiện để phát huy cao nhất yếu tố con người (giữ vai trò quyết định) trong chiến tranh."
+            },
+            {
+              "key": "D",
+              "text": "Là cơ sở, điều kiện để phát huy sức mạnh tổng hợp bảo vệ Tổ quốc Việt Nam XHCN."
+            }
+          ],
+          "question": "Quan điểm \"thực hiện toàn dân đánh giặc\" trong chiến tranh nhân dân bảo vệ Tổ quốc, có ý nghĩa gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953289432,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thể hiện tính nhân dân, tính dân tộc sâu sắc trong cuộc chiến tranh."
+            },
+            {
+              "key": "B",
+              "text": "Thể hiện sức mạnh to lớn của cuộc chiến tranh của ta."
+            },
+            {
+              "key": "C",
+              "text": "Thể hiện tính nhân dân sâu sắc, cuộc chiến tranh của dân, do dân, vì dân."
+            },
+            {
+              "key": "D",
+              "text": "Thể hiện tính nhân dân, tính dân tộc."
+            }
+          ],
+          "question": "Quan điểm, thực hiện toàn dân đánh giặc trong chiến tranh nhân dân bảo vệ Tổ quốc thể hiện vấn đề gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953291119,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiến công địch toàn diện, mặt trận chính trị là quan trọng nhất, mặt trận quân sự có tính quyết định."
+            },
+            {
+              "key": "B",
+              "text": "Tổ chức tiến công địch trên tất cả các mặt trận, mặt trận nào cũng quan trọng, trong đó luôn coi trọng mặt trận quân sự, thắng lợi trên chiến trường là yếu tố quyết định."
+            },
+            {
+              "key": "C",
+              "text": "Tiến công địch trên mặt trận quân sự là chủ yếu, các mặt trận khác là hỗ trợ."
+            },
+            {
+              "key": "D",
+              "text": "Tiến công địch trên mặt trận quân sự là chủ yếu."
+            }
+          ],
+          "question": "Quan điểm \"tiến hành chiến tranh toàn diện\" trong chiến tranh nhân dân bảo vệ Tổ quốc thể hiện như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953292262,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ nghĩa đế quốc đang thực hiện chính trị cường quyền thô bạo và cứng rắn."
+            },
+            {
+              "key": "B",
+              "text": "Tình hình thế giới, khu vực diễn biến phức tạp, tiềm ẩn nhiều yếu tố bất ngờ khó lường."
+            },
+            {
+              "key": "C",
+              "text": "Thế giới có những biến động lớn ảnh hưởng đến các nước, đặc biệt là các nước XHCN."
+            },
+            {
+              "key": "D",
+              "text": "Tất cả phương án trên đều sai."
+            }
+          ],
+          "question": "Đặc điểm nào tác động nhiều nhất đến chiến tranh nhân dân bảo vệ Tổ quốc?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953292414,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lực lượng khủng bố và xâm lược."
+            },
+            {
+              "key": "B",
+              "text": "Những lực lượng phản động gây bạo loạn lật đổ, gây xung đột vũ trang, gây chiến tranh xâm lược."
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng phản động tiến hành bạo loan, lật đổ phá hoại thành quả Cách mạng của nhân dân ta."
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng bạo loạn lật đổ và và các thế lực sử dụng sức mạnh quân sự xâm lược"
+            }
+          ],
+          "question": "Nếu chiến tranh xảy ra cùng với bọn đế quốc lực lượng nào là đối tượng tác chiến của quân dân ta?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953293590,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiến công"
+            },
+            {
+              "key": "B",
+              "text": "Phòng ngự"
+            },
+            {
+              "key": "C",
+              "text": "Hoà hoãn"
+            },
+            {
+              "key": "D",
+              "text": "Phản công"
+            }
+          ],
+          "question": "Tư tưởng chỉ đạo tác chiến xuyên suốt trong chuẩn bị và tiến hành chiến tranh giữ nước của cha ông ta là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953294579,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thể hiện bản chất, truyền thống và kinh nghiệm của quân đội ta."
+            },
+            {
+              "key": "B",
+              "text": "Thể hiện sức mạnh, của quân đội."
+            },
+            {
+              "key": "C",
+              "text": "Thể hiện bản chất , truyền thống tốt đẹp của quân đội ta."
+            },
+            {
+              "key": "D",
+              "text": "Thể hiện bản chất , truyền thống của quân đội ta."
+            }
+          ],
+          "question": "Xây dựng lực lượng vũ trang nhân dân *Ba chức năng cơ bản của quân đội nhân dân Việt Nam được Hồ Chí Minh xác định, thể hiện vấn đề gì trong quá trình xây dựng quân đội?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953295962,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mang bản chất từ thành phần xuất thân LLVT."
+            },
+            {
+              "key": "B",
+              "text": "Mang bản chất quần chúng nhân dân lao động."
+            },
+            {
+              "key": "C",
+              "text": "Mang bản chất giai cấp nhà nước đã tổ chức, nuôi dưỡng và sử dụng LLVT."
+            },
+            {
+              "key": "D",
+              "text": "Là lực lượng bảo vệ đất nước không mang bản chất chính trị."
+            }
+          ],
+          "question": "Lý luận của chủ nghĩa Mác-Lê-nin về bản chất giai cấp của Lực lượng Vũ trang là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953297240,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để giành chính quyền và giữ chính quyền là phải đấu tranh chính trị, đấu tranh nghị trường."
+            },
+            {
+              "key": "B",
+              "text": "Để giành và giữ chính quyền là phải có sự hậu thuẫn của các lực lượng nước ngoài, có tiềm lực kinh tế quân sự hùng mạnh."
+            },
+            {
+              "key": "C",
+              "text": "Để giành và giữ chính quyền là phải dùng bạo lực Cách mạng chống lại bạo lực phản cách mạng."
+            },
+            {
+              "key": "D",
+              "text": "Để dành và giữ chính quyền phải dựa vào giai cấp nắm quyền lực kinh tế chủ yếu trong nước. ( tầng lớp tư sản dân tộc )"
+            }
+          ],
+          "question": "Tư tưởng của Chủ tịch Hồ Chí Minh về giành chính quyền và giữ chính quyền như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953298059,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng LLVT cả về số lượng và chất lượng, lấy chất lượng là chính"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng LLVT toàn diện, coi trọng cả số lượng, chất lượng, lấy chính trị là chính"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng LLVT lấy chất lượng là chính, lấy xây dựng chính trị làm cơ sơ"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng LLVT lấy quân sự là chính, lấy xây dựng chính trị làm cơ sở"
+            }
+          ],
+          "question": "Một trong những quan điểm xây dựng Lực lượng vũ trang nhân dân trong giai đoạn mới đó là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953299357,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giữ vững và tăng cường sự lãnh đạo của Đảng đối với LLVT"
+            },
+            {
+              "key": "B",
+              "text": "Giữ vững và luôn phát huy tốt vai trò lãnh đạo của Đảng đối với LLVT"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng LLVT lấy quân sự là chính, lấy chất lượng chính trị làm cơ sở"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng LLVT lấy chất lượng là chính, lấy xây dựng quân sự làm cơ sở"
+            }
+          ],
+          "question": "Một trong những quan điểm xây dựng Lực lượng vũ trang nhân dân trong giai đoạn mới đó là?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953300279,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quân đội và công an"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng vũ trang nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Bộ đội chủ lực và công an nhân dân"
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng dân quân tự vệ và lực lượng dự bị động viên"
+            }
+          ],
+          "question": "Trong xây dựng nền QPTD, ANND lực lượng nào là nòng cốt?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953300507,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Được xây dựng toàn diện và hiện đại"
+            },
+            {
+              "key": "B",
+              "text": "Được xây dựng trong toàn dân và từng bước hiện đại"
+            },
+            {
+              "key": "C",
+              "text": "Được xây dựng toàn diện và từng bước hiện đại"
+            },
+            {
+              "key": "D",
+              "text": "Hiện đại để đáp ứng chiến tranh bằng vũ khí công nghệ cao"
+            }
+          ],
+          "question": "Một trong những đặc trưng cơ bản của nền QPTD, ANND là gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953302101,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ đội chủ lực, bộ đội địa phương và dân quân tự vệ"
+            },
+            {
+              "key": "B",
+              "text": "Bộ đội chủ lực, bộ đội biên phòng và dân quân tự vệ"
+            },
+            {
+              "key": "C",
+              "text": "Bộ đội chủ lực, bộ đội địa phương, lực lượng dự bị động viên"
+            },
+            {
+              "key": "D",
+              "text": "Quân đội, Công an, dân quân tự vệ"
+            }
+          ],
+          "question": "Lực lượng vũ trang nhân dân Việt Nam bao gồm các lực lượng nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953302452,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tuyệt đối, toàn diện về mọi mặt."
+            },
+            {
+              "key": "B",
+              "text": "Tuyệt đối, trực tiếp về nhiều mặt"
+            },
+            {
+              "key": "C",
+              "text": "Tuyệt đối, trực tiếp về mọi mặt"
+            },
+            {
+              "key": "D",
+              "text": "Tuyệt đối, trực tiếp không qua khâu trung gian nào."
+            }
+          ],
+          "question": "Đảng lãnh đạo Lực lượng vũ trang nhân dân theo nguyên tắc?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953303728,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Theo hệ thống tổ chức của Đảng từ Trung ương đến cơ sở."
+            },
+            {
+              "key": "B",
+              "text": "Theo hệ thống tổ chức của Đảng trong LLVT."
+            },
+            {
+              "key": "C",
+              "text": "Theo hệ thống tổ chức  của Đảng từ Trung ương đến địa phương"
+            },
+            {
+              "key": "D",
+              "text": "Theo hệ thống tổ chức của Đảng từ trên xuống dưới."
+            }
+          ],
+          "question": "Đảng Cộng sản Việt Nam lãnh đạo Lực lượng vũ trang nhân dân Việt Nam?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953305143,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảng độc tôn duy nhất nắm quyền quản lý LLVTND Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Đảng độc tôn duy nhất nắm quyền lãnh đạo LLVTND Việt Nam"
+            },
+            {
+              "key": "C",
+              "text": "Đảng độc tôn duy nhất nắm quyền tổ chức  LLVTND Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "Đảng độc tôn duy nhất nắm quyền tổ chức, quản lý LLVTND Việt Nam"
+            }
+          ],
+          "question": "Mối quan hệ giữa Đảng Cộng sản Việt Nam với Lực lượng vũ trang nhân dân VN như thế nào sau đây?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953306131,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giữ vững và tăng cường sự lãnh đạo của Đảng đối với LLVT"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng LLVT lấy chất lượng là chính, lấy  xây dựng về tổ chức  làm cơ sở"
+            },
+            {
+              "key": "C",
+              "text": "Bảo đảm  LLVT luôn trong tư thế SSCĐ và chiến đấu thắng lợi"
+            },
+            {
+              "key": "D",
+              "text": "Tự lực tự cường xây dựng LLVT"
+            }
+          ],
+          "question": "Quan điểm nào là quan điểm sai trong xây dựng Lực lượng vũ trang nhân dân Việt Nam hiện nay?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953307042,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngày càng  phát triển về tổ chức"
+            },
+            {
+              "key": "B",
+              "text": "Mạnh, có khả năng tác chiến độc lập"
+            },
+            {
+              "key": "C",
+              "text": "Gọn, có trình độ tác chiến cao"
+            },
+            {
+              "key": "D",
+              "text": "Gọn, mạnh, cơ động, có sức chiến đấu cao"
+            }
+          ],
+          "question": "Để đáp ứng yêu cầu bảo vệ Tổ quốc trong tình hình mới, cần xây dựng Lực lượng vũ trang nhân dân như thế nào ?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953308099,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng LLVT lấy chính trị là chính, lấy  xây dựng về quân sự làm cơ sở"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng LLVT lấy quân sự là chính, lấy  xây dựng về chính trị làm cơ sở"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng LLVT lấy chất lượng là chính, lấy  xây dựng về quân sự làm cơ sở"
+            },
+            {
+              "key": "D",
+              "text": "Cả ba đều sai"
+            }
+          ],
+          "question": "Quan điểm nào là quan điểm sai trong xây dựng Lực lượng vũ trang nhân dân?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953308864,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ đội chủ lực và bộ độ địa phương"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng thường trực và lực lượng dự bị động viên"
+            },
+            {
+              "key": "C",
+              "text": "Bộ đội chủ lực, bộ độ địa phương, bộ đội biên phòng"
+            },
+            {
+              "key": "D",
+              "text": "Bộ đội chủ lực, bộ độ địa phương, bộ đội biên phòng và cảnh sát biển"
+            }
+          ],
+          "question": "Quân đội nhân dân Việt Nam bao gồm?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953310150,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cách mạng, chính qui, tinh nhuệ và từng bước hiện đại."
+            },
+            {
+              "key": "B",
+              "text": "Vững mạnh, rộng khắp, lấy chất lượng làm chính."
+            },
+            {
+              "key": "C",
+              "text": "Cách mạng, chính qui, tinh nhuệ và ngày càng hùng hậu"
+            },
+            {
+              "key": "D",
+              "text": "Cách mạng, chính qui, tinh nhuệ, hùng hậu và từng bước hiện đại"
+            }
+          ],
+          "question": "Xây dựng quân đội, công an nhân dân Việt Nam theo hướng nào trong tình hình hiện nay?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953311029,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cách mạng, chính qui, tinh nhuệ và từng bước hiện đại"
+            },
+            {
+              "key": "B",
+              "text": "Vững mạnh, rộng khắp, lấy chất lượng làm chính"
+            },
+            {
+              "key": "C",
+              "text": "Cách mạng, chính qui, tinh nhuệ và ngày càng hùng hậu"
+            },
+            {
+              "key": "D",
+              "text": "Hùng hậu, được huấn luyện và quản lý tốt, bảo đảm khi cần thiết có thể động viên nhanh chóng theo kế hoạch"
+            }
+          ],
+          "question": "Hiện nay chng ta cần xây dựng lực lượng dự bị động viên theo hướng?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953311715,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cách mạng, chính qui, tinh nhuệ và từng bước hiện đại"
+            },
+            {
+              "key": "B",
+              "text": "Vững mạnh, rộng khắp, lấy chất lượng làm chính"
+            },
+            {
+              "key": "C",
+              "text": "Cách mạng, chính qui, tinh nhuệ và ngày càng hùng hậu"
+            },
+            {
+              "key": "D",
+              "text": "Cách mạng, chính qui, tinh nhuệ, hùng hậu và từng bước hiện đại"
+            }
+          ],
+          "question": "Phương hướng xây dựng lực lượng dân quân tự vệ hiện nay?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953312756,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dân quân, tự vệ thường trực và  dân quân, tự vệ dự bị"
+            },
+            {
+              "key": "B",
+              "text": "Dân quân, tự vệ thường trực và dân quân, tự vệ rộng rãi"
+            },
+            {
+              "key": "C",
+              "text": "Dân quân, tự vệ bộ binh và dân quân, tự vệ binh chủng"
+            },
+            {
+              "key": "D",
+              "text": "Dân quân, tự vệ nòng cốt  và dân quân, tự vệ rộng rãi"
+            }
+          ],
+          "question": "Lực lượng dân quân tự vệ gồm có?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953313603,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vững mạnh, rộng khắp, rải đều trên phạm vi cả nước"
+            },
+            {
+              "key": "B",
+              "text": "Vững mạnh, rộng khắp nhưng có trọng tâm, trọng điểm."
+            },
+            {
+              "key": "C",
+              "text": "Cách mạng, chính qui, tinh nhuệ và ngày càng hùng hậu"
+            },
+            {
+              "key": "D",
+              "text": "Cách mạng, chính qui, tinh nhuệ, hùng hậu và từng bước hiện đại"
+            }
+          ],
+          "question": "Để đáp ứng yêu cầu, nhiệm vụ của lực lượng dân quân tự vệ, cần xây dựng như thế nào hiện nay?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953314665,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quyết định nguồn gốc ra đời và sức mạnh của QP, AN"
+            },
+            {
+              "key": "B",
+              "text": "Tác động đến sự phát triển của QP, AN"
+            },
+            {
+              "key": "C",
+              "text": "Chi phối đến nguồn gốc ra đời và sức mạnh của QP, AN"
+            },
+            {
+              "key": "D",
+              "text": "Tạo cơ sở cho sự ra đời và sức mạnh của QP, AN"
+            }
+          ],
+          "question": "Kết hợp phát triển kinh tế, xã hội với tăng cường quốc phòng, an ninh và đối ngoại * Kinh tế có vai trò như thế nào đối với quốc phòng, an ninh?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953316371,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các lĩnh vực này có đặc điểm, yêu cầu ở mỗi địa phương là khác nhau"
+            },
+            {
+              "key": "B",
+              "text": "Mỗi địa phương điều kiện địa lý là khác nhau"
+            },
+            {
+              "key": "C",
+              "text": "Mỗi địa phương điều kiện kinh tế là khác nhau"
+            },
+            {
+              "key": "D",
+              "text": "Mỗi địa phương điều kiện phát triển là khác nhau"
+            }
+          ],
+          "question": "Tại sao phải gắn kết chặt chẽ hoạt động KT-XH với QP và AN trong một chỉnh thể thống nhất ở từng địa phương?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953317133,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát huy tác động tích cực của QP,AN đối với KT-XH"
+            },
+            {
+              "key": "B",
+              "text": "Hạn chế tác động tiêu cực của QP,AN đối với KT-XH"
+            },
+            {
+              "key": "C",
+              "text": "Thúc đẩy nhau cùng phát triển"
+            },
+            {
+              "key": "D",
+              "text": "Các phương án trên đều sai"
+            }
+          ],
+          "question": "Việc kết hợp phát triển KT-XH với tăng cường củng cố QP, AN trong một chỉnh thể thống nhất nhằm"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953317570,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khoa học, hợp lý, cân đối và đồng thời"
+            },
+            {
+              "key": "B",
+              "text": "Khoa học, cân đối, đồng thời và phù hợp"
+            },
+            {
+              "key": "C",
+              "text": "Khoa học, hợp lý, cân đối và hài hòa"
+            },
+            {
+              "key": "D",
+              "text": "Khoa học, cân đối, đồng thời và hài hòa"
+            }
+          ],
+          "question": "Yêu cầu của việc kết phát triển KT-XH với tăng cường củng cố QP, AN là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953319046,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Yêu cầu nội sinh của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            },
+            {
+              "key": "B",
+              "text": "Yêu cầu phát sinh của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            },
+            {
+              "key": "C",
+              "text": "Yêu cầu sự nghiệp CNH, HĐH"
+            },
+            {
+              "key": "D",
+              "text": "Yêu cầu mới của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            }
+          ],
+          "question": "Kết hợp kinh tế với quốc phòng, an ninh là yêu cầu như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953320358,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quy luật lịch sử nhân loại"
+            },
+            {
+              "key": "B",
+              "text": "Quy luật tự nhiên của xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Quy luật riêng của các theo CNXH."
+            },
+            {
+              "key": "D",
+              "text": "Quy luật phát triển của mọi chế độ xã hội."
+            }
+          ],
+          "question": "Kết hợp kinh tế với quốc phòng, an ninh là?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953320521,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quốc phú, binh cường."
+            },
+            {
+              "key": "B",
+              "text": "Động vi binh, tĩnh vi dân."
+            },
+            {
+              "key": "C",
+              "text": "Ngụ binh, ư nông."
+            },
+            {
+              "key": "D",
+              "text": "Các phương án đều sai."
+            }
+          ],
+          "question": "Nội dung nào không thể hiện chính sách kết hợp kinh tế với quốc phòng ở nước ta?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953321478,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nguồn gốc sâu xa"
+            },
+            {
+              "key": "B",
+              "text": "Là nguồn gốc trực tiếp"
+            },
+            {
+              "key": "C",
+              "text": "Là nguồn gốc gián tiếp"
+            },
+            {
+              "key": "D",
+              "text": "Cả ba phương án trên"
+            }
+          ],
+          "question": "Theo quan điểm của Chủ nghĩa Mác Lê nin, nguồn gốc xã hội có tác động gì đến sự xuất hiện, tồn tại của chiến tranh?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953322612,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ vững chắc Tổ quốc"
+            },
+            {
+              "key": "B",
+              "text": "Thực hiện thắng lợi hai nhiệm vụ chiến lược của Đảng"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng nền kinh tế vững mạnh"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng nền quốc phòng, an ninh vững chắc"
+            }
+          ],
+          "question": "Hoạt động  phát triển kinh tế - xã hội và tăng cường củng cố quốc phòng  - an ninh ở nước ta thống nhất với nhau bởi?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953324022,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bản chất chế độ KH-XH quyết định bản chất QP,AN"
+            },
+            {
+              "key": "B",
+              "text": "Bản chất QP,AN quyết định bản chất chế độ KH-XH"
+            },
+            {
+              "key": "C",
+              "text": "QP,AN vững mạnh quyết định sự tồn tại và phát triển của chế độ KT-XH"
+            },
+            {
+              "key": "D",
+              "text": "Các phương án đều đúng"
+            }
+          ],
+          "question": "Mối quan hệ giữa kinh tế - xã hội (KT-XH) với quốc phòng, an ninh(QP,AN) được biểu hiện?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953324416,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "QP,AN vững mạnh quyết định sự tăng trưởng KH-XH bền vững"
+            },
+            {
+              "key": "B",
+              "text": "Bản chất QPAN quyết định bản chất chế độ KT-XH"
+            },
+            {
+              "key": "C",
+              "text": "QP,AN vững mạnh quyết định sự tồn tại và phát triển của chế độ KT-XH."
+            },
+            {
+              "key": "D",
+              "text": "KT-XH cung cấp nguồn nhân lực, vật lực cho QPAN"
+            }
+          ],
+          "question": "Mối quan hệ giữa kinh tế - xã hội  với quốc phòng, an ninh được biểu hiện?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953325893,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "QP,AN vững mạnh quyết định sự tăng trưởng KH-XH bền vững"
+            },
+            {
+              "key": "B",
+              "text": "Bản chất QP,AN quyết định bản chất chế độ KT-XH"
+            },
+            {
+              "key": "C",
+              "text": "QP,AN vững mạnh quyết định sự tồn tại và phát triển của chế độ KT-XH"
+            },
+            {
+              "key": "D",
+              "text": "QP,AN vững mạnh tạo môi trường thuận lợi cho KT-XH phát triển"
+            }
+          ],
+          "question": "Mối quan hệ giữa kinh tế - xã hội  với quốc phòng, an ninh được biểu hiện?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953327253,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "QP,AN vững mạnh quyết định sự tăng trưởng KH-XH bền vững"
+            },
+            {
+              "key": "B",
+              "text": "Đầu tư cho KT-XH làm giảm khả năng đầu tư cho QP,AN"
+            },
+            {
+              "key": "C",
+              "text": "QP,AN vững mạnh quyết định sự tồn tại và phát triển của chế độ KT-XH"
+            },
+            {
+              "key": "D",
+              "text": "Hoạt động QP,AN ảnh hưởng đến khả năng tích lũy, tái sản xuất kinh tế"
+            }
+          ],
+          "question": "Mối quan hệ giữa kinh tế - xã hội  với quốc phòng, an ninh được biểu hiện?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953327568,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phân vùng chiến lược kinh tế xã hội cà quốc phòng, an ninh"
+            },
+            {
+              "key": "B",
+              "text": "Lựa chọn và thực hiện các giải pháp chiến lược"
+            },
+            {
+              "key": "C",
+              "text": "Quy hoạch tổng thể phát triển KT-XH với QP, AN trên từng vùng"
+            },
+            {
+              "key": "D",
+              "text": "Quá trình phân công lao động và phân bố dân cư"
+            }
+          ],
+          "question": "Kết hợp phát triển KT - XH với tăng cường củng cố QPAN trong chiến lược phát triển KT - XH được thể hiện trong?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953328651,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tập trung xây dựng các khu công nghiệp quy mô lớn, bố trí tập trung"
+            },
+            {
+              "key": "B",
+              "text": "Tập trung xây dựng các khu công nghiệp quy mô trung binh, bố trí phân tán"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng các thành phố thành các siêu đô thị"
+            },
+            {
+              "key": "D",
+              "text": "Tập trung xây dựng các khu công nghiệp quy mô lớn, bố trí cài răng lược"
+            }
+          ],
+          "question": "Kết hợp phát triển KT-XH với tăng cường củng cố QP, AN trong vùng kinh tế trọng điểm cần?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953329559,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm mật độ dân cư trong đất liền và phát triển kinh tế biển, đảo"
+            },
+            {
+              "key": "B",
+              "text": "Thực hiện tốt việc phát triển kinh tế  với củng cố QP, AN ở vùng biển, đảo"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng vọng gác tiền tiêu, sử dụng lực lượng tại chỗ ngăn chặn địch từ xa"
+            },
+            {
+              "key": "D",
+              "text": "Phát triển kinh tế và dịch vụ biển, đảo"
+            }
+          ],
+          "question": "Thực hiện đưa dân ra đảo sinh sống nhằm?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953331173,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khoa học, hợp lý, cân đối và đồng thời"
+            },
+            {
+              "key": "B",
+              "text": "Khoa học, cân đối, đồng thời và phù hợp"
+            },
+            {
+              "key": "C",
+              "text": "Khoa học, hợp lý, cân đối và hài hòa"
+            },
+            {
+              "key": "D",
+              "text": "Khoa học, cân đối, đồng thời và hài hòa"
+            }
+          ],
+          "question": "Yêu cầu của việc kết phát triển KT-XH với tăng cường củng cố QP, AN là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953332119,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Yêu cầu nội sinh của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            },
+            {
+              "key": "B",
+              "text": "Yêu cầu phát sinh của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            },
+            {
+              "key": "C",
+              "text": "Yêu cầu sự nghiệp CNH, HĐH"
+            },
+            {
+              "key": "D",
+              "text": "Yêu cầu mới của sự phát triển kinh tế, yêu cầu được bảo vệ của nền kinh tế."
+            }
+          ],
+          "question": "Kết hợp kinh tế với quốc phòng, an ninh là yêu cầu như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953333362,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quy luật lịch sử nhân loại"
+            },
+            {
+              "key": "B",
+              "text": "Quy luật tự nhiên của xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Quy luật riêng của các theo CNXH."
+            },
+            {
+              "key": "D",
+              "text": "Quy luật phát triển của mọi chế độ xã hội."
+            }
+          ],
+          "question": "Kết hợp kinh tế với quốc phòng, an ninh là?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953333892,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quốc phú, binh cường."
+            },
+            {
+              "key": "B",
+              "text": "Động vi binh, tĩnh vi dân."
+            },
+            {
+              "key": "C",
+              "text": "Ngụ binh, ư nông."
+            },
+            {
+              "key": "D",
+              "text": "Các phương án đều sai."
+            }
+          ],
+          "question": "Nội dung nào không thể hiện chính sách kết hợp kinh tế với quốc phòng ở nước ta?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953334896,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Yếu tố địa lý"
+            },
+            {
+              "key": "B",
+              "text": "Địa hình núi rừng hiểm trở"
+            },
+            {
+              "key": "C",
+              "text": "Yếu tố thời tiết"
+            },
+            {
+              "key": "D",
+              "text": "Yếu tố địa hình, thời tiết"
+            }
+          ],
+          "question": "Những vấn đề cơ bản về lịch sử nghệ thuật quân sự Việt Nam * Yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953336218,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các dân tộc ở Việt Nam chung sống hoà thuận, yêu quê hương đất nước"
+            },
+            {
+              "key": "B",
+              "text": "Yếu tố chính trị, văn hoá - xã hội"
+            },
+            {
+              "key": "C",
+              "text": "Dân tộc ta có tính thần đoàn kết, thông minh, sang tạo"
+            },
+            {
+              "key": "D",
+              "text": "Dân tộc ta có tinh thần chống ngoại xâm kiên cường, bất khuất."
+            }
+          ],
+          "question": "Một trong những yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953336553,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tích cực chuẩn bị, tiến công liên tục từ nhỏ đến lớn, từ cục bộ đến toàn bộ."
+            },
+            {
+              "key": "B",
+              "text": "Tích cực tiến công liên tục và phòng ngự toàn diện."
+            },
+            {
+              "key": "C",
+              "text": "Tích cực chuẩn bị tiến công phá thế tiến công của địch"
+            },
+            {
+              "key": "D",
+              "text": "Tích cực chuẩn bị tiến công kiên quyết, liên tục."
+            }
+          ],
+          "question": "Trong nghệ thuật đánh giặc của tổ tiên ta, thể hiện cách tiến công như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953338278,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Yếu tố địa lý"
+            },
+            {
+              "key": "B",
+              "text": "Địa hình núi rừng hiểm trở"
+            },
+            {
+              "key": "C",
+              "text": "Yếu tố thời tiết"
+            },
+            {
+              "key": "D",
+              "text": "Yếu tố địa hình, thời tiết"
+            }
+          ],
+          "question": "Yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953338858,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các dân tộc ở Việt Nam chung sống hoà thuận, yêu quê hương đất nước"
+            },
+            {
+              "key": "B",
+              "text": "Yếu tố chính trị, văn hoá - xã hội"
+            },
+            {
+              "key": "C",
+              "text": "Dân tộc ta có tinh thần đoàn kết, thông minh, sáng tạo"
+            },
+            {
+              "key": "D",
+              "text": "Dân tộc ta có tinh thần chống ngoại xâm kiên cường, bất khuất."
+            }
+          ],
+          "question": "Một trong những yếu tố cơ bản tác động đến sự hình thành nghệ thuật đánh giặc của tổ tiên ta là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953339749,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tích cực chuẩn bị, tiến công liên tục từ nhỏ đến lớn, từ cục bộ đến toàn bộ."
+            },
+            {
+              "key": "B",
+              "text": "Tích cực tiến công liên tục và phòng ngự toàn diện."
+            },
+            {
+              "key": "C",
+              "text": "Tích cực chuẩn bị tiến công phá thế tiến công của địch"
+            },
+            {
+              "key": "D",
+              "text": "Tích cực chuẩn bị tiến công kiên quyết, liên tục."
+            }
+          ],
+          "question": "Trong nghệ thuật đánh giặc của tổ tiên ta, thể hiện cách tiến công như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953340819,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chiến tranh toàn diện"
+            },
+            {
+              "key": "B",
+              "text": "Chiến tranh tổng lực"
+            },
+            {
+              "key": "C",
+              "text": "Chiến tranh toàn dân"
+            },
+            {
+              "key": "D",
+              "text": "Chiến tranh du kích"
+            }
+          ],
+          "question": "Xây dựng cả nước thành một chiến trường, mỗi người dân là một người lính đánh giặc là thể hiện nghệ thuật chiến tranh gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953341881,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nghệ thuật toàn dân đánh giặc trên mọi vùng miền"
+            },
+            {
+              "key": "B",
+              "text": "Nghệ thuật đánh giặc toàn diện trên mọi mặt trận"
+            },
+            {
+              "key": "C",
+              "text": "Nghệ thuật chiến tranh nhân dân, toàn dân đánh giặc"
+            },
+            {
+              "key": "D",
+              "text": "Nghệ thuật tác chiến của chiến tranh nhân dân."
+            }
+          ],
+          "question": "Một trong những nội dung nghệ thuật đánh giặc của tổ tiên ta là gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953343184,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nghệ thuật đấu tranh quân sự quyết định thắng lợi trong chiến tranh"
+            },
+            {
+              "key": "B",
+              "text": "Nghệ thuật lấy nhỏ đánh lớn, lấy ít thắng nhiều, lấy yếu thắng mạnh"
+            },
+            {
+              "key": "C",
+              "text": "Nghệ thuật đánh vào lòng  người"
+            },
+            {
+              "key": "D",
+              "text": "Nghệ thuật kết hợp đấu tranh giữa các mặt trận quân sự, chính trị, ngoại giao, binh vận"
+            }
+          ],
+          "question": "Một trong những nội dung nghệ thuật đánh giặc của của tổ tiên ta là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953344290,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nguyễn Trãi"
+            },
+            {
+              "key": "B",
+              "text": "Quang Trung"
+            },
+            {
+              "key": "C",
+              "text": "Trần Quốc Tuấn"
+            },
+            {
+              "key": "D",
+              "text": "Lý thường Kiệt"
+            }
+          ],
+          "question": "Binh thư yếu lược là tác phẩm của ai?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953344412,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiêu thổ, thanh giã"
+            },
+            {
+              "key": "B",
+              "text": "Tiên phát chế nhân"
+            },
+            {
+              "key": "C",
+              "text": "Mưu phạt công tâm"
+            },
+            {
+              "key": "D",
+              "text": "Thần tốc, bất ngờ và quyết liệt"
+            }
+          ],
+          "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Nhà Lý là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953345615,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiêu thổ, thanh giã"
+            },
+            {
+              "key": "B",
+              "text": "Tiên phát chế nhân"
+            },
+            {
+              "key": "C",
+              "text": "Mưu phạt công tâm"
+            },
+            {
+              "key": "D",
+              "text": "Thần tốc, bất ngờ và quyết liệt"
+            }
+          ],
+          "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Nhà Trần là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953346451,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiêu thổ, thanh giã"
+            },
+            {
+              "key": "B",
+              "text": "Tiên phát chế nhân"
+            },
+            {
+              "key": "C",
+              "text": "Mưu phạt công tâm"
+            },
+            {
+              "key": "D",
+              "text": "Thần tốc, bất ngờ và quyết liệt"
+            }
+          ],
+          "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Lê Lợi, Nguyến Trãi  là gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953347470,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiêu thổ, thanh giã"
+            },
+            {
+              "key": "B",
+              "text": "Tiên phát chế nhân"
+            },
+            {
+              "key": "C",
+              "text": "Mưu phạt công tâm"
+            },
+            {
+              "key": "D",
+              "text": "Thần tốc, bất ngờ và quyết liệt"
+            }
+          ],
+          "question": "Tư tưởng, nghệ thuật đánh giặc tiêu biểu của Nguyễn Huệ - Quang Trung  là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953349319,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công thành, diệt viện"
+            },
+            {
+              "key": "B",
+              "text": "Tránh thế ban mai, đánh lúc chiều tà"
+            },
+            {
+              "key": "C",
+              "text": "Tránh chỗ mạnh, đánh chỗ yếu, nơi điểm yếu của địch"
+            },
+            {
+              "key": "D",
+              "text": "Tiến công vào bộ phận hậu cần phía sau của địch"
+            }
+          ],
+          "question": "Nhà Trần đã sử dụng kế sách đánh giặc như thế nào trong cuộc kháng chiến chống quân Nguyên Mông?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953349795,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nghệ thuật lấy nhỏ đánh lớn, lấy ít địch nhiều, lấy yếu chống mạnh"
+            },
+            {
+              "key": "B",
+              "text": "Nghệ thuật lấy nhỏ đánh lớn, lấy ít thắng nhiều, lấy yếu thắng mạnh"
+            },
+            {
+              "key": "C",
+              "text": "Nghệ thuật lấy nhỏ đánh lớn, lấy ít thắng nhiều, lấy yếu chống mạnh"
+            },
+            {
+              "key": "D",
+              "text": "Nghệ thuật lấy nhỏ đánh lớn, lấy ít địch nhiều, lấy yếu thắng mạnh"
+            }
+          ],
+          "question": "Một trong những nội dung nghệ thuật đánh giặc của của tổ tiên ta là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953351063,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiến công"
+            },
+            {
+              "key": "B",
+              "text": "Phòng ngự"
+            },
+            {
+              "key": "C",
+              "text": "Hoà hoãn"
+            },
+            {
+              "key": "D",
+              "text": "Phản công"
+            }
+          ],
+          "question": "Tư tưởng chỉ đạo tác chiến xuyên suốt trong chuẩn bị và tiến hành chiến tranh giữ nước của cha ông ta là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953352274,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ động tiến công, phòng ngự"
+            },
+            {
+              "key": "B",
+              "text": "Tiến công kiên quyết, liên tục C Tích cực chủ động tiên công"
+            },
+            {
+              "key": "D",
+              "text": "Chủ động tiến công, phản công"
+            }
+          ],
+          "question": "Tư tưởng xuyên suốc trong nghệ thuật  đánh giặc của tổ tiên là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953353102,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chiến dịch Việt Bắc-Thu Đông năm 1947"
+            },
+            {
+              "key": "B",
+              "text": "Chiến dịch Điện Biên Phủ 1954"
+            },
+            {
+              "key": "C",
+              "text": "Chiến dịch Hồ Chí Minh 1975"
+            },
+            {
+              "key": "D",
+              "text": "Chiến dịch Thành Cổ, Quảng trị 1972"
+            }
+          ],
+          "question": "Phương châm tác chiến “ Đánh nhanh, thắng nhanh” là của chiến dịch nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953354234,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tư tưởng vũ trang toàn dân của Hồ Chí Minh"
+            },
+            {
+              "key": "B",
+              "text": "Tư tưởng lãnh đạo cách mạng của Hồ Chí Minh"
+            },
+            {
+              "key": "C",
+              "text": "Tư tưởng quân sự của Hồ Chí Minh"
+            },
+            {
+              "key": "D",
+              "text": "Tư tưởng chiến tranh Hồ chí Minh"
+            }
+          ],
+          "question": "Một trong những cơ sở hình thành nghệ thuật quân sự Việt Nam từ khi có Đảng lãnh đạo là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953354758,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Rất quan trong"
+            },
+            {
+              "key": "B",
+              "text": "Quan trọng"
+            },
+            {
+              "key": "C",
+              "text": "Quan trọng đặc biệt"
+            },
+            {
+              "key": "D",
+              "text": "Ít quan trọng"
+            }
+          ],
+          "question": "Xây dựng và bảo vệ chủ quyền biển, đảo, biên giới quốc gia trong tình hình mới * Trong chiển lược phòng thủ bảo vệ Tổ quốc, vùng núi biên giới có vai trò như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953355478,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vùng chiến lược trọng yếu"
+            },
+            {
+              "key": "B",
+              "text": "Vùng chiến lược quan trọng"
+            },
+            {
+              "key": "C",
+              "text": "Vùng chiến lược đặc biệt"
+            },
+            {
+              "key": "D",
+              "text": "Vùng chiến lược ít trọng"
+            }
+          ],
+          "question": "Trong chiển lược phòng thủ bảo vệ Tổ quốc, vùng núi biên giới có vai trò như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953357031,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vùng kinh tế trọng điểm"
+            },
+            {
+              "key": "B",
+              "text": "Vùng biển, đảo"
+            },
+            {
+              "key": "C",
+              "text": "Vùng núi, biên giới"
+            },
+            {
+              "key": "D",
+              "text": "Cả ba vùng"
+            }
+          ],
+          "question": "Trong chiến lược bảo vệ Tổ quốc, vùng nào là vùng chiến lược trọng yếu?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953357684,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vùng kinh tế trọng điểm"
+            },
+            {
+              "key": "B",
+              "text": "Vùng biển, đảo"
+            },
+            {
+              "key": "C",
+              "text": "Vùng núi, biên giới"
+            },
+            {
+              "key": "D",
+              "text": "Cả ba vùng"
+            }
+          ],
+          "question": "Vùng nào là vùng dễ mất ổn định về QP, AN trong bối cảnh hiện nay?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953359195,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công nghiệp và khoa học, công nghệ, giáo dục"
+            },
+            {
+              "key": "B",
+              "text": "Nông, Lâm, Ngư nghiệp"
+            },
+            {
+              "key": "C",
+              "text": "Công nghiệp, giao thông vận tải và xây dựng cơ bản"
+            },
+            {
+              "key": "D",
+              "text": "Công nghiệp quốc phòng, khoa học và công nghệ, giáo dục"
+            }
+          ],
+          "question": "Phần lớn nguồn lực để xây dựng và bảo vệ Tổ quốc, được huy động từ ngành, lĩnh vực kinh tế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953360180,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát huy cao nhất sức mạnh của dân tộc kết hợp với sức mạnh của thời đại."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ của Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Quán triệt đường lối độc lập, tự chủ; đồng thời chủ động tích cực hội nhập quốc tế."
+            },
+            {
+              "key": "D",
+              "text": "Luôn nhất quán và kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội."
+            }
+          ],
+          "question": "Nội dung nào sau đây phản ánh đúng mục tiêu của Đảng về Chiến lược bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa trong tình hình mới?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953361314,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giữ vững sự lãnh đạo trực tiếp, tuyệt đối về mọi mặt của Đảng."
+            },
+            {
+              "key": "B",
+              "text": "Giữ vững môi trường hòa bình, ổn định để phát triển kinh tế - xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Chỉ chú trọng xây dựng sức mạnh của đất nước về văn hóa - xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Kết hợp chặt chẽ hai nhiệm vụ chiến lược xây dựng và bảo vệ Tổ quốc."
+            }
+          ],
+          "question": "Nội dung nào sau đây không phản ánh đúng quan điểm chỉ đạo của Đảng về Chiến lược bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa trong tình hình mới?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953361869,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "đối tác."
+            },
+            {
+              "key": "B",
+              "text": "đối tượng."
+            },
+            {
+              "key": "C",
+              "text": "đồng đội."
+            },
+            {
+              "key": "D",
+              "text": "đồng minh."
+            }
+          ],
+          "question": "Bất kì thế lực nào có âm mưu và hành động chống phá mục tiêu của Việt Nam trong sự nghiệp xây dựng và bảo vệ Tổ quốc đều là"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953362486,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "320 điều và 9 phụ lục."
+            },
+            {
+              "key": "B",
+              "text": "7 chương với 55 điều."
+            },
+            {
+              "key": "C",
+              "text": "9 chương với 62 điều."
+            },
+            {
+              "key": "D",
+              "text": "36 điều và 8 phụ lục."
+            }
+          ],
+          "question": "Luật Biển Việt Nam năm 2012 bao gồm"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953364044,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "vùng nội thủy và tiếp giáp lãnh hải."
+            },
+            {
+              "key": "B",
+              "text": "lãnh hải và vùng tiếp giáp lãnh hải."
+            },
+            {
+              "key": "C",
+              "text": "thềm lục địa và lòng đất dưới đáy biển."
+            },
+            {
+              "key": "D",
+              "text": "đáy biển và lòng đất dưới đáy biển."
+            }
+          ],
+          "question": "Theo quy định trong Luật Biển Việt Nam năm 2012: vùng biển quốc tế là tất cả các vùng biển nằm ngoài vùng đặc quyền kinh tế của Việt Nam và các quốc gia khác, nhưng không bao gồm"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953364528,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "vùng nội thủy ra phía biển."
+            },
+            {
+              "key": "B",
+              "text": "đường cơ sở ra phía biển."
+            },
+            {
+              "key": "C",
+              "text": "ranh giới ngoài của lãnh hải."
+            },
+            {
+              "key": "D",
+              "text": "ranh giới ngoài thềm lục địa."
+            }
+          ],
+          "question": "Lãnh hải là vùng biển có chiều rộng 12 hải lí tính từ"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953365692,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "nội thủy."
+            },
+            {
+              "key": "B",
+              "text": "vùng tiếp giáp lãnh hải."
+            },
+            {
+              "key": "C",
+              "text": "vùng đặc quyền kinh tế."
+            },
+            {
+              "key": "D",
+              "text": "thềm lục địa."
+            }
+          ],
+          "question": "Vùng biển tiếp liền và nằm ngoài lãnh hải Việt Nam, hợp với lãnh hải thành một vùng biển có chiều rộng 200 hải lí tính từ đường cơ sở, được gọi là"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953366395,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "350 hải lí."
+            },
+            {
+              "key": "B",
+              "text": "200 hải lí."
+            },
+            {
+              "key": "C",
+              "text": "12 hải lí."
+            },
+            {
+              "key": "D",
+              "text": "10 hải lí."
+            }
+          ],
+          "question": "Ranh giới ngoài thềm lục địa cách đường cơ sở không quá"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953368125,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hoàng Sa và Thổ Chu."
+            },
+            {
+              "key": "B",
+              "text": "Hoàng Sa và Trường Sa."
+            },
+            {
+              "key": "C",
+              "text": "Trường Sa và Phú Quý."
+            },
+            {
+              "key": "D",
+              "text": "Thổ Chu và Phú Quý."
+            }
+          ],
+          "question": "Việt Nam có hai quần đảo xa bờ là"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953369333,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "một mốc quốc giới duy nhất."
+            },
+            {
+              "key": "B",
+              "text": "các tọa độ trên hải đồ."
+            },
+            {
+              "key": "C",
+              "text": "hệ thống mốc quốc giới."
+            },
+            {
+              "key": "D",
+              "text": "hệ tọa độ trên đất liền."
+            }
+          ],
+          "question": "Biên giới quốc gia trên đất liền được hoạch định và đánh dấu trên thực địa bằng"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953369759,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Biên giới quốc gia trên biển."
+            },
+            {
+              "key": "B",
+              "text": "Biên giới quốc gia trên không."
+            },
+            {
+              "key": "C",
+              "text": "Biên giới quốc gia trên đất liền."
+            },
+            {
+              "key": "D",
+              "text": "Biên giới quốc gia trong lòng đất."
+            }
+          ],
+          "question": "“Mặt thẳng đứng từ biên giới quốc gia trên đất liền và biên giới quốc gia trên biển xuống lòng đất” - đó là nội dung của khái niệm nào sau đây?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953371001,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phá hoại an ninh, trật tự, an toàn xã hội ở khu vực biên giới."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ môi trường, tài nguyên thiên nhiên và lợi ích quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Vận chuyển qua biên giới hàng hóa mà nhà nước không cấm."
+            },
+            {
+              "key": "D",
+              "text": "Tố giác những hành vi gây hư hại, làm xê dịch mốc quốc giới."
+            }
+          ],
+          "question": "Hành vi nào dưới đây bị nghiêm cấm trong bảo vệ biên giới quốc gia của Việt Nam?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953372169,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mặc kệ, vì đó không phải là việc của mình."
+            },
+            {
+              "key": "B",
+              "text": "Khuyến khích A Páo nên thực hiện hành vi đó."
+            },
+            {
+              "key": "C",
+              "text": "Khuyên A Páo không nên thực hiện hành vi đó."
+            },
+            {
+              "key": "D",
+              "text": "Cùng với A Páo lùa trâu sang bên kia biên giới."
+            }
+          ],
+          "question": "Đọc tình huống dưới đây và trả lời câu hỏi: * * Tình huống: Nhà bạn A Páo ở khu vực biên giới. Hằng ngày A Páo đi chăn trâu sau giờ học. Khu vực gần nhà hết cỏ, A Páo phải lùa trâu ra sát bìa rừng, nơi có cột mốc biên giới. Bên kia cột mốc có bãi cỏ xanh tốt, A Páo định lùa trâu sang đó, hễ trâu ăn no là quay về Việt Nam ngay. * * Câu hỏi: Trong trường hợp này, nếu là bạn thân của A Páo, em nên lựa chọn cách ứng xử nào sau đây?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953372672,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "ngày 3/3 hằng năm."
+            },
+            {
+              "key": "B",
+              "text": "ngày 18/3 hằng năm."
+            },
+            {
+              "key": "C",
+              "text": "ngày 22/12 hằng năm."
+            },
+            {
+              "key": "D",
+              "text": "ngày 7/5 hằng năm."
+            }
+          ],
+          "question": "Ở Việt Nam, Ngày biên phòng toàn dân được tổ chức vào"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953373462,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chấp hành các quy định của pháp luật về biên giới quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng, giữ gìn trật tự an toàn xã hội ở khu vực biên giới."
+            },
+            {
+              "key": "C",
+              "text": "Vận chuyển qua biên giới những văn hóa phẩm độc hại."
+            },
+            {
+              "key": "D",
+              "text": "Tham gia phong trào tự quản đường biên, mốc quốc giới."
+            }
+          ],
+          "question": "Nội dung nào sau đây không phản ánh đúng trách nhiệm của công dân trong việc quản lí, xây dựng và bảo vệ biên giới quốc gia?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953375343,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lực lượng vũ trang nhân dân Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng quân đội nhân dân Việt Nam"
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng công an nhân dân Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng thường trực địa phương"
+            }
+          ],
+          "question": "Xây dựng lực lượng DQTV, lực lượng DBĐV và động viên quốc phòng * Dân quân tự vệ là lực lượng quần chúng, một thành phần của lực lượng nào sau đây?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953376274,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lực lượng vũ trang quần chúng không thoát ly khỏi lao động sản xuất, công tác"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng vũ trang quần chúng, thoát ly khỏi lao động sản xuất, công tác"
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng vũ trang quần chúng, chỉ tham gia chiến đấu và phục vụ chiến đấu"
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng vũ trang quần chúng, chỉ giữ gìn an ninh trật tự, an toàn xã hội tại địa phương"
+            }
+          ],
+          "question": "Dân quân tự vệ là"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953376406,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngày 28/3"
+            },
+            {
+              "key": "B",
+              "text": "Ngày 26/3"
+            },
+            {
+              "key": "C",
+              "text": "Ngày 19/8"
+            },
+            {
+              "key": "D",
+              "text": "Ngày 22/12"
+            }
+          ],
+          "question": "Ngày truyền thống của lực lượng Dân quân tự vệ Việt Nam"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953377600,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ đội chủ lực, bộ đội địa phương và dân quân du kích"
+            },
+            {
+              "key": "B",
+              "text": "Quân đội nhân dân, công an nhân dân và dân quân tự vệ"
+            },
+            {
+              "key": "C",
+              "text": "Quân đội nhân dân, bộ đội biên phòng và dân quân du kích"
+            },
+            {
+              "key": "D",
+              "text": "Hải quân Việt Nam, công an nhân dân và dân quân tự vệ"
+            }
+          ],
+          "question": "Ba thứ quân của lực lượng quân đội nhân dân Việt Nam là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953379202,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ tịch Hồ Chí Minh"
+            },
+            {
+              "key": "B",
+              "text": "Đại tướng Võ Nguyên Giáp"
+            },
+            {
+              "key": "C",
+              "text": "Đại tướng Nguyễn Chí Thanh"
+            },
+            {
+              "key": "D",
+              "text": "Bộ trưởng Bộ quốc phòng"
+            }
+          ],
+          "question": "“Dân quân tự vệ và du kích là lực lượng của toàn dân tộc, là một lực lượng vô địch, là bức tường sắt của Tổ quốc. Vô luận kẻ thù hung bạo thế nào, hễ động vào lực lượng đó, bức tường đó thì kẻ địch nào cũng phải tan rã” là câu nói của ai?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953379445,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Toàn Đảng, toàn dân, của cả hệ thống chính trị."
+            },
+            {
+              "key": "B",
+              "text": "Đảng, Nhà nước và các địa phương"
+            },
+            {
+              "key": "C",
+              "text": "Toàn Đảng, toàn dân và toàn quân"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các ban nghành đoàn thể tại địa phương"
+            }
+          ],
+          "question": "Xây dựng lực lượng Dân quân tự vệ là trách nhiệm của:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953381126,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vững mạnh, rộng khắp, có số lượng phù hợp, coi trọng chất lượng là chính"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng Dân quân tự vệ bảo đảm số lượng đủ, chất lượng cao, xây dựng toàn diện nhưng có trọng tâm, trọng điểm"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng Dân quân tự vệ phải phát huy sức mạnh tổng hợp của cả hệ thống chính trị"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng Dân quân tự vệ đặt dưới sự lãnh đạo của Đảng các cấp ở địa phương,"
+            }
+          ],
+          "question": "Phương châm xây dựng lực lượng Dân quân tự vệ hiện nay là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953381986,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tham gia thực hiện các biện pháp về chiến tranh thông tin, chiến tranh không gian mạng theo quy định của pháp luật, quyết định của cấp có thẩm quyền"
+            },
+            {
+              "key": "B",
+              "text": "Phòng, chống, khắc phục hậu quả thảm họa, sự cố, thiên tai, dịch bệnh, cháy, nổ; tìm kiếm, cứu nạn, cứu hộ; bảo vệ rừng, bảo vệ môi trường và nhiệm vụ phòng thủ dân sự khác theo quy định của pháp luật."
+            },
+            {
+              "key": "C",
+              "text": "Tuyên truyền, vận động Nhân dân thực hiện đường lối, quan điểm của Đảng, chính sách, pháp luật của Nhà nước về quốc phòng, an ninh; tham gia xây dựng địa phương, cơ sở vững mạnh toàn diện, thực hiện chính sách xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Thực hiện nhiệm vụ huấn luyện quân sự, giáo dục chính trị, pháp luật, hội thi, hội thao, diễn tập."
+            }
+          ],
+          "question": "bộ, ngành * So với Luật Dân quân tự vệ năm 2009, Điều 5 Luật Dân quân tự vệ năm 2019 đã kế thừa và bổ sung nhiệm vụ nào sau đây?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953382797,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công dân trong độ tuổi quy định (nam từ 18 - 45 tuổi, nữ từ 18 - 40; nếu tình nguyện tham gia thêm 5 năm)."
+            },
+            {
+              "key": "B",
+              "text": "Công dân trong độ tuổi quy định (nam từ 18 - 50 tuổi, nữ từ 18 - 40; nếu tình nguyện tham gia thêm 5 năm)."
+            },
+            {
+              "key": "C",
+              "text": "Công dân trong độ tuổi quy định (nam từ 18 - 45 tuổi, nữ từ 18 - 40; nếu tình nguyện tham gia thêm 4 năm)."
+            },
+            {
+              "key": "D",
+              "text": "Công dân trong độ tuổi quy định (nam từ 18 - 50 tuổi, nữ từ 18 - 45; nếu tình"
+            }
+          ],
+          "question": "Đối tượng và thời hạn tham gia Dân quân tự vệ hiện nay là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953384251,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một trong những biện pháp xây dựng lực lượng Dân quân tự vệ hiện nay"
+            },
+            {
+              "key": "B",
+              "text": "Một trong những vai trò của lực lượng Dân quân tự vệ hiện nay"
+            },
+            {
+              "key": "C",
+              "text": "Một trong những quan điểm của Đảng về xây dựng lực lượng Dân quân tự vệ hiện nay"
+            },
+            {
+              "key": "D",
+              "text": "Một trong những nội dung xây dựng lực lượng Dân quân tự vệ hiện nay"
+            }
+          ],
+          "question": "nguyện tham gia thêm 4 năm). * “Phát huy sức mạnh tổng hợp trên địa bàn địa phương trong xây dựng lực lượng Dân quân tự vệ; xây dựng lực lượng Dân quân tự vệ gắn với xây dựng cơ sở vững mạnh toàn diện” là"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953384828,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sỹ quan dự bị, quân nhân chuyên nghiệp dự bị."
+            },
+            {
+              "key": "B",
+              "text": "Hạ sỹ quan và binh sỹ dự bị."
+            },
+            {
+              "key": "C",
+              "text": "Sỹ quan dự bị, quân nhân chuyên nghiệp dự bị, hạ sỹ quan và binh sỹ dự bị."
+            },
+            {
+              "key": "D",
+              "text": "Tất cả quân nhân."
+            }
+          ],
+          "question": "Quân nhân dự bị gồm:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953386161,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là lực lượng có khả năng phối hợp chặt chẽ với dân quân tự vệ, công an... làm tăng thêm sức mạnh chiến đấu trên các địa bàn trong khu vực phòng thủ, bảo đảm sự vững chắc của thế trận quốc phòng ở địa phương, cơ sở"
+            },
+            {
+              "key": "B",
+              "text": "Là lực lượng có khả năng tác chiến độc lập, làm tăng thêm sức mạnh chiến đấu trên các địa bàn trong khu vực phòng thủ, bảo đảm sự vững chắc của thế trận quốc phòng ở địa phương, cơ sở"
+            },
+            {
+              "key": "C",
+              "text": "Là lực lượng có khả năng phối hợp chặt chẽ với các lực lượng khác làm tăng thêm sức mạnh chiến đấu trên các địa bàn trong khu vực phòng thủ, bảo đảm sự vững chắc của thế trận quốc phòng toàn dân"
+            },
+            {
+              "key": "D",
+              "text": "Là lực lượng có có khả năng tác chiến độc lập trên các địa bàn trọng điểm, bảo đảm sự vững chắc của thế trận quốc phòng toàn dân."
+            }
+          ],
+          "question": "Lực lượng dự bị động viên là"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953386904,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một trong những quan điểm về xây dựng lực lượng dự bị động viên"
+            },
+            {
+              "key": "B",
+              "text": "Một trong những nhiệm vụ xây dựng lực lượng dự bị động viên"
+            },
+            {
+              "key": "C",
+              "text": "Một trong những biện pháp chủ yếu xây dựng lực lượng dự bị động viên"
+            },
+            {
+              "key": "D",
+              "text": "Một trong những giải pháp cơ bản xây dựng lực lượng dự bị động viên"
+            }
+          ],
+          "question": "“Bảo đảm số lượng đủ, chất lượng cao, xây dựng toàn diện nhưng có trọng tâm, trọng điểm” là"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953387488,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát huy sức mạnh của toàn dân trên tất cả các lĩnh vực hoạt động xã hội."
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng lực lượng dự bị động viên hùng mạnh, sẵn sàng chiến đấu cao."
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng lực lượng dự bị động viên đặt dưới sự lãnh đạo của Đảng các cấp ở địa phương, bộ, ngành."
+            },
+            {
+              "key": "D",
+              "text": "Phát huy sức mạnh tổng hợp của chính quyền ở địa phương."
+            }
+          ],
+          "question": "Một trong những quan điểm của Đảng Cộng Sản Việt Nam về xây dựng lực lượng dự bị động viên trong tình hình mới là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953389067,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tạo nguồn, đăng ký, quản lý lực lượng dự bị động viên."
+            },
+            {
+              "key": "B",
+              "text": "Tạo nguồn, biên chế và đăng ký lực lượng dự bị động viên"
+            },
+            {
+              "key": "C",
+              "text": "Tạo nguồn, tổ chức và quản lý lực lượng dự bị động viên"
+            },
+            {
+              "key": "D",
+              "text": "Tạo nguồn, quản lý và kiểm tra lực lượng dự bị động viên"
+            }
+          ],
+          "question": "Một trong những nội dung xây dựng lực lượng dự bị động viên là:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953389930,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sỹ quan tại ngũ."
+            },
+            {
+              "key": "B",
+              "text": "Hạ sỹ quan tại ngũ."
+            },
+            {
+              "key": "C",
+              "text": "Chiến sỹ tại ngũ."
+            },
+            {
+              "key": "D",
+              "text": "Nam sinh viên tốt nghiệp Đại học."
+            }
+          ],
+          "question": "Đối tượng tạo nguồn của lực lượng dự bị động viên là"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953390527,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nơi công tác"
+            },
+            {
+              "key": "B",
+              "text": "Nơi cư trú"
+            },
+            {
+              "key": "C",
+              "text": "Đơn vị dự bị động viên"
+            },
+            {
+              "key": "D",
+              "text": "Nơi tập trung động viên"
+            }
+          ],
+          "question": "Quân nhân dự bị động viên được đăng ký, quản lý tại:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953391608,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ban lãnh đạo cơ quan, đơn vị công tác"
+            },
+            {
+              "key": "B",
+              "text": "Ban chỉ huy quân sự xã (phường, thị trấn), Ban chỉ huy đơn vị dự bị động viên"
+            },
+            {
+              "key": "C",
+              "text": "Ban chỉ huy quân sự xã (phường, thị trấn), Ban chỉ huy quân sự huyện (quận, thị xã, thành phố thuộc tỉnh)"
+            },
+            {
+              "key": "D",
+              "text": "Ban chỉ huy quân sự huyện (quận, thị xã, thành phố thuộc tỉnh) và đơn vị dự bị"
+            }
+          ],
+          "question": "Cơ quan thực hiện việc đăng ký, quản lý quân nhân dự bị động viên là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953392566,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đơn vị biên chế thiếu, đơn vị biên chế khung thường trực, đơn vị không có khung thường trực, đơn vị biên chế đủ và đơn vị chuyên môn thời chiến."
+            },
+            {
+              "key": "B",
+              "text": "Đơn vị biên chế khung thường trực, đơn vị không có khung thường trực, đơn vị biên chế đủ và đơn vị chuyên môn thời chiến."
+            },
+            {
+              "key": "C",
+              "text": "Đơn vị biên chế thiếu, đơn vị không có khung thường trực, đơn vị biên chế đủ và đơn vị chuyên môn thời chiến."
+            },
+            {
+              "key": "D",
+              "text": "Đơn vị biên chế thiếu, đơn vị biên chế khung thường trực, đơn vị không có khung thường trực và đơn vị chuyên môn thời chiến."
+            }
+          ],
+          "question": "động viên * Tổ chức biên chế lực lượng dự bị động viên theo các loại hình đơn vị bao gồm:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953394136,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Theo khả năng về sức khỏe, tuổi đời và nơi cư trú."
+            },
+            {
+              "key": "B",
+              "text": "Theo trình độ chuyên môn nghiệp vụ, theo nghề nghiệp"
+            },
+            {
+              "key": "C",
+              "text": "Theo trình độ kỹ thuật, chiến thuật, chức vụ và sức khỏe."
+            },
+            {
+              "key": "D",
+              "text": "Theo trình độ chuyên nghiệp quân sự, chuyên môn kỹ thuật với chức danh"
+            }
+          ],
+          "question": "Một trong những nguyên tắc sắp xếp quân nhân dự bị vào các đơn vị dự bị động viên là:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953394837,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phân vùng chiến lược gắn với xây dựng các vùng kinh tế, dân cư."
+            },
+            {
+              "key": "B",
+              "text": "Phân vùng chiến lược gắn với xây dựng hậu phương chiến lược."
+            },
+            {
+              "key": "C",
+              "text": "Phân vùng chiến lược gắn với bố trí lực lượng quân sự mạnh."
+            },
+            {
+              "key": "D",
+              "text": "Phân vùng chiến lược gắn với xây dựng các tuyến phòng thủ."
+            }
+          ],
+          "question": "Xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc *Một trong những nội dung xây dựng thế trận quốc phòng toàn dân"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953396159,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nền quốc phòng được tạo lập bằng sức mạnh mọi mặt, cả tiềm lực và thế trận quốc phòng."
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng nền quốc phòng bằng sức mạnh tổng hợp của cả nước."
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng nền quốc phòng bằng sức mạnh quân sự to lớn, kinh tế phát triển."
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng nền quốc phòng bằng sức mạnh của nền kinh tế quốc dân."
+            }
+          ],
+          "question": "Tính toàn diện trong xây dựng nền quốc phòng toàn dân được thể hiện ở nội dung."
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953396524,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kết hợp chặt chẽ xây dựng thế trận quốc phòng và chiến tranh nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Kết hợp chặt chẽ thế bố trí lực lượng và thế trận."
+            },
+            {
+              "key": "C",
+              "text": "Kết hợp chặt chẽ xây dựng thế trận quốc phòng toàn dân và an ninh nhân dân."
+            },
+            {
+              "key": "D",
+              "text": "Kết hợp chặt chẽ xây dựng thế trận quốc phòng và chiến tranh hiện đại của các quân binh chủng."
+            }
+          ],
+          "question": "Một trong những nội dung xây dựng tiềm lực quân sự, trong xây dựng tiềm lực quốc phòng toàn dân là"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953397956,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhằm thực hiện tốt nhiệm vụ chiến lượcbảo vệ Tổ quốc đểphát triển kinh tế."
+            },
+            {
+              "key": "B",
+              "text": "Nhằm thực hiện tốt nhiệm vụ củng cố quốc phòng - quân sự."
+            },
+            {
+              "key": "C",
+              "text": "Nhằm thực hiện tốt hai nhiệm vụ chiến lược xây dựng CNXH và bảo vệ Tổ quốc."
+            },
+            {
+              "key": "D",
+              "text": "Nhằm thực hiện tốt nhiệm vụ chiến lược của đất nước, bảo vệ Tổ quốc và chế độ Xã hội Chủ Nghĩa."
+            }
+          ],
+          "question": "Kết hợp kinh tế với quốc phòng - an ninh ở nước ta hiện nay, nhằm mục đích gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953398848,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giáo dục tình hình nhiệm vụ của cách mạng và nhiệm vụ quân sự."
+            },
+            {
+              "key": "B",
+              "text": "Giáo dục tình hình nhiệm vụ cách mạng, nhiệm vụ quốc phòng - an ninh"
+            },
+            {
+              "key": "C",
+              "text": "Giáo dục ý thức quốc phòng, kỹ thuật quân sự."
+            },
+            {
+              "key": "D",
+              "text": "Giáo dục tình hình nhiệm vụ quốc phòng - an ninh nhân dân."
+            }
+          ],
+          "question": "Thực hiện biện pháp \"tăng cường giáo dục quốc phòng\"trong xây dựng nền quốc phòng toàn dân một trong những nội dung giáo dục đó là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953399853,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Từ truyền thống dân tộc ta trong chiến đấu chống giặc ngoại xâm."
+            },
+            {
+              "key": "B",
+              "text": "Từ bài học quí báu xây dựng lực lượng vũ trang nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "Từ truyền thống dân tộc ta trong sự nghiệp dựng nước và giữ nước."
+            },
+            {
+              "key": "D",
+              "text": "Từ truyền thống dân tộc ta trong chiến đấu chống giặc ngoại xâm, gữi nước."
+            }
+          ],
+          "question": "Từ cơ sở nào, chúng ta xác định tính chất toàn dân của nền quốc phòng toàn dân?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953400753,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng cường giáo dục ý thức trách nhiệm của công dân về  nhiêm vụ chiến lược"
+            },
+            {
+              "key": "B",
+              "text": "Tăng cường giáo dục nghĩa vụ công dân."
+            },
+            {
+              "key": "C",
+              "text": "Tăng cường giáo dục quốc phòng."
+            },
+            {
+              "key": "D",
+              "text": "Tăng cường giáo dục nhiệm vụ quốc phòng và an ninh nhân dân."
+            }
+          ],
+          "question": "Một trong những biện pháp chủ yếu xây dựng nền quốc phòng toàn dân là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953401889,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để đánh bại ý đồ xâm lược và lật đổ của kẻ thù."
+            },
+            {
+              "key": "B",
+              "text": "Để đánh bại mưu đồ của địch muốn kết hợp \"thù trong giặc ngoài\" để chống phá cách mạng nước ta."
+            },
+            {
+              "key": "C",
+              "text": "Để đánh bại thủ đoạn tạo dựng, tập hợp lực lượng của kẻ thù."
+            },
+            {
+              "key": "D",
+              "text": "Để đánh bại thủ đoạn liên kết tập hợp lực lượng trong và ngoài nước của kẻ thù phản động."
+            }
+          ],
+          "question": "Trong xây dựng nền quốc phòng toàn dân, phải kết hợp thế trận quốc phòng toàn* *dân với thế trận an ninh nhân dân, vì lý do gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953403385,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quan hệ khăng khít tạo điều kiện cho nhau, nhiệm vụ xây dựng là hàng đầu."
+            },
+            {
+              "key": "B",
+              "text": "Trong khi đặt trọng tâm vào nhiệm vụ xây dựng CNXH chúng ta không một chút lơi lỏng nhiệm vụ bảo vệ Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Quan hệ đan chen nhau, nhiệm vụ xây dựng CNXH là quyết định."
+            },
+            {
+              "key": "D",
+              "text": "Trong khi đặt trọng tâm vào nhiệm vụ xây dựng CNXH cần củng cố và xây dựng LLVTND hùng mạnh để bảo vệ Tổ quốc, bảo vệ chế độ ."
+            }
+          ],
+          "question": "Vị trí mối quan hệ của hai nhiệm vụ chiến lược xây dựng và bảo vệ Tổ quốc như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953403877,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thường xuyên chăm lo xây dựng các lực lượng vũ trang vững mạnh, nhất là quân đội nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Thường xuyên củng cố quốc phòng và lực lượng bộ đội thường trực."
+            },
+            {
+              "key": "C",
+              "text": "Thường xuyên chăm lo xây dựng các lực lượng vũ trang nhân dân vững mạnh toàn diện."
+            },
+            {
+              "key": "D",
+              "text": "Thường xuyên chăm lo xây dựng các lực lượng vững mạnh, nhất là LLVT và Công an nhân dân."
+            }
+          ],
+          "question": "Một trong những biện pháp xây dựng nền quốc phòng toàn dân là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953405200,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giáo dục âm mưu, thủ đoạn, hành động của kẻ thù chống phá cách mạng."
+            },
+            {
+              "key": "B",
+              "text": "Giáo dục âm mưu, bản chất hiếu chiến của kẻ thù."
+            },
+            {
+              "key": "C",
+              "text": "Giáo dục để mọi người nhận rõ âm mưu, thủ đoạn của các thế lực thù địch đối với cách mạng nước ta."
+            },
+            {
+              "key": "D",
+              "text": "Giáo dục âm mưu, thủ đoạn, của kẻ thù khi tiến hành chiến tranh xâm lược."
+            }
+          ],
+          "question": "Thực hiện biện pháp \"tăng cường giáo dục quốc phòng\" trong xây dựng nền quốc phòng toàn dân như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953406101,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Từ qui luật lịch sử về vai trò quần chúng trong hoạt động xã hội."
+            },
+            {
+              "key": "B",
+              "text": "Từ vai trò của nhân dân trong lịch sử dựng nước giữ nước của dân tộc."
+            },
+            {
+              "key": "C",
+              "text": "Từ qui luật lịch sử về vai trò quần chúng nhân dân đối với sự phát triển của xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Từ vai trò lịch sử của quần chúng nhân dân trong dành và giữ chính quyền."
+            }
+          ],
+          "question": "Cơ sở nào chúng ta xác định tính chất toàn dân của nền quốc phòng toàn dân?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953407177,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Từ truyền thống dân tộc ta trong chiến đấu chống giặc ngoại xâm."
+            },
+            {
+              "key": "B",
+              "text": "Từ bài học quí báu xây dựng lực lượng vũ trang nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "Từ truyền thống dân tộc ta trong sự nghiệp xây dựng và bảo vệ Tổ quốc."
+            },
+            {
+              "key": "D",
+              "text": "Từ truyền thống chống giặc ngoại xâm của dân tộc ta trong chiến đấu."
+            }
+          ],
+          "question": "Tính chất nền quốc phòng của ta là toàn dân xuất phát từ đâu?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953408028,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quần chúng nhân dân lao động"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng quân đội và công an."
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng vũ trang nhân dân gồm  thứ quân Bộ đội chủ lực, bộ đội địa phương và dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng quân đội và công an nhân dân."
+            }
+          ],
+          "question": "Trong củng cố xây dựng nền quốc phòng toàn dân, lực lượng nào là nòng cốt?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953409180,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nên quốc phòng mang tính giai cấp, nhân dân sâu sắc."
+            },
+            {
+              "key": "B",
+              "text": "Là nền quốc phòng của dân, do dân, vì dân."
+            },
+            {
+              "key": "C",
+              "text": "Là nền quốc phòng bảo vệ bảo vệ quyền lợi của dân."
+            },
+            {
+              "key": "D",
+              "text": "Là nên quốc phòng do nhân dân xây dựng, mang tính nhân dân sâu sắc."
+            }
+          ],
+          "question": "Tính chất toàn dân của nền quốc phòng toàn dân. được biểu hiện tập trung như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953410088,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kết hợp chặt chẽ phát triển kinh tế xã hội với xây dựng quốc phòng an ninh bảo vệ Tổ quốc."
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng CNXH phải kết hợp chặt chẽ với bảo vệ Tổ quốc XHCN."
+            },
+            {
+              "key": "C",
+              "text": "Kết hợp xây dựng kinh tế với quốc phòng."
+            },
+            {
+              "key": "D",
+              "text": "Kết hợp chặt chẽ phát triển kinh tế xã hội với xây dựng quốc phòng an ninh quốc phòng."
+            }
+          ],
+          "question": "Một trong những quan điểm cơ bản xây dựng nền quốc phòng toàn dân là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953410836,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng dân quân tự vệ là nhiệm vụ của mọi người dân, của các cấp, ngành ."
+            },
+            {
+              "key": "B",
+              "text": "Thể hiện bằng sự tham gia đông đảo của toàn dân vào lực lượng dân quân tự vệ, trực tiếp làm nhiệm vụ bảo vệ Tổ quốc."
+            },
+            {
+              "key": "C",
+              "text": "Thể hiện băng việc xây dựng lực lượng dân quân tự vệ vững mạnh, rộng khắp."
+            },
+            {
+              "key": "D",
+              "text": "Thể hiện sự đóng góp của nội dung cho lực lượng dân quân tự vệ ngày càng vững mạnh."
+            }
+          ],
+          "question": "Quan điểm quốc phòng toàn dân được thể hiện trong tổ chức dân quân tự vệ như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953411957,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là điều kiện vật chất bảo đảm cho sức mạnh quốc phòng."
+            },
+            {
+              "key": "B",
+              "text": "Là điều kiện vật chất bảo đảm cho xây dựng lực lượng vũ trang và thế trận quốc phòng."
+            },
+            {
+              "key": "C",
+              "text": "Là cơ sở vật chất đủ trang bị nền quốc phòng hiện đại."
+            },
+            {
+              "key": "D",
+              "text": "Là điều kiện vật chất bảo đảm cho xây dựng thế trận quốc phòng toàn dân và an ninh nhân dân."
+            }
+          ],
+          "question": "Tiềm lực kinh tế trong nội dung xây dựng tiềm lực quốc phòng toàn dân có vị trí gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953413361,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Có ý thức trách nhiệm trong bảo vệ Tổ quốc, tích cực xây dựng nền quốc phòng, thế trận quốc phòng toàn dân."
+            },
+            {
+              "key": "B",
+              "text": "Có tinh thần trách nhiệm cao xây dựng lực lượng quốc phòng, thế trận quốc phòng toàn dân."
+            },
+            {
+              "key": "C",
+              "text": "Ý thức đầy đủ nhiệm vụ bảo vệ Tổ quốc, chủ động tích cực vận dụng vào lĩnh vực hoạt động cụ thể của mình, góp phần xây dựng nền quốc phòng toàn dân vững mạnh."
+            },
+            {
+              "key": "D",
+              "text": "Cả  ý trên đều sai"
+            }
+          ],
+          "question": "Quán triệt tính chất toàn diện trong xây dựng nền quốc phòng toàn dân, các cấp, ngành và toàn dân cần phải làm gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953413716,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quần chúng nhân dân lao động"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng quân đội và công an."
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng vũ trang nhân dân gồm  thứ quân Bộ đội chủ lực, bộ đội địa phương và dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng quân đội và công an nhân dân."
+            }
+          ],
+          "question": "Trong củng cố xây dựng nền quốc phòng toàn dân, lực lượng nào là nòng cốt?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953414484,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Trật tự an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "question": "Những vấn đề cơ bản về bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội *  “Sự ổn định, phát triển bền vững của chế độ xã hội chủ nghĩa và Nhà nước Cộng hoà xã hội chủ nghĩa Việt Nam, sự bất khả xâm phạm độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ của Tổ quốc” là nội dung của khái niệm nào dưới đây?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953415965,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Trật tự an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "question": "“Trạng thái xã hội có trật tự, kỷ cương trong đó mọi người được sống yên ổn trên cơ sở các quy phạm pháp luật và chuẩn mực đạo đức, pháp lý xác định” là nội dung của khái niệm nào dưới đây?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953416702,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Trật tự an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "question": "“Phòng ngừa, phát hiện, đấu tranh, ngăn chặn làm thất bại các hoạt động xâm phạm an ninh quốc gia” là nội dung của khái niệm nào dưới đây?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953418056,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Trật tự an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "question": "“Phòng ngừa, phát hiện, ngăn chặn, đấu tranh chống tội phạm và các hành vi vi phạm pháp luật về trật tự, an toàn xã hội” là nội dung của khái niệm nào dưới đây?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953419092,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảng Cộng sản Việt Nam."
+            },
+            {
+              "key": "B",
+              "text": "Nhà nước CHXHCN Việt Nam."
+            },
+            {
+              "key": "C",
+              "text": "Các tổ chức xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Các cá nhân."
+            }
+          ],
+          "question": "Trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự, an toàn xã hội, chủ thể nào dưới đây có trách nhiệm “đề ra đường lối chính sách và phương pháp đấu tranh đúng đắn và lãnh đạo chặt chẽ bộ máy Nhà nước các đoàn thể quần chúng thực hiện thắng lợi đường lối chính sách đó”?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953420010,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảng Cộng sản Việt Nam."
+            },
+            {
+              "key": "B",
+              "text": "Nhà nước CHXHCN Việt Nam."
+            },
+            {
+              "key": "C",
+              "text": "Các tổ chức xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Các cá nhân."
+            }
+          ],
+          "question": "Chủ thể nào dưới đây có trách nhiệm “quản lý xã hội bằng pháp luật, phát huy vai trò tác dụng của chính quyền các cấp; phối kết hợp chức năng của các cơ quan Nhà nước vào việc bảo vệ an ninh quốc gia và bảo đảm trật tự, an toàn xã hội”?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953421384,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công an nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Quân đội nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "Dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "Các tổ chức xã hội."
+            }
+          ],
+          "question": "Lực lượng nào giữ vai trò nòng cốt trong việc bảo vệ an ninh quốc gia, bảo đảm trật tự, an toàn xã hội, bảo vệ Đảng, Nhà nước, chế độ và nhân dân; đấu tranh phòng, chống tội phạm và vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953421822,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công an nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Quân đội nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "Dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "Các tổ chức xã hội."
+            }
+          ],
+          "question": "Lực lượng nào giữ vai trò nòng cốt trong việc: bảo vệ sự bất khả xâm phạm độc lập, chủ quyền, thống nhất toàn vẹn lãnh thổ của Tổ quốc; phối hợp với các lực lượng tham gia bảo vệ an ninh quốc gia và bảo đảm trật tự, an toàn xã hội?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953422677,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công an nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Quân đội nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "Dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "Các tổ chức xã hội."
+            }
+          ],
+          "question": "Lực lượng nào giữ vai trò nòng cốt trong việc cùng toàn dân đánh giặc ở địa phương khi có chiến tranh?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953423548,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "lực lượng công an nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "lực lượng Quân đội nhân dân."
+            },
+            {
+              "key": "C",
+              "text": "lực lượng Dân quân tự vệ."
+            },
+            {
+              "key": "D",
+              "text": "toàn Đảng, toàn dân và toàn quân."
+            }
+          ],
+          "question": "Bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội là nhiệm vụ của"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953425058,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không tụ tập bạn bè để thực hiện hành vi vi phạm pháp luật."
+            },
+            {
+              "key": "B",
+              "text": "Tố giác những người có hành vi vi phạm pháp luật."
+            },
+            {
+              "key": "C",
+              "text": "Kịp thời ngăn chặn hành vi vi phạm pháp luật của bạn bè."
+            },
+            {
+              "key": "D",
+              "text": "Đề ra đường lối chính sách và phương pháp đấu tranh đúng đắn."
+            }
+          ],
+          "question": "Nội dung nào dưới đây không phản ánh đúng trách nhiệm của học sinh trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953426026,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ông T."
+            },
+            {
+              "key": "B",
+              "text": "Ông Q."
+            },
+            {
+              "key": "C",
+              "text": "Anh M."
+            },
+            {
+              "key": "D",
+              "text": "Ông T và ông Q."
+            }
+          ],
+          "question": "Lợi dụng tình hình dịch Covid-19 đang diễn biến phức tạp, ông T và ông Q đã: tuyên truyền sai lệch chủ trương, đường lối chống dịch của Nhà nước; lôi kéo, xúi giục, kích động người dân trong thôn X chống đối lại chính quyền. Phát hiện hành vi vi phạm của ông T và Q, anh M đã nhanh chóng tố giác tới cơ quan công an. * * Theo em, trong trường hợp trên, nhân vật nào đã thể hiện đúng trách nhiệm của mình trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953427140,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không quan tâm, vì việc đó không ảnh hưởng gì tới mình."
+            },
+            {
+              "key": "B",
+              "text": "Bí mật báo cáo tới lãnh đạo nhà trường và cơ quan công an."
+            },
+            {
+              "key": "C",
+              "text": "Hào hứng tham gia cuộc đua xe để thể hiện bản thân."
+            },
+            {
+              "key": "D",
+              "text": "Rủ thêm các bạn khác cùng tham gia vào cuộc đua xe."
+            },
+            {
+              "key": "B",
+              "text": "biết được sự việc, anh T đã khuyên bạn nên: gỡ toàn bộ các video clip xấu ấy và tới cơ quan công an đầu thú để hưởng sự khoan hồng của pháp luật. Anh B cho rằng hành động của mình không sai vì mọi công dân đều có quyền tự do ngôn luận, nên không làm theo lời khuyên của anh T. Trước tình thế đó, dù rất đau lòng, nhưng anh T vẫn gửi đơn tố giác hành vi của anh B tới cơ quan công an."
+            }
+          ],
+          "question": "K là học sinh lớp 10 của trường THPT X. Thông qua T (bạn học cùng lớp), K biết được một Group kín trên facebook chuyên nói xấu các giáo viên và kích động các vụ đánh nhau trong trường. Ngày 28/4/2021, admin của group đó có đăng bài, kêu gọi các thành viên trong nhóm cùng tổ chức đua xe vào vào tối ngày 30/4 trên phố, giải thưởng cho người chiến thắng sẽ là một tập “tem giấy” được tẩm chất LSD (một loại chấy gây ảo giác cực mạnh). Bài đăng của admin nhanh chóng nhận được sự hưởng ứng của nhiều thành viên trong nhóm. * * Nếu là K, trong trường hợp này, em nên lựa chọn cách ứng xử như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953428061,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Anh"
+            },
+            {
+              "key": "B",
+              "text": ""
+            },
+            {
+              "key": "B",
+              "text": "Anh T."
+            },
+            {
+              "key": "C",
+              "text": "Cả anh B và T."
+            },
+            {
+              "key": "D",
+              "text": "Không có nhân vật nào."
+            }
+          ],
+          "question": "Đọc thông tin dưới đây và trả lời câu hỏi: * * Anh B là chủ nhân của kênh YouTube có tên là “Ôi quê tôi”. Thời gian đầu, anh B thường đăng tải các video clip quảng bá hình ảnh đẹp của đất nước và con người Việt Nam. Tuy nhiên, để tăng số lượng người đăng kí kênh và số lượt view, anh B đã chuyển hướng sang dàn dựng, cắt ghép và đăng tải những video clip không đúng sự thật, xuyên tạc chủ trương, đường lối của Đảng và nhà nước, bôi nhọ chính quyền. * * Anh T vốn là bạn thân của * Theo em, trong trường hợp trên, nhân vật nào đã thể hiện đúng trách nhiệm của mình trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự an toàn xã hội?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953429332,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Trật tự, an toàn xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "question": "“Sự ổn định, phát triển bền vững của chế độ xã hội chủ nghĩa và nhà nước Cộng hoà xã hội chủ nghĩa Việt Nam, sự bất khả xâm phạm độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ của Tổ quốc”- đó là nội dung của khái niệm nào dưới đây?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953430250,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Trật tự, an toàn xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "question": "Điền cụm từ thích hợp vào chỗ trống (….) trong khái niệm sau đây: “……là phòng ngừa, phát hiện, ngăn chặn, đấu tranh làm thất bại các hoạt động xâm phạm an ninh quốc gia và loại trừ nguy cơ đe doạ an ninh quốc gia”."
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953430742,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Trật tự, an toàn xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "question": "“Trạng thái xã hội bình yên, trong đó mọi người được sống yên trên cơ sở các quy tắc và chuẩn mực đạo đức, pháp lí xác định” - đó là nội dung của khái niệm nào dưới đây?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953432147,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Trật tự, an toàn xã hội."
+            },
+            {
+              "key": "D",
+              "text": "Bảo đảm trật tự, an toàn xã hội."
+            }
+          ],
+          "question": "Điền cụm từ thích hợp vào chỗ trống (….) trong khái niệm sau đây: “…. là phòng ngừa, phát hiện, ngăn chặn, đấu tranh chống tội phạm và các hành vi vi phạm pháp luật về trật tự, an toàn xã hội”"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953433202,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giữ gìn trật tự công cộng, bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "B",
+              "text": "Đấu tranh phòng, chống tội phạm về trật tự, an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh tư tưởng - văn hoá, an ninh dân tộc, tôn giáo."
+            },
+            {
+              "key": "D",
+              "text": "Phòng, chống thiên tai, dịch bệnh; bài trừ các tệ nạn xã hội."
+            }
+          ],
+          "question": "Đảm bảo trật tự, an toàn xã hội không bao gồm hoạt động nào dưới đây?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953433540,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ an ninh chính trị."
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh con người."
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh kinh tế."
+            },
+            {
+              "key": "D",
+              "text": "Bảo vệ môi trường."
+            }
+          ],
+          "question": "Bảo vệ an ninh quốc gia không bao gồm hoạt động nào dưới đây?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790953435244,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là lực lượng giữ vai trò nòng cốt."
+            },
+            {
+              "key": "B",
+              "text": "Tố cáo hành vi vi phạm pháp luật."
+            },
+            {
+              "key": "C",
+              "text": "Lãnh đạo trực tiếp, tuyệt đối về mọi mặt."
+            },
+            {
+              "key": "D",
+              "text": "Cung cấp thông tin cho cơ quan có thẩm quyền."
+            }
+          ],
+          "question": "Nội dung nào dưới đây phản ánh đúng trách nhiệm của Đảng Cộng sản Việt Nam trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953436188,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quốc hội."
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ."
+            },
+            {
+              "key": "C",
+              "text": "Mặt trận Tổ quốc."
+            },
+            {
+              "key": "D",
+              "text": "Tòa án nhân dân tối cao."
+            }
+          ],
+          "question": "Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, cơ quan nào dưới đây có trách nhiệm: quyết định các vấn đề chiến tranh và hoà bình, quy định về tình trạng khẩn cấp, ban hành Hiến pháp luật, nghị quyết…?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953437050,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quốc hội."
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ."
+            },
+            {
+              "key": "C",
+              "text": "Mặt trận Tổ quốc."
+            },
+            {
+              "key": "D",
+              "text": "Tòa án nhân dân tối cao."
+            }
+          ],
+          "question": "Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, cơ quan nào dưới đây có trách nhiệm: tổ chức thi hành Hiến pháp luật, nghị quyết và thống nhất quản lí?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953437451,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "là lực lượng nòng cốt."
+            },
+            {
+              "key": "B",
+              "text": "là lực lượng xung kích."
+            },
+            {
+              "key": "C",
+              "text": "lãnh đạo trực tiếp về mọi mặt."
+            },
+            {
+              "key": "D",
+              "text": "lãnh đạo tuyệt đối về mọi mặt."
+            }
+          ],
+          "question": "Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, lực lượng vũ trang nhân dân giữ vai trò"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953438967,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chấp hành chủ trương của Đảng, chính sách của Nhà nước."
+            },
+            {
+              "key": "B",
+              "text": "Thực hiện các biện pháp bảo vệ an ninh chính trị nội bộ"
+            },
+            {
+              "key": "C",
+              "text": "Tổ chức thi hành Hiến pháp luật, nghị quyết của Quốc hội."
+            },
+            {
+              "key": "D",
+              "text": "Quyết định các vấn đề liên quan đến chiến tranh và hoà bình."
+            }
+          ],
+          "question": "Nội dung nào dưới đây phản ánh đúng trách nhiệm của công dân trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953439477,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chấp hành nghiêm chỉnh chủ trương của Đảng, chính sách của Nhà nước."
+            },
+            {
+              "key": "B",
+              "text": "Tố cáo hành vi vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Cộng tác với công an trong phòng, chống các hành vi vi phạm pháp luật."
+            },
+            {
+              "key": "D",
+              "text": "Tổ chức thi hành Hiến pháp luật, nghị quyết của Quốc hội và thống nhất quản lí."
+            }
+          ],
+          "question": "Nội dung nào dưới đây không phản ánh đúngtrách nhiệm của công dân trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790953441314,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Gương mẫu thực hiện các nội quy của nhà trường."
+            },
+            {
+              "key": "B",
+              "text": "Thực hiện các biện pháp bảo vệ an ninh chính trị nội bộ"
+            },
+            {
+              "key": "C",
+              "text": "Tổ chức thi hành Hiến pháp luật, nghị quyết của Quốc hội."
+            },
+            {
+              "key": "D",
+              "text": "Quyết định các vấn đề liên quan đến chiến tranh và hoà bình."
+            }
+          ],
+          "question": "Nội dung nào dưới đây phản ánh đúng trách nhiệm của học sinh trong việc bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790953442273,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ sự an toàn của các lãnh đạo cấp cao."
+            },
+            {
+              "key": "B",
+              "text": "Kiểm tra cột mốc biên giới quốc gia."
+            },
+            {
+              "key": "C",
+              "text": "Tuyên truyền về tác hại của chất thải nhựa."
+            },
+            {
+              "key": "D",
+              "text": "Dọn dẹp rác thải tại bờ biển."
+            }
+          ],
+          "question": "Hoạt động nào dưới đây thuộc phạm vi bảo vệ an ninh biên giới?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953442477,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quốc hội."
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ."
+            },
+            {
+              "key": "C",
+              "text": "lực lượng vũ trang."
+            },
+            {
+              "key": "D",
+              "text": "công dân."
+            }
+          ],
+          "question": "“Tố cáo hành vi vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội; phát hiện, cung cấp kịp thời thông tin cho cơ quan có thẩm quyền” là trách nhiệm của"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790953443874,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là sự bình yên của đất nước, cuộc sống ấm no hạnh phúc của nhân dân Việt Nam."
+            },
+            {
+              "key": "B",
+              "text": "Là sự ổn định, phát triển bền vững của chế độ XHCN và Nhà nước CHXHCN Việt Nam."
+            },
+            {
+              "key": "C",
+              "text": "Là sự bất khả xâm phạm độc lập chủ quyền, thống nhất, toàn vẹn lãnh thổ Tổ quốc."
+            },
+            {
+              "key": "D",
+              "text": "Cả B và C đều đúng"
+            }
+          ],
+          "question": "An ninh quốc gia:"
+        }
+      ],
+      "title": "Quân Sự HP1"
+    },
+    {
+      "category": "Triết học Mác - Lênin",
+      "code": "MLN-300",
+      "durationMinutes": 15,
+      "id": 1790959521088,
+      "questions": [
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959520247,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tôn giáo - thần thoại - triết học"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Thần thoại - tôn giáo - triết học"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Triết học - tôn giáo - thần thoại"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thần thoại - triết học - tôn giáo"
+            }
+          ],
+          "question": "Hãy sắp xếp theo trình tự xuất hiện từ sớm nhất đến muộn nhất các hình thức thế giới quan sau: Triết học, tôn giáo, thần thoại:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959520909,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Thiên niên kỷ II. TCN"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Thế kỷ VIII - thế kỷ VI trước CN"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thế kỷ II sau CN"
+            }
+          ],
+          "question": "Triết học ra đời vào thời gian nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959522198,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "ấn Độ, Châu Phi , Nga"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "ấn Độ, Trung Quốc , Hy Lạp"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Ai Cập, ấn Độ , Trung Quốc"
+            }
+          ],
+          "question": "Triết học ra đời sớm nhất ở đâu?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959523744,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Như một đối tượng vật chất cụ thể"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Như một hệ đối tượng vật chất nhất định"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Như một chỉnh thể thống nhất"
+            }
+          ],
+          "question": "Triết học nghiên cứu thế giới như thế nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959524754,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Triết học là tri thức về thế giới tự nhiên"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Triết học là tri thức về tự nhiên và xã hội"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Triết học là tri thức lý luận của con người về thế giới"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Triết học là hệ thống tri thức lý luận chung nhất của con người về thế giới và vị trí của con người trong thế giới"
+            }
+          ],
+          "question": "Triết học là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959525154,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Xã hội phân chia thành giai cấp"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Xuất hiện tầng lớp lao động trí óc"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Tư duy của con người đạt trình độ tư duy khái quát cao và xuất hiện tầng lớp lao động trí óc có khả năng hệ thống tri thức của con người"
+            }
+          ],
+          "question": "Triết học ra đời trong điều kiện nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959526279,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Từ thực tiễn, do nhu cầu của thực tiễn"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Từ sự suy tư của con người về bản thân mình"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Từ sự sáng tạo của nhà tư tưởng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Từ sự vận động của ý muốn chủ quan của con người"
+            }
+          ],
+          "question": "Triết học ra đời từ đâu?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959527024,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Không"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Có"
+            }
+          ],
+          "question": "Đối tượng của triết học có thay đổi trong lịch sử không?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959528244,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Thế kỷ XIV - XV"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Thế kỷ XV - XVI"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thế kỷ XVI - XVII"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thế kỷ XVII - XVIII"
+            }
+          ],
+          "question": "Thời kỳ Phục Hưng ở Tây Âu là vào thế kỷ nào"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959529197,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Khôi phục chủ nghĩa duy vật thời kỳ cổ đại"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Khôi phục triết học thời kỳ cổ đại."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Khôi phục nền văn hoá cổ đại."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Khôi phục phép biện chứng tự phát thời kỳ cổ đại"
+            }
+          ],
+          "question": "Tên gọi thời kỳ Phục Hưng ở Tây Âu có nghĩa là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959530830,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Từ hình thái kinh tế - xã hội chiếm hữu nô lệ sang hình thái kinh tế - xã hội phong kiến."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Từ hình thái kinh tế - xã hội phong kiến sang kình thái kinh tế - xã hội tư bản chủ nghĩa."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Từ hình thái kinh tế - xã hội TBCN sang hình thái kinh tế - xã hội XHCN."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Từ hình thái kinh tế xã hội cộng sản nguyên thuỷ sang hình thái kinh tế xã hội chiếm hữu nô lệ"
+            }
+          ],
+          "question": "Thời kỳ Phục Hưng là thời kỳ quá độ từ hình thái kinh tế - xã hội nào sang hình thái kinh tế - xã hội nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959531383,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Thời kỳ Phục Hưng"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thời kỳ trung cổ"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thời kỳ cổ đại"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thời kỳ cận đại"
+            }
+          ],
+          "question": "Khoa học tự nhiên bắt đầu có sự phát triển mạnh mẽ vào thời kỳ nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959531931,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Khoa học tự nhiên hoàn toàn phụ thuộc vào thần học và tôn giáo"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Khoa học tự nhiên hoàn toàn độc lập với thần học và tôn giáo."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Khoa học tự nhiên dần dần độc lập với thần học và tôn giáo"
+            }
+          ],
+          "question": "Quan hệ giữa khoa học tự nhiên với thần học ở thời kỳ Phục Hưng như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959533831,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Sự phát triển khoa học tự nhiên củng cố thế giới quan duy tâm tôn giáo."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Sự phát triển KHTN không ảnh hưởng gì đến thế giới quan duy tâm tôn giáo."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Sự phát triển KHTN trở thành vũ khí chống lại thế giới quan duy tâm tôn giáo"
+            }
+          ],
+          "question": "Về khách quan, sự phát triển khoa học tự nhiên và thế giới quan duy tâm tôn giáo quan hệ với nhau như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959534521,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Là giai cấp tiến bộ, cách mạng"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Là giai cấp thống trị xã hội."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Là giai cấp bảo thủ lạc hậu."
+            }
+          ],
+          "question": "Trong thời kỳ Phục Hưng giai cấp tư sản có vị trí như thế nào đối với sự phát triển xã hội?"
+        },
+        {
+          "correctAnswer": "",
+          "explanation": "",
+          "id": 1790959535177,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Thời kỳ cổ đại."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thời kỳ trung cổ c Thời kỳ Phục Hưng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thời kỳ cận đại."
+            }
+          ],
+          "question": "Những nhà khoa học và triết học: Côpécních, Brunô, thuộc thời kỳ nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959536538,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Italia"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Đức"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Balan"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Pháp"
+            }
+          ],
+          "question": "Nicôlai Côpécních là nhà khoa học của nước nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959537794,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Thuyết trái đất là trung tâm của vũ trụ."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thuyết cấu tạo nguyên tử của vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thuyết ý niệm là nguồn gốc của thế giới."
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Thuyết mặt trời là trung tâm của vũ trụ."
+            }
+          ],
+          "question": "Nicôlai Côpécních đã đưa ra học thuyết nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959538875,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Đánh dấu sự ra đời của khoa học tự nhiên"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Đánh dấu bước chuyển từ khoa học tự nhiên thực nghiệm sang khoa học tự nhiên lý luận."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Đánh dấu sự giải phóng khoa học tự nhiên khỏi thần học và tôn giáo"
+            }
+          ],
+          "question": "Học thuyết về vũ trụ của Nicôlai Côpécních có ý nghĩa như thế nào đối với sự phát triển khoa học tự nhiên?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959539310,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Củng cố thế giới quan tôn giáo"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Không có ảnh hưởng gì đối với thế giới quan tôn giáo"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Bác bỏ nền tảng của thế giới quan tôn giáo"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chứng minh tính hợp lý của kinh thánh"
+            }
+          ],
+          "question": "Đối với thế giới quan tôn giáo, phát minh của Côpécních có ý nghĩa gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959540863,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Đức;"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Pháp;"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Balan;"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Italia"
+            }
+          ],
+          "question": "Brunô là nhà khoa học và triết học của nước nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959541722,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Ptôlêmê"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Platôn"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Nicôlai Côpécních"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Hêraclit"
+            }
+          ],
+          "question": "Brunô đồng ý với quan niệm của ai về vũ trụ?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959542081,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tính tồn tại thuần tuý của thế giới vật chất"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Tính thống nhất trên cơ sở tinh thần của vật chất."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Tính thống nhất vật chất của thế giới (của vũ trụ)"
+            }
+          ],
+          "question": "Brunô đã chứng minh về tính chất gì của thế giới (của vũ trụ)"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959543657,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Dự trên những giáo điều tôn giáo"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Dựa trên ý muốn chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Dựa trên tình cảm, khát vọng"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Dựa trên thực nghiệm"
+            }
+          ],
+          "question": "Khi xây dựng phương pháp mới của khoa học, Brunô đòi hỏi khoa học tự nhiên phải dựa trên cái gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959544593,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Tù trung thân"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Tử hình (thiêu sống)"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Giam lỏng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Tha bổng"
+            }
+          ],
+          "question": "Brunô bị toà án tôn giáo xử tội như thế nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959545171,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Có tính chất duy vật tự phát"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Có tính duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Có tính duy tâm chủ quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Còn pha trộn giữa các yếu tố duy vật và duy tâm, có tính chất phiếm thần luận"
+            }
+          ],
+          "question": "Triết học của các nhà tư tưởng thời kỳ Phục Hưng có đặc điểm gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959546634,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Có tính duy vật biện chứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Có tính duy tâm, siêu hình"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Có tính chất phiếm thần luận"
+            }
+          ],
+          "question": "Quan điểm triết học cho rằng thượng đế và tự nhiên chỉ là một gọi là quan điểm có tính chất gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959546915,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Thời kỳ cổ đại"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thời kỳ trung cổ"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Thời kỳ Phục Hưng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thời kỳ cận đại"
+            }
+          ],
+          "question": "Quan điểm triết học tự nhiên có tính chất phiếm thần luận là đặc trưng của triết học thời kỳ nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959547926,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Cách mạng vô sản"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Cách mạng giải phóng dân tộc"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Khởi nghĩa của nông dân"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Cách mạng tư sản."
+            }
+          ],
+          "question": "Những cuộc cách mạng nổ ra ở Hà Lan, Anh, Pháp... thời kỳ cận đại gọi là những cuộc cách mạng nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959549599,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Quan hệ sản xuất phong kiến"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Quan hệ sản xuất tư bản chủ nghĩa"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Quan hệ sản xuất chiếm hữu nô lệ"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Quan hệ sản xuất cộng sản nguyên thuỷ"
+            }
+          ],
+          "question": "Những cuộc cách mạng thời kỳ cận đại ở Tây Âu do mâu thuẫn giữa lực lượng sản xuất với quan hệ sản xuất nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959550689,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Mâu thuẫn giữa lực lượng sản xuất mới với QHSX phong kiến đã trở nên lỗi thời"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Mâu thuẫn giữa nông dân và địa chủ phong kiến"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Mâu thuẫn giữa nô lệ và chủ nô"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Mâu thuẫn giữa tư sản và vô sản"
+            }
+          ],
+          "question": "Các cuộc cách mạng ở Tây Âu thời kỳ cận đại nổ ra do mâu thuẫn nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959551796,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Giai cấp vô sản"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Giai cấp nông dân"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Giai cấp tư sản"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Giai cấp địa chủ phong kiến"
+            }
+          ],
+          "question": "Giai cấp nào lãnh đạo cuộc cách mạng thời kỳ cận đại ?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959552894,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Cuộc cách mạng ở Hà Lan và ý"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Cuộc cách mạng ở ý và ở áo"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Cuộc cách mạng ở Anh giữa thế kỷ XVII và cách mạng Pháp cuối thế kỷ XVIII."
+            }
+          ],
+          "question": "Cuộc cách mạng nào ở Tây Âu thời kỳ cận đại được C. Mác gọi là cuộc cách mạng có quy mô toàn Châu Âu và có ý nghĩa lớn đối với sự ra đời trật tự xã hội mới."
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959553707,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Trật tự xã hội chiếm hữu nô lệ thay cho trật tự xã hội cộng sản nguyên thuỷ"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Trật tự xã hội phong kiến thay cho trật tự xã hội chiếm hữu nô lệ"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Trật tự xã hội tư sản thay cho trật tự xã hội phong kiến."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Trật tự xã hội xã hội chủ nghĩa thay cho trật tự xã hội tư sản"
+            }
+          ],
+          "question": "Cuộc cách mạng ở Anh giữa thế kỷ XVII và cuộc cách mạng ở Pháp cuối TK XVIII đánh dấu sự thay thế của trật tự xã hội nào cho xã hội nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959554125,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Toán học"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Sinh học"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Hoá học"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Cơ học"
+            }
+          ],
+          "question": "Ngành khoa học nào phát triển rực rỡ nhất và có ảnh hưởng lớn nhất đến phương pháp tư duy của thời kỳ cận đại?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959555038,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Nước Anh"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Nước Đức"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Nước Pháp"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Nước Ba lan"
+            }
+          ],
+          "question": "Ph.Bêcơn là nhà triết học của nước nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959555939,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Giai cấp chủ nô"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Giai cấp địa chủ phong kiến"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Giai cấp nông dân"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Giai cấp tư sản và tầng lớp quý tộc mới."
+            }
+          ],
+          "question": "Về lập trường chính trị, Ph.Bêcơn là nhà tư tưởng của giai cấp nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959557705,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Có niềm tin vào thượng đế"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Có nhiệt tình làm việc"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Có tri thức về tự nhiên"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Có kinh nghiệm sống"
+            }
+          ],
+          "question": "Theo Ph. Bêcơn con người muốn chiếm được của cải của giới tự nhiên thì cần phải có cái gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959557927,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phương pháp kinh nghiệm (phương pháp con kiến)"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phương pháp kinh viện (phương pháp con nhện)"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phương pháp phân tích thực nghiệm (phương pháp con ong)"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Phương pháp a và b"
+            }
+          ],
+          "question": "Về phương pháp nhận thức Ph.Bêcơn phê phán phương pháp nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959559679,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phương pháp diễn dịch"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Phương pháp quy nạp"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phương pháp trừu tượng hoá"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Phương pháp mô hình hoá"
+            }
+          ],
+          "question": "Theo Ph. Bêcơn phương pháp nhận thức tốt nhất là phương pháp nào"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959560572,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Thời kỳ trung cổ"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thời kỳ cổ đại"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thời kỳ cận đại"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thời kỳ Phục hưng"
+            }
+          ],
+          "question": "Ph.Bêcơn gọi phương pháp con nhện là phương pháp triết học của các nhà tư tưởng thời kỳ nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959560906,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa kinh nghiệm"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa kinh viện"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thuyết bất khả tri"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật"
+            }
+          ],
+          "question": "Phương pháp \"con nhện\" theo Ph.Bêcơn là phương pháp của những nhà triết học theo khuynh hướng nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959562467,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phương pháp quy nạp"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phương pháp diễn dịch"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phương pháp kinh nghiệm"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Phương pháp kinh viện"
+            }
+          ],
+          "question": "Phương pháp rút ra kết quả riêng từ những kết luận chung, không tính đến sự tồn tại thực tế của sự vật, được gọi là phương pháp gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959563877,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa chiết trung"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa kinh viện"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa bất khả tri"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Chủ nghĩa kinh nghiệm"
+            }
+          ],
+          "question": "Phương pháp \"con kiến\" theo Ph.Bêcơn là phương pháp của các nhà triết học theo khuynh hướng nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959564345,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phương pháp \"con nhện\""
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Phương pháp \"con kiến\""
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phương pháp \"con ong\""
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Phương pháp thực nghiệm"
+            }
+          ],
+          "question": "Phương pháp nghiên cứu chỉ dựa vào kinh nghiệm thực tế, không có khái quát, theo Ph.Bêcơn được gọi là phương pháp gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959565655,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phương pháp \"con nhện\""
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phương pháp \"con kiến\""
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Phương pháp \"con ong\""
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Phương pháp suy diễn"
+            }
+          ],
+          "question": "Theo Ph.Bêcơn phương pháp nghiên cứu khoa học chân chính phải là phương pháp nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959566233,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            }
+          ],
+          "question": "Ph.Bêcơn là nhà triết học thuộc trường phái nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959567620,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa kinh viện"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Chủ nghĩa kinh nghiệm"
+            }
+          ],
+          "question": "Những trường phái triết học nào xem thường lý luận?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959568278,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa kinh nghiệm"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa kinh viện"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật siêu hình"
+            }
+          ],
+          "question": "Những nhà triết học nào xem thường kinh nghiệm, xa rời cuộc sống?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959569729,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Các nhà triết học duy vật đều thuộc chủ nghĩa kinh nghiệm và ngược lại"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Các nhà triết học duy tâm đều thuộc chủ nghĩa kinh viện và ngược lại"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Cả hai đều không đúng"
+            }
+          ],
+          "question": "Nhận định nào sau đây là đúng?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959570247,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "1560 - 1625"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "1561 - 1626"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "1562 - 1627"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "1563 - 1628"
+            }
+          ],
+          "question": "Ph. Bêcơn sinh vào năm bao nhiêu và mất năm bao nhiêu?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959571890,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "1500 - 1570"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "1550 - 1629"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "1588 - 1679"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "1587 - 1678"
+            }
+          ],
+          "question": "Tômat Hốpxơ sinh năm bao nhiêu và mất năm bao nhiêu?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959572035,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Ph. Bêcơn"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Tô mát Hốp Xơ"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Giôn Lốc Cơ"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Xpinôda"
+            }
+          ],
+          "question": "Ai là người sáng tạo ra hệ thống đầu tiên của chủ nghĩa duy vật siêu hình trong lịch sử triết học?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959573885,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật tự phát"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật siêu hình"
+            }
+          ],
+          "question": "Quan điểm của Tômát Hôpxơ về tự nhiên đứng trên lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959574409,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Giới tự nhiên là tổng các vật tồn tại khách quan có quảng tính (độ dài) phân biệt nhau bởi đại lượng, hình khối, vị trí và vận động đổi vị trí trong không gian"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Tính phong phú về chất không phải là thuộc tính khách quan của giới tự nhiên"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chất lượng của sự vật là hình thức tri giác chung"
+            }
+          ],
+          "question": "Chủ nghĩa duy vật của Tômát Hốp-xơ thể hiện ở quan điểm nào sau đây?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959575743,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Vận động chỉ là vận động cơ giới"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Vận động bao gồm cả vận động hoá học và sinh học"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Vận động là sự biến đổi chung"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Vận động là phương thức tồn tại của sinh vật"
+            }
+          ],
+          "question": "Tômát Hôpxơ quan niệm về vận động như thế nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959576887,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Giới tự nhiên tồn tại khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Giới tự nhiên là tổng số các vật có quảng tính (độ dài)"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Vận động cơ giới là thuộc tính của giới tự nhiên"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Vận động của giới tự nhiên là vận động cơ giới"
+            }
+          ],
+          "question": "Tính chất siêu hình trong quan niệm của Tômát Hốpxơ về tự nhiên thể hiện ở chỗ nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959577805,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Con người là một cơ thể sống phức tạp như động vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Con người là một bộ phận của tự nhiên"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Con người là một kết cấu vật chất"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Con người như một chiếc xe, mà tim là lò xo, khớp xương là cái bánh xe"
+            }
+          ],
+          "question": "Tính chất siêu hình trong quan niệm của Tômát Hốpxơ về con người thể hiện như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959578139,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy lý"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy danh"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Nghệ thuật kết hợp giữa chủ nghĩa duy lý và chủ nghĩa duy danh"
+            }
+          ],
+          "question": "Về phương pháp nhận thức, Tômat Hốp-xơ hiểu theo quan điểm nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959579365,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Duy lý luận"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Duy danh luận"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Kinh nghiệm luận"
+            }
+          ],
+          "question": "Tô mát Hốp-xơ hiểu bước chuyển từ cái riêng sang cái chung từ tri giác cảm tính đến khái niệm theo quan điểm nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959580510,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy thực"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy danh"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật tự phát"
+            }
+          ],
+          "question": "Quan niệm về bản chất khái niệm của Tômát Hốp-xơ thuộc khuynh hướng triết học nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959581181,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Là những đặc điểm chung của các sự vật của giới tự nhiên"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chỉ là tên của những cái tên."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Khái niệm là thực thể tinh thần tồn tại trước & độc lập với sự vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Khái niệm là bản chất của sự vật"
+            }
+          ],
+          "question": "Theo quan điểm duy Danh, Tômát Hốp xơ coi khái niệm là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959582680,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Cho nguồn gốc của nhà nước không phải từ thần thánh mà là sự qui ước và thoả thuận giữa con người."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Cho hình thức quân chủ là hình thức chính quyền lý tưởng."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Tôn giáo và giáo hội vẫn có ích cho nhà nước."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Coi quyền lực của giai cấp đại tư sản là vô hạn."
+            }
+          ],
+          "question": "Mặt tiến bộ trong quan điểm về xã hội của Tômát Hốpxơ là ở chỗ nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959583157,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Do thần thánh sáng tạo ra."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Do ý chí của giai cấp thống trị"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Do sự quy ước, thoả thuận giữa con người nhằm tránh những cuộc chiến tranh tàn khốc."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Do ý muốn chủ quan của cá nhân nhà tư tưởng."
+            }
+          ],
+          "question": "Tômát Hốp xơ cho nguồn gốc của nhà nước là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959584505,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Không có gì tiến bộ, chỉ là quan điểm duy tâm tôn giáo"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Có giá trị, vì đã phát triển quan điểm duy vật, về xã hội."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Có giá trị bác bỏ nguồn gốc thần thánh của nhà nước, đồng thời vẫn chứa đựng yếu tố duy tâm chủ nghĩa"
+            }
+          ],
+          "question": "Hãy đánh giá quan niệm của Tômát Hốp xơ về nhà nước cho rằng: nhà nước ra đời là do sự quy ước, thoả thuận giữa con người?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959585375,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Anh"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Bồ Đào Nha"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Mỹ"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Pháp"
+            }
+          ],
+          "question": "Đề-các-tơ là nhà triết học và khoa học của nước nào ?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959586013,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "1590 - 1650"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "1596 - 1654"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "1594 - 1654"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "1596 - 1650"
+            }
+          ],
+          "question": "Đề-các-tơ sinh vào năm nào và mất vào năm nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959587714,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Thuyết nhị nguyên"
+            }
+          ],
+          "question": "Khi giải quyết vấn đề cơ bản của triết học, Đềcáctơ đứng trên lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959587992,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Thực thể vật chất độc lập và quyết định thực thể ý thức."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thực thể vật chất không tồn tại độc lập mà phụ thuộc vào thực thể ý thức"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Thực thể vật chất và thực thể ý thức độc lập nhau, song song cùng tồn tại."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thực thể ý thức phụ thuộc vào thực thể vật chất, nhưng có tính độc lập tương đối."
+            }
+          ],
+          "question": "Đềcáctơ giải quyết mối quan hệ giữa vật chất và ý thức như thế nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959589761,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Duy vật; vì coi vật chất độc lập với ý thức"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Duy vật không triệt để; vì không thừa nhận vật chất quyết định ý thức"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Nhị nguyên vì thừa nhận hai thực thể tạo thành hai thế giới"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Duy tâm; vì thừa nhận thực thể vật chất và tinh thần tuy độc lập nhưng đều phụ thuộc vào thực thể thứ ba đó là thượng đế."
+            }
+          ],
+          "question": "Quan điểm của Đềcáctơ về quan hệ giữa vật chất và ý thức cuối cùng lại rơi vào quan điểm nào? Vì sao?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959590613,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Quan điểm duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Quan điểm duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Quan điểm nhị nguyên"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Quan điểm duy vật"
+            }
+          ],
+          "question": "Đềcáctơ đứng trên quan điểm nào trong lĩnh vực vật lý?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959591436,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tự nhiên là tổng các vật có quán tính"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Tự nhiên và thượng đế là một."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Tự nhiên là hiện thân của thượng đế"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Tự nhiên là một khối thống nhất gồm những hạt nhỏ vật chất có quán tính và vận động vĩnh viễn theo những quy luật cơ học"
+            }
+          ],
+          "question": "Trong lĩnh vực vật lý Đềcáctơ quan niệm về tự nhiên như thế nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959592181,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Đềcáctơ là nhà duy vật biện chứng vì coi vật chất tồn tại khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Đềcáctơ là nhà duy vật vì phủ nhận uy quyền của nhà thờ và tôn giáo"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Đềcáctơ là nhà triết học duy tâm vì đề cao sức mạnh của lý tưởng con người"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Đềcáctơ đem tính khoa học thay cho niềm tin tôn giáo mù quáng chống lại uy quyền của tôn giáo."
+            }
+          ],
+          "question": "Điều khẳng định nào sau đây là đúng?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959593327,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Đềcáctơ nghi ngờ khả năng nhận thức của con người."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Vì coi nghi ngờ là điểm xuất phát của nhận thức khoa học, nên Đềcáctơ phủ nhận khả năng nhận thức của con người."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Quan điểm của Đềcáctơ và Hium là như nhau vì đều nghi ngờ nhận thức của con người"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Đềcáctơ coi nghi ngờ là điểm xuất phát của nghiên cứu khoa học để phủ nhận sự mê tín, phủ nhận niềm tin tôn giáo"
+            }
+          ],
+          "question": "Điều nhận định nào sau đây là đúng?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959594694,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Nhấn mạnh vai trò của tư duy, duy lý"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Nhấn mạnh vai trò của cảm giác"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phủ nhận vai trò của chủ thể"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Đề cao kinh nghiệm."
+            }
+          ],
+          "question": "Luận điểm Đềcáctơ \"tôi tư duy vậy tôi tồn tại\" có ý nghĩa gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959595193,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Là thực tiễn"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Là tư duy rõ ràng, mạch lạc"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Là cảm giác, kinh nghiệm về sự vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Là được nhiều người thừa nhận ."
+            }
+          ],
+          "question": "Theo Đềcáctơ tiêu chuẩn của chân lý là gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959596581,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật tầm thường"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thuyết hoài nghi"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            }
+          ],
+          "question": "Luận điểm của Đềcáctơ \"Tôi tư duy vậy tôi tồn tại\" thể hiện khuynh hướng triết học nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959597762,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Hà Lan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Đức"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "áo"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Pháp"
+            }
+          ],
+          "question": "Xpinôda là nhà triết học nước nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959598370,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Duy vật biện chứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Duy tâm khách quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Duy vật và vô thần"
+            }
+          ],
+          "question": "Xpinôda là nhà triết học thuộc trường phái nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959599631,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Xpinôda là nhà triết học nhị nguyên"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Xpinôda là nhà triết học duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Xpinôda là nhà triết học duy vật biện chứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Xpinôda là nhà triết học nhất nguyên."
+            }
+          ],
+          "question": "Nhận định nào sau đây là đúng"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959600651,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Xpinôda là nhà triết học duy vật và vô thần"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Xpinôda là nhà triết học nhất nguyên coi quảng tính và tư duy là thuộc tính của một thực thể"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Xpinôda chống lại quan điểm nhị nguyên của Đềcáctơ."
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Xpinôda là nhà triết học nhị nguyên"
+            }
+          ],
+          "question": "Điều khẳng định nào sau đây về Xpinôda là sai?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959601426,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Thế giới là thế giới của các sự vật riêng lẻ"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thế giới là phức hợp cảm giác"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thế giới là sự tha hoá của ý niệm"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thế giới là cái bóng của thế giới ý niệm"
+            }
+          ],
+          "question": "Quan điểm duy vật của Xpinôda về thế giới là ở chỗ nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959602199,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Coi thế gới gồm các sự vật riêng lẻ"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Coi các sự vật trong thế giới đều có nguyên nhân"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Đồng nhất nguyên nhân với tính tất yếu coi ngẫu nhiên chỉ là phạm trù chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Khẳng định có thể nhận thức thế giới bằng phương pháp toán học."
+            }
+          ],
+          "question": "Tại sao quan điểm của Xpinôda lại rơi vào quan điểm của thuyết định mệnh máy móc?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959603534,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chịu ảnh hưởng của thuyết bất khả tri, không thừa nhận con người có khả năng nhận thức được thế giới."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chịu ảnh hưởng của những người theo vật hoạt luận, thừa nhận mọi vật đều có ý thức."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chịu ảnh hưởng của chủ nghĩa duy lý cho chỉ có con người mới có ý thức."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chịu ảnh hưởng của tôn giáo, cho ý thức có nguồn góc từ thần thánh."
+            }
+          ],
+          "question": "Quan niệm về ý thức của Xpinôda chịu ảnh hưởng của ai, và quan niệm đó như thế nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959604670,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Duy vật biện chứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Duy tâm khách quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Vật hoạt luận"
+            }
+          ],
+          "question": "Quan niệm về ý thức của Xpinôda thuộc loại nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959605185,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thuyết nhị nguyên"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Chủ nghĩa tự nhiên"
+            }
+          ],
+          "question": "Quan niệm về con người của Xpinôda đứng trên lập trường nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959606735,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy cảm"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy lý."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa kinh nghiệm."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            }
+          ],
+          "question": "Về nhận thức luận, Xpinôda theo chủ nghĩa nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959607196,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Giai đoạn nhận thức lý tính"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Giai đoạn nhận thức cảm tính"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Cả hai giai đoạn"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Không đạt được ở giai đoạn nào"
+            }
+          ],
+          "question": "Theo Xpinôda chân lý đáng tin cậy đạt được ở giai đoạn nhận thức nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959608686,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Là \"ánh sáng nội tâm\" giúp con người liên hệ trực tiếp với thượng đế"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Là trí tuệ anh minh như nền tảng của mọi tri thức"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Một năng lực trí tuệ của phép nhận thức sự vật"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Cả ba nội dung trên"
+            }
+          ],
+          "question": "Xpinôda quan niệm về nhận thức trực giác như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959609569,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Không"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Có, con người tự do hành động theo ý muốn của mình"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Có, con người chỉ có thể trở thành tự do khi được chỉ đạo bởi lý tính"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Không. Vì trong tự nhiên chỉ có cái tất yếu"
+            }
+          ],
+          "question": "Khái niệm đạo đức của Xpinôda gắn với khái niệm \"con người tự do\" không? nếu có thì như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959610297,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Chủ nghĩa tự nhiên"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa tự do tư sản"
+            }
+          ],
+          "question": "Quan niệm của Xpinôda về pháp quyền và xã hội được xây dựng trên lập trường nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959611717,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Sự tin tưởng vào ánh sáng nội tâm"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Sự bất lực trước các lực lượng xã hội"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Sự sợ hãi"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Sự không hiểu biết về tự nhiên"
+            }
+          ],
+          "question": "Xpinôda quan niệm về nguồn gốc tôn giáo từ đâu?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959612297,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Về thuyết nhị nguyên"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Về quan niệm máy móc đối với con người"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Về thuyết thừa nhận tồn tại tư tưởng bẩm sinh"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Về quan niệm duy vật trong lĩnh vực vật lý"
+            }
+          ],
+          "question": "Trong nhận thức luận của mình, Giôn Lốccơ phê phán Đềcáctơ về cái gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959613647,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Do ý niệm bẩm sinh"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Do kết quả của quá trình nhận thức"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Do thượng đế ban tặng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Do hoạt động thực tiễn"
+            }
+          ],
+          "question": "Theo quan niệm của G.Lốccơ tri thức, chân lý do đâu mà có?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959614467,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Pháp"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "ý"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Anh"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Mỹ"
+            }
+          ],
+          "question": "Giôn Lốccơ là nhà triết học nước nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959615384,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Xpinôda"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Đềcáctơ"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Platôn"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Giôn Lốccơ"
+            }
+          ],
+          "question": "Về nhận thức luận ai là người nêu ra nguyên lý tabula rasa (tấm bảng sạch)"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959616040,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Mọi tri thức không phải là bẩm sinh, mà là kết quả nhận thức"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Mọi quá trình nhận thức đều phải xuất phát từ cơ quan cảm giác"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Linh hồn con người có vai trò tích cực nhất định"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Cả ba nội dung trên"
+            }
+          ],
+          "question": "Nguyên lý tabula rasa (tấm bảng sạch) theo cách hiểu của người đề xuất khẳng định những nội dung gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959617048,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thuyết bất khả tri"
+            }
+          ],
+          "question": "Nội dung thuyết tabula rasa (tấm bảng sạch) đứng trên lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959618692,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Đề cao vai trò nhận thức lý tính"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phủ nhận nhận thức cảm tính"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Đề cao nhận thức cảm tính một cách tuyệt đối"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chưa thấy vai trò của kinh nghiệm"
+            }
+          ],
+          "question": "Hạn chế của thuyết tabula rasa (tấm bảng sạch) là ở chỗ nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959619794,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Lập trường của chủ nghĩa duy lý"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Lập trường của chủ nghĩa duy cảm"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Lập trường của thuyết nhị nguyên"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Lập trường của thuyết bất khả tri"
+            }
+          ],
+          "question": "Trong quan niệm về kinh nghiệm. Giôn Lốccơ đứng trên lập trường nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959620308,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Là ý niệm bẩm sinh"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Là hoạt động của linh hồn"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Là kinh nghiệm bên trong"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Là giai đoạn phản ánh khái quát sự vật"
+            }
+          ],
+          "question": "Giôn Lốccơ coi lý tính là gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959621020,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tôi tư duy vậy tôi tồn tại"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Mọi nhận thức đều xuất phát từ kinh nghiệm"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Kinh nghiệm là nguồn gốc của nhận thức"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Không có cái gì trong lý tính mà trước đó lại không có trong cảm tính."
+            }
+          ],
+          "question": "Luận điểm nào thể hiện lập trường duy cảm của Giôn Lốccơ?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959622484,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "ý niệm phức tạp là kết quả phản ánh trực tiếp nhiều đặc tính của sự vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "ý niệm phức tạp là kết quả của phản ánh khái quát đặc tính nào đó của sự vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "ý niệm phức tạp là tổng hợp \"ý niệm đơn giản\""
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "\"ý niệm phức tạp\" là kết quả của hoạt động của riêng lý tính hoàn toàn chủ quan của con người"
+            }
+          ],
+          "question": "Giôn Lốccơ quan niệm về \"ý niệm phức tạp\" như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959623830,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Lập trường duy Thực về thế giới"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Lập trường duy Danh về thế giới"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Lập trường nhị nguyên về thế giới"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Lập trường duy vật biện chứng về thế giới"
+            }
+          ],
+          "question": "Quan niệm về \"ý niệm phức tạp\" của Giôn Lốccơ có quan hệ với lập trường nào về thế giới?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959623951,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Xpinôdza"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Ph. Bêcơn"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Đềcáctơ"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Giôn Lốccơ"
+            }
+          ],
+          "question": "Ai là người đã phân chia tính chất của sự vật ra thành \"chất có trước\" và \"chất có sau\""
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959625657,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "\" Chất có sau\" có được nhờ sự tác động của các sự vật khách quan vào giác quan con người."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "\" Chất có sau\" hoàn toàn là sản phẩm của con người"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "\" Chất có sau\" khi thì là khi thì là (b), không nhất quán"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "\" Chất có sau\" là ảo giác không có thật"
+            }
+          ],
+          "question": "Quan niệm về \"chất có sau\" của tác giả là thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959626434,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Anh"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Pháp"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Hà Lan"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Đức"
+            }
+          ],
+          "question": "Gioócgiơ Béccơli là nhà triết học của nước nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959627527,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật siêu hình"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            }
+          ],
+          "question": "Gioócgiơ Béccơli là nhà triết học theo khuynh hướng nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959628619,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Mọi vật do nguyên tử tạo nên"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Vật tồn tại không phụ thuộc vào cảm giác"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Vật do thượng đế tạo ra"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Vật do phức hợp các cảm giác"
+            }
+          ],
+          "question": "Theo quan niệm của Béccơli sự tồn tại các sự vật cụ thể trong thế giới do cái gì quyết định?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959629307,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật tầm thường"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thuyết bất khả tri"
+            }
+          ],
+          "question": "Triết học của Béccơli cuối cùng chuyển sang triết học nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959629958,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Giai cấp địa chủ phong kiến"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Giai cấp chủ nô"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Giai cấp tư sản đã giành được chính quyền"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Giai cấp tư sản chưa giành được chính quyền"
+            }
+          ],
+          "question": "Về bản chất triết học của Béccơli phản ánh hệ tư tưởng của giai cấp nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959631432,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Pháp"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "áo"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Anh"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Hà Lan"
+            }
+          ],
+          "question": "Davít Hium là nhà triết học nước nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959632247,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "1700 - 1760"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "1710 - 1765"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "1711 - 1766"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "1712 - 1767"
+            }
+          ],
+          "question": "Davít Hium sống vào thời gian nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959633817,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Thuyết khả tri duy vật siêu hình"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thuyết khả tri duy tâm"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Thuyết bất khả tri và hiện tượng luận"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thuyết khả tri duy vật biện chứng"
+            }
+          ],
+          "question": "Về lý luận nhận thức, Đavít Hium đứng trên lập trường nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959634344,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Kết quả chứa đựng trong nguyên nhân"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Nguyên nhân có trước và sinh ra kết quả"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Kết quả được rút ra từ nguyên nhân"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Không thể chứng minh kết quả được rút ra từ nguyên nhân trong khoa học tự nhiên"
+            }
+          ],
+          "question": "Quan niệm của Đavít Hium về tính nhân quả như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959635111,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tồn tại khách quan và là quy luật của tự nhiên"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Tính nhân quả không tồn tại ở đâu cả chỉ là sự bịa đặt của con người"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Tính nhân quả không phải là quy luật, mà do thói quen của con người quy định."
+            }
+          ],
+          "question": "Hium quan niệm về sự tồn tại của quan hệ nhân quả như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959636533,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Thói quen"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Các tri thức khoa học tự nhiên"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Kiến thức triết học"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Thẩm mỹ học"
+            }
+          ],
+          "question": "Theo Đavít Hium cần giáo dục cho con người cái gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959637471,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Thế kỷ XVI - XVII, ở Italia"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thế kỷ XVII - XVIII, ở Anh"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Nửa cuối thế kỷ XVIII, ở Đức"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Nửa cuối thế kỷ XVIII ở Pháp"
+            }
+          ],
+          "question": "Triết học ánh sáng xuất hiện trong thời gian nào và ở đâu?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959638024,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Cách mạng vô sản"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Cách mạng tư sản"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Cách mạng dân tộc, dân chủ"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Cách mạng nông dân chống phong kiến"
+            }
+          ],
+          "question": "Những nhà triết học khai sáng Pháp chuẩn bị về mặt tư tưởng cho cuộc cách mạng nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959639054,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Nga"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Pháp"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Italia"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Đức"
+            }
+          ],
+          "question": "La Mettri (1709 - 1751) là nhà triết học nước nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959640888,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Xpinôda"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Ph. Bêcơn"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "La Mettri"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Điđrô"
+            }
+          ],
+          "question": "Quan niệm cho thực thể vật chất là thống nhất ba hình thức của nó trong giới tự nhiên, giới vô cơ, thực vật, động vật (bao gồm con người) là của nhà triết học nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959641527,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Quảng tính, vận động và cảm thụ"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Quảng tính, khối lượng và vận động"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Quảng tính, vận động"
+            }
+          ],
+          "question": "La Mettri coi đặc tính cơ bản của vật chất là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959642464,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa kinh nghiệm phê phán"
+            }
+          ],
+          "question": "Về thế giới quan La Mettri là nhà triết học thuộc trào lưu nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959643810,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Duy lý"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Duy vật biện chứng"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Duy giác luận"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Bất khả tri"
+            }
+          ],
+          "question": "Trong vấn đề nhận thức luận, khi La Mettri nói: nhờ cơ quan cảm giác mà người ta suy nghĩ, giác quan là kẻ đáng tin cậy trong đời sống hàng ngày, La Mettri đứng trên quan điểm nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959644664,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "La Mettri bác bỏ thuyết nhị nguyên của Đềcáctơ"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "La Mettri bảo vệ thuyết nhị nguyên của Đềcáctơ"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "La Mettri xem con người như một cái máy"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "La Mettri giải thích các hiện tượng sinh lý theo quy luật cơ học"
+            }
+          ],
+          "question": "Điều khẳng định nào sau đây là sai:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959645403,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Điđrô thừa nhận vật chất tồn tại vĩnh viễn"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Điđrô thừa nhận vật chất tồn tại khách quan ngoài ý thức của con người"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Điđrô cho vật chất là một thực thể duy nhất, nguyên nhân tồn tại của nó nằm ngay trong bản thân nó."
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Điđrô không thừa nhận nguyên nhân tồn tại của vật chất nằm ngay trong bản thân nó."
+            }
+          ],
+          "question": "Điều khẳng định nào sau đây là sai?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959646761,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Điđrô cho vận động và vật chất là thống nhất chặt chẽ"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Điđrô không thừa nhận vận động và vật chất là thống nhất"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Điđrô thừa nhận có trạng thái đứng im tuyệt đối"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Điđrô phủ nhận vận động của vật thể là qúa trình phát triển, biến đổi không ngừng."
+            }
+          ],
+          "question": "Điều khẳng định nào sau đây là đúng?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959647607,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Điđrô thể hiện quan niệm vô thần thông qua tư tưởng biện chứng về vận động"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Điđrô chưa tiếp cận tư tưởng về tự thân vận động của vật chất"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Điđrô cho rằng mỗi phân tử có một nguồn vận động bên trong, mà ông gọi là lực nội tâm."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Điđrô chống lại sự tồn tại của thượng đế"
+            }
+          ],
+          "question": "Điều khẳng định nào sau đây là sai?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959648199,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thuyết nhị nguyên"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa kinh nghiệm phê phán"
+            }
+          ],
+          "question": "Khi khẳng định vật chất là nguyên nhân của cảm giác, Điđrô đã đứng trên quan điểm triết học nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959649511,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Giải thích vận động là sự thay đổi vị trí trong không gian"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Cho nguyên nhân vận động là do lực tác động"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Giải thích tự thân vận động của vật chất bằng mâu thuẫn nội tại của sự vật và tính đa dạng của nó."
+            }
+          ],
+          "question": "Tư tưởng biện chứng của Điđrô về vận động thể hiện ở chỗ nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959650872,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "ý thức có nguồn gốc từ thần thánh"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "ý thức là thuộc tính của mọi dạng vật chất"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "ý thức là thuộc tính của vật chất có tổ chức cao xuất hiện do sự phức tạp hoá của vật chất hữu cơ."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "ý thức con người vốn có trong bộ não."
+            }
+          ],
+          "question": "Quan niệm của Điđrô về nguồn gốc của ý thức con người như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959651357,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Điđrô cho rằng vật chất là nguyên nhân của cảm giác"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Điđrô cho rằng vật chất là phức hợp của cảm giác"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Điđrô cho rằng sự vật là phản ánh của thế giới ý niệm"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Điđrô phủ nhận khả năng nhận thức thế giới của con người."
+            }
+          ],
+          "question": "Khẳng định nào sau đây là đúng"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959652743,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Duy vật siêu hình"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Duy vật biện chứng"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Duy tâm"
+            }
+          ],
+          "question": "Trong lĩnh vực xã hội Điđrô đứng trên quan điểm triết học nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959653309,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Điđrô khẳng định nguồn gốc thần thánh của vua chúa."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Điđrô phủ nhận nguồn gốc thần thánh của vua chúa."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Điđrô tán thành chế độ chuyên chế."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Điđrô chống lại chế độ quân chủ lập hiến."
+            }
+          ],
+          "question": "Những luận điểm nào sau đây là đúng?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959654447,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Nhà nước dân chủ chủ nô"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Nhà nước dân chủ tư sản"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Nhà nước chuyên chế Phổ."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Nhà nước chuyên chế chủ nô"
+            }
+          ],
+          "question": "Triết học cổ điển Đức bảo vệ về mặt tư tưởng chế độ nhà nước nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959654970,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Cantơ - Phoi-ơ-bắc - Hêghen"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Cantơ - Hêghen - Phoi-ơ-bắc"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Hêghen - Cantơ - Phoi-ơ-bắc"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Phoi-ơ-bắc - Cantơ - Hêghen"
+            }
+          ],
+          "question": "Sắp xếp theo thứ tự năm sinh trước - sau của các nhà triết học sau"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959656823,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Duy tâm khách quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Duy vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Nhị nguyên"
+            }
+          ],
+          "question": "Khi đưa ra quan niệm về \"vật tự nó\" ở ngoài con người, Cantơ là nhà triết học thuộc khuynh hướng nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959656914,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Duy vật siêu hình"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Duy tâm khách quan"
+            }
+          ],
+          "question": "Khi cho rằng các vật thể quanh ta không liên quan đến thế giới \"vật tự nó\", mà chỉ là \"các hiện tượng phù hợp với cảm giác và tri thức do lý tính chúng ta tạo ra\", Cantơ là nhà triết học thuộc khuynh hướng nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959658614,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Duy vật biện chứng."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Duy tâm."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Duy vật siêu hình"
+            }
+          ],
+          "question": "Khi cho không gian, thời gian, tính nhân quả không thuộc bản thân thế giới tự nhiên, Cantơ đứng trên quan điểm triết học nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959659115,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Khả tri luận có tính chất duy vật."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Khả tri luận có tính chất duy tâm khách quan."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Bất khả tri luận có tính chất duy tâm chủ quan."
+            }
+          ],
+          "question": "Trong lĩnh vực nhận thức luận, Cantơ là nhà triết học theo khuynh hướng nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959660174,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phép biện chứng của Hêghen là phép biện chứng duy vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phép biện chứng của Hêghen là phép biện chứng tự phát."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Phép biện chứng của Hêghen là phép biện chứng duy tâm khách quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Phép biện chứng của Hêghen là phép biện chứng tiên nghiệm chủ quan."
+            }
+          ],
+          "question": "Khẳng định nào sau đây là đúng"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959661174,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Nguyên tử."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Không khí."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "ý niệm tuyệt đối"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Vật chất không xác định"
+            }
+          ],
+          "question": "Theo Hêghen khởi nguyên của thế giới là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959662458,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tinh thần là kết quả phát triển của tự nhiên."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Tinh thần là thuộc tính của tự nhiên"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Tự nhiên là sản phẩm của tinh thần, là một tồn tại khác của tinh thần."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Tự nhiên là nguồn gốc của tinh thần."
+            }
+          ],
+          "question": "Trong triết học của Hêghen giữa tinh thần và tự nhiên quan hệ với nhau như thế nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959663205,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Hêghen cho rằng \"ý niệm tuyệt đối\" tồn tại vĩnh viễn."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Hêghen cho rằng \"ý niệm tuyệt đối\" vận động trong sự phụ thuộc vào giới tự nhiên và xã hội."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Hêghen cho rằng \"ý niệm tuyệt đối\" là tính thứ nhất, tự nhiên là tính thứ hai."
+            }
+          ],
+          "question": "Khẳng định nào sau đây là sai?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959664703,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Đềcáctơ"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Cantơ"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Hêghen"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Phoi-ơ-bắc."
+            }
+          ],
+          "question": "Trong số những nhà triết học sau đây, ai là người trình bầy toàn bộ giới tự nhiên, lịch sử, và tư duy trong sự vận động, biến đổi và phát triển?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959665750,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Quy luật của phép biện chứng được rút ra từ tự nhiên."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Quy luật của phép biện chứng được hoàn thành trong tư duy và được ứng dụng vào tự nhiên và xã hôị."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Quy luật của phép biện chứng do ý thức chủ quan con người tạo ra."
+            }
+          ],
+          "question": "Hãy chỉ ra đâu là quan điểm của Hêghen?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959666528,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Arixtốt"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Hêghen"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Cantơ"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Phoi-ơ-bắc"
+            }
+          ],
+          "question": "Luận điểm sau đây là của ai: Cái gì tồn tại thì hợp lý, cái gì hợp lý thì tồn tại."
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959667160,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Nhà nước hiện thực chỉ là tồn tại khác của khái niệm nhà nước."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Khái niệm nhà nước là sự phản ánh nhà nước hiện thực."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Khái niệm nhà nước và nhà nước hiện thực là hai thực thể độc lập với nhau."
+            }
+          ],
+          "question": "Hãy chỉ ra đâu là quan điểm của Hêghen?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959668486,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Lôgic học; triết học về tự nhiên; triết học về lịch sử; triết học về tinh thần."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Triết học về tự nhiên; triết học về tinh thần."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Triết học về tự nhiên; triết học về xã hội; triết học về tinh thần"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Lôgic học; triết học về tự nhiên; triết học về tinh thần"
+            }
+          ],
+          "question": "Hệ thống triết học của Hêghen gồm những bộ phận chính nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959669403,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Platôn"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Hêghen"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Arixtốt"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Cantơ"
+            }
+          ],
+          "question": "Mâu thuẫn sau đây là mâu thuẫn trong hệ thống triết học của nhà triết học nào: \"Mâu thuẫn giữa phương pháp cách mạng với hệ thống bảo thủ\""
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959670368,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "1- Tính vận động; 2- tính đứng im"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "1- Tính bảo thủ; 2- tính cách mạng."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "1- Tính cách mạng; 2- tính bảo thủ"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "1-Tính biện chứng; 2- tính siêu hình"
+            }
+          ],
+          "question": "Thêm cụm từ vào câu sau cho thích hợp: Mâu thuẫn giữa ..(1).. của phép biện chứng với .....(2).....của hệ thống triết học của Hêghen."
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959671313,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Phép biện chứng như lý luận về sự phát triển"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Tư tưởng về vận động"
+            }
+          ],
+          "question": "Mác chỉ ra đâu là hạt nhân hợp lý trong triết học của Hêghen"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959671953,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            }
+          ],
+          "question": "Phoi-ơ-bắc là nhà triết học theo trường phái nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959672906,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Giai cấp địa chủ quý tộc Đức."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Giai cấp vô sản Đức."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Giai cấp tư sản dân chủ Đức"
+            }
+          ],
+          "question": "Xét về nội dung tư tưởng của học thuyết, Phoi-ơ-bắc là nhà tư tưởng của giai cấp nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959673957,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Điđrô."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phoi-ơ-bắc"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Cantơ"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Hêghen"
+            }
+          ],
+          "question": "Triết học của nhà triết học nào mang tính chất nhân bản"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959675311,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phoi-ơ-bắc cho tự nhiên là \"tồn tại khác\" của tinh thần."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Phoi-ơ-bắc cho tự nhiên tồn tại độc lập với ý thức của con người, vận động nhờ những cơ sở bên trong nó"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phoi-ơ-bắc cho tinh thần và thể xác tồn tại tách rời nhau."
+            }
+          ],
+          "question": "Khẳng định nào sau đây là đúng của Phoi-ơ-bắc."
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959676181,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chống lại quan niệm nhị nguyên luận về sự tách rời tinh thần khỏi thể xác."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chống lại chủ nghĩa duy vật tầm thường cho ý thức do óc tiết ra"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chống lại quan niệm của đạo Thiên chúa về thượng đế"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Cả 3 điểm a,b,c"
+            },
+            {
+              "isCorrect": false,
+              "key": "E",
+              "text": "Hai điểm a & b."
+            }
+          ],
+          "question": "Triết học nhân bản của Phoi-ơ-bắc có ưu điểm gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959677687,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Đồng nhất ý thức với một dạng vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Cho con người sáng tạo ra thượng đế"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Cho con người chỉ mang những thuộc tính sinh học bẩm sinh"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Cả 3 điểm a, b, c."
+            }
+          ],
+          "question": "Triết học nhân bản của Phoi-ơ-bắc có hạn chế gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959678152,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Cantơ"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phoi-ơ-bắc."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Hêghen"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Điđrô"
+            }
+          ],
+          "question": "Ông cho rằng: con người sáng tạo ra thượng đế, bản tính con người là tình yêu, tôn giáo cũng là một tình yêu. Ông là ai?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959679033,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Không."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Có, đó là tha hoá của ý niệm"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Có, đó là tha hoá của lao động."
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Có, đó là tha hoá bản chất con người về thượng đế."
+            }
+          ],
+          "question": "Phoi-ơ-bắc có nói đến sự \"tha hoá\" không. Nếu có thì quan niệm của ông thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959680877,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phát triển tư tưởng duy vật về thế giới của thế kỷ XVII - XVIII."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Khắc phục triệt để quan điểm siêu hình của chủ nghĩa duy vật cũ."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Phát triển tư tưởng biện chứng đạt trình độ một hệ thống lý luận."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Phê phán quan điểm tôn giáo về thế giới."
+            }
+          ],
+          "question": "Ưu điểm lớn nhất của triết học cổ điển Đức là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959681589,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chưa khắc phục được quan điểm siêu hình trong triết học duy vật cũ."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chưa có quan điểm duy vật về lịch sử xã hội."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Có tính chất duy tâm khách quan (đặc biệt triết học của Hêghen)."
+            }
+          ],
+          "question": "Hạn chế lớn nhất của triết học cổ điển Đức là ở chỗ nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959682861,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Cao hơn chủ nghĩa duy vật thế kỷ XVII - XVIII ở Tây Âu"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thấp hơn chủ nghĩa duy vật thế kỷ XVII - XVII ở Tây Âu"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Không vượt quá trình độ chủ nghĩa duy vật thế kỷ XVII - XVIII ở Tây Âu."
+            }
+          ],
+          "question": "Xét về bản chất chủ nghĩa duy vật của Phoi-ơ-bắc là:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959683264,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Những năm 20 của thế kỷ XIX"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Những năm 30 của thế kỷ XIX."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Những năm 40 của thế kỷ XIX."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Những năm 50 của thế kỷ XIX."
+            }
+          ],
+          "question": "Triết học Mác ra đời vào thời gian nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959684858,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "C. Mác, Ph. Ăngghen; V.I. Lênin."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "C. Mác và Ph. Ăngghen."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "V.I. Lênin"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Ph. Ăngghen."
+            }
+          ],
+          "question": "Triết học Mác - Lênin do ai sáng lập và phát triển?"
+        },
+        {
+          "correctAnswer": "G",
+          "explanation": "",
+          "id": 1790959685565,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phương thức sản xuất tư bản chủ nghĩa được củng cố và phát triển."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Giai cấp vô sản ra đời và trở thành lực lượng chính trị - xã hội độc lập"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Giai cấp tư sản đã trở nên bảo thủ."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "cả a, b, c."
+            },
+            {
+              "isCorrect": true,
+              "key": "G",
+              "text": "Điểm a và b."
+            }
+          ],
+          "question": "Điều kiện kinh tế xã hội cho sự ra đời của triết học Mác - Lênin?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959686066,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Phương thức sản xuất tư bản chủ nghĩa đã trở thành phương thức sản xuất thống trị."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phương thức sản xuất tư bản chủ nghĩa mới xuất hiện."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa tư bản đã trở thành chủ nghĩa đế quốc."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Cả a, b, c"
+            }
+          ],
+          "question": "Triết học Mác ra đời trong điều kiện kinh tế - xã hội nào?"
+        },
+        {
+          "correctAnswer": "E",
+          "explanation": "",
+          "id": 1790959687235,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Triết học khai sáng Pháp thế kỷ XVIII."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Triết học cổ điển Đức."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Kinh tế chính trị học cổ điển Anh"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa xã hội không tưởng Pháp và Anh."
+            },
+            {
+              "isCorrect": false,
+              "key": "G",
+              "text": "Cả a, b, c và d."
+            },
+            {
+              "isCorrect": true,
+              "key": "E",
+              "text": "Gồm b, c và d. Chú ý bản in Ngân hàng bị thiếu và d ở cả g và e"
+            }
+          ],
+          "question": "Nguồn gốc lý luận của chủ nghĩa Mác là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959688367,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật Khai sáng Pháp"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Triết học cổ điển Đức"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Kinh tế chính trị cổ điển Anh"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa xã hội không tưởng Pháp và Anh"
+            }
+          ],
+          "question": "Nguồn gốc lý luận trực tiếp của triết học Mác là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959689623,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Triết học Mác là sự kết hợp phép biện chứng của Hêghen và chủ nghĩa duy vật của Phoi-ơ- bắc"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Triết học Mác có sự thống nhất giữa phương pháp biện chứng và thế giới quan duy vật."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Triết học Mác kế thừa và cải tạo phép biện chứng của Hêghen trên cơ sở duy vật."
+            }
+          ],
+          "question": "Khẳng định nào sau đây là sai?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959690349,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Trong triết học Mác, phép biện chứng và chủ nghĩa duy vật thống nhất với nhau."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Triết học Mác là sự kết hợp phép biện chứng của Hêghen với chủ nghĩa duy vật của Phoi-ơ- bắc"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Trong triết học Mác, phép biện chứng tách rời với chủ nghĩa duy vật."
+            }
+          ],
+          "question": "Khẳng định nào sau đây là đúng?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959691295,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Kinh tế chính trị cổ điển Anh"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Kinh tế chính trị cổ điển Đức"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật tự phát thời kỳ cổ đại"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Khoa học tự nhiên thế kỷ XVII - XVIII."
+            }
+          ],
+          "question": "Đâu là nguồn gốc lý luận của chủ nghĩa Mác?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959692654,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tư tưởng xã hội phương Đông cổ đại"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa xã hội không tưởng Pháp và Anh"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII ở Tây Âu."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Phép biện chứng tự phát trong triết học Hy Lạp cổ đại."
+            }
+          ],
+          "question": "Đâu là nguồn gốc lý luận của chủ nghĩa Mác?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959693511,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Khoa học tự nhiên nửa đầu thế kỷ XIX phù hợp với phương pháp tư duy siêu hình."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Khoa học tự nhiên nửa đầu thế kỷ XIX làm bộc lộ tính hạn chế và sự bất lực của phương pháp tư duy siêu hình trong việc nhận thức thế giới"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "KHTN khẳng định vai trò tích cực của phương pháp tư duy siêu hình"
+            }
+          ],
+          "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng về tác động của khoa học tự nhiên nửa đầu thế kỷ XIX đối với phương pháp tư duy siêu hình, luận điểm nào sau đây là đúng."
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959694119,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phát triển phương pháp tư duy siêu hình"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phát triển phép biện chứng tự phát"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phát triển tính thần bí của phép biện chứng duy tâm"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Phát triển tư duy biện chứng thoát khỏi tính tự phát thời kỳ cổ đại và thoát khỏi cái vỏ thần bí của phép biện chứng duy tâm."
+            }
+          ],
+          "question": "Những phát minh của khoa học tự nhiên nửa đầu thế kỷ XIX đã cung cấp cơ sở tri thức khoa học cho sự phát triển cái gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959694921,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "1) Thuyết mặt trời làm trung tâm vũ trụ của Côpécních, 2) định luật bảo toàn khối lượng của Lômônôxốp, 3) học thuyết tế bào."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "1) Định luật bảo toàn và chuyển hoá năng lượng, 2) học thuyết tế bào, 3) học thuyết tiến hoá của Đácuyn."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "1) Phát hiện ra nguyên tử, 2) phát hiện ra điện tử, 3) định luật bảo toàn và chuyển hoá năng lượng."
+            }
+          ],
+          "question": "Ba phát minh lớn nhất của khoa học tự nhiên làm cơ sở khoa học tự nhiên cho sự ra đời tư duy biện chứng duy vật đầu thế kỷ XIX là những phát minh nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959696353,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Quan điểm siêu hình phủ nhận sự vận động."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Quan điểm duy tâm phủ nhận sự vận động là khách quan."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Quan điểm biện chứng duy vật thừa nhận sự chuyển hoá lẫn nhau của giới tự nhiên vô cơ."
+            }
+          ],
+          "question": "Về mặt triết học, định luật bảo toàn và chuyển hoá năng lượng chứng minh cho quan điểm nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959696976,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tính chất tách rời tĩnh tại của thế giới vật chất."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Tính chất biện chứng của sự vận động và phát triển của thế giới vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Tính chất không tồn tại thực của thế giới vật chất."
+            }
+          ],
+          "question": "Ba phát minh trong khoa học tự nhiên: định luật bảo toàn và chuyển hoá năng lượng, học thuyết tế bào, học thuyết tiến hoá chứng minh thế giới vật chất có tính chất gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959698758,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Học thuyết tế bào."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Học thuyết tiến hóa."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Định luật bảo toàn và chuyển hoá năng lượng."
+            }
+          ],
+          "question": "Phát minh nào trong khoa học tự nhiên nửa đầu thế kỷ XIX vạch ra nguồn gốc tự nhiên của con ngươì, chống lại quan điểm tôn giáo?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959699066,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Học thuyết tế bào."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Học thuyết tiến hoá."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Định luật bảo toàn và chuyển hoá năng lượng."
+            }
+          ],
+          "question": "Phát minh nào trong khoa học tự nhiên nửa đầu thế kỷ XIX vạch ra sự thống nhất giữa thế giới động vật và thực vật?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959700678,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Triết học Mác ra đời vào giữa thế kỷ XIX là một tất yếu lịch sử."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Triết học Mác ra đời do thiên tài của Mác và Ăngghen."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Triết học Mác ra đời hoàn toàn ngẫu nhiên."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Triết học Mác ra đời thực hiện mục đích đã được định trước."
+            }
+          ],
+          "question": "Khẳng định nào sau đây là đúng"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959701187,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "1818 - 1883, ở Béc-linh"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "1818 - 1884, ở thành phố Tơ-re-vơ tỉnh Ranh"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "1817 - 1883, ở thành phố Tơ-re-vơ, tỉnh Ranh"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "1818 - 1883, ở thành phố Tơ-re-vơ, tỉnh Ranh"
+            }
+          ],
+          "question": "Cho biết năm sinh, năm mất và nơi sinh của Mác"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959702174,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Triết học duy vật biện chứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Triết học duy vật siêu hình"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Triết học duy tâm của Hêghen"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Triết học kinh viện của tôn giáo"
+            }
+          ],
+          "question": "Khi học ở Béc-linh về triết học, Mác đứmg trên quan điểm nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959703400,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phái Hêghen già (phái bảo thủ)"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Phái Hêghen trẻ (phái cấp tiến)"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Không tham gia vào phái nào."
+            }
+          ],
+          "question": "Khi học ở Béc-linh, Mác tham gia hoạt động trong trào lưu triết học nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959704379,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phục vụ cuộc đấu tranh của giai cấp vô sản."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phục vụ chế độ xã hội hiện tại"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Phục vụ cuộc đấu tranh cho sự nghiệp giải phóng con người."
+            }
+          ],
+          "question": "Vào năm 1841, Mác coi nhiệm vụ của triết học phải phục vụ cái gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959705832,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Mâu thuẫn giữa chủ nghĩa duy tâm triết học với tinh thần dân chủ cách mạng và vô thần."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Mâu thuẫn giữa chủ nghĩa duy tâm triết học với tinh thần cách mạng vô sản"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Cả a và b."
+            }
+          ],
+          "question": "Vào năm 1841, trong tư tưởng của Mác có mâu thuẫn gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959706711,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "1819 - 1895, ở thành phố Bác-men"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "1820 - 1895, ở thành Béc-linh"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "1820 - 1895, ở thành phố Bác-men."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "1821 - 1895, ở thành phố Bác-men."
+            }
+          ],
+          "question": "Ph. Ăngghen sinh năm nào, ở đâu và mất năm nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959707784,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phái Hêghen già, ở Béc-linh."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Phái Hêghen trẻ, ở Béc-linh."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Hêghen già, ở Bác-men."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Hêghen trẻ, ở Bác-men."
+            }
+          ],
+          "question": "Vào những năm 30 của thế kỷ XIX Ph. Ăngghen đã tham gia vào nhóm triết học nào, ở đâu?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959708165,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm chủ quan."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            }
+          ],
+          "question": "Vào năm 1841 - 1842, về mặt triết học Ph. Ăngghen đứng trên lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959709244,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Mâu thuẫn giữa phương pháp biện chứng và hệ thống duy tâm."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Mâu thuẫn giữa tính cách mạng và tính bảo thủ trong triết học Hêghen."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Mâu thuẫn giữa phương pháp siêu hình và hệ thống duy tâm."
+            }
+          ],
+          "question": "Vào năm 1841 - 1842, Ph. Ăngghen đã nhận thấy mâu thuẫn gì trong triết học của Hêghen?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959710402,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Nhận xét bản chỉ thị mới nhất về chế độ kiểm duyệt của Phổ."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Góp phần phê phán triết học pháp quyền của Hêghen."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Góp phần phê phán triết học pháp quyền của Hêghen. Lời nói đầu."
+            }
+          ],
+          "question": "Tác phẩm nào đánh dấu việc hoàn thành bước chuyển từ lập trường triết học duy tâm sang lập trường triết học duy vật của Mác?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959711833,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Hệ tư tưởng Đức"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Tuyên ngôn của Đảng cộng sản."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Sự khốn cùng của triết học"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Luận cương về Phoi-ơ-bắc."
+            }
+          ],
+          "question": "Tác phẩm nào của Mác và Ăngghen đánh dấu sự hoàn thành về cơ bản triết học Mác nói riêng và chủ nghĩa Mác nói chung?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959711939,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "C. Mác."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Ph. Ăngghen"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "C. Mác và Ph. Ăngghen"
+            }
+          ],
+          "question": "Tác phẩm \"Tư bản\" do ai viết?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959713176,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "C. Mác, vào 1876 - 1878"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Ph. Ăngghen, vào 1876 - 1878."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "C. Mác và Ph. Ăngghen, vào 1877 - 1878."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Ph. Ăngghen, vào 1877 - 1878"
+            }
+          ],
+          "question": "Tác phẩm \"Chống Đuyrinh\" là của tác giả nào và viết vào năm nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959714849,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Của Ph. Ăngghen, trong tác phẩm \"Biện chứng của tự nhiên\"."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Của C. Mác, trong tác phẩm \"Luận cương về Phoi-ơ-bắc\"."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Của Lênin, trong tác phẩm \"Bút ký triết học\"."
+            }
+          ],
+          "question": "Luận điểm sau là của ai và trong tác phẩm nào: \"Các nhà triết học đã chỉ giải thích thế giới bằng nhiều cách khác nhau, song vấn đề là cải tạo thế giới\""
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959715052,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Thống nhất giữa thế giới quan duy vật và phép biện chứng trong một hệ thống triết học."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thống nhất giữa triết học của Hêghen và triết học của Phoi-ơ-bắc."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phê phán chủ nghĩa duy vật siêu hình của Phoi-ơ-bắc"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Phê phán triết học duy tâm của Hêghen."
+            }
+          ],
+          "question": "Thực chất bước chuyển cách mạng trong triết học do Mác và Ăngghen thực hiện là nội dung nào sau đây?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959716714,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Xây dựng được quan điểm duy vật biện chứng về lịch sử xã hội."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Xây dựng được quan điểm duy vật về tự nhiên."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Xây dựng được quan điểm biện chứng về tự nhiên."
+            }
+          ],
+          "question": "Thực chất bước chuyển cách mạng trong triết học do Mác và Ăngghen thực hiện là nội dung nào sau đây?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959717497,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Thống nhất phép biện chứng và thế giới quan duy vật trong một hệ thống triết học"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Xây dựng được chủ nghĩa duy vật lịch sử"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Xác định đối tượng triết học và khoa học tự nhiên, chấm dứt quan niệm sai lầm cho triết học là khoa học của mọi khoa học."
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Gồm cả a, b và c."
+            }
+          ],
+          "question": "Thực chất bước chuyển cách mạng trong triết học do Mác và Ăngghen thực hiện là nội dung nào sau đây?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959718593,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Triết học Mác cho triết học là khoa học của mọi khoa học."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Theo quan điểm của triết học Mác triết học không thay thế được các khoa học cụ thể."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Theo quan điểm của triết học Mác sự phát triển của triết học quan hệ chặt chẽ với sự phát triển của khoa học tự nhiên."
+            }
+          ],
+          "question": "Khẳng định nào sau đây là sai"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959719070,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa tư bản thế giới chưa ra đời."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa tư bản độc quyền ra đời."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa tư bản ở giai đoạn tự do cạnh tranh."
+            }
+          ],
+          "question": "V.I. Lênin bổ sung và phát triển triết học Mác trong hoàn cảnh nào"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959720043,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tác giả Plê-kha-nốp, xuất bản 1909"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Tác giả V.I. Lênin, xuất bản 1909."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Tác giả Ph. Ăngghen, xuất bản 1910."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Tác giả V.I. Lênin, xuất bản 1908"
+            }
+          ],
+          "question": "Tác phẩm \"Chủ nghĩa duy vật và chủ nghĩa kinh nghiệm phê phán\" là của tác giả nào và được xuất bản năm nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959720975,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "C. Mác."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "V.I. Lênin"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Ph. Ăngghen."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Hêghen"
+            }
+          ],
+          "question": "Tác phẩm \"Bút ký triết học\" là của tác giả nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959722846,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật và chủ nghĩa kinh nghiệm phê phán"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Những người bạn dân là thế nào và họ đấu tranh chống những người dân chủ ra sao."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Nhà nước và cách mạng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Bút ký triết học"
+            }
+          ],
+          "question": "Lênin phê phán chủ nghĩa dân tuý trong tác phẩm nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959723683,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Duy tâm chủ quan về lịch sử."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Duy tâm khách quan về lịch sử."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Duy vật siêu hình về lịch sử."
+            }
+          ],
+          "question": "Đâu là lập trường triết học của chủ nghĩa dân tuý?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959724110,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm chủ quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Về triết học quan điểm của chủ nghĩa kinh nghiệm phê phán theo lập trường nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959725659,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "C. Mác."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "V.I. Lênin."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Ph. Ăngghen."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Hồ Chí Minh"
+            }
+          ],
+          "question": "Luận điểm về khả năng thắng lợi của cách mạng vô sản ở khâu yếu nhất của hệ thống tư bản chủ nghĩa thế giới là của ai?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959726832,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Plê-kha-nốp"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Sít-ta-lin."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "V.I. Lênin."
+            }
+          ],
+          "question": "Chính sách kinh tế mới ở Nga đầu thế kỷ XX do ai đề xuất?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959727191,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Khi thừa nhận tính thống nhất của thế giới."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Khi không thừa nhận sự thống nhất của thế giới."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Khi thừa nhận ý thức và vật chất độc lập với nhau"
+            }
+          ],
+          "question": "Một học thuyết triết học chỉ mang tính nhất nguyên khi nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959728456,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Quan điểm triết học nào cho rằng sự thống nhất của thế giới không phải ở tính tồn tại của nó mà ở tính vật chất của nó?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959729223,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Thừa nhận tính tồn tại của thế giới."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Thừa nhận tính vật chất của thế giới."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Không thừa nhận tính tồn tại của thế giới."
+            }
+          ],
+          "question": "Sự khác nhau căn bản giữa chủ nghĩa duy vật và chủ nghĩa duy tâm về sự thống nhất của thế giới là ở cái gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959729917,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "ở tính vật chất của thế giới."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "ở ý niệm tuyệt đối hoặc ở ý thức của con người."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "ở sự vận động và chuyển hoá lẫn nhau của thế giới."
+            }
+          ],
+          "question": "Chủ nghĩa duy tâm tìm nguồn gốc của sự thống nhất của thế giới ở cái gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959731367,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm chủ quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            }
+          ],
+          "question": "Quan điểm triết học nào cho rằng thế giới thống nhất vì được con người nghĩ về nó như một cái thống nhất"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959731954,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình trước Mác."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm"
+            }
+          ],
+          "question": "Quan điểm triết học nào tìm nguồn gốc của sự thống nhất của thế giới ở bản nguyên đầu tiên (ở thực thể đầu tiên duy nhất)?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959733589,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chỉ có một thế giới duy nhất là thế giới vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Mọi bộ phận của thế giới vật chất đều liên hệ chuyển hoá lẫn nhau."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thế giới vật chất tồn tại khách quan, vĩnh viễn, vô hạn, vô tận, không do ai sinh ra và không mất đi."
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Thế giới vật chất bao gồm những bộ phận riêng biệt nhau."
+            }
+          ],
+          "question": "Đâu không phải là câu trả lời của chủ nghĩa duy vật biện chứng về tính thống nhất vật chất của thế giới"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959734231,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm."
+            }
+          ],
+          "question": "Trường phái triết học phủ nhận sự tồn tại một thế giới duy nhất là thế giới vật chất?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959735246,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Đúng"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Sai"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Không xác định"
+            }
+          ],
+          "question": "Điều khẳng định sau đây là đúng hay sai: Chỉ có chủ nghĩa duy vật biện chứng mới cho rằng mọi bộ phận của thế giới vật chất đều có mối liên hệ chuyển hoá lẫn nhau một cách khách quan."
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959735942,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Có thể"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Không thể"
+            }
+          ],
+          "question": "Không thừa nhận tính vô hạn và vô tận của thế giới vật chất có chứng minh được tính thống nhất vật chất của thế giới không?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959737749,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật biện chứng ."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "có thể a hoặc b."
+            }
+          ],
+          "question": "Cho rằng có thế giới tinh thần tồn tại độc lập bên cạnh thế giới vật chất sẽ rơi vào quan điểm triết học nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959738500,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Đê-mô-crít"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Pla-tôn."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "A-ri-xtốt."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Hêghen."
+            }
+          ],
+          "question": "Nhà triết học nào coi sự vật cảm tính là cái bóng của ý niệm?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959739706,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            }
+          ],
+          "question": "Coi sự vật cảm tính là cái bóng của ý niệm. Đó là quan điểm của trường phái triết học nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959740658,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm chủ quan."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Coi thế giới vật chất là kết quả của quá trình phát triển của ý niệm tuyệt đối là quan điểm cuả trường phái triết học nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959741574,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Của Hêghen, thuộc lập trường của chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Của Béc-cơ-li, thuộc lập trường chủ nghĩa duy tâm chủ quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Của Pla-tôn, thuộc lập trường chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Của A-ri-xtốt, thuộc lập trường chủ nghĩa duy vật."
+            }
+          ],
+          "question": "Luận điểm cho: \"tồn tại tức là được cảm giác\" là của ai và thuộc lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959742456,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Talét - chủ nghĩa duy vật tự phát."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Điđrô - Chủ nghĩa duy vật biện chứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Béc-cơ-li, - chủ nghĩa duy tâm chủ quan"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Pla-tôn, - chủ nghĩa duy tâm khách quan."
+            }
+          ],
+          "question": "Nhà triết học nào cho nước là thực thể đầu tiên của thế giới và quan điểm đó thuộc lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959742901,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Đê-mô-crít, - chủ nghĩa duy vật tự phát"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Hê-ra-clít, - chủ nghĩa duy vật tự phát."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Hê-ra-clít, - chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Ana-ximen, - chủ ngiã duy vật tự phát."
+            }
+          ],
+          "question": "Nhà triết học nào coi lửa là thực thể đầu tiên của thế giới và đó là lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959744176,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Đê-mô-rít, chủ nghĩa duy vật tự phát."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Hê-ra-clít, - chủ nghĩa duy vật tự phát"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Đê-mô-crít, chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "A-ri-xtốt, - chủ nghĩa duy vật tự phát."
+            }
+          ],
+          "question": "Nhà triết học nào cho nguyên tử và khoảng không là thực thể đầu tiên của thế giới và đó là lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959745012,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật tự phát."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Đồng nhất vật chất nói chung với một vật thể hữu hình cảm tính đang tồn tại trong thế giới bên ngoài là quan điểm của trường phái triết học nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959746581,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật tự phát."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Đồng nhất vật chất nói chung với nguyên tử - một phần tử vật chất nhỏ nhất, đó là quan điểm của trường phái triết học nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959747025,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Đồng nhất vật chất nói chung với nguyên tử."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Đồng nhất vật chất nói chung với một dạng cụ thể hữu hình, cảm tính của vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Đồng nhất vật chất với khối lượng."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Đồng nhất vật chất với ý thức."
+            }
+          ],
+          "question": "Đặc điểm chung của quan niệm duy vật về vật chất ở thời kỳ cổ đại là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959748038,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Có tính chất duy tâm chủ quan."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Có tính chất duy vật tự phát, là những phỏng đoán dựa trên những tài liệu cảm tính là chủ yếu, chưa có cơ sở khoa học."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Có tính chất duy vật máy móc siêu hình."
+            }
+          ],
+          "question": "Hạn chế chung của quan niệm duy vật về vật chất ở thời kỳ cổ đại."
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959749893,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chống quan niệm máy móc siêu hình."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chống quan niệm duy tâm tôn giáo"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Thúc đẩy sự phát triển tư tưởng khoa học về thế giới."
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Gồm b và c."
+            },
+            {
+              "isCorrect": false,
+              "key": "G",
+              "text": "Gồm cả a,b và c"
+            }
+          ],
+          "question": "Đâu là mặt tích cực trong quan niệm duy vật về vật chất ở thời kỳ cổ đại?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959749964,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "ở quan niệm về lửa là bản nguyên của thế giới"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "ở thuyết nguyên tử của Lơ-xíp và Đê-mô-crít."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "ở quan niệm về con số là bản nguyên của thế giới."
+            }
+          ],
+          "question": "Đỉnh cao nhất của tư tưởng duy vật cổ đại về vật chất là ở chỗ nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959751003,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Không tiến bộ hơn."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Có tiến bộ hơn ở chỗ không đồng nhất vật chất với dạng cụ thể của vật chất."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Có tiến bộ ở chỗ coi vật chất và vận động không tách rời nhau, vật chất và vận động có nguyên nhân tự thân."
+            }
+          ],
+          "question": "Quan niệm duy vật về vật chất ở thế kỷ XVII - XVIII có tiến bộ hơn so với thời kỳ cổ đại không? nếu có thì tiến bộ ở chỗ nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959751973,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Đồng nhất vật chất nói chung với một dạng cụ thể hữu hình có tính chất cảm tính của vật chất."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Đồng nhất vật chất nói chung với một dạng cụ thể, đồng thời trong quan niệm về vật chất có nhiều yếu tố biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Không đồng nhất vật chất nói chung với một dạng cụ thể của vật chất"
+            }
+          ],
+          "question": "Đâu là quan niệm về vật chất của chủ nghĩa duy vật thế kỷ XVII - XVIII."
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959753254,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phương pháp biện chứng duy tâm"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phương pháp biện chứng duy vật."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Phương pháp siêu hình máy móc."
+            }
+          ],
+          "question": "Phương pháp tư duy nào chi phối những hiểu biết triết học duy vật về vật chất ở thế kỷ XVII - XVIII?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959754025,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật tự phát thời kỳ cổ đại"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy tâm."
+            }
+          ],
+          "question": "Thuộc lập trường triết học nào khi giải thích mọi hiện tượng của tự nhiên bằng sự tác động qua lại của lực đẩy và lực hút của vật thể?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959755767,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật biện chứng thời kỳ hiện đại"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật tự phát thời kỳ cổ đại"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII"
+            }
+          ],
+          "question": "Quan niệm về vật chất của chủ nghĩa duy vật thời kỳ nào đã quy giản sự khác nhau về chất giữa các vật về sự khác nhau về lượng?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959756527,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Các nhà triết học duy vật thời kỳ cổ đại."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Các nhà triết học thời kỳ Phục hưng."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Các nhà khoa học tự nhiên thế kỷ XVII - XVIII."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Các nhà triết học duy vật biện chứng thời kỳ cổ đại."
+            }
+          ],
+          "question": "Đồng nhất vật chất với khối lượng đó là quan niệm về vật chất của ai và ở thời kỳ nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959757051,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Các nhà triết học duy vật thời kỳ cổ đại."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Các nhà khoa học tự nhiên và triết học thế kỷ XVII - XVIII."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Các nhà triết học duy vật biện chứng hiện đại."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Các nhà triết học duy tâm thế kỷ XVII - XVIII."
+            }
+          ],
+          "question": "Coi vận động của vật chất chỉ là biểu hiện của vận động cơ học, đó là quan điểm về vận động và vật chất của ai?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959758175,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Quan sát trực tiếp"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Khoa học tự nhiên ở trình độ lý luận."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Khoa học tự nhiên thực nghiệm nhất là cơ học."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Khoa học xã hội ."
+            }
+          ],
+          "question": "Những tài liệu nào ảnh hưởng trực tiếp đến quan niệm triết học về vật chất ở thế kỷ XVII - XVIII?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959758999,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật trước Mác."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật tự phát thời kỳ cổ đại."
+            }
+          ],
+          "question": "Đồng nhất vật chất nói chung với một dạng cụ thể hoặc một thuộc tính cụ thể của vật chất, coi vật chất có giới hạn tột cùng, đó là đặc điểm chung của hệ thống triết học nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959760426,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Quan điểm của trường phái triết học nào coi khối lượng chỉ là thuộc tính của vật chất, gắn liền với vật chất?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959761123,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật tự phát cổ đại đồng nhất vật chất nói chung với khối lượng."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật nói chung đồng nhất vật chất với khối lượng."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII đồng nhất vật chất nói chung với khối lượng."
+            }
+          ],
+          "question": "Khẳng định nào sau đây là đúng?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959762533,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Vật chất nói chung là bất biến."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Nguyên tử là bất biến."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Nguyên tử là không bất biến."
+            }
+          ],
+          "question": "Hiện tượng phóng xạ mà khoa học tự nhiên phát hiện ra chứng minh điều gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959763746,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Quan niệm duy vật siêu hình về vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Quan niệm duy tâm về vật chất cho nguyên tử không tồn tại."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Quan niệm duy vật biện chứng về vật chất."
+            }
+          ],
+          "question": "Phát minh ra hiện tượng phóng xạ và điện tử bác bỏ quan niệm triết học nào về vật chất"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959764676,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chứng minh nguyên tử không phải là bất biến."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chứng minh nguyên tử biến đổi đồng nhất với vật chất mất đi."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chứng minh nguyên tử biến đổi nhưng vật chất nói chung không mất đi."
+            }
+          ],
+          "question": "Chủ nghĩa duy tâm đã lợi dụng những phát minh của khoa học tự nhiên về hiện tượng phóng xạ và điện tử để chứng minh cái gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959765088,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Quan niệm coi điện tử là phi vật chất thuộc lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959766574,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm."
+            }
+          ],
+          "question": "Đồng nhất sự biến đổi của nguyên tử và khối lượng với sự biến mất của vật chất sẽ rơi vào quan điểm triết học nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959767476,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Chứng minh nguyên tử không bất biến, nhưng không chứng minh vật chất biến mất."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chứng minh nguyên tử biến mất và vật chất cũng biến mất."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chứng minh cơ sở vật chất của chủ nghĩa duy vật không còn."
+            }
+          ],
+          "question": "Quan điểm của chủ nghĩa duy vật biện chứng về hiện tượng phóng xạ như thế nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959768537,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tiêu tan vật chất nói chung."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Tiêu tan dạng tồn tại cụ thể của vật chất."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Tiêu tan giới hạn hiểu biết trước đây về vật chất, quan điểm siêu hình về vật chất."
+            }
+          ],
+          "question": "Theo Lênin những phát minh của khoa học tự nhiên cuối thế kỷ XIX đầu thế kỷ XX đã làm tiêu tan cái gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959769564,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Ăngghen nêu, trong tác phẩm \"Chống Đuyrinh\"."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Mác nêu trong tác phẩm \"Tư bản\""
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Lênin nêu trong tác phẩm \"Chủ nghĩa duy vật và chủ nghĩa kinh nghiệm phê phán\"."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Lênin nêu trong tác phẩm \"Bút ký triết học\"."
+            }
+          ],
+          "question": "Luận điểm cho rằng: \"Điện tử cũng vô cùng vô tận, tự nhiên là vô tận\" do ai nêu ra và trong tác phẩm nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959770483,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm chủ quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            }
+          ],
+          "question": "Quan điểm cho rằng: nhận thức mới về nguyên tử - phát hiện ra điện tử - làm cho nguyên tử không tồn tại, thuộc lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959771596,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật trước Mác."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Quan điểm triết học nào cho rằng, nhận thức mới về nguyên tử chỉ bác bỏ quan niệm cũ về vật chất, không bác bỏ sự tồn tại vật chất nói chung?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959772381,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Biện chứng của tự nhiên"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật và chủ nghĩa kinh nghiệm phê phán."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Bút ký triết học"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Nhà nước và cách mạng."
+            }
+          ],
+          "question": "Định nghĩa về vật chất của Lênin được nêu trong tác phẩm nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959772987,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Đồng nhất vật chất nói chung với một dạng cụ thẻ của vật chất."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Không đồng nhất vật chất nói chung với dạng cụ thể của vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Coi có vật chất chung tồn tại tách rời các dạng cụ thể của vật chất."
+            }
+          ],
+          "question": "Đâu là quan niệm về vật chất của triết học Mác - Lênin?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959774422,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "1- Vật thể, 2- hoạt động"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "1- Phạm trù triết học, 2- Thực tại khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "1- Phạm trù triết học, 2- Một vật thể"
+            }
+          ],
+          "question": "Thêm cụm từ thích hợp vào câu sau để được định nghĩa về vật chất của Lênin: Vật chất là ......(1) dùng để chỉ .......(2).. được đem lại cho con người trong cảm giác, được cảm giác của chúng ta chép lại, chụp lại, phản ảnh và tồn tại không lệ thuộc vào cảm giác."
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959775388,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Thực tại khách quan độc lập với ý thức của con người."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Vận động và biến đổi."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Có khối lượng và quảng tính."
+            }
+          ],
+          "question": "Định nghĩa về vật chất của Lênin bao quát đặc tính quan trọng nhất của mọi dạng vật chất để phân biệt với ý thức, đó là đặc tính gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959775940,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Vô hạn, vô tận, vĩnh viễn tồn tại, độc lập với ý thức."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Có giới hạn, có sinh ra và có mất đi."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Vô hạn, vô tận, vĩnh viễn tồn tại."
+            }
+          ],
+          "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, vật chất với tư cách là phạm trù triết học có đặc tính gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959776910,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Có."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Không có"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Vừa có, vừa không có."
+            }
+          ],
+          "question": "Theo quan niệm của chủ nghĩa duy vật biện chứng về vật chất, chân không có vật chất tồn tại không?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959778072,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Đúng"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Vừa đúng, vừa sai"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Sai."
+            }
+          ],
+          "question": "Khẳng định sau đây là đúng hay sai: chủ nghĩa duy vật biện chứng không thừa nhận cái gì con người biết được mới là vật chất."
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959779147,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Vật chất là cái gây nên cảm giác cho chúng ta."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Cái gì không gây nên cảm giác ở chúng ta thì không phải là vật chất"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Cái không cảm giác được thì không phải là vật chất."
+            }
+          ],
+          "question": "Đâu là quan niệm về vật chất của chủ nghĩa duy vật biện chứng"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959780248,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm khách quan"
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Chủ nghĩa duy tâm chủ quan."
+            }
+          ],
+          "question": "Quan điểm sau đây thuộc trường phái triết học nào: cái gì cảm giác được là vật chất."
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959781301,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Định nghĩa về vật chất của Lênin thừa nhận vật chất tồn tại khách quan ngoài ý thức con người, thông qua các dạng cụ thể."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Định nghĩa về vật chất của Lênin thừa nhận vật chất nói chung tồn tại vĩnh viễn, tách rời các dạng cụ thể của vật chất"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Định nghĩa về vật chất của Lênin đồng nhất vật chất nói chung với một dạng cụ thể của vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Cả a, b, c, đều đúng"
+            }
+          ],
+          "question": "Khẳng định nào sau đây là đúng?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959782145,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Cảm giác, ý thức của chúng ta có khả năng phản ánh đúng thế giới khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Cám giác ý thức của chúng ta không thể phản ánh đúng thế giới vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Cảm giác, ý thức phụ thuộc thụ động vào thế giới vật chất."
+            }
+          ],
+          "question": "Khi nói vật chất là cái được cảm giác của chúng ta chép lại, phản ánh lại, về mặt nhận thức luận Lênin muốn khẳng định điều gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959783679,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Vật chất là vật thể"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Vật chất không loại trừ cái không là vật thể."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Không là vật thể thì không phải là vật chất."
+            }
+          ],
+          "question": "Đâu là quan điểm của chủ nghĩa duy vật biện chứng về vật chất?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959784228,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Quan điểm triết học nào tách rời vật chất với vận động"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959785426,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật siêu hình."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm chủ quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            }
+          ],
+          "question": "Trường phái triết học nào cho vận động bao gồm mọi sự biến đổi của vật chất, là phương thức tồn tại của vật chất."
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959786574,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật tự phát thời kỳ cổ đại."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Nếu cho rằng có vật chất không vận động và có vận động thuần tuý ngoài vật chất sẽ rơi vào lập trường triết học nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959787344,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật tự phát thời kỳ cổ đại."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            }
+          ],
+          "question": "Trường phái triết học nào cho không thể có vật chất không vận động và không thể có vận động ngoài vật chất."
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959788443,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Có vật chất không vận động."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Có vận động thuần tuý ngoài vật chất."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Không có vận động thuần tuý ngoài vật chất."
+            }
+          ],
+          "question": "Đâu là quan niệm của chủ nghĩa duy vật biện chứng về vận động."
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959788914,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Vận động là sự tự thân vận động của vật chất, không được sáng tạo ra và không mất đi."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Vận động là sự đẩy và hút của vật thể."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Vận động được sáng tạo ra và có thể mất đi."
+            }
+          ],
+          "question": "Đâu là quan điểm của chủ nghĩa duy vật biện chứng về vận động?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959790287,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "4 hình thức"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "5 hình thức cơ bản."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "3 hình thức"
+            }
+          ],
+          "question": "Ph. Ăngghen đã chia vận động làm mấy hình thức cơ bản:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959791259,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Cơ học"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Hoá học"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Vật lý"
+            }
+          ],
+          "question": "Theo cách phân chia các hình thức vận động của Ăngghen, hình thức nào là thấp nhất?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959792327,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Sinh học."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Vận động xã hội."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Hoá học."
+            }
+          ],
+          "question": "Theo cách phân chia các hình thức vận động của Ăngghen, hình thức nào là cao nhất và phức tạp nhất?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959793539,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật tự phát."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII."
+            }
+          ],
+          "question": "Trường phái triết học nào cho vận động và đứng im không tách rời nhau?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959794493,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật tự phát."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII."
+            }
+          ],
+          "question": "Trường phái triết học nào cho vận động là tuyệt đối, đứng im là tương đối?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959795727,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Không gian và thời gian là hình thức tồn tại của vật chất, không tách rời vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Không gian và thời gian phụ thuộc vào cảm giác của con người"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Tồn tại không gian và thời gian thuần tuý ngoài vật chất."
+            }
+          ],
+          "question": "Đâu là quan điểm của chủ nghĩa duy vật biện chứng?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959795914,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật siêu hình"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm chủ quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            }
+          ],
+          "question": "Trường phái triết học nào cho không gian và thời gian là do thói quen của con người quy định"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959797622,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Sai"
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Đúng."
+            }
+          ],
+          "question": "Khẳng định sau đây đúng hay sai: Quan điểm siêu hình cho có không gian thuần tuý tồn ngoài vật chất."
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959798379,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Đúng"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Sai."
+            }
+          ],
+          "question": "Khẳng định sau đây đúng hay sai: Chủ nghĩa duy vật biện chứng cho không có không gian và thời gian thuần tuý ngoài vật chất."
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959799489,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm thừa nhận tính khách quan, vô tận và vĩnh cửu của không gian và thời gian"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình thừa nhận tính khách quan, vô tận, gắn liền với vật chất của không gian và thời gian."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng thừa nhận không gian, thời gian là hình thức tồn tại của vật chất, có tính khách quan, vô tận và vĩnh cửu."
+            }
+          ],
+          "question": "Luận điểm nào sau đây là đúng?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959800594,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Là sự phản ánh của hiện thực khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Là thuộc tính của bộ não người, do não người tiết ra."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Phủ nhận nguồn gốc vật chất của ý thức."
+            }
+          ],
+          "question": "Quan điểm của chủ nghĩa duy tâm về nguồn gốc của ý thức?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959801706,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Phản ánh là thuộc tính của mọi dạng vật chất là cái vốn có của mọi dạng vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phản ánh chỉ là đặc tính của một số vật thể."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phản ánh không phải là cái vốn có của thế giới vật chất, chỉ là ý thức con người tưởng tượng ra."
+            }
+          ],
+          "question": "Đâu là quan điểm của chủ nghĩa duy vật biện chứng về phản ánh?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959802734,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật biện chứng"
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình trước Mác."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy tâm chủ quan."
+            }
+          ],
+          "question": "Đồng nhất ý thức với phản ánh vật lý, đó là quan điểm của trường phái triết học nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959803335,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật tầm thường."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm."
+            }
+          ],
+          "question": "Trường phái triết học nào đồng nhất ý thức với một dạng vật chất?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959804533,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy tâm khách quan."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật siêu hình thế kỷ XVII - XVIII."
+            }
+          ],
+          "question": "Trường phái triết học nào cho ý thức không phải là chức năng của não"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959805724,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật biện chứng."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật siêu hình"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy tâm chủ quan."
+            }
+          ],
+          "question": "Trường phái triết học nào cho quá trình ý thức không tách rời đồng thời không đồng nhất với quá trình sinh lý thần kinh của não người?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959806715,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "ý thức tồn tại trên cơ sở quá trình sinh lý của não người."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "ý thức không đồng nhất với quá trình sinh lý của não người."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "ý thức đồng nhất với quá trình sinh lý của não người."
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "Gồm a và b."
+            }
+          ],
+          "question": "Đâu là quan niệm của chủ nghĩa duy vật biện chứng về nguồn gốc tự nhiên của ý thức?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959807884,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Không"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "có thể hình thành được"
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Vừa có thể, vừa không thể"
+            }
+          ],
+          "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng thiếu sự tác động của thế giới khách quan vào não người, có hình thành và phát triển được ý thức không?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959808401,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Không cần sự tác động của thế giới vật chất vào não người vẫn hình thành được ý thức."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Có não người, có sự tác động của thế giới bên ngoài vẫn chưa đủ điều kiện để hình thành và phát triển ý thức."
+            }
+          ],
+          "question": "Luận điểm nào sau đây là của chủ nghĩa duy vật biện chứng về nguồn gốc của ý thứca. Có não người, có sự tác động của thế giới vào não người là có sự hình thành và phát triển ý thức."
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959809536,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phản ánh ý thức."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Phản ánh tâm lý động vật."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Tính kích thích."
+            }
+          ],
+          "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng ở động vật bậc cao có thể đạt đến hình thức phản ánh nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959810140,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Chủ nghĩa duy vật biện chứng cho rằng động vật bậc cao chưa có ý thức."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Chủ nghĩa duy vật biện chứng cho rằng động vật bậc cao cũng có ý thức."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Chủ nghĩa duy vật biện chứng cho rằng chỉ có con người mới có ý thức"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Chủ nghĩa duy vật đều cho ý thức là sự phản ánh hiện thực khách quan vào óc con người."
+            }
+          ],
+          "question": "Điều khẳng định nào sau đây là sai?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959811273,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Phản ánh vật lý hoá học."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Phản ánh sinh học."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Phản ánh ý thức."
+            }
+          ],
+          "question": "Hình thức phản ánh đặc trưng của của thế giới vô cơ là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "",
+          "id": 1790959812023,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Phản ánh vật lý, hoá học."
+            },
+            {
+              "isCorrect": true,
+              "key": "B",
+              "text": "Tính kích thích."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Tính cảm ứng"
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Tâm lý động vật."
+            }
+          ],
+          "question": "Hình thức phản ánh đặc trưng của thế giới thực vật và động vật chưa có hệ thần kinh là gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "",
+          "id": 1790959813793,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Tính kích thích."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Tâm lý động vật."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Tính cảm ứng."
+            },
+            {
+              "isCorrect": true,
+              "key": "D",
+              "text": "các phản xạ."
+            }
+          ],
+          "question": "Hình thức phản ánh đặc trưng của động vật có hệ thần kinh là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959814216,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "ý thức ra đời là kết quả quá trình phát triển lâu dài thuộc tính phản ánh của thế giới vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "ý thức ra đời là kết quả sự tác động lẫn nhau giữa các sự vật vật chất."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "ý thức ra đời là kết quả quá trình tiến hoá của hệ thần kinh."
+            }
+          ],
+          "question": "Đâu là quan điểm của chủ nghĩa duy vật biện chứng vê nguồn gốc của ý thức?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "",
+          "id": 1790959815203,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": true,
+              "key": "A",
+              "text": "Bộ óc con người."
+            },
+            {
+              "isCorrect": false,
+              "key": "D",
+              "text": "Gồm a và b."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Thế giới bên ngoài tác động vào bộ óc."
+            },
+            {
+              "isCorrect": false,
+              "key": "G",
+              "text": "Gồm cả a, b, và c."
+            },
+            {
+              "isCorrect": false,
+              "key": "C",
+              "text": "Lao động của con người"
+            }
+          ],
+          "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng nguồn gốc tự nhiên của ý thức gồm những yếu tố nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959816031,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Bộ óc con người và thế giới bên ngoài tác động vào bộ óc người"
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Lao động của con người và ngôn ngữ."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Gồm cả a, và b."
+            }
+          ],
+          "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng điều kiện cần và đủ cho sự ra đời và phát triển ý thức là những điều kiện nào?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "",
+          "id": 1790959817671,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "isCorrect": false,
+              "key": "A",
+              "text": "Bộ óc con người."
+            },
+            {
+              "isCorrect": false,
+              "key": "B",
+              "text": "Sự tác động của thế giới bên ngoài vào bộ óc con người."
+            },
+            {
+              "isCorrect": true,
+              "key": "C",
+              "text": "Lao động và ngôn ngữ của con người."
+            }
+          ],
+          "question": "Nguồn gốc xã hội của ý thức là yếu tố nào?"
+        }
+      ],
+      "title": "Triết học Mác - Lênin (298 câu hỏi kèm đáp án)"
+    },
+    {
+      "id": 1791206139401,
+      "title": "Tài chính - Tiền tệ (404 câu hỏi trắc nghiệm kèm đáp án)",
+      "code": "TCTT-404",
+      "category": "Tài chính - Ngân hàng",
+      "durationMinutes": 90,
+      "questions": [
+        {
+          "id": 1791206032011,
+          "question": "Chức năng nào của tiền tệ liên quan đến việc đo lường giá trị của hàng hóa và dịch vụ?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chức năng dự trữ giá trị",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chức năng phương tiện trao đổi",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chức năng thước đo giá trị",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Thước đo giá trị là chức năng của tiền tệ dùng để đo lường và biểu hiện giá trị của các hàng hóa, dịch vụ."
+        },
+        {
+          "id": 1791206032789,
+          "question": "Loại tiền tệ nào không phải là tiền pháp định?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền giấy",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tiền xu",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tiền Bitcoin",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Bitcoin là tiền mã hóa phi tập trung, không do NHTW phát hành nên không phải tiền pháp định (Fiat money)."
+        },
+        {
+          "id": 1791206033277,
+          "question": "Tiền mặt có thể được coi là hình thức tiền tệ nào trong ba loại tiền cơ bản?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền pháp định",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tiền hàng hóa",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tiền tín dụng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Nhận biết",
+          "explanation": "Tiền mặt (tiền giấy, tiền xu) do NHTW phát hành có giá trị pháp lý bắt buộc chấp nhận lưu hành nên là tiền pháp định."
+        },
+        {
+          "id": 1791206034945,
+          "question": "Chức năng nào của tiền tệ giúp người sử dụng có thể tích lũy giá trị cho các nhu cầu trong tương lai?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chức năng phương tiện trao đổi",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chức năng thước đo giá trị",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chức năng dự trữ giá trị",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chức năng dự trữ (cất trữ) giá trị cho phép người sở hữu tích lũy sức mua cho tiêu dùng trong tương lai."
+        },
+        {
+          "id": 1791206036106,
+          "question": "Trước khi tiền tệ ra đời, hình thức trao đổi chủ yếu trong nền kinh tế là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền giấy",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thẻ tín dụng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Hệ thống trao đổi hàng hóa",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Trước khi tiền tệ xuất hiện, nền kinh tế trao đổi trực tiếp hàng - đổi - hàng (barter system)."
+        },
+        {
+          "id": 1791206036552,
+          "question": "Cung tiền được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là lượng tiền mà chính phủ phát hành để điều tiết nền kinh tế",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là tổng số tiền được lưu hành trong nền kinh tế, bao gồm tiền mặt và tiền gửi ngân hàng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là số tiền mà các doanh nghiệp vay từ ngân hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Cung tiền (Money Supply) là tổng phương tiện thanh toán trong nền kinh tế, gồm tiền mặt lưu hành và tiền gửi tại các TCTD."
+        },
+        {
+          "id": 1791206037278,
+          "question": "Cầu tiền được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lượng tiền mà các ngân hàng thương mại có thể cho vay",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Lượng tiền mà các hộ gia đình và doanh nghiệp muốn nắm giữ tại một thời điểm nhất định",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Lượng tiền mà chính phủ phát hành trong nền kinh tế",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Cầu tiền (Money Demand) là lượng tiền mà các chủ thể (hộ gia đình, DN) mong muốn nắm giữ tại một thời điểm nhất định."
+        },
+        {
+          "id": 1791206038534,
+          "question": "Chủ thể nào có thể phát hành tiền giấy?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng chính sách",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng Trung ương",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng thương mại",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chỉ có Ngân hàng Trung ương độc quyền phát hành tiền giấy hợp pháp trong nền kinh tế."
+        },
+        {
+          "id": 1791206039979,
+          "question": "Khối tiền M1 bao gồm những yếu tố nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền mặt lưu hành và tiền gửi không kỳ hạn",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tiền mặt lưu hành, tiền gửi không kỳ hạn và tiền gửi có kỳ hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tiền mặt lưu hành, tiền gửi ngân hàng và chứng khoán ngắn hạn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Nhận biết",
+          "explanation": "Khối tiền giao dịch hẹp M1 gồm tiền mặt lưu thông ngoài hệ thống ngân hàng và tiền gửi không kỳ hạn có thể phát séc."
+        },
+        {
+          "id": 1791206040899,
+          "question": "Khối tiền M2 bao gồm những thành phần nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "M1 cộng với tiền gửi có kỳ hạn dưới 1 năm và các tài sản tài chính ngắn hạn khác",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "M1 cộng với tiền gửi có kỳ hạn trên 1 năm và chứng khoán dài hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "M1 cộng với tiền gửi có kỳ hạn và tiền gửi tiết kiệm dài hạn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "M2 (tiền tệ mở rộng) bao gồm M1 cộng với tiền gửi có kỳ hạn và tiền gửi tiết kiệm ngắn hạn."
+        },
+        {
+          "id": 1791206041304,
+          "question": "Khối tiền nào sau đây bao gồm cổ phiếu?",
+          "options": [
+            {
+              "key": "A",
+              "text": "M1",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "M2",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "M3",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "M3 bao gồm M2 và các tài sản tài chính có tính thanh khoản thấp hơn như chứng chỉ quỹ, cổ phiếu, trái phiếu ngắn hạn."
+        },
+        {
+          "id": 1791206042775,
+          "question": "Nguyên nhân nào dưới đây là nguyên nhân chủ yếu dẫn đến lạm phát trong nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng trưởng chậm trong sản xuất nông nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tăng cung tiền quá mức mà không tương ứng với sự gia tăng sản lượng hàng hóa",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Giảm thuế đối với các công ty lớn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Theo lý thuyết tiền tệ, lạm phát về bản chất là hiện tượng tiền tệ: cung tiền tăng vượt mức tăng của sản lượng thực."
+        },
+        {
+          "id": 1791206043321,
+          "question": "Biện pháp nào dưới đây thường được sử dụng để kiềm chế lạm phát?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm lãi suất ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tăng cường chi tiêu công",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thắt chặt chính sách tiền tệ",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Để kiềm chế lạm phát, NHTW thực hiện thắt chặt tiền tệ: tăng lãi suất tái chiết khấu, tăng dự trữ bắt buộc, bán giấy tờ có giá."
+        },
+        {
+          "id": 1791206044858,
+          "question": "Lạm phát do cầu kéo xảy ra khi:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung tiền trong nền kinh tế giảm mạnh",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Có sự tăng trưởng mạnh mẽ về cầu hàng hóa và dịch vụ trong điều kiện sản lượng nền kinh tế vượt quá mức tiềm năng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chi phí sản xuất tăng cao",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Lạm phát cầu kéo xảy ra khi tổng cầu hàng hóa dịch vụ tăng quá mức, vượt quá năng lực sản xuất tiềm năng của nền kinh tế."
+        },
+        {
+          "id": 1791206045705,
+          "question": "Biện pháp nào dưới đây có thể giúp kiểm soát lạm phát do chi phí đẩy?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng cường kiểm soát lãi suất",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giảm thuế cho các doanh nghiệp",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Cắt giảm chi tiêu công",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Giảm thuế cho doanh nghiệp giúp hạ chi phí sản xuất đầu vào, từ đó giảm áp lực chi phí đẩy lên mức giá chung."
+        },
+        {
+          "id": 1791206046380,
+          "question": "Lạm phát có thể gây ra tác động tiêu cực nào đối với nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng trưởng kinh tế nhanh chóng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tạo ra sự bất ổn trong giá cả và làm giảm sức mua của đồng tiền",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Giảm chi phí sản xuất và thúc đẩy đầu tư",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Lạm phát làm xói mòn sức mua của đồng tiền và tạo sự bất ổn, sai lệch tín hiệu giá cả trên thị trường."
+        },
+        {
+          "id": 1791206047623,
+          "question": "Một trong những ưu điểm lớn nhất của tiền giấy so với tiền kim loại là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền giấy có giá trị cao hơn tiền kim loại",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tiền giấy dễ dàng sản xuất và vận chuyển hơn",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tiền giấy có thể sử dụng lâu dài mà không bị hư hỏng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Tiền giấy nhẹ, dễ in ấn hàng loạt, chi phí sản xuất thấp và thuận tiện mang theo, vận chuyển hơn nhiều so với kim loại."
+        },
+        {
+          "id": 1791206048610,
+          "question": "\"Chuyển khoản\" trong phương tiện thanh toán có nghĩa là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Việc chuyển tiền mặt giữa hai người",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Việc chuyển tiền giữa các tài khoản ngân hàng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Việc thanh toán qua ví điện tử",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chuyển khoản là hình thức thanh toán không dùng tiền mặt bằng cách trích tiền từ tài khoản người trả sang tài khoản người nhận."
+        },
+        {
+          "id": 1791206049624,
+          "question": "Tiền dấu hiệu được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền được sử dụng trong các giao dịch thương mại.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tiền có giá trị nội tại rất nhỏ so với sức mua của nó.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tiền dùng để thanh toán trong các giao dịch mua bán.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Tiền dấu hiệu (token money) có giá trị danh nghĩa pháp định lớn hơn rất nhiều so với giá trị thực tế của vật liệu làm ra nó."
+        },
+        {
+          "id": 1791206050833,
+          "question": "Trong các yếu tố dưới đây, đâu là dấu hiệu nhận diện tiền xu?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Được làm bằng kim loại có hình dạng tròn hoặc đa giác.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Có kích thước lớn hơn tờ tiền.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Được làm từ chất liệu giấy hoặc polymer.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tiền xu (tiền kim loại) thường được đúc bằng hợp kim kim loại, hình tròn hoặc đa giác để dùng cho thanh toán nhỏ lẻ."
+        },
+        {
+          "id": 1791206051922,
+          "question": "Khối tiền tệ thực hiện chức năng làm phương tiện trao đổi tốt nhất tại một quốc gia là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "M1.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "M2.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "M3.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Nhận biết",
+          "explanation": "M1 có tính thanh khoản cao nhất, sẵn sàng phục vụ thanh toán trực tiếp nên là phương tiện trao đổi tốt nhất."
+        },
+        {
+          "id": 1791206052785,
+          "question": "\"Giấy bạc ngân hàng\" thực chất là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một loại tín tệ.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tiền được làm bằng giấy.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tiền được ra đời thông qua hoạt động tín dụng và ghi trên hệ thống tài khoản của ngân hàng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Giấy bạc ngân hàng (banknotes) ra đời từ chứng từ nhận nợ của ngân hàng, bản chất là một hình thức tín tệ."
+        },
+        {
+          "id": 1791206053661,
+          "question": "Cầu tiền giao dịch nhằm đáp ứng:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các nhu cầu tiền dự phòng của các chủ thể",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các nhu cầu giao dịch của các chủ thể đầu tư",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Các nhu cầu giao dịch và dự phòng",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Cầu tiền giao dịch gắn liền với nhu cầu thanh toán hàng ngày và các nhu cầu dự phòng chi tiêu đột xuất."
+        },
+        {
+          "id": 1791206054955,
+          "question": "Lạm phát do chi phí đẩy xảy ra bởi áp lực của sự gia tăng:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi phí sản xuất tăng làm cho giá cả hàng hóa tăng",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Cầu tiêu dùng tăng mạnh",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chính phủ tăng chi tiêu công",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Lạm phát chi phí đẩy phát sinh do chi phí các yếu tố sản xuất đầu vào (nguyên liệu, tiền lương, năng lượng) tăng vọt."
+        },
+        {
+          "id": 1791206055800,
+          "question": "Lạm phát phi mã là",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tỷ lệ lạm phát 1 con số",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Nền kinh tế cân bằng ở trên mức sản lượng tiềm năng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tỷ lệ lạm phát 2 con số",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Lạm phát phi mã (galloping inflation) có tỷ lệ từ 2 đến 3 con số một năm (từ 10% đến dưới 1.000%/năm)."
+        },
+        {
+          "id": 1791206056921,
+          "question": "Lạm phát có thể gây ra tác động nào tiêu cực đến nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng trưởng kinh tế mạnh mẽ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giảm giá trị thực của tiền lương và thu nhập",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Làm tăng giá trị đồng tiền",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Lạm phát làm tăng giá cả hàng tiêu dùng, dẫn đến suy giảm tiền lương thực tế và thu nhập thực tế của người dân."
+        },
+        {
+          "id": 1791206057973,
+          "question": "Lạm phát có thể có ảnh hưởng tích cực nếu:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nó duy trì ở mức rất cao",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Lạm phát quá thấp khiến cho nền kinh tế rơi vào suy thoái",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lạm phát ở mức vừa phải giúp kích thích sản xuất và đầu tư",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Lạm phát vừa phải (khoảng 2-5%) kích thích tiêu dùng, đầu tư và tăng trưởng kinh tế mà không gây mất giá nghiêm trọng."
+        },
+        {
+          "id": 1791206058818,
+          "question": "Chính phủ có thể kiểm soát lạm phát bằng cách nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng chi tiêu công một cách không kiểm soát",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giảm thuế để tăng sức mua của người tiêu dùng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thắt chặt chính sách tài khóa, giảm chi tiêu công",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chính phủ kiềm chế lạm phát bằng chính sách tài khóa thắt chặt: cắt giảm chi tiêu công và hợp lý hóa ngân sách."
+        },
+        {
+          "id": 1791206059827,
+          "question": "Về mặt bản chất, tài chính phản ánh:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Việc sử dụng quỹ tiền tệ đáp ứng các nhu cầu xã hội",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Sự dịch chuyển tiền tệ",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tổng thể các quan hệ kinh tế phát sinh trong quá trình chuyển giao các nguồn lực tài chính giữa các chủ thể trong xã hội",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Bản chất của tài chính là tổng thể các quan hệ kinh tế dưới hình thái giá trị nảy sinh trong phân phối các nguồn lực tài chính."
+        },
+        {
+          "id": 1791206060835,
+          "question": "Đối tượng của phân phối tài chính là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng sản phẩm quốc nội, nguồn tài chính chuyển ra nước ngoài và nguồn tài chính chuyển từ nước ngoài vào, tài sản tài nguyên chuyển hóa thành tiền",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tổng thể các nguồn tài chính trong xã hội",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tổng thu nhập quốc dân",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Đối tượng của phân phối tài chính là tổng thể các nguồn tài chính quốc gia có thể huy động và sử dụng trong xã hội."
+        },
+        {
+          "id": 1791206061346,
+          "question": "Cơ cấu hệ thống tài chính gồm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng thương mại và ngân hàng trung ương",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tài chính và các định chế tài chính trung gian",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thị trường tài chính, các chủ thể tài chính và cơ sở hạ tầng tài chính",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Hệ thống tài chính bao gồm: thị trường tài chính, các chủ thể tài chính (DN, hộ gia đình, Nhà nước, định chế TG) và cơ sở hạ tầng tài chính."
+        },
+        {
+          "id": 1791206062645,
+          "question": "Chức năng phân phối lại của nền kinh tế nhằm mục đích gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng trưởng sản xuất trong nền kinh tế",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Điều tiết thu nhập và tài sản giữa các nhóm dân cư",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tăng trưởng tỷ lệ đầu tư quốc tế",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chức năng phân phối lại nhằm mục tiêu công bằng xã hội, điều tiết thu nhập và tài sản giữa các tầng lớp dân cư."
+        },
+        {
+          "id": 1791206063495,
+          "question": "Phân phối lần đầu trong nền kinh tế chủ yếu liên quan đến việc phân chia thu nhập từ:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Việc đầu tư vào tài sản công",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các hoạt động sản xuất và phân phối hàng hóa và dịch vụ",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các khoản trợ cấp xã hội và phúc lợi",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Phân phối lần đầu diễn ra tại các đơn vị kinh tế cơ sở, gắn liền với quá trình sản xuất và phân phối sản phẩm, dịch vụ."
+        },
+        {
+          "id": 1791206064629,
+          "question": "Chức năng kiểm tra của tài chính có tác dụng chính trong việc:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảm bảo các tổ chức tài chính hoạt động theo đúng quy định của pháp luật",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Quản lý các nguồn lực tài chính quốc gia",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Phân phối thu nhập trong xã hội",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Chức năng kiểm tra (giám sát) của tài chính giúp phát hiện sai lệch, đảm bảo các chủ thể tuân thủ đúng quy định và kỷ luật tài chính."
+        },
+        {
+          "id": 1791206065528,
+          "question": "Tài chính có vai trò gì đối với nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hỗ trợ các cá nhân thực hiện các giao dịch tài chính.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tạo ra các cơ hội đầu tư và đảm bảo sự lưu thông của tiền tệ trong nền kinh tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo các công ty có thể giảm thiểu rủi ro kinh doanh.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Tài chính là cầu nối vốn, mở ra các cơ hội đầu tư sinh lời và bảo đảm dòng lưu thông tiền tệ thông suốt trong nền kinh tế."
+        },
+        {
+          "id": 1791206066480,
+          "question": "Hệ thống tài chính đóng vai trò quan trọng trong nền kinh tế vì lý do nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung cấp vốn cho các hoạt động sản xuất và đầu tư",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Quản lý các chương trình bảo hiểm xã hội",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tăng cường sự ổn định của chính phủ",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Hệ thống tài chính đóng vai trò cốt lõi trong việc khơi thông dòng vốn từ nơi nhàn rỗi sang nơi có nhu cầu đầu tư phát triển."
+        },
+        {
+          "id": 1791206067516,
+          "question": "Thị trường tài chính là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nơi các ngân hàng thực hiện các giao dịch tài chính",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là nơi các tổ chức tài chính và các nhà đầu tư mua bán các tài sản tài chính",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là nơi Chính phủ phát hành tiền tệ mới",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Thị trường tài chính là nơi diễn ra các giao dịch mua bán các công cụ/tài sản tài chính (cổ phiếu, trái phiếu, tín phiếu...)."
+        },
+        {
+          "id": 1791206068866,
+          "question": "Các tổ chức tài chính trung gian như ngân hàng thương mại có vai trò gì trong hệ thống tài chính?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung cấp các dịch vụ bảo hiểm và tín dụng cho doanh nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Quản lý các quỹ đầu tư và phát hành trái phiếu",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Trung gian trong việc huy động và phân phối vốn giữa các bên dư thừa và thiếu vốn",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Các định chế tài chính trung gian đóng vai trò cầu nối huy động nguồn vốn nhàn rỗi và phân phối cho bên cần vốn."
+        },
+        {
+          "id": 1791206069562,
+          "question": "Phân phối lần đầu trong nền kinh tế không bao gồm yếu tố nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lợi nhuận từ đầu tư vốn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thu nhập từ lao động",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Trợ cấp từ Chính phủ",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Trợ cấp chính phủ thuộc phân phối lại (thứ cấp) nhằm an sinh xã hội, không thuộc phân phối lần đầu."
+        },
+        {
+          "id": 1791206070390,
+          "question": "Thành phần nào trong hệ thống tài chính đóng vai trò huy động vốn từ các nhà đầu tư và phân phối cho các doanh nghiệp và chính phủ?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng trung ương",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Hộ gia đình",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thị trường tài chính",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Thị trường tài chính là cơ chế huy động vốn rộng rãi từ công chúng đầu tư cho doanh nghiệp và nhà nước."
+        },
+        {
+          "id": 1791206071354,
+          "question": "Yếu tố nào dưới đây KHÔNG thuộc khái niệm cơ sở hệ thống tài chính:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hệ thống thanh toán",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Hệ thống giám sát",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Các quỹ đầu tư",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Cơ sở hạ tầng tài chính gồm hệ thống thanh toán, hệ thống pháp lý, giám sát và thông tin; còn quỹ đầu tư là định chế tài chính."
+        },
+        {
+          "id": 1791206073067,
+          "question": "Chế độ lưu thông tiền tệ là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quy định cách thức tiền tệ được phát hành, quản lý và sử dụng trong nền kinh tế",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Quy định về lãi suất ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Quy định về các chính sách thuế",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Chế độ lưu thông tiền tệ là tổng thể các quy định pháp luật về hình thức, nguyên tắc phát hành và điều hành tiền tệ quốc gia."
+        },
+        {
+          "id": 1791206074049,
+          "question": "Chế độ lưu thông tiền tệ \"tiền giấy\" có đặc điểm gì nổi bật?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền không có giá trị nội tại, phụ thuộc vào sự tin tưởng của người sử dụng",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tiền có giá trị nội tại cao, được in bằng kim loại quý",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tiền được sử dụng chỉ trong các giao dịch thương mại quốc tế",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Nhận biết",
+          "explanation": "Tiền giấy không có giá trị nội tại tương đương mệnh giá, giá trị lưu hành dựa hoàn toàn vào niềm tin và pháp luật nhà nước."
+        },
+        {
+          "id": 1791206074189,
+          "question": "Trong chế độ lưu thông dấu hiệu giá trị, tiền tệ có vai trò gì trong nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dùng để tích trữ của cải",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Dùng để giao dịch hàng hóa, dịch vụ và thanh toán nợ",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Dùng để thay thế tất cả các loại tài sản khác",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Trong chế độ tiền dấu hiệu, tiền làm phương tiện giao dịch hàng hóa, dịch vụ và thanh toán các khoản nợ."
+        },
+        {
+          "id": 1791206075941,
+          "question": "Chế độ lưu thông tiền vàng là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền tệ được đảm bảo bằng giá trị của vàng",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tiền tệ được phát hành bởi ngân hàng thương mại",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tiền tệ được sử dụng cho các giao dịch quốc tế",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Nhận biết",
+          "explanation": "Chế độ bản vị vàng là chế độ tiền tệ mà đơn vị tiền tệ được định nghĩa và đảm bảo bằng một trọng lượng vàng nhất định."
+        },
+        {
+          "id": 1791206076669,
+          "question": "Đâu là đặc điểm nổi bật của tiền kim loại so với tiền hàng hóa?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền kim loại có giá trị thực tế không thay đổi",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tiền kim loại dễ dàng chia nhỏ và có thể lưu thông rộng rãi",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tiền kim loại không có giá trị nội tại",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tiền kim loại có độ bền cao, dễ chia nhỏ thành các đơn vị giá trị lẻ và tiện cho lưu thông rộng rãi."
+        },
+        {
+          "id": 1791206077390,
+          "question": "Khi hệ thống tiền tệ chuyển từ tiền kim loại sang tiền giấy, một trong những yếu tố quan trọng giúp hệ thống này hoạt động là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tỷ lệ vàng và bạc phải luôn được giữ vững",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ phải đảm bảo giá trị tiền giấy bằng vàng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tiền giấy phải có giá trị theo nội dung văn bản in trên đó",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Khi chuyển sang tiền giấy ban đầu, sự đảm bảo quy đổi ra vàng hoặc bảo chứng của Chính phủ là yếu tố giữ niềm tin."
+        },
+        {
+          "id": 1791206078942,
+          "question": "Một trong những vai trò quan trọng của tiền tệ trong nền kinh tế là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là phương tiện duy trì sự ổn định trong nền kinh tế",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tiền tệ giúp giải quyết tất cả các vấn đề trong nền kinh tế",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tiền tệ giúp các quốc gia thiết lập chính sách thuế",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tiền tệ là huyết mạch kinh tế, điều tiết lưu thông tiền tệ ổn định giữ vững cân đối vĩ mô."
+        },
+        {
+          "id": 1791206079478,
+          "question": "Một trong những yếu tố quan trọng giúp tiền tệ hoạt động hiệu quả là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền tệ phải có giá trị nội tại",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tiền tệ phải được phát hành một cách vô hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tiền tệ cần có sự ổn định và được chấp nhận rộng rãi",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Nhận biết",
+          "explanation": "Tiền tệ chỉ thực hiện tốt các chức năng khi nó giữ được giá trị tương đối ổn định và được xã hội chấp nhận rộng rãi."
+        },
+        {
+          "id": 1791206080259,
+          "question": "Chức năng phân phối lại của tài chính có nghĩa là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phân phối lại tài sản từ khu vực công sang khu vực tư",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Điều chỉnh và phân phối lại thu nhập giữa các cá nhân và nhóm trong xã hội",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Điều chỉnh chính sách tiền tệ của ngân hàng trung ương",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Phân phối lại của tài chính là quá trình phân phối tiếp thu nhập nhằm điều tiết chênh lệch giàu nghèo giữa các nhóm dân cư."
+        },
+        {
+          "id": 1791206081920,
+          "question": "Tín dụng được định nghĩa là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Việc ngân hàng phát hành tiền tệ cho các doanh nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là mối quan hệ sử dụng vốn lẫn nhau giữa người cho vay và người đi vay dựa trên nguyên tắc hoàn trả",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Quá trình tạo ra tiền từ các giao dịch kinh tế",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng là quan hệ chuyển nhượng quyền sử dụng vốn tạm thời giữa người cho vay và người đi vay dựa trên nguyên tắc hoàn trả cả gốc và lãi."
+        },
+        {
+          "id": 1791206083101,
+          "question": "Tín dụng phát triển mạnh mẽ vào thời kỳ nào trong lịch sử?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khi nền kinh tế thị trường và các ngân hàng hiện đại bắt đầu phát triển",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Khi các nền văn minh cổ đại xuất hiện",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Trong thời kỳ chiến tranh thế giới",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Tín dụng chỉ thực sự bùng nổ khi nền kinh tế hàng hóa tiền tệ phát triển và hệ thống NHTM hiện đại hình thành."
+        },
+        {
+          "id": 1791206083253,
+          "question": "Tín dụng có ảnh hưởng như thế nào đối với nền kinh tế hiện đại",
+          "options": [
+            {
+              "key": "A",
+              "text": "Làm giảm sự cạnh tranh giữa các doanh nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tạo điều kiện cho các cá nhân và doanh nghiệp tiếp cận vốn, thúc đẩy tăng trưởng kinh tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ có ảnh hưởng tiêu cực đối với thị trường tài chính.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng cung cấp nguồn vốn linh hoạt cho sản xuất kinh doanh và tiêu dùng, thúc đẩy luân chuyển vốn và tăng trưởng kinh tế."
+        },
+        {
+          "id": 1791206084734,
+          "question": "Căn cứ vào chủ thể tín dụng, tín dụng có những loại sau:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng vốn lưu động, tín dụng vốn cố định",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng tiêu dùng, tín dụng sản xuất",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng thương mại, tín dụng nhà nước, tín dụng ngân hàng",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Theo chủ thể tham gia, tín dụng gồm tín dụng thương mại (giữa các DN), tín dụng ngân hàng và tín dụng nhà nước."
+        },
+        {
+          "id": 1791206085266,
+          "question": "Tín dụng tín chấp là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng mà người vay phải cung cấp tài sản có giá trị làm bảo đảm cho khoản vay.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng mà người vay không cần cung cấp tài sản bảo đảm, mà chỉ dựa vào uy tín cá nhân và khả năng trả nợ.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng chỉ được cấp cho các doanh nghiệp lớn.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tín dụng tín chấp là hình thức cho vay không cần tài sản bảo đảm (thế chấp/cầm cố) mà dựa vào uy tín và năng lực tài chính."
+        },
+        {
+          "id": 1791206086912,
+          "question": "Tín dụng có thể được phân loại theo thời gian thành các nhóm nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng ngắn hạn, trung hạn, dài hạn.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng tiêu dùng, tín dụng sản xuất.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng ngân hàng, tín dụng ngoài ngân hàng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Theo thời hạn, tín dụng phân chia thành: ngắn hạn (dưới 1 năm), trung hạn (1-5 năm), dài hạn (trên 5 năm)."
+        },
+        {
+          "id": 1791206087330,
+          "question": "Tín dụng tiêu dùng là loại tín dụng dùng để làm gì",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đầu tư vào các dự án kinh doanh.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Mua sắm hàng hóa và dịch vụ cho cá nhân.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tài trợ cho các hoạt động sản xuất.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng tiêu dùng cấp cho cá nhân, hộ gia đình để mua sắm hàng hóa, dịch vụ tiêu dùng đời sống."
+        },
+        {
+          "id": 1791206088773,
+          "question": "Tín dụng có đảm bảo là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là loại tín dụng chỉ cho vay đối với những người có tài sản lớn.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là loại tín dụng mà người vay phải cung cấp tài sản hoặc tài sản đảm bảo cho khoản vay.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là loại tín dụng không yêu cầu người vay cung cấp bất kỳ tài sản bảo đảm nào.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tín dụng có bảo đảm yêu cầu bên đi vay phải có tài sản thế chấp, cầm cố hoặc có bảo lãnh của bên thứ ba."
+        },
+        {
+          "id": 1791206089212,
+          "question": "Tín dụng sản xuất là loại tín dụng nhằm mục đích:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đầu tư vào các hoạt động sản xuất kinh doanh, mua sắm máy móc thiết bị.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tài trợ cho các hoạt động tiêu dùng cá nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cung cấp tiền cho các hoạt động thương mại quốc tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng sản xuất nhằm tài trợ nhu cầu mua sắm máy móc thiết bị, nguyên vật liệu phục vụ kinh doanh sản xuất."
+        },
+        {
+          "id": 1791206090727,
+          "question": "Tín dụng thương mại là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là loại tín dụng cung cấp cho các mục đích tiêu dùng của cá nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là loại tín dụng mà các tổ chức tài chính cung cấp cho doanh nghiệp để đầu tư sản xuất.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Là loại tín dụng cung cấp cho các hoạt động mua bán chịu hàng hóa và dịch vụ giữa các doanh nghiệp.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng thương mại là quan hệ tín dụng giữa các doanh nghiệp dưới hình thức mua bán chịu hàng hóa dịch vụ."
+        },
+        {
+          "id": 1791206091452,
+          "question": "Tín dụng ngân hàng được hiểu là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khoản vay giữa các doanh nghiệp với nhau",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Khoản vay mà ngân hàng cấp cho cá nhân, doanh nghiệp, Chính phủ…",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Khoản vay từ nhà nước cho doanh nghiệp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tín dụng ngân hàng là hình thức quan hệ tín dụng bằng tiền tệ giữa ngân hàng với các tổ chức, cá nhân trong xã hội."
+        },
+        {
+          "id": 1791206092489,
+          "question": "Tín dụng thương mại chủ yếu được cấp trong các giao dịch:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mua bán chịu hàng hóa",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Cho vay để mua nhà",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cho vay cho các dự án đầu tư",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng thương mại gắn trực tiếp với lưu thông hàng hóa dưới hình thức mua bán chịu."
+        },
+        {
+          "id": 1791206094031,
+          "question": "Lãi suất tín dụng là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là tỷ lệ lợi nhuận mà ngân hàng nhận được từ các khoản đầu tư",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là tỷ lệ phần trăm mà người vay phải trả cho người cho vay khi sử dụng vốn vay",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là khoản phí dịch vụ mà ngân hàng thu khi mở tài khoản",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Lãi suất tín dụng là tỷ lệ phần trăm người vay phải trả thêm cho người cho vay trên số tiền vay trong một kỳ hạn."
+        },
+        {
+          "id": 1791206094959,
+          "question": "Tín dụng nhà nước được hiểu là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là tín dụng do các tổ chức tài chính tư nhân cung cấp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là tín dụng do ngân hàng thương mại cung cấp cho doanh nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Là tín dụng do Nhà nước hoặc các tổ chức của Nhà nước cấp cho các tổ chức, cá nhân trong nền kinh tế.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Tín dụng nhà nước thể hiện quan hệ tín dụng mà Nhà nước là một bên tham gia (đi vay hoặc cho vay chính sách)."
+        },
+        {
+          "id": 1791206095454,
+          "question": "Tín dụng theo đối tượng đi vay có thể phân loại thành các nhóm nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng tiêu dùng và tín dụng đầu tư.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng doanh nghiệp và tín dụng cá nhân.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng dài hạn và tín dụng ngắn hạn.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Theo đối tượng đi vay, tín dụng được chia thành tín dụng doanh nghiệp và tín dụng cá nhân."
+        },
+        {
+          "id": 1791206096502,
+          "question": "Tín dụng vốn cố định là loại tín dụng dùng để làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để tài trợ cho các chi tiêu ngắn hạn của doanh nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Để mua sắm tài sản cố định trong doanh nghiệp như máy móc, thiết bị, nhà xưởng.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Để tài trợ cho mua sắm nguyên vật liệu trong doanh nghiệp.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng vốn cố định là khoản cấp vốn trung - dài hạn dùng để đầu tư xây dựng, mua sắm TSCĐ (nhà xưởng, thiết bị)."
+        },
+        {
+          "id": 1791206097890,
+          "question": "Tín dụng vốn lưu động là loại tín dụng dùng để làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để tài trợ cho các dự án đầu tư dài hạn như máy móc, nhà xưởng.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Để thanh toán các khoản nợ dài hạn của doanh nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Để tài trợ cho các hoạt động sản xuất, kinh doanh ngắn hạn như mua nguyên vật liệu, chi trả lương.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Tín dụng vốn lưu động tài trợ cho các chi phí sản xuất kinh doanh ngắn hạn như mua vật tư, trả lương công nhân."
+        },
+        {
+          "id": 1791206098288,
+          "question": "Thời hạn cho vay được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là khoảng thời gian được tính từ khi khách hàng bắt đầu nhận tiền vay cho đến thời điểm khách hàng hoàn trả hết nợ gốc và lãi vay đã thoả thuận trong hợp đồng tín dụng",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Là khoảng thời gian được tính từ khi hợp đồng tín dụng có hiệu lực cho đến thời điểm khách hàng trả hết tiền gốc và lãi vay đã được thoả thuận trong hợp đồng tín dụng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Là khoảng thời gian được tính từ khi khách hàng bắt đầu trả nợ cho đến thời điểm hoàn trả nợ gốc và lãi tiền vay đã được thoả thuận trong hợp đồng tín dụng được ký giữa ngân hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Thời hạn cho vay tính từ khi khách hàng bắt đầu nhận khoản vốn vay cho đến khi trả hết nợ gốc và lãi."
+        },
+        {
+          "id": 1791206100009,
+          "question": "Tín dụng ngắn hạn là loại tín dụng có thời gian vay:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dưới 1 năm.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Từ 1 đến 3 năm.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Từ 3 đến 5 năm.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng ngắn hạn thông thường có thời hạn dưới 1 năm (<= 12 tháng)."
+        },
+        {
+          "id": 1791206100849,
+          "question": "Tín dụng dài hạn là loại tín dụng có thời gian vay:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dưới 1 năm.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Từ 1 đến 3 năm.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Trên 5 năm.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Tín dụng dài hạn thường có thời hạn vay trên 5 năm theo thông lệ tín dụng quốc tế."
+        },
+        {
+          "id": 1791206101777,
+          "question": "Ngân hàng trung ương có vai trò quan trọng nào trong nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung cấp tín dụng cho các doanh nghiệp tư nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Quản lý cung tiền và thực hiện chính sách tiền tệ quốc gia.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Điều hành các khoản vay tiêu dùng cho người dân.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Ngân hàng Trung ương quản lý vĩ mô cung tiền quốc gia và thực thi chính sách tiền tệ để ổn định giá trị đồng tiền."
+        },
+        {
+          "id": 1791206102656,
+          "question": "Chức năng nào sau đây là chức năng chính của ngân hàng trung ương?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát hành tiền tệ và điều hành chính sách tiền tệ.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Cung cấp tín dụng cho các ngân hàng thương mại.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Quản lý tài sản của các ngân hàng thương mại.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Chức năng cốt lõi của NHTW là độc quyền phát hành tiền pháp định và điều hành chính sách tiền tệ quốc gia."
+        },
+        {
+          "id": 1791206103622,
+          "question": "Một trong các mục tiêu của ngân hàng trung ương trong việc thực hiện chính sách tiền tệ là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hỗ trợ các doanh nghiệp nhỏ và vừa.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Kiểm soát sự thay đổi giá trị đồng tiền và ổn định lạm phát.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo tăng trưởng tín dụng của các ngân hàng thương mại.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Mục tiêu hàng đầu của chính sách tiền tệ NHTW là kiểm soát lạm phát, ổn định giá trị đồng tiền và ổn định kinh tế vĩ mô."
+        },
+        {
+          "id": 1791206104138,
+          "question": "Ngân hàng trung ương có vai trò gì trong việc hỗ trợ các ngân hàng thương mại?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung cấp tín dụng cho các doanh nghiệp trực tiếp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cung cấp dịch vụ thanh toán cho các ngân hàng thương mại.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo thanh khoản, giám sát hoạt động tín dụng và là người cho vay cuối cùng đối với các ngân hàng thương mại.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "NHTW đóng vai trò là người cho vay cuối cùng (lender of last resort), hỗ trợ thanh khoản cho các ngân hàng thương mại."
+        },
+        {
+          "id": 1791206105399,
+          "question": "Chức năng nào sau đây không phải là chức năng của ngân hàng trung ương?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát hành tiền tệ và quản lý cung tiền.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Điều chỉnh tỷ giá hối đoái.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thực hiện chính sách tài khóa cho ngân sách chính phủ.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chính sách tài khóa thuộc thẩm quyền của Bộ Tài chính/Chính phủ, không phải chức năng của Ngân hàng Trung ương."
+        },
+        {
+          "id": 1791206106609,
+          "question": "Chức năng phát hành tiền tệ của ngân hàng trung ương có tác dụng gì đối với nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Điều chỉnh lãi suất cho vay giữa các ngân hàng thương mại.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Đảm bảo tính ổn định của đồng tiền và đáp ứng nhu cầu thanh toán trong nền kinh tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Cung cấp tín dụng cho các tổ chức tài chính quốc tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Phát hành tiền hợp lý đảm bảo phương tiện thanh toán thông suốt cho nền kinh tế mà không gây mất giá đồng tiền."
+        },
+        {
+          "id": 1791206107511,
+          "question": "Chức năng \"Ngân hàng của Ngân hàng\" của ngân hàng trung ương có nghĩa là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng trung ương cung cấp dịch vụ ngân hàng cho các ngân hàng thương mại, bao gồm các khoản vay và thanh toán.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng trung ương chỉ cung cấp dịch vụ cho các tổ chức tài chính quốc tế.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng trung ương cung cấp vốn cho các doanh nghiệp tư nhân.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "NHTW là ngân hàng của các ngân hàng: nhận tiền gửi dự trữ, cấp tín dụng tái cấp vốn và làm trung gian thanh toán liên ngân hàng."
+        },
+        {
+          "id": 1791206108289,
+          "question": "Chức năng \"Ngân hàng Nhà nước\" của ngân hàng trung ương có nghĩa là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng trung ương cung cấp các khoản vay trực tiếp cho cá nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng trung ương thực hiện các chính sách tài khóa của Chính phủ.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng trung ương thay mặt Chính phủ thực hiện các nhiệm vụ về quản lý tài chính, ngân sách và phát hành tiền.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "NHTW là ngân hàng Nhà nước: làm thủ quỹ cho kho bạc, đại lý tài chính phát hành trái phiếu CP và quản lý dự trữ ngoại hối."
+        },
+        {
+          "id": 1791206109456,
+          "question": "Chức năng \"Ngân hàng Nhà nước\" giúp duy trì ổn định tài chính quốc gia thông qua những hoạt động nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quản lý các khoản vay của các ngân hàng thương mại.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cung cấp vốn đầu tư cho các doanh nghiệp công nghệ cao.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Phát hành tiền tệ và quản lý các hoạt động tài chính quốc gia.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "NHTW phát hành tiền pháp định và quản lý các hoạt động tài chính quốc gia để bảo đảm an ninh tài chính tiền tệ."
+        },
+        {
+          "id": 1791206110125,
+          "question": "Chính sách tiền tệ được hiểu là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chính sách của Chính phủ về việc tăng trưởng nền kinh tế.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chính sách điều chỉnh cung tiền và lãi suất để kiểm soát lạm phát và ổn định nền kinh tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chính sách của ngân hàng trung ương về việc tăng trưởng tín dụng cho các ngân hàng thương mại.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chính sách tiền tệ là tổng thể các biện pháp điều tiết khối tiền cung ứng và lãi suất nhằm đạt các mục tiêu kinh tế vĩ mô."
+        },
+        {
+          "id": 1791206111152,
+          "question": "Chính sách tiền tệ nới lỏng có mục đích chính là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kiểm soát lạm phát và ổn định giá trị đồng tiền.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giảm tỷ giá hối đoái và giảm thâm hụt ngân sách.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Khuyến khích đầu tư và tiêu dùng, tăng trưởng kinh tế.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chính sách tiền tệ nới lỏng (mở rộng tiền tệ) làm giảm lãi suất để kích thích đầu tư, tiêu dùng, đẩy mạnh tăng trưởng."
+        },
+        {
+          "id": 1791206112415,
+          "question": "Công cụ trực tiếp của chính sách tiền tệ bao gồm?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quản lý dự trữ ngoại hối của Chính phủ.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tỷ lệ dự trữ bắt buộc, lãi suất tái chiết khấu, và giao dịch thị trường mở.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất tín dụng, hạn mức tín dụng",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Công cụ trực tiếp gồm hạn mức tín dụng, khung lãi suất can thiệp trực tiếp vào giá và khối lượng tín dụng."
+        },
+        {
+          "id": 1791206113256,
+          "question": "Công cụ nào sau đây không phải là công cụ của chính sách tiền tệ?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lãi suất tái chiết khấu.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giao dịch thị trường mở.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chính sách tài khóa",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chính sách tài khóa là công cụ quản lý thu chi ngân sách của Chính phủ, không phải công cụ tiền tệ của NHTW."
+        },
+        {
+          "id": 1791206114865,
+          "question": "Chính sách tiền tệ thắt chặt (hạn chế) chủ yếu nhằm mục đích gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng trưởng nền kinh tế và giảm tỷ lệ thất nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Kiểm soát lạm phát và ổn định giá trị đồng tiền.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Cung cấp tín dụng rẻ cho các ngân hàng thương mại.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chính sách tiền tệ thắt chặt nhằm thu hẹp cung tiền để kiềm chế lạm phát và ổn định đồng nội tệ."
+        },
+        {
+          "id": 1791206115945,
+          "question": "Tỷ lệ dự trữ bắt buộc của các ngân hàng thương mại là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tỷ lệ tiền mặt mà ngân hàng thương mại phải giữ lại để đối phó với các khoản vay.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tỷ lệ mà ngân hàng thương mại phải giữ dự trữ và không cho vay.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tỷ lệ tiền gửi mà ngân hàng thương mại phải trả cho khách hàng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tỷ lệ dự trữ bắt buộc là tỷ lệ phần trăm tiền gửi mà NHTM bắt buộc phải duy trì ký gửi tại NHTW không được dùng cho vay."
+        },
+        {
+          "id": 1791206116554,
+          "question": "Lãi suất tái chiết khấu là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lãi suất mà ngân hàng thương mại tính cho khách hàng khi cho vay.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Lãi suất mà ngân hàng trung ương áp dụng khi các ngân hàng thương mại vay vốn từ ngân hàng trung ương.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất trên các khoản vay của chính phủ.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Lãi suất tái chiết khấu là lãi suất NHTW áp dụng khi chiết khấu/cho vay các giấy tờ có giá đối với các NHTM."
+        },
+        {
+          "id": 1791206117273,
+          "question": "Nghiệp vụ thị trường mở được hiểu là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng trung ương mua bán ngoại tệ với các ngân hàng thương mại.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng trung ương thực hiện mua bán trái phiếu Chính phủ trên thị trường mở để điều chỉnh cung tiền.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chính phủ phát hành cổ phiếu để huy động vốn.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Nghiệp vụ thị trường mở (OMO) là việc NHTW mua bán các giấy tờ có giá (trái phiếu CP) trên thị trường để điều tiết tiền tệ."
+        },
+        {
+          "id": 1791206118634,
+          "question": "Chức năng chính của các tổ chức tài chính trung gian là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm lãi suất tín dụng cho các doanh nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giúp tiết kiệm chi phí giao dịch và rủi ro thông qua việc kết nối giữa người tiết kiệm và người vay.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Phát hành trái phiếu Chính phủ.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tổ chức tài chính trung gian giúp giảm chi phí tìm kiếm, chi phí giao dịch và phân tán rủi ro giữa người tiết kiệm và người vay."
+        },
+        {
+          "id": 1791206119330,
+          "question": "Các tổ chức tài chính trung gian đóng vai trò gì trong nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ cung cấp tín dụng cho các ngân hàng thương mại.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Kết nối giữa các nhà có vốn với các chủ thể cần vốn.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo thanh khoản cho các chính phủ.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Định chế tài chính trung gian biến các khoản tiết kiệm rải rác thành dòng vốn tập trung dẫn đến các chủ thể cần vốn."
+        },
+        {
+          "id": 1791206120877,
+          "question": "Các tổ chức tài chính trung gian có thể là những tổ chức nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các ngân hàng thương mại, công ty bảo hiểm, quỹ đầu tư, quỹ hưu trí.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Chỉ các ngân hàng thương mại.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Các tổ chức tài chính quốc tế như IMF và WB.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Các tổ chức tài chính trung gian đa dạng gồm NHTM, công ty tài chính, công ty bảo hiểm, quỹ hưu trí, quỹ đầu tư."
+        },
+        {
+          "id": 1791206121679,
+          "question": "Chính sách tiền tệ của Ngân hàng Trung ương sử dụng những công cụ gián tiếp nào sau đây:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dự trữ bắt buộc, lãi suất tái chiết khấu, lãi suất tín dụng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Hạn mức tín dụng, nghiệp vụ thị trường mở",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Dự trữ bắt buộc, lãi suất tái chiết khấu, nghiệp vụ thị trường mở",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Ba công cụ gián tiếp chủ yếu của NHTW: dự trữ bắt buộc, lãi suất tái cấp vốn/tái chiết khấu và nghiệp vụ thị trường mở."
+        },
+        {
+          "id": 1791206122269,
+          "question": "Ngân hàng Trung ương phát hành tiền dựa trên cơ sở nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khối lượng tiền cần phát hành phụ thuộc vào tốc độ tăng trưởng kinh tế và nhu cầu tiền trong từng thời kỳ.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Khối lượng tiền cần phát hành phụ thuộc vào GDP bình quân trên đầu người trong từng thời kỳ.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Khối lượng tiền cần phát hành phụ thuộc nhu cầu tiền trong từng thời kỳ.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "NHTW phát hành tiền dựa trên nhu cầu tiền của nền kinh tế, gắn với mục tiêu tăng trưởng kinh tế và kiềm chế lạm phát."
+        },
+        {
+          "id": 1791206123341,
+          "question": "Ngân hàng thương mại có những chức năng chủ yếu nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chức năng trung gian thanh toán, trung gian tín dụng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chức năng trung gian tín dụng, trung gian thanh toán, tạo tiền.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chức năng tạo tiền, trung gian thanh toán",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Ngân hàng thương mại có 3 chức năng chính: trung gian tín dụng, trung gian thanh toán và tạo tiền gửi (bút tệ)."
+        },
+        {
+          "id": 1791206124264,
+          "question": "Chủ thể nào dưới đây được coi là trung gian tiết kiệm theo hợp đồng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng thương mại",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng chính sách xã hội",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Bảo hiểm phi nhân thọ",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Trung gian tiết kiệm theo hợp đồng gồm công ty bảo hiểm (nhân thọ/phi nhân thọ) và quỹ hưu trí."
+        },
+        {
+          "id": 1791206125128,
+          "question": "Chủ thể nào dưới đây không được coi là trung gian đầu tư?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổ chức tín dụng",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Công ty tài chính",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Quỹ đầu tư",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tổ chức tín dụng (ngân hàng) là định chế nhận tiền gửi, còn quỹ đầu tư và công ty tài chính thuộc nhóm trung gian đầu tư."
+        },
+        {
+          "id": 1791206126885,
+          "question": "Thị trường tài chính được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nơi các giao dịch về hàng hóa diễn ra",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là nơi cung cầu nguồn tài chính gặp nhau và tại đó các tài sản tài chính được mua bán",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là nơi các giao dịch về bất động sản diễn ra",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thị trường tài chính là nơi cung cầu vốn gặp nhau thông qua việc phát hành và chuyển nhượng các tài sản tài chính."
+        },
+        {
+          "id": 1791206127646,
+          "question": "Đặc điểm của thị trường vốn là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giao dịch các tài sản có kỳ hạn ngắn, thường dưới 1 năm",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giao dịch các tài sản có kỳ hạn dài hơn 1 năm",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ giao dịch tiền tệ giữa các quốc gia",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Thị trường vốn (capital market) là nơi giao dịch các công cụ tài chính trung và dài hạn (kỳ hạn từ 1 năm trở lên)."
+        },
+        {
+          "id": 1791206128276,
+          "question": "Một trong số những chức năng của thị trường tài chính là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảm bảo sự tồn tại của các công ty lớn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Dẫn nguồn tài chính từ những chủ thể có khả năng cung ứng nguồn tài chính đến những chủ thể cần nguồn tài chính",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ điều tiết các vấn đề liên quan đến lãi suất",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chức năng cơ bản của thị trường tài chính là dẫn vốn từ nơi có vốn nhàn rỗi sang nơi thiếu vốn để tối ưu hóa nguồn lực."
+        },
+        {
+          "id": 1791206129584,
+          "question": "Nhận định nào đúng về thị trường tiền tệ?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nơi giao dịch các loại tài sản tài chính dài hạn và có tính lỏng thấp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là nơi các ngân hàng và tổ chức tài chính giao dịch tiền tệ và các công cụ tài chính ngắn hạn và có tính lỏng cao",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là nơi các công ty phát hành cổ phiếu",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thị trường tiền tệ (money market) là nơi mua bán các công cụ nợ ngắn hạn có kỳ hạn dưới 1 năm và tính lỏng cao."
+        },
+        {
+          "id": 1791206130551,
+          "question": "Tín phiếu kho bạc là công cụ tài chính phát hành bởi:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các ngân hàng thương mại",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Kho bạc Nhà nước",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các công ty cổ phần",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tín phiếu Kho bạc (Treasury Bills) do Kho bạc Nhà nước phát hành nhằm bù đắp thiếu hụt ngân sách tạm thời."
+        },
+        {
+          "id": 1791206131918,
+          "question": "Tín phiếu kho bạc thường có đặc điểm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lãi suất rất cao và kỳ hạn dài",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là công cụ tài chính an toàn và có lãi suất thấp",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ được phát hành bởi các công ty lớn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tín phiếu kho bạc là công cụ ngắn hạn có độ an toàn gần như tuyệt đối (rủi ro vỡ nợ bằng 0) nên lãi suất tương đối thấp."
+        },
+        {
+          "id": 1791206132513,
+          "question": "Trái phiếu là công cụ tài chính được phát hành bởi:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chính phủ hoặc các công ty lớn",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Các tổ chức tín dụng nước ngoài",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Các cá nhân hoặc tổ chức không phải là công ty lớn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Trái phiếu là chứng khoán nợ do Chính phủ, chính quyền địa phương hoặc các công ty/doanh nghiệp lớn phát hành."
+        },
+        {
+          "id": 1791206133550,
+          "question": "Theo sự luân chuyển nguồn tài chính, thị trường tài chính có thể được chia thành:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường trái phiếu và thị trường cổ phiếu",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tiền tệ và thị trường ngoại hối",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thị trường sơ cấp và thị trường thứ cấp",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Theo chu chuyển nguồn tài chính, thị trường chia thành thị trường sơ cấp (phát hành mới) và thứ cấp (giao dịch mua đi bán lại)."
+        },
+        {
+          "id": 1791206134128,
+          "question": "Thị trường chứng khoán sơ cấp là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường nơi các nhà đầu tư giao dịch cổ phiếu đã được phát hành",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường nơi các công ty phát hành cổ phiếu, trái phiếu lần đầu để huy động vốn",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường nơi các tổ chức tài chính thực hiện giao dịch mua bán tài sản",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thị trường chứng khoán sơ cấp là nơi chứng khoán được phát hành lần đầu để huy động vốn trực tiếp cho tổ chức phát hành."
+        },
+        {
+          "id": 1791206135908,
+          "question": "Thị trường chứng khoán thứ cấp là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường nơi các công ty phát hành cổ phiếu lần đầu tiên",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường nơi các nhà đầu tư giao dịch cổ phiếu và trái phiếu đã được phát hành",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường chỉ dành cho các giao dịch giữa các tổ chức tài chính",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thị trường thứ cấp là nơi các nhà đầu tư mua bán, chuyển nhượng các chứng khoán đã được phát hành trên thị trường sơ cấp."
+        },
+        {
+          "id": 1791206137023,
+          "question": "Theo tính chất pháp lý, thị trường tài chính có thể được chia thành:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường trái phiếu và thị trường cổ phiếu",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tiền tệ và thị trường ngoại hối",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thị trường chính thức và thị trường không chính thức",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Theo tính chất pháp lý, thị trường tài chính chia thành thị trường chính thức (tập trung/có quản lý) và không chính thức."
+        },
+        {
+          "id": 1791206137950,
+          "question": "Theo thời gian hoạt động, thị trường tài chính có thể chia thành:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường sơ cấp và thị trường thứ cấp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tiền tệ và thị trường vốn",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường ngoại hối và thị trường vàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Theo thời hạn luân chuyển vốn, thị trường tài chính chia thành thị trường tiền tệ (ngắn hạn) và thị trường vốn (dài hạn)."
+        },
+        {
+          "id": 1791206138904,
+          "question": "Lý do chủ yếu mà các nhà đầu tư tham gia thị trường chứng khoán là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để huy động vốn cho các dự án lớn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Để kiếm lời từ sự tăng giá của cổ phiếu hoặc nhận cổ tức",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Để giảm thiểu rủi ro tài chính",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Động cơ chính của nhà đầu tư cổ phiếu là hưởng cổ tức và kiếm lời từ chênh lệch giá (tăng vốn cổ phiếu)."
+        },
+        {
+          "id": 1791206139892,
+          "question": "Thị trường chứng khoán sơ cấp có vai trò quan trọng vì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nó cho phép các nhà đầu tư bán chứng khoán cho nhau",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Nó giúp các nhà đầu tư tiếp cận với các chứng khoán đã phát hành",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Nó tạo ra cơ hội cho các công ty huy động vốn mới thông qua phát hành cổ phiếu hoặc trái phiếu",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Thị trường sơ cấp trực tiếp cung ứng vốn mới cho các doanh nghiệp mở rộng sản xuất kinh doanh."
+        },
+        {
+          "id": 1791206140112,
+          "question": "Thuê mua tài chính được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một hình thức vay vốn với lãi suất thấp để mua tài sản",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Một hình thức cho thuê tài sản, trong đó người thuê có quyền sử dụng tài sản trong một khoảng thời gian nhất định",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Một hình thức mua tài sản mà không cần phải trả tiền ngay lập tức",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thuê mua tài chính (leasing) là hình thức tín dụng trung dài hạn, bên thuê được sử dụng tài sản và trả tiền thuê định kỳ."
+        },
+        {
+          "id": 1791206141454,
+          "question": "Tính thanh khoản của một công cụ tài chính thể hiện điều gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công cụ tài chính có thể được mua bán dễ dàng và nhanh chóng mà không làm thay đổi giá trị của nó",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Công cụ tài chính có mức lãi suất cao",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Công cụ tài chính có thể được sử dụng làm thế chấp vay vốn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tính thanh khoản (liquidity) là khả năng chuyển đổi tài sản tài chính thành tiền mặt nhanh chóng với chi phí thấp và không mất giá."
+        },
+        {
+          "id": 1791206142986,
+          "question": "Thị trường tài chính có vai trò quan trọng gì đối với nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giúp huy động vốn, phân phối vốn và giảm thiểu rủi ro cho các nhà đầu tư",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tạo ra một môi trường mua bán tài sản vật chất",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Kiểm soát hoàn toàn các hoạt động của ngân hàng trung ương",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Thị trường tài chính thúc đẩy phân bổ vốn hiệu quả và chia sẻ/phân tán rủi ro cho nhà đầu tư."
+        },
+        {
+          "id": 1791206143604,
+          "question": "Trái phiếu được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một loại chứng khoán mà nhà đầu tư sở hữu và nhận cổ tức",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Một chứng khoán nợ mà nhà phát hành cam kết trả lãi định kỳ và gốc khi đáo hạn",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Một loại tiền tệ có thể giao dịch trên thị trường quốc tế",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Trái phiếu là chứng chỉ vay nợ xác nhận nghĩa vụ của người phát hành phải hoàn trả gốc và lãi theo cam kết."
+        },
+        {
+          "id": 1791206145050,
+          "question": "Cổ phiếu được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một loại trái phiếu do chính phủ phát hành",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Một chứng khoán xác nhận quyền sở hữu của một cá nhân đối với một phần tài sản của công ty",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Một khoản vay dài hạn từ ngân hàng cho doanh nghiệp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Cổ phiếu là chứng chỉ xác nhận quyền sở hữu vốn góp và quyền lợi hợp pháp của cổ đông đối với công ty cổ phần."
+        },
+        {
+          "id": 1791206145459,
+          "question": "Chứng chỉ tiền gửi là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một loại chứng khoán xác nhận quyền sở hữu cổ phần trong một công ty",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Một loại chứng chỉ xác nhận việc gửi tiền vào ngân hàng với thời hạn nhất định và lãi suất cố định",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Một chứng chỉ xác nhận quyền vay vốn từ ngân hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Chứng chỉ tiền gửi (CD) là giấy tờ có giá do ngân hàng phát hành chứng nhận số tiền gửi có kỳ hạn với lãi suất thỏa thuận."
+        },
+        {
+          "id": 1791206146385,
+          "question": "Tín phiếu ngân hàng trung ương là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một loại chứng khoán dài hạn do ngân hang trung ương phát hành để huy động vốn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Một loại chứng khoán ngắn hạn do ngân hang trung ương phát hành để vay vốn từ thị trường",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Một loại trái phiếu do chính phủ phát hành",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tín phiếu NHTW là công cụ nợ ngắn hạn do NHTW phát hành để hút tiền về trong nghiệp vụ thị trường mở."
+        },
+        {
+          "id": 1791206148107,
+          "question": "Trái phiếu doanh nghiệp có đặc điểm nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là giấy nhận nợ giúp công ty huy động vốn",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Người sở hữu trái phiếu có quyền bỏ phiếu trong các cuộc họp cổ đông",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Trái phiếu luôn mang lại lợi nhuận cao cho nhà đầu tư",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Trái phiếu doanh nghiệp là giấy vay nợ của công ty, người sở hữu là chủ nợ chứ không có quyền biểu quyết."
+        },
+        {
+          "id": 1791206148387,
+          "question": "Thị trường liên ngân hàng thuộc thị trường nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường cho vay ngắn hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tiền tệ",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường chứng khoán sơ cấp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Thị trường liên ngân hàng giao dịch vốn ngắn hạn giữa các ngân hàng với nhau, thuộc thị trường tiền tệ."
+        },
+        {
+          "id": 1791206149392,
+          "question": "Thị trường ngoại hối là thị trường:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giao dịch cổ phiếu của các công ty đa quốc gia",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giao dịch tiền tệ của các quốc gia",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Giao dịch trái phiếu và công cụ nợ",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thị trường ngoại hối (Forex) là nơi mua bán, chuyển đổi các đồng tiền quốc gia khác nhau."
+        },
+        {
+          "id": 1791206151011,
+          "question": "Trái phiếu chính phủ là loại trái phiếu do:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các công ty tư nhân phát hành",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ phát hành để huy động vốn cho các dự án công",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các ngân hàng phát hành để huy động vốn cho vay",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Trái phiếu chính phủ do Chính phủ phát hành nhằm huy động vốn cho ngân sách và đầu tư các công trình công cộng."
+        },
+        {
+          "id": 1791206151644,
+          "question": "Ngân sách Nhà nước được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là kế hoạch tài chính của các doanh nghiệp quốc doanh để quản lý các hoạt động kinh tế.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là quỹ tiền tệ tập trung lớn của Nhà nước, hình thành từ GDP và các nguồn tài chính khác, sử dụng cho các chức năng của Nhà nước.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là quỹ tài chính của các tổ chức phi chính phủ để thực hiện các hoạt động xã hội.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Ngân sách Nhà nước là quỹ tiền tệ tập trung lớn nhất của Nhà nước để thực hiện các chức năng kinh tế - xã hội của Nhà nước."
+        },
+        {
+          "id": 1791206152642,
+          "question": "Chi NSNN được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Việc thu các khoản thuế và lệ phí từ các cá nhân, tổ chức.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Việc phân phối và sử dụng quỹ NSNN nhằm đảm bảo thực hiện các chức năng, nhiệm vụ của Nhà nước theo những nguyên tắc nhất định.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Việc vay nợ từ các tổ chức tài chính quốc tế để chi cho các dự án phát triển.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chi NSNN là quá trình phân phối và sử dụng quỹ NSNN theo dự toán đã được Quốc hội phê chuẩn."
+        },
+        {
+          "id": 1791206153727,
+          "question": "Khái niệm nào sau đây đúng về tài chính công?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tài chính công là phương thức huy động và phân bổ nguồn lực tài chính của các doanh nghiệp tư nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tài chính công là phương thức huy động, phân bổ và sử dụng các nguồn lực tài chính do Nhà nước thực hiện để cung cấp hàng hóa công cho xã hội.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tài chính công chỉ liên quan đến các quỹ tài chính do các tổ chức phi chính phủ quản lý.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Tài chính công là các hoạt động thu chi tiền tệ của Nhà nước nhằm cung ứng hàng hóa dịch vụ công cho cộng đồng."
+        },
+        {
+          "id": 1791206154662,
+          "question": "Đặc điểm nào sau đây không thuộc về tài chính công?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tài chính công gắn liền với sở hữu Nhà nước và lợi ích công.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tài chính công do Nhà nước là chủ thể duy nhất quyết định thu chi.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tài chính công phục vụ cho các hoạt động vì lợi nhuận của các tổ chức kinh tế.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Tài chính công hoạt động phi lợi nhuận vì mục tiêu phục vụ lợi ích công cộng chung của xã hội."
+        },
+        {
+          "id": 1791206155291,
+          "question": "Nhận định nào đúng về vai trò của tài chính công?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quản lý các doanh nghiệp tư nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Đảm bảo duy trì sự tồn tại và hoạt động của bộ máy Nhà nước.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Cung cấp vốn cho các dự án đầu tư quốc tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Tài chính công đảm bảo nguồn lực tài chính để duy trì hoạt động quản lý hành chính của bộ máy Nhà nước."
+        },
+        {
+          "id": 1791206156639,
+          "question": "Một trong các mục tiêu của tài chính công là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thúc đẩy chuyển dịch cơ cấu kinh tế và đảm bảo tăng trưởng bền vững.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Giảm thuế cho các doanh nghiệp lớn.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cung cấp lợi nhuận cho các công ty nhà nước.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tài chính công định hướng cơ cấu kinh tế thông qua đầu tư công và chính sách thuế để phát triển bền vững."
+        },
+        {
+          "id": 1791206157950,
+          "question": "Tài chính công có vai trò gì trong việc thực hiện công bằng xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tài chính công chỉ giúp tăng thu nhập cho những người giàu có.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tài chính công giúp tái phân phối thu nhập xã hội qua thuế và chi tiêu công để điều tiết thu nhập và nâng đỡ thu nhập thấp.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tài chính công không liên quan đến công bằng xã hội.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Tài chính công phân phối lại của cải thông qua thuế lũy tiến và các khoản trợ cấp an sinh để hỗ trợ người thu nhập thấp."
+        },
+        {
+          "id": 1791206158550,
+          "question": "Trong hệ thống tài chính quốc gia, tài chính công đóng vai trò như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là một phần không quan trọng trong hệ thống tài chính quốc gia.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là một yếu tố không chịu sự điều chỉnh của pháp luật quốc gia.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Giữ vai trò chủ đạo trong việc quản lý, điều tiết kinh tế xã hội và giám sát các hoạt động tài chính của các chủ thể khác.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Tài chính công giữ vị trí chủ đạo trong hệ thống tài chính quốc gia, chi phối và điều tiết các khâu tài chính khác."
+        },
+        {
+          "id": 1791206159445,
+          "question": "Ngân sách Nhà nước có vai trò gì trong nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giải quyết các vấn đề tài chính vĩ mô và các cân đối vĩ mô của nền kinh tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Quản lý chi phí của các doanh nghiệp quốc gia.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo lợi nhuận cho các công ty đa quốc gia.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Nhận biết",
+          "explanation": "NSNN là công cụ vĩ mô quan trọng nhất để Nhà nước điều tiết chu kỳ kinh tế và cân đối vĩ mô."
+        },
+        {
+          "id": 1791206161087,
+          "question": "Đặc điểm nào dưới đây là chính xác về tổ chức hệ thống Ngân sách Nhà nước?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hệ thống Ngân sách Nhà nước là một tập hợp các quỹ tài chính của các tổ chức phi chính phủ.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Hệ thống Ngân sách Nhà nước có mối quan hệ hữu cơ giữa các cấp Ngân sách trong quá trình thực hiện nhiệm vụ thu chi.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Hệ thống Ngân sách Nhà nước không có sự thống nhất về cơ sở kinh tế và chính trị.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Hệ thống NSNN được tổ chức liên hoàn, thống nhất, có mối liên hệ mật thiết giữa các cấp ngân sách."
+        },
+        {
+          "id": 1791206161758,
+          "question": "Thu NSNN được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Việc nhà nước thu các khoản phí và lệ phí từ các tổ chức, cá nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Việc nhà nước dùng quyền lực của mình để tập trung một phần nguồn tài chính quốc gia hình thành quỹ ngân sách nhà nước nhằm đáp ứng nhu cầu chi tiêu của nhà nước.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Việc nhà nước thu các khoản thuế từ các pháp nhân và thể nhân.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Thu NSNN là quá trình Nhà nước sử dụng quyền lực chính trị để động viên nguồn lực tài chính hình thành quỹ ngân sách."
+        },
+        {
+          "id": 1791206163002,
+          "question": "Nhận định nào đúng về phí?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khoản thu mà người dân phải trả khi thụ hưởng các dịch vụ công.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Khoản đóng góp bắt buộc của các pháp nhân và thể nhân cho ngân sách nhà nước.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Khoản thu từ lợi tức các cơ sở kinh tế nhà nước.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Phí là khoản thu mang tính chất bù đắp một phần chi phí dịch vụ công mà cá nhân, tổ chức được thụ hưởng trực tiếp."
+        },
+        {
+          "id": 1791206163112,
+          "question": "Thuế trực thu được biết đến là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thuế đánh vào tài sản và tiêu dùng.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thuế đánh vào thu nhập hoặc lợi nhuận của các pháp nhân và thể nhân.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thuế đánh vào các khoản viện trợ quốc tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Thuế trực thu là thuế đánh trực tiếp vào thu nhập hoặc tài sản của người nộp thuế (như thuế TNCN, TNDN)."
+        },
+        {
+          "id": 1791206165096,
+          "question": "Thuế gián thu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thuế đánh trực tiếp vào thu nhập hoặc lợi nhuận của cá nhân và tổ chức.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thuế đánh vào tiêu dùng, sản phẩm, hàng hóa và dịch vụ.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thuế đánh vào tài sản và di sản.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thuế gián thu là thuế cấu thành trong giá hàng hóa, dịch vụ mà người tiêu dùng chịu (như VAT, TTĐB, thuế xuất nhập khẩu)."
+        },
+        {
+          "id": 1791206165662,
+          "question": "Lệ phí được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khoản thu phát sinh ở cơ quan của bộ máy chính quyền nhà nước khi cung cấp các dịch vụ công về hành chính, pháp lý.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Khoản thu từ các hoạt động kinh tế của nhà nước.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Khoản thu mà người dân phải trả khi thụ hưởng các dịch vụ công.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Nhận biết",
+          "explanation": "Lệ phí gắn liền với việc cơ quan nhà nước thực hiện công việc quản lý hành chính nhà nước (cấp giấy phép, trước bạ...)."
+        },
+        {
+          "id": 1791206166301,
+          "question": "Chi thường xuyên là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các khoản chi dài hạn phục vụ cho mục tiêu phát triển bền vững của đất nước.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các khoản chi có thời hạn tác động ngắn, chủ yếu phục vụ chức năng quản lý, điều hành xã hội của Nhà nước.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các khoản chi cho các hoạt động quân sự và quốc phòng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chi thường xuyên là các khoản chi mang tính chất tiêu dùng hàng ngày để duy trì hoạt động bộ máy nhà nước và dịch vụ công."
+        },
+        {
+          "id": 1791206167633,
+          "question": "Nợ công là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tất cả các khoản vay của các doanh nghiệp tư nhân để phát triển sản xuất.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tất cả các khoản nợ tích tụ từ các khoản vay trong nước và nước ngoài của khu vực công, mà trách nhiệm trả nợ thuộc về Nhà nước.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các khoản vay từ các tổ chức quốc tế hỗ trợ cho các dự án phát triển xã hội.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Nợ công là toàn bộ nghĩa vụ nợ tích lũy của khu vực công mà Chính phủ có trách nhiệm hoàn trả."
+        },
+        {
+          "id": 1791206168272,
+          "question": "Nhận định nào đúng về thâm hụt ngân sách nhà nước?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là tình trạng khi tổng chi ngân sách vượt quá tổng thu ngân sách trong một kỳ.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Là tình trạng khi tổng thu ngân sách lớn hơn tổng chi ngân sách.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Là tình trạng khi ngân sách nhà nước không có đủ nguồn lực để chi trả các khoản vay.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Thâm hụt ngân sách (bội chi) xảy ra khi tổng chi ngân sách vượt quá tổng nguồn thu ngân sách trong năm tài chính."
+        },
+        {
+          "id": 1791206169681,
+          "question": "Quỹ dự trữ của Nhà nước có chức năng gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảm bảo chi trả các khoản trợ cấp xã hội cho người dân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Dự trữ, dự phòng rủi ro và bất trắc của nền kinh tế - xã hội.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Hỗ trợ các doanh nghiệp vừa và nhỏ.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Quỹ dự trữ nhà nước dùng để phòng ngừa các tình huống khẩn cấp, thiên tai, dịch bệnh và biến động kinh tế bất ngờ."
+        },
+        {
+          "id": 1791206171013,
+          "question": "Quỹ bảo hiểm xã hội được sử dụng để làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi trả trợ cấp cho người lao động khi nghỉ hưu và trong các tình huống mất khả năng lao động.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Hỗ trợ chi phí khám, chữa bệnh cho người tham gia bảo hiểm.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Đầu tư vào các dự án hạ tầng xã hội.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Quỹ BHXH được hình thành để chi trả lương hưu, trợ cấp ốm đau, thai sản, tai nạn lao động cho người lao động."
+        },
+        {
+          "id": 1791206171314,
+          "question": "Quỹ hỗ trợ phát triển chủ yếu dành cho mục tiêu gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đầu tư vào các dự án bảo vệ môi trường.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Đầu tư và hỗ trợ các hoạt động phát triển kinh tế, đặc biệt là các doanh nghiệp nhỏ và vừa.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Hỗ trợ cho các đối tượng thuộc diện chính sách xã hội.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Nhận biết",
+          "explanation": "Quỹ hỗ trợ phát triển tài trợ cho các chương trình phát triển kinh tế trọng điểm và hỗ trợ DNNVV tiếp cận vốn."
+        },
+        {
+          "id": 1791206172414,
+          "question": "Quỹ bảo lãnh tín dụng cho các doanh nghiệp nhỏ và vừa có đặc điểm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quỹ này chủ yếu hỗ trợ các doanh nghiệp lớn.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Quỹ này có tính chất hỗ trợ tài chính cho các doanh nghiệp nhỏ và vừa với các điều kiện tín dụng ưu đãi.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Quỹ này chủ yếu tập trung vào các dự án phát triển cơ sở hạ tầng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Quỹ bảo lãnh tín dụng đứng ra bảo lãnh giúp DNNVV không đủ tài sản thế chấp vẫn có thể vay được vốn ngân hàng."
+        },
+        {
+          "id": 1791206174103,
+          "question": "Nợ công bao gồm các nghĩa vụ nợ nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nghĩa vụ nợ của các doanh nghiệp tư nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Nghĩa vụ nợ của các cấp chính quyền địa phương, các bộ ngành, Ngân hàng Nhà nước và các thể chế độc lập được bao cấp bởi Nhà nước.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Nghĩa vụ nợ của các tổ chức quốc tế đối với các quốc gia.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Theo luật quản lý nợ công, nợ công bao gồm nợ Chính phủ, nợ được Chính phủ bảo lãnh và nợ chính quyền địa phương."
+        },
+        {
+          "id": 1791206174683,
+          "question": "Nợ công đáp ứng nhu cầu gì trong nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để tăng cường nguồn tài chính cho các doanh nghiệp tư nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Để chi trả cho các khoản trợ cấp xã hội.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Để bù đắp bội chi ngân sách nhà nước và cung cấp vốn cho chi đầu tư phát triển, kích thích phát triển kinh tế - xã hội.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Nợ công được huy động nhằm bù đắp bội chi NSNN và tập trung vốn cho các công trình hạ tầng then chốt."
+        },
+        {
+          "id": 1791206175375,
+          "question": "Chi đầu tư phát triển là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi tiêu dùng cho các hoạt động hàng ngày của doanh nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi phí cho các dự án và hoạt động nhằm phát triển cơ sở hạ tầng, mở rộng sản xuất và nâng cao năng lực của nền kinh tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chi phí trả lương cho nhân viên trong các cơ quan nhà nước.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Chi đầu tư phát triển tạo ra cơ sở vật chất kỹ thuật, tài sản cố định công ích phục vụ tăng trưởng dài hạn."
+        },
+        {
+          "id": 1791206177013,
+          "question": "Tài chính doanh nghiệp được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quá trình quản lý nguồn tài chính của các tổ chức tài chính",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Quá trình quản lý, huy động và sử dụng các nguồn lực tài chính của doanh nghiệp nhằm đạt được mục tiêu tài chính của doanh nghiệp",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Quá trình lập kế hoạch tài chính cho các tổ chức phi lợi nhuận",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tài chính doanh nghiệp là hệ thống các quan hệ tiền tệ phát sinh trong huy động, phân bổ và sử dụng vốn của DN."
+        },
+        {
+          "id": 1791206177936,
+          "question": "Quỹ đầu tư phát triển của doanh nghiệp là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quỹ dùng để trả nợ cho các chủ nợ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Quỹ dùng để chi trả cổ tức cho cổ đông",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Quỹ dùng để tái đầu tư vào các dự án, mở rộng sản xuất hoặc phát triển kinh doanh của doanh nghiệp",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Quỹ đầu tư phát triển trích từ lợi nhuận sau thuế dùng để mở rộng kinh doanh, mua sắm TSCĐ đổi mới công nghệ."
+        },
+        {
+          "id": 1791206178938,
+          "question": "Tài chính doanh nghiệp liên quan trực tiếp đến hoạt động nào trong quá trình ra quyết định kinh doanh?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lập chiến lược marketing",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Định giá sản phẩm",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Quản lý rủi ro và quyết định đầu tư",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Tài chính doanh nghiệp gắn liền trực tiếp với quyết định đầu tư và đánh giá, quản trị rủi ro tài chính."
+        },
+        {
+          "id": 1791206179792,
+          "question": "Tại sao tài chính doanh nghiệp lại quan trọng đối với sự tồn tại và phát triển của doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giúp doanh nghiệp có thể trả lương cho nhân viên",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Đảm bảo doanh nghiệp có đủ vốn để duy trì hoạt động và đầu tư vào phát triển",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Giúp doanh nghiệp tránh được các khoản thuế",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tài chính doanh nghiệp đảm bảo cung ứng đủ vốn kịp thời cho hoạt động thường xuyên và chiến lược mở rộng của DN."
+        },
+        {
+          "id": 1791206180666,
+          "question": "Quyết định tài chính doanh nghiệp chủ yếu liên quan đến những yếu tố nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quyết định về sản xuất và marketing",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Quyết định về huy động vốn, đầu tư và phân phối lợi nhuận",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Quyết định về chiến lược nhân sự và mở rộng thị trường",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Ba quyết định tài chính cốt lõi của DN gồm: quyết định đầu tư, quyết định tài trợ (huy động vốn) và quyết định phân phối lợi nhuận."
+        },
+        {
+          "id": 1791206181692,
+          "question": "Quyết định tài chính về phân phối lợi nhuận bao gồm việc?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quyết định về mức độ trả cổ tức cho cổ đông và việc tái đầu tư lợi nhuận vào doanh nghiệp",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Quyết định về việc bán tài sản của công ty để tăng lợi nhuận",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Quyết định về việc cho nhân viên vay tiền",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Quyết định phân phối lợi nhuận cân nhắc tỷ lệ chia cổ tức cho cổ đông bằng tiền/cổ phiếu và giữ lại tái đầu tư."
+        },
+        {
+          "id": 1791206182577,
+          "question": "Một trong những mục tiêu của quyết định tài chính doanh nghiệp là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng trưởng doanh thu ngắn hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tối đa hóa giá trị của doanh nghiệp và lợi ích cổ đông trong dài hạn",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tăng số lượng nhân viên",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Mục tiêu tài chính tối thượng của doanh nghiệp là tối đa hóa giá trị doanh nghiệp và sự giàu có cho các cổ đông."
+        },
+        {
+          "id": 1791206183995,
+          "question": "Phân phối lợi nhuận của doanh nghiệp là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quy trình chi trả tiền lương cho nhân viên",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Quy trình phân chia và sử dụng lợi nhuận sau thuế của doanh nghiệp",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Quy trình phân bổ doanh thu giữa các bộ phận trong doanh nghiệp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Phân phối lợi nhuận là quá trình phân bổ lợi nhuận ròng sau thuế vào các quỹ và chia cổ tức cho nhà đầu tư."
+        },
+        {
+          "id": 1791206184892,
+          "question": "Mục tiêu gia tăng trách nhiệm xã hội của doanh nghiệp bao gồm những yếu tố nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng lợi nhuận tối đa cho các cổ đông.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Đảm bảo quyền lợi cho người lao động, bảo vệ người tiêu dùng, bảo vệ môi trường.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Giảm giá thành sản phẩm và tối ưu hoá lợi nhuận.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Trách nhiệm xã hội (CSR) đòi hỏi DN bảo vệ quyền lợi người lao động, khách hàng, cộng đồng và môi trường sinh thái."
+        },
+        {
+          "id": 1791206185794,
+          "question": "Một trong những yếu tố cần xem xét khi ra quyết định đầu tư là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lợi nhuận dự kiến từ dự án đầu tư và mức độ rủi ro liên quan",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Giá trị của cổ phiếu trên thị trường",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Mức độ ảnh hưởng của quyết định đầu tư đến mức lương của nhân viên",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Quyết định đầu tư xem xét mối quan hệ giữa tỷ suất sinh lời kỳ vọng và mức độ rủi ro của dự án."
+        },
+        {
+          "id": 1791206186999,
+          "question": "Nhân tố nào dưới đây không phải là yếu tố ảnh hưởng đến quyết định tài chính của doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mục tiêu tài chính của doanh nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chiến lược phát triển sản phẩm",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Môi trường kinh tế vĩ mô (lãi suất, tỷ giá, lạm phát)",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Mục tiêu tài chính, cấu trúc vốn, môi trường vĩ mô là nhân tố tài chính; chiến lược sản phẩm thuộc mảng marketing/sản xuất."
+        },
+        {
+          "id": 1791206187788,
+          "question": "Mức độ rủi ro mà doanh nghiệp sẵn sàng chấp nhận ảnh hưởng trực tiếp đến quyết định tài chính nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quyết định về giá trị cổ phiếu",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Quyết định về cấu trúc vốn (nợ và vốn chủ sở hữu)",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Quyết định về chiến lược marketing",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Khẩu vị rủi ro quyết định tỷ lệ vay nợ (đòn bẩy) trong cơ cấu vốn của doanh nghiệp."
+        },
+        {
+          "id": 1791206188480,
+          "question": "Tài sản cố định có đặc điểm cơ bản nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Có thời gian sử dụng trên một năm và được sử dụng để sản xuất, kinh doanh",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Là tài sản có thể chuyển nhượng ngay lập tức",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Không thể sử dụng trong quá trình sản xuất và kinh doanh",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tài sản cố định có thời gian sử dụng trên 1 năm và đạt tiêu chuẩn giá trị theo quy định kế toán hiện hành."
+        },
+        {
+          "id": 1791206189451,
+          "question": "Tài sản cố định được phân loại thành:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tài sản cố định hữu hình và tài sản cố định vô hình",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tài sản cố định và tài sản lưu động",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tài sản cố định và tài sản ngắn hạn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tài sản cố định được phân chia thành TSCĐ hữu hình (nhà xưởng, máy móc) và TSCĐ vô hình (bản quyền, phần mềm)."
+        },
+        {
+          "id": 1791206190469,
+          "question": "Khấu hao tài sản cố định có nghĩa là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là việc giảm giá trị của tài sản cố định do sự hao mòn tự nhiên, công nghệ lạc hậu hoặc sử dụng lâu dài",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Là việc gia tăng giá trị của tài sản cố định trong quá trình sử dụng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Là việc trả lại tài sản cố định cho nhà cung cấp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Khấu hao TSCĐ là việc phân bổ dần nguyên giá TSCĐ vào chi phí sản xuất do sự hao mòn hữu hình và vô hình."
+        },
+        {
+          "id": 1791206191371,
+          "question": "Tài sản cố định có tính chất gì trong quá trình sử dụng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không bị hao mòn trong quá trình sử dụng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Bị hao mòn, giảm giá trị trong quá trình sử dụng do sự khấu hao hoặc lạc hậu",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tăng giá trị theo thời gian sử dụng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Trong quá trình sử dụng, TSCĐ bị hao mòn hữu hình do cơ học và hao mòn vô hình do tiến bộ công nghệ."
+        },
+        {
+          "id": 1791206192115,
+          "question": "Nhận định nào đúng về tài sản cố định trong doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ được sử dụng trong một chu kỳ sản xuất ngắn hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Được sử dụng liên tục và lâu dài trong sản xuất, kinh doanh",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Không ảnh hưởng đến quy trình sản xuất của doanh nghiệp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tài sản cố định tham gia vào nhiều chu kỳ sản xuất kinh doanh và giữ nguyên hình thái vật chất ban đầu."
+        },
+        {
+          "id": 1791206193140,
+          "question": "Tài sản cố định vô hình có đặc điểm nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Có thể cảm nhận được bằng cách chạm vào",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Không có hình dáng vật lý nhưng có giá trị sử dụng lâu dài",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ tồn tại trong một thời gian ngắn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "TSCĐ vô hình không có hình thái vật chất cụ thể nhưng đem lại lợi ích kinh tế lâu dài (nhãn hiệu, bằng sáng chế)."
+        },
+        {
+          "id": 1791206195105,
+          "question": "Tài sản lưu động được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tài sản có thời gian sử dụng dài hơn một năm và sử dụng trong sản xuất kinh doanh",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tài sản có giá trị lớn và có thể chuyển nhượng dễ dàng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tài sản sử dụng trong quá trình sản xuất, kinh doanh và có thể chuyển hóa thành tiền mặt trong vòng một năm hoặc chu kỳ sản xuất kinh doanh",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Tài sản lưu động là các tài sản ngắn hạn có thể chuyển hóa thành tiền mặt trong vòng một năm hoặc một chu kỳ kinh doanh."
+        },
+        {
+          "id": 1791206196000,
+          "question": "Tài sản lưu động có vai trò gì trong doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảm bảo khả năng thanh toán và duy trì hoạt động sản xuất, kinh doanh liên tục",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tạo ra lợi nhuận từ việc tăng giá trị tài sản",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Giảm chi phí tài chính trong dài hạn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "TSLĐ đảm bảo khả năng thanh toán thường xuyên và tính liên tục không bị gián đoạn của dây chuyền sản xuất."
+        },
+        {
+          "id": 1791206196297,
+          "question": "Một trong những yếu tố quan trọng khi quản lý tài sản lưu động là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm giá trị tài sản lưu động trong thời gian dài",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Đảm bảo rằng tài sản lưu động có thể chuyển đổi thành tiền mặt nhanh chóng khi cần thiết",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tăng số lượng tài sản lưu động để đạt được lợi nhuận cao",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Quản trị TSLĐ cần bảo đảm tính thanh khoản cao để sẵn sàng đáp ứng các nghĩa vụ nợ đến hạn."
+        },
+        {
+          "id": 1791206197816,
+          "question": "Một trong những đặc điểm của nguồn vốn chủ sở hữu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Có lãi suất cố định",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Không cần phải hoàn trả",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Được bảo đảm bởi tài sản của doanh nghiệp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Vốn chủ sở hữu thuộc quyền sở hữu của doanh nghiệp nên không có nghĩa vụ bắt buộc phải hoàn trả nợ gốc."
+        },
+        {
+          "id": 1791206198466,
+          "question": "Đặc điểm của nợ phải trả đối với doanh nghiệp là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh nghiệp không cần phải trả nợ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Nợ phải trả không có lãi suất",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Doanh nghiệp phải trả lại nợ trong một thời gian nhất định",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Nợ phải trả là nghĩa vụ tài chính mà doanh nghiệp cam kết hoàn trả đúng thời hạn thỏa thuận."
+        },
+        {
+          "id": 1791206199870,
+          "question": "Chi phí trong doanh nghiệp được hiểu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Số tiền doanh nghiệp phải chi để sản xuất và kinh doanh",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Số tiền doanh nghiệp nhận được từ khách hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lợi nhuận doanh nghiệp tạo ra từ hoạt động kinh doanh",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Chi phí của doanh nghiệp là toàn bộ các hao phí về vật chất và lao động phát sinh để tạo ra doanh thu sản xuất."
+        },
+        {
+          "id": 1791206200337,
+          "question": "Giá thành của sản phẩm là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng chi phí liên quan đến việc sản xuất và tiêu thụ sản phẩm",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Giá bán sản phẩm trên thị trường",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lợi nhuận doanh nghiệp thu được từ sản phẩm",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Giá thành sản phẩm là biểu hiện bằng tiền của toàn bộ chi phí phát sinh để hoàn thành và tiêu thụ một khối lượng sản phẩm."
+        },
+        {
+          "id": 1791206202104,
+          "question": "Giá thành sản phẩm ảnh hưởng như thế nào đến quyết định giá bán?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh nghiệp chỉ cần dựa vào chi phí sản xuất mà không quan tâm đến giá bán",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giá thành quyết định giá bán sản phẩm, nhưng không phải lúc nào cũng bằng nhau",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Doanh nghiệp phải bán thấp hơn giá thành để có thị phần",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Giá thành là sàn chi phí tối thiểu để định giá bán, giá bán còn phụ thuộc vào quan hệ cung cầu và cạnh tranh thị trường."
+        },
+        {
+          "id": 1791206202259,
+          "question": "Doanh thu của doanh nghiệp là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Số tiền doanh nghiệp thu được từ việc bán hàng hoặc cung cấp dịch vụ",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Số tiền doanh nghiệp chi để sản xuất sản phẩm",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lợi nhuận sau thuế mà doanh nghiệp thu được",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Doanh thu là tổng giá trị các lợi ích kinh tế DN thu được trong kỳ từ việc bán sản phẩm, hàng hóa, dịch vụ."
+        },
+        {
+          "id": 1791206203214,
+          "question": "Doanh thu khác được xác định là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh thu từ các hoạt động sản xuất chính của doanh nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Doanh thu từ việc cung cấp dịch vụ",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Doanh thu từ các hoạt động không phải là hoạt động chính của doanh nghiệp",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Doanh thu khác gồm các khoản thu ngoài hoạt động kinh doanh chính và hoạt động tài chính (thanh lý tài sản, tiền phạt...)."
+        },
+        {
+          "id": 1791206204240,
+          "question": "Doanh thu từ hoạt động tài chính của doanh nghiệp là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh thu từ việc bán sản phẩm và cung cấp dịch vụ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Doanh thu từ hoạt động đầu tư, cổ tức, lãi vay, lãi từ đầu tư tài chính",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Doanh thu từ việc cho thuê tài sản",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Doanh thu tài chính gồm cổ tức, lợi nhuận được chia, lãi tiền gửi, lãi cho vay, chênh lệch tỷ giá."
+        },
+        {
+          "id": 1791206205340,
+          "question": "Lợi nhuận từ hoạt động tài chính của doanh nghiệp bao gồm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh thu từ bán hàng và cung cấp dịch vụ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Lợi nhuận từ các khoản đầu tư tài chính, cổ tức, lãi vay, và lãi từ các khoản cho vay",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Lợi nhuận từ các hoạt động kinh doanh chính",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Lợi nhuận tài chính bằng doanh thu tài chính trừ đi chi phí tài chính trong kỳ kế toán."
+        },
+        {
+          "id": 1791206206807,
+          "question": "Hình thức chu chuyển tiền tệ trong nền kinh tế bao gồm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thanh toán tiền mặt và thanh toán không dùng tiền mặt",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Thanh toán qua ngân hàng và thanh toán trực tiếp tại quầy",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thanh toán qua thẻ tín dụng và thanh toán qua ví điện tử",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Chu chuyển tiền tệ gồm thanh toán bằng tiền mặt và thanh toán không dùng tiền mặt (qua ngân hàng)."
+        },
+        {
+          "id": 1791206207436,
+          "question": "Thanh toán bằng tiền mặt chủ yếu phục vụ cho:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các giao dịch nhỏ lẻ hoặc khi không có điều kiện qua ngân hàng",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Các giao dịch lớn giữa các doanh nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chỉ sử dụng trong giao dịch mua bán trực tuyến",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tiền mặt phù hợp với các giao dịch mua sắm tiêu dùng nhỏ lẻ thường nhật hoặc nơi chưa có dịch vụ ngân hàng."
+        },
+        {
+          "id": 1791206208895,
+          "question": "Thanh toán qua ngân hàng (chuyển khoản) có đặc điểm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thực hiện qua việc trích chuyển tiền trên tài khoản hoặc bù trừ lẫn nhau thông qua ngân hàng",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Chủ yếu phục vụ cho các giao dịch nhỏ lẻ",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Không yêu cầu tài khoản ngân hàng của các bên tham gia giao dịch",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Thanh toán chuyển khoản thực hiện bằng cách hạch toán nợ/có trên tài khoản ngân hàng của các bên."
+        },
+        {
+          "id": 1791206209701,
+          "question": "Mối quan hệ giữa thanh toán bằng tiền mặt và thanh toán qua ngân hàng trong nền kinh tế là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không có sự liên hệ nào",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chúng hoàn toàn thay thế cho nhau",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Hai hình thức này có mối liên hệ mật thiết và thường xuyên chuyển hóa lẫn nhau",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Hai hình thức luôn tồn tại song song, hỗ trợ và chuyển hóa qua lại tùy theo nhu cầu của các chủ thể."
+        },
+        {
+          "id": 1791206210413,
+          "question": "Khi nền kinh tế phát triển, xu hướng về chu chuyển tiền tệ sẽ như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thanh toán bằng tiền mặt sẽ tăng tỷ trọng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thanh toán qua ngân hàng sẽ tăng tỷ trọng và thanh toán bằng tiền mặt sẽ giảm tỷ trọng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Cả hai hình thức thanh toán đều giữ tỷ trọng như nhau",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Kinh tế hiện đại phát triển theo hướng thanh toán không dùng tiền mặt tăng nhanh và tỷ trọng tiền mặt giảm dần."
+        },
+        {
+          "id": 1791206211466,
+          "question": "Tại sao thanh toán qua ngân hàng (chuyển khoản) trở nên phổ biến hơn trong nền kinh tế phát triển?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thanh toán qua ngân hàng nhanh chóng và tiện lợi cho các giao dịch lớn.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Thanh toán qua ngân hàng có phí giao dịch rất thấp.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Người dân không thích sử dụng tiền mặt vì lý do an toàn.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Thanh toán qua ngân hàng cực kỳ nhanh chóng, chính xác và an toàn, đặc biệt với các hợp đồng giá trị lớn."
+        },
+        {
+          "id": 1791206212693,
+          "question": "Trong thanh toán qua ngân hàng, các giao dịch thường được thực hiện thông qua:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Việc rút tiền mặt từ các cây ATM.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Việc chuyển tiền giữa các tài khoản thông qua ngân hàng hoặc tổ chức tài chính.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Việc trao đổi tiền mặt giữa các bên giao dịch.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Giao dịch chuyển khoản qua ngân hàng diễn ra thông qua ghi chép bút toán giữa các tài khoản ngân hàng."
+        },
+        {
+          "id": 1791206213159,
+          "question": "Khi nền kinh tế phát triển, xu hướng giảm tỷ trọng thanh toán bằng tiền mặt là do:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sự ra đời của các phương thức thanh toán qua thẻ và chuyển khoản.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Các quy định của Chính phủ hạn chế sử dụng tiền mặt.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Việc sử dụng tiền mặt trong giao dịch bị pháp luật cấm.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Sự phát triển mạnh mẽ của công nghệ ngân hàng số, thẻ thanh toán và chuyển khoản điện tử thay thế dần tiền mặt."
+        },
+        {
+          "id": 1791206214689,
+          "question": "Một đặc điểm quan trọng của thanh toán qua ngân hàng là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền tệ vận động cùng với vận động của vật tư, hàng hóa.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tiền tệ vận động độc lập so với vật tư, hàng hóa cả về thời gian và không gian.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tiền tệ luôn đi kèm với vật tư, hàng hóa trong thanh toán.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Thanh toán chuyển khoản cho phép dòng tiền vận động độc lập về không gian và thời gian so với sự vận chuyển vật lý của hàng hóa."
+        },
+        {
+          "id": 1791206215623,
+          "question": "Trong thanh toán qua ngân hàng, vai trò của tiền mặt là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền mặt xuất hiện như trong thanh toán bằng tiền mặt.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tiền mặt không xuất hiện mà chỉ tồn tại dưới dạng tiền ghi sổ.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tiền mặt luôn được sử dụng để thanh toán trực tiếp..",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Trong chuyển khoản ngân hàng, tiền tệ biểu hiện dưới dạng số dư trên tài khoản (tiền ghi sổ / bút tệ)."
+        },
+        {
+          "id": 1791206216399,
+          "question": "Trong thanh toán qua ngân hàng, vai trò của ngân hàng là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng chỉ đóng vai trò trung gian trong việc chuyển tiền giữa các bên.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng không có vai trò gì trong việc tổ chức và thực hiện thanh toán.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng đóng vai trò quản lý, tổ chức và thực hiện các khoản thanh toán",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Ngân hàng đóng vai trò trung gian thanh toán, tổ chức hạch toán và điều phối luân chuyển lệnh thanh toán."
+        },
+        {
+          "id": 1791206217661,
+          "question": "Tác dụng của thanh toán qua ngân hàng đối với nền kinh tế là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thúc đẩy quá trình vận động của vật tư, hàng hóa trong nền kinh tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Giảm thiểu sự vận động của vật tư, hàng hóa trong nền kinh tế.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Làm cho các giao dịch hàng hóa trở nên khó khăn và phức tạp hơn.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Thanh toán không dùng tiền mặt rút ngắn thời gian luân chuyển vốn, tăng tốc độ tiêu thụ hàng hóa và vật tư."
+        },
+        {
+          "id": 1791206218695,
+          "question": "Nhận định nào đúng về thanh toán qua ngân hàng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cho phép ngân hàng rút bớt lượng vốn tín dụng từ nền kinh tế.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giúp ngân hàng tập trung ngày càng nhiều các khoản vốn tiền tệ, làm tăng nguồn vốn tín dụng để đầu tư vào tái sản xuất mở rộng.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Làm giảm nguồn vốn tín dụng trong nền kinh tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thanh toán qua tài khoản giúp hệ thống ngân hàng tập trung được nguồn vốn nhàn rỗi lớn để cấp tín dụng cho nền kinh tế."
+        },
+        {
+          "id": 1791206219990,
+          "question": "Thanh toán qua ngân hàng giúp tiết kiệm chi phí cho xã hội bằng cách:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm bớt lượng tiền mặt trong lưu thông.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tăng số lượng tiền mặt lưu thông trong nền kinh tế.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cấm sử dụng tiền mặt trong tất cả các giao dịch.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Thanh toán điện tử giảm chi phí in ấn, bảo quản, vận chuyển và kiểm đếm tiền mặt cho toàn xã hội."
+        },
+        {
+          "id": 1791206220273,
+          "question": "Phát biểu nào đúng khi nói về vai trò của ngân hàng trong thanh toán qua ngân hàng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng chỉ có vai trò trong việc cung cấp dịch vụ tiền gửi cho khách hàng.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng là tổ chức tổ chức và thực hiện các khoản thanh toán trong nền kinh tế, bao gồm cả Ngân hàng Nhà nước và Ngân hàng Thương mại.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng không có vai trò quan trọng trong việc tổ chức thanh toán qua ngân hàng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Cả NHTW (hệ thống thanh toán liên ngân hàng) và các NHTM đều trực tiếp tham gia tổ chức thanh toán."
+        },
+        {
+          "id": 1791206222083,
+          "question": "Trong quá trình thanh toán qua ngân hàng, tiền tệ được thể hiện dưới dạng:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền mặt.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tiền chuyển khoản, tức là tiền ghi sổ.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tiền kỹ thuật số.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tiền tệ trong thanh toán ngân hàng tồn tại dưới dạng số dư tài khoản tiền gửi (tiền ghi sổ)."
+        },
+        {
+          "id": 1791206222469,
+          "question": "Thanh toán quốc tế có phạm vi áp dụng là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ áp dụng trong phạm vi một quốc gia.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thanh toán vượt ra khỏi biên giới quốc gia, được Ngân hàng Nhà nước cấp phép.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ áp dụng trong khu vực ASEAN.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thanh toán quốc tế là việc thanh toán các nghĩa vụ tài chính vượt ra khỏi biên giới một quốc gia theo quy định."
+        },
+        {
+          "id": 1791206223818,
+          "question": "Điều kiện để chủ tài khoản thanh toán thực hiện giao dịch là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ tài khoản phải có đủ tiền trong tài khoản tại thời điểm thanh toán để chi trả theo lệnh thanh toán.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Chủ tài khoản không cần có đủ tiền trong tài khoản, ngân hàng sẽ tự động hoàn thành giao dịch.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chủ tài khoản chỉ cần có tài khoản tại ngân hàng, không cần tiền trong tài khoản.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Nguyên tắc thanh toán qua tài khoản: chủ tài khoản phải có số dư khả dụng đủ để thực hiện lệnh chi trả."
+        },
+        {
+          "id": 1791206224744,
+          "question": "Lệnh thanh toán là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lệnh thanh toán là lệnh của các tổ chức, cá nhân sử dụng dịch vụ thanh toán đối với các tổ chức cung ứng dịch vụ thanh toán.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Lệnh thanh toán là chỉ thị của ngân hàng đối với khách hàng.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lệnh thanh toán là giấy tờ chứng minh giao dịch thanh toán đã được thực hiện.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Lệnh thanh toán là chỉ thị thanh toán của khách hàng gửi cho ngân hàng yêu cầu trích tiền chuyển cho bên thụ hưởng."
+        },
+        {
+          "id": 1791206226108,
+          "question": "Chứng từ thanh toán có đặc điểm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chứng từ thanh toán chỉ tồn tại dưới dạng giấy và không có bản sao.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chứng từ thanh toán có thể là văn bản giấy hoặc chứng từ điện tử để chứng minh và lưu giữ lệnh thanh toán.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chứng từ thanh toán chỉ có dưới dạng điện tử.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chứng từ thanh toán có thể ở dạng văn bản giấy hoặc chứng từ điện tử hợp pháp để làm bằng chứng hạch toán kế toán."
+        },
+        {
+          "id": 1791206226226,
+          "question": "Mục đích của việc kiểm tra, kiểm soát chứng từ thanh toán là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảm bảo việc tiếp nhận và xử lý các chứng từ thanh toán một cách kịp thời, an toàn và nhanh chóng.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Đảm bảo rằng chứng từ thanh toán không bị làm giả.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo rằng chỉ có ngân hàng được phép kiểm tra chứng từ thanh toán.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Kiểm soát chứng từ nhằm đảm bảo tính hợp pháp, chính xác, kịp thời và an toàn trong thanh toán."
+        },
+        {
+          "id": 1791206227449,
+          "question": "Séc được hiểu là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lệnh trả tiền của chủ tài khoản, yêu cầu ngân hàng thanh toán một số tiền cho người thụ hưởng.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Hợp đồng vay mượn giữa hai cá nhân hoặc tổ chức.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Giấy tờ xác nhận một khoản vay giữa người vay và ngân hàng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Séc (Cheque) là lệnh trả tiền vô điều kiện của chủ tài khoản yêu cầu ngân hàng trích tiền trả cho người cầm séc/thụ hưởng."
+        },
+        {
+          "id": 1791206229077,
+          "question": "Ủy nhiệm chi là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là phương thức thanh toán giữa các ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là hình thức người trả tiền yêu cầu ngân hàng chuyển tiền cho người nhận",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là hình thức chuyển tiền trực tiếp từ người trả tiền sang người nhận",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Ủy nhiệm chi là chứng từ người trả tiền lập lệnh yêu cầu ngân hàng phục vụ mình chuyển tiền cho người nhận."
+        },
+        {
+          "id": 1791206229906,
+          "question": "Thanh toán bằng uỷ thác thu là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là phương thức thanh toán trong đó người mua thanh toán ngay khi nhận hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là phương thức thanh toán trong đó người bán yêu cầu ngân hàng thu tiền từ người mua sau khi giao hàng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là phương thức thanh toán bằng séc",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Ủy thác thu (nhờ thu) là phương thức người bán sau khi giao hàng nhờ ngân hàng thu hộ tiền từ người mua."
+        },
+        {
+          "id": 1791206230827,
+          "question": "Thẻ ngân hàng được sử dụng để làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ dùng để gửi tiền vào tài khoản ngân hàng.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Sử dụng trong thanh toán tiền mua hàng hóa, dịch vụ, hoặc rút tiền mặt tại các ngân hàng và đại lý.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ dùng để giao dịch chuyển tiền quốc tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thẻ ngân hàng (ghi nợ, tín dụng) dùng để thanh toán hàng hóa dịch vụ tại POS/online và rút tiền mặt tại ATM."
+        },
+        {
+          "id": 1791206231785,
+          "question": "Giao dịch thanh toán quốc tế là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giao dịch thanh toán được thực hiện hoàn toàn ở nước sở tại.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giao dịch thanh toán chỉ thực hiện ở nước ngoài.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Giao dịch thanh toán được thực hiện ở nước sợ tại, nhưng kết thúc ở nước ngoài hoặc ngược lại và liên quan đến ngoại hối.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Giao dịch thanh toán quốc tế liên quan đến các chủ thể ở các quốc gia khác nhau và thường liên quan đến ngoại tệ."
+        },
+        {
+          "id": 1791206232928,
+          "question": "Hối phiếu là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là một phương tiện thanh toán quốc tế không phổ biến.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là một phương tiện thanh toán quốc tế phổ biến, được sử dụng và luân chuyển rộng rãi nhờ phương pháp ký hậu, có sự đảm bảo chi trả của ngân hàng.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là một hình thức thanh toán chỉ sử dụng trong các giao dịch trong nước.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Hối phiếu là chứng từ đòi tiền vô điều kiện, có thể chuyển nhượng bằng thủ tục ký hậu và có bảo lãnh ngân hàng."
+        },
+        {
+          "id": 1791206233712,
+          "question": "Séc trong thanh toán quốc tế có đặc điểm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ dùng cho thanh toán trong nước.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Được phát hành bởi khách hàng và ngân hàng sẽ thực hiện thanh toán cho người cầm séc ở nước ngoài.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là hình thức thanh toán chỉ áp dụng cho các giao dịch mua bán hàng hóa.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Séc quốc tế được phát hành để người thụ hưởng ở nước ngoài có thể rút tiền tại hệ thống ngân hàng liên kết."
+        },
+        {
+          "id": 1791206234753,
+          "question": "Giấy chuyển ngân được sử dụng để làm gì trong thanh toán quốc tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là phương tiện thanh toán chỉ dành cho các giao dịch quốc tế lớn.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là phương tiện sử dụng trong các nghiệp vụ chuyển tiền của ngân hàng theo yêu cầu của khách hàng.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là giấy tờ chứng nhận quyền sở hữu tài sản của người thụ hưởng..",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Lệnh chuyển tiền/giấy chuyển ngân dùng trong nghiệp vụ kiều hối, chuyển tiền quốc tế theo yêu cầu của khách hàng."
+        },
+        {
+          "id": 1791206235751,
+          "question": "Thẻ ngân hàng là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một công cụ thanh toán hiện đại do ngân hàng phát hành, được sử dụng để thanh toán mua hàng hóa, dịch vụ, hoặc rút tiền mặt.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Một hình thức vay tín dụng giữa ngân hàng và khách hàng.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Một loại chứng từ thanh toán chỉ được sử dụng trong các giao dịch quốc tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Thẻ ngân hàng là phương tiện thanh toán không dùng tiền mặt thông minh do tổ chức phát hành thẻ cung cấp."
+        },
+        {
+          "id": 1791206236852,
+          "question": "Tín dụng qua thẻ tín dụng là loại tín dụng nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng trực tiếp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng có bảo đảm.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng không có bảo đảm.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Thẻ tín dụng thông thường là hình thức cho vay tín chấp (không có tài sản bảo đảm), chi tiêu trước trả tiền sau."
+        },
+        {
+          "id": 1791206237403,
+          "question": "Đâu là loại tín dụng đảm bảo dưới các hình thức tín chấp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng thương mại",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng Nhà nước",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng thương mại hình thành từ sự tin cậy lẫn nhau giữa các doanh nghiệp bạn hàng, mang bản chất tín chấp."
+        },
+        {
+          "id": 1791206238367,
+          "question": "Khi doanh nghiệp không có đủ tiền mặt để thanh toán cho đối tác nhưng cần mua hàng, hình thức tín dụng nào sẽ được sử dụng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng tiêu dùng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng thương mại",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Khi thiếu tiền mặt thanh toán ngay, DN sẽ xin mua chịu hàng hóa - tức là sử dụng tín dụng thương mại."
+        },
+        {
+          "id": 1791206239816,
+          "question": "Tín dụng thương mại là một hình thức tín dụng được thực hiện giữa:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cá nhân và ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng và doanh nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Doanh nghiệp và doanh nghiệp",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng thương mại là quan hệ vay mượn hàng hóa trực tiếp giữa doanh nghiệp sản xuất và doanh nghiệp tiêu thụ."
+        },
+        {
+          "id": 1791206240915,
+          "question": "Lãi suất tín dụng thường bị ảnh hưởng bởi một trong số các yếu tố nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chính sách thuế của nhà nước",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tình hình lạm phát và cung cầu tín dụng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Quy mô của thị trường chứng khoán",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Lãi suất thị trường chịu tác động lớn từ cung cầu vốn vay và tỷ lệ lạm phát kỳ vọng trong nền kinh tế."
+        },
+        {
+          "id": 1791206241736,
+          "question": "Một trong những yếu tố quyết định mức lãi suất tín dụng là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mức độ rủi ro của người vay và thời hạn của khoản vay",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Mức độ tiết kiệm của quốc gia",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chính sách trợ cấp của chính phủ",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Lãi suất cho vay được định giá dựa trên mức độ rủi ro tín dụng của khách hàng và kỳ hạn khoản vay."
+        },
+        {
+          "id": 1791206242310,
+          "question": "Công thức tính lãi tiền vay đơn giản (lãi suất tính theo năm) là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lãi = Tiền vay × Lãi suất × Thời gian vay",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Lãi = Tiền vay × Thời gian vay / Lãi suất",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lãi = Tiền vay × Lãi suất",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Công thức tính lãi đơn: Lãi = Số tiền vay × Lãi suất (%/năm) × Thời gian vay (năm)."
+        },
+        {
+          "id": 1791206243347,
+          "question": "Tín dụng thương mại có thể giúp các doanh nghiệp giải quyết việc thiếu hụt vốn trong thời hạn?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngắn hạn",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Dài hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Trung hạn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng thương mại chủ yếu tài trợ nhu cầu vốn ngắn hạn theo chu kỳ quay vòng hàng hóa."
+        },
+        {
+          "id": 1791206244414,
+          "question": "Nhận định nào đúng với hạn chế của tín dụng thương mại?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không có đủ vốn để thanh toán",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Khoản vay tín dụng thường chỉ trong thời gian ngắn và yêu cầu thanh toán nhanh",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất cao hơn các hình thức tín dụng khác",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Nhược điểm của tín dụng thương mại là thời hạn ngắn và khối lượng bị hạn chế bởi lượng hàng bán chịu."
+        },
+        {
+          "id": 1791206245666,
+          "question": "Nhận định nào đúng với tín dụng thương mại?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thời hạn vay quá dài",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giới hạn về qui mô, nghĩa là nó bị giới hạn bởi khối lượng hàng hóa của người bán chịu",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất quá cao, gây khó khăn cho các doanh nghiệp nhỏ",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng thương mại bị giới hạn về quy mô vì người bán chỉ có thể cấp tín dụng trong phạm vi hàng hóa mình có."
+        },
+        {
+          "id": 1791206246490,
+          "question": "Khi nào ngân hàng sẽ từ chối cấp tín dụng cho khách hàng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khi khách hàng có tài sản bảo đảm",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Khi khách hàng có lịch sử tín dụng tốt",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Khi khách hàng không có khả năng trả nợ hoặc không có nguồn thu ổn định",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Ngân hàng từ chối cấp tín dụng khi nhận thấy phương án kinh doanh thiếu khả thi và người vay không có khả năng trả nợ."
+        },
+        {
+          "id": 1791206247400,
+          "question": "Ngân hàng cấp tín dụng cho khách hàng để làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hỗ trợ thanh toán các khoản nợ khác",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Đầu tư vào các hoạt động sản xuất, kinh doanh hoặc tiêu dùng của khách hàng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tăng trưởng vốn chủ sở hữu của ngân hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Mục đích vay vốn ngân hàng là để bổ sung vốn lưu động, đầu tư tài sản cố định hoặc đáp ứng nhu cầu tiêu dùng cá nhân."
+        },
+        {
+          "id": 1791206248354,
+          "question": "Nhận định nào sau đây là là đúng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng thương mại do ngân hàng cung cấp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng thương mại được cấp giữa các doanh nghiệp với nhau.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng ngân hàng thường có lãi suất thấp hơn tín dụng thương mại.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng thương mại là quan hệ mua bán chịu trực tiếp giữa các doanh nghiệp không qua trung gian ngân hàng."
+        },
+        {
+          "id": 1791206249536,
+          "question": "Tín dụng thương mại có đặc điểm gì khác so với tín dụng ngân hàng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng thương mại có thể cấp tín dụng đa chiều với phạm vi rộng.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng thương mại có thể kéo dài đến nhiều năm.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng thương mại thường ít bị ràng buộc về lãi suất.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Lãi suất tín dụng thương mại thường được ngầm định vào giá bán hàng hóa chứ ít khi áp dụng biểu lãi suất cố định như ngân hàng."
+        },
+        {
+          "id": 1791206250224,
+          "question": "So với tín dụng ngân hàng, tín dụng thương mại có lợi thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lãi suất của tín dụng thương mại là biểu lãi suất cụ thể được ấn định trước.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng thương mại có thời hạn dài hơn.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng thương mại dễ dàng tiếp cận và nhanh chóng.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Tín dụng thương mại có thủ tục đơn giản, gắn liền ngay với hợp đồng mua bán hàng hóa nên nhanh chóng hơn."
+        },
+        {
+          "id": 1791206251535,
+          "question": "Mục đích chủ yếu của tín dụng nhà nước là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung cấp vốn cho các dự án kinh doanh tư nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Hỗ trợ các ngành, lĩnh vực quan trọng trong nền kinh tế quốc dân.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tạo ra lợi nhuận cho ngân sách Nhà nước.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng Nhà nước hướng đến việc hỗ trợ các ngành mũi nhọn, các dự án công ích và an sinh xã hội trọng điểm."
+        },
+        {
+          "id": 1791206252664,
+          "question": "Tín dụng nhà nước có thể được cung cấp dưới hình thức nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các khoản vay không có lãi suất.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các khoản vay có lãi suất thấp hoặc có hỗ trợ từ ngân sách nhà nước.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các khoản vay từ các tổ chức quốc tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng nhà nước thường có lãi suất ưu đãi, thời hạn dài và được NSNN cấp bù lãi suất."
+        },
+        {
+          "id": 1791206253666,
+          "question": "Tín dụng nhà nước có tác dụng gì đối với nền kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tạo ra sự cạnh tranh giữa các doanh nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Đảm bảo cung cấp đủ vốn cho các dự án đầu tư của Nhà nước và thúc đẩy phát triển các lĩnh vực ưu tiên.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Giảm bớt sự phát triển của các ngành nghề tư nhân.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tín dụng nhà nước đảm bảo nguồn vốn tập trung cho các công trình hạ tầng quốc gia và vùng khó khăn."
+        },
+        {
+          "id": 1791206254403,
+          "question": "Điểm khác biệt giữa tín dụng nhà nước và tín dụng ngân hàng là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng nhà nước chỉ được cấp cho các đối tượng ưu tiên, trong khi tín dụng ngân hàng có thể cấp cho mọi đối tượng.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng ngân hàng không có lãi suất, còn tín dụng nhà nước luôn có lãi suất.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng nhà nước yêu cầu bảo đảm tài sản, trong khi tín dụng ngân hàng không yêu cầu bảo đảm..",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng nhà nước chỉ hướng tới các đối tượng chính sách ưu tiên theo quy định của Chính phủ."
+        },
+        {
+          "id": 1791206256109,
+          "question": "Tín dụng Nhà nước sử dụng các công cụ nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thương phiếu, trái phiếu chính phủ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tín phiếu kho bạc, trái phiếu chính phủ, thương phiếu",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Hiệp định vay nợ, tín phiếu kho bạc, trái phiếu chính phủ",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Công cụ huy động vốn của Nhà nước gồm: trái phiếu CP, tín phiếu kho bạc và các hiệp định vay nợ quốc tế."
+        },
+        {
+          "id": 1791206256586,
+          "question": "Thương phiếu là công cụ của loại tín dụng nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng thương mại",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tín dụng Nhà nước",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng tư nhân",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Thương phiếu (hối phiếu, lệnh phiếu) là công cụ đặc trưng của tín dụng thương mại."
+        },
+        {
+          "id": 1791206258005,
+          "question": "Tính hoàn trả trong hoạt động tín dụng có đặc điểm là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không biết trước về thời gian và mức độ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Không biết trước về thời gian",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Biết trước về thời gian và mức độ",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Trong hợp đồng tín dụng, nghĩa vụ hoàn trả được xác định cụ thể, biết trước về kỳ hạn và số tiền phải trả."
+        },
+        {
+          "id": 1791206258880,
+          "question": "Cơ sở khách quan của tín dụng thương mại là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sự cách biệt giữa thời gian tiêu thụ và thời gian sản xuất của các doanh nghiệp",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Do hạn chế của quan hệ tín dụng ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thủ tục vay đơn giản, nhanh gọn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Tín dụng thương mại nảy sinh do sự chênh lệch thời gian giữa chu kỳ sản xuất của người bán và chu kỳ tiêu dùng của người mua."
+        },
+        {
+          "id": 1791206259264,
+          "question": "Tín dụng thương mại có đặc điểm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là quan hệ tín dụng trực tiếp",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Là quan hệ tín dụng dài hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Là quan hệ tín dụng gián tiếp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Tín dụng thương mại là quan hệ vay mượn trực tiếp giữa bên bán chịu và bên mua chịu hàng hóa."
+        },
+        {
+          "id": 1791206261008,
+          "question": "Trong tín dụng nhà nước, Nhà nước chủ yếu xuất hiện với tư cách:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người đi vay",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Người cho vay",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Người môi giới",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Trong tín dụng nhà nước, Nhà nước thường xuất hiện với tư cách người đi vay (phát hành trái phiếu, công trái)."
+        },
+        {
+          "id": 1791206261848,
+          "question": "Lãi suất tín dụng được trả vì:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người cho vay đã hy sinh quyền sở hữu",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người đi vay cần vốn",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Người cho vay đã hy sinh quyền sử dụng vốn",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Người cho vay nhận lãi suất như một khoản đền bù cho việc tạm thời từ bỏ quyền sử dụng số vốn đó trong thời gian vay."
+        },
+        {
+          "id": 1791206262414,
+          "question": "Lãi suất thị trường luôn biến động vì:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Do cầu cho vay vốn luôn biến động",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Do cung cho vay vốn luôn biến động",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Do cung - cầu về tín dụng luôn biến động",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Lãi suất thị trường là giá cả của vốn, luôn biến động theo quy luật cung - cầu vốn trên thị trường tài chính."
+        },
+        {
+          "id": 1791206264031,
+          "question": "Lạm phát dự tính tăng lên sẽ làm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng nhu cầu vay vốn và giảm lãi suất nếu cung vốn không đổi",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tăng nhu cầu vay vốn và tăng lãi suất nếu cung vốn không đổi",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Giảm nhu cầu vay vốn và giản lãi suất nếu cung vốn không đổi",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Theo hiệu ứng Fisher, lạm phát dự tính tăng sẽ làm người vay muốn vay nhiều hơn, đẩy lãi suất danh nghĩa tăng lên."
+        },
+        {
+          "id": 1791206264451,
+          "question": "Phát biểu nào sau đây sai:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tín dụng thương mại là quan hệ tín dụng giữa các nhà sản xuất kinh doanh với nhau, hình thành trên cơ sở mua bán chịu hàng hoá",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Công cụ phục vụ chủ yếu cho hoạt động tín dụng ngân hàng là thương phiếu, chứng chỉ tiền gửi, các loại chứng chỉ huy động vốn",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tín dụng Nhà nước được sử dụng như một công cụ tài chính để đảm bảo cho sự phát triển ổn định của nền kinh tế xã hội",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thương phiếu là công cụ của tín dụng thương mại chứ không phải công cụ chủ yếu huy động vốn của NHTM."
+        },
+        {
+          "id": 1791206265531,
+          "question": "Lãi suất thực là lãi suất:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Luôn nhỏ hơn lãi suất danh nghĩa",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Là lãi suất do các tổ chức tài chính công bố",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Luôn lớn hơn lãi suất danh nghĩa",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Theo phương trình Fisher: Lãi suất thực ≈ Lãi suất danh nghĩa - Tỷ lệ lạm phát, do đó lãi suất thực thường nhỏ hơn lãi suất danh nghĩa khi lạm phát dương."
+        },
+        {
+          "id": 1791206266395,
+          "question": "Nhận định nào đúng khi nói về chức năng phát hàng tiền của ngân hàng trung ương và ngân hàng thương mại?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng Trung ương phát hành tiền giấy, ngân hàng thương mại phát hành tiền kim loại",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cả hai ngân hàng đều phát hành tiền giấy",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng thương mại phát hành tiền chuyển khoản, ngân hàng Trung ương phát hành tiền giấy và tiền kim loại",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "NHTM tạo ra tiền chuyển khoản (tiền ghi sổ/bút tệ), còn NHTW độc quyền phát hành tiền mặt (tiền giấy và tiền xu)."
+        },
+        {
+          "id": 1791206267755,
+          "question": "Chính sách tiền tệ thắt chặt có thể được thực hiện thông qua các công cụ nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng tỷ lệ dự trữ bắt buộc và tăng lãi suất tái chiết khấu.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Giảm tỷ lệ dự trữ bắt buộc và giảm lãi suất tái chiết khấu.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Mua trái phiếu của các ngân hàng thương mại.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Chính sách tiền tệ thắt chặt: tăng tỷ lệ dự trữ bắt buộc và tăng lãi suất chiết khấu để thắt chặt thanh khoản."
+        },
+        {
+          "id": 1791206268428,
+          "question": "Chính sách tiền tệ nới lỏng có thể được thực hiện qua các biện pháp nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm tỷ lệ dự trữ bắt buộc và giảm lãi suất tái chiết khấu.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tăng tỷ lệ dự trữ bắt buộc và tăng lãi suất tái chiết khấu.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Đẩy mạnh các khoản vay tiêu dùng cho các doanh nghiệp.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Chính sách tiền tệ mở rộng (nới lỏng): giảm tỷ lệ dự trữ bắt buộc và giảm lãi suất tái chiết khấu."
+        },
+        {
+          "id": 1791206269904,
+          "question": "Hoạt động huy động vốn của ngân hàng thương mại chủ yếu bao gồm những hình thức nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát hành cổ phiếu và trái phiếu.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tiền gửi của khách hàng, vay trong hệ thống ngân hàng, phát hành giấy tờ có giá.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Vay từ các tổ chức tài chính quốc tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Nguồn vốn huy động của NHTM chủ yếu từ tiền gửi tiết kiệm của dân cư và tiền gửi của các tổ chức kinh tế."
+        },
+        {
+          "id": 1791206270479,
+          "question": "Ngân hàng thương mại có thể sử dụng nguồn vốn huy động để thực hiện các hoạt động nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ cho vay các cá nhân và doanh nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cung cấp tín dụng cho khách hang, đầu tư góp vốn liên doanh và đầu tư chứng khoán.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ vay lại từ Ngân hàng Trung ương.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Vốn huy động được NHTM sử dụng để cho vay, đầu tư chứng khoán và góp vốn liên doanh theo luật các TCTD."
+        },
+        {
+          "id": 1791206271889,
+          "question": "Khi ngân hàng thương mại sử dụng vốn huy động để cho vay, điều này có thể dẫn đến điều gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lãi suất cho vay giảm xuống rất thấp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cung cấp tín dụng cho nền kinh tế, thúc đẩy tiêu dùng và đầu tư.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng không cần phải trả lại tiền cho khách hàng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "NHTM cấp tín dụng giúp phân bổ vốn cho các dự án kinh doanh, kích thích đầu tư và thúc đẩy tăng trưởng kinh tế."
+        },
+        {
+          "id": 1791206272551,
+          "question": "Một trong những phương thức mà ngân hàng thương mại sử dụng để quản lý rủi ro khi huy động vốn là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát hành trái phiếu không có bảo lãnh.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cung cấp tín dụng cho tất cả các khách hàng mà không kiểm tra.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Đa dạng hóa các sản phẩm tiền gửi và tín dụng để phân tán rủi ro.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "NHTM quản lý rủi ro bằng cách đa dạng hóa danh mục đầu tư, kỳ hạn tiền gửi và phân tán các khoản cấp tín dụng."
+        },
+        {
+          "id": 1791206273300,
+          "question": "Nguồn huy động vốn chủ yếu của Ngân hàng thương mại là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vay của Ngân hàng trung ương",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tiền gửi của khách hàng cá nhân, doanh nghiệp",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Phát hành chứng khoán",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Nguồn vốn lớn nhất và quan trọng nhất của ngân hàng thương mại là tiền gửi của khách hàng cá nhân và doanh nghiệp."
+        },
+        {
+          "id": 1791206274399,
+          "question": "Ngân hàng thương mại dùng nguồn vốn đã huy động được sẽ chủ yếu dùng để?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cho Ngân hàng trung ương vay",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cho khách hàng cá nhân, doanh nghiệp vay",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Mua chứng khoán",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Mục đích sử dụng vốn chính của NHTM là cấp tín dụng cho khách hàng vay để thu lãi."
+        },
+        {
+          "id": 1791206275230,
+          "question": "Điểm khác biệt chính giữa ngân hàng thương mại và các tổ chức tài chính trung gian khác là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng thương mại chỉ cung cấp dịch vụ vay vốn, trong khi các tổ chức tài chính trung gian khác chỉ huy động vốn.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng thương mại có quyền phát hành tiền chuyển khoản, trong khi các tổ chức tài chính trung gian khác không có quyền này.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng thương mại chỉ phục vụ cho các doanh nghiệp, còn tổ chức tài chính trung gian khác phục vụ cá nhân.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "NHTM có đặc quyền mở tài khoản thanh toán và tạo tiền gửi thanh toán (tiền chuyển khoản), điều mà các định chế khác không có."
+        },
+        {
+          "id": 1791206277033,
+          "question": "Điểm khác biệt cơ bản giữa ngân hàng thương mại và quỹ đầu tư là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng thương mại tập trung vào hoạt động cho vay và huy động vốn, trong khi quỹ đầu tư tập trung vào việc đầu tư vào cổ phiếu và chứng khoán.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng thương mại không cho vay, trong khi quỹ đầu tư cung cấp tín dụng cho các doanh nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Quỹ đầu tư chỉ cung cấp các khoản vay ngắn hạn, còn ngân hàng thương mại chỉ cung cấp vay dài hạn.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "NHTM hoạt động chính là huy động tiền gửi và cho vay, còn quỹ đầu tư tập trung đầu tư vào các tài sản tài chính (cổ phiếu, trái phiếu)."
+        },
+        {
+          "id": 1791206277852,
+          "question": "Khi nền kinh tế của một quốc gia đang trong tình trạng lạm phát cao, Ngân hàng Trung ương sẽ áp dụng biện pháp chính sách tiền tệ nào để kiềm chế lạm phát?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm tỷ lệ lãi suất tái cấp vốn.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tăng tỷ lệ dự trữ bắt buộc của ngân hàng thương mại.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Mua vào trái phiếu chính phủ để tăng cung tiền.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Khi lạm phát cao, NHTW áp dụng chính sách thắt chặt tiền tệ bằng cách tăng tỷ lệ dự trữ bắt buộc."
+        },
+        {
+          "id": 1791206278116,
+          "question": "Trong bối cảnh nền kinh tế đang suy thoái và tỷ lệ thất nghiệp tăng cao, Ngân hàng Trung ương sẽ áp dụng chính sách tiền tệ nào để thúc đẩy tăng trưởng kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng lãi suất và giảm cung tiền.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giảm tỷ lệ dự trữ bắt buộc và giảm lãi suất.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Bán trái phiếu chính phủ để giảm cung tiền.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Khi suy thoái, NHTW hạ dự trữ bắt buộc và giảm lãi suất để bơm vốn kích thích sản xuất kinh doanh."
+        },
+        {
+          "id": 1791206279412,
+          "question": "Trong tình huống nền kinh tế đang có dấu hiệu quá nóng với mức tiêu dùng và đầu tư cao, Ngân hàng Trung ương muốn giảm bớt sự tăng trưởng quá mức của tín dụng, họ sẽ thực hiện biện pháp chính sách tiền tệ nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng lãi suất để làm giảm nhu cầu vay vốn.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Giảm tỷ lệ dự trữ bắt buộc của ngân hàng thương mại.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Mua trái phiếu chính phủ để cung cấp thêm tiền.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Khi nền kinh tế quá nóng, NHTW tăng lãi suất nhằm hạn chế nhu cầu vay vốn đầu tư đầu cơ quá mức."
+        },
+        {
+          "id": 1791206280503,
+          "question": "Sự khác biệt nào dưới đây giữa ngân hàng trung ương và ngân hàng thương mại là đúng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng trung ương chỉ huy động vốn từ các tổ chức tài chính, còn ngân hàng thương mại huy động vốn từ cá nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng trung ương là tổ chức độc lập không chịu sự quản lý của nhà nước, trong khi ngân hàng thương mại do nhà nước điều hành.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng thương mại cung cấp các khoản vay cho nền kinh tế, trong khi ngân hàng trung ương không tham gia vào việc cho vay đối với nền kinh tế trực tiếp bằng tiền.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "NHTW không trực tiếp cho vay người dân hay doanh nghiệp tư nhân mà chỉ giao dịch với các TCTD và Chính phủ."
+        },
+        {
+          "id": 1791206281177,
+          "question": "Việc phát hành tiền của NHTW theo các kênh sau?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cho vay các NHTM và các tổ chức tín dụng, qua thị trường vàng và ngoại tệ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Phát hành qua thị trường vàng và ngoại tệ",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cho vay các NHTM và các tổ chức tín dụng, qua thị trường vàng và ngoại tệ, NSNN vay và thông qua nghiệp vụ thị trường mở",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Các kênh phát hành tiền của NHTW: tái cấp vốn cho NHTM, thị trường mở, mua ngoại tệ/vàng và cho NSNN tạm ứng theo luật."
+        },
+        {
+          "id": 1791206282492,
+          "question": "Công ty tài chính chủ yếu cung cấp dịch vụ nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cho vay tiêu dùng, vay mua nhà, cho thuê tài sản, đầu tư và các dịch vụ tài chính khác.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Cung cấp bảo hiểm nhân thọ và bảo hiểm sức khỏe.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cung cấp các dịch vụ bán lẻ và phân phối sản phẩm.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Công ty tài chính chuyên cấp tín dụng tiêu dùng, cho thuê tài chính, tài trợ mua sắm nhưng không làm dịch vụ thanh toán."
+        },
+        {
+          "id": 1791206283659,
+          "question": "Công ty tài chính có thể kiếm lợi nhuận từ đâu?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thu từ hoạt động cho vay và đầu tư tài chính.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Chỉ từ lãi suất vay tiêu dùng.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chỉ từ việc bán các sản phẩm tài chính cho doanh nghiệp.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Công ty tài chính thu lợi nhuận từ hoạt động cấp tín dụng (lãi cho vay) và đầu tư vốn."
+        },
+        {
+          "id": 1791206284890,
+          "question": "Công ty tài chính có thể sử dụng các nguồn vốn nào để cho vay?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vốn tự có của công ty, vốn vay từ ngân hàng, phát hành chứng từ có giá",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Vốn tự có của công ty là nguồn duy nhất.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Vốn từ các khoản đầu tư chứng khoán.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Công ty tài chính không được huy động tiền gửi không kỳ hạn của cá nhân mà huy động bằng vốn tự có, vay ngân hàng và phát hành kỳ phiếu."
+        },
+        {
+          "id": 1791206285122,
+          "question": "Quỹ đầu tư có thể đầu tư vào các loại tài sản nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ đầu tư vào cổ phiếu.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chỉ đầu tư vào trái phiếu và các sản phẩm bảo hiểm.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Có thể đầu tư vào cổ phiếu, trái phiếu, bất động sản, vàng, và các tài sản tài chính khác.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Quỹ đầu tư phân bổ vốn vào danh mục đa dạng: cổ phiếu, trái phiếu, bất động sản, chứng chỉ tiền gửi để tối ưu hóa lợi nhuận."
+        },
+        {
+          "id": 1791206286525,
+          "question": "Quỹ hưu trí là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là quỹ đầu tư dài hạn, được thành lập để giúp người lao động tích lũy tiền cho tuổi hưu trí.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Là quỹ giúp người lao động nhận trợ cấp thất nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Là quỹ đầu tư vào chứng khoán và trái phiếu ngắn hạn.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Quỹ hưu trí thu phí đóng góp của người lao động trong thời gian làm việc để tích lũy chi trả lương hưu khi về già."
+        },
+        {
+          "id": 1791206287781,
+          "question": "Công ty bảo hiểm nhân thọ khác gì so với công ty bảo hiểm phi nhân thọ?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công ty bảo hiểm nhân thọ chủ yếu cung cấp bảo hiểm cho các trường hợp liên quan đến tử vong và tai nạn, trong khi công ty bảo hiểm phi nhân thọ cung cấp bảo hiểm cho tài sản và rủi ro ngắn hạn.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Công ty bảo hiểm nhân thọ chỉ cung cấp bảo hiểm sức khỏe.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Công ty bảo hiểm phi nhân thọ không có chức năng bồi thường cho người tham gia bảo hiểm.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Bảo hiểm nhân thọ bảo hiểm về tuổi thọ, tính mạng con người; bảo hiểm phi nhân thọ bảo hiểm tài sản, trách nhiệm dân sự."
+        },
+        {
+          "id": 1791206288504,
+          "question": "Quá trình hoạt động của công ty bảo hiểm bao gồm những bước nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thu phí bảo hiểm, quản lý rủi ro, chi trả quyền lợi bảo hiểm cho khách hàng.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Đầu tư và cho vay tiền.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Bán sản phẩm bảo hiểm qua các cửa hàng bán lẻ.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Hoạt động bảo hiểm: nhận phí bảo hiểm từ khách hàng, quản trị rủi ro và bồi thường/chi trả khi xảy ra sự kiện bảo hiểm."
+        },
+        {
+          "id": 1791206290003,
+          "question": "Công ty bảo hiểm sẽ sử dụng số tiền thu được từ phí bảo hiểm như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đầu tư vào các dự án bất động sản, chứng khoán và các tài sản khác.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Chỉ sử dụng để chi trả tiền lương cho nhân viên công ty.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chỉ dùng để trả các khoản chi phí quảng cáo.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Công ty bảo hiểm dùng quỹ dự phòng phí nhàn rỗi để đầu tư vào trái phiếu chính phủ, chứng khoán, bất động sản an toàn."
+        },
+        {
+          "id": 1791206291035,
+          "question": "Công ty bảo hiểm có thể cung cấp những loại sản phẩm nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo hiểm nhân thọ, bảo hiểm sức khỏe, bảo hiểm xe cộ, bảo hiểm tài sản.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Chỉ cung cấp bảo hiểm nhân thọ.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cung cấp dịch vụ ngân hàng và tín dụng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Các sản phẩm bảo hiểm gồm: bảo hiểm nhân thọ, bảo hiểm sức khỏe, bảo hiểm xe cơ giới, bảo hiểm cháy nổ, tài sản."
+        },
+        {
+          "id": 1791206291726,
+          "question": "Khi ngân hàng phát hành chứng chỉ tiền gửi, điều nào dưới đây là đúng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chứng chỉ tiền gửi luôn có thể chuyển nhượng tự do",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Người sở hữu chứng chỉ tiền gửi sẽ không được hưởng lãi suất nếu rút tiền trước thời hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chứng chỉ tiền gửi không có thời gian đáo hạn cố định",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Chứng chỉ tiền gửi thường có thể được chuyển nhượng, chiết khấu hoặc cầm cố linh hoạt trên thị trường tiền tệ."
+        },
+        {
+          "id": 1791206292721,
+          "question": "Chứng chỉ tiền gửi có thể được coi là một hình thức đầu tư vào đâu?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cổ phiếu của công ty niêm yết",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các loại trái phiếu chính phủ",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tiền gửi tại ngân hàng với mức lãi suất cố định",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Mua chứng chỉ tiền gửi bản chất là gửi tiền tiết kiệm có kỳ hạn tại ngân hàng với mức lãi suất xác định."
+        },
+        {
+          "id": 1791206294088,
+          "question": "Một trong những ưu điểm của chứng chỉ tiền gửi là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không cần phải ký hợp đồng với ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người sở hữu có quyền thay đổi mức lãi suất hàng năm",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo an toàn về vốn và lãi suất ổn định",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chứng chỉ tiền gửi được NHTM bảo đảm chi trả gốc và lãi ổn định theo cam kết."
+        },
+        {
+          "id": 1791206294499,
+          "question": "Thị trường vốn giao dịch chủ yếu các tài sản tài chính nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền tệ ngắn hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cổ phiếu và trái phiếu",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Bất động sản",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thị trường vốn là nơi giao dịch các công cụ trung và dài hạn như cổ phiếu và trái phiếu."
+        },
+        {
+          "id": 1791206296011,
+          "question": "Ngân hàng trung ương chủ yếu thực hiện các hoạt động nào trong thị trường tài chính?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cung cấp các khoản vay cho cá nhân",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Kiểm soát và điều tiết chính sách tiền tệ",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Mua bán chứng khoán của các công ty",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Trên thị trường tài chính, NHTW tham gia với vai trò quản lý vĩ mô, điều tiết thanh khoản thông qua chính sách tiền tệ."
+        },
+        {
+          "id": 1791206296821,
+          "question": "Công cụ tài chính nào sau đây là tài sản có tính an toàn tín dụng cao nhất?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cổ phiếu công ty",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Trái phiếu doanh nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Trái phiếu chính phủ",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Trái phiếu chính phủ có độ an toàn cao nhất vì được bảo đảm bằng uy tín và quyền thu thuế của quốc gia."
+        },
+        {
+          "id": 1791206297660,
+          "question": "Trong thị trường tiền tệ, những công cụ tài chính nào được giao dịch?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cổ phiếu, trái phiếu doanh nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Trái phiếu chính phủ, chứng chỉ tiền gửi",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Ngoại tệ, tín phiếu kho bạc nhà nước, thương phiếu",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Công cụ thị trường tiền tệ là các công cụ nợ ngắn hạn: tín phiếu kho bạc, thương phiếu, chứng chỉ tiền gửi ngắn hạn."
+        },
+        {
+          "id": 1791206298241,
+          "question": "Chỉ số lãi suất liên ngân hàng chủ yếu được áp dụng trong thị trường nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường cho vay ngắn hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tiền tệ",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường chứng khoán sơ cấp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Lãi suất liên ngân hàng (như VNIBOR) được xác định trên thị trường tiền tệ liên ngân hàng ngắn hạn."
+        },
+        {
+          "id": 1791206299410,
+          "question": "Tỷ giá hối đoái chủ yếu được áp dụng trong thị trường nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường cho vay ngắn hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tiền tệ",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường chứng khoán sơ cấp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Tỷ giá hối đoái được giao dịch và xác định trên thị trường tiền tệ - ngoại hối."
+        },
+        {
+          "id": 1791206300697,
+          "question": "Công cụ tài chính nào sau đây không phải là công cụ của thị trường tiền tệ?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kỳ phiếu ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tín phiếu kho bạc",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Trái phiếu chính phủ",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Trái phiếu chính phủ là công cụ nợ dài hạn thuộc thị trường vốn, không phải công cụ thị trường tiền tệ."
+        },
+        {
+          "id": 1791206301908,
+          "question": "Sự khác biệt chính giữa thị trường tiền tệ và thị trường vốn là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường tiền tệ chỉ giao dịch các tài sản dài hạn, còn thị trường vốn giao dịch các tài sản ngắn hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tiền tệ giao dịch các công cụ tài chính ngắn hạn, trong khi thị trường vốn giao dịch các công cụ tài chính dài hạn",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường tiền tệ không có tính thanh khoản, còn thị trường vốn có tính thanh khoản cao",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Thị trường tiền tệ giao dịch công cụ ngắn hạn (< 1 năm), thị trường vốn giao dịch công cụ trung - dài hạn (>= 1 năm)."
+        },
+        {
+          "id": 1791206302950,
+          "question": "Nhận định nào sau đây là đúng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường tiền tệ chủ yếu phục vụ cho các nhà đầu tư cá nhân, trong khi thị trường vốn phục vụ các tổ chức tài chính",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tiền tệ có tính thanh khoản cao hơn và rủi ro thấp hơn so với thị trường vốn",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường vốn chủ yếu tập trung vào các công cụ tài chính ngắn hạn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Công cụ thị trường tiền tệ có kỳ hạn ngắn nên rủi ro vỡ nợ thấp và tính thanh khoản cao hơn thị trường vốn."
+        },
+        {
+          "id": 1791206303646,
+          "question": "Thị trường vốn thường có lãi suất cao hơn thị trường tiền tệ vì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các công cụ tài chính trên thị trường vốn có kỳ hạn ngắn hơn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các công cụ tài chính trên thị trường vốn thường có rủi ro cao hơn và được giao dịch trong thời gian dài hơn",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường tiền tệ không có sự tham gia của các tổ chức tài chính lớn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thị trường vốn chịu rủi ro kỳ hạn dài hơn, do đó nhà đầu tư đòi hỏi mức lãi suất bù rủi ro cao hơn."
+        },
+        {
+          "id": 1791206304840,
+          "question": "Khi một nhà đầu tư muốn bán cổ phiếu mà mình đã mua trên thị trường chứng khoán, giao dịch sẽ thực hiện trên thị trường nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường sơ cấp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường thứ cấp",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường vốn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Giao dịch mua bán lại các chứng khoán đã lưu hành diễn ra trên thị trường thứ cấp."
+        },
+        {
+          "id": 1791206305579,
+          "question": "Tổ chức nào dưới đây thường chịu trách nhiệm giám sát và điều hành các giao dịch trên thị trường chứng khoán?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng Nhà nước",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các tổ chức tín dụng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Các Ủy ban chứng khoán quốc gia hoặc tổ chức quản lý tài chính",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Ủy ban Chứng khoán Nhà nước (SSC) chịu trách nhiệm quản lý, giám sát và vận hành thị trường chứng khoán."
+        },
+        {
+          "id": 1791206306191,
+          "question": "Điểm khác biệt chính giữa thị trường sơ cấp và thị trường thứ cấp là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường sơ cấp chỉ giao dịch trái phiếu, trong khi thị trường thứ cấp giao dịch cổ phiếu",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường sơ cấp là nơi các chứng khoán được phát hành lần đầu, còn thị trường thứ cấp là nơi các chứng khoán đã phát hành trước đó được giao dịch giữa các nhà đầu tư",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường sơ cấp không có sự tham gia của nhà đầu tư cá nhân, còn thị trường thứ cấp có",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thị trường sơ cấp là nơi phát hành mới để huy động vốn, thị trường thứ cấp là nơi thanh khoản chứng khoán cũ."
+        },
+        {
+          "id": 1791206307907,
+          "question": "Thị trường chứng khoán thứ cấp giúp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các công ty huy động vốn mới để phát triển",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tăng khả năng thanh khoản và giá trị của chứng khoán đã phát hành",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Cung cấp cổ phiếu và trái phiếu cho các công ty phát hành",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Thị trường thứ cấp tạo tính thanh khoản cao cho chứng khoán, giúp nhà đầu tư yên tâm mua trên thị trường sơ cấp."
+        },
+        {
+          "id": 1791206308935,
+          "question": "Phương thức phát hành chứng khoán riêng lẻ là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát hành cổ phiếu chỉ cho một số ít nhà đầu tư đủ điều kiện, không thông qua sàn giao dịch chứng khoán",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Phát hành cổ phiếu ra công chúng rộng rãi qua các tổ chức tài chính",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Phát hành chứng khoán thông qua đấu giá công khai trên sàn chứng khoán",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Phát hành riêng lẻ là việc chào bán chứng khoán trực tiếp cho dưới 100 nhà đầu tư chiến lược/chuyên nghiệp không qua đại chúng."
+        },
+        {
+          "id": 1791206309711,
+          "question": "Đâu là những điều kiện phát hành của phương thức phát hành chứng khoán công khai?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ áp dụng cho các công ty đã niêm yết trên sàn giao dịch chứng khoán",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cần phải có sự phê duyệt của Ủy ban chứng khoán và công khai thông tin với nhà đầu tư",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Không cần báo cáo tài chính hoặc thông tin minh bạch",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Phát hành ra công chúng phải đáp ứng các điều kiện khắt khe về vốn điều lệ, lợi nhuận, hồ sơ được UBCKNN cấp phép và cáo bạch minh bạch."
+        },
+        {
+          "id": 1791206310629,
+          "question": "Trong quá trình phát hành chứng khoán, tổ chức nào hỗ trợ nhà phát hành trong việc chào bán và phân phối chứng khoán ra công chúng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các ngân hàng thương mại",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các công ty chứng khoán, tổ chức bảo lãnh phát hành",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Bộ Tài chính",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Công ty chứng khoán đóng vai trò tổ chức tư vấn, bảo lãnh và phân phối chứng khoán ra công chúng."
+        },
+        {
+          "id": 1791206311502,
+          "question": "Sàn giao dịch chứng khoán tập trung ở Việt Nam hiện nay là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sở Giao dịch Chứng khoán TP.HCM (HOSE), Ủy ban chứng khoán nhà nước",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Sở Giao dịch Chứng khoán Hà Nội (HNX), Sở Giao dịch Chứng khoán TP.HCM (HOSE)",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Trung tâm Lưu ký Chứng khoán Việt Nam (VSD).",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Việt Nam hiện có 2 sở giao dịch chứng khoán tập trung: Sở GDCK TP.HCM (HOSE) và Sở GDCK Hà Nội (HNX)."
+        },
+        {
+          "id": 1791206312147,
+          "question": "Một trong những chức năng quan trọng của Trung tâm Lưu ký Chứng khoán Việt Nam (VSD. là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giám sát các giao dịch chứng khoán trên thị trường",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Lưu ký, thanh toán và chuyển nhượng chứng khoán cho các nhà đầu tư",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Cung cấp dịch vụ môi giới chứng khoán",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "VSD (nay là VSDC) thực hiện đăng ký, lưu ký, bù trừ và thanh toán chứng khoán cho các thành viên thị trường."
+        },
+        {
+          "id": 1791206313923,
+          "question": "Nhà phát hành phải chịu trách nhiệm gì khi phát hành chứng khoán ra công chúng?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảm bảo rằng chứng khoán phát hành sẽ không giảm giá",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cung cấp thông tin đầy đủ, chính xác và minh bạch cho nhà đầu tư",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo giá cổ phiếu sẽ luôn tăng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tổ chức phát hành ra công chúng có nghĩa vụ công bố thông tin trung thực, chính xác, định kỳ và bất thường theo luật."
+        },
+        {
+          "id": 1791206314870,
+          "question": "Nhà phát hành trái phiếu có nghĩa vụ gì đối với các nhà đầu tư trái phiếu?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Trả lại vốn gốc và lãi suất đúng hạn theo hợp đồng phát hành",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Cung cấp cổ tức cho các nhà đầu tư trái phiếu",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chia sẻ lợi nhuận kinh doanh với các nhà đầu tư trái phiếu",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Nhà phát hành trái phiếu có nghĩa vụ pháp lý hoàn trả đầy đủ gốc và lãi trái phiếu đúng hạn cam kết."
+        },
+        {
+          "id": 1791206315960,
+          "question": "Trái phiếu chính phủ thường được coi là công cụ tài chính có mức độ rủi ro thấp nhất vì lý do gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chính phủ có khả năng thanh toán nợ cao và được bảo vệ bởi các quỹ dự trữ quốc gia",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ luôn trả lãi suất cao",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chính phủ không có khả năng vỡ nợ",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Chính phủ có quyền lực thu thuế và nguồn dự trữ quốc gia đảm bảo khả năng thanh toán nợ công an toàn nhất."
+        },
+        {
+          "id": 1791206316574,
+          "question": "Hệ thống Ngân sách Nhà nước (NSNN) ở Việt Nam được tổ chức như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ có một cấp NS cấp Trung ương.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Gồm hai cấp: Ngân sách Trung ương (NSTW) và Ngân sách địa phương.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ gồm Ngân sách Trung ương và Ngân sách các cơ quan hành chính.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Theo Luật NSNN Việt Nam, hệ thống NSNN gồm: Ngân sách Trung ương và Ngân sách địa phương."
+        },
+        {
+          "id": 1791206317221,
+          "question": "Ngân sách Nhà nước ở cấp địa phương bao gồm các cấp nào ở Việt Nam?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân sách các tổ chức quốc tế, Ngân sách các tổ chức phi chính phủ.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân sách tỉnh, thành phố trực thuộc Trung ương; Ngân sách huyện, quận, thị xã; Ngân sách xã, phường, thị trấn.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Ngân sách của các ngân hàng thương mại quốc gia.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Ngân sách địa phương gồm 3 cấp: ngân sách cấp tỉnh/thành phố, ngân sách cấp huyện/quận, ngân sách cấp xã/phường."
+        },
+        {
+          "id": 1791206318431,
+          "question": "Biện pháp nào phù hợp để cắt giảm chi tiêu công trong trường hợp thâm hụt ngân sách?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cắt giảm chi cho các dự án cơ sở hạ tầng không cấp bách",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Cắt giảm chi cho các chương trình an sinh xã hội, y tế, giáo dục",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cắt giảm chi cho quốc phòng và an ninh",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Để giảm thâm hụt ngân sách mà không ảnh hưởng an sinh xã hội, cần rà soát hoãn/cắt giảm các dự án đầu tư công kém cấp bách."
+        },
+        {
+          "id": 1791206320098,
+          "question": "Các dịch vụ công do Nhà nước cung cấp thường là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dịch vụ có thu phí cao",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Dịch vụ miễn phí hoặc có chi phí thấp",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Dịch vụ chỉ phục vụ cho các cá nhân giàu có",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Dịch vụ công cơ bản (giáo dục công, y tế dự phòng, đèn đường) do Nhà nước cung cấp miễn phí hoặc với mức phí tượng trưng."
+        },
+        {
+          "id": 1791206320980,
+          "question": "Chi đầu tư phát triển bao gồm những nội dung nào dưới đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi cho các hoạt động quản lý và điều hành của nhà nước.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi cho nghiên cứu khoa học và công nghệ, giáo dục và đào tạo.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chi cho các cơ sở hạ tầng kinh tế - xã hội, hỗ trợ vốn cho các doanh nghiệp nhà nước, chi dự trữ quốc gia, và thực hiện các mục tiêu chương trình quốc gia.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chi đầu tư phát triển bao gồm chi đầu tư hạ tầng KTXH, cấp vốn điều lệ DNNN, chi dự trữ quốc gia và chương trình mục tiêu."
+        },
+        {
+          "id": 1791206321878,
+          "question": "Khoản nào dưới đây thuộc về chi đầu tư phát triển vào cơ sở hạ tầng kinh tế - xã hội?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khoản chi nhằm phát triển các sản phẩm tiêu dùng trong nước.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Khoản chi để xây dựng và phát triển các công trình có tính chất chiến lược, trọng điểm, nhằm thúc đẩy tăng trưởng kinh tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Khoản chi cho các chương trình bảo vệ môi trường và phát triển bền vững..",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chi đầu tư hạ tầng KTXH là các công trình cầu đường, bến cảng, thủy lợi trọng điểm tạo động lực tăng trưởng kinh tế."
+        },
+        {
+          "id": 1791206322675,
+          "question": "Khi ngân sách nhà nước bị thâm hụt, Chính phủ có thể áp dụng biện pháp nào để xử lý?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm thuế và thu các khoản phí.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tăng các khoản chi ngân sách, đặc biệt là chi đầu tư công.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Vay nợ trong và ngoài nước để bù đắp thâm hụt.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Biện pháp cơ bản xử lý bội chi NSNN là vay nợ trong nước (phát hành trái phiếu) và vay nợ nước ngoài."
+        },
+        {
+          "id": 1791206323653,
+          "question": "Chi ngân sách cho quốc phòng và an ninh có tầm quan trọng như thế nào đối với sự phát triển của một quốc gia?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là yếu tố không thể thiếu để đảm bảo sự ổn định về chính trị và xã hội",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Là chi phí phát sinh do chiến tranh",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chỉ quan trọng trong thời gian chiến tranh hoặc khủng hoảng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Chi quốc phòng an ninh bảo vệ chủ quyền biên giới, giữ vững trật tự xã hội - điều kiện tiên quyết để phát triển kinh tế."
+        },
+        {
+          "id": 1791206324983,
+          "question": "Chi góp vốn cổ phần, góp vốn liên doanh vào các doanh nghiệp nhà nước nhằm mục đích gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để thu lợi nhuận từ các doanh nghiệp.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Để kiểm soát, hướng dẫn, hoặc khống chế các hoạt động của doanh nghiệp theo định hướng của Nhà nước.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Để phát triển các doanh nghiệp tư nhân.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Nhà nước góp vốn vào DNNN nhằm nắm quyền chi phối trong các ngành kinh tế then chốt, huyết mạch của đất nước."
+        },
+        {
+          "id": 1791206325955,
+          "question": "Chi dự trữ Nhà nước được sử dụng để làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để thực hiện các mục tiêu về bảo vệ môi trường.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Để điều tiết thị trường, tiền tệ và các mặt hàng chiến lược.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Để hỗ trợ các doanh nghiệp tư nhân trong việc mở rộng sản xuất.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Dự trữ nhà nước nhằm bình ổn thị trường khi biến động giá lương thực, xăng dầu và đối phó thiên tai, khủng hoảng."
+        },
+        {
+          "id": 1791206326240,
+          "question": "Khoản chi nào dưới đây không phải là chi thường xuyên của nhà nước?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi cho hoạt động lương bổng của cán bộ, công chức",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi cho việc mua sắm, duy trì trang thiết bị hành chính",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chi đầu tư xây dựng công trình cơ sở hạ tầng",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chi đầu tư xây dựng hạ tầng là khoản chi đầu tư phát triển, không phải chi thường xuyên."
+        },
+        {
+          "id": 1791206327647,
+          "question": "Quỹ dự trữ quốc gia do ai quản lý?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các bộ, ngành.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng Nhà nước.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cục Dự trữ quốc gia.",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Tổng cục Dự trữ Nhà nước (Bộ Tài chính) trực tiếp quản lý hệ thống kho và hàng dự trữ quốc gia."
+        },
+        {
+          "id": 1791206328155,
+          "question": "Nguồn tài chính chủ yếu hình thành quỹ bảo hiểm xã hội là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đóng góp từ người lao động, người sử dụng lao động và hỗ trợ từ NSNN.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Đóng góp từ các tổ chức quốc tế.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Vốn vay từ Ngân hàng Thế giới.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Quỹ BHXH hình thành từ nguồn đóng góp của NLĐ, người sử dụng lao động và hỗ trợ bổ sung của Nhà nước."
+        },
+        {
+          "id": 1791206329184,
+          "question": "Quỹ bảo hiểm y tế (BHYT) được sử dụng để chi trả cho các chi phí gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi phí cho các dự án phát triển cơ sở y tế.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi phí khám, chữa bệnh cho người tham gia bảo hiểm y tế tại các bệnh viện.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Hỗ trợ chi phí đào tạo nhân viên y tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Quỹ BHYT chi trả viện phí, thuốc men, chi phí khám chữa bệnh cho người tham gia BHYT."
+        },
+        {
+          "id": 1791206330973,
+          "question": "Quỹ bảo hiểm y tế có mấy loại?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một loại là quỹ khám, chữa bệnh bắt buộc.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Hai loại là quỹ khám, chữa bệnh bắt buộc và quỹ khám, chữa bệnh tự nguyện.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Ba loại là quỹ khám, chữa bệnh bắt buộc, tự nguyện và quỹ hỗ trợ y tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Bảo hiểm y tế gồm hai hình thức: BHYT bắt buộc (theo luật) và BHYT tự nguyện (theo hộ gia đình)."
+        },
+        {
+          "id": 1791206331343,
+          "question": "Quỹ có tính chất hỗ trợ cho các hoạt động kinh tế - xã hội chủ yếu hình thành từ nguồn tài chính nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vốn vay từ các tổ chức quốc tế.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Vốn nhàn rỗi huy động được từ nền kinh tế, với nguồn vốn NSNN chỉ mang tính chất “vốn mồi”.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các khoản thuế thu từ doanh nghiệp lớn.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Các quỹ tài chính ngoài NSNN chủ yếu huy động vốn nhàn rỗi trong xã hội, NSNN chỉ cấp vốn ban đầu làm vốn mồi."
+        },
+        {
+          "id": 1791206332657,
+          "question": "Quyền và nghĩa vụ trả nợ công thuộc về ai?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các doanh nghiệp Nhà nước.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các cá nhân và hộ gia đình.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Nhà nước và các tổ chức thuộc khu vực công, bao gồm cả Trung ương, địa phương và Ngân hàng Nhà nước..",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Trách nhiệm trả nợ công thuộc về Nhà nước và các cơ quan đại diện theo luật quản lý nợ công."
+        },
+        {
+          "id": 1791206333486,
+          "question": "Các quỹ hỗ trợ đối tượng thuộc diện chính sách xã hội thuộc nhóm quỹ nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quỹ bảo hiểm xã hội.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Quỹ thực hiện mục tiêu an sinh xã hội.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Quỹ dự trữ quốc gia..",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Các quỹ trợ cấp nạn nhân da cam, quỹ đền ơn đáp nghĩa thuộc nhóm quỹ an sinh xã hội."
+        },
+        {
+          "id": 1791206334927,
+          "question": "Mối quan hệ giữa bội chi ngân sách nhà nước (NSNN) và nợ công là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nợ công không liên quan gì đến bội chi ngân sách nhà nước.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Nợ công giúp bù đắp bội chi ngân sách nhà nước và duy trì cân đối thu chi ngân sách.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Bội chi ngân sách làm giảm nợ công..",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Vay nợ công là nguồn vốn chủ yếu để bù đắp thâm hụt (bội chi) ngân sách nhà nước qua các năm."
+        },
+        {
+          "id": 1791206336075,
+          "question": "Vay nợ công là một trong những cách thu nguồn lực công. Tuy nhiên, việc vay nợ cần phải:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ thực hiện khi nền kinh tế đang phát triển mạnh.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Đảm bảo khả năng trả nợ và không ảnh hưởng đến ổn định tài chính quốc gia.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ được thực hiện đối với các khoản vay từ các tổ chức quốc tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Vay nợ công phải đảm bảo nằm trong trần nợ công an toàn và có khả năng trả nợ, tránh gánh nặng nợ cho tương lai."
+        },
+        {
+          "id": 1791206336270,
+          "question": "Thuế giá trị gia tăng (VAT) là thuế gián thu, đối tượng chịu thuế là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhà cung cấp hàng hóa, dịch vụ.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người tiêu dùng cuối cùng khi mua sản phẩm hoặc dịch vụ.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các tổ chức tài chính và ngân hàng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thuế GTGT là thuế gián thu đánh vào người tiêu dùng cuối cùng của hàng hóa, dịch vụ."
+        },
+        {
+          "id": 1791206337700,
+          "question": "Sự khác biệt chính giữa thuế trực thu và thuế gián thu là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thuế trực thu được thu từ doanh nghiệp, còn thuế gián thu được thu từ người tiêu dùng.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thuế trực thu được đánh vào thu nhập và tài sản của cá nhân hoặc tổ chức, còn thuế gián thu được đánh vào hàng hóa và dịch vụ tiêu dùng.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thuế gián thu không có ảnh hưởng đến giá trị sản phẩm.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Thuế trực thu đánh vào thu nhập/tài sản của đối tượng; thuế gián thu đánh vào việc tiêu dùng hàng hóa, dịch vụ."
+        },
+        {
+          "id": 1791206338980,
+          "question": "Phí khác với thuế ở điểm nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phí được thu từ người sử dụng dịch vụ công, trong khi thuế là khoản đóng góp bắt buộc vào ngân sách nhà nước.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Phí được thu cho các dịch vụ tư nhân, thuế chỉ áp dụng cho dịch vụ công.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Phí là một khoản đóng góp tự nguyện, trong khi thuế là khoản thu bắt buộc.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Phí gắn với dịch vụ công cụ thể người nộp được thụ hưởng, còn thuế là nghĩa vụ bắt buộc không hoàn trả trực tiếp."
+        },
+        {
+          "id": 1791206339970,
+          "question": "Các khoản thu nào sau đây được coi là phí?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thuế thu nhập cá nhân",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Phí cấp giấy phép xây dựng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Lệ phí cấp thẻ bảo hiểm y tế",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Phí cấp giấy phép xây dựng là một loại phí trong hệ thống danh mục phí, lệ phí nhà nước."
+        },
+        {
+          "id": 1791206340685,
+          "question": "Thu từ cổ phần hóa doanh nghiệp Nhà nước là nguồn thu nào của Nhà nước?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thu từ hoạt động tài chính.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thu từ hoạt động kinh tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thu từ việc bán tài sản công.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tiền thu từ bán vốn/cổ phần hóa DNNN thuộc nhóm thu từ hoạt động kinh tế của Nhà nước."
+        },
+        {
+          "id": 1791206341377,
+          "question": "Vốn chủ sở hữu trong báo cáo tài chính của một doanh nghiệp bao gồm những yếu tố nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lợi nhuận sau thuế",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Vốn góp của cổ đông và lợi nhuận chưa phân phối",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tổng nợ ngắn hạn và dài hạn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Vốn chủ sở hữu trên bảng CĐKT gồm vốn góp của chủ sở hữu (vốn cổ phần) và lợi nhuận sau thuế chưa phân phối."
+        },
+        {
+          "id": 1791206342926,
+          "question": "Khi doanh nghiệp sử dụng đòn bẩy tài chính, họ đang làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sử dụng vốn vay để tài trợ cho hoạt động của mình nhằm tăng khả năng sinh lời",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Giảm thiểu rủi ro tài chính bằng cách không vay nợ",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tăng chi phí hoạt động trong ngắn hạn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Đòn bẩy tài chính (Financial Leverage) là việc sử dụng nợ vay để gia tăng tỷ suất sinh lời trên vốn chủ sở hữu (ROE)."
+        },
+        {
+          "id": 1791206343468,
+          "question": "Tại sao doanh nghiệp thường giữ lại một phần lợi nhuận sau thuế để tái đầu tư?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để trả nợ cho ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Để tăng vốn điều lệ cho công ty",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Để tiếp tục mở rộng sản xuất, đầu tư vào dự án mới hoặc nâng cao năng lực kinh doanh",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Lợi nhuận giữ lại là nguồn tài trợ nội bộ rẻ nhất để tái đầu tư mở rộng sản xuất kinh doanh."
+        },
+        {
+          "id": 1791206344204,
+          "question": "Quy trình phân phối lợi nhuận phải tuân thủ những yếu tố nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Điều lệ công ty, quyết định của hội đồng quản trị, và các quy định của pháp luật",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Quyết định của giám đốc tài chính",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Quyết định của các cổ đông lớn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Phân phối lợi nhuận DN phải tuân theo Điều lệ công ty, nghị quyết ĐHĐCĐ và các luật định tài chính kế toán."
+        },
+        {
+          "id": 1791206345212,
+          "question": "Quá trình quản lý hàng tồn kho có thể ảnh hưởng đến gì trong doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng chi phí vay nợ của doanh nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cải thiện khả năng thanh toán và giảm chi phí vốn lưu động",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tăng lợi nhuận ngay lập tức mà không cần đầu tư thêm",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Quản trị hàng tồn kho tối ưu giúp giảm chi phí lưu kho, tránh ứ đọng vốn và cải thiện vốn lưu động ròng."
+        },
+        {
+          "id": 1791206346486,
+          "question": "Huy động vốn từ cổ phiếu có thể mang lại lợi ích gì cho doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng nguồn vốn dài hạn mà không cần phải trả lãi",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tăng nợ vay và gánh nặng tài chính",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Giảm quyền kiểm soát của các cổ đông hiện tại",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Phát hành cổ phiếu huy động vốn chủ sở hữu dài hạn không bắt buộc phải trả lãi định kỳ hay hoàn trả nợ gốc."
+        },
+        {
+          "id": 1791206347952,
+          "question": "Huy động vốn từ phát hành cổ phiếu có thể tạo ra rủi ro nào cho doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không có rủi ro nào, vì đây là nguồn vốn không có chi phí tài chính",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Rủi ro liên quan đến việc làm loãng quyền sở hữu và kiểm soát của cổ đông hiện tại",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Rủi ro không thể trả lãi vay",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Phát hành thêm cổ phiếu mới cho cổ đông ngoài sẽ làm pha loãng tỷ lệ sở hữu và quyền biểu quyết của cổ đông hiện hữu."
+        },
+        {
+          "id": 1791206348363,
+          "question": "Lý do chính để doanh nghiệp lựa chọn huy động vốn từ cổ phiếu thay vì vay nợ là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để tránh phải trả lãi vay và giảm nợ dài hạn",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Để có thể duy trì quyền kiểm soát và lợi ích cho cổ đông",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Để giảm thiểu rủi ro tín dụng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Huy động bằng vốn cổ phần giúp doanh nghiệp tránh áp lực trả nợ gốc và chi phí lãi vay cố định khi kinh doanh khó khăn."
+        },
+        {
+          "id": 1791206349831,
+          "question": "Điều nào sau đây là một ưu điểm của việc huy động vốn từ phát hành cổ phiếu so với phát hành trái phiếu?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh nghiệp phải trả lãi đều đặn cho cổ phiếu",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Cổ phiếu không đòi hỏi phải trả lãi như trái phiếu, giúp giảm bớt gánh nặng tài chính",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Cổ phiếu không thể chuyển nhượng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Khác với trái phiếu bắt buộc trả lãi, cổ tức cổ phiếu phụ thuộc vào kết quả kinh doanh và quyết định của ĐHĐCĐ."
+        },
+        {
+          "id": 1791206350122,
+          "question": "Ưu điểm lớn nhất của việc phát hành trái phiếu doanh nghiệp là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh nghiệp không phải trả lãi cho các nhà đầu tư",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Trái phiếu giúp doanh nghiệp huy động vốn mà không làm loãng quyền sở hữu của các cổ đông hiện tại",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Trái phiếu có thể chuyển đổi thành cổ phiếu trong tương lai",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Phát hành trái phiếu là vay nợ, người sở hữu chỉ là chủ nợ nên không làm pha loãng quyền sở hữu của cổ đông."
+        },
+        {
+          "id": 1791206351186,
+          "question": "Trái phiếu doanh nghiệp có thể mang lại cho nhà đầu tư loại lợi ích nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lợi nhuận từ cổ tức định kỳ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Lợi nhuận từ việc tăng giá trị cổ phiếu",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lợi tức cố định qua lãi suất trái phiếu và khả năng thu hồi vốn khi đáo hạn",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Nhà đầu tư trái phiếu được nhận lãi cố định định kỳ và được thanh toán đủ mệnh giá gốc khi đáo hạn."
+        },
+        {
+          "id": 1791206352481,
+          "question": "Phát hành trái phiếu doanh nghiệp có thể tạo ra rủi ro gì cho doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh nghiệp phải trả lãi cho trái phiếu dù có hay không có lợi nhuận",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Doanh nghiệp không cần phải trả nợ trái phiếu nếu không có lợi nhuận",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Trái phiếu có thể không mang lại lợi ích cho các cổ đông",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Rủi ro trái phiếu: doanh nghiệp có nghĩa vụ bắt buộc phải trả lãi vay định kỳ dù làm ăn có lãi hay thua lỗ."
+        },
+        {
+          "id": 1791206353721,
+          "question": "Huy động vốn từ vay nợ ngân hàng có thể ảnh hưởng đến tình hình tài chính của doanh nghiệp như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng khả năng thanh khoản vì doanh nghiệp không phải trả nợ ngay lập tức",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tăng chi phí tài chính do phải trả lãi vay định kỳ",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Làm giảm quyền sở hữu của cổ đông",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Vay nợ ngân hàng làm tăng chi phí tài chính (lãi vay), tạo gánh nặng dòng tiền trả nợ định kỳ."
+        },
+        {
+          "id": 1791206355010,
+          "question": "Khi doanh nghiệp vay nợ ngân hàng, điều nào dưới đây là yêu cầu phổ biến?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phải cung cấp tài sản đảm bảo để bảo vệ cho khoản vay",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Không cần phải trả lãi vay trong thời gian vay",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Doanh nghiệp sẽ không bị ràng buộc bởi bất kỳ điều kiện nào",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Ngân hàng thường yêu cầu tài sản thế chấp hoặc cầm cố hợp pháp để phòng ngừa rủi ro tín dụng vỡ nợ."
+        },
+        {
+          "id": 1791206355824,
+          "question": "Đi thuê tài chính có thể giúp doanh nghiệp giải quyết vấn đề gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng cường khả năng sở hữu tài sản cố định mà không cần phải có vốn đầu tư lớn ban đầu",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tăng chi phí tài chính do phải trả lãi suất cao",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo quyền kiểm soát hoàn toàn tài sản",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Thuê tài chính giúp DN sử dụng máy móc hiện đại ngay lập tức mà không phải bỏ ra số vốn lớn ban đầu để mua đứt."
+        },
+        {
+          "id": 1791206356308,
+          "question": "Điều nào sau đây là một trong những nhược điểm của việc đi thuê tài chính?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh nghiệp không sở hữu tài sản sau khi hết hạn hợp đồng thuê (trừ khi có điều khoản mua lại)",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Doanh nghiệp phải thanh toán toàn bộ chi phí tài sản ngay lập tức",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Doanh nghiệp không có quyền sử dụng tài sản trong suốt thời gian thuê",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Trong thuê tài chính, quyền sở hữu pháp lý thuộc về công ty cho thuê trong suốt thời hạn hợp đồng."
+        },
+        {
+          "id": 1791206357877,
+          "question": "Thuê tài chính có thể giúp doanh nghiệp giảm thiểu rủi ro nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Rủi ro giảm giá trị tài sản",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Rủi ro về việc thay đổi lãi suất",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Rủi ro về giảm sút nhu cầu sử dụng tài sản",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Thuê tài chính giúp bên thuê tránh được rủi ro tài sản mất giá hoặc lạc hậu nhanh chóng do công nghệ đổi mới."
+        },
+        {
+          "id": 1791206358411,
+          "question": "Một trong những sự khác biệt chính giữa tài sản lưu động và tài sản cố định là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tài sản lưu động có thể sử dụng lâu dài, trong khi tài sản cố định có thể chuyển nhượng ngay lập tức.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tài sản lưu động được chuyển thành tiền mặt trong vòng một năm, trong khi tài sản cố định không chuyển thành tiền mặt nhanh chóng.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tài sản lưu động không bị hao mòn trong quá trình sử dụng, trong khi tài sản cố định bị hao mòn.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tài sản lưu động chuyển đổi thành tiền trong vòng 1 năm, còn tài sản cố định thu hồi vốn dần qua nhiều năm."
+        },
+        {
+          "id": 1791206359547,
+          "question": "Giá thành đơn vị sản phẩm được tính như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổng chi phí sản xuất chia cho tổng số sản phẩm",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Tổng chi phí sản xuất chia cho tổng doanh thu",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tổng chi phí sản xuất cộng với chi phí bán hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Giá thành đơn vị sản phẩm = Tổng chi phí sản xuất trong kỳ / Tổng số lượng sản phẩm hoàn thành."
+        },
+        {
+          "id": 1791206360342,
+          "question": "Lợi nhuận sau thuế của doanh nghiệp được phân phối như thế nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ được dùng để trả nợ cho các chủ nợ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chỉ được sử dụng để tái đầu tư vào hoạt động sản xuất kinh doanh",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Có thể phân phối cho cổ đông, tái đầu tư vào doanh nghiệp hoặc để dự phòng",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Lợi nhuận ròng được phân phối: trích lập các quỹ doanh nghiệp, chia cổ tức cho cổ đông và giữ lại tái đầu tư."
+        },
+        {
+          "id": 1791206361790,
+          "question": "Thanh toán qua ngân hàng trực tuyến là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Việc thanh toán qua dịch vụ chuyển tiền tại quầy",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Việc thanh toán thông qua các dịch vụ ngân hàng điện tử, sử dụng internet hoặc điện thoại",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Việc thanh toán qua các máy rút tiền tự động (ATM)",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Thanh toán trực tuyến là việc giao dịch tiền tệ qua internet banking, mobile banking của ngân hàng."
+        },
+        {
+          "id": 1791206362803,
+          "question": "Phương thức thanh toán nào dưới đây không được xem là thanh toán qua ngân hàng tại Việt Nam?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thanh toán qua thẻ tín dụng ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thanh toán qua dịch vụ ví điện tử (Momo, ZaloPay, VNPAY)",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thanh toán bằng tiền mặt tại các cửa hàng",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Tiền mặt là phương thức thanh toán trực tiếp truyền thống, không qua hệ thống ngân hàng."
+        },
+        {
+          "id": 1791206363566,
+          "question": "Một trong những rủi ro khi thanh toán qua ngân hàng là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khó khăn trong việc theo dõi giao dịch",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Mất thẻ ngân hàng và thông tin cá nhân bị đánh cắp",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thanh toán không thể hoàn tiền",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Rủi ro thanh toán điện tử gồm lộ thông tin tài khoản, đánh cắp mật khẩu OTP hoặc mất thẻ ngân hàng."
+        },
+        {
+          "id": 1791206364321,
+          "question": "Hình thức thanh toán nào sau đây thường được sử dụng trong các giao dịch thanh toán mua sắm tại các cửa hàng bán lẻ tại Việt Nam?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chuyển khoản qua Internet banking",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thanh toán qua thẻ ATM hoặc thẻ tín dụng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thanh toán qua Western Union",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Tại các cửa hàng bán lẻ, người dùng thường quẹt thẻ ATM nội địa hoặc thẻ tín dụng qua máy POS."
+        },
+        {
+          "id": 1791206365255,
+          "question": "Thanh toán qua thẻ ATM nội địa có thể thực hiện được tại các kênh nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Rút tiền tại ATM, thanh toán qua POS, thanh toán online",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Chỉ rút tiền tại ATM",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chỉ thanh toán qua các cửa hàng POS",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Thẻ ATM nội địa (debit card) có thể rút tiền tại ATM, thanh toán qua máy POS và thanh toán mua sắm online."
+        },
+        {
+          "id": 1791206366933,
+          "question": "Các bên tham gia trong giao dịch ủy nhiệm chi bao gồm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng phát hành, ngân hàng thụ hưởng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người trả tiền, ngân hàng phát hành, ngân hàng thụ hưởng",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Người thụ hưởng, người trả tiền",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Ủy nhiệm chi gồm bên trả tiền, ngân hàng trích nợ (phát hành lệnh) và ngân hàng ghi có cho người thụ hưởng."
+        },
+        {
+          "id": 1791206367223,
+          "question": "Điều kiện để thực hiện giao dịch thanh toán bằng ủy nhiệm chi là:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người trả tiền phải có tài khoản ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người nhận tiền phải có tài khoản ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cả người trả tiền và người nhận tiền phải có tài khoản ngân hàng",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Để lập ủy nhiệm chi, cả bên chuyển và bên nhận đều phải có tài khoản ngân hàng hợp lệ."
+        },
+        {
+          "id": 1791206368987,
+          "question": "Các bên tham gia trong giao dịch thanh toán bằng séc bao gồm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người phát hành séc, ngân hàng thanh toán và người thụ hưởng",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Người phát hành séc và người thụ hưởng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng phát hành và người thụ hưởng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Các bên tham gia giao dịch séc gồm: người phát hành séc, ngân hàng thanh toán (ngân hàng thụ lệnh) và người thụ hưởng."
+        },
+        {
+          "id": 1791206369400,
+          "question": "Séc có thể được thanh toán trực tiếp tại ngân hàng của người phát hành hay ngân hàng khác?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chỉ có thể thanh toán tại ngân hàng phát hành",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Có thể thanh toán tại bất kỳ ngân hàng nào",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chỉ có thể thanh toán tại ngân hàng của người thụ hưởng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Séc có thể xuất trình thanh toán tại ngân hàng phát hành hoặc nộp vào bất kỳ ngân hàng nào nhờ thu hộ."
+        },
+        {
+          "id": 1791206370620,
+          "question": "Các bên tham gia trong phương thức thanh toán bằng uỷ thác thu bao gồm:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người nhập khẩu, người xuất khẩu và các ngân hàng liên quan",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Người mua và người bán",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Các công ty bảo hiểm",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Ủy thác thu (nhờ thu quốc tế) gồm: bên xuất khẩu, bên nhập khẩu, ngân hàng chuyển chứng từ và ngân hàng thu hộ."
+        },
+        {
+          "id": 1791206371777,
+          "question": "Trong phương thức uỷ thác thu, ngân hàng của người bán sẽ làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Gửi chứng từ cho người mua sau khi thanh toán",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Gửi chứng từ cho ngân hàng của người mua để thu tiền",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Gửi tiền trực tiếp cho người bán",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Trong nhờ thu, ngân hàng của người bán chuyển bộ chứng từ cho ngân hàng của người mua để yêu cầu thanh toán."
+        },
+        {
+          "id": 1791206372759,
+          "question": "Trong phương thức uỷ thác thu, người bán muốn nhận thanh toán sẽ phải làm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Gửi trực tiếp tiền cho ngân hàng của người mua",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Gửi chứng từ qua ngân hàng của mình cho ngân hàng của người mua",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Để người mua tự thanh toán mà không cần chứng từ",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Người bán chuyển bộ chứng từ hàng hóa kèm chỉ thị nhờ thu cho ngân hàng của mình để gửi sang ngân hàng người mua."
+        },
+        {
+          "id": 1791206373855,
+          "question": "Ưu điểm của phương thức uỷ thác thu đối với người mua là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người mua có thể nhận chứng từ ngay lập tức mà không phải thanh toán",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người mua không cần phải trả tiền trước khi nhận hàng hóa",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Người mua không phải thanh toán qua ngân hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Người mua được kiểm tra bộ chứng từ hàng hóa trước khi thanh toán hoặc chấp nhận thanh toán hối phiếu."
+        },
+        {
+          "id": 1791206374914,
+          "question": "Rủi ro lớn nhất đối với người bán trong phương thức uỷ thác thu là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người bán có thể không nhận được tiền nếu người mua từ chối thanh toán hoặc không ký giấy chấp nhận thanh toán",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Người bán phải giao hàng trước khi nhận được chứng từ",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Người bán phải trả phí giao dịch cho ngân hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Rủi ro nhờ thu cho người bán là người mua có thể từ chối nhận hàng và từ chối thanh toán khi hàng đã đến cảng."
+        },
+        {
+          "id": 1791206375855,
+          "question": "Thư tín dụng (L/C ) được phát hành bởi ai?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người mua",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng của người bán",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Ngân hàng của người mua",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Thư tín dụng L/C do ngân hàng phục vụ người mua (ngân hàng phát hành) mở theo yêu cầu của người mua."
+        },
+        {
+          "id": 1791206376986,
+          "question": "Một trong những ưu điểm lớn nhất của phương thức thanh toán qua L/C đối với người bán là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người bán không cần phải giao hàng hóa",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người bán nhận được thanh toán ngay lập tức sau khi giao hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Người bán có thể giao hàng mà không lo bị mất tiền nếu người mua không thanh toán",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Trong L/C, ngân hàng phát hành cam kết thanh toán vô điều kiện cho người bán nếu bộ chứng từ xuất trình hoàn toàn hợp lệ."
+        },
+        {
+          "id": 1791206377909,
+          "question": "Điều kiện tiên quyết để người bán nhận được thanh toán theo L/C là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người bán phải chứng minh đã giao hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người bán phải xuất trình đúng các chứng từ theo yêu cầu của L/C",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Người bán phải trả tiền trước cho ngân hàng phát hành",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Nguyên tắc vàng của L/C: ngân hàng chỉ làm việc trên chứng từ, người bán được thanh toán khi chứng từ hoàn toàn phù hợp với L/C."
+        },
+        {
+          "id": 1791206378774,
+          "question": "Lợi ích của việc sử dụng L/C đối với người mua là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người mua có thể thanh toán ngay lập tức khi nhận hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người mua có thể kiểm tra hàng hóa trước khi thanh toán",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Người mua không phải chịu trách nhiệm về việc giao hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Người mua yên tâm rằng ngân hàng chỉ thanh toán khi người bán xuất trình đủ chứng từ chứng minh hàng đã giao đúng hạn."
+        },
+        {
+          "id": 1791206379384,
+          "question": "Phương thức nào dưới đây là phương thức thanh toán an toàn hơn đối với người bán?",
+          "options": [
+            {
+              "key": "A",
+              "text": "L/C (Tín dụng thư)",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Uỷ thác thu",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chuyển tiền",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "L/C là phương thức thanh toán an toàn nhất cho người bán nhờ cam kết thanh toán độc lập của ngân hàng phát hành."
+        },
+        {
+          "id": 1791206380700,
+          "question": "Phương thức nào dưới đây không yêu cầu người phát hành có tiền trong tài khoản khi phát hành chứng từ?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ủy nhiệm chi",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Séc",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chuyển khoản ngân hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Trong một số trường hợp phát hành séc (như séc bảo chi), người ký phát chỉ cần cam kết có tiền tại thời điểm xuất trình thanh toán."
+        },
+        {
+          "id": 1791206381419,
+          "question": "Người nhận séc có thể làm gì để nhận tiền?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người nhận chỉ cần ký vào séc và chuyển cho ngân hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người nhận chỉ cần xuất trình chứng từ giao hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Người nhận phải xuất trình séc tại ngân hàng và có thể chuyển nhượng séc cho người khác",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Người nhận séc có thể trực tiếp rút tiền mặt tại ngân hàng hoặc ký hậu chuyển nhượng séc cho người khác."
+        },
+        {
+          "id": 1791206382390,
+          "question": "Điều nào sau đây là ưu điểm của séc so với ủy nhiệm chi?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Séc có thể thanh toán ngay lập tức và có thể chuyển nhượng dễ dàng",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Séc có thể yêu cầu ngân hàng trả lại số tiền ngay lập tức mà không cần chứng từ",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Ủy nhiệm chi là phương thức thanh toán nhanh hơn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Ưu điểm của séc là tính lưu thông chuyển nhượng dễ dàng bằng thủ tục ký hậu và có thể thanh toán tiền mặt ngay."
+        },
+        {
+          "id": 1791206383399,
+          "question": "Khi phát hành séc, người phát hành cần làm gì để xác nhận thanh toán?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người phát hành không cần làm gì, ngân hàng sẽ tự động thanh toán",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người phát hành cần ký vào séc và đảm bảo có đủ tiền trong tài khoản",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Người phát hành chỉ cần gửi séc cho người nhận mà không cần ký",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Người phát hành séc phải ký tên đúng chữ ký mẫu đã đăng ký và đảm bảo số dư khả dụng đủ thanh toán tờ séc."
+        },
+        {
+          "id": 1791206384788,
+          "question": "Séc có thể được chuyển nhượng cho người khác không?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Có, séc có thể được chuyển nhượng cho người khác nếu có ký tên trên séc",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Không, séc không thể chuyển nhượng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Có, nhưng phải có sự đồng ý của ngân hàng phát hành",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Séc thương mại thông thường có thể chuyển nhượng cho người khác bằng hình thức ký hậu chuyển nhượng."
+        },
+        {
+          "id": 1791206386018,
+          "question": "Phương thức thanh toán nào dưới đây có thể yêu cầu ngân hàng chuyển tiền từ tài khoản của người thanh toán sang tài khoản của người nhận ngay lập tức?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ủy nhiệm chi",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Séc",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chuyển khoản ngân hàng",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Dịch vụ chuyển khoản ngân hàng nhanh 24/7 giúp ghi có vào tài khoản người nhận tức thì."
+        },
+        {
+          "id": 1791206386395,
+          "question": "Khi sử dụng ủy nhiệm chi, ai là người yêu cầu thanh toán?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người nhận tiền",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng của người nhận",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Người phát hành ủy nhiệm chi (người sở hữu tài khoản)",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Người chủ tài khoản (người trả tiền) là người trực tiếp lập và ký ủy nhiệm chi yêu cầu ngân hàng chuyển tiền."
+        },
+        {
+          "id": 1791206387654,
+          "question": "Khi nào người bán sẽ gặp rủi ro cao nhất khi sử dụng phương thức Uỷ thác thu?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khi người mua từ chối thanh toán hoặc không chấp nhận chứng từ",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Khi ngân hàng không trả lại chứng từ cho người bán",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Khi người bán không có đủ chứng từ hợp lệ",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Rủi ro lớn nhất trong ủy thác thu là người mua từ chối nhận bộ chứng từ và không chịu trả tiền."
+        },
+        {
+          "id": 1791206388915,
+          "question": "Phương thức L/C được khuyến khích sử dụng trong các giao dịch nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các giao dịch có giá trị thấp và các bên tham gia đã quen thuộc",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các giao dịch có giá trị cao hoặc các bên không quen thuộc và cần sự đảm bảo cao về thanh toán",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các giao dịch với khách hàng trong cùng một quốc gia",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "L/C thường dùng cho các hợp đồng ngoại thương giá trị lớn giữa các đối tác chưa hiểu rõ mức độ uy tín của nhau."
+        },
+        {
+          "id": 1791206389980,
+          "question": "Ưu điểm của phương thức L/C đối với người mua là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người mua không cần phải thanh toán trước khi nhận hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người mua có thể kiểm tra hàng hóa trước khi thanh toán",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Người mua không phải cung cấp bất kỳ thông tin nào cho ngân hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Người mua được bảo vệ vì người bán chỉ được thanh toán khi đã giao hàng và có vận đơn hợp lệ."
+        },
+        {
+          "id": 1791206391017,
+          "question": "Khi người bán sử dụng phương thức L/C, người bán có thể nhận thanh toán ngay khi nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngay sau khi xuất trình chứng từ hợp lệ, bất kể người mua có thanh toán hay không",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Sau khi người mua nhận hàng và kiểm tra",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Sau khi người bán giao hàng và người mua thanh toán",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Trong L/C, ngân hàng phát hành cam kết trả tiền độc lập cho người bán ngay khi xuất trình bộ chứng từ hợp lệ."
+        },
+        {
+          "id": 1791206391618,
+          "question": "Trong phương thức Uỷ thác thu, người bán sẽ nhận được tiền khi nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngay khi giao hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Sau khi ngân hàng của người mua xác nhận thanh toán",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Sau khi người mua nhận chứng từ và thanh toán hoặc chấp nhận thanh toán",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Người bán chỉ nhận được tiền sau khi người mua nhận chứng từ và đồng ý thanh toán (hoặc chấp nhận hối phiếu)."
+        },
+        {
+          "id": 1791206392765,
+          "question": "Khi chuyển tiền quốc tế qua ngân hàng, thông thường ai sẽ chịu phí giao dịch?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người gửi tiền",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người nhận tiền",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Cả hai bên (tuỳ theo thỏa thuận)",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Phí chuyển tiền quốc tế do hai bên thỏa thuận: người gửi trả (OUR), người nhận trả (BEN) hoặc chia sẻ phí (SHA)."
+        },
+        {
+          "id": 1791206393471,
+          "question": "Chuyển tiền quốc tế là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là việc chuyển tiền giữa các ngân hàng trong cùng một quốc gia",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là việc chuyển tiền giữa hai cá nhân trong cùng một quốc gia",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Là việc chuyển tiền từ một quốc gia này sang quốc gia khác thông qua các ngân hàng hoặc dịch vụ chuyển tiền",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chuyển tiền quốc tế là nghiệp vụ chuyển ngoại tệ giữa các quốc gia qua hệ thống thanh toán quốc tế (SWIFT)."
+        },
+        {
+          "id": 1791206394515,
+          "question": "Phương thức thanh toán qua L/C thường phù hợp với loại giao dịch nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các giao dịch có giá trị thấp và ít rủi ro",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Các giao dịch có giá trị cao và các bên không quen thuộc với nhau",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các giao dịch nội địa",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "L/C đặc biệt phù hợp với các giao dịch xuất nhập khẩu giá trị lớn giữa các doanh nghiệp ở xa nhau."
+        },
+        {
+          "id": 1791206395295,
+          "question": "Trong quá trình thực hiện L/C, nếu người bán xuất trình chứng từ không chính xác, điều gì sẽ xảy ra?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân hàng phát hành sẽ tự động thanh toán cho người bán",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Người bán sẽ không nhận được tiền cho đến khi chứng từ chính xác được xuất trình",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Người mua sẽ trực tiếp thanh toán cho người bán",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Nếu chứng từ có sai sót (bất hợp lệ), ngân hàng sẽ từ chối thanh toán cho đến khi chứng từ được sửa chữa hợp lệ."
+        },
+        {
+          "id": 1791206397049,
+          "question": "Quản lý tài chính doanh nghiệp nhằm mục đích nào sau đây?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tối đa hóa doanh thu",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tối thiểu hóa chi phí sản xuất",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Quản lý rủi ro tài chính và tối ưu hóa nguồn vốn",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Mục tiêu quản lý tài chính DN là kiểm soát rủi ro và tối ưu hóa hiệu quả sử dụng nguồn vốn."
+        },
+        {
+          "id": 1791206397512,
+          "question": "Mục tiêu dài hạn của tài chính doanh nghiệp là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tối thiểu hóa chi phí trong ngắn hạn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tối đa hóa giá trị tài sản của doanh nghiệp",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Tăng trưởng lợi nhuận trong quý",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Mục tiêu tài chính dài hạn cốt lõi là tối đa hóa giá trị doanh nghiệp trên thị trường."
+        },
+        {
+          "id": 1791206398911,
+          "question": "Quỹ khen thưởng và phúc lợi của doanh nghiệp là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quỹ để chi trả cho các khoản chi phí hàng tháng của công ty",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Quỹ để trả thưởng cho cổ đông dựa trên tỷ lệ sở hữu cổ phần",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Quỹ để chi trả tiền thưởng cho nhân viên và các phúc lợi khác",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Quỹ khen thưởng phúc lợi trích từ LNST dùng thưởng cho người lao động và xây dựng công trình phúc lợi nội bộ."
+        },
+        {
+          "id": 1791206399644,
+          "question": "Lợi nhuận hoạt động của doanh nghiệp là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lợi nhuận trước thuế từ các hoạt động sản xuất và kinh doanh chính của doanh nghiệp",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Lợi nhuận từ các hoạt động tài chính",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lợi nhuận từ việc bán tài sản cố định",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Lợi nhuận hoạt động (EBIT) phản ánh kết quả kinh doanh từ hoạt động sản xuất kinh doanh cốt lõi của DN."
+        },
+        {
+          "id": 1791206400546,
+          "question": "Doanh thu từ hoạt động tài chính của doanh nghiệp là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh thu từ việc bán sản phẩm và cung cấp dịch vụ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Doanh thu từ hoạt động đầu tư, cổ tức, lãi vay, lãi từ đầu tư tài chính",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Doanh thu từ việc cho thuê tài sản",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Doanh thu tài chính đến từ các khoản đầu tư tài chính, lãi tiền gửi, cổ tức được nhận và lãi chênh lệch tỷ giá."
+        },
+        {
+          "id": 1791206401891,
+          "question": "Doanh thu khác là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh thu từ các hoạt động sản xuất chính của doanh nghiệp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Doanh thu từ việc cung cấp dịch vụ",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Doanh thu từ các hoạt động không phải là hoạt động chính của doanh nghiệp",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Doanh thu khác là các khoản thu bất thường, không thường xuyên ngoài hoạt động kinh doanh chính và hoạt động tài chính."
+        },
+        {
+          "id": 1791206403105,
+          "question": "Doanh thu của doanh nghiệp là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Số tiền doanh nghiệp thu được từ việc bán hàng hoặc cung cấp dịch vụ",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Số tiền doanh nghiệp chi để sản xuất sản phẩm",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lợi nhuận sau thuế mà doanh nghiệp thu được",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Doanh thu là số tiền thực tế hoặc sẽ thu được từ việc bán hàng hóa, cung cấp dịch vụ cho khách hàng."
+        },
+        {
+          "id": 1791206404085,
+          "question": "Chi phí sản xuất chung trong giá thành bao gồm những chi phí nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi phí nguyên liệu, chi phí nhân công",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi phí lao động trực tiếp, chi phí quản lý",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chi phí khấu hao, chi phí bảo trì máy móc, chi phí điện, nước",
+              "isCorrect": true
+            },
+            {
+              "key": "D",
+              "text": "Chi phí marketing, chi phí lãi vay",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Chi phí sản xuất chung gồm: khấu hao TSCĐ nhà xưởng, chi phí điện nước, bảo trì sửa chữa máy móc phục vụ phân xưởng."
+        },
+        {
+          "id": 1791206405035,
+          "question": "Chi phí nào dưới đây có thể thay đổi tùy thuộc vào sản lượng sản xuất?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền thuê mặt bằng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Lương nhân viên quản lý",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chi phí nguyên liệu đầu vào",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chi phí nguyên vật liệu trực tiếp là biến phí, thay đổi tỷ lệ thuận với khối lượng sản phẩm sản xuất."
+        },
+        {
+          "id": 1791206405275,
+          "question": "Chi phí nào dưới đây là chi phí liên quan đến hoạt động sản xuất?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi phí bán hàng",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi phí tài chính",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chi phí nguyên liệu sản xuất",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chi phí nguyên vật liệu trực tiếp là thành phần cơ bản cấu thành nên sản phẩm trong quá trình sản xuất."
+        },
+        {
+          "id": 1791206407088,
+          "question": "Chi phí lãi vay là loại chi phí nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi phí cố định",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi phí biến đổi",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chi phí tài chính",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Chi phí lãi vay phát sinh từ vốn vay ngân hàng hoặc phát hành trái phiếu, được hạch toán vào chi phí tài chính."
+        },
+        {
+          "id": 1791206407743,
+          "question": "Chi phí trực tiếp là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi phí không thể phân bổ cho sản phẩm nào cụ thể",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi phí có thể phân bổ trực tiếp cho sản phẩm hoặc dịch vụ cụ thể",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Chi phí không liên quan đến hoạt động sản xuất",
+              "isCorrect": false
+            },
+            {
+              "key": "D",
+              "text": "Chi phí phát sinh trong quá trình quản lý và điều hành doanh nghiệp",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Chi phí trực tiếp là những chi phí có thể bóc tách và tính trực tiếp cho từng đơn vị sản phẩm cụ thể."
+        },
+        {
+          "id": 1791206408650,
+          "question": "Chi phí gián tiếp của doanh nghiệp là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi phí trực tiếp liên quan đến việc sản xuất sản phẩm",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi phí phát sinh khi doanh nghiệp tăng trưởng",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chi phí không thể phân bổ trực tiếp cho sản phẩm hoặc dịch vụ cụ thể",
+              "isCorrect": true
+            },
+            {
+              "key": "D",
+              "text": "Chi phí trả cho các khoản vay",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chi phí gián tiếp phục vụ chung cho nhiều sản phẩm hoặc cả phân xưởng, không thể quy trực tiếp mà phải phân bổ."
+        },
+        {
+          "id": 1791206409316,
+          "question": "Chi phí nào dưới đây thuộc chi phí gián tiếp của doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiền lương của công nhân sản xuất",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi phí vận chuyển nguyên liệu",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tiền lương của giám đốc",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Tiền lương của ban giám đốc thuộc chi phí quản lý doanh nghiệp (chi phí gián tiếp)."
+        },
+        {
+          "id": 1791206410604,
+          "question": "Đặc điểm của nợ phải trả đối với doanh nghiệp là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh nghiệp không cần phải trả nợ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Nợ phải trả không có lãi suất",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Doanh nghiệp phải trả lại nợ trong một thời gian nhất định",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Nợ phải trả là cam kết tài chính mà doanh nghiệp có nghĩa vụ hoàn trả cho chủ nợ theo thời hạn xác định."
+        },
+        {
+          "id": 1791206411210,
+          "question": "Nợ nước ngoài có thể được sử dụng vào mục đích gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để chi trả cho các chương trình an sinh xã hội, bảo vệ môi trường, và phát triển cơ sở hạ tầng.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Để trả nợ trước đó hoặc đầu tư vào các dự án không mang lại lợi ích dài hạn.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Để chi trả các khoản nợ cho các tổ chức quốc tế mà không có kế hoạch trả nợ.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Nợ nước ngoài (vay ODA, thương mại) bổ sung nguồn lực cho phát triển hạ tầng và xóa đói giảm nghèo."
+        },
+        {
+          "id": 1791206412465,
+          "question": "Khi nợ nước ngoài gia tăng nhanh chóng, quốc gia có thể đối mặt với nguy cơ gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khả năng vỡ nợ, áp lực tài chính tăng cao, và giảm niềm tin của nhà đầu tư quốc tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Giảm tốc độ tăng trưởng của nền kinh tế, nhưng không ảnh hưởng đến nợ công.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Giảm tỷ lệ thất nghiệp và gia tăng nguồn thu ngân sách.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Nợ nước ngoài tăng quá cao làm tăng gánh nặng trả nợ bằng ngoại tệ, đe dọa khả năng vỡ nợ quốc gia."
+        },
+        {
+          "id": 1791206413409,
+          "question": "Các biện pháp nào dưới đây có thể giúp quản lý và giảm thiểu rủi ro từ nợ nước ngoài?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng cường vay nợ từ các tổ chức tài chính quốc tế như IMF và WB.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Phát hành trái phiếu quốc tế và vay nợ ngắn hạn để tránh nợ dài hạn.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tăng cường giám sát và cải cách chính sách tài khóa, thúc đẩy tăng trưởng kinh tế để đảm bảo khả năng trả nợ.",
+              "isCorrect": true
+            },
+            {
+              "key": "D",
+              "text": "Từ chối tất cả các khoản vay nước ngoài để tránh nợ công.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Để quản lý nợ nước ngoài an toàn, cần giám sát chặt chẽ trần nợ, nâng cao hiệu quả đầu tư và cải cách tài khóa."
+        },
+        {
+          "id": 1791206414154,
+          "question": "Nợ nước ngoài bao gồm các khoản nợ nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nợ của Chính phủ, các doanh nghiệp nhà nước và các tổ chức tài chính quốc gia.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Nợ của Chính phủ và các khoản vay của các doanh nghiệp nhà nước, tổ chức tài chính quốc tế.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Nợ của các tổ chức phi chính phủ và các khoản vay từ các cá nhân nước ngoài.",
+              "isCorrect": false
+            },
+            {
+              "key": "D",
+              "text": "Nợ của các chính quyền địa phương và các khoản vay của các công ty đa quốc gia.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Nợ nước ngoài quốc gia gồm nợ công nước ngoài và nợ nước ngoài tự vay tự trả của các doanh nghiệp trong nước."
+        },
+        {
+          "id": 1791206415220,
+          "question": "Nợ nước ngoài là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là các khoản nợ mà Chính phủ, các cơ quan nhà nước và doanh nghiệp trong nước vay từ các tổ chức, cá nhân nước ngoài.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Là các khoản nợ mà chỉ có Chính phủ vay từ các quốc gia khác.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Là các khoản nợ mà chỉ có các doanh nghiệp tư nhân vay từ các tổ chức quốc tế.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Nợ nước ngoài là tổng các khoản nợ của Chính phủ và các thể nhân, pháp nhân trong nước vay từ chủ nợ nước ngoài."
+        },
+        {
+          "id": 1791206416129,
+          "question": "Nợ công có thể gây ra những vấn đề gì đối với nền kinh tế quốc gia?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng trưởng kinh tế nhanh chóng và bền vững.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tăng nợ nước ngoài, tạo áp lực trả nợ, có thể dẫn đến vỡ nợ quốc gia.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Giảm tỷ lệ thất nghiệp và tăng thu nhập quốc dân..",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Nợ công quá hạn hoặc mất khả năng thanh toán sẽ dẫn tới khủng hoảng nợ và vỡ nợ quốc gia."
+        },
+        {
+          "id": 1791206417791,
+          "question": "Biện pháp nào dưới đây không phải là phương án chính để xử lý thâm hụt ngân sách nhà nước?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng thuế để tăng nguồn thu ngân sách",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tăng vay nợ trong và ngoài nước để bù đắp thâm hụt",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chuyển nhượng tài sản công cho các doanh nghiệp tư nhân",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chuyển nhượng tài sản công cho tư nhân không phải là giải pháp cơ bản chính sách để bù đắp thâm hụt NSNN."
+        },
+        {
+          "id": 1791206418118,
+          "question": "Thâm hụt ngân sách nhà nước là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là tình trạng khi tổng chi ngân sách vượt quá tổng thu ngân sách trong một kỳ.",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Là tình trạng khi tổng thu ngân sách lớn hơn tổng chi ngân sách.",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Là tình trạng khi ngân sách nhà nước không có đủ nguồn lực để chi trả các khoản vay.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Thâm hụt NSNN là tình trạng tổng chi tiêu ngân sách lớn hơn tổng thu ngân sách nhà nước trong năm tài chính."
+        },
+        {
+          "id": 1791206419325,
+          "question": "Chi cho an ninh quốc phòng là khoản chi nào trong ngân sách nhà nước?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi thường xuyên",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Chi đầu tư phát triển",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Chi cho chương trình tín dụng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Chi cho quốc phòng, an ninh trật tự xã hội là khoản chi phục vụ bộ máy nhà nước thuộc chi thường xuyên."
+        },
+        {
+          "id": 1791206420473,
+          "question": "Mục đích chính của chi thường xuyên của nhà nước là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảm bảo sự ổn định về tài chính của quốc gia",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tạo nguồn lực để phát triển kinh tế",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Đảm bảo các hoạt động hành chính và dịch vụ công liên tục",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Chi thường xuyên đảm bảo hoạt động liên tục của hệ thống hành chính công và các dịch vụ sự nghiệp công cộng."
+        },
+        {
+          "id": 1791206421303,
+          "question": "Thị trường tài chính là gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là nơi các giao dịch về hàng hóa diễn ra",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Là nơi cung cầu nguồn tài chính gặp nhau và tại đó các tài sản tài chính được mua bán",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Là nơi các giao dịch về bất động sản diễn ra",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Thị trường tài chính là nơi diễn ra các giao dịch vốn giữa bên cung và bên cầu các công cụ tài chính."
+        },
+        {
+          "id": 1791206422581,
+          "question": "Một công ty phát hành cổ phiếu để huy động vốn nhằm?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng lợi nhuận từ cổ tức",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Tăng khả năng thanh toán nợ",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tăng trưởng quy mô và mở rộng hoạt động kinh doanh",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Phát hành cổ phiếu nhằm huy động vốn dài hạn bổ sung vốn chủ sở hữu để mở rộng quy mô kinh doanh."
+        },
+        {
+          "id": 1791206423146,
+          "question": "Theo tính chất pháp lý, thị trường tài chính có thể được chia thành?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường trái phiếu và thị trường cổ phiếu",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tiền tệ và thị trường ngoại hối",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thị trường chính thức và thị trường không chính thức",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Theo tính chất pháp lý, thị trường tài chính gồm thị trường chính thức (chính quy) và phi chính thức (tự do)."
+        },
+        {
+          "id": 1791206424955,
+          "question": "Lý do chủ yếu mà các công ty phát hành trái phiếu là?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Để giảm chi phí hoạt động",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Để huy động vốn cho các dự án lớn mà không cần phải chia sẻ quyền kiểm soát",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Để trả nợ ngắn hạn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Phát hành trái phiếu giúp DN huy động được lượng vốn lớn mà không làm loãng quyền sở hữu hay biểu quyết của cổ đông."
+        },
+        {
+          "id": 1791206425655,
+          "question": "Theo tính chất tổ chức, thị trường chứng khoán có thể chia thành các loại nào?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường sơ cấp và thị trường thứ cấp",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Thị trường tiền tệ và thị trường vốn",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Thị trường ngoại hối và thị trường vàng",
+              "isCorrect": false
+            },
+            {
+              "key": "D",
+              "text": "Thị trường tín dụng và thị trường tài chính",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Thông hiểu",
+          "explanation": "Theo tính chất tổ chức phát hành và giao dịch, thị trường chứng khoán gồm thị trường sơ cấp và thị trường thứ cấp."
+        },
+        {
+          "id": 1791206426184,
+          "question": "Trên thị trường tiền tệ, khi lãi suất ngắn hạn tăng lên, điều này sẽ có ảnh hưởng như thế nào đối với các doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Doanh nghiệp có thể dễ dàng vay vốn để mở rộng sản xuất",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi phí vay vốn của doanh nghiệp tăng lên, khiến doanh nghiệp có thể giảm bớt các khoản đầu tư mới",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Doanh nghiệp sẽ không bị ảnh hưởng vì họ chủ yếu vay dài hạn",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Lãi suất ngắn hạn tăng làm chi phí vốn vay đắt hơn, khiến doanh nghiệp phải hạn chế các khoản đầu tư mới."
+        },
+        {
+          "id": 1791206427595,
+          "question": "Trên thị trường tiền tệ, các công cụ tài chính ngắn hạn thường có đặc điểm gì?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tính thanh khoản cao và kỳ hạn ngắn",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "Lãi suất cao và tính thanh khoản thấp",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Được phát hành với lãi suất cố định",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "level": "Vận dụng",
+          "explanation": "Công cụ tài chính ngắn hạn trên thị trường tiền tệ có tính thanh khoản rất cao và kỳ hạn ngắn dưới 1 năm."
+        },
+        {
+          "id": 1791206428190,
+          "question": "Cấu trúc của thị trường vốn bao gồm?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thị trường tiền tệ, thị trường chứng khoán",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Thị trường cho vay dài hạn trực tiếp, thị trường thuê mua tài chính, thị trường chứng khoán",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Thị trường chứng khoán, thị trường liên ngân hàng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Thị trường vốn gồm thị trường tín dụng trung - dài hạn, thị trường thuê mua tài chính và thị trường chứng khoán vốn."
+        },
+        {
+          "id": 1791206429266,
+          "question": "Trong bối cảnh nền kinh tế đang suy thoái và tỷ lệ thất nghiệp tăng cao, Ngân hàng Trung ương sẽ áp dụng chính sách tiền tệ nào để thúc đẩy tăng trưởng kinh tế?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tăng lãi suất và giảm cung tiền.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giảm tỷ lệ dự trữ bắt buộc và giảm lãi suất.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Bán trái phiếu chính phủ để giảm cung tiền.",
+              "isCorrect": false
+            },
+            {
+              "key": "D",
+              "text": "Tăng thuế và giảm chi tiêu công.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Khi kinh tế suy thoái, NHTW hạ tỷ lệ dự trữ bắt buộc và giảm lãi suất để bơm vốn kích cầu tăng trưởng."
+        },
+        {
+          "id": 1791206430975,
+          "question": "Một trong những chức năng của ngân hàng trung ương là gì mà ngân hàng thương mại không thực hiện?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cho vay trực tiếp cho các doanh nghiệp và cá nhân.",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Phát hành tiền tệ và điều hành chính sách tiền tệ.",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Cung cấp các sản phẩm tín dụng cho khách hàng.",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Vận dụng",
+          "explanation": "Độc quyền phát hành tiền mặt pháp định và hoạch định chính sách tiền tệ là chức năng riêng biệt của NHTW."
+        },
+        {
+          "id": 1791206431601,
+          "question": "Lãi suất tín dụng có ảnh hưởng như thế nào đến người vay?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lãi suất càng cao, chi phí vay càng thấp",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Lãi suất càng thấp, chi phí vay càng cao",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Lãi suất càng cao, chi phí vay càng cao",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Thông hiểu",
+          "explanation": "Lãi suất vay là chi phí vốn; lãi suất càng tăng cao thì gánh nặng chi phí trả lãi của người vay càng tăng."
+        },
+        {
+          "id": 1791206432617,
+          "question": "Lãi suất tín dụng cơ bản (lãi suất cho vay cơ bản) thường do tổ chức nào quyết định?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chính phủ",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Ngân hàng trung ương",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Các tổ chức tín dụng nhỏ",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Lãi suất cơ bản (Base Rate) do Ngân hàng Trung ương công bố làm kim chỉ nam định hướng lãi suất thị trường."
+        },
+        {
+          "id": 1791206433863,
+          "question": "Khi ngân hàng trung ương tăng lãi suất cơ bản, lãi suất tín dụng của các ngân hàng thương mại sẽ:",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giảm xuống",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Giữ nguyên",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "Tăng lên",
+              "isCorrect": true
+            },
+            {
+              "key": "D",
+              "text": "Không bị ảnh hưởng",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "C",
+          "level": "Vận dụng",
+          "explanation": "Khi NHTW tăng lãi suất cơ bản, chi phí vốn ngân hàng tăng lên buộc các NHTM phải tăng lãi suất cho vay."
+        },
+        {
+          "id": 1791206434156,
+          "question": "Khi lãi suất tín dụng tăng, điều gì sẽ xảy ra với chi phí vay của doanh nghiệp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chi phí vay giảm, doanh nghiệp dễ dàng vay vốn hơn",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Chi phí vay tăng, doanh nghiệp gặp khó khăn hơn trong việc vay vốn",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Doanh nghiệp sẽ không phải trả lãi vay",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "level": "Thông hiểu",
+          "explanation": "Lãi suất tín dụng tăng khiến chi phí lãi vay của doanh nghiệp tăng cao, gây khó khăn hơn trong việc tiếp cận và vay vốn."
+        }
+      ]
+    }
+  ]
+};

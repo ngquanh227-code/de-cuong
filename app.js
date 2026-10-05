@@ -331,9 +331,24 @@ function loadData() {
       if (!Array.isArray(appData.subjects)) {
         appData.subjects = [];
       }
-    } else {
+    }
+
+    // Nếu chưa có dữ liệu trong LocalStorage (lần đầu vào web hoặc đổi máy), nạp ngay bộ đề gốc từ questions.js
+    if (!appData || !Array.isArray(appData.subjects) || appData.subjects.length === 0) {
+      if (typeof DEFAULT_INITIAL_DATA !== "undefined") {
+        if (Array.isArray(DEFAULT_INITIAL_DATA.subjects) && DEFAULT_INITIAL_DATA.subjects.length > 0) {
+          appData = JSON.parse(JSON.stringify(DEFAULT_INITIAL_DATA));
+          saveData(false);
+        } else if (Array.isArray(DEFAULT_INITIAL_DATA) && DEFAULT_INITIAL_DATA.length > 0) {
+          appData = { subjects: JSON.parse(JSON.stringify(DEFAULT_INITIAL_DATA)), lastUpdated: Date.now() };
+          saveData(false);
+        }
+      }
+    }
+    if (!appData || !Array.isArray(appData.subjects)) {
       appData = { subjects: [] };
     }
+
     // Xóa triệt để môn mẫu mặc định cũ nếu còn tồn đọng trong máy
     if (Array.isArray(appData.subjects)) {
       const beforeLen = appData.subjects.length;
@@ -6340,30 +6355,28 @@ const TOUR_STORAGE_KEY = "cuonedu_tour_completed_v1";
 const ONBOARDING_STEPS = [
   {
     target: ".btn-hero-import",
-    title: "1. Tải đề thi tự động",
-    desc: "Bấm vào đây để tải đề trực tiếp từ file Word (.docx) hoặc PDF. Toàn bộ câu hỏi, đáp án A-B-C-D và lời giải sẽ được tự động nhận diện chỉ trong 1 giây.",
-    tag: "Bước 1 / 5",
-    preferredPos: "bottom",
+    title: "Tải Đề Thi Tự Động:",
+    desc: "Bấm vào đây để tải đề từ file Word (.docx) hoặc PDF. Câu hỏi & đáp án được nhận diện tức thì trong 1 giây.",
+    tag: "Bước 1/5",
     onEnter: () => {
       closeMainDrawer();
     }
   },
   {
-    target: ".btn-exam-hero, .grid-card-btn-primary, #sub-detail-panel .btn-primary, #sub-master-sidebar",
-    title: "2. Bắt đầu làm bài thi",
-    desc: "Bấm vào nút này để mở phòng thi trắc nghiệm Quizizz Arena hấp dẫn.<br><div style='margin-top: 8px; color: #fed7aa; font-size: 0.86rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8); line-height: 1.45;'>🧡 <em>Một chút gửi gắm:</em> Trước khi vào thi sẽ có liên kết Shopee nhỏ nhằm tiếp sức kinh phí duy trì máy chủ hoàn toàn miễn phí cho tất cả mọi người.</div>",
-    tag: "Bước 2 / 5",
-    preferredPos: "bottom",
+    target: ".btn-exam-hero, .grid-card-btn-primary, #sub-detail-panel .btn-primary",
+    title: "Bắt Đầu Làm Bài:",
+    desc: "Bấm vào đây để vào phòng thi Quizizz Arena. (Có liên kết Shopee nhỏ trước khi vào thi để tiếp sức duy trì server).",
+    tag: "Bước 2/5",
     onEnter: () => {
       closeMainDrawer();
     }
   },
   {
     target: "#cuonedu-ai-btn",
-    title: "3. Trợ lý Gia sư AI CuonEdu",
-    desc: "Bấm vào biểu tượng này bất cứ lúc nào để hỏi bài, nhờ AI giải thích từng câu hỏi khó trong đề thi, tóm tắt bài học hoặc tự động tạo đề thi mới.",
-    tag: "Bước 3 / 5",
-    preferredPos: "left",
+    title: "Trợ Lý AI CuonEdu:",
+    desc: "Bấm vào bong bóng AI này bất cứ lúc nào để hỏi bài, nhờ AI giải thích từng câu hỏi khó hoặc tóm tắt kiến thức.",
+    tag: "Bước 3/5",
+    preferredBarPos: "top",
     onEnter: () => {
       closeMainDrawer();
     }
@@ -6371,10 +6384,9 @@ const ONBOARDING_STEPS = [
   {
     target: "#drawer-item-donate",
     fallbackTarget: "#btn-hamburger",
-    title: "4. Tiếp sức & Ủng hộ (Donate)",
-    desc: "Mời tác giả ly cà phê để chung tay tiếp sức duy trì server và phát triển nền tảng học tập CuonEdu ngày một tốt hơn.",
-    tag: "Bước 4 / 5",
-    preferredPos: "left",
+    title: "Ủng Hộ Web (Donate):",
+    desc: "Mời tác giả ly cà phê để chung tay tiếp sức kinh phí duy trì server và phát triển thêm tính năng mới.",
+    tag: "Bước 4/5",
     onEnter: () => {
       openMainDrawer();
     }
@@ -6382,15 +6394,32 @@ const ONBOARDING_STEPS = [
   {
     target: "#drawer-item-zalo",
     fallbackTarget: "#btn-hamburger",
-    title: "5. Kết nối Zalo hỗ trợ 24/7",
-    desc: "Bạn có bộ đề thi mới muốn đưa lên web hoặc phát hiện câu hỏi cần sửa? Hãy nhắn trực tiếp Zalo / SĐT <strong>0962.714.685</strong> (Quang Cuốn) để được hỗ trợ tức thì!",
-    tag: "Bước 5 / 5",
-    preferredPos: "left",
+    title: "Kết Nối Zalo 24/7:",
+    desc: "Gửi đề thi mới hoặc báo lỗi câu hỏi trực tiếp qua Zalo / SĐT 0962.714.685 (Quang Cuốn) để được hỗ trợ tức thì.",
+    tag: "Bước 5/5",
     onEnter: () => {
       openMainDrawer();
     }
   }
 ];
+
+function lockTourScroll() {
+  document.documentElement.classList.add("tour-locked");
+  document.body.classList.add("tour-locked");
+  window.addEventListener("wheel", preventTourScroll, { passive: false });
+  window.addEventListener("touchmove", preventTourScroll, { passive: false });
+}
+
+function unlockTourScroll() {
+  document.documentElement.classList.remove("tour-locked");
+  document.body.classList.remove("tour-locked");
+  window.removeEventListener("wheel", preventTourScroll);
+  window.removeEventListener("touchmove", preventTourScroll);
+}
+
+function preventTourScroll(e) {
+  e.preventDefault();
+}
 
 function initTourElements() {
   if (document.getElementById("cuonedu-tour-root")) return;
@@ -6407,10 +6436,11 @@ function initTourElements() {
           <rect id="tour-mask-hole" x="0" y="0" width="0" height="0" rx="14" ry="14" fill="black" />
         </mask>
       </defs>
-      <rect width="100%" height="100%" fill="rgba(6, 4, 15, 0.76)" mask="url(#tour-cutout-mask)" />
+      <rect width="100%" height="100%" fill="rgba(6, 4, 15, 0.78)" mask="url(#tour-cutout-mask)" />
       <rect id="tour-glow-frame" x="0" y="0" width="0" height="0" rx="14" ry="14" fill="none" stroke="#c084fc" stroke-width="2.5" />
     </svg>
-    <div id="cuonedu-tour-guide" class="tour-flowing-guide"></div>
+    <div id="tour-pointer-bubble" class="tour-pointer-bubble"></div>
+    <div id="tour-banking-bar-wrap" class="tour-banking-bar-wrap"></div>
   `;
 
   document.body.appendChild(root);
@@ -6420,19 +6450,15 @@ function initTourElements() {
       renderTourCurrentStep();
     }
   });
-
-  window.addEventListener("scroll", () => {
-    if (document.body.classList.contains("tour-active")) {
-      const step = ONBOARDING_STEPS[currentTourStep];
-      if (step) updateTourCutout(step);
-    }
-  }, true);
 }
+
+let lastHighlightedEl = null;
 
 function startOnboardingTour() {
   initTourElements();
   currentTourStep = 0;
   document.body.classList.add("tour-active");
+  lockTourScroll();
   const root = document.getElementById("cuonedu-tour-root");
   if (root) root.style.display = "block";
 
@@ -6450,6 +6476,11 @@ function renderTourCurrentStep() {
     step.onEnter();
   }
 
+  if (lastHighlightedEl) {
+    lastHighlightedEl.classList.remove("tour-target-highlight");
+    lastHighlightedEl = null;
+  }
+
   const delay = (step.target && step.target.includes("drawer")) ? 320 : 80;
   setTimeout(() => {
     let targetEl = document.querySelector(step.target);
@@ -6457,166 +6488,127 @@ function renderTourCurrentStep() {
       targetEl = document.querySelector(step.fallbackTarget);
     }
 
-    if (targetEl && targetEl.offsetParent !== null) {
+    if (targetEl) {
       targetEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
     }
 
     setTimeout(() => {
-      updateTourCutout(step);
-      positionTourGuide(targetEl, step);
+      updateTourCutout(targetEl);
+      renderBankingBar(step);
+      positionPointerArrow(targetEl, step);
     }, 120);
   }, delay);
 }
 
-function updateTourCutout(step) {
-  let targetEl = document.querySelector(step.target);
-  if (!targetEl && step.fallbackTarget) {
-    targetEl = document.querySelector(step.fallbackTarget);
-  }
-
+function updateTourCutout(targetEl) {
   const hole = document.getElementById("tour-mask-hole");
   const glow = document.getElementById("tour-glow-frame");
   if (!hole || !glow) return;
 
-  if (targetEl && targetEl.offsetParent !== null) {
+  if (targetEl) {
     const rect = targetEl.getBoundingClientRect();
-    const pad = 6;
-    const x = Math.max(0, rect.left - pad);
-    const y = Math.max(0, rect.top - pad);
-    const w = rect.width + pad * 2;
-    const h = rect.height + pad * 2;
-    const rx = 14;
+    if (rect.width > 0 && rect.height > 0) {
+      targetEl.classList.add("tour-target-highlight");
+      lastHighlightedEl = targetEl;
 
-    hole.setAttribute("x", x);
-    hole.setAttribute("y", y);
-    hole.setAttribute("width", w);
-    hole.setAttribute("height", h);
-    hole.setAttribute("rx", rx);
-    hole.setAttribute("ry", rx);
+      const pad = 6;
+      const x = Math.max(0, rect.left - pad);
+      const y = Math.max(0, rect.top - pad);
+      const w = rect.width + pad * 2;
+      const h = rect.height + pad * 2;
+      const isRound = (rect.width === rect.height && rect.width < 70);
+      const rx = isRound ? Math.round(w / 2) : 14;
 
-    glow.setAttribute("x", x);
-    glow.setAttribute("y", y);
-    glow.setAttribute("width", w);
-    glow.setAttribute("height", h);
-    glow.setAttribute("rx", rx);
-    glow.setAttribute("ry", rx);
-    glow.style.display = "block";
-  } else {
-    hole.setAttribute("width", 0);
-    hole.setAttribute("height", 0);
-    glow.style.display = "none";
+      hole.setAttribute("x", x);
+      hole.setAttribute("y", y);
+      hole.setAttribute("width", w);
+      hole.setAttribute("height", h);
+      hole.setAttribute("rx", rx);
+      hole.setAttribute("ry", rx);
+
+      glow.setAttribute("x", x);
+      glow.setAttribute("y", y);
+      glow.setAttribute("width", w);
+      glow.setAttribute("height", h);
+      glow.setAttribute("rx", rx);
+      glow.setAttribute("ry", rx);
+      glow.style.display = "block";
+      return;
+    }
   }
+
+  hole.setAttribute("width", 0);
+  hole.setAttribute("height", 0);
+  glow.style.display = "none";
 }
 
-function positionTourGuide(targetEl, step) {
-  const guide = document.getElementById("cuonedu-tour-guide");
-  if (!guide) return;
+function positionPointerArrow(targetEl, step) {
+  const pointer = document.getElementById("tour-pointer-bubble");
+  if (!pointer) return;
+
+  if (targetEl) {
+    const rect = targetEl.getBoundingClientRect();
+    if (rect.width > 0 && rect.height > 0) {
+      pointer.style.display = "flex";
+      if (rect.top > window.innerHeight / 2) {
+        pointer.style.top = `${Math.max(10, rect.top - 46)}px`;
+        pointer.style.left = `${Math.max(10, rect.left + rect.width / 2 - 17)}px`;
+        pointer.innerHTML = `
+          <div class="pointer-arrow-graphic bounce-down">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+          </div>
+        `;
+      } else {
+        pointer.style.top = `${rect.bottom + 10}px`;
+        pointer.style.left = `${Math.max(10, rect.left + rect.width / 2 - 17)}px`;
+        pointer.innerHTML = `
+          <div class="pointer-arrow-graphic bounce-up">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+          </div>
+        `;
+      }
+      return;
+    }
+  }
+  pointer.style.display = "none";
+}
+
+function renderBankingBar(step) {
+  const barWrap = document.getElementById("tour-banking-bar-wrap");
+  if (!barWrap) return;
 
   const isLast = currentTourStep === ONBOARDING_STEPS.length - 1;
   const isFirst = currentTourStep === 0;
 
-  let arrowDir = "up";
-  let top = 0;
-  let left = 0;
-  const guideW = Math.min(360, window.innerWidth - 36);
-  guide.style.width = `${guideW}px`;
-
-  if (targetEl && targetEl.offsetParent !== null) {
-    const rect = targetEl.getBoundingClientRect();
-
-    if (window.innerWidth < 768) {
-      left = (window.innerWidth - guideW) / 2;
-      if (rect.bottom + 240 < window.innerHeight) {
-        top = rect.bottom + 16;
-        arrowDir = "up";
-      } else if (rect.top - 240 > 0) {
-        top = rect.top - 230;
-        arrowDir = "down";
-      } else {
-        top = Math.max(20, (window.innerHeight - 220) / 2);
-        arrowDir = "none";
-      }
-    } else {
-      if (step.preferredPos === "left" && rect.left - guideW - 40 > 0) {
-        left = rect.left - guideW - 30;
-        top = Math.max(30, Math.min(window.innerHeight - 240, rect.top));
-        arrowDir = "right";
-      } else if (step.preferredPos === "right" && rect.right + guideW + 40 < window.innerWidth) {
-        left = rect.right + 30;
-        top = Math.max(30, Math.min(window.innerHeight - 240, rect.top));
-        arrowDir = "left";
-      } else if (step.preferredPos === "top" && rect.top - 240 > 0) {
-        top = rect.top - 230;
-        left = Math.max(24, Math.min(window.innerWidth - guideW - 24, rect.left));
-        arrowDir = "down";
-      } else {
-        top = rect.bottom + 16;
-        left = Math.max(24, Math.min(window.innerWidth - guideW - 24, rect.left));
-        arrowDir = "up";
-      }
-    }
+  if (step.preferredBarPos === "top") {
+    barWrap.style.bottom = "auto";
+    barWrap.style.top = "24px";
   } else {
-    top = (window.innerHeight - 200) / 2;
-    left = (window.innerWidth - guideW) / 2;
-    arrowDir = "none";
+    barWrap.style.top = "auto";
+    barWrap.style.bottom = "24px";
   }
 
-  top = Math.max(16, Math.min(window.innerHeight - 230, top));
-  left = Math.max(16, Math.min(window.innerWidth - guideW - 16, left));
-
-  guide.style.top = `${top}px`;
-  guide.style.left = `${left}px`;
-
-  let arrowHtml = "";
-  if (arrowDir === "up") {
-    arrowHtml = `
-      <div class="tour-flow-arrow bounce-up" style="margin-bottom: 8px;">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 19V5M5 12l7-7 7 7"/>
-        </svg>
+  barWrap.innerHTML = `
+    <div class="tour-banking-bar">
+      <div class="tour-bar-left">
+        <span class="tour-bar-step">${step.tag}</span>
+        <div class="tour-bar-text-row">
+          <span class="tour-bar-title">${step.title}</span>
+          <span class="tour-bar-desc">${step.desc}</span>
+        </div>
       </div>
-    `;
-  } else if (arrowDir === "down") {
-    arrowHtml = `
-      <div class="tour-flow-arrow bounce-down" style="margin-top: 10px;">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 5v14M19 12l-7 7-7-7"/>
-        </svg>
-      </div>
-    `;
-  } else if (arrowDir === "right") {
-    arrowHtml = `
-      <div class="tour-flow-arrow bounce-right" style="position: absolute; right: -42px; top: 20px;">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </div>
-    `;
-  } else if (arrowDir === "left") {
-    arrowHtml = `
-      <div class="tour-flow-arrow bounce-left" style="position: absolute; left: -42px; top: 20px;">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M19 12H5M12 19l-7-7 7-7"/>
-        </svg>
-      </div>
-    `;
-  }
-
-  guide.innerHTML = `
-    ${arrowDir === "up" ? arrowHtml : ""}
-    <div class="tour-flowing-body">
-      <div class="tour-flow-tag">${step.tag}</div>
-      <h3 class="tour-flow-title">${step.title}</h3>
-      <div class="tour-flow-desc">${step.desc}</div>
-      <div class="tour-flow-actions">
-        <button type="button" class="tour-flow-btn-next" onclick="nextTourStep()">
-          ${isLast ? 'Hoàn Tất & Khám Phá' : 'Tiếp Tục →'}
+      <div class="tour-bar-right">
+        <button type="button" class="tour-btn-next-bank" onclick="nextTourStep()">
+          ${isLast ? 'Hoàn Tất' : 'Tiếp Tục →'}
         </button>
-        ${!isFirst ? `<button type="button" class="tour-flow-btn-prev" onclick="prevTourStep()">Quay lại</button>` : ''}
-        <button type="button" class="tour-flow-btn-skip" onclick="endOnboardingTour()">Bỏ qua</button>
+        ${!isFirst ? `<button type="button" class="tour-btn-back-bank" onclick="prevTourStep()">Quay lại</button>` : ''}
+        <button type="button" class="tour-btn-skip-bank" onclick="endOnboardingTour()" title="Bỏ qua hướng dẫn">✕</button>
       </div>
     </div>
-    ${arrowDir === "down" || arrowDir === "right" || arrowDir === "left" ? arrowHtml : ""}
   `;
 }
 
@@ -6642,6 +6634,13 @@ function endOnboardingTour() {
   } catch (e) {}
 
   document.body.classList.remove("tour-active");
+  unlockTourScroll();
+
+  if (lastHighlightedEl) {
+    lastHighlightedEl.classList.remove("tour-target-highlight");
+    lastHighlightedEl = null;
+  }
+
   const root = document.getElementById("cuonedu-tour-root");
   if (root) root.style.display = "none";
 
