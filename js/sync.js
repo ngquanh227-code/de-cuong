@@ -107,6 +107,16 @@ function handleIncomingCloudData(cloudData, isRealtimeEvent = false, silent = fa
   if (isLocalModificationActive || isCloudSyncInProgress) return;
   if (!cloudData || !Array.isArray(cloudData.subjects)) return;
 
+  // Bảo vệ: Tự động bảo lưu/bổ sung các môn mặc định từ DEFAULT_INITIAL_DATA nếu cloudData thiếu
+  if (typeof DEFAULT_INITIAL_DATA !== "undefined" && Array.isArray(DEFAULT_INITIAL_DATA.subjects)) {
+    DEFAULT_INITIAL_DATA.subjects.forEach(defSub => {
+      const exists = cloudData.subjects.some(s => s.code === defSub.code || s.id === defSub.id);
+      if (!exists) {
+        cloudData.subjects.push(JSON.parse(JSON.stringify(defSub)));
+      }
+    });
+  }
+
   const localSubjectsJson = JSON.stringify(appData.subjects || []);
   const cloudSubjectsJson = JSON.stringify(cloudData.subjects || []);
 

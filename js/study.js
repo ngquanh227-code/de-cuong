@@ -5,7 +5,24 @@
 // 12. STUDY / REVIEW MODE
 // ==========================================================================
 function startStudyMode(subId) {
-  const sub = appData.subjects.find(s => s.id === subId);
+  let sub = appData.subjects.find(s => s.id == subId || s.code == subId);
+  if (!sub && typeof DEFAULT_INITIAL_DATA !== "undefined" && Array.isArray(DEFAULT_INITIAL_DATA.subjects)) {
+    const fallback = DEFAULT_INITIAL_DATA.subjects.find(s => s.id == subId || s.code == subId);
+    if (fallback) {
+      sub = JSON.parse(JSON.stringify(fallback));
+      appData.subjects.push(sub);
+      saveData(false);
+    }
+  }
+  if (sub && (!sub.questions || sub.questions.length === 0)) {
+    if (typeof DEFAULT_INITIAL_DATA !== "undefined" && Array.isArray(DEFAULT_INITIAL_DATA.subjects)) {
+      const defMatch = DEFAULT_INITIAL_DATA.subjects.find(s => s.id == sub.id || s.code == sub.code);
+      if (defMatch && defMatch.questions && defMatch.questions.length > 0) {
+        sub.questions = JSON.parse(JSON.stringify(defMatch.questions));
+        saveData(false);
+      }
+    }
+  }
   if (!sub || !sub.questions || sub.questions.length === 0) {
     showToast("Môn này chưa có câu hỏi nào để ôn tập!", "warning");
     return;

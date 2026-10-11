@@ -19,40 +19,67 @@ function initDraggableAIFloatBtn() {
   const btn = document.getElementById("cuonedu-ai-btn");
   if (!btn) return;
 
+  // Khôi phục vị trí người dùng đã kéo lần trước (nếu có)
+  try {
+    const savedPos = localStorage.getItem("cuonedu_ai_btn_pos");
+    if (savedPos) {
+      const pos = JSON.parse(savedPos);
+      if (typeof pos.left === "number" && typeof pos.top === "number") {
+        const w = btn.offsetWidth || 48;
+        const h = btn.offsetHeight || 48;
+        const maxL = Math.max(10, window.innerWidth - w - 10);
+        const maxT = Math.max(10, window.innerHeight - h - 10);
+        const l = Math.min(Math.max(10, pos.left), maxL);
+        const t = Math.min(Math.max(10, pos.top), maxT);
+        btn.style.left = `${l}px`;
+        btn.style.top = `${t}px`;
+        btn.style.right = "auto";
+        btn.style.bottom = "auto";
+      }
+    }
+  } catch (e) {}
+
   let isDragging = false;
   let startX = 0, startY = 0;
   let initialLeft = 0, initialTop = 0;
   let hasMoved = false;
 
-  const onStart = (clientX, clientY) => {
+  const onPointerDown = (e) => {
+    if (e.button !== undefined && e.button !== 0) return;
+
     isDragging = true;
     hasMoved = false;
-    startX = clientX;
-    startY = clientY;
+    startX = e.clientX;
+    startY = e.clientY;
 
     const rect = btn.getBoundingClientRect();
     initialLeft = rect.left;
     initialTop = rect.top;
 
+    btn.style.transition = "none";
     btn.classList.add("is-dragging");
+
+    try {
+      btn.setPointerCapture(e.pointerId);
+    } catch (err) {}
   };
 
-  const onMove = (clientX, clientY) => {
+  const onPointerMove = (e) => {
     if (!isDragging) return;
-    const dx = clientX - startX;
-    const dy = clientY - startY;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
 
-    if (Math.abs(dx) > 6 || Math.abs(dy) > 6) {
+    if (!hasMoved && (Math.abs(dx) > 5 || Math.abs(dy) > 5)) {
       hasMoved = true;
     }
 
     if (hasMoved) {
+      const w = btn.offsetWidth || 48;
+      const h = btn.offsetHeight || 48;
+      const pad = 10;
+
       let newLeft = initialLeft + dx;
       let newTop = initialTop + dy;
-
-      const w = btn.offsetWidth || 44;
-      const h = btn.offsetHeight || 44;
-      const pad = 10;
 
       newLeft = Math.max(pad, Math.min(window.innerWidth - w - pad, newLeft));
       newTop = Math.max(pad, Math.min(window.innerHeight - h - pad, newTop));
@@ -64,34 +91,54 @@ function initDraggableAIFloatBtn() {
     }
   };
 
-  const onEnd = () => {
+  const onPointerUp = (e) => {
     if (!isDragging) return;
     isDragging = false;
     btn.classList.remove("is-dragging");
 
+    try {
+      btn.releasePointerCapture(e.pointerId);
+    } catch (err) {}
+
     if (hasMoved) {
       const rect = btn.getBoundingClientRect();
-      const w = btn.offsetWidth || 44;
+      const w = btn.offsetWidth || 48;
       const mid = window.innerWidth / 2;
-      const snapX = rect.left < mid ? 12 : (window.innerWidth - w - 12);
+      const pad = 16;
+      const snapX = rect.left < mid ? pad : (window.innerWidth - w - pad);
 
-      btn.style.transition = "left 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+      btn.style.transition = "left 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
       btn.style.left = snapX + "px";
+
+      try {
+        localStorage.setItem("cuonedu_ai_btn_pos", JSON.stringify({ left: snapX, top: rect.top }));
+      } catch (err) {}
+
       setTimeout(() => {
         btn.style.transition = "";
       }, 300);
     } else {
-      // Tap / Click without dragging -> toggle AI panel immediately
+      // Nhấp / Chạm thông thường không kéo -> Mở khung chat AI
       toggleAIChatbot();
     }
   };
 
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (!hasMoved) {
-      toggleAIChatbot();
-    }
-  });
+  const onPointerCancel = (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    btn.classList.remove("is-dragging");
+    try {
+      btn.releasePointerCapture(e.pointerId);
+    } catch (err) {}
+  };
+
+  btn.addEventListener("pointerdown", onPointerDown);
+  btn.addEventListener("pointermove", onPointerMove);
+  btn.addEventListener("pointerup", onPointerUp);
+  btn.addEventListener("pointercancel", onPointerCancel);
+
+  // Chặn hành vi kéo thả ảnh mặc định của trình duyệt
+  btn.addEventListener("dragstart", (e) => e.preventDefault());
 }
 
 function toggleAIChatbot(forceState) {
