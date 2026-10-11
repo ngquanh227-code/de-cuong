@@ -95,9 +95,9 @@ function handlePreExamSubmit(e) {
     saveUserProfile();
   }
 
-  closeModal("modal-shopee-gate");
+  // Đóng modal chuẩn bị, hiện bảng thông báo Shopee bắt buộc trước khi vào thi
   closeModal("modal-pre-exam");
-  startExam(currentSubjectId);
+  openModal("modal-shopee-gate");
 }
 
 function confirmShopeeAndStartExam() {
@@ -114,6 +114,7 @@ function confirmShopeeAndStartExam() {
 
 function cancelShopeeGate() {
   closeModal("modal-shopee-gate");
+  showToast("Bạn cần đồng ý mở liên kết Shopee để được vào làm bài thi!", "warning");
 }
 
 // ==========================================================================

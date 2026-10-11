@@ -174,7 +174,7 @@
   --lg-hover-glow: rgba(255, 255, 255, 0.4);
   --lg-red: #fb4268;
   --lg-grey: #5b5b5b;
-  --lg-spring: cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  --lg-spring: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Apple Titanium Space Gray Tokens */
   --brand-primary: #38bdf8;
@@ -231,7 +231,7 @@
   z-index: 0;
   backdrop-filter: blur(28px) saturate(210%);
   -webkit-backdrop-filter: blur(28px) saturate(210%);
-  filter: url(#lg-dist);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   isolation: isolate;
   pointer-events: none;
 }
@@ -627,22 +627,23 @@ button:active {
   border-radius: 5rem;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: inset 1px 1px 0 var(--lg-highlight), inset 0 0 6px rgba(255, 255, 255, 0.2), 0 6px 18px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   cursor: pointer;
-  transition: all 0.4s var(--lg-spring);
+  transition: background 0.2s ease, border-color 0.2s ease;
   padding: 0;
   position: relative;
   z-index: 102;
   pointer-events: auto;
+  transform: none !important;
 }
 
 .btn-hamburger:hover {
   background: rgba(255, 255, 255, 0.24);
   border-color: rgba(255, 255, 255, 0.65);
-  box-shadow: inset 1px 1px 0 #ffffff, inset 0 0 10px rgba(255, 255, 255, 0.4), 0 10px 25px rgba(255, 255, 255, 0.25);
-  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
+  transform: none !important;
 }
 
 .btn-hamburger * {
@@ -700,7 +701,7 @@ button:active {
   display: flex !important;
   flex-direction: column !important;
   transform: translateX(100%);
-  transition: transform 0.4s var(--lg-spring), visibility 0.4s !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s ease !important;
   padding: 24px !important;
   overflow-y: auto !important;
   visibility: hidden;

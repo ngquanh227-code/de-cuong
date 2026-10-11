@@ -59,16 +59,22 @@ function setupGlobalEvents() {
 
 
 
-  // Liquid Glass JS — Real-time Refraction & Specular Rim Tracking
+  // Liquid Glass JS — Throttled Pointer Tracking (Silky Smooth 60fps)
+  let pointerRaf = false;
   document.addEventListener("pointermove", (e) => {
-    const target = e.target.closest(".btn, .btn-hamburger, .sub-item-card, .stat-glass-card, .glass-specular, .detail-chip, .grid-subject-card, .compact-table-card, .focus-stage-card, .layout-pill-btn");
-    if (target) {
-      const rect = target.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      target.style.setProperty("--mouse-x", `${x.toFixed(1)}%`);
-      target.style.setProperty("--mouse-y", `${y.toFixed(1)}%`);
-    }
+    if (pointerRaf) return;
+    pointerRaf = true;
+    requestAnimationFrame(() => {
+      pointerRaf = false;
+      const target = e.target.closest(".btn, .sub-item-card, .stat-glass-card, .grid-subject-card");
+      if (target) {
+        const rect = target.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        target.style.setProperty("--mouse-x", `${x.toFixed(1)}%`);
+        target.style.setProperty("--mouse-y", `${y.toFixed(1)}%`);
+      }
+    });
   }, { passive: true });
 
   // Close modals on outside backdrop click
