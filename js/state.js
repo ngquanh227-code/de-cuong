@@ -189,6 +189,21 @@ function loadData() {
       appData = { subjects: [] };
     }
 
+    // Tự động bổ sung các môn học gốc từ questions.js nếu người dùng chưa có
+    if (typeof DEFAULT_INITIAL_DATA !== "undefined" && Array.isArray(DEFAULT_INITIAL_DATA.subjects)) {
+      let hasNewDefaultSubject = false;
+      DEFAULT_INITIAL_DATA.subjects.forEach(defSub => {
+        const exists = appData.subjects.some(s => s.code === defSub.code || s.id === defSub.id);
+        if (!exists) {
+          appData.subjects.push(JSON.parse(JSON.stringify(defSub)));
+          hasNewDefaultSubject = true;
+        }
+      });
+      if (hasNewDefaultSubject) {
+        saveData(false);
+      }
+    }
+
     // Xóa triệt để môn mẫu mặc định cũ nếu còn tồn đọng trong máy
     if (Array.isArray(appData.subjects)) {
       const beforeLen = appData.subjects.length;
@@ -239,4 +254,4 @@ function saveData(triggerCloudSync = true) {
     }, 450);
   }
 }
-
+

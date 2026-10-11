@@ -1,6 +1,6 @@
 const DEFAULT_INITIAL_DATA = {
   "version": 1,
-  "lastUpdated": 1791206139410,
+  "lastUpdated": 1791206500000,
   "subjects": [
     {
       "category": "Đại Cương & Khác",
@@ -9921,6 +9921,5265 @@ const DEFAULT_INITIAL_DATA = {
         }
       ],
       "title": "Quân Sự HP1"
+    },
+    {
+      "category": "GDQP - An Ninh",
+      "code": "SUB-310",
+      "durationMinutes": 15,
+      "id": 1790953238402,
+      "title": "Quân Sự HP2",
+      "questions": [
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000000,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chăm lo xây dựng lực lượng vũ trang ở địa phương vững mạnh"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng hệ thống chính trị cả nước vững mạnh toàn diện"
+            },
+            {
+              "key": "C",
+              "text": "Đẩy mạnh công nghiệp hóa hiện đại hóa, chống tụt hậu kinh tế"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng lòng yêu nước cho tuổi trẻ nhất là học sinh, sinh viên"
+            }
+          ],
+          "question": "Một trong những giải pháp phòng chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000001,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chiến lươc “Diễn biến hòa bình”"
+            },
+            {
+              "key": "B",
+              "text": "Biện pháp “Ngăn chặn chủ nghĩa cộng sản”"
+            },
+            {
+              "key": "C",
+              "text": "Chiến lược “Phi quân sự”"
+            },
+            {
+              "key": "D",
+              "text": "Chính sách “Cấm vận kinh tế, cô lập ngoại giao”"
+            }
+          ],
+          "question": "“Bạo loạn lật đổ” là thủ đoạn gắn liền với:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000002,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phòng chống chiến lược “Diễn biến hòa bình”, bạo loạn lật đổ"
+            },
+            {
+              "key": "B",
+              "text": "Phòng chống địch tiến công hỏa lực bằng vũ khí công nghệ cao"
+            },
+            {
+              "key": "C",
+              "text": "Phòng chống địch lợi dụng vấn đề dân tộc, tôn giáo"
+            },
+            {
+              "key": "D",
+              "text": "Phòng chống tội phạm, tệ nạn xã hội và bảo vệ an ninh quốc gia"
+            }
+          ],
+          "question": "Nhiệm vụ cấp bách hàng đầu trong các nhiệm vụ QPAN ở nước ta là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000003,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Vùng Tây Bắc"
+            },
+            {
+              "key": "B",
+              "text": "Vùng Tây Nguyên"
+            },
+            {
+              "key": "C",
+              "text": "Vùng Đông Bắc"
+            },
+            {
+              "key": "D",
+              "text": "Vùng Tây Nam Bộ"
+            }
+          ],
+          "question": "Chủ nghĩa đế quốc và các thế lực thù địch kích động người H’Mông đòi thành lập khu tự trị riêng ở:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000004,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lực lượng ly khai, đối lập trong nước hoặc cấu kết với nước ngoài"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng đối lập phối hợp chặt chẽ với lực lượng ly khai bên ngoài"
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng ly khai phối hợp với lực lượng dân chủ, nhân quyền"
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng bất mãn chống đối trong nước cấu kết với kẻ thù từ bên ngoài"
+            }
+          ],
+          "question": "Lực lượng tiến hành bạo loạn lật đổ thường là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000005,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thanh niên, nhất là sinh viên"
+            },
+            {
+              "key": "B",
+              "text": "Học sinh, sinh viên thành thị"
+            },
+            {
+              "key": "C",
+              "text": "Công nhân các khu công nghiệp"
+            },
+            {
+              "key": "D",
+              "text": "Người dân nghèo ở thành thị"
+            }
+          ],
+          "question": "Thực hiện chiến lược “Diễn biến hòa bình”, chủ nghĩa đế quốc và các thế lực thù địch khích lệ lối sống tư sản, từng bước làm phai nhạt mục tiêu, lý tưởng xã hội chủ nghĩa ở tầng lớp:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000006,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các trung tâm chính trị, kinh tế"
+            },
+            {
+              "key": "B",
+              "text": "Các khu công nghiệp tập trung"
+            },
+            {
+              "key": "C",
+              "text": "Các trung tâm văn hóa, khoa học"
+            },
+            {
+              "key": "D",
+              "text": "Các khu công nghệ, kỹ thuật cao"
+            }
+          ],
+          "question": "Bạo loạn lật đổ có thể xẩy ra ở nhiều nơi, nhiều vùng của đất nước, trọng điểm là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000007,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một trọng điểm"
+            },
+            {
+              "key": "B",
+              "text": "Vấn đề cơ bản"
+            },
+            {
+              "key": "C",
+              "text": "Một trọng tâm"
+            },
+            {
+              "key": "D",
+              "text": "Vấn đề trọng điểm"
+            }
+          ],
+          "question": "Thực hiện chiến lược “Diễn biến hòa bình” chống phá chủ nghĩa xã hội, chủ nghĩa đế quốc và các thế lực thù địch luôn coi Việt Nam là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000008,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "1975"
+            },
+            {
+              "key": "B",
+              "text": "1979"
+            },
+            {
+              "key": "C",
+              "text": "1973"
+            },
+            {
+              "key": "D",
+              "text": "1976"
+            }
+          ],
+          "question": "Sau thất bại về chiến lược quân sự, chủ nghĩa đế quốc và các thế lực thù địch chuyển sang chiến lược “Diễn biến hòa bình” đối với Việt Nam từ năm:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000009,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sau thất bại chiến tranh xâm lược Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Khi đưa quân vào xâm lược miền Nam"
+            },
+            {
+              "key": "C",
+              "text": "Sau biến động chế độ xã hội chủ nghĩa ở Liên Xô"
+            },
+            {
+              "key": "D",
+              "text": "Khi Việt Nam tiến hành sự nghiệp đổi mới"
+            }
+          ],
+          "question": "Chủ nghĩa đế quốc và các thế lực thù địch thực hiện chiến lược “Diễn biến hòa bình” đối với Việt Nam từ khi nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000010,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhiệm vụ cấp bách hàng đầu"
+            },
+            {
+              "key": "B",
+              "text": "Nhiệm vụ thường xuyên hàng đầu"
+            },
+            {
+              "key": "C",
+              "text": "Nhiệm vụ cơ bản hàng đầu"
+            },
+            {
+              "key": "D",
+              "text": "Nhiệm vụ chiến lược hàng đầu"
+            }
+          ],
+          "question": "Trong các nhiệm vụ quốc phòng - an ninh hiện nay ở nước ta, phòng, chống chiến lược “Diễn biến hòa bình” là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000011,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước và chăm lo nâng cao đời sống vật chất, tinh thần cho nhân dân lao động"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng Đảng vững mạnh, xây dựng tinh thần đoàn kết và xây dựng các tổ chức quần chúng vững mạnh"
+            },
+            {
+              "key": "C",
+              "text": "Đẩy lùi các hủ tục lạc hậu, mê tín dị đoan và các tệ nạn xã hội, chăm lo đời sống vật chất, tinh thần cho nhân dân lao động."
+            },
+            {
+              "key": "D",
+              "text": "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước, chống nguy cơ lạc hậu về kinh tế, khắc phục các tiêu cực trong xã hội"
+            }
+          ],
+          "question": "Nội dung nào sau đây là một trong những giải pháp phòng chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000012,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phủ nhận vai trò lãnh đạo của Đảng trong lĩnh vực quốc phòng - an ninh"
+            },
+            {
+              "key": "B",
+              "text": "Mua chuộc cán bộ cao cấp của quân đội và lực lượng vũ trang"
+            },
+            {
+              "key": "C",
+              "text": "Phủ nhận vai trò quốc phòng - an ninh trong sự nghiệp đổi mới"
+            },
+            {
+              "key": "D",
+              "text": "Chia rẽ quân đội, công an, dân quân tự vệ và bộ đội biên phòng"
+            }
+          ],
+          "question": "Thủ đoạn trên lĩnh vực quốc phòng - an ninh trong chiến lược “Diễn biến hòa bình” là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000013,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xây dựng cơ sở chính trị - xã hội vững mạnh về mọi mặt"
+            },
+            {
+              "key": "B",
+              "text": "Đẩy mạnh công nghiệp hóa, chống nguy cơ tụt hậu kinh tế"
+            },
+            {
+              "key": "C",
+              "text": "Đẩy lùi các hủ tục lạc hậu, mê tín dị đoan và các tệ nạn xã hội"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng lòng yêu nước cho tuổi trẻ nhất là học sinh, sinh viên"
+            }
+          ],
+          "question": "Phòng chống chiến lược ‘diễn biến hòa bình’, bạo loạn lật đổ, chúng ta phải thực hiện giải pháp:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000014,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cấp bách hàng đầu, thường xuyên và lâu dài"
+            },
+            {
+              "key": "B",
+              "text": "Chủ yếu, cấp bách trước mắt cũng như lâu dài"
+            },
+            {
+              "key": "C",
+              "text": "Cơ bản trong thời kỳ quá độ xã hội chủ nghĩa"
+            },
+            {
+              "key": "D",
+              "text": "Trọng tâm lâu dài của cách mạng Việt Nam"
+            }
+          ],
+          "question": "Nhiệm vụ phòng chống chiến lược “Diễn biến hòa bình”, bạo loạn lật đổ được xác định là nhiệm vụ:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000015,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "“Diễn biến hòa bình” là quá trình tạo nên những điều kiện, thời cơ cho bạo loạn lật đổ"
+            },
+            {
+              "key": "B",
+              "text": "“Diễn biến hòa bình” là quá trình đưa đến nguyên nhân và điều kiện của bạo loạn lật đổ"
+            },
+            {
+              "key": "C",
+              "text": "“Diễn biến hòa bình” là quá trình tạo yếu tố quyết định cho bạo loạn lật đổ."
+            },
+            {
+              "key": "D",
+              "text": "“Diễn biến hòa bình” là quá trình tạo thời cơ quan trọng nhất cho bạo loạn lật đổ"
+            }
+          ],
+          "question": "Quan hệ giữa “Diễn biến hòa bình” và bạo loạn lật đổ:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000016,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thủ đoạn mũi nhọn"
+            },
+            {
+              "key": "B",
+              "text": "Thủ đoạn chủ yếu"
+            },
+            {
+              "key": "C",
+              "text": "Thủ đoạn hàng đầu"
+            },
+            {
+              "key": "D",
+              "text": "Thủ đoạn cơ bản"
+            }
+          ],
+          "question": "Trong chiến lược “Diễn biến hòa bình”, thủ đoạn về kinh tế được kẻ thù xác định là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000017,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xóa bỏ vai trò lãnh đạo của Đảng và chế độ xã hội chủ nghĩa"
+            },
+            {
+              "key": "B",
+              "text": "Đối lập chủ nghĩa Mác-Lênin và tư tưởng Hồ Chí Minh"
+            },
+            {
+              "key": "C",
+              "text": "Phủ định chủ nghĩa Mác-Lênin, xóa bỏ chủ nghĩa xã hội"
+            },
+            {
+              "key": "D",
+              "text": "Đối lập nhiệm vụ kinh tế và quốc phòng, an ninh trật tự"
+            }
+          ],
+          "question": "Chống phá về chính trị trong chiến lược “Diễn biến hòa bình”, kẻ thù âm mưu thực hiện:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000018,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kích động đòi thực hiện chế độ “đa nguyên chính trị, đa đảng đối lập”"
+            },
+            {
+              "key": "B",
+              "text": "Phá vỡ khối đại đoàn kết toàn dân của các tổ chức chính trị, xã hội"
+            },
+            {
+              "key": "C",
+              "text": "Chia rẽ nội bộ, kích động gây rối loạn các tổ chức trong xã hội"
+            },
+            {
+              "key": "D",
+              "text": "Cô lập Đảng, Nhà nước với quân đội nhân dân và công an nhân dân."
+            }
+          ],
+          "question": "Thực hiện thủ đoạn chống phá về chính trị trong chiến lược “Diễn biến hòa bình” đối với cách mạng Việt Nam, kẻ thù tiến hành:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000019,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát hiện và góp phần đấu tranh đánh bại mọi âm mưu, thủ đoạn của kẻ thù"
+            },
+            {
+              "key": "B",
+              "text": "Đẩy mạnh sự nghiệp công nghiệp hóa, hiện đại hóa đưa đất nước phát triển"
+            },
+            {
+              "key": "C",
+              "text": "Nâng cao đời sống vật chất, tinh thần cho công nhân và nhân dân lao động"
+            },
+            {
+              "key": "D",
+              "text": "Chăm lo xây dựng lực lượng vũ trang ở địa phương vững mạnh toàn diện"
+            }
+          ],
+          "question": "Để cùng cả nước phòng chống chiến lược “Diễn biến hòa bình”, bạo loạn lật đổ, sinh viên phải:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000020,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Làm mất vai trò chủ đạo của kinh tế Nhà nước, từng bước lệ thuộc chủ nghĩa đế quốc"
+            },
+            {
+              "key": "B",
+              "text": "Khuyến khích kinh tế nước ngoài phát triển giữ vai trò chủ đạo của kinh tế đất nước"
+            },
+            {
+              "key": "C",
+              "text": "Kêu gọi kinh tế cá thể phát triển, từng bước đưa kinh tế tư nhân thay thế kinh tế quốc doanh"
+            },
+            {
+              "key": "D",
+              "text": "Phát triển nhanh kinh tế tư bản Nhà nước, giữ vai trò chủ đạo của kinh tế đất nước"
+            }
+          ],
+          "question": "Một trong những nội dung chống phá về kinh tế của chiến lược “Diễn biến hòa bình” là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000021,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chia rẽ Việt Nam với Lào, Campuchia và các nước xã hội chủ nghĩa"
+            },
+            {
+              "key": "B",
+              "text": "Chia rẽ Việt Nam với các nước tiến bộ, yêu chuộng hòa bình"
+            },
+            {
+              "key": "C",
+              "text": "Chia rẽ Việt Nam với Lào và các nước xã hội chủ nghĩa còn lại"
+            },
+            {
+              "key": "D",
+              "text": "Chia rẽ Việt Nam với Campuchia và các nước tiến bộ trên thế giới"
+            }
+          ],
+          "question": "Chống phá trên lĩnh vực đối ngoại trong chiến lược “Diễn biến hòa bình” kẻ thù thực hiện thủ đoạn:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000022,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bản sắc văn hóa và giá trị văn hóa của dân tộc Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Truyền thống kinh nghiệm của văn hóa Việt Nam"
+            },
+            {
+              "key": "C",
+              "text": "Những sản phẩm văn hóa quý báu của chúng ta"
+            },
+            {
+              "key": "D",
+              "text": "Nền văn hóa và sản phẩm văn hóa dân tộc Việt Nam"
+            }
+          ],
+          "question": "Thực hiện thủ đoạn “Diễn biến hòa bình” về văn hóa, kẻ thù tập trung tấn công vào:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000023,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đòi li khai, tự quyết dân tộc"
+            },
+            {
+              "key": "B",
+              "text": "Chia rẽ các dân tộc, gây mâu thuẫn"
+            },
+            {
+              "key": "C",
+              "text": "Đòi biểu tình, ly khai lập khu tự trị"
+            },
+            {
+              "key": "D",
+              "text": "Gây mâu thuẫn giữa các dân tộc"
+            }
+          ],
+          "question": "Thực hiện thủ đoạn trong lĩnh vực tôn giáo - dân tộc của chiến lược “Diễn biến hòa bình”, kẻ thù lợi dụng vấn đề dân tộc để kích động tư tưởng:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000024,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Truyền đạo trái phép nhằm thực hiện âm mưu tôn giáo hóa dân tộc"
+            },
+            {
+              "key": "B",
+              "text": "Truyền bá mê tín dị đoan và tư tưởng phản động chống chủ nghĩa xã hội"
+            },
+            {
+              "key": "C",
+              "text": "Tuyên truyền để tập hợp lực lượng phản động chống phá cách mạng"
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng lực lượng phản động làm tay sai chống phá cách mạng"
+            }
+          ],
+          "question": "Thực hiện thủ đoạn “Diễn biến hòa bình” trong lĩnh vực tôn giáo - dân tộc, kẻ thù triệt để lợi dụng chính sách tự do tôn giáo của Đảng ta để:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000025,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nâng cao nhận thức về âm mưu, thủ đoạn của các thế lực thù địch , nắm chắc mọi diễn biến không để bị động và bất ngờ."
+            },
+            {
+              "key": "B",
+              "text": "Nâng cao tinh thần yêu nước, hăng hái lao động sản xuất và tích cực phòng chống thiên tai cho nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Nâng cao đời sống vật chất, tinh thần cho nhân dân, đẩy lùi các hủ tục lạc hậu, mê tín dị đoan và các tệ nạn xã hội"
+            },
+            {
+              "key": "D",
+              "text": "Nâng cao ý thức dân tộc, yêu Tổ quốc, yêu đồng bào, trách nhiệm công dân cho tuổi trẻ nhất là học sinh, sinh viên"
+            }
+          ],
+          "question": "Phòng chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ ở nước ta hiện nay, chúng ta phải thực hiện giải pháp:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000026,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phi chính trị hóa"
+            },
+            {
+              "key": "B",
+              "text": "Công cụ hóa"
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng hóa"
+            },
+            {
+              "key": "D",
+              "text": "Xã hội hóa"
+            }
+          ],
+          "question": "Trong chiến lược “Diễn biến hòa bình”, đối với quân đội, công an, các thế lực thù địch chủ trương vô hiệu hóa sự lãnh đạo của Đảng với luận điểm:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000027,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Pham vi, quy mô, lực lượng, kêu gọi tài trợ của nước ngoài"
+            },
+            {
+              "key": "B",
+              "text": "Quy mô, lực lượng, kêu gọi nước ngoài can thiệp quân sự"
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng, uy hiếp chính quyền địa phương, trung ương"
+            },
+            {
+              "key": "D",
+              "text": "Phạm vi, lực lượng, đập phá trụ sở Đảng, chính quyền"
+            }
+          ],
+          "question": "Trong quá trình bạo loạn, bọn phản động tìm mọi cách để mở rộng:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000028,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ"
+            },
+            {
+              "key": "B",
+              "text": "Giữ vững ổn định chính trị trên cơ sở độc lập chủ quyền dân tộc"
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ vững chắc độc lập, chủ quyền của quốc gia, dân tộc"
+            },
+            {
+              "key": "D",
+              "text": "Bảo vệ vững chắc chế độ nhà nước Việt Nam xã hội chủ nghĩa"
+            }
+          ],
+          "question": "Một trong những mục tiêu phòng chống chiến lược “Diễn biến hoà bình”:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 1: Phòng, chống chiến lược “diễn biến hòa bình”, bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam",
+          "id": 1790954000029,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mở màn cho bạo loạn lật đổ"
+            },
+            {
+              "key": "B",
+              "text": "Mở đầu cho hành động phá hoại"
+            },
+            {
+              "key": "C",
+              "text": "Làm mất an ninh chính trị"
+            },
+            {
+              "key": "D",
+              "text": "Mở màn cho hoạt động phá hoại"
+            }
+          ],
+          "question": "Các thế lực thù địch lợi dụng gây rối để:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000030,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nâng cao đời sống đồng bào các DT thiểu số, giữ gìn bản sắc VH"
+            },
+            {
+              "key": "B",
+              "text": "Khuyến khích đầu tư phát triển kinh tế ở vùng biên giới hải đảo"
+            },
+            {
+              "key": "C",
+              "text": "Đào tạo nguồn nhân lực là con em đồng bào Dân tộc thiểu số"
+            },
+            {
+              "key": "D",
+              "text": "Phương án B và C"
+            }
+          ],
+          "question": "Đảng, Nhà nước ta xác định tập trung vào vấn đề gì trong công tác dân tộc hiện nay ?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000031,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tất cả các phương án"
+            },
+            {
+              "key": "B",
+              "text": "Quy hoạch lại dân cư, gắn phát triển KT với  bảo đảm QPAN"
+            },
+            {
+              "key": "C",
+              "text": "Cùng nhau thực hiện thắng lợi sự nghiệp XD và BVTQ"
+            },
+            {
+              "key": "D",
+              "text": "Chăm lo đời sống vật chất tinh thần, phát huy bản sắc VH Dân tộc"
+            }
+          ],
+          "question": "Đảng ta có quan điểm về vấn đề Dân tộc và đại đoàn kết  Dân tộc như thế nào trong sự nghiệp cách mạng của nước ta?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000032,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Có vị trí chiến lược trong sự nghiệp cách mạng"
+            },
+            {
+              "key": "B",
+              "text": "Quan trọng trong việc chống phân biệt, giai cấp, dân tộc"
+            },
+            {
+              "key": "C",
+              "text": "Đặc biệt quan trọng trong xây dựng đại đoàn kết dân tộc"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Quan điểm của Đảng ta về Dân tộc và đoàn kết Dân tộc hiện nay cóvị trí như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000033,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bình đẳng, đoàn kết tôn trọng giúp đỡ nhau cùng tiến bộ"
+            },
+            {
+              "key": "B",
+              "text": "Mọi quyền lợi về kinh tế giữa các DT phải được công khai"
+            },
+            {
+              "key": "C",
+              "text": "Không đối xử phân biệt địa vị chính trị giữa các dân tộc"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Một trong những quan điểm chính sách của Đảng về quan hệ các dân tộc được đặt ra trong đại hội Đảng lần thứ X là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000034,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ưu tiên đào tạo bồi dưỡng cán bộ, trí thức là người dân tộc thiểu số"
+            },
+            {
+              "key": "B",
+              "text": "Bài trừ tư tưởng cục bộ, hẹp hòi hoặc tư tưởng phân biệt Dân tộc,"
+            },
+            {
+              "key": "C",
+              "text": "Động viên trí thức là người Dân tộc thiểu số về công tác tại địa phương"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Đai hội Đảng lần thứ X đã đề ra quan điểm, chính sách trọng tâm đối với các Dân tộc ở Việt nam như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000035,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát triển KT, chăm lo đời sống VC,  tinh thần cho nhân dân"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng phát triển văn hóa, x hội cho đồng bào các Dân tộc"
+            },
+            {
+              "key": "C",
+              "text": "Bảo đảm thông tin, giao thông phát triển kinh tế vùng sâu, vùng xa"
+            },
+            {
+              "key": "D",
+              "text": "Phương án A và B"
+            }
+          ],
+          "question": "Đai hội Đảng lần thứ X đã đề ra quan điểm, chính sách phát triển, ổn định các Dân tộc ở Việt nam như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000036,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát triển, KT–XH ở miền núi, vùng sâu, vùng xa, biên giới, căn cứ cách mạng"
+            },
+            {
+              "key": "B",
+              "text": "Quan tâm xây dựng các nhà máy công nghiệp ở miền núi"
+            },
+            {
+              "key": "C",
+              "text": "Đầu tư vững mạnh cho y tế, giáo dục, giao thông miền núi"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Nội dung văn kiện Đại hội Đảng lần thứ X chỉ ra một số nội dung quan điểm về chính sách phát triển kinh tế xã hội  dân tộc như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000037,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Làm tốt cụng tác định canh định cư và xây dựng kinh tế mới"
+            },
+            {
+              "key": "B",
+              "text": "Vận động nhân dân thực hiện canh tác truyền thống"
+            },
+            {
+              "key": "C",
+              "text": "Duy trì tất cả các chính sách về xây dựng kinh tế mới"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Trong Đại hội Đảng lần thứ X đã chỉ ra các quan điểm chính sách dân tộc là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000038,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quy hoạch, phân bổ, sắp xếp lại dân cư vùng thiểu số"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng kế hoạch hóa gia đinh vùng dân tộc thiểu số"
+            },
+            {
+              "key": "C",
+              "text": "Thực hiện tốt các chính sách động viên nhân dân sống định canh"
+            },
+            {
+              "key": "D",
+              "text": "Phương án A và C"
+            }
+          ],
+          "question": "Trong nội dung văn kiện Đại hội Đảng lần thứ X đã chỉ ra  những quan điểm nào về chính sách dân tộc?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000039,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ưu tiên đào tạo, bồi dưỡng con em các dân tộc, thiểu số"
+            },
+            {
+              "key": "B",
+              "text": "Ưu tiên cử cán bộ có kinh nghiệm vùng đồng bào dân tộc thiểu số"
+            },
+            {
+              "key": "C",
+              "text": "Ưu tiên phát hiện nhân lực là nguồn đồng bào thiểu số"
+            },
+            {
+              "key": "D",
+              "text": "Phương án B và C"
+            }
+          ],
+          "question": "Nội dung văn kiện Đại hội Đảng lần thứ X chỉ ra những quan điểm về chính sách dân tộc như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000040,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cán bộ phải hiểu phong tục, tập quán, tiếng nói , làm tốt công tác dân vận"
+            },
+            {
+              "key": "B",
+              "text": "Tạo nguồn cán bộ phải biết tuyên truyền vận động quần chúng"
+            },
+            {
+              "key": "C",
+              "text": "Cử cán bộ có khả năng và trình độ công tác lâu dài vùng đồng bảo dân tộc thiểu số"
+            },
+            {
+              "key": "D",
+              "text": "Phương án A và C"
+            }
+          ],
+          "question": "Trong nội dung văn kiện Đại hội Đảng lần thứ X đã chỉ ra quan điểm về vai trò của cán bộ trong chính sách dân tộc là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000041,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chống biểu hiện kì thị, hẹp hòi, chia rẽ dân tộc"
+            },
+            {
+              "key": "B",
+              "text": "Đấu tranh với biểu hiện ích kỷ, hẹp hỏi, phá hoại đoàn kết"
+            },
+            {
+              "key": "C",
+              "text": "Phương án A và D"
+            },
+            {
+              "key": "D",
+              "text": "Bài trừ tư tưởng phân biệt địa vị xã hội giữa các dân tộc"
+            }
+          ],
+          "question": "Trong nội dung văn kiện Đại hội Đảng lần thứ X quan điểm phòng chống về vấn đề dân tộc như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000042,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là một cộng đồng xã hội"
+            },
+            {
+              "key": "B",
+              "text": "Là tổ chức chính trị, xã hội"
+            },
+            {
+              "key": "C",
+              "text": "Là một tập thể dân cư tín ngưỡng"
+            },
+            {
+              "key": "D",
+              "text": "Là một bộ phận người tín ngưỡng mê tín"
+            }
+          ],
+          "question": "Trong đời sống xã hội, tôn giáo là tổ chức có qui mô, hoạt động như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000043,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hành vi cuồng vọng"
+            },
+            {
+              "key": "B",
+              "text": "Tư tưởng cực đoạn"
+            },
+            {
+              "key": "C",
+              "text": "Hành vi mê muội"
+            },
+            {
+              "key": "D",
+              "text": "Hiện tượng ảo giác"
+            }
+          ],
+          "question": "Hiện tượng, ý thức, hành vi của những người mê tín dị đoan biểu hiện như thế nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000044,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hệ thống giáo lý"
+            },
+            {
+              "key": "B",
+              "text": "Nghi lễ ôn giáo"
+            },
+            {
+              "key": "C",
+              "text": "Tổ chức tôn giáo"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Hoạt động xã hội của tôn giáo thông qua những yếu tố nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000045,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổ chức tôn giáo"
+            },
+            {
+              "key": "B",
+              "text": "Nghi lễ tôn giáo"
+            },
+            {
+              "key": "C",
+              "text": "Cuồng tín của tín đồ"
+            },
+            {
+              "key": "D",
+              "text": "Phương án A và B"
+            }
+          ],
+          "question": "Hoạt động xã hội tôn giáo bị chi phối bởi những yếu tố nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000046,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giáo sĩ tín đồ, cơ sở vật chất tôn giáo"
+            },
+            {
+              "key": "B",
+              "text": "Quy định pháp luật về hoạt động tôn giáo"
+            },
+            {
+              "key": "C",
+              "text": "Niềm tin nơi tôn giáo"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Những yếu tố nào liên quan đến hoạt động xã hội của tôn giáo?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000047,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổ chức của tôn giáo"
+            },
+            {
+              "key": "B",
+              "text": "Sự cuồng tín của tín đồ"
+            },
+            {
+              "key": "C",
+              "text": "Hệ thống giáo lý"
+            },
+            {
+              "key": "D",
+              "text": "Phương án A và C"
+            }
+          ],
+          "question": "Hoạt động xã hội của tôn giáo không thể hoạt động khi thiếu yếu tố nào sau đây?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000048,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bài trừ"
+            },
+            {
+              "key": "B",
+              "text": "Làm giảm hoạt động mê tín dị đoan"
+            },
+            {
+              "key": "C",
+              "text": "Để hoạt động tự nhiên"
+            },
+            {
+              "key": "D",
+              "text": "Để tự tiêu tan"
+            }
+          ],
+          "question": "Theo quan điểm của Đảng nhà nước ta, hoạt động mê tín dị đoan phải được giải quyết như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000049,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tệ nạn xã hội"
+            },
+            {
+              "key": "B",
+              "text": "Buôn thần bán thánh"
+            },
+            {
+              "key": "C",
+              "text": "Mê muội mù quáng"
+            },
+            {
+              "key": "D",
+              "text": "Lừa đảo chiếm đoạt"
+            }
+          ],
+          "question": "So sánh với tôn giáo, mê tín dị đoan thực chất là hoạt động gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000050,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tất cả các phương án"
+            },
+            {
+              "key": "B",
+              "text": "Nguồn gốc kinh tế x hội"
+            },
+            {
+              "key": "C",
+              "text": "Nguồn gốc nhận thức tôn giáo"
+            },
+            {
+              "key": "D",
+              "text": "Nguồn gốc tâm lý tôn giáo"
+            }
+          ],
+          "question": "Tôn giáo được hình thành từ những yếu tố cơ bản nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000051,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nguồn gốc kinh tế x hội"
+            },
+            {
+              "key": "B",
+              "text": "Nguồn gốc từ quần chúng"
+            },
+            {
+              "key": "C",
+              "text": "Nguồn gốc từ chính trị"
+            },
+            {
+              "key": "D",
+              "text": "Nguồn gốc từ lịch sử"
+            }
+          ],
+          "question": "Một trong những nguồn gốc hình thành tôn giáo trong xã hội là yếu tố nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000052,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nguồn gốc nhận thức"
+            },
+            {
+              "key": "B",
+              "text": "Nguồn gốc chính trị"
+            },
+            {
+              "key": "C",
+              "text": "Nguồn gốc tư tưởng"
+            },
+            {
+              "key": "D",
+              "text": "Nguồn gốc đạo đức"
+            }
+          ],
+          "question": "Yếu tố nào là nguồn gốc hình thành tôn giáo trong xã hội ?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000053,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nguồn gốc tâm lý"
+            },
+            {
+              "key": "B",
+              "text": "Nguồn gốc lịch sử"
+            },
+            {
+              "key": "C",
+              "text": "Hoang đường ảo tưởng"
+            },
+            {
+              "key": "D",
+              "text": "Sức khỏe yếu đuối"
+            }
+          ],
+          "question": "Nguồn gốc nào là yếu tố hình thành tôn giáo trong xã hội ?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000054,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tất cả các phương án"
+            },
+            {
+              "key": "B",
+              "text": "Tính lịch sử"
+            },
+            {
+              "key": "C",
+              "text": "Tính quần chúng"
+            },
+            {
+              "key": "D",
+              "text": "Tính chính trị"
+            }
+          ],
+          "question": "Quá trình hoạt động của tôn giáo trong x hội được bộc lộ ra tính chất nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000055,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tính quần chúng"
+            },
+            {
+              "key": "B",
+              "text": "Tính chiến đấu"
+            },
+            {
+              "key": "C",
+              "text": "Tính phê phán cái ác"
+            },
+            {
+              "key": "D",
+              "text": "Tính kinh tế xã hội"
+            }
+          ],
+          "question": "Một trong những tính chất của tôn giáo được bộc lộ trong đời sống xã hội là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000056,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tính chính trị"
+            },
+            {
+              "key": "B",
+              "text": "Tính văn hóa x hội"
+            },
+            {
+              "key": "C",
+              "text": "Tính dân tộc"
+            },
+            {
+              "key": "D",
+              "text": "Tính giai cấp"
+            }
+          ],
+          "question": "Trong xã hội có phân chia giai cấp tôn giáo thường bộc lộ ra tính chất gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000057,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tính chất lịch sử"
+            },
+            {
+              "key": "B",
+              "text": "Tính chất địa lý"
+            },
+            {
+              "key": "C",
+              "text": "Tính x hội"
+            },
+            {
+              "key": "D",
+              "text": "Tính chất tự nhiên"
+            }
+          ],
+          "question": "Các tôn giáo thường mang tính chất nào sau đây?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000058,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tất cả các phương án"
+            },
+            {
+              "key": "B",
+              "text": "Giải quyết vấn đề tôn giáo phải gắn liền với cải tạo x hội cũ"
+            },
+            {
+              "key": "C",
+              "text": "Tôn trọng và bảo đảm quyền tự do tín ngưỡng và không tín ngưỡng"
+            },
+            {
+              "key": "D",
+              "text": "Quán triệt quan điểm lịch sử khi giải quyết vấn đề tôn giáo"
+            }
+          ],
+          "question": "Quan điểm chủ nghĩa Mác – Lênin về giải quyết vấn đề tôn giáo trong cách mạng xã hội chủ nghĩa là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 2: Một số nội dung cơ bản về dân tộc, tôn giáo, đấu tranh phòng chống các thế lực thù địch lợi dụng vấn đề dân tộc, tôn giáo chống phá cách mạng Việt Nam",
+          "id": 1790954000059,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sống tốt đời đẹp đạo"
+            },
+            {
+              "key": "B",
+              "text": "Sống đùm bọc giúp đỡ nhau"
+            },
+            {
+              "key": "C",
+              "text": "Sống tự do tín ngưỡng"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Nội dung cốt lõi trong công tác tôn giáo của Đảng là công tác vận động quần chúng như thế nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000060,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là hoạt động giữ gìn, phòng ngừa, hạn chế các tác động xấu đến môi trường; ứng phó sự cố môi trường; khắc phục ô nhiễm, suy thoái, cải thiện, phục hồi môi trường; khai thác, sử dụng hợp lý tài nguyên thiên nhiên nhằm giữ môi trường trong lành"
+            },
+            {
+              "key": "B",
+              "text": "Là hoạt động khai thác, sử dụng hợp lý tài nguyên thiên nhiên nhằm giữ môi trường trong lành."
+            },
+            {
+              "key": "C",
+              "text": "Là hoạt động khắc phục ô nhiễm, suy thoái, cải thiện, phục hồi môi trường; khai thác, sử dụng hợp lý tài nguyên thiên nhiên nhằm giữ môi trường trong lành."
+            },
+            {
+              "key": "D",
+              "text": "Là hoạt động ứng phó sự cố môi trường; khắc phục ô nhiễm, suy thoái, cải thiện, phục hồi môi trường; khai thác, sử dụng hợp lý tài nguyên thiên nhiên nhằm giữ môi trường trong lành"
+            }
+          ],
+          "question": "Bảo vệ môi trường là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000061,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cơ bản không thể tách rời."
+            },
+            {
+              "key": "B",
+              "text": "Vô cùng quan trọng."
+            },
+            {
+              "key": "C",
+              "text": "Rất quan trọng."
+            },
+            {
+              "key": "D",
+              "text": "Quan trọng."
+            }
+          ],
+          "question": "Bảo vệ môi trường là nội dung như thế nào trong đường lối, chủ trương của Đảng và Nhà nước ta?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000062,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Pháp luật về tổ chức, quản lý các hoạt động về bảo vệ môi trường."
+            },
+            {
+              "key": "B",
+              "text": "Pháp luật lấy xử lý vi phạm làm nguyên tắc chủ đạo, kết hợp với xử lý ô nhiễm, cải thiện môi trường, bảo tồn đa dạng sinh học, bảo vệ và sử dụng hợp lí tài nguyên thiên nhiên; phát huy năng lực nội sinh, đẩy mạnh hợp tác quốc tế về bảo vệ môi trường."
+            },
+            {
+              "key": "C",
+              "text": "Pháp luật hướng đến giữ gìn môi trường luôn trong lành."
+            },
+            {
+              "key": "D",
+              "text": "Pháp luật về phòng ngừa và ngặn chặn làm nguyên tắc chủ đạo, kết hợp với xử lý ô nhiễm, cải thiện môi trường, bảo tồn đa dạng sinh học, bảo vệ và sử dụng hợp lý tài nguyên thiên nhiên; phát huy năng lực nội sinh, đẩy mạnh hợp tác quốc tế về bảo vệ môi trường."
+            }
+          ],
+          "question": "Đâu là quy định của pháp luật về bảo vệ môi trường?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000063,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là hệ thống các văn bản pháp luật quy định những quy tắc xử sự do Nhà nước ban hành hoặc thừa nhận nhằm giữ gìn, phòng ngừa, hạn chế các tác động xấu đến môi trường; ứng phó sự cố môi trường; khắc phục ô nhiễm, suy thoái, cải thiện, phục hồi môi trường; khai thác, sử dụng hợp lý tài nguyên thiên nhiên nhằm giữ môi trường trong lành."
+            },
+            {
+              "key": "B",
+              "text": "Là hệ thống các văn bản pháp luật quy định những quy tắc xử sự do Nhà nước ban hành nhằm giữ gìn, phòng ngừa, hạn chế các tác động xấu đến môi trường; ứng phó sự cố môi trường; khắc phục ô nhiễm, suy thoái, cải thiện, phục hồi môi trường; khai thác, sử dụng hợp lý tài nguyên thiên nhiên nhằm giữ môi trường trong lành."
+            },
+            {
+              "key": "C",
+              "text": "Là hệ thống các văn bản pháp luật quy định những quy tắc xử sự do Nhà nước ban hành."
+            },
+            {
+              "key": "D",
+              "text": "Là hệ thống các văn bản pháp nhằm giữ môi trường trong lành."
+            }
+          ],
+          "question": "Pháp luật bảo vệ môi trường là gì?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000064,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhằm giữ môi trường luôn sạch sẽ."
+            },
+            {
+              "key": "B",
+              "text": "Nhằm giữ môi trường luôn không bị ô nhiễm."
+            },
+            {
+              "key": "C",
+              "text": "Nhằm giữ môi trường luôn Xanh – Sạch – Đẹp."
+            },
+            {
+              "key": "D",
+              "text": "Nhằm giữ môi trường trong lành."
+            }
+          ],
+          "question": "Mục đích của pháp luật về bảo vệ môi trường là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000065,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Rất quan trọng."
+            },
+            {
+              "key": "B",
+              "text": "Quan trọng."
+            },
+            {
+              "key": "C",
+              "text": "Cơ bản quan trọng."
+            },
+            {
+              "key": "D",
+              "text": "Vô cùng quan trọng."
+            }
+          ],
+          "question": "Pháp luật có vai trò như thế nào trong công tác bảo vệ môi trường?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000066,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sự “tác động quá mức” của con người đối với các thành phần cấu tạo nên môi trường tự nhiên"
+            },
+            {
+              "key": "B",
+              "text": "Do con người thờ ơ với với việc bảo vệ môi trường."
+            },
+            {
+              "key": "C",
+              "text": "Do con người khai thác quá mức nguồn tài nguyên."
+            },
+            {
+              "key": "D",
+              "text": "Do nhiều yếu tố tạo thành, cả tự nhiên và nhân tạo."
+            }
+          ],
+          "question": "Môi trường bị hủy hoại chủ yếu là do vấn đề gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000067,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Pháp luật quy định những quy tắc xử sự mà con người phải thực hiện khi khai thác và sử dụng các yếu tố (thành phần) của môi trường. Pháp luật quy định chức năng, nhiệm vụ, quyền hạn của các cơ quan, tố chức, cá nhân tham gia bảo vệ môi trường."
+            },
+            {
+              "key": "B",
+              "text": "Pháp luật quy hệ thống các quy chuẩn môi trường, tiêu chuẩn môi trường để bảo đảm môi trường. Giải quyết các tranh chấp liên quan đến bảo vệ môi trường."
+            },
+            {
+              "key": "C",
+              "text": "Phát luật quy định các chế tài hình sự, buộc các cá nhân, tố chức phải thực hiện đầy đủ các yêu cầu đòi hòi pháp luật trong việc khai thác, sử dụng các yếu tố của môi trường."
+            },
+            {
+              "key": "D",
+              "text": "Phát luật quy định các chế dân sự buộc các tố chức phải thực hiện đầy đủ các yêu cầu đòi hòi pháp luật trong việc khai thác, sử dụng các yếu tố của môi trường."
+            }
+          ],
+          "question": "Trong công tác bảo vệ môi trường pháp luật có vai trò gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000068,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "7."
+            },
+            {
+              "key": "B",
+              "text": "4."
+            },
+            {
+              "key": "C",
+              "text": "5."
+            },
+            {
+              "key": "D",
+              "text": "3"
+            }
+          ],
+          "question": "Trong công tác bảo vệ môi trường pháp luật có mấy vai trò?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000069,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Pháp luật xử lý vi phạm trong lĩnh vực bảo vệ môi trường."
+            },
+            {
+              "key": "B",
+              "text": "Pháp luật lấy xử lý vi phạm làm nguyên tắc chủ đạo, kết hợp với xử lý ô nhiễm, cải thiện môi trường, bảo tồn đa dạng sinh học, bảo vệ và sử dụng hợp lí tài nguyên thiên nhiên; phát huy năng lực nội sinh, đẩy mạnh hợp tác quốc tế về bảo vệ môi trường."
+            },
+            {
+              "key": "C",
+              "text": "Pháp luật hướng đến giữ gìn môi trường luôn trong lành."
+            },
+            {
+              "key": "D",
+              "text": "Pháp luật về phòng ngừa và ngặn chặn làm nguyên tắc chủ đạo, kết hợp với xử lý ô nhiễm, cải thiện môi trường, bảo tồn đa dạng sinh học, bảo vệ và sử dụng hợp lý tài nguyên thiên nhiên; phát huy năng lực nội sinh, đẩy mạnh hợp tác quốc tế về bảo vệ môi trường."
+            }
+          ],
+          "question": "Đâu là quy định của pháp luật về bảo vệ môi trường?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000070,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là hành vi nguy hiểm cho xã hội được quy định trong Bộ luật hình sự, do người có năng lực trách nhiệm hình sự hoặc pháp nhân thương mại thực hiện một cách cố ý hoặc vô ý xâm phạm đến các quy định của Nhà nước về bảo vệ môi trường, xâm phạm đến các thành phần của môi trường làm thay đổi trạng thái, tính chất của môi trường gây ảnh hưởng xấu tới sự tồn tại, phát triển con người và sinh vật, mà theo quy định phải bị xử lý hình sự."
+            },
+            {
+              "key": "B",
+              "text": "Là hành vi xâm phạm đến các quy định của Nhà nước về bảo vệ môi trường."
+            },
+            {
+              "key": "C",
+              "text": "Là hành vi nguy hiểm cho xã hội được quy định trong Bộ luật hình sự."
+            },
+            {
+              "key": "D",
+              "text": "Là hành vi làm thay đổi trạng thái, tính chất của môi trường gây ảnh hưởng xấu tới sự tồn tại, phát triển con người và sinh vật, mà theo quy định phải bị xử lý hình sự."
+            }
+          ],
+          "question": "Tội phạm môi trường là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000071,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là những hành vi vi phạm các quy định quản lý nhà nước về bảo vệ môi trường do các cá nhân, tố chức thực hiện một cách cố ý hoặc vô ý mà không phải là tội phạm, theo quy định phải bị xử lý vi phạm hành chính."
+            },
+            {
+              "key": "B",
+              "text": "Là những hành động vi phạm các quy định quản lý nhà nước về bảo vệ môi trường do các cá nhân, tố chức thực hiện một cách cố ý hoặc vô ý mà không phải là tội phạm, theo quy định phải bị xử lý vi phạm hành chính."
+            },
+            {
+              "key": "C",
+              "text": "Là những việc làm vi phạm các quy định quản lý nhà nước về bảo vệ môi trường do các cá nhân, tố chức thực hiện một cách cố ý hoặc vô ý mà không phải là tội phạm, theo quy định phải bị xử lý vi phạm hành chính."
+            },
+            {
+              "key": "D",
+              "text": "Là những hành vi, hành động, việc làm vi phạm các quy định quản lý nhà nước về bảo vệ môi trường do các cá nhân, tố chức thực hiện một cách cố ý hoặc vô ý mà không phải là tội phạm, theo quy định phải bị xử lý vi phạm hành chính."
+            }
+          ],
+          "question": "Vi phạm hành chính trong lĩnh vực bảo vệ môi trường là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000072,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chương 18"
+            },
+            {
+              "key": "B",
+              "text": "Chương 19"
+            },
+            {
+              "key": "C",
+              "text": "Chương 20"
+            },
+            {
+              "key": "D",
+              "text": "Chương 21"
+            }
+          ],
+          "question": "Tội phạm về môi trường được quy định tại chương mấy trong Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017)?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000073,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "10"
+            },
+            {
+              "key": "B",
+              "text": "11"
+            },
+            {
+              "key": "C",
+              "text": "9"
+            },
+            {
+              "key": "D",
+              "text": "12"
+            }
+          ],
+          "question": "Trong Chương 19, Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) Tội phạm về môi trường bao gồm mấy tội danh, được quy định từ điều nào đến điều nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000074,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Điều 242"
+            },
+            {
+              "key": "B",
+              "text": "Điều 243"
+            },
+            {
+              "key": "C",
+              "text": "Điều 244"
+            },
+            {
+              "key": "D",
+              "text": "Điều 245"
+            }
+          ],
+          "question": "Tội hủy hoại nguồn lợi thủy sản được quy định tại điều mấy trong Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017)?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000075,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Điều 243"
+            },
+            {
+              "key": "B",
+              "text": "Điều 242"
+            },
+            {
+              "key": "C",
+              "text": "Điều 244"
+            },
+            {
+              "key": "D",
+              "text": "Điều 245"
+            }
+          ],
+          "question": "Tội hủy hoại rừng được quy định tại điều mấy trong Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017)?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000076,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Điều 241"
+            },
+            {
+              "key": "B",
+              "text": "Điều 243"
+            },
+            {
+              "key": "C",
+              "text": "Điều 244"
+            },
+            {
+              "key": "D",
+              "text": "Điều 245"
+            }
+          ],
+          "question": "Tội vi phạm quy định về bảo vệ động vật nguy cấp, quý hiếm được quy định tại điều mấy trong Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017)?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000077,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các cơ quan Nhà nước có thẩm quyền ban hành nhiều chính sách ưu đãi để phát triển kinh tế mà không quan tâm đến bảo vệ môi trường."
+            },
+            {
+              "key": "B",
+              "text": "Áp lực tăng trưởng kinh tế, các cá nhân, tổ chức mới chỉ quan tâm đến lợi ích kinh tế trước mắt, chưa chú trọng đến công tác bảo vệ môi trường."
+            },
+            {
+              "key": "C",
+              "text": "Công tác quản lý nhà nước về môi trường còn hạn chế. Hệ thống văn bản pháp luật về môi trường hiện nay đang trong giai đoạn bổ sung."
+            },
+            {
+              "key": "D",
+              "text": "Áp lực tăng trưởng kinh tế, các nhà đầu tư nước ngoài chỉ quan tâm đến lợi ích kinh tế trước mắt, chưa chú trọng đến công tác bảo vệ môi trường"
+            }
+          ],
+          "question": "Đâu là nguyên nhân, điều kiện khách quan của vi phạm pháp luật về môi trường?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000078,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhận thức của một số bộ phận các cơ quan quản lý nhà nước về bảo vệ môi trường chưa cao, ý thức BVMT của các cơ quan, doanh nghiệp và công dân còn kém, chưa tự giác, vấn đề bảo vệ môi trường chưa được quan tâm chú trọng đúng mứC,"
+            },
+            {
+              "key": "B",
+              "text": "Nhận thức của một số bộ phận các cơ quan quản lý nhà nước chỉ chú trọng phát triển kinh tế chưa coi trọng công tác bảo vệ môi trường; chưa thực hiện các biện pháp thu hút đầu tư, các cam kết bảo vệ môi trường, đầu tư hệ thống hạ tầng đảm bảo cho công tác xử lý chất thải, rác thải."
+            },
+            {
+              "key": "C",
+              "text": "Các cơ quan chức năng phát huy vai trò, trách nhiệm trong phòng, chống vi phạm pháp luật về bảo vệ môi trường."
+            },
+            {
+              "key": "D",
+              "text": "Chính quyền các cấp, các ngành phải thực hiện các biện pháp thu hút đầu tư, cấp phép dự án chưa quan tâm chỉ đạo thực hiện các cam kết bảo vệ môi trường, đầu tư hệ thống hạ tầng đảm bảo cho công tác xử lý chất thải, rác thải."
+            }
+          ],
+          "question": "Đâu là nguyên nhân, điều kiện chủ quan của vi phạm pháp luật về môi trường?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000079,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chấp hành nghiêm pháp luật và tuân thủ các quy tắc, chuẩn mực xã hội."
+            },
+            {
+              "key": "B",
+              "text": "Ý thức coi thường pháp luật."
+            },
+            {
+              "key": "C",
+              "text": "Ý thức sai lệch về cách thỏa mãn nhu cầu cá nhân là yếu tố chủ quan dẫn đến các hành vi vi phạm pháp luật về bảo vệ môi trường của các đối tượng."
+            },
+            {
+              "key": "D",
+              "text": "Ý thức bảo vệ môi trường kém, chưa tuân thủ các quy tắc, chuẩn mực xã hội."
+            }
+          ],
+          "question": "Đâu là nguyên nhân thuộc về phía đối tượng vi phạm pháp luật về môi trường?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000080,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là hoạt động các cơ quan nhà nước, các tổ chức xã hội và công dân bằng việc sử dụng tống hợp các biện pháp, phương tiện nhằm ngăn chặn, hạn chế tình hình vi phạm pháp luật về bảo vệ môi trường; phát hiện, loại trừ các nguyên nhân, điều kiện của vi phạm pháp luật về bảo vệ môi trường; khi vi phạm pháp luật về bảo vệ môi trường xảy ra thì hạn chế đến mức thấp nhất hậu quả tác hại, kịp thời phát hiện, điều tra, xử lý các hành vi vi phạm pháp luật về bảo vệ môi trường."
+            },
+            {
+              "key": "B",
+              "text": "Là hoạt động ngăn chặn, hạn chế tình hình vi phạm pháp luật về bảo vệ môi trường; phát hiện, loại trừ các nguyên nhân, điều kiện của vi phạm pháp luật về bảo vệ môi trường."
+            },
+            {
+              "key": "C",
+              "text": "Là hoạt động phát hiện, loại trừ các nguyên nhân, điều kiện của vi phạm pháp luật về bảo vệ môi trường; khi vi phạm pháp luật về bảo vệ môi trường xảy ra thì hạn chế đến mức thấp nhất hậu quả tác hại, kịp thời phát hiện, điều tra, xử lý các hành vi vi phạm pháp luật về bảo vệ môi trường."
+            },
+            {
+              "key": "D",
+              "text": "Là hoạt động hạn chế đến mức thấp nhất hậu quả tác hại, kịp thời phát hiện, điều tra, xử lý các hành vi vi phạm pháp luật về bảo vệ môi trường."
+            }
+          ],
+          "question": "Phòng chống vi phạm pháp luật về bảo vệ môi trường là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000081,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "5"
+            },
+            {
+              "key": "B",
+              "text": "3"
+            },
+            {
+              "key": "C",
+              "text": "4"
+            },
+            {
+              "key": "D",
+              "text": "6"
+            }
+          ],
+          "question": "Phòng chống vi phạm pháp luật về bảo vệ môi trường có mấy đặc điểm?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000082,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ thể tiến hành tham gia phòng, chống vi phạm pháp luật về bảo vệ môi trường rất đa dạng. Căn cứ vào chức năng, nhiệm vụ, quyền hành được quy định trong các văn bản pháp luật do cơ quan nhà nước có thẩm quyền ban hành để tiến hành các hoạt động phòng ngừa cũng như điều tra, xử lý phù hợp."
+            },
+            {
+              "key": "B",
+              "text": "Chủ thể tiến hành phòng, chống vi phạm pháp luật về bảo vệ môi trường được triển khai đồng bộ, với các biện pháp điều tra, xử lý đối với các hành vi vi phạm pháp luật về bảo vệ môi trường (cả tội phạm và vi phạm hành chính)."
+            },
+            {
+              "key": "C",
+              "text": "Chủ thể tiến hành phòng, chống vi phạm pháp luật về bảo vệ môi trường không liên quan trực tiếp đến việc sử dụng các công cụ phương tiện nghiệp vụ và ứng dụng tiến bộ của khoa học công nghệ. Phòng, chống vi phạm pháp luật về bảo vệ môi trường có sự phối kết hợp chặt chẽ giữa các chủ thể tham trên cơ sở chức năng, quyền hạn được phân công."
+            },
+            {
+              "key": "D",
+              "text": "Phòng, chống vi phạm pháp luật về bảo vệ môi trường có liên quan trực tiếp đến việc sử dụng các công cụ phương tiện nghiệp vụ và ứng dụng tiến bộ của khoa học công nghệ. Phòng, chống vi phạm pháp luật về bảo vệ môi trường không sự phối kết hợp chặt chẽ giữa các chủ thể tham trên cơ sở chức năng, quyền hạn được phân công"
+            }
+          ],
+          "question": "Đặc điểm của phòng chống vi phạm pháp luật về bảo vệ môi trường là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000083,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "5"
+            },
+            {
+              "key": "B",
+              "text": "6"
+            },
+            {
+              "key": "C",
+              "text": "7"
+            },
+            {
+              "key": "D",
+              "text": "8"
+            }
+          ],
+          "question": "Phòng chống vi phạm pháp luật về bảo vệ môi trường gồm mấy nội dung?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000084,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nắm tình hình vi phạm pháp luật về bảo vệ môi trường, nghiên cứu làm rõ những vấn đề có tính quy luật trong hoạt động vi phạm pháp luật của các đối tượng. Xác định và làm rõ các nguyên nhân, điều kiện của vi phạm pháp luật về bảo vệ môi trường"
+            },
+            {
+              "key": "B",
+              "text": "Nắm tình hình vi phạm pháp luật về bảo vệ môi trường, có các giải pháp chủ động hạn chế các nguyên nhân, khắc phục các điều kiện của vi phạm pháp luật về bảo vệ môi trường. Và xử lý vi phạm pháp luật về bảo vệ môi trường."
+            },
+            {
+              "key": "C",
+              "text": "Tổ chức lực lượng tiến hành các hoạt động khắc phục các nguyên nhân, điều kiện của tội phạm về môi trường, kiểm tra, đẩy lùi tình trạng vi phạm pháp luật về bảo vệ môi trường."
+            },
+            {
+              "key": "D",
+              "text": "Nắm tình hình vi phạm pháp luật về bảo vệ môi trường, cần làm rõ những vấn đề có tính quy luật trong hoạt động vi phạm pháp luật của các đối tượng và các nguyên nhân của vi phạm pháp luật về bảo vệ môi trường"
+            }
+          ],
+          "question": "Phòng chống vi phạm pháp luật về bảo vệ môi trường gồm những nội dung nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000085,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Biện pháp tổ chức – hành chính; kinh tế; khoa học – công nghệ;"
+            },
+            {
+              "key": "B",
+              "text": "Biện pháp tuyên truyền, nhắc nhở các cá nhân tổ chức chấp hành pháp luật."
+            },
+            {
+              "key": "C",
+              "text": "Biện pháp pháp ngăn ngừa các hành vi, vi phạm luật khoa học và công nghệ môi trường."
+            },
+            {
+              "key": "D",
+              "text": "Biện pháp tuyên truyền qua internet để người dân không vi phạm pháp luật về bảo vệ môi trường."
+            }
+          ],
+          "question": "Trong phòng, chống vi phạm pháp luật về bảo vệ môi trường, đâu là biện pháp phòng, chống chung?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000086,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "4"
+            },
+            {
+              "key": "B",
+              "text": "5"
+            },
+            {
+              "key": "C",
+              "text": "6"
+            },
+            {
+              "key": "D",
+              "text": "7"
+            }
+          ],
+          "question": "Phòng, chống vi phạm pháp luật về bảo vệ môi trường gồm mấy biện pháp chung?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000087,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "4"
+            },
+            {
+              "key": "B",
+              "text": "5"
+            },
+            {
+              "key": "C",
+              "text": "6"
+            },
+            {
+              "key": "D",
+              "text": "7"
+            }
+          ],
+          "question": "Phòng, chống vi phạm pháp luật về bảo vệ môi trường gồm mấy biện pháp cụ thể?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000088,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảng lãnh đạo Nhà nước, các cơ quan, tổ chức trong hệ thống chính trị và quần chúng nhân dân tham gia vào phòng, chống vi phạm pháp luật về bảo vệ môi trường thông qua việc hoạch định các chủ trương, chính sách, ban hành các văn bản hướng dẫn, nghị quyết, chỉ thị."
+            },
+            {
+              "key": "B",
+              "text": "Quốc hội, Hội đồng nhân dân các cấp; Bộ Tư pháp; Bộ Tài chính; các tổ chức xã hội, đoàn thể quần chúng và công dân."
+            },
+            {
+              "key": "C",
+              "text": "Hộ gia đình và công dân; các cơ quan bảo vệ pháp luật (Công an, Viện kiểm sát, Tòa án, hội cụ chiến binh, hội phụ nữ, khu phố ….)."
+            },
+            {
+              "key": "D",
+              "text": "Chính phủ và Ủy bân nhân dân các cấp; Bộ Tài nguyên môi trường; Bộ Xây dựng; Bộ Y tế; Bộ Thông tin truyền thông; các tổ chức xã hội, đoàn thể quần chúng và công dân."
+            }
+          ],
+          "question": "Tham gia phòng chống vi phạm pháp luật về bảo vệ môi trường gồm những chủ thể nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 3: Phòng, chống vi phạm pháp luật về bảo vệ môi trường",
+          "id": 1790954000089,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nắm vững các quy định của pháp luật phòng, chống vi phạm pháp luật về bảo vệ môi trường. Xây dựng ý thức trách nhiệm trong các hoạt động bảo vệ môi trường như sử dụng tiết kiệm, có hiệu quả các nguồn tài nguyên (nước, năng lượng,.);"
+            },
+            {
+              "key": "B",
+              "text": "Tham gia các phong trào về bảo vệ môi trường, hạn chế sử dụng các phương tiện giao thông cá nhân để bảo vệ môi trường không khí;"
+            },
+            {
+              "key": "C",
+              "text": "ý thức thức trách nhiệm với môi trường như sống thân thiện với môi trường xung quanh; tích cực trồng cây xanh; tham gia thu gom rác thải tại nơi sinh sống và học tập."
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng ý thức trách nhiệm trong các hoạt động bảo vệ môi trường như sử dụng tiết kiệm, có hiệu quả các nguồn tài nguyên."
+            }
+          ],
+          "question": "Sinh viên có trách nhiệm như thế nào trong tham gia phòng chống vi phạm pháp luật về bảo vệ môi trường?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000090,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhà trường."
+            },
+            {
+              "key": "B",
+              "text": "Sinh viên."
+            },
+            {
+              "key": "C",
+              "text": "Nhà trường và sinh viên."
+            },
+            {
+              "key": "D",
+              "text": "Không phải trách nhiệm của Nhà trường và sinh viên."
+            }
+          ],
+          "question": "Phòng, chống vi phạm pháp luật về bảo đảm trật tự, an toàn giao thông trong nhà trường là trách nhiệm của?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000091,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chủ thể; Khách thể; Mặt khách quan, mặt chủ quan của các tội phạm xâm phạm an toàn giao thông."
+            },
+            {
+              "key": "B",
+              "text": "Mặt khách quan, mặt chủ quan của các tội phạm xâm phạm an toàn giao thông."
+            },
+            {
+              "key": "C",
+              "text": "Chủ thể của các tội phạm xâm phạm an toàn giao thông."
+            },
+            {
+              "key": "D",
+              "text": "Chủ thể; Mặt khách quan của các tội phạm  xâm phạm an toàn giao thông."
+            }
+          ],
+          "question": "Các dấu hiệu pháp lý của tội phạm an toàn giao thông:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000092,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "2"
+            },
+            {
+              "key": "B",
+              "text": "3"
+            },
+            {
+              "key": "C",
+              "text": "4"
+            },
+            {
+              "key": "D",
+              "text": "5"
+            }
+          ],
+          "question": "Có mấy dạng vi phạm pháp luật về bảo đảm trật tự, an toàn giao  thông?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000093,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là hành vi trái pháp luật, do cá nhân, tổ chức có năng lực trách nhiệm hành chính thực hiện với lỗi cố ý hoặc vô ý, xâm phạm đến hoạt động bảo đảm trật tự, an toàn giao thông và theo quy định của pháp luật phải chịu trách nhiệm hành chính."
+            },
+            {
+              "key": "B",
+              "text": "Là hành vi trái pháp luật, do cá nhân có năng lực trách nhiệm hành chính thực hiện với lỗi cố ý hoặc vô ý, xâm phạm đến hoạt động an toàn giao thông và theo quy định của pháp luật phải chịu trách nhiệm hành chính."
+            },
+            {
+              "key": "C",
+              "text": "Là hành vi do cá nhân có năng lực trách nhiệm hành chính thực hiện với lỗi cố ý, xâm phạm đến hoạt động bảo đảm trật tự, an toàn giao thông và theo quy định của pháp luật phải chịu trách nhiệm hành chính."
+            },
+            {
+              "key": "D",
+              "text": "Là hành vi trái pháp luật, do cá nhân, tổ chức thực hiện với lỗi cố ý hoặc vô ý, xâm phạm đến hoạt động bảo đảm trật tự, an toàn giao thông phải chịu trách nhiệm hành chính."
+            }
+          ],
+          "question": "Vi phạm hành chính xảy ra trong lĩnh vực bảo đảm trật tự, an toàn  giao thông là?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000094,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Có giấy Chứng minh nhân dân."
+            },
+            {
+              "key": "B",
+              "text": "Đủ tuổi theo qui định của pháp luật."
+            },
+            {
+              "key": "C",
+              "text": "Đã học lái xe"
+            },
+            {
+              "key": "D",
+              "text": "Có sức khỏe, đủ tuổi, có giấy phép lái xe theo qui định của Luật giao thông đường bộ, bảo đảm điều khiển xe an toàn."
+            }
+          ],
+          "question": "Người điều khiển phương tiện tham gia giao thông phải có điều kiện nào sau đây?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000095,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hoạt động của Lực lượng vũ trang có thẩm quyền."
+            },
+            {
+              "key": "B",
+              "text": "Hoạt động toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Hoạt động của các cơ quan quản lý nhà nước có thẩm quyền."
+            },
+            {
+              "key": "D",
+              "text": "Hoạt động của các cơ chức năng có thẩm quyền theo qui định."
+            }
+          ],
+          "question": "Đấu tranh chống vi phạm pháp luật về bảo đảm trật tự, an toàn giao thông là hoạt động của tổ chức nào sau đây?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000096,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hệ thống pháp luật hành chính của Đảng."
+            },
+            {
+              "key": "B",
+              "text": "Hệ thống pháp luật hành chính Nhà nướC,"
+            },
+            {
+              "key": "C",
+              "text": "Hệ thống pháp luật hành chính của Quốc hội."
+            },
+            {
+              "key": "D",
+              "text": "Hệ thống pháp luật của Bộ Công An"
+            }
+          ],
+          "question": "Pháp luật về bảo đảm trật tự, an toàn giao thông là một bộ phận  của?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000097,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là vận tốc lớn nhất trên một tuyến đường, đoạn đường hoặc làn đường."
+            },
+            {
+              "key": "B",
+              "text": "Là vận tốc lớn nhất trên cùng một tuyến đường, đoạn đường hoặc làn đường."
+            },
+            {
+              "key": "C",
+              "text": "Là tốc độ lớn nhất trên một tuyến đường, đoạn đường hoặc làn đường."
+            },
+            {
+              "key": "D",
+              "text": "Là tốc độ lớn nhất trên cùng một tuyến đường, đoạn đường hoặc làn đường."
+            }
+          ],
+          "question": "Tốc độ tối đa khi tham gia giao thông đường bộ là?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000098,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phát hiện những hành vi vi phạm pháp luật về bảo đảm trật tự, an toàn giao  thông do cá nhân, tổ chức thực hiện."
+            },
+            {
+              "key": "B",
+              "text": "Góp phần áp dụng các biện pháp xử lý tương ứng với mức độ của các hành vi  vi phạm đó, góp phần bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "C",
+              "text": "Một nhiệm vụ của công tác bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "D",
+              "text": "Tuyên truyền những hành vi vi phạm pháp luật về bảo đảm trật tự, an toàn  giao thông do cá nhân, tổ chức thực hiện."
+            }
+          ],
+          "question": "Nội dung của đấu tranh chống vi phạm pháp luật về bảo đảm trật tự, an toàn giao thông là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000099,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Một bộ phận bao gồm hệ thống các văn bản quy phạm pháp luật do Nhà nước ban hành."
+            },
+            {
+              "key": "B",
+              "text": "Một bộ phận của hệ thống pháp luật bao gồm hệ thống các văn bản quy phạm pháp luật do Nhà nước ban hành."
+            },
+            {
+              "key": "C",
+              "text": "Một bộ phận của hệ thống pháp luật hành chính nhà nước, bao gồm hệ thống các văn bản quy phạm pháp luật do Nhà nước ban hành."
+            },
+            {
+              "key": "D",
+              "text": "Một bộ phận của hệ thống hành chính nhà nước, bao gồm hệ thống các văn bản quy phạm pháp luật do Nhà nước ban hành"
+            }
+          ],
+          "question": "Pháp luật về bảo đảm trật tự, an toàn giao thông là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000100,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người từ đủ 14 tuổi."
+            },
+            {
+              "key": "B",
+              "text": "Người từ đủ 16 tuổi."
+            },
+            {
+              "key": "C",
+              "text": "Người từ đủ 18 tuổi."
+            },
+            {
+              "key": "D",
+              "text": "Người từ đủ 17 tuổi."
+            }
+          ],
+          "question": "Người từ đủ bao nhiêu tuổi thì được điều khiển xe mô tô, xe gắn máy có dung tích xilanh từ 50cm3 trở lên và các loại xe có kết cấu tương tự, xe có trọng tải dưới 3.500kg và xe ô tô chở người đến 9 chỗ?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000101,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Điều chỉnh các quan hệ xã hội phát sinh trong quá trình tổ chức, thực hiện  hoạt động chấp hành của các cơ quan quản lý nhà nước, tổ chức xã hội và công dân trên lĩnh vực bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "B",
+              "text": "Điều chỉnh các quan hệ xã hội phát sinh trong quá trình thực hiện hoạt động điều hành của các cơ quan quản lý nhà nước, tổ chức xã hội và công dân trên  lĩnh vực bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "C",
+              "text": "Điều chỉnh các quan hệ xã hội phát sinh trong quá trình tổ chức, thực hiện  hoạt động chấp hành và điều hành của các cơ quan quản lý nhà nước, tổ chức xã hội và công dân trên lĩnh vực bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "D",
+              "text": "Điều chỉnh các quan hệ xã hội phát sinh trong quá trình tổ chức, thực hiện của các cơ quan quản lý nhà nước, công dân trên lĩnh vực bảo đảm trật tự, an toàn giao thông."
+            }
+          ],
+          "question": "Hệ thống các văn bản quy phạm pháp luật về bảo đảm trật tự, an  toàn giao thông ban hành nhằm?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000102,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngày 25 tháng 12 năm 2019"
+            },
+            {
+              "key": "B",
+              "text": "Ngày 01 tháng 01 năm 2020"
+            },
+            {
+              "key": "C",
+              "text": "Ngày 30 tháng 12 năm 2020"
+            },
+            {
+              "key": "D",
+              "text": "Ngày 30 tháng 12 năm 2019"
+            }
+          ],
+          "question": "Nghị định 100/2019/NĐ-CP về quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt có hiệu lực từ ngày, tháng, năm nào?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000103,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Công cụ pháp lý quan trọng để thực hiện chức năng quản lý nhà nước về bảo đảm trật tự an toàn giao thông, trật tự an toàn xã hội."
+            },
+            {
+              "key": "B",
+              "text": "Cơ sở, công cụ pháp lý quan trọng để thực hiện chức năng quản lý nhà nước về bảo đảm trật tự an toàn giao thông, trật tự an toàn xã hội."
+            },
+            {
+              "key": "C",
+              "text": "Cơ sở, công cụ pháp lý quan trọng để thực hiện chức năng nhà nước về bảo đảm trật tự an toàn giao thông."
+            },
+            {
+              "key": "D",
+              "text": "Công cụ pháp lý để thực hiện chức năng quản lý nhà nước về bảo đảm trật tự an toàn giao thông."
+            }
+          ],
+          "question": "Pháp luật về bảo đảm trật tự, an toàn giao thông là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000104,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Pháp luật về bảo đảm trật tự, an toàn giao thông là ý chí của Nhà nước để chỉ đạo và tổ chức thực hiện bảo đảm trật tự, an toàn giao thông"
+            },
+            {
+              "key": "B",
+              "text": "Pháp luật về bảo đảm trật tự, an toàn giao thông là ý chí để chỉ đạo và tổ chức thực hiện bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "C",
+              "text": "Pháp luật về bảo đảm trật tự, an toàn giao thông là ý chí của Bộ công an để chỉ đạo tổ chức thực hiện bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "D",
+              "text": "Pháp luật về bảo đảm trật tự, an toàn giao thông là ý chí của toàn dân để chỉ đạo và tổ chức thực hiện bảo đảm trật tự, an toàn giao thông."
+            }
+          ],
+          "question": "Vai trò của pháp luật về bảo đảm trật tự, an toàn giao thông là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000105,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đảng Cộng sản Việt Nam, Quốc hội, Chính phủ, Hội đồng nhân dân các cấp và Ủy ban nhân dân các cấp."
+            },
+            {
+              "key": "B",
+              "text": "Quốc hội, Hội đồng nhân dân các cấp."
+            },
+            {
+              "key": "C",
+              "text": "Chính phủ và Ủy ban nhân dân các cấp."
+            },
+            {
+              "key": "D",
+              "text": "Đảng Cộng sản Việt Nam, Quốc hội"
+            }
+          ],
+          "question": "Tổ chức nào là chủ thể trong thực hiện phòng, chống vi phạm pháp luật về bảo đảm trật tự, an toàn giao thông?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000106,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Năm 2008"
+            },
+            {
+              "key": "B",
+              "text": "Năm 2009"
+            },
+            {
+              "key": "C",
+              "text": "Năm 2010"
+            },
+            {
+              "key": "D",
+              "text": "Năm 2011"
+            }
+          ],
+          "question": "Luật giao thông đường bộ có hiệu lực từ năm nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000107,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hoạt động của các cơ quan Nhà nước; các tổ chức xã hội và công dân."
+            },
+            {
+              "key": "B",
+              "text": "Hoạt động của các tổ chức xã hội và công dân."
+            },
+            {
+              "key": "C",
+              "text": "Hoạt động của công dân."
+            },
+            {
+              "key": "D",
+              "text": "Hoạt động của các cơ quan Nhà nước; các tổ chức xã hội"
+            }
+          ],
+          "question": "Phòng ngừa vi phạm pháp luật về bảo đảm trật tự, an toàn giao  thông là hoạt động của tổ chức nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000108,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Chở người bệnh đi cấp cứu, áp giải người có hành vi vi phạm pháp luật, chở trẻ em dưới 14 tuổi."
+            },
+            {
+              "key": "B",
+              "text": "Chở người bệnh đi cấp cứu, áp giải người có hành vi vi phạm pháp luật"
+            },
+            {
+              "key": "C",
+              "text": "Áp giải người có hành vi vi phạm pháp luật, chở trẻ em dưới 14 tuổi."
+            },
+            {
+              "key": "D",
+              "text": "Chở người bệnh đi cấp cứu, trẻ em dưới 14 tuổi."
+            }
+          ],
+          "question": "Người điều khiển xe máy chỉ được chở 2 người trong trường hợp nào sau đây?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000109,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người chạy, người được chở trên phương tiện tham gia giao thông đường bộ; người điều khiển, dẫn dắt súc vật; người đi bộ trên đường bộ."
+            },
+            {
+              "key": "B",
+              "text": "Người điều khiển, người được chở trên phương tiện đường bộ; người điều khiển, dẫn dắt súc vật; người đi bộ trên đường bộ"
+            },
+            {
+              "key": "C",
+              "text": "Người điều khiển, người được chở trên phương tiện tham gia giao thông đường bộ; người điều khiển, dẫn dắt súc vật; người đi bộ trên đường bộ."
+            },
+            {
+              "key": "D",
+              "text": "Người được chở trên phương tiện tham gia giao thông đường bộ; người điều khiển, dẫn dắt súc vật; người đi bộ trên đường bộ."
+            }
+          ],
+          "question": "Người tham gia giao thông đường bộ gồm những người nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000110,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các tổ chức xã hội và tổ chức quần chúng tự quản; cơ quan quản lý kinh tế, giao thông, văn hóa, giáo dục, dịch vụ, du lịch; công dân."
+            },
+            {
+              "key": "B",
+              "text": "Các cơ quan quản lý kinh tế, giao thông, văn hóa, giáo dục, dịch vụ, du lịch."
+            },
+            {
+              "key": "C",
+              "text": "Cơ quan quản lý giao thông, văn hóa, giáo dục, du lịch; công dân."
+            },
+            {
+              "key": "D",
+              "text": "Các tổ chức xã hội và tổ chức quần chúng tự quản; cơ quan quản lý kinh tế, giao thông."
+            }
+          ],
+          "question": "Tổ chức nào sau đây là chủ thể trong thực hiện phòng, chống vi phạm pháp luật về bảo đảm trật tự, an toàn giao thông?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000111,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngày 22/11/2014"
+            },
+            {
+              "key": "B",
+              "text": "Ngày 21/11/2014"
+            },
+            {
+              "key": "C",
+              "text": "Ngày 21/11/2015"
+            },
+            {
+              "key": "D",
+              "text": "Ngày 25/12/2015"
+            }
+          ],
+          "question": "Luật sửa đổi, bổ sung một số điều của Luật hàng không dân dụng Việt Nam được Quốc hội khóa XIII thông qua ngày, tháng, năm nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000112,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Là hành vi nguy hiểm cho xã hội được quy định trong Bộ luật Hình sự, do người có năng lực trách nhiệm hình sự thực hiện một cách cố ý hoặc vô ý, xâm phạm đến lĩnh vực trật tự, an toàn giao thông"
+            },
+            {
+              "key": "B",
+              "text": "Do người có năng lực trách nhiệm hình sự và đủ độ tuổi chịu trách nhiệm hình sự thực hiện một cách cố ý hoặc vô ý."
+            },
+            {
+              "key": "C",
+              "text": "Xâm phạm vào những quy định của Nhà nước về an toàn giao thông mà theo quy định của Bộ Luật hình sự phải bị xử lý hình sự."
+            },
+            {
+              "key": "D",
+              "text": "Do người có năng lực trách nhiệm hình sự thực hiện một cách cố ý hoặc vô ý, xâm phạm đến lĩnh vực trật tự, an toàn giao thông"
+            }
+          ],
+          "question": "Các tội phạm xâm phạm an toàn giao thông là?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000113,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngày 22/11/2014"
+            },
+            {
+              "key": "B",
+              "text": "Ngày 21/11/2014"
+            },
+            {
+              "key": "C",
+              "text": "Ngày 21/11/2015"
+            },
+            {
+              "key": "D",
+              "text": "Ngày 17/06/2014"
+            }
+          ],
+          "question": "Luật sửa đổi, bổ sung một số điều của Luật giao thông đường thủy nội địa được Quốc hội khóa XIII thông qua ngày, tháng, năm nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000114,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hành vi đó theo quy định của pháp luật phải bị xử phạt vi phạm hành chính."
+            },
+            {
+              "key": "B",
+              "text": "Hành vi đó là hành vi có lỗi nhưng do nguyên nhân khách quan"
+            },
+            {
+              "key": "C",
+              "text": "Hành vi đó là hành vi có lỗi nhưng không gây hậu quả nghiêm trọng"
+            },
+            {
+              "key": "D",
+              "text": "Hành vi đó là hành vi có lỗi nhưng chưa đến mức phải bị xử phạt vi phạm hành sự."
+            }
+          ],
+          "question": "Dấu hiệu của vi phạm hành chính trong bảo đảm trật tự, an toàn giao thông?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000115,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Năm 2007"
+            },
+            {
+              "key": "B",
+              "text": "Năm 2008"
+            },
+            {
+              "key": "C",
+              "text": "Năm 2010"
+            },
+            {
+              "key": "D",
+              "text": "Năm 2011"
+            }
+          ],
+          "question": "Luật giao thông đường bộ được Quốc hội khóa XII thông qua năm nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000116,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tính có lỗi, tính nguy hiểm cho xã hội, tính trái pháp luật về bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "B",
+              "text": "Tính trái pháp luật về bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "C",
+              "text": "Tính có lỗi, tính trái pháp luật về bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "D",
+              "text": "Tính có lỗi, tính nguy hiểm cho xã hội"
+            }
+          ],
+          "question": "Các dấu hiệu cơ bản của vi phạm hành chính xảy ra trong bảo đảm trật tự, an toàn giao thông?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000117,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngày 25 tháng 12 năm 2019"
+            },
+            {
+              "key": "B",
+              "text": "Ngày 30 tháng 12 năm 2020"
+            },
+            {
+              "key": "C",
+              "text": "Ngày 30 tháng 12 năm 2018"
+            },
+            {
+              "key": "D",
+              "text": "Ngày 30 tháng 12 năm 2019"
+            }
+          ],
+          "question": "Nghị định 100/2019/NĐ-CP về quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt được Chính phủ ban hành ngày, tháng, năm nào?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000118,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tích cực nghiên cứu, đổi mới nội dung, hình thức tuyên truyền, phổ biến giáo dục pháp luật hiệu quả, đa dạng, thiết thực, phù hợp với từng đối tượng, địa bàn, cần tập trung vào các đối tượng học sinh, thiếu niên, thanh niên"
+            },
+            {
+              "key": "B",
+              "text": "Tăng nặng mức xử phạt hành chính đối với những người vi phạm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "C",
+              "text": "Hạn chế việc bán các loại xe phân khối lớn, nâng cao quy định về cấp giấy phép lái xe."
+            },
+            {
+              "key": "D",
+              "text": "Xây dựng lại các quy định chế tài đối với người điều khiển phương tiện tham gia giao thông."
+            }
+          ],
+          "question": "Một trong những giải pháp đối với cơ quan, tổ chức trong phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 4: Phòng, chống vi phạm pháp luật về bảo đảm trật tự an toàn giao thông",
+          "id": 1790954000119,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tham mưu, đề xuất với các tổ chức xây dựng và hoàn thiện hệ thống các văn  bản pháp luật phục vụ phòng, chống vi phạm pháp luật về bảo đảm trật tự, an  toàn giao thông."
+            },
+            {
+              "key": "B",
+              "text": "Tham mưu, đề xuất với Nhà nước xây dựng và hoàn thiện hệ thống các văn  bản pháp luật phục vụ phòng, chống vi phạm pháp luật về bảo đảm trật tự, an toàn giao thông."
+            },
+            {
+              "key": "C",
+              "text": "Tham mưu cho Công an đề ra chủ trương, biện pháp phòng, chống vi phạm pháp luật về bảo đảm trật tự, an toàn giao thông phù hợp với điều kiện thực tế ở từng địa phương cụ thể."
+            },
+            {
+              "key": "D",
+              "text": "Tham mưu cho Quân đội đề ra chủ trương, biện pháp phòng, chống vi phạm pháp luật về bảo đảm trật tự, an toàn giao thông phù hợp."
+            }
+          ],
+          "question": "Nội dung biện pháp phòng, chống vi phạm pháp luật về bảo đảm trật tự, an toàn giao thông là gì?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000120,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Toàn bộ những phẩm chất mà mỗi con người có được"
+            },
+            {
+              "key": "B",
+              "text": "Giá trị làm người của mỗi con người"
+            },
+            {
+              "key": "C",
+              "text": "Toàn bộ những phẩm chất mà mỗi con người có được, hay nói cách khác, nhân phẩm là giá trị làm người của mỗi con người"
+            },
+            {
+              "key": "D",
+              "text": "Một trong số những phẩm chất mà mỗi con người có được, hay nói cách khác, nhân phẩm là giá trị làm người của mỗi con người"
+            }
+          ],
+          "question": "Nhân phẩm là?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000121,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người có lương tâm, có nhu cầu vật chất"
+            },
+            {
+              "key": "B",
+              "text": "Người có tinh thần lành mạnh"
+            },
+            {
+              "key": "C",
+              "text": "Người luôn thực hiện tốt các nghĩa vụ đạo đức đối với xã hội và người khác"
+            },
+            {
+              "key": "D",
+              "text": "Người có lương tâm, có nhu cầu vật chất và tinh thần lành mạnh, luôn thực hiện tốt các nghĩa vụ đạo đức đối với xã hội và người khác, biết tôn trọng các quy tắc, chuẩn mực đạo đức tiến bộ"
+            }
+          ],
+          "question": "Người có nhân phẩm là?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000122,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đánh giá cao và được kính trọng"
+            },
+            {
+              "key": "B",
+              "text": "Nể nang và tôn trọng"
+            },
+            {
+              "key": "C",
+              "text": "Đánh giá cao và được tôn thờ"
+            },
+            {
+              "key": "D",
+              "text": "Nể nang và kính trọng"
+            }
+          ],
+          "question": "Người có nhân phẩm được xã hội?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000123,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sự đánh giá cao của dư luận xã hội đối với mọi người dựa trên các giá trị về tinh thần, đạo đức của người đó"
+            },
+            {
+              "key": "B",
+              "text": "Sự coi trọng, đánh giá cao của dư luận xã hội đối với một người dựa trên các giá trị tinh thần, đạo đức của người đó"
+            },
+            {
+              "key": "C",
+              "text": "Sự coi trọng của dư luận xã hội đối với một người dựa trên các giá trị tinh thần, đạo đức của người đó"
+            },
+            {
+              "key": "D",
+              "text": "Sự đánh giá công bằng của dư luận xã hội đối với một người dựa trên các giá trị về tinh thần, đạo đức của người đó"
+            }
+          ],
+          "question": "Danh dự là?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000124,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Những cống hiến của mọi người đối với xã hội và con người"
+            },
+            {
+              "key": "B",
+              "text": "Những việc làm ý nghĩa đối với xã hội, với người khác"
+            },
+            {
+              "key": "C",
+              "text": "Những cống hiến thực tế của con người đối với xã hội, với người khác"
+            },
+            {
+              "key": "D",
+              "text": "Những việc làm thiết thực đối với xã hội, với người khác"
+            }
+          ],
+          "question": "Danh dự có cơ sở từ?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000125,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các tội phạm xâm phạm đến quyền được bảo hộ về nhân phẩm, danh dự của con người"
+            },
+            {
+              "key": "B",
+              "text": "Các tội phạm xâm phạm đến quyền tự do của con người"
+            },
+            {
+              "key": "C",
+              "text": "Các tội phạm xâm phạm đến quyền tự do và lợi ích của con người"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các loại tội phạm"
+            }
+          ],
+          "question": "Khách thể của các tội xâm phạm nhân phẩm, danh dự của con người?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000126,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Những hành vi nguy hiểm cho xã hội (hành động)"
+            },
+            {
+              "key": "B",
+              "text": "Những hành vi nguy hiểm cho xã hội (hành động hoặc không hành động)"
+            },
+            {
+              "key": "C",
+              "text": "Những hành vi nguy hiểm cho xã hội (không hành động)"
+            },
+            {
+              "key": "D",
+              "text": "Những hành vi nguy hiểm cho xã hội (hành động hoặc không hành động) xâm phạm trực tiếp tới nhân phẩm, danh dự của con người"
+            }
+          ],
+          "question": "Mặt khách quan của các tội xâm phạm nhân phẩm, danh dự của con người thể hiện ở?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000127,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tội hiếp dâm; tội cưỡng dâm"
+            },
+            {
+              "key": "B",
+              "text": "Tội giao cấu hoặc thực hiện hành vi quan hệ tình dục khác với người từ đủ 13 tuổi đến dưới 16 tuổi"
+            },
+            {
+              "key": "C",
+              "text": "Tội sử dụng người dưới 16 tuổi vào mục đích khiêu dâm"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án trên"
+            }
+          ],
+          "question": "Các tội xâm phạm tình dục bao gồm?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000128,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lời nói, cử chỉ"
+            },
+            {
+              "key": "B",
+              "text": "Lời nói, cử chỉ, hành vi phát tán"
+            },
+            {
+              "key": "C",
+              "text": "Hành động trái pháp luật"
+            },
+            {
+              "key": "D",
+              "text": "Hành vi phát tán"
+            }
+          ],
+          "question": "Đối với hành vi xâm phạm nhân phẩm, danh dự của  con người thường được thể hiện bằng?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000129,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lương tâm trong sáng, nhu cầu vật chất và tinh thần lành mạnh"
+            },
+            {
+              "key": "B",
+              "text": "Thực hiện tốt nghĩa vụ đạo đức, thực hiện tốt chuẩn mực đạo đức"
+            },
+            {
+              "key": "C",
+              "text": "Lương tâm trong sáng, nhu cầu vật chất và tinh thần lành mạnh, thực hiện tốt nghĩa vụ đạo đức, thực hiện tốt chuẩn mực đạo đức, tôn trọng nhân phẩm của chính mình cũng như của mọi người xung quanh"
+            },
+            {
+              "key": "D",
+              "text": "Cả A và B"
+            }
+          ],
+          "question": "Để trở thành người có nhân phẩm, con người cần phải có?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000130,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Những cống hiến thực tế của con người đối với người khác"
+            },
+            {
+              "key": "B",
+              "text": "Những cống hiến thực tế của con người đối với xã hội, với người khác"
+            },
+            {
+              "key": "C",
+              "text": "Hành động của mọi người"
+            },
+            {
+              "key": "D",
+              "text": "Những cống hiến thực tế của con người đối với xã hội"
+            }
+          ],
+          "question": "Danh dự có cơ sở từ?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000131,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tội làm nhục người khác"
+            },
+            {
+              "key": "B",
+              "text": "Tội vu khống; tội hành hạ người khác"
+            },
+            {
+              "key": "C",
+              "text": "Tội lăng mạ, sỉ nhục người khác"
+            },
+            {
+              "key": "D",
+              "text": "Cả A và B"
+            }
+          ],
+          "question": "Các tội làm nhục người khác?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000132,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ luật hình sự năm 2015, sửa đổi, bổ sung năm 2017"
+            },
+            {
+              "key": "B",
+              "text": "Bộ luật hình sự năm 2016, sửa đổi, bổ sung năm 2017"
+            },
+            {
+              "key": "C",
+              "text": "Bộ luật hình sự năm 2015, sửa đổi, bổ sung năm 2016"
+            },
+            {
+              "key": "D",
+              "text": "Bộ luật hình sự năm 2017, sửa đổi, bổ sung năm 2018"
+            }
+          ],
+          "question": "Bộ luật hình sự hiện hành của nước cộng hòa xhcn việt nam là?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000133,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tội phạm hình sự"
+            },
+            {
+              "key": "B",
+              "text": "Tội phạm"
+            },
+            {
+              "key": "C",
+              "text": "Tội phạm và hình phạt"
+            },
+            {
+              "key": "D",
+              "text": "Các loại tội phạm"
+            }
+          ],
+          "question": "Bộ luật hình sự quy định về?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000134,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ luật hình sự bao gồm hệ thống pháp luật"
+            },
+            {
+              "key": "B",
+              "text": "Bộ luật hình sự bao gồm hệ thống quy phạm pháp luật điều chỉnh các quan hệ xã hội liên quan đến nhà nước và người phạm tội"
+            },
+            {
+              "key": "C",
+              "text": "Bộ luật hình sự bao gồm hệ thống điều chỉnh các quan hệ xã hội liên quan đến nhà nước"
+            },
+            {
+              "key": "D",
+              "text": "Bộ luật hình sự bao gồm hệ thống quy phạm pháp luật điều chỉnh các quan hệ xã hội liên quan đến người phạm tội"
+            }
+          ],
+          "question": "Nội dung nào thể hiện đặc trưng của bộ luật hình sự?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000135,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ luật hình sự bảo vệ các quan hệ xã hội, trừng trị các hành vi xâm hại các quan hệ xã hội đó"
+            },
+            {
+              "key": "B",
+              "text": "Bộ luật hình sự bảo vệ các quan hệ cá nhân được các luật khác thiết lập, thông qua việc trừng trị các hành vi liên quan đến các quan hệ xã hội đó"
+            },
+            {
+              "key": "C",
+              "text": "Bộ luật hình sự bảo vệ các quan hệ xã hội được các luật khác bảo hộ, trừng phạt các hành vi xâm hại các quan hệ xã hội đó"
+            },
+            {
+              "key": "D",
+              "text": "Bộ luật hình sự bảo vệ các quan hệ xã hội được các luật khác thiết lập, thông qua việc trừng trị các hành vi xâm hại các quan hệ xã hội đó"
+            }
+          ],
+          "question": "Nội dung nào thể hiện vai trò của bộ luật hình sự?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000136,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giáo dục mọi người ý thức tuân theo pháp luật, phòng ngừa và đấu tranh phòng, chống tội phạm"
+            },
+            {
+              "key": "B",
+              "text": "Giáo dục mọi người ý thức tốt và đấu tranh chống tội phạm"
+            },
+            {
+              "key": "C",
+              "text": "Giáo dục mọi người ý thức, phòng ngừa và chống tội phạm"
+            },
+            {
+              "key": "D",
+              "text": "Giáo dục mọi người ý thức tuân theo pháp luật"
+            }
+          ],
+          "question": "Nội dung nào thể hiện nhiệm vụ của bộ luật hình sự?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000137,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhiệm vụ của blhs"
+            },
+            {
+              "key": "B",
+              "text": "Khái niệm của blhs"
+            },
+            {
+              "key": "C",
+              "text": "Vai trò của blhs"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả phương án trên đều sai"
+            }
+          ],
+          "question": "“Bộ luật hình sự là công cụ sắc bén, hữu hiệu để đấu tranh phòng, chống tội phạm\" là?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000138,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phẩm giá, giá trị"
+            },
+            {
+              "key": "B",
+              "text": "Sự tôn trọng"
+            },
+            {
+              "key": "C",
+              "text": "Tình cảm yêu mến của những người xung quanh, của xã hội đối với người đó"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án trên"
+            }
+          ],
+          "question": "Nhân phẩm, danh dự của con người là những yêu tố về tinh thần, bao gồm?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000139,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Làm cho người đó bị xúc phạm, tổn thương về tinh thần và xấu hổ đối với những người xung quanh"
+            },
+            {
+              "key": "B",
+              "text": "Làm cho người đó bị xúc phạm, tổn thương"
+            },
+            {
+              "key": "C",
+              "text": "Làm cho người đó bị tổn thương về tinh thần và xấu hổ đối với những người xung quanh"
+            },
+            {
+              "key": "D",
+              "text": "Làm cho người đó bị xúc phạm nặng nề về tinh thần và xấu hổ đối với những người xung quanh"
+            }
+          ],
+          "question": "Hành vi xâm phạm nhân phẩm, danh dự của con người là?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000140,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dấu hiệu của tội xâm phạm nhân phẩm, danh dự"
+            },
+            {
+              "key": "B",
+              "text": "Khái niệm của tội xâm phạm nhân phẩm, danh dự"
+            },
+            {
+              "key": "C",
+              "text": "Đặc điểm của tội xâm phạm nhân phẩm, danh dự"
+            },
+            {
+              "key": "D",
+              "text": "Đặc trưng của tội xâm phạm nhân phẩm, danh dự"
+            }
+          ],
+          "question": "\"Các tội xâm phạm nhân phẩm, danh dự của con người là những hành vi nguy hiểm cho xã hội\" là?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000141,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Pháp luật hình sự"
+            },
+            {
+              "key": "B",
+              "text": "Bộ luật hình sự"
+            },
+            {
+              "key": "C",
+              "text": "Bộ luật tội phạm"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các bộ luật"
+            }
+          ],
+          "question": "Các tội xâm phạm nhân phẩm, danh dự của con người được quy định trong?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000142,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Người có năng lực trách nhiệm hình sự và từ đủ 17 tuổi trở lên"
+            },
+            {
+              "key": "B",
+              "text": "Người có năng lực trách nhiệm hình sự và từ đủ 16 tuổi trở lên"
+            },
+            {
+              "key": "C",
+              "text": "Người có năng lực trách nhiệm hình sự và từ đủ 15 tuổi trở lên"
+            },
+            {
+              "key": "D",
+              "text": "Người có năng lực trách nhiệm hình sự và từ đủ 14 tuổi trở lên"
+            }
+          ],
+          "question": "\"Các tội xâm phạm nhân phẩm, danh dự của con người do người có năng lực trách nhiệm hình sự và đủ tuổi chịu trách nhiệm hình sự thực hiện\" là?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000143,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đặc điểm"
+            },
+            {
+              "key": "B",
+              "text": "Khái niệm"
+            },
+            {
+              "key": "C",
+              "text": "Mục đích"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả phương án"
+            }
+          ],
+          "question": "Các tội xâm phạm nhân phẩm, danh dự của con người do người có năng lực trách nhiệm hình sự và đủ tuổi chịu trách nhiệm hình sự thực hiện là?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000144,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Trách nhiệm"
+            },
+            {
+              "key": "B",
+              "text": "Tội hình sự"
+            },
+            {
+              "key": "C",
+              "text": "Trách nhiệm hình sự"
+            },
+            {
+              "key": "D",
+              "text": "Trách nhiệm trước xã hội"
+            }
+          ],
+          "question": "Người nào xâm phạm nhân phẩm, danh dự của người khác phải chịu?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000145,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cách xử sự của chủ thể"
+            },
+            {
+              "key": "B",
+              "text": "Cách xử sự nguy hiểm của chủ thể"
+            },
+            {
+              "key": "C",
+              "text": "Cách hành động của chủ thể"
+            },
+            {
+              "key": "D",
+              "text": "Cách xử sự có mục đích của chủ thể"
+            }
+          ],
+          "question": "Khách quan của tội phạm xâm phạm nhân phẩm, danh dự của con người là?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000146,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lỗi của người phạm tội"
+            },
+            {
+              "key": "B",
+              "text": "Động cơ của người phạm tội"
+            },
+            {
+              "key": "C",
+              "text": "Mục đích của người phạm tội"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án trên"
+            }
+          ],
+          "question": "Chủ quan của tội phạm xâm phạm nhân phẩm, danh dự của con người là?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000147,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hành vi nguy hiểm cho xã hội được quy định trong bộ luật hình sự"
+            },
+            {
+              "key": "B",
+              "text": "Hành vi được quy định trong bộ luật hình sự"
+            },
+            {
+              "key": "C",
+              "text": "Hành vi nguy hiểm được quy định trong bộ luật hình sự"
+            },
+            {
+              "key": "D",
+              "text": "Hành vi không gây nguy hiểm cho xã hội được quy định trong bộ luật hình sự"
+            }
+          ],
+          "question": "Tội xâm phạm tình dục là?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000148,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dùng vũ lực để thực hiện hành vi quan hệ tình dục khác trái với ý muốn của nạn nhân"
+            },
+            {
+              "key": "B",
+              "text": "Đe dọa dùng vũ lực để giao cấu và quan hệ tình dục khác trái với ý muốn của nạn nhân"
+            },
+            {
+              "key": "C",
+              "text": "Dùng vũ lực, đe dọa dùng vũ lực để giao cấu hoặc thực hiện hành vi quan hệ tình dục khác trái với ý muốn của nạn nhân"
+            },
+            {
+              "key": "D",
+              "text": "Dùng vũ lực, đe dọa dùng vũ lực để giao cấu hoặc thực hiện hành vi quan hệ tình dục"
+            }
+          ],
+          "question": "Bộ luật hình sự hiện hành quy định về tội hiếp dâm là?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 5: Phòng, chống một số loại tội phạm xâm hại danh dự, nhân phẩm của người khác",
+          "id": 1790954000149,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "10 năm"
+            },
+            {
+              "key": "B",
+              "text": "Chung thân"
+            },
+            {
+              "key": "C",
+              "text": "Tử hình"
+            },
+            {
+              "key": "D",
+              "text": "20 năm"
+            }
+          ],
+          "question": "Bộ luật hình sự quy định về tội hiếp dâm với mức án cao nhất là?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000150,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "sự đảm bảo hoạt động thông tin trên không gian mạng không gây phương hại đến an ninh quốc gia, trật tự, an toàn xã hội, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân."
+            },
+            {
+              "key": "B",
+              "text": "phòng ngừa, phát hiện, ngăn chặn, xử lý hành vi xâm phạm an ninh mạng."
+            },
+            {
+              "key": "C",
+              "text": "sự đảm bảo hoạt động của con người trên không gian mạng không gây phương hại đến an ninh quốc gia, trật tự, an toàn xã hội, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân."
+            },
+            {
+              "key": "D",
+              "text": "sự đảm bảo hoạt động trên không gian mạng không gây phương hại đến an ninh quốc gia, trật tự, an toàn xã hội, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân."
+            }
+          ],
+          "question": "An ninh mạng là?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000151,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Gián điệp mạng"
+            },
+            {
+              "key": "B",
+              "text": "Khủng bố mạng"
+            },
+            {
+              "key": "C",
+              "text": "Tội phạm mạng"
+            },
+            {
+              "key": "D",
+              "text": "Tấn công mạng"
+            }
+          ],
+          "question": "Việc sử dụng không gian mạng, công nghệ thông tin hoặc phương tiện điện tử để thực hiện hành vi khủng bố, tài trợ khủng bố là?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000152,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khủng bố mạng"
+            },
+            {
+              "key": "B",
+              "text": "Gián điệp mạng"
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ an ninh mạng"
+            },
+            {
+              "key": "D",
+              "text": "An ninh mạng"
+            }
+          ],
+          "question": "Sự bảo đảm hoạt động trên không gian mạng không gây phương hại đến an ninh quốc gia, trật tự, an toàn xã hội, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân là?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000153,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khủng bố mạng"
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ an ninh mạng"
+            },
+            {
+              "key": "C",
+              "text": "An ninh mạng"
+            },
+            {
+              "key": "D",
+              "text": "Tội phạm mạng"
+            }
+          ],
+          "question": "Phòng ngừa, phát hiện, ngăn chặn, xử lý hành vi xâm phạm an ninh mạng là?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000154,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khủng bố mạng"
+            },
+            {
+              "key": "B",
+              "text": "Tội phạm mạng"
+            },
+            {
+              "key": "C",
+              "text": "Gián điệp mạng"
+            },
+            {
+              "key": "D",
+              "text": "Tấn công mạng"
+            }
+          ],
+          "question": "Hành vi sử dụng không gian mạng, công nghệ thông tin hoặc phương tiện điện tử để thực hiện tội phạm được quy định tại Bộ luật Hình sự là?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000155,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phòng ngừa, phát hiện, ngăn chặn, xử lý hành vi xâm phạm an ninh mạng"
+            },
+            {
+              "key": "B",
+              "text": "Phòng ngừa, phát hiện, ngăn chặn, xử lý hành vi xâm phạm an ninh mạng và an ninh quốc gia"
+            },
+            {
+              "key": "C",
+              "text": "Phòng ngừa, phát hiện, ngăn chặn, xử lý hành vi xâm phạm an ninh quốc gia"
+            },
+            {
+              "key": "D",
+              "text": "Phòng ngừa, phát hiện xâm phạm an ninh quốc gia"
+            }
+          ],
+          "question": "Bảo vệ an ninh mạng là?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000156,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "là việc sử dụng không gian mạng, công nghệ thông tin hoặc phương tiện điện tử để thực hiện hành vi khủng bố, tài trợ khủng bố."
+            },
+            {
+              "key": "B",
+              "text": "là hành vi cố ý vượt qua cảnh báo, mã truy cập, mật mã, tường lửa, sử dụng quyền quản trị của người khác hoặc bằng phương thức khác để chiếm đoạt, thu thập trái phép thông tin, tài nguyên thông tin trên mạng viễn thông, mạng Internet, mạng máy tính, hệ thống thông tin, hệ thống xử lý và điều khiển thông tin, cơ sở dữ liệu, phương tiện điện tử của cơ quan, tổ chức, cá nhân."
+            },
+            {
+              "key": "C",
+              "text": "là hành vi sử dụng không gian mạng, công nghệ thông tin hoặc phương tiện điện tử để phá hoại, gây gián đoạn hoạt động của mạng viễn thông, mạng Internet, mạng máy tính, hệ thống thông tin, hệ thống xử lý và điều khiển thông tin, cơ sở dữ liệu, phương tiện điện tử."
+            },
+            {
+              "key": "D",
+              "text": "là hành vi sử dụng không gian mạng, công nghệ thông tin hoặc phương tiện điện tử để thực hiện tội phạm được quy định tại Bộ luật Hình sự."
+            }
+          ],
+          "question": "Tội phạm mạng là?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000157,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "là việc sử dụng không gian mạng, công nghệ thông tin hoặc phương tiện điện tử để thực hiện hành vi khủng bố, tài trợ khủng bố"
+            },
+            {
+              "key": "B",
+              "text": "là hành vi cố ý vượt qua cảnh báo, mã truy cập, mật mã, tường lửa, sử dụng quyền quản trị của người khác hoặc bằng phương thức khác để chiếm đoạt, thu thập trái phép thông tin, tài nguyên thông tin trên mạng viễn thông, mạng Internet, mạng máy tính, hệ thống thông tin, hệ thống xử lý và điều khiển thông tin, cơ sở dữ liệu, phương tiện điện tử của cơ quan, tổ chức, cá nhân"
+            },
+            {
+              "key": "C",
+              "text": "là hành vi sử dụng không gian mạng, công nghệ thông tin hoặc phương tiện điện tử để phá hoại, gây gián đoạn hoạt động của mạng viễn thông, mạng Internet, mạng máy tính, hệ thống thông tin, hệ thống xử lý và điều khiển thông tin, cơ sở dữ liệu, phương tiện điện tử"
+            },
+            {
+              "key": "D",
+              "text": "là hành vi sử dụng không gian mạng, công nghệ thông tin hoặc phương tiện điện tử để thực hiện tội phạm được quy định tại Bộ luật Hình sự."
+            }
+          ],
+          "question": "Tấn công mạng là?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000158,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tuân thủ Hiến pháp và pháp luật; bảo đảm lợi ích của Nhà nước, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân."
+            },
+            {
+              "key": "B",
+              "text": "Ưu tiên nguồn lực xây dựng lực lượng chuyên trách bảo vệ an ninh mạng; nâng cao năng lực cho lực lượng bảo vệ an ninh mạng và tổ chức, cá nhân tham gia bảo vệ an ninh mạng; ưu tiên đầu tư cho nghiên cứu, phát triển khoa học, công nghệ để bảo vệ an ninh mạng."
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng không gian mạng lành mạnh, không gây phương hại đến an ninh quốc gia, trật tự, an toàn xã hội, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân"
+            },
+            {
+              "key": "D",
+              "text": "Ưu tiên bảo vệ an ninh mạng trong quốc phòng, an ninh, phát triển kinh tế - xã hội, khoa học, công nghệ và đối ngoại."
+            }
+          ],
+          "question": "Xác định phương án đúng về Nguyên tắc bảo vệ an ninh mạng?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000159,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Đánh giá điều kiện an ninh mạng"
+            },
+            {
+              "key": "B",
+              "text": "Thẩm định an ninh mạng"
+            },
+            {
+              "key": "C",
+              "text": "Khủng bố mạng"
+            },
+            {
+              "key": "D",
+              "text": "Kiểm tra an ninh mạng"
+            }
+          ],
+          "question": "Phương án nào sau đây không phải là biện pháp bảo vệ an ninh mạng?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000160,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Yêu cầu xóa bỏ, truy cập xóa bỏ thông tin trái pháp luật hoặc thông tin sai sự thật trên không gian mạng xâm phạm an ninh quốc gia, trật tự, an toàn xã hội, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân"
+            },
+            {
+              "key": "B",
+              "text": "Ngăn chặn, yêu cầu tạm ngừng, ngừng cung cấp thông tin mạng; đình chỉ, tạm đình chỉ các hoạt động thiết lập, cung cấp và sử dụng mạng viễn thông, mạng Internet, sản xuất và sử dụng thiết bị phát, thu phát sóng vô tuyến theo quy định của pháp luật"
+            },
+            {
+              "key": "C",
+              "text": "Sử dụng mật mã để bảo vệ thông tin mạng"
+            },
+            {
+              "key": "D",
+              "text": "Cơ sở hạ tầng không gian mạng quốc gia"
+            }
+          ],
+          "question": "Phương án nào sau đây không phải là biện pháp bảo vệ an ninh mạng?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000161,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thu thập dữ liệu điện tử liên quan đến hoạt động xâm phạm an ninh quốc gia, trật tự, an toàn xã hội, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân trên không gian mạng"
+            },
+            {
+              "key": "B",
+              "text": "Ngăn chặn, yêu cầu tạm ngừng, ngừng cung cấp thông tin mạng; đình chỉ, tạm đình chỉ các hoạt động thiết lập, cung cấp và sử dụng mạng viễn thông, mạng Internet, sản xuất và sử dụng thiết bị phát, thu phát sóng vô tuyến theo quy định của pháp luật"
+            },
+            {
+              "key": "C",
+              "text": "Phong tỏa, hạn chế hoạt động của hệ thống thông tin; đình chỉ, tạm đình chỉ hoặc yêu cầu ngừng hoạt động của hệ thống thông tin, thu hồi tên miền theo quy định của pháp luật"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Phương án nào sau đây là biện pháp bảo vệ an ninh mạng?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000162,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ứng phó, khắc phục sự cố an ninh mạng"
+            },
+            {
+              "key": "B",
+              "text": "Nguy cơ đe dọa an ninh mạng"
+            },
+            {
+              "key": "C",
+              "text": "Sự cố an ninh mạng"
+            },
+            {
+              "key": "D",
+              "text": "Cơ sở hạ tầng không gian mạng quốc gia"
+            }
+          ],
+          "question": "Phương án nào sau đây là biện pháp bảo vệ an ninh mạng?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000163,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ Thông tin và Truyền thông"
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ"
+            },
+            {
+              "key": "C",
+              "text": "Nhà nước"
+            },
+            {
+              "key": "D",
+              "text": "Quốc hội"
+            }
+          ],
+          "question": "Cơ quan nào áp dụng các biện pháp để bảo vệ không gian mạng quốc gia?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000164,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ủy ban thường vụ Quốc hội"
+            },
+            {
+              "key": "B",
+              "text": "Nhà nước"
+            },
+            {
+              "key": "C",
+              "text": "Chính phủ"
+            },
+            {
+              "key": "D",
+              "text": "Quốc hội"
+            }
+          ],
+          "question": "Cơ quan nào áp dụng các biện pháp để phòng ngừa, xử lý hành vi xâm phạm an ninh quốc gia, trật tự, an toàn xã hội, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân trên không gian mạng?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000165,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bộ Nội vụ và Bộ Quốc phòng"
+            },
+            {
+              "key": "B",
+              "text": "Bộ Công an"
+            },
+            {
+              "key": "C",
+              "text": "Bộ Quốc phòng"
+            },
+            {
+              "key": "D",
+              "text": "Bộ Thông tin và Truyền thông"
+            }
+          ],
+          "question": "Cơ quan nào chịu trách nhiệm trước Chính phủ thực hiện hợp tác quốc tế về an ninh mạng trong phạm vi quản lý?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000166,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nghiên cứu, phân tích xu hướng an ninh mạng"
+            },
+            {
+              "key": "B",
+              "text": "Xây dựng cơ chế, chính sách nhằm đẩy mạnh hợp tác giữa tổ chức, cá nhân Việt Nam với tổ chức, cá nhân nước ngoài, tổ chức quốc tế hoạt động về an ninh mạng"
+            },
+            {
+              "key": "C",
+              "text": "Chia sẻ thông tin, kinh nghiệm; hỗ trợ đào tạo, trang thiết bị, công nghệ bảo vệ an ninh mạng"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Xác định phương án đúng về nội dung hợp tác quốc tế về an ninh mạng?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000167,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tổ chức, hoạt động,  kết, xúi giục, mua chuộc, lừa gạt, lôi kéo, đào tạo, huấn luyện người chống Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Hoạt động mại dâm, tệ nạn xã hội, mua bán người; đăng tải thông tin phản cảm, đồi trụy, tội ác; phá hoại thuần phong, mỹ tục của dân tộc, đạo đức xã hội, sức khỏe của cộng đồng"
+            },
+            {
+              "key": "C",
+              "text": "Xuyên tạc lịch sử, phủ nhận thành tựu cách mạng, phá hoại khối đại đoàn kết toàn dân tộc, xúc phạm tôn giáo, phân biệt đối xử về giới, phân biệt chủng tộc"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả phương án"
+            }
+          ],
+          "question": "Luật An ninh mạng nghiêm cấm việc sử dụng không gian mạng để thực hiện hành vi nào dưới đây"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000168,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thực hiện tấn công mạng, khủng bố mạng, gián điệp mạng, tội phạm mạng; gây sự cố, tấn công, xâm nhập, chiếm quyền điều khiển, làm sai lệch, gián đoạn, ngưng trệ, tê liệt hoặc phá hoại hệ thống thông tin quan trọng về an ninh quốc giA,"
+            },
+            {
+              "key": "B",
+              "text": "Chống lại hoặc cản trở hoạt động của lực lượng bảo vệ an ninh mạng; tấn công, vô hiệu hóa trái pháp luật làm mất tác dụng biện pháp bảo vệ an ninh mạng."
+            },
+            {
+              "key": "C",
+              "text": "Sản xuất, đưa vào sử dụng công cụ, phương tiện, phần mềm hoặc có hành vi cản trở, gây rối loạn hoạt động của mạng viễn thông, mạng Internet, mạng máy tính, hệ thống thông tin, hệ thống xử lý và điều khiển thông tin, phương tiện điện tử; phát tán chương trình tin học gây hại cho hoạt động của mạng viễn thông, mạng Internet, mạng máy tính, hệ thống thông tin, hệ thống xử lý và điều khiển thông tin, phương tiện điện tử; xâm nhập trái phép vào mạng viễn thông, mạng máy tính, hệ thống thông tin, hệ thống xử lý và điều khiển thông tin, cơ sở dữ liệu, phương tiện điện tử của người kháC,"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Xác định phương án đúng về các hành vi bị nghiêm cấm về an ninh mạng?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000169,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nhẹ thì bị xử lý vi phạm hành chính, nặng thì bị truy cứu trách nhiệm hình sự, nếu gây thiệt hại thì phải bồi thường"
+            },
+            {
+              "key": "B",
+              "text": "Tùy theo tính chất, mức độ vi phạm mà bị xử lý kỷ luật, xử lý vi phạm hành chính hoặc bị truy cứu trách nhiệm hình sự, nếu gây thiệt hại thì phải bồi thường"
+            },
+            {
+              "key": "C",
+              "text": "Tùy theo tính chất, mức độ vi phạm mà bị khiển trách, xử lý kỷ luật, xử lý vi phạm hành chính hoặc bị truy cứu trách nhiệm hình sự, nếu gây thiệt hại thì phải bồi thường"
+            },
+            {
+              "key": "D",
+              "text": "Có thể bị buộc thôi việc, xử lý vi phạm hành chính hoặc bị truy cứu trách nhiệm hình sự, nếu gây thiệt hại thì phải bồi thường"
+            }
+          ],
+          "question": "Người có hành vi vi phạm được quy định trong Luật An ninh mạng thì bị xử lý như thế nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000170,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hệ thống thông tin lưu trữ, xử lý thông tin thuộc bí mật nhà nước; Hệ thống thông tin phục vụ bảo quản vật liệu, chất đặc biệt nguy hiểm đối với con người, môi trường sinh thái"
+            },
+            {
+              "key": "B",
+              "text": "Hệ thống thông tin quân sự, an ninh, ngoại giao, cơ yếu; Hệ thống thông tin phục vụ lưu giữ, bảo quản hiện vật, tài liệu có giá trị đặc biệt quan trọng"
+            },
+            {
+              "key": "C",
+              "text": "Hệ thống thông tin phục vụ bảo quản, chế tạo, quản lý cơ sở vật chất đặc biệt quan trọng khác liên quan đến an ninh quốc gia; Hệ thống thông tin quốc gia thuộc lĩnh vực năng lượng, tài chính, ngân hàng, viễn thông, giao thông vận tải, tài nguyên và môi trường, hóa chất, y tế, văn hóa, báo chí"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả các phương án"
+            }
+          ],
+          "question": "Hệ thống thông tin quan trọng về an ninh quốc gia bao gồm?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000171,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hệ thống thông tin phục vụ bảo quản, chế tạo, quản lý cơ sở vật chất đặc biệt quan trọng khác liên quan đến an ninh quốc gia"
+            },
+            {
+              "key": "B",
+              "text": "Hệ thống thông tin quan trọng phục vụ hoạt động của cơ quan, tổ chức ở trung ương"
+            },
+            {
+              "key": "C",
+              "text": "Hệ thống thông tin quốc gia thuộc lĩnh vực năng lượng, tài chính, ngân hàng, viễn thông, giao thông vận tải, tài nguyên và môi trường, hóa chất, y tế, văn hóa, báo chí"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả phương án"
+            }
+          ],
+          "question": "Chọn phương án đúng về Hệ thống thông tin quan trọng về an ninh quốc gia?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000172,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Không có phưong án nào sai"
+            },
+            {
+              "key": "B",
+              "text": "Hệ thống thông tin quan trọng phục vụ hoạt động của cơ quan, tổ chức ở trung ương"
+            },
+            {
+              "key": "C",
+              "text": "Hệ thống thông tin quản lý"
+            },
+            {
+              "key": "D",
+              "text": "Hệ thống thông tin quốc gia thuộc lĩnh vực năng lượng, tài chính, ngân hàng, viễn thông, giao thông vận tải, tài nguyên và môi trường, hóa chất, y tế, văn hóa, báo chí;"
+            }
+          ],
+          "question": "Chọn phương án sai về Hệ thống thông tin quan trọng về an ninh quốc gia?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000173,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thủ tướng Chính phủ"
+            },
+            {
+              "key": "B",
+              "text": "Chủ tịch nước"
+            },
+            {
+              "key": "C",
+              "text": "Chủ tịch Quốc hội"
+            },
+            {
+              "key": "D",
+              "text": "Bộ trưởng Bộ Thông tin và Truyền thông"
+            }
+          ],
+          "question": "Ai là người ban hành và sửa đổi, bổ sung Danh mục hệ thống thông tin quan trọng về an ninh quốc gia?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000174,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Quốc phòng"
+            },
+            {
+              "key": "B",
+              "text": "Chính phủ"
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Công an"
+            },
+            {
+              "key": "D",
+              "text": "Tất cả phương án"
+            }
+          ],
+          "question": "Hệ thống thông tin quan trọng về an ninh quốc gia trừ thông tin quân sự và thông tin cơ yếu thuộc Ban Cơ yếu Chính phủ do ai thẩm định?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000175,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "là hoạt động xem xét, đánh giá những nội dung về an ninh mạng để làm cơ sở cho việc quyết định xây dựng hoặc nâng cấp hệ thống thông tin"
+            },
+            {
+              "key": "B",
+              "text": "là hoạt động xác định thực trạng an ninh mạng của hệ thống thông tin, cơ sở hạ tầng hệ thống thông tin hoặc thông tin được lưu trữ, xử lý, truyền đưa trong hệ thống thông tin nhằm phòng ngừa, phát hiện, xử lý nguy cơ đe dọa an ninh mạng và đưa ra các phương án, biện pháp bảo đảm hoạt động bình thường của hệ thống thông tin."
+            },
+            {
+              "key": "C",
+              "text": "là hoạt động thu thập, phân tích tình hình nhằm xác định nguy cơ đe dọa an ninh mạng, sự cố an ninh mạng, điểm yếu, lỗ hổng bảo mật, mã độc, phần cứng độc hại để cảnh báo, khắc phục, xử lý."
+            },
+            {
+              "key": "D",
+              "text": "là hoạt động xem xét sựĐáp ứng về an ninh mạng của hệ thống thông tin trước khi đưa vào vận hành, sử dụng"
+            }
+          ],
+          "question": "Đánh giá điều kiện về an ninh mạng là gì?"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000176,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tất cả phương án"
+            },
+            {
+              "key": "B",
+              "text": "Biện pháp kỹ thuật để giám sát, bảo vệ an ninh mạng; biện pháp bảo vệ hệ thống điều khiển và giám sát tự động, Internet vạn vật, hệ thống phức hợp thực - ảo, điện toán đám mây, hệ thống dữ liệu lớn, hệ thống dữ liệu nhanh, hệ thống trí tuệ nhân tạo;"
+            },
+            {
+              "key": "C",
+              "text": "Biện pháp bảo đảm an ninh vật lý bao gồm cách ly cô lập đặc biệt, chống rò rỉ dữ liệu, chống thu tin, kiểm soát ra vào"
+            },
+            {
+              "key": "D",
+              "text": "Quy định, quy trình và phương án bảo đảm an ninh mạng; nhân sự vận hành, quản trị hệ thống"
+            }
+          ],
+          "question": "Xác định phương án đúng điều kiệnĐáp ứng Hệ thống thông tin quan trọng về an ninh quốc gia?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000177,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Khi có thay đổi hiện trạng hệ thống thông tin"
+            },
+            {
+              "key": "B",
+              "text": "Tất cả các trường hợp"
+            },
+            {
+              "key": "C",
+              "text": "Kiểm tra định kỳ hằng năm"
+            },
+            {
+              "key": "D",
+              "text": "Khi đưa phương tiện điện tử, dịch vụ an toàn thông tin mạng vào sử dụng trong hệ thống thông tin"
+            }
+          ],
+          "question": "Trường hợp nào được kiểm tra an ninh mạng đối với hệ thống thông tin quan trọng về an ninh quốc gia?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000178,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "là hoạt động xác định thực trạng an ninh mạng của hệ thống thông tin, cơ sở hạ tầng hệ thống thông tin hoặc thông tin được lưu trữ, xử lý, truyền đưa trong hệ thống thông tin nhằm phòng ngừa, phát hiện, xử lý nguy cơ đe dọa an ninh mạng và đưa ra các phương án, biện pháp bảo đảm hoạt động bình thường của hệ thống thông tin"
+            },
+            {
+              "key": "B",
+              "text": "là hoạt động xem xét sựĐáp ứng về an ninh mạng của hệ thống thông tin trước khi đưa vào vận hành, sử dụng"
+            },
+            {
+              "key": "C",
+              "text": "là hoạt động xem xét, đánh giá những nội dung về an ninh mạng để làm cơ sở cho việc quyết định xây dựng hoặc nâng cấp hệ thống thông tin"
+            },
+            {
+              "key": "D",
+              "text": "là hoạt động thu thập, phân tích tình hình nhằm xác định nguy cơ đe dọa an ninh mạng, sự cố an ninh mạng, điểm yếu, lỗ hổng bảo mật, mã độc, phần cứng độc hại để cảnh báo, khắc phục, xử lý."
+            }
+          ],
+          "question": "Giám sát an ninh mạng là gì?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 6: An toàn thông tin và phòng, chống vi phạm pháp luật trên không gian mạng",
+          "id": 1790954000179,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ban Cơ yếu Chính phủ"
+            },
+            {
+              "key": "B",
+              "text": "Chủ quản hệ thống thông tin quan trọng về an ninh quốc gia"
+            },
+            {
+              "key": "C",
+              "text": "Lực lượng chuyên trách bảo vệ an ninh mạng"
+            },
+            {
+              "key": "D",
+              "text": "Lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Công an"
+            }
+          ],
+          "question": "Lực lượng nào chủ trì, phối hợp với lực lượng chuyên trách bảo vệ an ninh mạng có thẩm quyền thường xuyên thực hiện giám sát an ninh mạng đối với hệ thống thông tin thuộc phạm vi quản lý; xây dựng cơ chế tự cảnh báo và tiếp nhận cảnh báo về nguy cơ đe dọa an ninh mạng, sự cố an ninh mạng, điểm yếu, lỗ hổng bảo mật, mã độc, phần cứng độc hại và đề ra phương án ứng phó, khắc phục khẩn cấp."
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000180,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh con người."
+            },
+            {
+              "key": "B",
+              "text": "An ninh Tổ quốC,"
+            },
+            {
+              "key": "C",
+              "text": "An ninh tài chính."
+            },
+            {
+              "key": "D",
+              "text": "An ninh năng lượng."
+            }
+          ],
+          "question": "Tìm  trả lời sai: Định dạng các mối đe dọa an ninh phi truyền thống bao gồm ?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000181,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh lương thựC,"
+            },
+            {
+              "key": "B",
+              "text": "An ninh quốc giA,"
+            },
+            {
+              "key": "C",
+              "text": "Biến đổi khí hậu."
+            },
+            {
+              "key": "D",
+              "text": "Thiên tai."
+            }
+          ],
+          "question": "Tìm  trả lời sai: Định dạng các mối đe dọa an ninh phi truyền thống bao gồm ?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000182,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia (1); sức mạnh vũ trang (2)"
+            },
+            {
+              "key": "B",
+              "text": "Tiềm lực vũ trang (1); an ninh quốc phòng (2)"
+            },
+            {
+              "key": "C",
+              "text": "An ninh chính trị (1); an ninh quân sự (2)"
+            },
+            {
+              "key": "D",
+              "text": "An ninh quốc phòng (1); thế trận quốc phòng (2)"
+            }
+          ],
+          "question": "Hãy chọn cụm từ đúng tương ứng vị trí (1) và (2) để làm rõ khái niệm sau: “Nội dung của an ninh truyền thống hay an ninh quốc gia chính là...  (1)... (2), an ninh xã hội."
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000183,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tiềm lực vũ trang (1); an ninh chính trị (2)"
+            },
+            {
+              "key": "B",
+              "text": "An ninh quân sự (1); tiềm lực vũ trang (2)"
+            },
+            {
+              "key": "C",
+              "text": "An ninh quân sự (1); An ninh xã hội (2)"
+            },
+            {
+              "key": "D",
+              "text": "Tiềm lực quốc phòng (1); an ninh chính trị (2)"
+            }
+          ],
+          "question": "Hãy chọn cụm từ đúng nhất tương ứng vị trí (1) và (2) để làm rõ khái niệm sau: Hãy chọn cụm từ đúng nhất tương ứng vị trí (1) và (2) để làm rõ khái niệm sau: “Nội dung của an ninh truyền thống hay an ninh quốc gia chính là an ninh chính trị,... (1)... (2)"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000184,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phối hợp chặt chẽ chống lực lượng gián điệp từ bên ngoài vào và lực lượng phản động bên trong."
+            },
+            {
+              "key": "B",
+              "text": "Tổ chức lực lượng phòng phòng ngừa, ứng phó với các mối đe dọa an ninh phi truyền thống."
+            },
+            {
+              "key": "C",
+              "text": "Chủ động, tích cực phòng ngừa, ứng phó với các mối đe dọa an ninh phi truyền thống."
+            },
+            {
+              "key": "D",
+              "text": "Tổ chức lực lượng quần chúng rộng rãi xây dựng nền quốc phòng toàn dân, an ninh nhân dân."
+            }
+          ],
+          "question": "Một trong giải pháp phòng ngừa, ứng phó với các mối đe dọa an ninh phi truyền thống ở Việt Nam hiện nay là:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000185,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cản trở quá trình phát triển nền văn hóa tiên tiến đậm đà bản sắc dân tộC,"
+            },
+            {
+              "key": "B",
+              "text": "Làm suy giảm sức mạnh của sự nghiệp đổi mới, sự nghiệp công nghiệp hóa, hiện đại hóa đất nướC,"
+            },
+            {
+              "key": "C",
+              "text": "Làm suy giảm sức mạnh quốc phòng của đất nướC,"
+            },
+            {
+              "key": "D",
+              "text": "Làm suy giảm sức mạnh sẵn sàng chiến đấu của lực lượng vũ trang."
+            }
+          ],
+          "question": "Tìm  trả lời đúng: Những thách thức và đe dọa an ninh phi truyền thống là ?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000186,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cản trở quá trình phát triển nền văn hóa tiên tiến đậm đà bản sắc dân tộC,"
+            },
+            {
+              "key": "B",
+              "text": "Làm suy giảm sức mạnh an ninh của đất nướC,"
+            },
+            {
+              "key": "C",
+              "text": "Hình thành nguy cơ xung đột và chiến tranh."
+            },
+            {
+              "key": "D",
+              "text": "Làm suy giảm sức mạnh sẵn sàng chiến đấu của lực lượng vũ trang."
+            }
+          ],
+          "question": "Tìm  trả lời đúng: Những thách thức và đe dọa an ninh phi truyền thống là ?"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000187,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cản trở quá trình phát triển nền văn hóa tiên tiến đậm đà bản sắc dân tộC,"
+            },
+            {
+              "key": "B",
+              "text": "Gây mất ổn định của quốc giA,"
+            },
+            {
+              "key": "C",
+              "text": "Làm suy giảm sức mạnh an ninh của đất nướC,"
+            },
+            {
+              "key": "D",
+              "text": "Làm suy giảm sức mạnh sẵn sàng chiến đấu của lực lượng vũ trang."
+            }
+          ],
+          "question": "Tìm  trả lời đúng: Những thách thức và đe dọa an ninh phi truyền thống là ?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000188,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hai nhiệm vụ chiến lược xây dựng và bảo vệ Tổ quốC,"
+            },
+            {
+              "key": "B",
+              "text": "Sức mạnh của lực lượng vũ trang."
+            },
+            {
+              "key": "C",
+              "text": "Sự nghiệp công nghiệp hoá, hiện đại hoá đất nướC,"
+            },
+            {
+              "key": "D",
+              "text": "An ninh quốc gia và an ninh nhân loại."
+            }
+          ],
+          "question": "Điền cụm từ phù hợp vào chỗ trống: “Nâng cao nhận thức về các mối đe dọa an ninh phi truyền thống đối với an ninh con người, an ninh cộng đồng, .... .... ....” để phòng ngừa, ứng phó đối với các mối đe dọa an ninh phi truyền thống an ninh quốc gia và an ninh nhân loại"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000189,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia và an ninh toàn cầu."
+            },
+            {
+              "key": "B",
+              "text": "Sức mạnh của lực lượng vũ trang."
+            },
+            {
+              "key": "C",
+              "text": "An ninh cộng đồng."
+            },
+            {
+              "key": "D",
+              "text": "Sự nghiệp công nghiệp hoá, hiện đại hoá đất nướC,"
+            }
+          ],
+          "question": "Điền cụm từ phù hợp vào chỗ trống: “Nâng cao nhận thức về các mối đe dọa an ninh phi truyền thống đối với an ninh con người, an ninh cộng đồng, .... .... ....” để phòng ngừa, ứng phó đối với các mối đe dọa an ninh phi truyền thống."
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000190,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh quốc gia và an ninh toàn cầu."
+            },
+            {
+              "key": "B",
+              "text": "An ninh con người"
+            },
+            {
+              "key": "C",
+              "text": "An ninh công nghiệp hóa, hiện đại hóA,"
+            },
+            {
+              "key": "D",
+              "text": "Sự nghiệp công nghiệp hoá, hiện đại hoá đất nướC,"
+            }
+          ],
+          "question": "Điền cụm từ phù hợp vào chỗ trống: “Nâng cao nhận thức về các mối đe dọa an ninh phi truyền thống đối với an ninh con người, an ninh cộng đồng, .... .... ....” để phòng ngừa, ứng phó đối với các mối đe dọa an ninh phi truyền thống."
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000191,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Thống nhất."
+            },
+            {
+              "key": "B",
+              "text": "Phát triển."
+            },
+            {
+              "key": "C",
+              "text": "Mở rộng."
+            },
+            {
+              "key": "D",
+              "text": "Đẩy mạnh."
+            }
+          ],
+          "question": "Giải pháp phòng ngừa, ứng phó đối với các mối đe dọa an ninh phi truyền thống là: “... ... và tăng cường hợp tác quốc tế về phòng ngừa, kiểm soát và ứng phó với các mối đe dọa an ninh phi truyền thống”. Hãy chọn cụm từ còn thiếu:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000192,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tích cực"
+            },
+            {
+              "key": "B",
+              "text": "Phát triển."
+            },
+            {
+              "key": "C",
+              "text": "Tăng cường."
+            },
+            {
+              "key": "D",
+              "text": "Đẩy mạnh."
+            }
+          ],
+          "question": "Một trong những giải pháp phòng ngừa, ứng phó đối với các mối đe dọa an ninh phi truyền thống là: “Mở rộng và ... ... hợp tác quốc tế về phòng ngừa, kiểm soát và ứng phó với các mối đe dọa an ninh phi truyền thống”. Hãy chọn cụm từ còn thiếu:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000193,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phản ứng."
+            },
+            {
+              "key": "B",
+              "text": "Xử lý."
+            },
+            {
+              "key": "C",
+              "text": "Ứng phó."
+            },
+            {
+              "key": "D",
+              "text": "Đối phó"
+            }
+          ],
+          "question": "Một trong những giải pháp phòng ngừa, ứng phó đối với các mối đe dọa an ninh phi truyền thống là: “Mở rộng và tăng cường hợp tác quốc tế về phòng ngừa, kiểm soát và ... ... với các mối đe dọa an ninh phi truyền thống”. Hãy chọn cụm từ còn thiếu:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000194,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ngân sách."
+            },
+            {
+              "key": "B",
+              "text": "Tài chính."
+            },
+            {
+              "key": "C",
+              "text": "Bên trong."
+            },
+            {
+              "key": "D",
+              "text": "Tại chỗ"
+            }
+          ],
+          "question": "Một trong những giải pháp phòng ngừa, ứng phó đối với các mối đe dọa an ninh phi truyền thống là: “Huy động nguồn lực ... ... bằng nhiều kênh khác nhau để đầu tư cho hoạt động phòng ngừa, kiểm soát, ứng phó các mối đe dọa an ninh phi truyền thống”. Hãy chọn cụm từ còn thiếu:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000195,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xóa bỏ đại dịch."
+            },
+            {
+              "key": "B",
+              "text": "Khoanh vùng, dập dịch."
+            },
+            {
+              "key": "C",
+              "text": "Dập tắt dịch bệnh."
+            },
+            {
+              "key": "D",
+              "text": "Kiểm soát đại dịch"
+            }
+          ],
+          "question": "Nghị quyết Đại hội Đại biểu toàn quốc lần thứ XIII của Đảng khẳng định: “Tập trung … Covid-19, tiêm chủng đại trà vắc-xin Covid-19 cho cộng đồng”."
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000196,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giải pháp đối phó."
+            },
+            {
+              "key": "B",
+              "text": "Giải pháp khắc phục, giảm nhẹ."
+            },
+            {
+              "key": "C",
+              "text": "Giải pháp thích ứng."
+            },
+            {
+              "key": "D",
+              "text": "Giải pháp ứng phó."
+            }
+          ],
+          "question": "Nghị quyết Đại hội lần thứ XIII của Đảng nhấn mạnh: “Quản lý chặt chẽ, sử dụng hợp lý, hiệu quả đất đai, tài nguyên; bảo vệ, cải thiện môi trường; chủ động, tích cực triển khai các … với biến đổi khí hậu, thiên tai khắc nghiệt”."
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000197,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Các bộ, ban, ngành."
+            },
+            {
+              "key": "B",
+              "text": "Các bộ, ban, ngành, đoàn thể."
+            },
+            {
+              "key": "C",
+              "text": "Toàn dân tộC,"
+            },
+            {
+              "key": "D",
+              "text": "Hệ thống chính trị."
+            }
+          ],
+          "question": "Điền từ còn thiếu vào  sau: “Phát huy sức mạnh tổng hợp của … và toàn xã hội trong quản trị và kiểm soát các mối đe dọa an ninh phi truyền thống”."
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000198,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Từ 95% đến 100%."
+            },
+            {
+              "key": "B",
+              "text": "Từ 90% đến 100%."
+            },
+            {
+              "key": "C",
+              "text": "Từ 92% đến 95%."
+            },
+            {
+              "key": "D",
+              "text": "Từ 90% đến 95%."
+            }
+          ],
+          "question": "Đại hội lần thứ XIII của Đảng đặt ra mục tiêu đến năm 2025, tỉ lệ sử dụng nước sạch, nước hợp vệ sinh của dân cư thành thị là:"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000199,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tội phạm công nghệ cao."
+            },
+            {
+              "key": "B",
+              "text": "Ô nhiễm môi trường và biến đổi khí hậu."
+            },
+            {
+              "key": "C",
+              "text": "An ninh năng lượng."
+            },
+            {
+              "key": "D",
+              "text": "Đe dọa sử dụng vũ lực trong quan hệ quốc tế."
+            }
+          ],
+          "question": "Nội dung nào không phải là một vấn đề an ninh phi truyền thống?"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000200,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quy mô khu vựC,"
+            },
+            {
+              "key": "B",
+              "text": "Quy mô châu lụC,"
+            },
+            {
+              "key": "C",
+              "text": "Quy mô toàn cầu."
+            },
+            {
+              "key": "D",
+              "text": "Cả baANSWER trên đều sai."
+            }
+          ],
+          "question": "Đại dịch Covid 19 là một vấn đề an ninh phi truyền thống ở quy mô nào?"
+        },
+        {
+          "correctAnswer": "D",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000201,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Loại bỏ những mối đe dọa đến lợi ích cơ bản của nhân dân"
+            },
+            {
+              "key": "B",
+              "text": "Đấu tranh với tội phạm và đối tượng phá hoại trật tự  xã hội"
+            },
+            {
+              "key": "C",
+              "text": "Chặn đứng các hành động phá hoại, xâm phạm tài sản nhân dân"
+            },
+            {
+              "key": "D",
+              "text": "Loại trừ những mối uy hiếp đối với lợi ích cơ bản của quốc gia"
+            }
+          ],
+          "question": "Bảo vệ an ninh quốc gia là phải:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000202,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phòng ngừa sự chống phá của các loại tội phạm"
+            },
+            {
+              "key": "B",
+              "text": "Bảo vệ vững chắc chủ quyền và an ninh quốc gia"
+            },
+            {
+              "key": "C",
+              "text": "Bảo vệ truyền thống đoàn kết trong nội bộ"
+            },
+            {
+              "key": "D",
+              "text": "Phòng chống nạn tham nhũng, quan liêu"
+            }
+          ],
+          "question": "Mục tiêu của an ninh quốc gia là:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000203,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "An ninh xuyên quốc gia"
+            },
+            {
+              "key": "B",
+              "text": "An toàn xuyên quốc gia"
+            },
+            {
+              "key": "C",
+              "text": "An ninh trong quốc gia"
+            },
+            {
+              "key": "D",
+              "text": "An toàn trong hội nhập"
+            }
+          ],
+          "question": "An ninh phi truyền thống có thể hiểu là một loại hình:"
+        },
+        {
+          "correctAnswer": "A",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000204,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mang tính toàn cầu"
+            },
+            {
+              "key": "B",
+              "text": "Của từng quốc gia"
+            },
+            {
+              "key": "C",
+              "text": "Mang tính thống nhất"
+            },
+            {
+              "key": "D",
+              "text": "Của từng khu vực"
+            }
+          ],
+          "question": "Giải quyết các nội dung về an ninh phi truyền thống phải là nhiệm vụ:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000205,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Xã hội"
+            },
+            {
+              "key": "B",
+              "text": "Kinh tế"
+            },
+            {
+              "key": "C",
+              "text": "Môi trường"
+            },
+            {
+              "key": "D",
+              "text": "Sản xuất"
+            }
+          ],
+          "question": "Gây ra những hệ lụy như: sản xuất đình trệ, thất nghiệp gia tăng, đứt gãy chuỗi cung ứng sản xuất và tiêu dùng, kinh tế suy thoái, kém phát triển, đời sống người dân gặp khó khăn… là những thách thức, đe dọa từ an ninh phi truyền thống đối với lĩnh vực:"
+        },
+        {
+          "correctAnswer": "C",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000206,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Biến đổi khí hậu, xung đột biên giới, hỏa hoạn"
+            },
+            {
+              "key": "B",
+              "text": "Hạn hán, ô nhiễm môi trường, khủng hoảng kinh tế"
+            },
+            {
+              "key": "C",
+              "text": "Biến dổi khí hậu, trái đất nóng lên, thiên tai, bão lũ, hạn hán, sóng thần"
+            },
+            {
+              "key": "D",
+              "text": "Khủng hoảng kinh tế, hạn hán, tội phạm, ma túy"
+            }
+          ],
+          "question": "An ninh phi truyền thống xuất phát từ các yếu tố do tự nhiên gây ra như:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000207,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Phi kinh tế, phi chính trị gây ra"
+            },
+            {
+              "key": "B",
+              "text": "Phi chính trị, phi quân sự gây ra"
+            },
+            {
+              "key": "C",
+              "text": "Phi quân sự, phi ngoại giao gây ra"
+            },
+            {
+              "key": "D",
+              "text": "Phi quân sự, phi văn hóa gây ra"
+            }
+          ],
+          "question": "An ninh phi truyền thống do các yếu tố:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000208,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Nghị quyết Trung ương 8"
+            },
+            {
+              "key": "B",
+              "text": "Đại hội lần thứ XII"
+            },
+            {
+              "key": "C",
+              "text": "Đại hội lần thứ  X"
+            },
+            {
+              "key": "D",
+              "text": "Nghị quyết Trung ương 12"
+            }
+          ],
+          "question": "Đảng ta đã chỉ rõ “sẵn sàng ứng phó với các mối đe dọa an ninh truyền thống và phi truyền thống” tại:"
+        },
+        {
+          "correctAnswer": "B",
+          "explanation": "Bài 7: An ninh phi truyền thống và các mối đe dọa an ninh phi truyền thống ở Việt Nam",
+          "id": 1790954000209,
+          "level": "Thông hiểu",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bất ổn xã hội"
+            },
+            {
+              "key": "B",
+              "text": "An ninh truyền thống"
+            },
+            {
+              "key": "C",
+              "text": "An toàn truyền thống"
+            },
+            {
+              "key": "D",
+              "text": "Bất ổn quốc gia"
+            }
+          ],
+          "question": "Nguy cơ xâm phạm biên giới đất liền, biển đảo, vùng trời của Tổ quốc là một trong những thách thức, nguy cơ đối với:"
+        }
+      ]
     },
     {
       "category": "Triết học Mác - Lênin",
