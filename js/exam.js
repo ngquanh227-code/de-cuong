@@ -171,11 +171,16 @@ function startExam(subId) {
   renderExamMatrix();
   updateProgressBar();
 
-  // Initialize audio and automatically start lively BGM synthesizer
-  getAudioContext();
-  startQuizizzBgm();
-
+  // Switch to exam room immediately
   switchView("exam");
+
+  // Initialize audio safely without blocking exam entry if audio autoplay is restricted
+  try {
+    getAudioContext();
+    startQuizizzBgm();
+  } catch (err) {
+    console.warn("Audio initialization warning:", err);
+  }
 }
 
 function startExamStopwatch() {

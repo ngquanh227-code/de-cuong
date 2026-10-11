@@ -108,6 +108,14 @@ function setupGlobalEvents() {
 // 2. INITIALIZATION
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
+  // Hoàn toàn gỡ bỏ và dọn sạch dấu vết của tour hướng dẫn
+  try {
+    localStorage.removeItem("cuonedu_tour_completed");
+    localStorage.removeItem("cuonedu_onboarding_seen");
+    document.querySelectorAll(".tour-backdrop, .tour-spotlight, .tour-popover, .tour-banking-bar-wrap, .tour-glass-bubble").forEach(el => el.remove());
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
+  } catch (e) {}
   initTheme();
   initLayout();
   loadUserProfile();

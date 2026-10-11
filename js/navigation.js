@@ -151,9 +151,7 @@ function switchView(viewName) {
   if (viewName === "exam") {
     document.body.classList.add("in-exam-mode");
     document.documentElement.classList.add("in-exam-mode");
-    if (typeof toggleAIChatbot === "function") toggleAIChatbot(false);
-    if (aiBtn) aiBtn.style.display = "none";
-    if (aiPanel) aiPanel.style.display = "none";
+    if (aiBtn) aiBtn.style.display = "flex";
   } else {
     document.body.classList.remove("in-exam-mode");
     document.documentElement.classList.remove("in-exam-mode");

@@ -76,70 +76,26 @@ function initDraggableAIFloatBtn() {
       const snapX = rect.left < mid ? 12 : (window.innerWidth - w - 12);
 
       btn.style.transition = "left 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
-      btn.style.left = `${snapX}px`;
+      btn.style.left = snapX + "px";
       setTimeout(() => {
         btn.style.transition = "";
       }, 300);
+    } else {
+      // Tap / Click without dragging -> toggle AI panel immediately
+      toggleAIChatbot();
     }
   };
 
-  // Mouse events
-  btn.addEventListener("mousedown", (e) => {
-    if (e.button !== 0) return;
-    e.preventDefault();
-    onStart(e.clientX, e.clientY);
-
-    const onMouseMove = (ev) => onMove(ev.clientX, ev.clientY);
-    const onMouseUp = () => {
-      onEnd();
-      document.removeEventListener("mousemove", onMouseMove);
-      document.removeEventListener("mouseup", onMouseUp);
-    };
-
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", onMouseUp);
-  });
-
-  // Touch events (phones & tablets)
-  btn.addEventListener("touchstart", (e) => {
-    if (e.touches.length === 1) {
-      onStart(e.touches[0].clientX, e.touches[0].clientY);
-    }
-  }, { passive: true });
-
-  btn.addEventListener("touchmove", (e) => {
-    if (!isDragging || e.touches.length !== 1) return;
-    onMove(e.touches[0].clientX, e.touches[0].clientY);
-    if (hasMoved && e.cancelable) {
-      e.preventDefault();
-    }
-  }, { passive: false });
-
-  btn.addEventListener("touchend", () => {
-    onEnd();
-  }, { passive: true });
-
-  btn.addEventListener("touchcancel", () => {
-    onEnd();
-  }, { passive: true });
-
-  // Click toggle: only opens chatbot if user tapped without dragging
   btn.addEventListener("click", (e) => {
-    if (hasMoved) {
-      e.preventDefault();
-      e.stopPropagation();
-      hasMoved = false;
-      return;
+    e.preventDefault();
+    if (!hasMoved) {
+      toggleAIChatbot();
     }
-    toggleAIChatbot();
   });
 }
 
 function toggleAIChatbot(forceState) {
-  if (document.body.classList.contains("in-exam-mode") && forceState !== false) {
-    showToast("Không được sử dụng trợ lý AI trong lúc làm bài thi!", "warning");
-    return;
-  }
+  // Trợ lý AI luôn sẵn sàng hỗ trợ học tập, kể cả trong phòng thi/ôn luyện
   const panel = document.getElementById("cuonedu-ai-panel");
   if (!panel) return;
 

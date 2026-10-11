@@ -9588,18 +9588,13 @@ body.in-exam-mode {
 }
 
 /* ==========================================================================
-   STRICT EXAM INTEGRITY: COMPLETE AI SUPPRESSION IN EXAM ROOM
+   AI COPILOT: ALWAYS ACCESSIBLE FOR EXPLANATION & QUESTIONS
    ========================================================================== */
-body.in-exam-mode #cuonedu-ai-btn,
-body.in-exam-mode #cuonedu-ai-panel,
-html.in-exam-mode #cuonedu-ai-btn,
-html.in-exam-mode #cuonedu-ai-panel,
-.view-exam.active ~ #cuonedu-ai-btn,
-.view-exam.active ~ #cuonedu-ai-panel {
-  display: none !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  opacity: 0 !important;
+#cuonedu-ai-btn {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 /* ==========================================================================
