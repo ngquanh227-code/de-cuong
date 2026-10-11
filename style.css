@@ -2686,16 +2686,16 @@ button:active {
 }
 
 .wg-option-btn.instant-correct {
-  background: #10b981 !important;
-  border-color: #a7f3d0 !important;
-  box-shadow: 0 0 24px rgba(16, 185, 129, 0.5) !important;
+  background: linear-gradient(135deg, #059669 0%, #10b981 60%, #34d399 100%) !important;
+  border: 2px solid #6ee7b7 !important;
+  box-shadow: 0 6px 0 #064e3b, 0 10px 24px rgba(16, 185, 129, 0.5), inset 0 1.5px 0 rgba(255, 255, 255, 0.45) !important;
   outline: none !important;
 }
 
 .wg-option-btn.instant-wrong {
-  background: #ef4444 !important;
-  border-color: #fecaca !important;
-  box-shadow: 0 0 24px rgba(239, 68, 68, 0.5) !important;
+  background: linear-gradient(135deg, #b91c1c 0%, #ef4444 60%, #f87171 100%) !important;
+  border: 2px solid #fca5a5 !important;
+  box-shadow: 0 6px 0 #7f1d1d, 0 10px 24px rgba(239, 68, 68, 0.5), inset 0 1.5px 0 rgba(255, 255, 255, 0.45) !important;
   outline: none !important;
 }
 
@@ -7436,8 +7436,9 @@ body.in-exam-mode {
   flex-direction: column !important;
   gap: 12px !important;
   justify-content: space-between !important;
-  overflow: hidden !important;
+  overflow: visible !important;
   box-sizing: border-box !important;
+  padding-bottom: 6px !important;
 }
 
 /* Question Card - Responsive Balanced Sizing */
@@ -7490,11 +7491,11 @@ body.in-exam-mode {
   min-height: 0 !important;
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  gap: 12px !important;
+  gap: 14px 12px !important;
   align-content: stretch !important;
   overflow-y: auto !important;
   box-sizing: border-box !important;
-  padding: 2px !important;
+  padding: 6px 6px 14px 6px !important;
 }
 
 @media (max-width: 767px) {
@@ -7581,11 +7582,11 @@ body.in-exam-mode {
    ========================================================================== */
 .wg-option-btn.instant-correct {
   border-radius: 18px !important;
-  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%) !important;
-  border: 2px solid #a7f3d0 !important;
-  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45) !important;
+  background: linear-gradient(135deg, #059669 0%, #10b981 60%, #34d399 100%) !important;
+  border: 2px solid #6ee7b7 !important;
+  box-shadow: 0 6px 0 #064e3b, 0 10px 28px rgba(16, 185, 129, 0.55), inset 0 1.5px 0 rgba(255, 255, 255, 0.45) !important;
   outline: none !important;
-  transform: scale(1.02) !important;
+  transform: translateY(-2px) scale(1.01) !important;
   animation: answerPopSpring 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
   z-index: 5 !important;
   opacity: 1 !important;
@@ -7593,11 +7594,11 @@ body.in-exam-mode {
 
 .wg-option-btn.instant-wrong {
   border-radius: 18px !important;
-  background: linear-gradient(135deg, #b91c1c 0%, #ef4444 50%, #f87171 100%) !important;
-  border: 2px solid #fecaca !important;
-  box-shadow: 0 8px 24px rgba(239, 68, 68, 0.45) !important;
+  background: linear-gradient(135deg, #b91c1c 0%, #ef4444 60%, #f87171 100%) !important;
+  border: 2px solid #fca5a5 !important;
+  box-shadow: 0 6px 0 #7f1d1d, 0 10px 28px rgba(239, 68, 68, 0.55), inset 0 1.5px 0 rgba(255, 255, 255, 0.45) !important;
   outline: none !important;
-  transform: scale(1.02) !important;
+  transform: translateY(-2px) scale(1.01) !important;
   animation: answerPopShake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) !important;
   z-index: 5 !important;
   opacity: 1 !important;
@@ -7612,15 +7613,15 @@ body.in-exam-mode {
 }
 
 @keyframes answerPopSpring {
-  0% { transform: scale(0.96); }
-  60% { transform: scale(1.04); }
-  100% { transform: scale(1.02); }
+  0% { transform: scale(0.97) translateY(0); }
+  60% { transform: scale(1.02) translateY(-3px); }
+  100% { transform: scale(1.01) translateY(-2px); }
 }
 
 @keyframes answerPopShake {
-  0%, 100% { transform: scale(1.03) translateX(0); }
-  20%, 60% { transform: scale(1.03) translateX(-5px); }
-  40%, 80% { transform: scale(1.03) translateX(5px); }
+  0%, 100% { transform: translateY(-2px) translateX(0); }
+  20%, 60% { transform: translateY(-2px) translateX(-4px); }
+  40%, 80% { transform: translateY(-2px) translateX(4px); }
 }
 
 /* ==========================================================================
