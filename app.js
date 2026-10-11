@@ -4052,27 +4052,36 @@ function openBonusShopModal() {
 // 7. PRE-EXAM PROMPT & ARENA START
 // ==========================================================================
 function openPreExamModal(subId) {
-  const sub = appData.subjects.find(s => s.id === subId);
+  if (subId !== undefined && subId !== null) {
+    currentSubjectId = subId;
+  } else if (!currentSubjectId) {
+    currentSubjectId = selectedSubjectId || (appData.subjects && appData.subjects[0] ? appData.subjects[0].id : null);
+  }
+
+  const sub = appData.subjects.find(s => s.id == currentSubjectId);
   if (!sub || !sub.questions || sub.questions.length === 0) {
     showToast("Môn này chưa có câu hỏi nào để bắt đầu!", "warning");
     return;
   }
 
-  currentSubjectId = subId;
+  currentSubjectId = sub.id;
 
-  document.getElementById("pre-exam-sub-title").textContent = sub.title;
-  document.getElementById("pre-exam-code").textContent = sub.code || "101";
-  document.getElementById("pre-exam-qcount").textContent = sub.questions.length;
+  const titleEl = document.getElementById("pre-exam-sub-title");
+  if (titleEl) titleEl.textContent = sub.title;
+  const codeEl = document.getElementById("pre-exam-code");
+  if (codeEl) codeEl.textContent = sub.code || "101";
+  const countEl = document.getElementById("pre-exam-qcount");
+  if (countEl) countEl.textContent = sub.questions.length;
 
   const nameInput = document.getElementById("pre-exam-name");
   if (nameInput) {
-    nameInput.value = "";
+    nameInput.value = userProfile.name || "";
     nameInput.placeholder = "Họ và tên thí sinh...";
   }
 
   const msvInput = document.getElementById("pre-exam-msv");
   if (msvInput) {
-    msvInput.value = "";
+    msvInput.value = userProfile.msv || "";
     msvInput.placeholder = "Mã số sinh viên (MSV)...";
   }
 
@@ -4112,16 +4121,16 @@ function handleModeToggleChange(checkbox) {
 }
 
 function handlePreExamSubmit(e) {
-  e.preventDefault();
+  if (e && e.preventDefault) e.preventDefault();
   const nameInput = document.getElementById("pre-exam-name");
   const msvInput = document.getElementById("pre-exam-msv");
   
   const name = nameInput ? nameInput.value.trim() : "";
   const msv = msvInput ? msvInput.value.trim() : "";
   
-  currentCandidateName = name || "Thí Sinh";
-  currentCandidateMsv = msv;
-  currentCandidateAvatar = document.getElementById("pre-exam-selected-avatar")?.value || "🚀";
+  currentCandidateName = name || (userProfile.name || "Thí Sinh");
+  currentCandidateMsv = msv || (userProfile.msv || "");
+  currentCandidateAvatar = document.getElementById("pre-exam-selected-avatar")?.value || (userProfile.avatar || "🚀");
 
   const toggle = document.getElementById("pre-exam-instant-toggle");
   currentScoringMode = (toggle && toggle.checked) ? "instant" : "delayed";
@@ -4133,8 +4142,9 @@ function handlePreExamSubmit(e) {
     saveUserProfile();
   }
 
-  // Bắt buộc hiện thông báo cảm ơn và xác nhận mở Shopee trước khi vào thi
-  openModal("modal-shopee-gate");
+  closeModal("modal-shopee-gate");
+  closeModal("modal-pre-exam");
+  startExam(currentSubjectId);
 }
 
 function confirmShopeeAndStartExam() {
@@ -4151,15 +4161,18 @@ function confirmShopeeAndStartExam() {
 
 function cancelShopeeGate() {
   closeModal("modal-shopee-gate");
-  // Bắt buộc: Không cho vào thi, thí sinh ở lại trang chủ
 }
 
 // ==========================================================================
 // 8. WAYGROUND / QUIZIZZ ARENA ENGINE (WITH PER-QUESTION TIMER & BGM)
 // ==========================================================================
 function startExam(subId) {
-  if (subId) currentSubjectId = subId;
-  const sub = appData.subjects.find(s => s.id === currentSubjectId);
+  if (subId !== undefined && subId !== null) {
+    currentSubjectId = subId;
+  } else if (!currentSubjectId) {
+    currentSubjectId = selectedSubjectId || (appData.subjects && appData.subjects[0] ? appData.subjects[0].id : null);
+  }
+  const sub = appData.subjects.find(s => s.id == currentSubjectId);
   if (!sub || !sub.questions || sub.questions.length === 0) {
     showToast("Môn này chưa có câu hỏi nào để làm bài!", "warning");
     return;
