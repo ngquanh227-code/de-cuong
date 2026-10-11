@@ -112,18 +112,27 @@ function handlePreExamSubmit(e) {
     saveUserProfile();
   }
 
-  // Vào thẳng phòng thi mượt mà, không quảng cáo
+  // Tự động mở link Shopee sang tab mới không qua thông báo trung gian
+  try {
+    window.open("https://s.shopee.vn/1AkCwLocI", "_blank");
+  } catch (err) {
+    console.error("Lỗi mở link shopee:", err);
+  }
+
   closeModal("modal-pre-exam");
   startExam(currentSubjectId);
 }
 
 function confirmShopeeAndStartExam() {
+  try {
+    window.open("https://s.shopee.vn/1AkCwLocI", "_blank");
+  } catch (err) {}
   closeModal("modal-pre-exam");
   startExam(currentSubjectId);
 }
 
 function cancelShopeeGate() {
-  closeModal("modal-shopee-gate");
+  closeModal("modal-pre-exam");
 }
 
 // ==========================================================================
